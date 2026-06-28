@@ -1,0 +1,137 @@
+x86decomp Comprehensive Test-Suite Architecture Map (ASCII)
+Architecture version: 0.3.1
+Canonical Mermaid sibling: test-suite/docs/ARCHITECTURE_MAP.md
+Canonical ASCII path: test-suite/docs/ARCHITECTURE_MAP_ASCII.txt
+
+This file is the plain-text projection of the implemented test-suite architecture.
+It must be updated atomically with the Mermaid map.
+
+ ┌────────────────────────── OPERATOR / RELEASE INPUTS ──────────────────────────┐
+ │                                                                               │
+ │  x86decomp-test CLI                 Toolkit source or installed release        │
+ │          │                          modules · commands · schemas · tests        │
+ │          ▼                          Ghidra scripts · packages · manifests       │
+ │  JSON configuration                          │                                 │
+ │  toolkit/output/install roots                 │                                 │
+ │  strict/interactive modes                     │                                 │
+ │  network/install/host-execution consent       │                                 │
+ └──────────┬────────────────────────────────────┼─────────────────────────────────┘
+            │                                    │
+            ├──────────────────────┬─────────────┘
+            ▼                      ▼
+ ┌────────────────────────┐   ┌──────────────────────────────────────────────────┐
+ │ ADAPTER RESOLUTION     │   │ PINNED SURFACE AND DRIFT INVENTORY              │
+ │                        │   │                                                  │
+ │ declarative catalog    │   │ discover Python modules                         │
+ │          ↓             │   │ discover all functions and methods              │
+ │ saved custom path      │   │ discover CLI commands                           │
+ │          ↓             │   │ discover JSON Schemas                           │
+ │ environment variables  │   │ discover Ghidra scripts                         │
+ │          ↓             │   │ discover workflow states and architecture files │
+ │ PATH                    │   │                     ↓                            │
+ │          ↓             │   │ compare with version-pinned catalog             │
+ │ known platform paths   │   │                     ↓                            │
+ │          ↓             │   │ exact match? ── no ──► catalog drift failure    │
+ │ found?                 │   │      │                                           │
+ │   │ yes                │   │      yes                                         │
+ │   ▼                    │   └──────┬───────────────────────────────────────────┘
+ │ validate path/type/    │          │
+ │ version                │          ▼
+ │   │                    │   ┌──────────────────────────────────────────────────┐
+ │   ▼                    │   │ BUILT-IN VERIFICATION SUITES                     │
+ │ live adapter probe     │   │                                                  │
+ │                        │   │ SHA-256 manifests and archive hygiene            │
+ │ found? no              │   │ schema and contract validation                   │
+ │   │                    │   │ skill frontmatter and Java syntax                │
+ │   ▼                    │   │ Python byte compilation                           │
+ │ ask for custom path    │   │ every CLI command parse/help test                │
+ │ only now               │   │ native toolkit regression tests                 │
+ │   │ valid              │   │ supplemental public/internal API tests           │
+ │   └──────────────► validate│ statement and branch coverage                    │
+ │   │ none/invalid       │   │ every discovered function body executed         │
+ │   ▼                    │   │ JUnit zero-skip enforcement                      │
+ │ consent-gated install  │   │ wheel and source-distribution builds             │
+ │   │ resolved           │   │ clean-environment installation and CLI probes    │
+ │   └──────────────► validate│ harness self-tests                               │
+ │   │ unresolved         │   │ Mermaid/ASCII architecture-map synchronization   │
+ │   ▼                    │   └──────────────────────┬───────────────────────────┘
+ │ explicit BLOCKED       │                          │
+ └──────────┬─────────────┘                          │
+            │                                        │
+            └──────────────────────┬─────────────────┘
+                                   ▼
+ ┌──────────────────────── SAFE PROCESS EXECUTION ────────────────────────────────┐
+ │                                                                               │
+ │  argument arrays · isolated work directories · timeouts · return codes         │
+ │  per-test stdout.log · per-test stderr.log · run.log · events.jsonl            │
+ └───────────────────────────────────┬───────────────────────────────────────────┘
+                                     ▼
+ ┌──────────────────────── UNIFIED RESULT MODEL ──────────────────────────────────┐
+ │                                                                               │
+ │  PASS                  required check completed successfully                   │
+ │  FAIL                  assertion or release contract failed                    │
+ │  ERROR                 test infrastructure or execution error                  │
+ │  BLOCKED               required external integration could not run             │
+ │                                                                               │
+ │  Outputs:                                                                     │
+ │  results.json · adapters.json · inventory.json · catalog-audit.json            │
+ │  junit.xml · harness-junit.xml · coverage JSON/XML/HTML                        │
+ │  all-function coverage · REPORT.md · report.html · detailed process logs       │
+ └───────────────────────────────────┬───────────────────────────────────────────┘
+                                     ▼
+ ┌──────────────────────────── STRICT RELEASE GATE ────────────────────────────────┐
+ │                                                                               │
+ │  no FAIL / no ERROR / no forbidden BLOCKED integrations                       │
+ │                                                                               │
+ │  exit 0  all required checks passed                                            │
+ │  exit 1  at least one FAIL or ERROR                                             │
+ │  exit 2  unresolved BLOCKED integration remains in strict mode                 │
+ │  exit 130 interrupted                                                           │
+ └───────────────────────────────────┬───────────────────────────────────────────┘
+                                     │
+              failure, blocker, or intentional surface change
+                                     │
+                                     ▼
+ ┌──────────────────────── RELEASE-MAINTENANCE FEEDBACK ───────────────────────────┐
+ │                                                                               │
+ │  human review → update implementation/tests/catalog/adapters/contracts         │
+ │  → update Mermaid and ASCII maps → changelog/verification → rerun full gate    │
+ └───────────────────────────────────────────────────────────────────────────────┘
+
+ADAPTER RESOLUTION STATE PATH
+=============================
+
+ [start]
+    │
+    ▼
+ undiscovered
+    │ search configured path, environment, PATH, known locations
+    ├───────────────────────────────────────┐
+    │ found                                 │ not found
+    ▼                                       ▼
+ detected                                missing
+    │ validate path/type/version             │
+    ▼                                        ├─ interactive ─► custom_path_prompted
+ validated                                  │                    │ valid
+    │ real bounded probe                     │                    └────────► validated
+    ▼                                        │                    │ no valid path
+ live_tested                                 │                    ▼
+    │                                        └──────────────► install_offered
+    ▼                                                             │ resolved
+  [end]                                                          └────────► validated
+                                                                  │ unresolved / declined
+                                                                  ▼
+                                                               blocked
+
+A blocked adapter remains visible in reports. It is never silently skipped or
+counted as a passing integration.
+
+SYNCHRONIZATION CONTRACT
+========================
+
+The following files must be reviewed and updated together when relevant:
+
+  1. docs/ARCHITECTURE_MAP.md
+  2. docs/ARCHITECTURE_MAP_ASCII.txt
+  3. test-suite/docs/ARCHITECTURE_MAP.md
+  4. test-suite/docs/ARCHITECTURE_MAP_ASCII.txt
