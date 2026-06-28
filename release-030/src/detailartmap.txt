@@ -1,0 +1,165 @@
+ ┌──────────────────────────────── INPUTS ────────────────────────────────┐
+ │                                                                       │
+ │  Primary executable                Optional supporting evidence       │
+ │  ┌────────────────────┐            ┌───────────────────────────────┐  │
+ │  │ PE32 / x86         │            │ PDB                           │  │
+ │  │ PE32+ / x86-64     │            │ linker MAP                    │  │
+ │  │ EXE or DLL         │            │ COFF / bigobj .obj            │  │
+ │  └─────────┬──────────┘            │ static/import .lib or .a      │  │
+ │            │                       │ original/rebuilt image pair   │  │
+ │            │                       │ source/compiler information   │  │
+ │            │                       └──────────────┬────────────────┘  │
+ └────────────┼──────────────────────────────────────┼───────────────────┘
+              │                                      │
+              └──────────────────┬───────────────────┘
+                                 ▼
+ ┌───────────────────────────────────────────────────────────────────────┐
+ │                 IMMUTABLE INGESTION AND EVIDENCE SEAL                 │
+ │                                                                       │
+ │  • authorization and supported-scope checks                           │
+ │  • SHA-256 content identity                                           │
+ │  • copied immutable evidence                                          │
+ │  • path confinement and bundle-safety checks                          │
+ │  • PE/PDB/COFF/archive/MAP bounded parsing                             │
+ │  • no implicit execution of supplied native programs                  │
+ └───────────────────────────────┬───────────────────────────────────────┘
+                                 │
+             ┌───────────────────┼──────────────────────┐
+             ▼                   ▼                      ▼
+ ┌────────────────────┐ ┌─────────────────────┐ ┌────────────────────────┐
+ │ PE/PDB parser      │ │ COFF/linker parser  │ │ Windows C++ metadata   │
+ │                    │ │                     │ │                        │
+ │ sections           │ │ classic COFF        │ │ RTTI descriptors       │
+ │ imports/exports    │ │ Microsoft bigobj    │ │ class hierarchies      │
+ │ delay imports      │ │ relocations         │ │ vtables                │
+ │ resources          │ │ auxiliary records   │ │ x64 unwind/EH          │
+ │ relocations        │ │ weak externals      │ │ x86 SafeSEH candidates │
+ │ TLS                │ │ COMDAT groups       │ │ TLS templates          │
+ │ CodeView/RSDS      │ │ .lib/.a archives    │ │ .CRT$X initializers    │
+ │ PDB identity       │ │ linker MAP layout   │ │ static constructors    │
+ └─────────┬──────────┘ └──────────┬──────────┘ └────────────┬───────────┘
+           │                       │                         │
+           └───────────────────────┼─────────────────────────┘
+                                   ▼
+ ┌───────────────────────────────────────────────────────────────────────┐
+ │                         STATIC ANALYSIS PLANE                         │
+ │                                                                       │
+ │       Ghidra primary analysis              Independent decoder        │
+ │  ┌──────────────────────────────┐      ┌───────────────────────────┐  │
+ │  │ exact discontiguous bodies   │      │ Capstone x86/x86-64      │  │
+ │  │ raw bytes                    │      │ independent instruction   │  │
+ │  │ rendered C                   │      │ decode                    │  │
+ │  │ decompiler token tree        │      │ normalized operands       │  │
+ │  │ raw instruction P-code       │      │ branch targets            │  │
+ │  │ high P-code                  │      │ CFG edges                  │  │
+ │  │ symbols/types/references     │      │ Ghidra disagreement check │  │
+ │  └──────────────┬───────────────┘      └─────────────┬─────────────┘  │
+ │                 └──────────────────┬─────────────────┘                │
+ └────────────────────────────────────┼──────────────────────────────────┘
+                                      ▼
+ ┌──────────────────────── PROJECT CONTROL PLANE ────────────────────────┐
+ │                                                                       │
+ │  ┌───────────────────────┐  ┌─────────────────────────────────────┐  │
+ │  │ Immutable artifacts   │  │ Global SQLite analysis database     │  │
+ │  │                       │  │                                     │  │
+ │  │ original bytes        │  │ entities and symbols                │  │
+ │  │ function ranges       │  │ cross-references                    │  │
+ │  │ Ghidra exports        │  │ calling conventions and ABI facts   │  │
+ │  │ compiler outputs      │  │ type/field constraints              │  │
+ │  │ validator reports     │  │ conflict and provenance records     │  │
+ │  └───────────┬───────────┘  └─────────────────┬───────────────────┘  │
+ │              │                                │                      │
+ │              └────────────────┬───────────────┘                      │
+ │                               ▼                                      │
+ │  ┌─────────────────────────────────────────────────────────────────┐ │
+ │  │ Per-function workflow record                                    │ │
+ │  │                                                                 │ │
+ │  │ active candidate     compiler profile      blockers             │ │
+ │  │ source maturity      report links          evidence links       │ │
+ │  │                                                                 │ │
+ │  │ Matching mode state  ║  Functional mode state                   │ │
+ │  │ tracked independently║  tracked independently                   │ │
+ │  └──────────────────────┬┴──────────────────────────────────────────┘ │
+ │                         │                                             │
+ │  ┌──────────────────────▼──────────────────────────────────────────┐  │
+ │  │ Governance                                                      │  │
+ │  │ evidence records • claims • contradictions • work queue         │  │
+ │  │ MCP mutation journal • three-source gate • hash-chained memory  │  │
+ │  └──────────────────────┬──────────────────────────────────────────┘  │
+ └─────────────────────────┼─────────────────────────────────────────────┘
+                           ▼
+ ┌──────────────────── CANDIDATE GENERATION PLANE ───────────────────────┐
+ │                                                                       │
+ │  original bytes                                                       │
+ │        ↓                                                              │
+ │  exact assembly fallback                                              │
+ │        ↓                                                              │
+ │  Ghidra-derived C/C++ candidate                                       │
+ │        ↓                                                              │
+ │  human/AI-corrected candidate                                         │
+ │        ↓                                                              │
+ │  matched source or functionally accepted source                       │
+ │                                                                       │
+ │  Supporting paths:                                                    │
+ │  • hybrid build tree                                                  │
+ │  • decomp.me-style local packets                                      │
+ │  • validator-gated work queue                                         │
+ │  • evidence-controlled Ghidra MCP changes                             │
+ └───────────────────────────────┬───────────────────────────────────────┘
+                                 ▼
+ ┌──────────────────────── COMPILER/LINKER PLANE ────────────────────────┐
+ │                                                                       │
+ │  Compiler profiles and user-owned toolchains                          │
+ │             │                                                         │
+ │             ├── isolated candidate compilation                        │
+ │             ├── output caching and hashing                            │
+ │             ├── optimization/flag search matrices                     │
+ │             ├── 24-case x86/x64 ground-truth corpus                   │
+ │             ├── cross-version compiler comparison                     │
+ │             ├── synthetic COFF generation                             │
+ │             ├── COMDAT resolution                                     │
+ │             ├── manifest-driven relinking                             │
+ │             └── PE patch-image backend                                │
+ └───────────────────────────────┬───────────────────────────────────────┘
+                                 │
+             ┌───────────────────┴───────────────────┐
+             ▼                                       ▼
+┌──────────────────────────────┐       ┌─────────────────────────────────┐
+│ MATCHING DECOMPILATION LANE  │       │ FUNCTIONAL DECOMPILATION LANE   │
+│                              │       │                                 │
+│ candidate compiles           │       │ candidate compiles              │
+│          ↓                   │       │          ↓                      │
+│ ABI observations/check       │       │ ABI observations/check          │
+│          ↓                   │       │          ↓                      │
+│ PE function ↔ COFF symbol    │       │ Unicorn differential execution  │
+│          ↓                   │       │          ↓                      │
+│ relocation normalization     │       │ DynamoRIO observed coverage     │
+│          ↓                   │       │          ↓                      │
+│ instruction and CFG compare  │       │ bounded Capstone/Z3 symbolic    │
+│          ↓                   │       │          ↓                      │
+│ objdiff adapter              │       │ optional angr memory/alias      │
+│          ↓                   │       │          ↓                      │
+│ exact byte match             │       │ integration scenarios           │
+│          ↓                   │       │          ↓                      │
+│ verified image patch         │       │ declared behavioral acceptance  │
+│          ↓                   │       │                                 │
+│ manifest relink              │       │                                 │
+│          ↓                   │       │                                 │
+│ target-specific image match  │       │                                 │
+└──────────────┬───────────────┘       └─────────────────┬───────────────┘
+               │                                         │
+               └────────────────────┬────────────────────┘
+                                    ▼
+ ┌───────────────────────────────────────────────────────────────────────┐
+ │                         ACCEPTANCE AND FEEDBACK                       │
+ │                                                                       │
+ │  Validator report does not automatically become a fact.               │
+ │                                                                       │
+ │  report → evidence record → claim gate → workflow transition          │
+ │         → work-item acceptance → project-memory event                 │
+ │                                                                       │
+ │  Failed or contradictory evidence returns the function to analysis,   │
+ │  type recovery, candidate correction, or compiler experimentation.    │
+ └───────────────────────────────┬───────────────────────────────────────┘
+                                 │
+                                 └────────────── feedback loop ──────────►
