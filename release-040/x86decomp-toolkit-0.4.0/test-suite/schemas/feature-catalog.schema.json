@@ -1,0 +1,99 @@
+{
+  "$id": "urn:x86decomp-test-suite:feature-catalog:1",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "properties": {
+    "adapters": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array",
+      "uniqueItems": true
+    },
+    "all_function_symbols": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array",
+      "uniqueItems": true
+    },
+    "cli_commands": {
+      "additionalProperties": {
+        "type": "object"
+      },
+      "type": "object"
+    },
+    "coverage_contract": {
+      "type": "object"
+    },
+    "ghidra_scripts": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array",
+      "uniqueItems": true
+    },
+    "maintenance_rule": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "modules": {
+      "additionalProperties": {
+        "type": "object"
+      },
+      "type": "object"
+    },
+    "schema_version": {
+      "const": 1
+    },
+    "schemas": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array",
+      "uniqueItems": true
+    },
+    "toolkit_version": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "workflow_states": {
+      "properties": {
+        "functional": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array",
+          "uniqueItems": true
+        },
+        "matching": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array",
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "matching",
+        "functional"
+      ],
+      "type": "object"
+    }
+  },
+  "required": [
+    "schema_version",
+    "toolkit_version",
+    "modules",
+    "cli_commands",
+    "schemas",
+    "ghidra_scripts",
+    "workflow_states",
+    "adapters",
+    "coverage_contract",
+    "maintenance_rule",
+    "all_function_symbols"
+  ],
+  "title": "x86decomp pinned test-surface catalog",
+  "type": "object"
+}

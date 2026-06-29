@@ -1,0 +1,31 @@
+{
+  "release": "0.2.0",
+  "commands": [
+    "artifact-import",
+    "artifact-verify",
+    "claim-attach",
+    "claim-contradict",
+    "claim-create",
+    "claim-verify",
+    "compile",
+    "diff-bytes",
+    "evidence-add",
+    "ghidra-export",
+    "init",
+    "inspect-pe",
+    "memory-add",
+    "memory-render",
+    "memory-verify",
+    "snapshot-tools",
+    "verify-project"
+  ],
+  "schema_files": [
+    "claim.schema.json",
+    "compiler-profile.schema.json",
+    "evidence.schema.json",
+    "function.schema.json",
+    "memory-event.schema.json",
+    "project.schema.json",
+    "verification.schema.json"
+  ]
+}

@@ -1,0 +1,1044 @@
+{
+  "adapter_ids": [
+    "angr",
+    "build",
+    "capstone",
+    "clang",
+    "clangxx",
+    "cmake",
+    "coverage",
+    "dynamorio",
+    "fastapi",
+    "gcc",
+    "ghidra",
+    "gxx",
+    "java",
+    "javalang",
+    "jsonschema",
+    "lief",
+    "lld-link",
+    "llvm-lib",
+    "llvm-objdump",
+    "llvm-readobj",
+    "msvc",
+    "ninja",
+    "objdiff",
+    "pytest",
+    "python",
+    "pyyaml",
+    "unicorn",
+    "uvicorn",
+    "z3"
+  ],
+  "commands": {
+    "abi-check": {
+      "feature": "abi-check",
+      "test_contract": [
+        "cli-help",
+        "module-api",
+        "toolkit-regression"
+      ]
+    },
+    "angr-validate": {
+      "feature": "angr-validate",
+      "test_contract": [
+        "cli-help",
+        "module-api",
+        "toolkit-regression"
+      ]
+    },
+    "artifact-import": {
+      "feature": "artifact-import",
+      "test_contract": [
+        "cli-help",
+        "module-api",
+        "toolkit-regression"
+      ]
+    },
+    "artifact-verify": {
+      "feature": "artifact-verify",
+      "test_contract": [
+        "cli-help",
+        "module-api",
+        "toolkit-regression"
+      ]
+    },
+    "benchmark-run": {
+      "feature": "benchmark-run",
+      "test_contract": [
+        "cli-help",
+        "module-api",
+        "toolkit-regression"
+      ]
+    },
+    "claim-attach": {
+      "feature": "claim-attach",
+      "test_contract": [
+        "cli-help",
+        "module-api",
+        "toolkit-regression"
+      ]
+    },
+    "claim-contradict": {
+      "feature": "claim-contradict",
+      "test_contract": [
+        "cli-help",
+        "module-api",
+        "toolkit-regression"
+      ]
+    },
+    "claim-create": {
+      "feature": "claim-create",
+      "test_contract": [
+        "cli-help",
+        "module-api",
+        "toolkit-regression"
+      ]
+    },
+    "claim-verify": {
+      "feature": "claim-verify",
+      "test_contract": [
+        "cli-help",
+        "module-api",
+        "toolkit-regression"
+      ]
+    },
+    "coff-comdat-resolve": {
+      "feature": "coff-comdat-resolve",
+      "test_contract": [
+        "cli-help",
+        "module-api",
+        "toolkit-regression"
+      ]
+    },
+    "coff-extract": {
+      "feature": "coff-extract",
+      "test_contract": [
+        "cli-help",
+        "module-api",
+        "toolkit-regression"
+      ]
+    },
+    "coff-inspect": {
+      "feature": "coff-inspect",
+      "test_contract": [
+        "cli-help",
+        "module-api",
+        "toolkit-regression"
+      ]
+    },
+    "coff-synthesize": {
+      "feature": "coff-synthesize",
+      "test_contract": [
+        "cli-help",
+        "module-api",
+        "toolkit-regression"
+      ]
+    },
+    "compile": {
+      "feature": "compile",
+      "test_contract": [
+        "cli-help",
+        "module-api",
+        "toolkit-regression"
+      ]
+    },
+    "compiler-lab": {
+      "feature": "compiler-lab",
+      "test_contract": [
+        "cli-help",
+        "module-api",
+        "toolkit-regression"
+      ]
+    },
+    "corpus-build": {
+      "feature": "corpus-build",
+      "test_contract": [
+        "cli-help",
+        "module-api",
+        "toolkit-regression"
+      ]
+    },
+    "corpus-compare": {
+      "feature": "corpus-compare",
+      "test_contract": [
+        "cli-help",
+        "module-api",
+        "toolkit-regression"
+      ]
+    },
+    "corpus-create-manifest": {
+      "feature": "corpus-create-manifest",
+      "test_contract": [
+        "cli-help",
+        "module-api",
+        "toolkit-regression"
+      ]
+    },
+    "corpus-verify": {
+      "feature": "corpus-verify",
+      "test_contract": [
+        "cli-help",
+        "module-api",
+        "toolkit-regression"
+      ]
+    },
+    "crosscheck-ghidra": {
+      "feature": "crosscheck-ghidra",
+      "test_contract": [
+        "cli-help",
+        "module-api",
+        "toolkit-regression"
+      ]
+    },
+    "db-constraint-accept": {
+      "feature": "db-constraint-accept",
+      "test_contract": [
+        "cli-help",
+        "module-api",
+        "toolkit-regression"
+      ]
+    },
+    "db-constraint-add": {
+      "feature": "db-constraint-add",
+      "test_contract": [
+        "cli-help",
+        "module-api",
+        "toolkit-regression"
+      ]
+    },
+    "db-constraint-conflicts": {
+      "feature": "db-constraint-conflicts",
+      "test_contract": [
+        "cli-help",
+        "module-api",
+        "toolkit-regression"
+      ]
+    },
+    "db-ingest": {
+      "feature": "db-ingest",
+      "test_contract": [
+        "cli-help",
+        "module-api",
+        "toolkit-regression"
+      ]
+    },
+    "db-query": {
+      "feature": "db-query",
+      "test_contract": [
+        "cli-help",
+        "module-api",
+        "toolkit-regression"
+      ]
+    },
+    "decompme-pack": {
+      "feature": "decompme-pack",
+      "test_contract": [
+        "cli-help",
+        "module-api",
+        "toolkit-regression"
+      ]
+    },
+    "diff-bytes": {
+      "feature": "diff-bytes",
+      "test_contract": [
+        "cli-help",
+        "module-api",
+        "toolkit-regression"
+      ]
+    },
+    "diff-function": {
+      "feature": "diff-function",
+      "test_contract": [
+        "cli-help",
+        "module-api",
+        "toolkit-regression"
+      ]
+    },
+    "disassemble": {
+      "feature": "disassemble",
+      "test_contract": [
+        "cli-help",
+        "module-api",
+        "toolkit-regression"
+      ]
+    },
+    "drcov-parse": {
+      "feature": "drcov-parse",
+      "test_contract": [
+        "cli-help",
+        "module-api",
+        "toolkit-regression"
+      ]
+    },
+    "drcov-run": {
+      "feature": "drcov-run",
+      "test_contract": [
+        "cli-help",
+        "module-api",
+        "toolkit-regression"
+      ]
+    },
+    "dynamic-validate": {
+      "feature": "dynamic-validate",
+      "test_contract": [
+        "cli-help",
+        "module-api",
+        "toolkit-regression"
+      ]
+    },
+    "evidence-add": {
+      "feature": "evidence-add",
+      "test_contract": [
+        "cli-help",
+        "module-api",
+        "toolkit-regression"
+      ]
+    },
+    "ghidra-export": {
+      "feature": "ghidra-export",
+      "test_contract": [
+        "cli-help",
+        "module-api",
+        "toolkit-regression"
+      ]
+    },
+    "hybrid-generate": {
+      "feature": "hybrid-generate",
+      "test_contract": [
+        "cli-help",
+        "module-api",
+        "toolkit-regression"
+      ]
+    },
+    "image-match": {
+      "feature": "image-match",
+      "test_contract": [
+        "cli-help",
+        "module-api",
+        "toolkit-regression"
+      ]
+    },
+    "image-profile": {
+      "feature": "image-profile",
+      "test_contract": [
+        "cli-help",
+        "module-api",
+        "toolkit-regression"
+      ]
+    },
+    "init": {
+      "feature": "init",
+      "test_contract": [
+        "cli-help",
+        "module-api",
+        "toolkit-regression"
+      ]
+    },
+    "inspect-pe": {
+      "feature": "inspect-pe",
+      "test_contract": [
+        "cli-help",
+        "module-api",
+        "toolkit-regression"
+      ]
+    },
+    "integration-run": {
+      "feature": "integration-run",
+      "test_contract": [
+        "cli-help",
+        "module-api",
+        "toolkit-regression"
+      ]
+    },
+    "layout-reconstruct": {
+      "feature": "layout-reconstruct",
+      "test_contract": [
+        "cli-help",
+        "module-api",
+        "toolkit-regression"
+      ]
+    },
+    "lib-inspect": {
+      "feature": "lib-inspect",
+      "test_contract": [
+        "cli-help",
+        "module-api",
+        "toolkit-regression"
+      ]
+    },
+    "map-inspect": {
+      "feature": "map-inspect",
+      "test_contract": [
+        "cli-help",
+        "module-api",
+        "toolkit-regression"
+      ]
+    },
+    "mcp-commit": {
+      "feature": "mcp-commit",
+      "test_contract": [
+        "cli-help",
+        "module-api",
+        "toolkit-regression"
+      ]
+    },
+    "mcp-propose": {
+      "feature": "mcp-propose",
+      "test_contract": [
+        "cli-help",
+        "module-api",
+        "toolkit-regression"
+      ]
+    },
+    "mcp-read": {
+      "feature": "mcp-read",
+      "test_contract": [
+        "cli-help",
+        "module-api",
+        "toolkit-regression"
+      ]
+    },
+    "mcp-tools": {
+      "feature": "mcp-tools",
+      "test_contract": [
+        "cli-help",
+        "module-api",
+        "toolkit-regression"
+      ]
+    },
+    "memory-add": {
+      "feature": "memory-add",
+      "test_contract": [
+        "cli-help",
+        "module-api",
+        "toolkit-regression"
+      ]
+    },
+    "memory-render": {
+      "feature": "memory-render",
+      "test_contract": [
+        "cli-help",
+        "module-api",
+        "toolkit-regression"
+      ]
+    },
+    "memory-verify": {
+      "feature": "memory-verify",
+      "test_contract": [
+        "cli-help",
+        "module-api",
+        "toolkit-regression"
+      ]
+    },
+    "metadata-scan": {
+      "feature": "metadata-scan",
+      "test_contract": [
+        "cli-help",
+        "module-api",
+        "toolkit-regression"
+      ]
+    },
+    "objdiff-run": {
+      "feature": "objdiff-run",
+      "test_contract": [
+        "cli-help",
+        "module-api",
+        "toolkit-regression"
+      ]
+    },
+    "patch-image": {
+      "feature": "patch-image",
+      "test_contract": [
+        "cli-help",
+        "module-api",
+        "toolkit-regression"
+      ]
+    },
+    "pdb-inspect": {
+      "feature": "pdb-inspect",
+      "test_contract": [
+        "cli-help",
+        "module-api",
+        "toolkit-regression"
+      ]
+    },
+    "relink": {
+      "feature": "relink",
+      "test_contract": [
+        "cli-help",
+        "module-api",
+        "toolkit-regression"
+      ]
+    },
+    "serve": {
+      "feature": "serve",
+      "test_contract": [
+        "cli-help",
+        "module-api",
+        "toolkit-regression"
+      ]
+    },
+    "snapshot-tools": {
+      "feature": "snapshot-tools",
+      "test_contract": [
+        "cli-help",
+        "module-api",
+        "toolkit-regression"
+      ]
+    },
+    "symbolic-memory-validate": {
+      "feature": "symbolic-memory-validate",
+      "test_contract": [
+        "cli-help",
+        "module-api",
+        "toolkit-regression"
+      ]
+    },
+    "symbolic-validate": {
+      "feature": "symbolic-validate",
+      "test_contract": [
+        "cli-help",
+        "module-api",
+        "toolkit-regression"
+      ]
+    },
+    "test-bundle-create": {
+      "feature": "test-bundle-create",
+      "test_contract": [
+        "cli-help",
+        "module-api",
+        "toolkit-regression"
+      ]
+    },
+    "test-bundle-inspect": {
+      "feature": "test-bundle-inspect",
+      "test_contract": [
+        "cli-help",
+        "module-api",
+        "toolkit-regression"
+      ]
+    },
+    "toolchain-register": {
+      "feature": "toolchain-register",
+      "test_contract": [
+        "cli-help",
+        "module-api",
+        "toolkit-regression"
+      ]
+    },
+    "toolchain-verify": {
+      "feature": "toolchain-verify",
+      "test_contract": [
+        "cli-help",
+        "module-api",
+        "toolkit-regression"
+      ]
+    },
+    "verify-project": {
+      "feature": "verify-project",
+      "test_contract": [
+        "cli-help",
+        "module-api",
+        "toolkit-regression"
+      ]
+    },
+    "work-claim": {
+      "feature": "work-claim",
+      "test_contract": [
+        "cli-help",
+        "module-api",
+        "toolkit-regression"
+      ]
+    },
+    "work-create": {
+      "feature": "work-create",
+      "test_contract": [
+        "cli-help",
+        "module-api",
+        "toolkit-regression"
+      ]
+    },
+    "work-next": {
+      "feature": "work-next",
+      "test_contract": [
+        "cli-help",
+        "module-api",
+        "toolkit-regression"
+      ]
+    },
+    "work-propose": {
+      "feature": "work-propose",
+      "test_contract": [
+        "cli-help",
+        "module-api",
+        "toolkit-regression"
+      ]
+    },
+    "work-validate": {
+      "feature": "work-validate",
+      "test_contract": [
+        "cli-help",
+        "module-api",
+        "toolkit-regression"
+      ]
+    },
+    "workflow-init": {
+      "feature": "workflow-init",
+      "test_contract": [
+        "cli-help",
+        "module-api",
+        "toolkit-regression"
+      ]
+    },
+    "workflow-show": {
+      "feature": "workflow-show",
+      "test_contract": [
+        "cli-help",
+        "module-api",
+        "toolkit-regression"
+      ]
+    },
+    "workflow-update": {
+      "feature": "workflow-update",
+      "test_contract": [
+        "cli-help",
+        "module-api",
+        "toolkit-regression"
+      ]
+    }
+  },
+  "ghidra_scripts": [
+    "ExportFunctionArtifacts.java",
+    "ExportProjectManifest.java",
+    "QueryAnalysis.java"
+  ],
+  "modules": {
+    "x86decomp.__init__": {
+      "feature": "--init--",
+      "test_contract": [
+        "pytest-toolkit",
+        "supplemental-public-api",
+        "coverage-public-symbol"
+      ]
+    },
+    "x86decomp.__main__": {
+      "feature": "--main--",
+      "test_contract": [
+        "pytest-toolkit",
+        "supplemental-public-api",
+        "coverage-public-symbol"
+      ]
+    },
+    "x86decomp.abi": {
+      "feature": "abi",
+      "test_contract": [
+        "pytest-toolkit",
+        "supplemental-public-api",
+        "coverage-public-symbol"
+      ]
+    },
+    "x86decomp.analysis_db": {
+      "feature": "analysis-db",
+      "test_contract": [
+        "pytest-toolkit",
+        "supplemental-public-api",
+        "coverage-public-symbol"
+      ]
+    },
+    "x86decomp.angr_backend": {
+      "feature": "angr-backend",
+      "test_contract": [
+        "pytest-toolkit",
+        "supplemental-public-api",
+        "coverage-public-symbol"
+      ]
+    },
+    "x86decomp.artifacts": {
+      "feature": "artifacts",
+      "test_contract": [
+        "pytest-toolkit",
+        "supplemental-public-api",
+        "coverage-public-symbol"
+      ]
+    },
+    "x86decomp.benchmarks": {
+      "feature": "benchmarks",
+      "test_contract": [
+        "pytest-toolkit",
+        "supplemental-public-api",
+        "coverage-public-symbol"
+      ]
+    },
+    "x86decomp.cli": {
+      "feature": "cli",
+      "test_contract": [
+        "pytest-toolkit",
+        "supplemental-public-api",
+        "coverage-public-symbol"
+      ]
+    },
+    "x86decomp.coff": {
+      "feature": "coff",
+      "test_contract": [
+        "pytest-toolkit",
+        "supplemental-public-api",
+        "coverage-public-symbol"
+      ]
+    },
+    "x86decomp.coff_archive": {
+      "feature": "coff-archive",
+      "test_contract": [
+        "pytest-toolkit",
+        "supplemental-public-api",
+        "coverage-public-symbol"
+      ]
+    },
+    "x86decomp.compiler": {
+      "feature": "compiler",
+      "test_contract": [
+        "pytest-toolkit",
+        "supplemental-public-api",
+        "coverage-public-symbol"
+      ]
+    },
+    "x86decomp.compiler_lab": {
+      "feature": "compiler-lab",
+      "test_contract": [
+        "pytest-toolkit",
+        "supplemental-public-api",
+        "coverage-public-symbol"
+      ]
+    },
+    "x86decomp.decompme": {
+      "feature": "decompme",
+      "test_contract": [
+        "pytest-toolkit",
+        "supplemental-public-api",
+        "coverage-public-symbol"
+      ]
+    },
+    "x86decomp.diffing": {
+      "feature": "diffing",
+      "test_contract": [
+        "pytest-toolkit",
+        "supplemental-public-api",
+        "coverage-public-symbol"
+      ]
+    },
+    "x86decomp.disassembly": {
+      "feature": "disassembly",
+      "test_contract": [
+        "pytest-toolkit",
+        "supplemental-public-api",
+        "coverage-public-symbol"
+      ]
+    },
+    "x86decomp.dynamic": {
+      "feature": "dynamic",
+      "test_contract": [
+        "pytest-toolkit",
+        "supplemental-public-api",
+        "coverage-public-symbol"
+      ]
+    },
+    "x86decomp.dynamorio": {
+      "feature": "dynamorio",
+      "test_contract": [
+        "pytest-toolkit",
+        "supplemental-public-api",
+        "coverage-public-symbol"
+      ]
+    },
+    "x86decomp.errors": {
+      "feature": "errors",
+      "test_contract": [
+        "pytest-toolkit",
+        "supplemental-public-api",
+        "coverage-public-symbol"
+      ]
+    },
+    "x86decomp.evidence": {
+      "feature": "evidence",
+      "test_contract": [
+        "pytest-toolkit",
+        "supplemental-public-api",
+        "coverage-public-symbol"
+      ]
+    },
+    "x86decomp.exe_diff": {
+      "feature": "exe-diff",
+      "test_contract": [
+        "pytest-toolkit",
+        "supplemental-public-api",
+        "coverage-public-symbol"
+      ]
+    },
+    "x86decomp.ghidra": {
+      "feature": "ghidra",
+      "test_contract": [
+        "pytest-toolkit",
+        "supplemental-public-api",
+        "coverage-public-symbol"
+      ]
+    },
+    "x86decomp.ground_truth": {
+      "feature": "ground-truth",
+      "test_contract": [
+        "pytest-toolkit",
+        "supplemental-public-api",
+        "coverage-public-symbol"
+      ]
+    },
+    "x86decomp.hybrid": {
+      "feature": "hybrid",
+      "test_contract": [
+        "pytest-toolkit",
+        "supplemental-public-api",
+        "coverage-public-symbol"
+      ]
+    },
+    "x86decomp.image_match": {
+      "feature": "image-match",
+      "test_contract": [
+        "pytest-toolkit",
+        "supplemental-public-api",
+        "coverage-public-symbol"
+      ]
+    },
+    "x86decomp.integration": {
+      "feature": "integration",
+      "test_contract": [
+        "pytest-toolkit",
+        "supplemental-public-api",
+        "coverage-public-symbol"
+      ]
+    },
+    "x86decomp.linker_layout": {
+      "feature": "linker-layout",
+      "test_contract": [
+        "pytest-toolkit",
+        "supplemental-public-api",
+        "coverage-public-symbol"
+      ]
+    },
+    "x86decomp.mcp": {
+      "feature": "mcp",
+      "test_contract": [
+        "pytest-toolkit",
+        "supplemental-public-api",
+        "coverage-public-symbol"
+      ]
+    },
+    "x86decomp.memory": {
+      "feature": "memory",
+      "test_contract": [
+        "pytest-toolkit",
+        "supplemental-public-api",
+        "coverage-public-symbol"
+      ]
+    },
+    "x86decomp.models": {
+      "feature": "models",
+      "test_contract": [
+        "pytest-toolkit",
+        "supplemental-public-api",
+        "coverage-public-symbol"
+      ]
+    },
+    "x86decomp.msvc_metadata": {
+      "feature": "msvc-metadata",
+      "test_contract": [
+        "pytest-toolkit",
+        "supplemental-public-api",
+        "coverage-public-symbol"
+      ]
+    },
+    "x86decomp.objdiff_adapter": {
+      "feature": "objdiff-adapter",
+      "test_contract": [
+        "pytest-toolkit",
+        "supplemental-public-api",
+        "coverage-public-symbol"
+      ]
+    },
+    "x86decomp.patching": {
+      "feature": "patching",
+      "test_contract": [
+        "pytest-toolkit",
+        "supplemental-public-api",
+        "coverage-public-symbol"
+      ]
+    },
+    "x86decomp.pdb": {
+      "feature": "pdb",
+      "test_contract": [
+        "pytest-toolkit",
+        "supplemental-public-api",
+        "coverage-public-symbol"
+      ]
+    },
+    "x86decomp.pe": {
+      "feature": "pe",
+      "test_contract": [
+        "pytest-toolkit",
+        "supplemental-public-api",
+        "coverage-public-symbol"
+      ]
+    },
+    "x86decomp.pe32": {
+      "feature": "pe32",
+      "test_contract": [
+        "pytest-toolkit",
+        "supplemental-public-api",
+        "coverage-public-symbol"
+      ]
+    },
+    "x86decomp.project": {
+      "feature": "project",
+      "test_contract": [
+        "pytest-toolkit",
+        "supplemental-public-api",
+        "coverage-public-symbol"
+      ]
+    },
+    "x86decomp.relink": {
+      "feature": "relink",
+      "test_contract": [
+        "pytest-toolkit",
+        "supplemental-public-api",
+        "coverage-public-symbol"
+      ]
+    },
+    "x86decomp.service": {
+      "feature": "service",
+      "test_contract": [
+        "pytest-toolkit",
+        "supplemental-public-api",
+        "coverage-public-symbol"
+      ]
+    },
+    "x86decomp.symbolic": {
+      "feature": "symbolic",
+      "test_contract": [
+        "pytest-toolkit",
+        "supplemental-public-api",
+        "coverage-public-symbol"
+      ]
+    },
+    "x86decomp.test_bundle": {
+      "feature": "test-bundle",
+      "test_contract": [
+        "pytest-toolkit",
+        "supplemental-public-api",
+        "coverage-public-symbol"
+      ]
+    },
+    "x86decomp.toolchains": {
+      "feature": "toolchains",
+      "test_contract": [
+        "pytest-toolkit",
+        "supplemental-public-api",
+        "coverage-public-symbol"
+      ]
+    },
+    "x86decomp.tools": {
+      "feature": "tools",
+      "test_contract": [
+        "pytest-toolkit",
+        "supplemental-public-api",
+        "coverage-public-symbol"
+      ]
+    },
+    "x86decomp.util": {
+      "feature": "util",
+      "test_contract": [
+        "pytest-toolkit",
+        "supplemental-public-api",
+        "coverage-public-symbol"
+      ]
+    },
+    "x86decomp.work_queue": {
+      "feature": "work-queue",
+      "test_contract": [
+        "pytest-toolkit",
+        "supplemental-public-api",
+        "coverage-public-symbol"
+      ]
+    },
+    "x86decomp.workflow": {
+      "feature": "workflow",
+      "test_contract": [
+        "pytest-toolkit",
+        "supplemental-public-api",
+        "coverage-public-symbol"
+      ]
+    }
+  },
+  "purpose": "Forward-compatibility surface retained by x86decomp-toolkit 0.4.0 and later.",
+  "schema_files": [
+    "abi-contract.schema.json",
+    "benchmark-corpus.schema.json",
+    "claim.schema.json",
+    "coff-archive.schema.json",
+    "comdat-resolution.schema.json",
+    "compiler-ground-truth-comparison.schema.json",
+    "compiler-ground-truth.schema.json",
+    "compiler-lab.schema.json",
+    "compiler-profile.schema.json",
+    "decompme-packet.schema.json",
+    "drcov-trace.schema.json",
+    "dynamic-report.schema.json",
+    "evidence.schema.json",
+    "exe-diff-report.schema.json",
+    "execution-harness.schema.json",
+    "function-workflow.schema.json",
+    "function.schema.json",
+    "hybrid-project.schema.json",
+    "image-match-report.schema.json",
+    "image-profile.schema.json",
+    "integration-report.schema.json",
+    "integration-scenarios.schema.json",
+    "linker-layout.schema.json",
+    "mcp-mutation.schema.json",
+    "memory-event.schema.json",
+    "msvc-metadata.schema.json",
+    "objdiff-manifest.schema.json",
+    "pdb.schema.json",
+    "project.schema.json",
+    "relink-manifest.schema.json",
+    "symbolic-memory-harness.schema.json",
+    "symbolic-memory-report.schema.json",
+    "symbolic-report.schema.json",
+    "test-bundle-report.schema.json",
+    "test-bundle.schema.json",
+    "type-constraint.schema.json",
+    "verification.schema.json",
+    "work-task.schema.json"
+  ],
+  "schema_version": 1,
+  "toolkit_version": "0.3.1",
+  "workflow_states": {
+    "functional": [
+      "not_started",
+      "decompiled",
+      "compiles",
+      "abi_compatible",
+      "differentially_validated",
+      "symbolically_bounded",
+      "integration_validated",
+      "blocked"
+    ],
+    "matching": [
+      "not_started",
+      "decompiled",
+      "compiles",
+      "abi_compatible",
+      "instruction_similar",
+      "byte_matched",
+      "image_integrated",
+      "full_relink_validated",
+      "blocked"
+    ]
+  }
+}

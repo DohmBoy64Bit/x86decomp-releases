@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:x86decomp:schema:comdat-resolution:1",
+  "title": "COFF COMDAT resolution report",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "valid", "winners", "discarded", "conflicts"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "valid": {"type": "boolean"},
+    "winners": {"type": "array", "items": {"type": "object"}},
+    "discarded": {"type": "array", "items": {"type": "object"}},
+    "conflicts": {"type": "array", "items": {"type": "object"}}
+  }
+}

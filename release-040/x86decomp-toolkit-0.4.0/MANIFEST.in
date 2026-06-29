@@ -1,0 +1,22 @@
+include AGENTS.md CHANGELOG.md FEATURE_PARITY.md LICENSE MANIFEST.sha256 Makefile PROJECT_MEMORY.md README.md SECURITY.md VERIFICATION.md
+recursive-include docs *.md *.txt
+recursive-include corpus *.c *.cpp
+recursive-include examples *.json *.c *.py *.bin
+recursive-include ghidra_scripts *.java
+recursive-include schemas *.json
+recursive-include scripts *.py *.sh
+recursive-include skills *.md
+recursive-include tests *.py
+prune examples/labs/cache
+prune examples/labs/output
+graft test-suite
+prune test-suite/test-results
+prune test-suite/.x86decomp-test-tools
+prune test-suite/tools
+global-exclude __pycache__ *.py[cod] *.egg-info .pytest_cache .coverage
+prune .pytest_cache
+prune test-suite/.pytest_cache
+prune build
+prune dist
+prune test-suite/build
+prune test-suite/dist

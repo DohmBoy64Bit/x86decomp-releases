@@ -1,0 +1,148 @@
+x86decomp-toolkit architecture map
+Architecture version: 0.4.0
+Status: implemented production-pilot architecture; bounded claims only
+Mermaid companion: docs/ARCHITECTURE_MAP.md
+Test-suite maps: test-suite/docs/ARCHITECTURE_MAP.md and test-suite/docs/ARCHITECTURE_MAP_ASCII.txt
+
+┌──────────────────────────── AUTHORIZED INPUTS ─────────────────────────────┐
+│ PE32/x86 or PE32+/x86-64 EXE/DLL                                          │
+│ PDB · MAP · OBJ/bigobj · LIB/A · rebuilt image · source/toolchain records │
+│ explicit mode, authorization, compiler/linker and execution decisions     │
+└──────────────────────────────────┬─────────────────────────────────────────┘
+                                   ▼
+┌──────────────────────────── IMMUTABLE INGESTION ───────────────────────────┐
+│ safety/scope checks · SHA-256 identity · copy/reference policy             │
+│ bounded PE/PDB/COFF/archive/MAP parsing · no implicit target execution     │
+│ verified target pack · observations separate from user decisions           │
+│ content-addressed immutable artifact store                                 │
+└──────────────────────────────────┬─────────────────────────────────────────┘
+                                   ▼
+┌────────────────────────── STATIC-ANALYSIS PLANE ───────────────────────────┐
+│ PE/PDB/COFF/linker metadata       Windows C++ metadata                      │
+│ sections/imports/resources/TLS    RTTI/vtables/EH/unwind/SafeSEH/CRT       │
+│ relocations/archives/COMDAT/MAP                                             │
+│                                                                             │
+│ Ghidra primary analysis            Independent Capstone decoder             │
+│ exact discontiguous bodies         normalized operands/branches/CFG         │
+│ C/token tree/raw+high P-code       Ghidra disagreement cross-check          │
+└──────────────────────────────────┬─────────────────────────────────────────┘
+                                   ▼
+┌────────────────────────── PROJECT CONTROL PLANE ───────────────────────────┐
+│ transactional state DB · schema migrations · snapshots · leases            │
+│ global analysis DB · symbols/references/ABI/type constraints/conflicts      │
+│ durable workflow orchestrator · idempotency/dependencies/retries            │
+│ heartbeats/cancellation/stale-runner recovery/content-sealed outputs        │
+│ evidence/claims/contradictions · three-source gate · validator work queue   │
+│ hash-chained project memory                                                  │
+└──────────────────────────────────┬─────────────────────────────────────────┘
+                                   ▼
+┌──────────────────────── CANDIDATE-GENERATION PLANE ────────────────────────┐
+│ grounded target template engine: matching · functional · hybrid            │
+│ unknown compiler/language/linker facts remain explicit blockers            │
+│ original bytes → exact assembly fallback → Ghidra-derived C/C++ candidate  │
+│ → human/AI-corrected candidate; no generated source is called original      │
+│ local decomp.me packets · approval-hashed Ghidra MCP proposals              │
+└──────────────────────────────────┬─────────────────────────────────────────┘
+                                   ▼
+┌──────────────────────── COMPILER AND LINKER PLANE ─────────────────────────┐
+│ bounded local worker or isolated container; no network by default          │
+│ hash-pinned user-owned toolchains · compiler profiles · cache/flag matrix   │
+│ built-in and generated ground-truth corpus with exact provenance            │
+│ COFF/archive/COMDAT resolution · layout reconstruction · relink manifests   │
+│ hash-gated PE patch backend                                                  │
+└───────────────────────┬───────────────────────────────┬─────────────────────┘
+                        ▼                               ▼
+┌──────────── MATCHING-DECOMPILATION LANE ───────────┐  ┌──── FUNCTIONAL-DECOMPILATION LANE ────┐
+│ candidate compiles                                │  │ candidate compiles                    │
+│ ABI observations/check                            │  │ ABI observations/check                │
+│ PE function ↔ COFF symbol                         │  │ Unicorn differential execution        │
+│ relocation-normalized instruction/CFG comparison │  │ DynamoRIO observed coverage           │
+│ exact scoped byte match                           │  │ bounded Z3/angr symbolic+alias model  │
+│ verified patch or manifest relink                 │  │ explicit-consent integration tests   │
+│ target-specific whole-image convergence           │  │ declared behavioral acceptance        │
+└─────────────────────────┬─────────────────────────┘  └──────────────────┬───────────────────┘
+                          └──────────────────┬────────────────────────────┘
+                                             ▼
+┌──────────────────── ACCEPTANCE, EVIDENCE, AND FEEDBACK ────────────────────┐
+│ validator report → evidence record → narrow claim → contradiction check    │
+│ → workflow transition → project-memory event                               │
+│ target release gate aggregates project integrity, workflow minima,         │
+│ pipelines, reproducibility, security and convergence                       │
+│ failed/contradictory evidence returns work to analysis or experimentation  │
+└──────────────────────────────────┬─────────────────────────────────────────┘
+                                   ▼
+┌────────────────────────── OPERATIONS AND OBSERVATION ──────────────────────┐
+│ deterministic backup/restore · repair · garbage collection                 │
+│ read-only FastAPI/API dashboard · worker capability/status visibility      │
+│ SBOM · dependency audit · source audit · release-manifest verification      │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+ACTUAL MATCHING-STATE PATH
+
+not_started
+    │
+    ▼
+decompiled
+    │ function artifact and candidate representation exist
+    ▼
+compiles
+    │ declared compiler emitted the expected artifact
+    ▼
+abi_compatible
+    │ declared ABI checks passed
+    ▼
+instruction_similar
+    │ versioned normalized instruction/CFG comparison passed
+    ▼
+byte_matched
+    │ exact scoped original/candidate bytes
+    ▼
+image_integrated
+    │ hash-gated patch or relink integration passed
+    ▼
+full_relink_validated
+    │ target-specific relink and image checks pass
+    ▼
+accepted matching evidence
+
+Any active state may enter blocked. Leaving blocked requires a resolved blocker and an audit event.
+
+ACTUAL FUNCTIONAL-STATE PATH
+
+not_started
+    │
+    ▼
+decompiled
+    │ function artifact and candidate representation exist
+    ▼
+compiles
+    │ declared compiler emitted the expected artifact
+    ▼
+abi_compatible
+    │ declared ABI checks passed
+    ▼
+differentially_validated
+    │ all declared concrete harnesses pass
+    ▼
+symbolically_bounded
+    │ bounded symbolic obligations pass with model and truncation recorded
+    ▼
+integration_validated
+    │ declared integration scenarios pass in a recorded environment
+    ▼
+accepted functional evidence
+
+Any active state may enter blocked. Leaving blocked requires a resolved blocker and an audit event.
+
+INDEPENDENCE RULE
+
+A function may be instruction_similar in matching mode and integration_validated in
+functional mode. Neither lane automatically promotes the other.
+
+MAINTENANCE CONTRACT
+
+Keep this file synchronized with docs/ARCHITECTURE_MAP.md. Update both whenever
+project schemas, job states, target inputs, workflow states, workers, adapters,
+templates, validation lanes, release gates, service ownership, or trust boundaries
+change. The integrated test suite enforces version, required-plane, state and link
+contracts for all toolkit and test-suite architecture maps.

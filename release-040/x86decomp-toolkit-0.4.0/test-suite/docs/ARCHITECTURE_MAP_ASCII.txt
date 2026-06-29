@@ -1,0 +1,94 @@
+x86decomp comprehensive test-suite architecture map
+Architecture version: 0.4.0
+Status: no-silent-skip verification architecture
+Mermaid companion: test-suite/docs/ARCHITECTURE_MAP.md
+Toolkit map: docs/ARCHITECTURE_MAP.md
+
+┌────────────────────────────── CONFIGURATION ────────────────────────────────┐
+│ toolkit root · output root · strict mode · timeout/coverage floors          │
+│ explicit install/network/host-execution consent · custom environment        │
+└──────────────────────────────────┬──────────────────────────────────────────┘
+                                   ▼
+┌──────────────────────────── ADAPTER RESOLUTION ─────────────────────────────┐
+│ 1 configured path → 2 environment variable → 3 system PATH                 │
+│ → 4 known platform locations                                                │
+│                                                                             │
+│ found: record path/version and DO NOT prompt                                │
+│ missing: ask for a custom path only when interactive                        │
+│ still missing: offer consent-gated installation only when supported         │
+│ unresolved: explicit BLOCKED result; never hidden or counted as PASS        │
+└───────────────────────┬───────────────────────────────┬─────────────────────┘
+                        │ resolved                      │ blocked
+                        ▼                               ▼
+┌────────────────────────── PINNED SURFACE ───────────────────────────────────┐
+│ discover every toolkit module, defined function/method, CLI command,        │
+│ JSON Schema, Ghidra script, workflow state and declared adapter             │
+│ exact 0.4.0 catalog drift comparison; additions/removals require updates    │
+└──────────────────────────────────┬──────────────────────────────────────────┘
+                                   ▼
+┌────────────────────────── BUILT-IN VERIFICATION ────────────────────────────┐
+│ source-manifest SHA-256 checks · schema meta-validation · Java parsing      │
+│ skill/frontmatter/contract validation · Python byte compilation             │
+│ every CLI command parse-tested · native and supplemental regression tests   │
+│ all-function body coverage · line/branch floors · zero pytest skips         │
+│ schema/command/project migration tests · architecture-map synchronization   │
+│ archive/input security · release manifest · SBOM/dependency-audit contracts │
+└──────────────────────────────────┬──────────────────────────────────────────┘
+                                   ▼
+┌──────────────────────── SAFE PROCESS EXECUTION ─────────────────────────────┐
+│ argument arrays only · no shell interpolation · hard timeout                │
+│ separate stdout/stderr logs · bounded output · exact return code            │
+│ clean virtual environments · unrelated pytest plugin autoload disabled      │
+└───────────────────────┬───────────────────────────────┬─────────────────────┘
+                        ▼                               ▼
+┌────────────────── LIVE ADAPTER PROBES ───────────────┐ ┌──── PACKAGING ────┐
+│ real operation for every resolved adapter           │ │ build wheel/sdist │
+│ Ghidra · compilers/linkers · objdiff                 │ │ clean install     │
+│ DynamoRIO · Capstone · Unicorn · Z3 · angr           │ │ installed CLI     │
+│ bounded/container worker capabilities               │ │ packaged data     │
+└──────────────────────────┬───────────────────────────┘ └──────────┬─────────┘
+                           └───────────────────┬────────────────────┘
+                                               ▼
+┌──────────────────────────── UNIFIED RESULT ─────────────────────────────────┐
+│ PASS    required check completed successfully                              │
+│ FAIL    assertion or acceptance contract failed                            │
+│ ERROR   test infrastructure or execution failed                            │
+│ BLOCKED required adapter/capability unavailable                            │
+│                                                                             │
+│ JSONL events · run log · per-test stdout/stderr · JSON/MD/HTML/JUnit        │
+│ coverage JSON/XML/HTML · adapter and inventory reports                      │
+└──────────────────────────────────┬──────────────────────────────────────────┘
+                                   ▼
+┌────────────────────────── STRICT RELEASE GATE ──────────────────────────────┐
+│ PASS only                         → exit 0                                  │
+│ any FAIL or ERROR                 → exit 1                                  │
+│ any BLOCKED in strict mode        → exit 2                                  │
+│ user interruption                 → exit 130                                │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+ADAPTER PROMPT CONTRACT
+
+Detect adapter
+    │
+    ├── found ──> record path/version ──> no prompt ──> live probe
+    │
+    └── missing
+          │
+          ├── noninteractive ──> BLOCKED
+          │
+          └── interactive ──> ask whether installed at a custom path
+                                 │
+                                 ├── valid path ──> record ──> live probe
+                                 │
+                                 └── unresolved ──> consent-gated installer
+                                                        │
+                                                        ├── success ──> re-detect
+                                                        └── no/failed ──> BLOCKED
+
+MAINTENANCE CONTRACT
+
+Keep this file synchronized with test-suite/docs/ARCHITECTURE_MAP.md and the toolkit
+maps. Update it whenever modules, functions, commands, schemas, adapters, states,
+result semantics, prompt/install policy, test stages, reports or release version
+changes. The architecture-map regression test enforces the required planes, state
+names, links and version metadata.

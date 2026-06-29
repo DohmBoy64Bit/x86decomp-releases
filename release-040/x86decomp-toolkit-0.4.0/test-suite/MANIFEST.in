@@ -1,0 +1,11 @@
+include README.md LICENSE CHANGELOG.md MAINTENANCE.md SECURITY.md INTEGRATION.md VERIFICATION.md MANIFEST.sha256
+recursive-include docs *.md *.txt
+recursive-include examples *.json
+recursive-include schemas *.json
+recursive-include scripts *.sh *.ps1
+recursive-include tests *.py
+recursive-include src/x86decomp_testkit/data *.json
+recursive-include src/x86decomp_testkit/self_tests *.py
+prune .pytest_cache
+prune build
+prune dist
