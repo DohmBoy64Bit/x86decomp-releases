@@ -1,0 +1,11 @@
+python3 -m compileall -q src tests scripts test-suite/src test-suite/tests
+PYTHONPATH=src python3 scripts/validate-contracts.py
+contract, example, Java syntax, recursive schema, and skill frontmatter validation passed
+PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 PYTHONPATH=src:test-suite/src python3 -m pytest -q
+........................................................................ [ 38%]
+........................................................................ [ 76%]
+............................................                             [100%]
+188 passed in 55.66s
+PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 PYTHONPATH=test-suite/src python3 -m pytest -q test-suite/tests
+..........................                                               [100%]
+26 passed in 5.86s

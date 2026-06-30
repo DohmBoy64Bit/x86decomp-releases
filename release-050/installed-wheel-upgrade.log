@@ -1,0 +1,59 @@
+{
+  "backup": "/mnt/data/x86decomp-final-installed-upgrade/x86decomp-toolkit-0.4.0/.x86decomp-upgrade-backups/0.4.0-to-0.5.0-20260629T233740Z.tar.gz",
+  "changed": true,
+  "current_version": "0.4.0",
+  "dry_run": false,
+  "failures": [],
+  "final_tree_sha256": "e2b7938ebce0e95a78c7fdb6656fff7fcee91a6d31d7e80c1f42b54fedd77b02",
+  "overlay": "/tmp/x86decomp-v050-overlay-525mygi1",
+  "passed": true,
+  "strategy": "additive namespaced modules with tested, backed-up compatibility supersessions; no legacy capability is removed",
+  "target": "/mnt/data/x86decomp-final-installed-upgrade/x86decomp-toolkit-0.4.0",
+  "target_version": "0.5.0",
+  "verification": [
+    {
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "-m",
+        "compileall",
+        "-q",
+        "src",
+        "tests",
+        "scripts",
+        "test-suite/src",
+        "test-suite/tests"
+      ],
+      "output": "",
+      "returncode": 0
+    },
+    {
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "scripts/validate-contracts.py"
+      ],
+      "output": "contract, example, Java syntax, recursive schema, and skill frontmatter validation passed\n",
+      "returncode": 0
+    },
+    {
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "-m",
+        "pytest",
+        "-q"
+      ],
+      "output": "........................................................................ [ 38%]\n........................................................................ [ 76%]\n............................................                             [100%]\n188 passed in 47.76s\n",
+      "returncode": 0
+    },
+    {
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "-m",
+        "pytest",
+        "-q",
+        "test-suite/tests"
+      ],
+      "output": "..........................                                               [100%]\n26 passed in 4.75s\n",
+      "returncode": 0
+    }
+  ]
+}
