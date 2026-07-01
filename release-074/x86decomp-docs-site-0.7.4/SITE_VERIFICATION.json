@@ -1,0 +1,42 @@
+{
+  "checks": {
+    "all_command_examples_parse_with_real_parsers": true,
+    "all_workflow_commands_parse_with_real_parsers": true,
+    "command_inventory_matches_parser": true,
+    "feature_inventory_matches_source_ast": true,
+    "function_inventory_matches_source_ast": true,
+    "http_smoke_test_passed": true,
+    "internal_sha256_manifest_valid": true,
+    "javascript_syntax_valid": true,
+    "local_links_and_anchors_valid": true,
+    "required_pages_present": true,
+    "search_index_complete": true,
+    "source_bundle_hash_matches": true,
+    "test_inventory_matches_source_ast": true,
+    "zero_unfinished_visible_content": true
+  },
+  "counts": {
+    "adapters": 31,
+    "all_command_paths": 285,
+    "canonical_routes": 173,
+    "command_sections": 285,
+    "feature_modules": 137,
+    "functions_and_methods": 983,
+    "html_pages": 340,
+    "schemas": 93,
+    "search_entries": 1760,
+    "test_suite_commands": 5,
+    "tests": 215,
+    "toolkit_root_commands": 140,
+    "toolkit_runnable_paths": 280
+  },
+  "errors": [],
+  "source_bundle": "x86decomp-toolkit-0.7.4-release-bundle(1).zip",
+  "source_bundle_sha256": "7fae1658b0eccb980d54a3c80a5f91a6cf09f8eb4e2eb4ebcae3bd477f6d36e8",
+  "status": "pass",
+  "validated_examples": {
+    "command_examples": 285,
+    "workflow_commands": 20
+  },
+  "warnings": []
+}

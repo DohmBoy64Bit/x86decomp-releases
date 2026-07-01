@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Implements consensus operations for the governance capability plane.">
+<title>x86decomp.governance.consensus · x86decomp 0.7.4 Docs</title>
+<link rel="stylesheet" href="../assets/styles.css">
+<script>window.X86DOCS_ROOT="../";</script>
+<script defer src="../assets/search-index.js"></script>
+<script defer src="../assets/app.js"></script>
+</head>
+<body data-root="../">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="icon-button mobile-menu" data-menu-toggle aria-label="Open navigation">☰</button>
+  <a class="brand" href="../index.html"><span class="brand-mark">x86</span><span>decomp docs</span><small>0.7.4</small></a>
+  <button class="search-trigger" data-search-trigger aria-label="Search documentation"><span>Search docs</span><kbd>Ctrl K</kbd></button>
+  <button class="icon-button" data-theme-toggle aria-label="Toggle color theme">◐</button>
+</header>
+<div class="layout">
+  <aside class="sidebar" data-sidebar>
+    <nav><a href="../index.html">Home</a><a href="../getting-started.html">Getting started</a><a href="../workflows.html">Workflows</a><a href="../commands/index.html">Commands</a><a href="../features/index.html">Features &amp; functions</a><a href="../tests/index.html">Tests</a><a href="../schemas.html">Schemas</a><a href="../integrations.html">Integrations</a><a href="../verification.html">Verification</a><a href="../changelog.html">Changelog</a><a href="../about.html">About</a></nav>
+    <div class="sidebar-note"><strong>Current release only</strong><span>One unified interface and one documentation contract.</span></div>
+  </aside>
+  <main id="main" class="content">
+    <div class="breadcrumbs"><a href="../index.html">Docs</a><span>/</span><span>x86decomp.governance.consensus</span></div>
+    <div class="eyebrow">Feature and function reference</div><h1>x86decomp.governance.consensus</h1><p class="lead">Implements consensus operations for the governance capability plane.</p><div class="meta-row"><span class="tag tag-current">governance</span><span class="tag">current</span><span class="tag">6 functions</span></div><p><strong>Source:</strong> <code>src/x86decomp/governance/consensus.py</code></p><h2>Related commands</h2><div class="meta-row"><a class="tag tag-canonical" href="../commands/campaign.html">campaign</a> <a class="tag tag-canonical" href="../commands/candidate.html">candidate</a> <a class="tag tag-canonical" href="../commands/changeset.html">changeset</a> <a class="tag tag-canonical" href="../commands/consensus.html">consensus</a> <a class="tag tag-canonical" href="../commands/counterexample.html">counterexample</a> <a class="tag tag-canonical" href="../commands/family.html">family</a> <a class="tag tag-canonical" href="../commands/graph.html">graph</a> <a class="tag tag-canonical" href="../commands/hypothesis.html">hypothesis</a> <a class="tag tag-canonical" href="../commands/plugin.html">plugin</a> <a class="tag tag-canonical" href="../commands/proof.html">proof</a> <a class="tag tag-canonical" href="../commands/review.html">review</a> <a class="tag tag-canonical" href="../commands/worker.html">worker</a></div><h2>Functions and methods</h2><article class="function-entry" id="function-consensusengine-init"><div class="meta-row"><span class="tag">public</span><span class="tag">line 12</span></div><h3>ConsensusEngine.__init__</h3><p>Initializes a new Consensus Engine instance.</p><pre><code class="language-python">def __init__(self, store: GovernanceStore)</code></pre><p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.governance.consensus:ConsensusEngine.__init__</code></p></article><article class="function-entry" id="function-consensusengine-record"><div class="meta-row"><span class="tag">public</span><span class="tag">line 16</span></div><h3>ConsensusEngine.record</h3><p>Records consensus engine.</p><pre><code class="language-python">def record(self, subject_kind: str, subject_id: str, property_name: str, value: Any, *, adapter_name: str, adapter_version: str, evidence_id: str, independence_group: str, confidence: float = 1.0, actor: str = &#x27;adapter&#x27;) -&gt; str</code></pre><p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.governance.consensus:ConsensusEngine.record</code></p></article><article class="function-entry" id="function-consensusengine-scan"><div class="meta-row"><span class="tag">public</span><span class="tag">line 28</span></div><h3>ConsensusEngine.scan</h3><p>Scans consensus engine.</p><pre><code class="language-python">def scan(self, *, subject_kind: str | None = None, subject_id: str | None = None) -&gt; list[dict[str, Any]]</code></pre><p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.governance.consensus:ConsensusEngine.scan</code></p></article><article class="function-entry" id="function-consensusengine-conflicts"><div class="meta-row"><span class="tag">public</span><span class="tag">line 70</span></div><h3>ConsensusEngine.conflicts</h3><p>Performs conflicts for consensus engine.</p><pre><code class="language-python">def conflicts(self) -&gt; list[dict[str, Any]]</code></pre><p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.governance.consensus:ConsensusEngine.conflicts</code></p></article><article class="function-entry" id="function-consensusengine-resolve"><div class="meta-row"><span class="tag">public</span><span class="tag">line 73</span></div><h3>ConsensusEngine.resolve</h3><p>Resolves consensus engine.</p><pre><code class="language-python">def resolve(self, subject_kind: str, subject_id: str, property_name: str, selected_value: Any, *, method: str, rationale: str, actor: str = &#x27;analyst&#x27;, lock: bool = False) -&gt; str</code></pre><p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.governance.consensus:ConsensusEngine.resolve</code></p></article><article class="function-entry" id="function-consensusengine-explain"><div class="meta-row"><span class="tag">public</span><span class="tag">line 94</span></div><h3>ConsensusEngine.explain</h3><p>Performs explain for consensus engine.</p><pre><code class="language-python">def explain(self, subject_kind: str, subject_id: str, property_name: str) -&gt; dict[str, Any]</code></pre><p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.governance.consensus:ConsensusEngine.explain</code></p></article>
+    <footer class="page-footer"><span>x86decomp-toolkit 0.7.4</span><a href="../about.html">About this documentation</a></footer>
+  </main>
+  
+</div>
+<div class="search-dialog" data-search-dialog hidden>
+  <div class="search-panel" role="dialog" aria-modal="true" aria-label="Search documentation">
+    <div class="search-box"><input data-search-input type="search" placeholder="Search commands, functions, tests, and guides" autocomplete="off"><button data-search-close aria-label="Close search">×</button></div>
+    <div class="search-hint">Type at least two characters. Press Escape to close.</div>
+    <div class="search-results" data-search-results></div>
+  </div>
+</div>
+</body>
+</html>
