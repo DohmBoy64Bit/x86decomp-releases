@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Worker process execution and capability reporting.">
+<title>x86decomp.worker · x86decomp 0.7.4 Docs</title>
+<link rel="stylesheet" href="../assets/styles.css">
+<script>window.X86DOCS_ROOT="../";</script>
+<script defer src="../assets/search-index.js"></script>
+<script defer src="../assets/app.js"></script>
+</head>
+<body data-root="../">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="icon-button mobile-menu" data-menu-toggle aria-label="Open navigation">☰</button>
+  <a class="brand" href="../index.html"><span class="brand-mark">x86</span><span>decomp docs</span><small>0.7.4</small></a>
+  <button class="search-trigger" data-search-trigger aria-label="Search documentation"><span>Search docs</span><kbd>Ctrl K</kbd></button>
+  <button class="icon-button" data-theme-toggle aria-label="Toggle color theme">◐</button>
+</header>
+<div class="layout">
+  <aside class="sidebar" data-sidebar>
+    <nav><a href="../index.html">Home</a><a href="../getting-started.html">Getting started</a><a href="../workflows.html">Workflows</a><a href="../commands/index.html">Commands</a><a href="../features/index.html">Features &amp; functions</a><a href="../tests/index.html">Tests</a><a href="../schemas.html">Schemas</a><a href="../integrations.html">Integrations</a><a href="../verification.html">Verification</a><a href="../changelog.html">Changelog</a><a href="../about.html">About</a></nav>
+    <div class="sidebar-note"><strong>Current release only</strong><span>One unified interface and one documentation contract.</span></div>
+  </aside>
+  <main id="main" class="content">
+    <div class="breadcrumbs"><a href="../index.html">Docs</a><span>/</span><span>x86decomp.worker</span></div>
+    <div class="eyebrow">Feature and function reference</div><h1>x86decomp.worker</h1><p class="lead">Worker process execution and capability reporting.</p><div class="meta-row"><span class="tag tag-current">core</span><span class="tag">current</span><span class="tag">8 functions</span></div><p><strong>Source:</strong> <code>src/x86decomp/worker.py</code></p><h2>Related commands</h2><div class="meta-row"><a class="tag tag-canonical" href="../commands/worker.html">worker</a></div><h2>Functions and methods</h2><article class="function-entry" id="function-workerlimits-validate"><div class="meta-row"><span class="tag">public</span><span class="tag">line 34</span></div><h3>WorkerLimits.validate</h3><p>Validates worker limits.</p><pre><code class="language-python">def validate(self) -&gt; None</code></pre><p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.worker:WorkerLimits.validate</code></p></article><article class="function-entry" id="function-workerresult-to-dict"><div class="meta-row"><span class="tag">public</span><span class="tag">line 69</span></div><h3>WorkerResult.to_dict</h3><p>Converts the Worker Result into a JSON-friendly dictionary.</p><pre><code class="language-python">def to_dict(self) -&gt; dict[str, Any]</code></pre><p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.worker:WorkerResult.to_dict</code></p></article><article class="function-entry" id="function-discover-worker-capabilities"><div class="meta-row"><span class="tag">public</span><span class="tag">line 89</span></div><h3>discover_worker_capabilities</h3><p>Discovers worker capabilities for worker operations.</p><pre><code class="language-python">def discover_worker_capabilities() -&gt; dict[str, Any]</code></pre><p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.worker:discover_worker_capabilities</code></p></article><article class="function-entry" id="function-bounded-environment"><div class="meta-row"><span class="tag">internal</span><span class="tag">line 103</span></div><h3>_bounded_environment</h3><p>Internal helper that performs bounded environment for worker.</p><pre><code class="language-python">def _bounded_environment(extra: dict[str, str], working_directory: Path) -&gt; dict[str, str]</code></pre><p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.worker:_bounded_environment</code></p></article><article class="function-entry" id="function-preexec"><div class="meta-row"><span class="tag">internal</span><span class="tag">line 138</span></div><h3>_preexec</h3><p>Return the legacy resource-limit callback for API compatibility. The production launcher no longer passes this callback to ``Popen`` because Python code executed between fork and exec can deadlock in a process that has already initialized threads. the exec-based resource wrapper applies the same limits in a fresh Python interpreter immediately before ``exec``.</p><pre><code class="language-python">def _preexec(limits: WorkerLimits) -&gt; Any</code></pre><p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.worker:_preexec</code></p></article><article class="function-entry" id="function-confined-paths"><div class="meta-row"><span class="tag">internal</span><span class="tag">line 164</span></div><h3>_confined_paths</h3><p>Internal helper that performs confined paths for worker.</p><pre><code class="language-python">def _confined_paths(root: Path, values: tuple[Path, ...], *, must_exist: bool) -&gt; tuple[Path, ...]</code></pre><p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.worker:_confined_paths</code></p></article><article class="function-entry" id="function-container-command"><div class="meta-row"><span class="tag">internal</span><span class="tag">line 180</span></div><h3>_container_command</h3><p>Internal helper that performs container command for worker.</p><pre><code class="language-python">def _container_command(request: WorkerRequest, runtime: str) -&gt; tuple[str, ...]</code></pre><p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.worker:_container_command</code></p></article><article class="function-entry" id="function-execute-worker-request"><div class="meta-row"><span class="tag">public</span><span class="tag">line 205</span></div><h3>execute_worker_request</h3><p>Performs execute worker request for worker.</p><pre><code class="language-python">def execute_worker_request(request: WorkerRequest, *, log_directory: Path, report_path: Path | None = None, cancel_check: Callable[[], bool] | None = None) -&gt; WorkerResult</code></pre><p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.worker:execute_worker_request</code></p></article>
+    <footer class="page-footer"><span>x86decomp-toolkit 0.7.4</span><a href="../about.html">About this documentation</a></footer>
+  </main>
+  
+</div>
+<div class="search-dialog" data-search-dialog hidden>
+  <div class="search-panel" role="dialog" aria-modal="true" aria-label="Search documentation">
+    <div class="search-box"><input data-search-input type="search" placeholder="Search commands, functions, tests, and guides" autocomplete="off"><button data-search-close aria-label="Close search">×</button></div>
+    <div class="search-hint">Type at least two characters. Press Escape to close.</div>
+    <div class="search-results" data-search-results></div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,535 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="A complete end-to-end hybrid project example for x86decomp-toolkit 0.7.4, from target evidence through matching and functional validation.">
+<title>Project examples · x86decomp 0.7.4 Docs</title>
+<link rel="stylesheet" href="assets/styles.css">
+<link rel="stylesheet" href="assets/project-examples.css">
+<script>window.X86DOCS_ROOT="";</script>
+<script defer src="assets/search-index.js"></script>
+<script defer src="assets/app.js"></script>
+</head>
+<body data-root="">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="icon-button mobile-menu" data-menu-toggle aria-label="Open navigation">☰</button>
+  <a class="brand" href="index.html"><span class="brand-mark">x86</span><span>decomp docs</span><small>0.7.4</small></a>
+  <button class="search-trigger" data-search-trigger aria-label="Search documentation"><span>Search docs</span><kbd>Ctrl K</kbd></button>
+  <button class="icon-button" data-theme-toggle aria-label="Toggle color theme">◐</button>
+</header>
+<div class="layout">
+  <aside class="sidebar" data-sidebar>
+    <nav><a href="index.html">Home</a><a href="getting-started.html">Getting started</a><a href="workflows.html">Workflows</a><a href="project-examples.html" aria-current="page">Project examples</a><a href="commands/index.html">Commands</a><a href="features/index.html">Features &amp; functions</a><a href="tests/index.html">Tests</a><a href="schemas.html">Schemas</a><a href="integrations.html">Integrations</a><a href="verification.html">Verification</a><a href="changelog.html">Changelog</a><a href="about.html">About</a></nav>
+    <div class="sidebar-note"><strong>Current release only</strong><span>One unified interface and one documentation contract.</span></div>
+  </aside>
+  <main id="main" class="content project-example-page">
+    <div class="breadcrumbs"><a href="index.html">Docs</a><span>/</span><span>Project examples</span></div>
+
+<section class="hero project-example-hero">
+  <div class="eyebrow">Project examples · hybrid reconstruction</div>
+  <h1>Example: end-to-end hybrid project</h1>
+  <p class="lead">Follow one function from target evidence to a continuously buildable hybrid image, while keeping machine-code matching and behavioral validation as independent evidence lanes.</p>
+  <div class="hero-actions">
+    <a class="button" href="#capture-target-evidence">Start the example</a>
+    <a class="button secondary" href="#whole-project-flow">See the complete flow</a>
+  </div>
+</section>
+
+<div class="callout">
+  <strong>Example scope.</strong> Paths, manifest names, function identifiers, and report locations are representative. Use the command reference for the exact parser contract in your installation, and preserve the project’s actual hashes, toolchain provenance, validation bounds, and authorization decisions.
+</div>
+
+<nav class="example-toc" aria-label="On this page">
+  <strong>On this page</strong>
+  <ol>
+    <li><a href="#hybrid-model">The hybrid model</a></li>
+    <li><a href="#capture-target-evidence">Capture target evidence</a></li>
+    <li><a href="#create-project">Create the project</a></li>
+    <li><a href="#analysis-artifacts">Export analysis artifacts</a></li>
+    <li><a href="#buildable-baseline">Generate the buildable baseline</a></li>
+    <li><a href="#candidate-and-abi">Prepare, compile, and ABI-check a candidate</a></li>
+    <li><a href="#matching-lane">Matching lane</a></li>
+    <li><a href="#functional-lane">Functional lane</a></li>
+    <li><a href="#final-state">Interpret the final state</a></li>
+    <li><a href="#whole-project-flow">Whole-project flow</a></li>
+  </ol>
+</nav>
+
+<section id="hybrid-model">
+  <h2>The hybrid model</h2>
+  <p>A <strong>hybrid project</strong> keeps the program continuously buildable while each function advances independently through two validation lanes:</p>
+
+  <figure class="workflow-figure" aria-labelledby="hybrid-model-caption">
+    <svg viewBox="0 0 980 360" role="img" aria-labelledby="hybrid-model-title hybrid-model-desc">
+      <title id="hybrid-model-title">Hybrid project validation model</title>
+      <desc id="hybrid-model-desc">Original function bytes produce an assembly fallback and a source candidate. The source candidate is checked independently by a matching lane and a functional lane before accepted source is integrated into the hybrid build.</desc>
+      <defs>
+        <marker id="arrow-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+          <path d="M 0 0 L 10 5 L 0 10 z" class="diagram-arrowhead"/>
+        </marker>
+      </defs>
+      <g class="diagram-lines" marker-end="url(#arrow-a)">
+        <path d="M185 87 H330"/>
+        <path d="M185 87 C245 87 260 235 330 235"/>
+        <path d="M530 235 C610 235 610 92 680 92"/>
+        <path d="M530 235 C610 235 610 278 680 278"/>
+        <path d="M850 92 C910 92 910 185 860 185"/>
+        <path d="M850 278 C910 278 910 185 860 185"/>
+      </g>
+      <g class="diagram-node">
+        <rect x="30" y="45" width="155" height="84" rx="14"/>
+        <text x="107.5" y="79" text-anchor="middle">Original</text>
+        <text x="107.5" y="103" text-anchor="middle">function bytes</text>
+      </g>
+      <g class="diagram-node diagram-node-muted">
+        <rect x="330" y="44" width="200" height="86" rx="14"/>
+        <text x="430" y="78" text-anchor="middle">Assembly fallback</text>
+        <text x="430" y="103" text-anchor="middle">continuous build safety</text>
+      </g>
+      <g class="diagram-node">
+        <rect x="330" y="192" width="200" height="86" rx="14"/>
+        <text x="430" y="226" text-anchor="middle">Source candidate</text>
+        <text x="430" y="251" text-anchor="middle">C or C++ proposal</text>
+      </g>
+      <g class="diagram-node diagram-node-match">
+        <rect x="680" y="49" width="170" height="86" rx="14"/>
+        <text x="765" y="83" text-anchor="middle">Matching lane</text>
+        <text x="765" y="108" text-anchor="middle">bytes / instructions</text>
+      </g>
+      <g class="diagram-node diagram-node-functional">
+        <rect x="680" y="235" width="170" height="86" rx="14"/>
+        <text x="765" y="269" text-anchor="middle">Functional lane</text>
+        <text x="765" y="294" text-anchor="middle">bounded behavior</text>
+      </g>
+      <g class="diagram-node diagram-node-accepted">
+        <rect x="700" y="144" width="160" height="82" rx="14"/>
+        <text x="780" y="178" text-anchor="middle">Accepted source</text>
+        <text x="780" y="202" text-anchor="middle">hybrid integration</text>
+      </g>
+    </svg>
+    <figcaption id="hybrid-model-caption">The two validation lanes share a candidate, but neither lane automatically advances the other.</figcaption>
+  </figure>
+
+  <pre class="ascii-fallback" aria-label="Text version of the hybrid validation model"><code>                         ┌─ Matching lane ─ byte/instruction reproduction
+original bytes → source ─┤
+                         └─ Functional lane ─ behavior reproduction</code></pre>
+
+  <p>A function can pass functional validation without matching the original machine code, or byte-match without completing broader integration testing. The statuses are deliberately independent.</p>
+
+  <div class="lane-grid">
+    <article class="lane-card matching-card">
+      <h3>Matching decompilation</h3>
+      <p>Measures whether the candidate reproduces the target’s declared machine-code properties.</p>
+      <code>not_started → decompiled → compiles → abi_compatible → instruction_similar → byte_matched → image_integrated → full_relink_validated</code>
+    </article>
+    <article class="lane-card functional-card">
+      <h3>Functional decompilation</h3>
+      <p>Measures whether the candidate reproduces behavior within declared finite models and scenarios.</p>
+      <code>not_started → decompiled → compiles → abi_compatible → differentially_validated → symbolically_bounded → integration_validated</code>
+    </article>
+  </div>
+
+  <p>Assume this example reconstructs:</p>
+  <pre><code>target.exe
+└── function pe-rva:00401230</code></pre>
+</section>
+
+<section id="capture-target-evidence" class="example-step">
+  <div class="step-number" aria-hidden="true">1</div>
+  <div>
+    <h2>Capture the target evidence</h2>
+    <p>Start with the executable and any legally available supporting artifacts:</p>
+    <pre><code class="language-bash">x86decomp target-pack-infer target.exe target-pack/ \
+  --pdb target.pdb \
+  --map target.map \
+  --decisions target-decisions.json
+
+x86decomp target-pack-verify target-pack/</code></pre>
+    <p>The target pack records observed facts separately from operator decisions. Missing compiler, linker, language, or layout details remain <code>unknown</code>; the toolkit does not invent them.</p>
+    <div class="callout success"><strong>Evidence rule.</strong> A decision can establish a project assumption or known fact only when the operator explicitly supplies it. Omitted facts remain unknown or become blockers.</div>
+  </div>
+</section>
+
+<section id="create-project" class="example-step">
+  <div class="step-number" aria-hidden="true">2</div>
+  <div>
+    <h2>Create a hybrid project</h2>
+    <pre><code class="language-bash">x86decomp project-from-target target-pack/ project/
+x86decomp project-check project/</code></pre>
+    <p>The generated project contains source lanes, validation policy, reports, durable pipeline definitions, blockers, project state, and immutable artifact storage. A target pack is the grounded automatic-template input; project creation must not emit fake source, fake toolchains, or fake link order.</p>
+    <p>Conceptually, the project begins like this:</p>
+    <pre><code>project/
+├── original/
+│   └── target.exe
+├── target-pack/
+├── functions/
+├── src/
+│   ├── asm/
+│   ├── staging/
+│   └── accepted/
+├── build/
+├── reports/
+├── orchestration/
+└── state/</code></pre>
+  </div>
+</section>
+
+<section id="analysis-artifacts" class="example-step">
+  <div class="step-number" aria-hidden="true">3</div>
+  <div>
+    <h2>Export and import function analysis</h2>
+    <p>Run Ghidra static analysis and export the resulting function packets:</p>
+    <pre><code class="language-bash">x86decomp ghidra-export &lt;ghidra-project&gt; &lt;program&gt;</code></pre>
+    <p>For each function, the exported material can include:</p>
+    <pre><code>functions/pe-rva_00401230/
+├── function.json
+├── decompiler.c
+├── listing.asm
+├── raw-pcode.jsonl
+├── high-pcode.jsonl
+└── references.json</code></pre>
+    <p>These are <strong>analysis observations</strong>, not authenticated original source. Ghidra output can contain incorrect boundaries, signatures, types, or control-flow interpretations, so downstream compilation and validation remain mandatory.</p>
+  </div>
+</section>
+
+<section id="buildable-baseline" class="example-step">
+  <div class="step-number" aria-hidden="true">4</div>
+  <div>
+    <h2>Generate the continuously buildable baseline</h2>
+    <pre><code class="language-bash">x86decomp hybrid-generate project/hybrid-project.json</code></pre>
+    <p>Initially, every function is represented by assembly containing preserved bytes. The generator also creates staging C files and build metadata. This gives the project a buildable fallback before any function has been successfully reconstructed.</p>
+    <pre><code>src/asm/sub_00401230.S       ← safe byte-form fallback
+src/staging/sub_00401230.c    ← decompiler-derived candidate</code></pre>
+
+    <h3>Source maturation path</h3>
+    <pre><code>original bytes
+    ↓
+generated assembly
+    ↓
+decompiler-derived C/C++
+    ↓
+human-corrected C/C++
+    ↓
+accepted candidate</code></pre>
+    <p>Unfinished or rejected functions stay on the assembly/original-byte path.</p>
+  </div>
+</section>
+
+<section class="example-step">
+  <div class="step-number" aria-hidden="true">5</div>
+  <div>
+    <h2>Build the baseline</h2>
+    <p>For example:</p>
+    <pre><code class="language-bash">cd project
+make</code></pre>
+    <p>The assembly fallback for <code>sub_00401230</code> becomes a COFF object:</p>
+    <pre><code>src/asm/sub_00401230.S
+          ↓ assembler
+build/sub_00401230.o</code></pre>
+    <p>At this point the project is buildable, but the function has not yet been decompiled or validated.</p>
+    <pre><code class="language-yaml">function: pe-rva:00401230
+
+matching:
+  state: not_started
+
+functional:
+  state: not_started
+
+active_source:
+  stage: generated_assembly</code></pre>
+  </div>
+</section>
+
+<section id="candidate-and-abi" class="example-step">
+  <div class="step-number" aria-hidden="true">6</div>
+  <div>
+    <h2>Prepare and compile a source candidate</h2>
+    <p>An analyst edits the staging output into a candidate such as:</p>
+    <pre><code class="language-c">int __cdecl calculate_total(int value, int adjustment)
+{
+    return value + adjustment;
+}</code></pre>
+    <p>The candidate is compiled with a registered, provenance-recorded compiler profile:</p>
+    <pre><code class="language-bash">x86decomp compile compiler-profile.json \
+  project/src/staging/sub_00401230.c \
+  project/build/sub_00401230_candidate.obj \
+  --report project/reports/compile/sub_00401230.json</code></pre>
+    <p>A successful compile advances both lanes only as far as their independently justified state:</p>
+    <pre><code class="language-yaml">matching:
+  state: compiles
+
+functional:
+  state: compiles</code></pre>
+    <div class="callout warning"><strong>Compilation is not validation.</strong> A successful compiler invocation says nothing by itself about byte identity, ABI correctness, behavioral equivalence, or whole-image integration.</div>
+
+    <h2>Check the ABI</h2>
+    <p>Verify the calling convention, argument locations, stack cleanup, return registers, preserved registers, and relevant structure layout.</p>
+    <p>Suppose the evidence supports:</p>
+    <pre><code>Architecture:       x86
+Calling convention: __cdecl
+Arguments:          stack words 1 and 2
+Return value:       EAX
+Stack cleanup:      caller</code></pre>
+    <p>After a passing ABI report:</p>
+    <pre><code class="language-yaml">matching:
+  state: abi_compatible
+
+functional:
+  state: abi_compatible</code></pre>
+    <p>This is the last shared-looking milestone. From here, the lanes use different validators.</p>
+  </div>
+</section>
+
+<section id="matching-lane" class="lane-section matching-section">
+  <div class="section-kicker">Lane A</div>
+  <h2>Matching lane</h2>
+
+  <h3>Compare candidate code with the original function</h3>
+  <pre><code class="language-bash">x86decomp diff-function \
+  project/original/target.exe \
+  0x00401230 \
+  16 \
+  project/build/sub_00401230_candidate.obj \
+  sub_00401230</code></pre>
+  <p>The comparison examines the original PE range against the candidate object symbol. Depending on the result, the function may reach:</p>
+  <pre><code>abi_compatible
+      ↓
+instruction_similar
+      ↓
+byte_matched</code></pre>
+  <p>For example:</p>
+  <pre><code class="language-yaml">matching:
+  state: instruction_similar
+  reports:
+    diff: reports/diff/sub_00401230.json</code></pre>
+  <p>This means the normalized instructions or control flow met the declared comparison policy, but the emitted bytes were not yet identical.</p>
+  <p>After adjusting source, compiler flags, compiler profile, or known relocation handling, a later candidate might produce:</p>
+  <pre><code class="language-yaml">matching:
+  state: byte_matched</code></pre>
+  <div class="callout"><strong>Narrow claim.</strong> A byte match is a machine-code reproduction claim for the declared function range and normalization policy. It is not by itself proof of whole-program correctness.</div>
+
+  <h3>Integrate the matched candidate</h3>
+  <p>Once accepted, the project changes that function’s active source:</p>
+  <pre><code>Before:
+sub_00401230 → src/asm/sub_00401230.S
+
+After:
+sub_00401230 → src/accepted/sub_00401230.c</code></pre>
+  <p>All other unfinished functions continue using assembly fallback objects.</p>
+  <p>Build the hybrid image:</p>
+  <pre><code class="language-bash">x86decomp relink project/relink-manifest.json</code></pre>
+  <p>Then compare the produced image under the target-specific profile:</p>
+  <pre><code class="language-bash">x86decomp image-match \
+  project/original/target.exe \
+  project/build/target-hybrid.exe \
+  project/image-profile.json</code></pre>
+  <p>A successful per-function insertion advances matching to:</p>
+  <pre><code>byte_matched → image_integrated</code></pre>
+  <p>A successful declared full-image relink gate can advance it to:</p>
+  <pre><code>image_integrated → full_relink_validated</code></pre>
+</section>
+
+<section id="functional-lane" class="lane-section functional-section">
+  <div class="section-kicker">Lane B</div>
+  <h2>Functional lane</h2>
+
+  <h3>Run differential tests</h3>
+  <p>The functional lane compares behavior over explicitly declared inputs and observations:</p>
+  <pre><code class="language-bash">x86decomp dynamic-validate \
+  original-function.bin \
+  candidate-function.bin \
+  harness.json</code></pre>
+  <p>A passing result advances:</p>
+  <pre><code>abi_compatible → differentially_validated</code></pre>
+  <p>This means the target and candidate behaved the same for that finite harness. It is not an all-input proof.</p>
+
+  <h3>Run bounded symbolic validation</h3>
+  <pre><code class="language-bash">x86decomp symbolic-validate \
+  original-function.bin \
+  candidate-function.bin \
+  --architecture x86 \
+  --stack-argument-words 2 \
+  --output-register eax \
+  --max-steps 64 \
+  --max-paths 16</code></pre>
+  <p>A passing result advances:</p>
+  <pre><code>differentially_validated → symbolically_bounded</code></pre>
+  <p>The result applies only to the declared instruction, path, memory, alias, and observation bounds.</p>
+
+  <h3>Run integration scenarios</h3>
+  <p>Execute native application scenarios only in an explicitly approved isolation boundary:</p>
+  <pre><code class="language-bash">x86decomp integration-run \
+  project/integration/calculate-total.json \
+  --external-wrapper project/scripts/run-in-vm</code></pre>
+  <p>The scenario might compare:</p>
+  <pre><code>exit code
+stdout/stderr
+generated files
+selected process state
+declared application behavior</code></pre>
+  <p>A passing integration report advances:</p>
+  <pre><code>symbolically_bounded → integration_validated</code></pre>
+  <div class="callout danger"><strong>Execution boundary.</strong> Unknown native programs must not be executed directly on an ordinary development host. Integration execution belongs behind explicit consent and an appropriate VM, external sandbox, or reviewed wrapper.</div>
+</section>
+
+<section id="final-state">
+  <h2>Final state of the example function</h2>
+  <p>The function can legitimately finish with different results in each lane:</p>
+  <pre><code class="language-yaml">function: pe-rva:00401230
+
+active_source:
+  stage: accepted_source
+  path: src/accepted/sub_00401230.c
+
+matching:
+  state: instruction_similar
+  reports:
+    compiler: reports/compile/sub_00401230.json
+    abi: reports/abi/sub_00401230.json
+    diff: reports/diff/sub_00401230.json
+
+functional:
+  state: integration_validated
+  reports:
+    differential: reports/dynamic/sub_00401230.json
+    symbolic: reports/symbolic/sub_00401230.json
+    integration: reports/integration/sub_00401230.json</code></pre>
+
+  <div class="interpretation-card">
+    <h3>Exact interpretation</h3>
+    <p>The reconstructed function passed the declared functional tests, bounded symbolic model, and integration scenarios, but it does not yet reproduce the original instruction sequence or bytes.</p>
+  </div>
+  <p>That is a valid hybrid-project outcome. The toolkit must not collapse it into a vague <code>complete</code> status.</p>
+</section>
+
+<section id="whole-project-flow">
+  <h2>Whole-project flow</h2>
+
+  <figure class="workflow-figure workflow-figure-large" aria-labelledby="whole-flow-caption">
+    <svg viewBox="0 0 1120 980" role="img" aria-labelledby="whole-flow-title whole-flow-desc">
+      <title id="whole-flow-title">Whole-project hybrid reconstruction flow</title>
+      <desc id="whole-flow-desc">Target evidence becomes a verified target pack, hybrid project, function analysis artifacts, and a continuously buildable assembly baseline. Matching and functional validation proceed independently, then feed evidence-backed project status and release gates.</desc>
+      <defs>
+        <marker id="arrow-b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+          <path d="M 0 0 L 10 5 L 0 10 z" class="diagram-arrowhead"/>
+        </marker>
+      </defs>
+      <g class="diagram-lines" marker-end="url(#arrow-b)">
+        <path d="M560 92 V150"/>
+        <path d="M560 230 V288"/>
+        <path d="M560 368 V426"/>
+        <path d="M560 506 V568"/>
+        <path d="M560 648 V690"/>
+        <path d="M560 690 H300 V738"/>
+        <path d="M560 690 H820 V738"/>
+        <path d="M300 868 V916 H560"/>
+        <path d="M820 868 V916 H560"/>
+      </g>
+
+      <g class="diagram-node">
+        <rect x="360" y="22" width="400" height="70" rx="14"/>
+        <text x="560" y="51" text-anchor="middle">Target executable and supporting evidence</text>
+        <text x="560" y="74" text-anchor="middle">PE · PDB · MAP · objects · decisions</text>
+      </g>
+      <g class="diagram-node">
+        <rect x="400" y="150" width="320" height="80" rx="14"/>
+        <text x="560" y="183" text-anchor="middle">Verified target pack</text>
+        <text x="560" y="207" text-anchor="middle">observations separated from decisions</text>
+      </g>
+      <g class="diagram-node">
+        <rect x="400" y="288" width="320" height="80" rx="14"/>
+        <text x="560" y="321" text-anchor="middle">Hybrid project</text>
+        <text x="560" y="345" text-anchor="middle">state · reports · policies · source lanes</text>
+      </g>
+      <g class="diagram-node">
+        <rect x="400" y="426" width="320" height="80" rx="14"/>
+        <text x="560" y="459" text-anchor="middle">Ghidra function-artifact import</text>
+        <text x="560" y="483" text-anchor="middle">bytes · listing · P-code · references · candidate C</text>
+      </g>
+      <g class="diagram-node diagram-node-muted">
+        <rect x="380" y="568" width="360" height="80" rx="14"/>
+        <text x="560" y="601" text-anchor="middle">Assembly fallback for every function</text>
+        <text x="560" y="625" text-anchor="middle">continuously buildable hybrid image</text>
+      </g>
+      <g class="diagram-node diagram-node-match">
+        <rect x="120" y="738" width="360" height="130" rx="14"/>
+        <text x="300" y="770" text-anchor="middle">Matching validation</text>
+        <text x="300" y="797" text-anchor="middle">compile → ABI → instruction diff</text>
+        <text x="300" y="822" text-anchor="middle">byte comparison → image integration</text>
+        <text x="300" y="847" text-anchor="middle">target-specific full relink gate</text>
+      </g>
+      <g class="diagram-node diagram-node-functional">
+        <rect x="640" y="738" width="360" height="130" rx="14"/>
+        <text x="820" y="770" text-anchor="middle">Functional validation</text>
+        <text x="820" y="797" text-anchor="middle">compile → ABI → differential execution</text>
+        <text x="820" y="822" text-anchor="middle">bounded symbolic comparison</text>
+        <text x="820" y="847" text-anchor="middle">isolated integration scenarios</text>
+      </g>
+      <g class="diagram-node diagram-node-accepted">
+        <rect x="360" y="900" width="400" height="70" rx="14"/>
+        <text x="560" y="928" text-anchor="middle">Evidence-backed project status</text>
+        <text x="560" y="952" text-anchor="middle">reproducibility and target release gate</text>
+      </g>
+    </svg>
+    <figcaption id="whole-flow-caption">Validated candidates move forward one function at a time; unresolved functions keep their byte-safe assembly fallback.</figcaption>
+  </figure>
+
+  <pre class="ascii-fallback" aria-label="Text version of the whole-project flow"><code>Target executable and supporting evidence
+                    │
+                    ▼
+             Verified target pack
+                    │
+                    ▼
+              Hybrid project
+                    │
+                    ▼
+       Ghidra function-artifact import
+                    │
+                    ▼
+      Assembly fallback for every function
+                    │
+                    ▼
+          Continuously buildable image
+                    │
+          ┌─────────┴──────────┐
+          ▼                    ▼
+   Matching validation   Functional validation
+   compile               compile
+   ABI                   ABI
+   instruction diff      differential execution
+   byte comparison       bounded symbolic check
+   image integration     integration scenarios
+   full relink
+          └─────────┬──────────┘
+                    ▼
+       Evidence-backed project status
+                    │
+                    ▼
+       Reproducibility and release gate</code></pre>
+
+  <p>The important property is that replacing one function does not require finishing every function. Validated candidates move forward, while unresolved functions retain their byte-safe assembly fallback.</p>
+</section>
+
+<section class="next-links">
+  <h2>Continue from here</h2>
+  <div class="grid">
+    <a class="card link-card" href="workflows.html"><div class="card-title">Workflow recipes</div><p>Use shorter task-oriented recipes for project creation, inspection, reconstruction, and verification.</p></a>
+    <a class="card link-card" href="commands/index.html"><div class="card-title">Command reference</div><p>Check the exact purpose, parser contract, arguments, and examples for every command used above.</p></a>
+    <a class="card link-card" href="verification.html"><div class="card-title">Verification contract</div><p>Review what the sealed release proved, what remained blocked, and how bounded claims must be interpreted.</p></a>
+  </div>
+</section>
+
+<footer class="page-footer"><span>x86decomp-toolkit 0.7.4</span><a href="about.html">About this documentation</a></footer>
+  </main>
+</div>
+<div class="search-dialog" data-search-dialog hidden>
+  <div class="search-panel" role="dialog" aria-modal="true" aria-label="Search documentation">
+    <div class="search-box"><input data-search-input type="search" placeholder="Search commands, functions, tests, and guides" autocomplete="off"><button data-search-close aria-label="Close search">×</button></div>
+    <div class="search-hint">Type at least two characters. Press Escape to close.</div>
+    <div class="search-results" data-search-results></div>
+  </div>
+</div>
+</body>
+</html>

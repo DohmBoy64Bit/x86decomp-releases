@@ -1,0 +1,36 @@
+{
+  "format": "x86decomp-project-examples-patch-bundle-verification-v1",
+  "generated_at": "2026-07-01T20:18:20.773238+00:00",
+  "target_docs_release": "0.7.4",
+  "status": "pass",
+  "checks": {
+    "new_page_present": true,
+    "stylesheet_present": true,
+    "apply_script_present": true,
+    "two_inline_svg_diagrams_present": true,
+    "ascii_diagram_fallbacks_present": true,
+    "matching_lane_present": true,
+    "functional_lane_present": true,
+    "complete_final_state_yaml_present": true,
+    "native_execution_boundary_present": true,
+    "zero_placeholder_markers": true,
+    "synthetic_site_first_apply_passed": true,
+    "synthetic_site_second_apply_idempotency_passed": true,
+    "synthetic_site_local_links_and_fragments_passed": true,
+    "synthetic_site_nested_navigation_passed": true,
+    "synthetic_site_search_entry_not_duplicated": true,
+    "synthetic_site_checksum_manifest_refreshed": true,
+    "zip_integrity_passed": true
+  },
+  "synthetic_fixture": {
+    "html_pages_after_patch": 12,
+    "result": "pass",
+    "notes": [
+      "Tested root and nested-page navigation prefixes.",
+      "Applied twice to verify no duplicate navigation, home card, workflow callout, or search entry.",
+      "Validated local links and fragments after both applications.",
+      "Verified generated checksum manifest includes the patch verification records."
+    ]
+  },
+  "truth_boundary": "This verification covers the documentation overlay, patch script behavior, local-link validation, idempotency, and archive integrity on a representative static-site fixture. It does not re-run the x86decomp toolkit parser, sealed release tests, or external adapters, and it is not a visual cross-browser audit."
+}

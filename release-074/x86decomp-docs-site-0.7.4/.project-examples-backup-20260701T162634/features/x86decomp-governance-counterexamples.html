@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Implements counterexamples operations for the governance capability plane.">
+<title>x86decomp.governance.counterexamples · x86decomp 0.7.4 Docs</title>
+<link rel="stylesheet" href="../assets/styles.css">
+<script>window.X86DOCS_ROOT="../";</script>
+<script defer src="../assets/search-index.js"></script>
+<script defer src="../assets/app.js"></script>
+</head>
+<body data-root="../">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="icon-button mobile-menu" data-menu-toggle aria-label="Open navigation">☰</button>
+  <a class="brand" href="../index.html"><span class="brand-mark">x86</span><span>decomp docs</span><small>0.7.4</small></a>
+  <button class="search-trigger" data-search-trigger aria-label="Search documentation"><span>Search docs</span><kbd>Ctrl K</kbd></button>
+  <button class="icon-button" data-theme-toggle aria-label="Toggle color theme">◐</button>
+</header>
+<div class="layout">
+  <aside class="sidebar" data-sidebar>
+    <nav><a href="../index.html">Home</a><a href="../getting-started.html">Getting started</a><a href="../workflows.html">Workflows</a><a href="../commands/index.html">Commands</a><a href="../features/index.html">Features &amp; functions</a><a href="../tests/index.html">Tests</a><a href="../schemas.html">Schemas</a><a href="../integrations.html">Integrations</a><a href="../verification.html">Verification</a><a href="../changelog.html">Changelog</a><a href="../about.html">About</a></nav>
+    <div class="sidebar-note"><strong>Current release only</strong><span>One unified interface and one documentation contract.</span></div>
+  </aside>
+  <main id="main" class="content">
+    <div class="breadcrumbs"><a href="../index.html">Docs</a><span>/</span><span>x86decomp.governance.counterexamples</span></div>
+    <div class="eyebrow">Feature and function reference</div><h1>x86decomp.governance.counterexamples</h1><p class="lead">Implements counterexamples operations for the governance capability plane.</p><div class="meta-row"><span class="tag tag-current">governance</span><span class="tag">current</span><span class="tag">7 functions</span></div><p><strong>Source:</strong> <code>src/x86decomp/governance/counterexamples.py</code></p><h2>Related commands</h2><div class="meta-row"><a class="tag tag-canonical" href="../commands/campaign.html">campaign</a> <a class="tag tag-canonical" href="../commands/candidate.html">candidate</a> <a class="tag tag-canonical" href="../commands/changeset.html">changeset</a> <a class="tag tag-canonical" href="../commands/consensus.html">consensus</a> <a class="tag tag-canonical" href="../commands/counterexample.html">counterexample</a> <a class="tag tag-canonical" href="../commands/family.html">family</a> <a class="tag tag-canonical" href="../commands/graph.html">graph</a> <a class="tag tag-canonical" href="../commands/hypothesis.html">hypothesis</a> <a class="tag tag-canonical" href="../commands/plugin.html">plugin</a> <a class="tag tag-canonical" href="../commands/proof.html">proof</a> <a class="tag tag-canonical" href="../commands/review.html">review</a> <a class="tag tag-canonical" href="../commands/worker.html">worker</a></div><h2>Functions and methods</h2><article class="function-entry" id="function-counterexamplestore-init"><div class="meta-row"><span class="tag">public</span><span class="tag">line 15</span></div><h3>CounterexampleStore.__init__</h3><p>Initializes a new Counterexample Store instance.</p><pre><code class="language-python">def __init__(self, store: GovernanceStore)</code></pre><p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.governance.counterexamples:CounterexampleStore.__init__</code></p></article><article class="function-entry" id="function-counterexamplestore-add"><div class="meta-row"><span class="tag">public</span><span class="tag">line 20</span></div><h3>CounterexampleStore.add</h3><p>Adds counterexample store.</p><pre><code class="language-python">def add(self, scope_kind: str, scope_id: str, payload: bytes | str | Path, *, predicate: dict[str, Any], provenance: dict[str, Any] | None = None, actor: str = &#x27;validator&#x27;) -&gt; str</code></pre><p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.governance.counterexamples:CounterexampleStore.add</code></p></article><article class="function-entry" id="function-counterexamplestore-minimize"><div class="meta-row"><span class="tag">public</span><span class="tag">line 38</span></div><h3>CounterexampleStore.minimize</h3><p>Performs minimize for counterexample store.</p><pre><code class="language-python">def minimize(self, counterexample_id: str, predicate: Predicate, *, actor: str = &#x27;validator&#x27;, max_tests: int = 10000) -&gt; dict[str, Any]</code></pre><p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.governance.counterexamples:CounterexampleStore.minimize</code></p></article><article class="function-entry" id="function-counterexamplestore-promote-to-regression"><div class="meta-row"><span class="tag">public</span><span class="tag">line 63</span></div><h3>CounterexampleStore.promote_to_regression</h3><p>Performs promote to regression for counterexample store.</p><pre><code class="language-python">def promote_to_regression(self, counterexample_id: str, destination_root: str | Path, *, actor: str = &#x27;analyst&#x27;) -&gt; dict[str, Any]</code></pre><p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.governance.counterexamples:CounterexampleStore.promote_to_regression</code></p></article><article class="function-entry" id="function-counterexamplestore-get"><div class="meta-row"><span class="tag">public</span><span class="tag">line 79</span></div><h3>CounterexampleStore.get</h3><p>Returns counterexample store.</p><pre><code class="language-python">def get(self, counterexample_id: str) -&gt; dict[str, Any]</code></pre><p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.governance.counterexamples:CounterexampleStore.get</code></p></article><article class="function-entry" id="function-counterexamplestore-list"><div class="meta-row"><span class="tag">public</span><span class="tag">line 90</span></div><h3>CounterexampleStore.list</h3><p>Lists counterexample store.</p><pre><code class="language-python">def list(self) -&gt; list[dict[str, Any]]</code></pre><p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.governance.counterexamples:CounterexampleStore.list</code></p></article><article class="function-entry" id="function-ddmin-bytes"><div class="meta-row"><span class="tag">public</span><span class="tag">line 96</span></div><h3>ddmin_bytes</h3><p>Delta-debug a byte string while preserving predicate(data) == True.</p><pre><code class="language-python">def ddmin_bytes(data: bytes, predicate: Predicate, *, max_tests: int = 10000) -&gt; tuple[bytes, int]</code></pre><p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.governance.counterexamples:ddmin_bytes</code></p></article>
+    <footer class="page-footer"><span>x86decomp-toolkit 0.7.4</span><a href="../about.html">About this documentation</a></footer>
+  </main>
+  
+</div>
+<div class="search-dialog" data-search-dialog hidden>
+  <div class="search-panel" role="dialog" aria-modal="true" aria-label="Search documentation">
+    <div class="search-box"><input data-search-input type="search" placeholder="Search commands, functions, tests, and guides" autocomplete="off"><button data-search-close aria-label="Close search">×</button></div>
+    <div class="search-hint">Type at least two characters. Press Escape to close.</div>
+    <div class="search-results" data-search-results></div>
+  </div>
+</div>
+</body>
+</html>

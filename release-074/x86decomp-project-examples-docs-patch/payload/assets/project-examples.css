@@ -1,0 +1,226 @@
+/* Project examples page additions for the x86decomp 0.7.4 static docs site. */
+
+.project-example-page {
+  --example-border: color-mix(in srgb, currentColor 17%, transparent);
+  --example-surface: color-mix(in srgb, currentColor 4%, transparent);
+  --example-match: #7c5cff;
+  --example-functional: #0d9488;
+  --example-accepted: #2f855a;
+}
+
+.project-example-hero {
+  margin-bottom: 1.5rem;
+}
+
+.example-toc {
+  margin: 2rem 0 3rem;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid var(--example-border);
+  border-radius: 16px;
+  background: var(--example-surface);
+}
+
+.example-toc ol {
+  columns: 2;
+  column-gap: 2.5rem;
+  margin: .75rem 0 0;
+  padding-left: 1.25rem;
+}
+
+.example-toc li {
+  break-inside: avoid;
+  margin: .35rem 0;
+}
+
+.example-step {
+  display: grid;
+  grid-template-columns: 3rem minmax(0, 1fr);
+  gap: 1.25rem;
+  align-items: start;
+  margin: 3.25rem 0;
+  scroll-margin-top: 5rem;
+}
+
+.step-number {
+  display: grid;
+  place-items: center;
+  width: 2.65rem;
+  height: 2.65rem;
+  border-radius: 999px;
+  font-weight: 800;
+  border: 1px solid var(--example-border);
+  background: var(--example-surface);
+}
+
+.lane-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.lane-card,
+.interpretation-card {
+  border: 1px solid var(--example-border);
+  border-radius: 16px;
+  padding: 1.25rem;
+  background: var(--example-surface);
+}
+
+.lane-card h3,
+.interpretation-card h3 {
+  margin-top: 0;
+}
+
+.lane-card code {
+  display: block;
+  white-space: normal;
+  line-height: 1.65;
+}
+
+.matching-card,
+.matching-section {
+  border-inline-start: 4px solid var(--example-match);
+}
+
+.functional-card,
+.functional-section {
+  border-inline-start: 4px solid var(--example-functional);
+}
+
+.lane-section {
+  margin: 3rem 0;
+  padding: 1.5rem 1.5rem 1.75rem;
+  border-top: 1px solid var(--example-border);
+  border-right: 1px solid var(--example-border);
+  border-bottom: 1px solid var(--example-border);
+  border-radius: 0 16px 16px 0;
+  background: var(--example-surface);
+  scroll-margin-top: 5rem;
+}
+
+.section-kicker {
+  font-size: .78rem;
+  font-weight: 800;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  opacity: .72;
+}
+
+.workflow-figure {
+  margin: 2rem 0;
+  padding: 1rem;
+  overflow-x: auto;
+  border: 1px solid var(--example-border);
+  border-radius: 18px;
+  background: var(--example-surface);
+}
+
+.workflow-figure svg {
+  display: block;
+  width: 100%;
+  min-width: 720px;
+  height: auto;
+}
+
+.workflow-figure-large svg {
+  min-width: 820px;
+}
+
+.workflow-figure figcaption {
+  margin-top: .8rem;
+  font-size: .92rem;
+  text-align: center;
+  opacity: .78;
+}
+
+.diagram-node rect {
+  fill: var(--background, Canvas);
+  stroke: color-mix(in srgb, currentColor 28%, transparent);
+  stroke-width: 2;
+}
+
+.diagram-node text {
+  fill: currentColor;
+  font: 600 17px system-ui, sans-serif;
+}
+
+.diagram-node text + text {
+  font-size: 14px;
+  font-weight: 450;
+  opacity: .74;
+}
+
+.diagram-node-muted rect {
+  stroke-dasharray: 7 5;
+}
+
+.diagram-node-match rect {
+  stroke: var(--example-match);
+}
+
+.diagram-node-functional rect {
+  stroke: var(--example-functional);
+}
+
+.diagram-node-accepted rect {
+  stroke: var(--example-accepted);
+  stroke-width: 3;
+}
+
+.diagram-lines {
+  fill: none;
+  stroke: color-mix(in srgb, currentColor 42%, transparent);
+  stroke-width: 2.2;
+}
+
+.diagram-arrowhead {
+  fill: color-mix(in srgb, currentColor 50%, transparent);
+}
+
+.ascii-fallback {
+  margin-top: 1rem;
+}
+
+.interpretation-card {
+  border-inline-start: 4px solid var(--example-accepted);
+  margin: 1.5rem 0;
+}
+
+.next-links {
+  margin-top: 3.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--example-border);
+}
+
+.project-example-page section[id] {
+  scroll-margin-top: 5rem;
+}
+
+@media (max-width: 760px) {
+  .example-toc ol {
+    columns: 1;
+  }
+
+  .lane-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .example-step {
+    grid-template-columns: 1fr;
+  }
+
+  .step-number {
+    margin-bottom: -.5rem;
+  }
+
+  .lane-section {
+    padding: 1.15rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-example-page * {
+    scroll-behavior: auto !important;
+  }
+}
