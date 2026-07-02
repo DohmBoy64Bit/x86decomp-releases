@@ -1,0 +1,609 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+        <title>x86decomp asm - x86decomp 0.7.4 Docs</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        
+        
+        
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="../../assets/css/darcula-highlight.min.css">
+
+        <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../assets/css/dracula-ui.min.css">
+        <link rel="stylesheet" href="../../assets/css/mkdocs.min.css">
+            <link href="../../assets/x86decomp-dracula-overrides.css" rel="stylesheet">
+
+        
+            <link  rel="icon" type="image/x-icon" href="../../assets/img/favicon.ico">
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+                <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+
+<body class="drac-bg-black-secondary drac-text-grey-ternary drac-text drac-scrollbar-purple">
+
+    <main class="d-flex">
+
+        <!-- block sidebar -->
+            <nav id="sidebar" class="sidebar drac-bg-black">
+    <div class="custom-menu">
+        <button type="button" id="sidebarCollapse" class="btn btn-primary">
+            <i class="fa fa-bars"></i>
+            <span class="sr-only">Menu</span>
+        </button>
+    </div>
+
+    <div class="p-4">
+        
+
+        <div class="drac-text-center">
+            
+                <span class="drac-text drac-line-height drac-text-white">x86decomp 0.7.4 Docs</span>
+            
+        </div>
+
+        <div class="drac-box flex-column">
+            <ul class="dot-ul">
+                <li><div class="dot-li drac-bg-cyan"></div></li>
+                <li><div class="dot-li drac-bg-green"></div></li>
+                <li><div class="dot-li drac-bg-orange"></div></li>
+                <li><div class="dot-li drac-bg-pink"></div></li>
+                <li><div class="dot-li drac-bg-purple"></div></li>
+                <li><div class="dot-li drac-bg-red"></div></li>
+                <li><div class="dot-li drac-bg-yellow"></div></li>
+            </ul>
+        </div>
+
+        <hr class="drac-divider" />
+
+        <!-- block menu -->
+        <ul class="mb-5 drac-list drac-list-none">
+            
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Home
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../../getting-started/"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Getting Started
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../../workflows/"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Workflows
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../../project-examples/"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Project Examples
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#reference-collapse" aria-expanded="false">
+                    Reference
+                </a>
+                <div class="collapse" id="reference-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../reference/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Commands
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../schemas/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Schemas
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../integrations/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Integrations
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../features/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Source Modules
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../functions/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Function Index
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../tests/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Tests
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#release-evidence-collapse" aria-expanded="false">
+                    Release Evidence
+                </a>
+                <div class="collapse" id="release-evidence-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../release-evidence/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../verification/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Verification
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../source-coverage/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Source Coverage
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../changelog/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Changelog
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../about/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            About
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <!-- endblock -->
+    </div>
+</nav>
+        <!-- endblock -->
+
+        <nav class="divider drac-bg-purple-cyan"></nav>
+
+        <div class="content">
+            <!-- block header -->
+                <header>
+    <nav class="navbar navbar-expand-xl drac-bg-purple">
+        <div class="container-fluid">
+            
+            <button class="navbar-toggler w-100 text-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMenu"
+                aria-controls="navbarsMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse flex-column ml-auto" id="navbarsMenu">
+                <ul class="navbar-nav text-md-center">
+
+                    <!-- block preview -->
+                    <li class="nav-item">
+                            
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block search -->
+                    <li class="nav-item"><div role="search" class="search-box">
+	<form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+		<input type="text" name="q" class="drac-input drac-input-search drac-input-white drac-text-white drac-bg-black-secondary"
+		placeholder="Search docs" title="Type search term here" />
+	</form>
+</div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block source -->
+                    <li class="nav-item">
+                        
+                    </li>
+                    <!--  endblock -->
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+</header>
+            <!-- endblock -->
+
+            <!-- block content -->
+                <section class="p-md-5 section-content">
+    <article>
+        <p><p><a id="command-asm-annotate"></a>
+<a id="command-asm-batch"></a>
+<a id="command-asm-list"></a>
+<a id="command-asm-materialize"></a>
+<a id="command-asm-report"></a>
+<a id="command-asm-verify-roundtrip"></a></p>
+<p>Section: Command reference</p>
+<h1 id="x86decomp-asm"><code>x86decomp asm</code></h1>
+<p>Canonical asm commands implemented by the current capability subsystem.</p>
+<p>Metadata: current · canonical group · 6 runnable paths</p>
+<h2 id="help">Help</h2>
+<pre><code>x86decomp asm --help
+</code></pre>
+<p>Metadata: current · assembly</p>
+<h2 id="x86decomp-asm-annotate"><code>x86decomp asm annotate</code></h2>
+<p>annotate command</p>
+<h3 id="usage">Usage</h3>
+<pre><code>x86decomp asm annotate [-h] --symbol SYMBOL --rva RVA
+                              [--image-base IMAGE_BASE]
+                              [--architecture {x86,x86_64}]
+                              source output
+</code></pre>
+<h3 id="syntax-example">Syntax example</h3>
+<pre><code>x86decomp asm annotate ./candidate.c ./output.json --symbol example --rva 0x1000
+</code></pre>
+<h3 id="arguments">Arguments</h3>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Source-declared parser metadata</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>source</code> required</td>
+<td>No argument help text is declared; parser destination is <code>source</code>.</td>
+</tr>
+<tr>
+<td><code>output</code> required</td>
+<td>No argument help text is declared; parser destination is <code>output</code>.</td>
+</tr>
+<tr>
+<td><code>--symbol</code> required</td>
+<td>No argument help text is declared; parser destination is <code>symbol</code>.</td>
+</tr>
+<tr>
+<td><code>--rva</code> required · type: _int</td>
+<td>No argument help text is declared; parser destination is <code>rva</code>.</td>
+</tr>
+<tr>
+<td><code>--image-base</code> default: 0 · type: _int</td>
+<td>No argument help text is declared; parser destination is <code>image_base</code>.</td>
+</tr>
+<tr>
+<td><code>--architecture</code> default: 'x86' · choices: x86, x86_64</td>
+<td>No argument help text is declared; parser destination is <code>architecture</code>.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Source basis.</strong> Parser definition: <code>src/x86decomp/assembly/cli.py</code>; SHA-256 <code>f9fc081b2048d0c37591959352da1786d262cf26475932cba21977e24b652c58</code>. Descriptions above use only parser-declared text or an explicit no-help notice.</p>
+</blockquote>
+<p>Metadata: current · assembly</p>
+<h2 id="x86decomp-asm-batch"><code>x86decomp asm batch</code></h2>
+<p>batch command</p>
+<h3 id="usage_1">Usage</h3>
+<pre><code>x86decomp asm batch [-h] [--format {bytes,annotated,mnemonic}]
+                           [--assembler-command-json ASSEMBLER_COMMAND_JSON]
+                           [--image-base IMAGE_BASE]
+                           manifest output
+</code></pre>
+<h3 id="syntax-example_1">Syntax example</h3>
+<pre><code>x86decomp asm batch ./output.json ./output.json
+</code></pre>
+<h3 id="arguments_1">Arguments</h3>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Source-declared parser metadata</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>manifest</code> required</td>
+<td>No argument help text is declared; parser destination is <code>manifest</code>.</td>
+</tr>
+<tr>
+<td><code>output</code> required</td>
+<td>No argument help text is declared; parser destination is <code>output</code>.</td>
+</tr>
+<tr>
+<td><code>--format</code> default: 'bytes' · choices: bytes, annotated, mnemonic</td>
+<td>No argument help text is declared; parser destination is <code>asm_format</code>.</td>
+</tr>
+<tr>
+<td><code>--assembler-command-json</code></td>
+<td>No argument help text is declared; parser destination is <code>assembler_command_json</code>.</td>
+</tr>
+<tr>
+<td><code>--image-base</code> type: _int</td>
+<td>No argument help text is declared; parser destination is <code>image_base</code>.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Source basis.</strong> Parser definition: <code>src/x86decomp/assembly/cli.py</code>; SHA-256 <code>f9fc081b2048d0c37591959352da1786d262cf26475932cba21977e24b652c58</code>. Descriptions above use only parser-declared text or an explicit no-help notice.</p>
+</blockquote>
+<p>Metadata: current · assembly</p>
+<h2 id="x86decomp-asm-list"><code>x86decomp asm list</code></h2>
+<p>list command</p>
+<h3 id="usage_2">Usage</h3>
+<pre><code>x86decomp asm list [-h]
+</code></pre>
+<h3 id="syntax-example_2">Syntax example</h3>
+<pre><code>x86decomp asm list
+</code></pre>
+<h3 id="arguments_2">Arguments</h3>
+<p>No route-specific arguments are declared.</p>
+<blockquote>
+<p><strong>Source basis.</strong> Parser definition: <code>src/x86decomp/assembly/cli.py</code>; SHA-256 <code>f9fc081b2048d0c37591959352da1786d262cf26475932cba21977e24b652c58</code>. Descriptions above use only parser-declared text or an explicit no-help notice.</p>
+</blockquote>
+<p>Metadata: current · assembly</p>
+<h2 id="x86decomp-asm-materialize"><code>x86decomp asm materialize</code></h2>
+<p>materialize command</p>
+<h3 id="usage_3">Usage</h3>
+<pre><code>x86decomp asm materialize [-h] [--input-kind {bytes,assembly}]
+                                 --symbol SYMBOL --rva RVA
+                                 [--image-base IMAGE_BASE]
+                                 [--architecture {x86,x86_64}]
+                                 --symbol-map SYMBOL_MAP
+                                 [--assembler-command-json ASSEMBLER_COMMAND_JSON]
+                                 [--timeout TIMEOUT] [--report REPORT]
+                                 input output_source output_object
+                                 output_resolved
+</code></pre>
+<h3 id="syntax-example_3">Syntax example</h3>
+<pre><code>x86decomp asm materialize ./input.json ./generated.asm ./generated.obj ./resolved.bin --symbol example --rva 0x1000 --symbol-map ./target.map
+</code></pre>
+<h3 id="arguments_3">Arguments</h3>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Source-declared parser metadata</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>input</code> required</td>
+<td>No argument help text is declared; parser destination is <code>input</code>.</td>
+</tr>
+<tr>
+<td><code>output_source</code> required</td>
+<td>No argument help text is declared; parser destination is <code>output_source</code>.</td>
+</tr>
+<tr>
+<td><code>output_object</code> required</td>
+<td>No argument help text is declared; parser destination is <code>output_object</code>.</td>
+</tr>
+<tr>
+<td><code>output_resolved</code> required</td>
+<td>No argument help text is declared; parser destination is <code>output_resolved</code>.</td>
+</tr>
+<tr>
+<td><code>--input-kind</code> default: 'bytes' · choices: bytes, assembly</td>
+<td>No argument help text is declared; parser destination is <code>input_kind</code>.</td>
+</tr>
+<tr>
+<td><code>--symbol</code> required</td>
+<td>No argument help text is declared; parser destination is <code>symbol</code>.</td>
+</tr>
+<tr>
+<td><code>--rva</code> required · type: _int</td>
+<td>No argument help text is declared; parser destination is <code>rva</code>.</td>
+</tr>
+<tr>
+<td><code>--image-base</code> default: 0 · type: _int</td>
+<td>No argument help text is declared; parser destination is <code>image_base</code>.</td>
+</tr>
+<tr>
+<td><code>--architecture</code> default: 'x86' · choices: x86, x86_64</td>
+<td>No argument help text is declared; parser destination is <code>architecture</code>.</td>
+</tr>
+<tr>
+<td><code>--symbol-map</code> required</td>
+<td>No argument help text is declared; parser destination is <code>symbol_map</code>.</td>
+</tr>
+<tr>
+<td><code>--assembler-command-json</code></td>
+<td>No argument help text is declared; parser destination is <code>assembler_command_json</code>.</td>
+</tr>
+<tr>
+<td><code>--timeout</code> default: 60 · type: int</td>
+<td>No argument help text is declared; parser destination is <code>timeout</code>.</td>
+</tr>
+<tr>
+<td><code>--report</code></td>
+<td>No argument help text is declared; parser destination is <code>report</code>.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Source basis.</strong> Parser definition: <code>src/x86decomp/assembly/cli.py</code>; SHA-256 <code>f9fc081b2048d0c37591959352da1786d262cf26475932cba21977e24b652c58</code>. Descriptions above use only parser-declared text or an explicit no-help notice.</p>
+</blockquote>
+<p>Metadata: current · assembly</p>
+<h2 id="x86decomp-asm-report"><code>x86decomp asm report</code></h2>
+<p>report command</p>
+<h3 id="usage_4">Usage</h3>
+<pre><code>x86decomp asm report [-h] run_id
+</code></pre>
+<h3 id="syntax-example_4">Syntax example</h3>
+<pre><code>x86decomp asm report example-001
+</code></pre>
+<h3 id="arguments_4">Arguments</h3>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Source-declared parser metadata</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>run_id</code> required</td>
+<td>No argument help text is declared; parser destination is <code>run_id</code>.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Source basis.</strong> Parser definition: <code>src/x86decomp/assembly/cli.py</code>; SHA-256 <code>f9fc081b2048d0c37591959352da1786d262cf26475932cba21977e24b652c58</code>. Descriptions above use only parser-declared text or an explicit no-help notice.</p>
+</blockquote>
+<p>Metadata: current · assembly</p>
+<h2 id="x86decomp-asm-verify-roundtrip"><code>x86decomp asm verify-roundtrip</code></h2>
+<p>verify-roundtrip command</p>
+<h3 id="usage_5">Usage</h3>
+<pre><code>x86decomp asm verify-roundtrip [-h] --symbol SYMBOL --rva RVA
+                                      [--image-base IMAGE_BASE]
+                                      [--architecture {x86,x86_64}]
+                                      --symbol-map SYMBOL_MAP
+                                      [--assembler-command-json ASSEMBLER_COMMAND_JSON]
+                                      [--timeout TIMEOUT] [--report REPORT]
+                                      source original output_object
+                                      output_resolved
+</code></pre>
+<h3 id="syntax-example_5">Syntax example</h3>
+<pre><code>x86decomp asm verify-roundtrip ./candidate.c ./original.bin ./generated.obj ./resolved.bin --symbol example --rva 0x1000 --symbol-map ./target.map
+</code></pre>
+<h3 id="arguments_5">Arguments</h3>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Source-declared parser metadata</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>source</code> required</td>
+<td>No argument help text is declared; parser destination is <code>source</code>.</td>
+</tr>
+<tr>
+<td><code>original</code> required</td>
+<td>No argument help text is declared; parser destination is <code>original</code>.</td>
+</tr>
+<tr>
+<td><code>output_object</code> required</td>
+<td>No argument help text is declared; parser destination is <code>output_object</code>.</td>
+</tr>
+<tr>
+<td><code>output_resolved</code> required</td>
+<td>No argument help text is declared; parser destination is <code>output_resolved</code>.</td>
+</tr>
+<tr>
+<td><code>--symbol</code> required</td>
+<td>No argument help text is declared; parser destination is <code>symbol</code>.</td>
+</tr>
+<tr>
+<td><code>--rva</code> required · type: _int</td>
+<td>No argument help text is declared; parser destination is <code>rva</code>.</td>
+</tr>
+<tr>
+<td><code>--image-base</code> default: 0 · type: _int</td>
+<td>No argument help text is declared; parser destination is <code>image_base</code>.</td>
+</tr>
+<tr>
+<td><code>--architecture</code> default: 'x86' · choices: x86, x86_64</td>
+<td>No argument help text is declared; parser destination is <code>architecture</code>.</td>
+</tr>
+<tr>
+<td><code>--symbol-map</code> required</td>
+<td>No argument help text is declared; parser destination is <code>symbol_map</code>.</td>
+</tr>
+<tr>
+<td><code>--assembler-command-json</code></td>
+<td>No argument help text is declared; parser destination is <code>assembler_command_json</code>.</td>
+</tr>
+<tr>
+<td><code>--timeout</code> default: 60 · type: int</td>
+<td>No argument help text is declared; parser destination is <code>timeout</code>.</td>
+</tr>
+<tr>
+<td><code>--report</code></td>
+<td>No argument help text is declared; parser destination is <code>report</code>.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Source basis.</strong> Parser definition: <code>src/x86decomp/assembly/cli.py</code>; SHA-256 <code>f9fc081b2048d0c37591959352da1786d262cf26475932cba21977e24b652c58</code>. Descriptions above use only parser-declared text or an explicit no-help notice.</p>
+</blockquote></p>
+    </article>
+</section>
+            <!-- endblock -->
+
+            <!-- block footer -->
+                <footer>
+    <div class="d-flex flex-sm-row justify-content-between py-2 border-top drac-text-black drac-bg-cyan-green">
+        <a href="https://github.com/dracula/mkdocs" target="_blank" style="padding-left: 1%;"
+            class="footer-text drac-anchor drac-text-black drac-text-purple--hover">
+            Made with Dracula Theme for MkDocs
+        </a>
+    </div>
+</footer>
+            <!-- endblock -->
+        </div>
+
+    </main>
+
+        <script>var base_url = '../..';</script>
+        <script src="../../assets/js/jquery-3.3.1.slim.min.js"></script>
+        <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+        <script src="../../assets/js/mkdocs.js"></script>
+			<script src="../../search/main.js" defer></script>
+
+</body>
+
+</html>

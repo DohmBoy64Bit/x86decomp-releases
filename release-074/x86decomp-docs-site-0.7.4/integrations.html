@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Exact v0.7.4 adapter specifications">
+<title>Integrations · x86decomp 0.7.4 Docs</title>
+<link rel="stylesheet" href="assets/styles.css">
+<script>window.X86DOCS_ROOT="";</script>
+<script defer src="assets/search-index.js"></script>
+<script defer src="assets/app.js"></script>
+</head>
+<body data-root="">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="icon-button mobile-menu" data-menu-toggle aria-label="Open navigation">☰</button>
+  <a class="brand" href="index.html"><span class="brand-mark">x86</span><span>decomp docs</span><small>0.7.4</small></a>
+  <button class="search-trigger" data-search-trigger aria-label="Search documentation"><span>Search docs</span><kbd>Ctrl K</kbd></button>
+  <button class="icon-button" data-theme-toggle aria-label="Toggle color theme">◐</button>
+</header>
+<div class="layout">
+  <aside class="sidebar" data-sidebar>
+    <nav><a href="index.html">Home</a><a href="getting-started.html">Getting started</a><a href="workflows.html">Workflows</a><a href="project-examples.html">Project examples</a><a href="commands/index.html">Commands</a><a href="features/index.html">Features &amp; functions</a><a href="tests/index.html">Tests</a><a href="schemas.html">Schemas</a><a href="integrations.html">Integrations</a><a href="source-coverage.html">Source coverage</a><a href="verification.html">Verification</a><a href="changelog.html">Changelog</a><a href="about.html">About</a></nav>
+    <div class="sidebar-note"><strong>Current release only</strong><span>Source-derived documentation for the sealed 0.7.4 release.</span></div>
+  </aside>
+  <main id="main" class="content">
+<div class="breadcrumbs"><a href="index.html">Docs</a><span>/</span><span>Integrations</span></div>
+<div class="eyebrow">Exact adapter catalog</div><h1>Integrations and adapters</h1>
+<p class="lead">All 31 adapter specifications declared by <code>test-suite/src/x86decomp_testkit/adapters/catalog.py</code>.</p>
+<div class="callout"><strong>Important:</strong> The source catalog marks most adapters <code>optional=False</code> for the comprehensive harness. Missing adapters are reported as BLOCKED rather than silently skipped; the <code>msvc</code> adapter is explicitly optional and user-owned.</div>
+<div class="card-grid"><article class="card" id="adapter-angr"><div class="card-title">angr — angr</div>
+<p><strong>Kind:</strong> <code>python</code> · <strong>Optional flag:</strong> <code>false</code></p>
+<p><strong>Verification suites:</strong> <code>angr</code>, <code>symbolic-memory</code></p><p><strong>Executable candidates:</strong> none</p>
+<p><strong>Python modules:</strong> <code>angr</code></p><p><strong>Environment variables:</strong> none</p>
+<p><strong>Pip requirement:</strong> <code>angr&gt;=9.2,&lt;10</code></p>
+</article><article class="card" id="adapter-build"><div class="card-title">build — Python build</div>
+<p><strong>Kind:</strong> <code>python</code> · <strong>Optional flag:</strong> <code>false</code></p>
+<p><strong>Verification suites:</strong> <code>packaging</code></p><p><strong>Executable candidates:</strong> none</p>
+<p><strong>Python modules:</strong> <code>build</code></p><p><strong>Environment variables:</strong> none</p>
+<p><strong>Pip requirement:</strong> <code>build&gt;=1.2,&lt;2</code></p>
+</article><article class="card" id="adapter-capstone"><div class="card-title">capstone — Capstone Python bindings</div>
+<p><strong>Kind:</strong> <code>python</code> · <strong>Optional flag:</strong> <code>false</code></p>
+<p><strong>Verification suites:</strong> <code>disassembly</code>, <code>matching</code>, <code>symbolic</code></p><p><strong>Executable candidates:</strong> none</p>
+<p><strong>Python modules:</strong> <code>capstone</code></p><p><strong>Environment variables:</strong> none</p>
+<p><strong>Pip requirement:</strong> <code>capstone&gt;=5.0.6,&lt;6</code></p>
+</article><article class="card" id="adapter-clang"><div class="card-title">clang — Clang C compiler</div>
+<p><strong>Kind:</strong> <code>executable</code> · <strong>Optional flag:</strong> <code>false</code></p>
+<p><strong>Verification suites:</strong> <code>compiler</code>, <code>corpus</code>, <code>coff</code></p><p><strong>Executable candidates:</strong> <code>clang</code>, <code>clang.exe</code></p>
+<p><strong>Python modules:</strong> none</p><p><strong>Environment variables:</strong> <code>CLANG</code></p>
+
+<p>Install LLVM/Clang or select the clang executable.</p></article><article class="card" id="adapter-clangxx"><div class="card-title">clangxx — Clang C++ compiler</div>
+<p><strong>Kind:</strong> <code>executable</code> · <strong>Optional flag:</strong> <code>false</code></p>
+<p><strong>Verification suites:</strong> <code>compiler</code>, <code>corpus</code>, <code>cpp</code></p><p><strong>Executable candidates:</strong> <code>clang++</code>, <code>clang++.exe</code></p>
+<p><strong>Python modules:</strong> none</p><p><strong>Environment variables:</strong> <code>CLANGXX</code></p>
+
+<p>Install LLVM/Clang or select the clang++ executable.</p></article><article class="card" id="adapter-cmake"><div class="card-title">cmake — CMake</div>
+<p><strong>Kind:</strong> <code>executable</code> · <strong>Optional flag:</strong> <code>false</code></p>
+<p><strong>Verification suites:</strong> <code>native-build</code></p><p><strong>Executable candidates:</strong> <code>cmake</code>, <code>cmake.exe</code></p>
+<p><strong>Python modules:</strong> none</p><p><strong>Environment variables:</strong> none</p>
+
+<p>Install CMake or select cmake.</p></article><article class="card" id="adapter-container-runtime"><div class="card-title">container-runtime — Docker or Podman container runtime</div>
+<p><strong>Kind:</strong> <code>executable</code> · <strong>Optional flag:</strong> <code>false</code></p>
+<p><strong>Verification suites:</strong> <code>isolated-workers</code>, <code>compiler-worker</code></p><p><strong>Executable candidates:</strong> <code>docker</code>, <code>podman</code>, <code>docker.exe</code>, <code>podman.exe</code></p>
+<p><strong>Python modules:</strong> none</p><p><strong>Environment variables:</strong> none</p>
+
+<p>Install Docker or Podman, or select an existing runtime executable.</p></article><article class="card" id="adapter-coverage"><div class="card-title">coverage — coverage.py</div>
+<p><strong>Kind:</strong> <code>python</code> · <strong>Optional flag:</strong> <code>false</code></p>
+<p><strong>Verification suites:</strong> <code>coverage</code>, <code>public-api</code></p><p><strong>Executable candidates:</strong> none</p>
+<p><strong>Python modules:</strong> <code>coverage</code></p><p><strong>Environment variables:</strong> none</p>
+<p><strong>Pip requirement:</strong> <code>coverage&gt;=7,&lt;8</code></p>
+</article><article class="card" id="adapter-dynamorio"><div class="card-title">dynamorio — DynamoRIO</div>
+<p><strong>Kind:</strong> <code>directory</code> · <strong>Optional flag:</strong> <code>false</code></p>
+<p><strong>Verification suites:</strong> <code>drcov-live</code>, <code>runtime-tracing</code></p><p><strong>Executable candidates:</strong> <code>drrun</code>, <code>drrun.exe</code></p>
+<p><strong>Python modules:</strong> none</p><p><strong>Environment variables:</strong> <code>DYNAMORIO_HOME</code></p>
+
+<p>Download a DynamoRIO release package and select its extracted root or drrun executable.</p></article><article class="card" id="adapter-fastapi"><div class="card-title">fastapi — FastAPI</div>
+<p><strong>Kind:</strong> <code>python</code> · <strong>Optional flag:</strong> <code>false</code></p>
+<p><strong>Verification suites:</strong> <code>service</code></p><p><strong>Executable candidates:</strong> none</p>
+<p><strong>Python modules:</strong> <code>fastapi</code></p><p><strong>Environment variables:</strong> none</p>
+<p><strong>Pip requirement:</strong> <code>fastapi&gt;=0.128,&lt;1</code></p>
+</article><article class="card" id="adapter-gcc"><div class="card-title">gcc — GCC C compiler</div>
+<p><strong>Kind:</strong> <code>executable</code> · <strong>Optional flag:</strong> <code>false</code></p>
+<p><strong>Verification suites:</strong> <code>compiler-regression</code></p><p><strong>Executable candidates:</strong> <code>gcc</code>, <code>gcc.exe</code></p>
+<p><strong>Python modules:</strong> none</p><p><strong>Environment variables:</strong> none</p>
+
+<p>Install GCC or select gcc.</p></article><article class="card" id="adapter-ghidra"><div class="card-title">ghidra — Ghidra</div>
+<p><strong>Kind:</strong> <code>directory</code> · <strong>Optional flag:</strong> <code>false</code></p>
+<p><strong>Verification suites:</strong> <code>ghidra-live</code>, <code>pcode</code>, <code>decompiler</code></p><p><strong>Executable candidates:</strong> <code>analyzeHeadless</code>, <code>analyzeHeadless.bat</code></p>
+<p><strong>Python modules:</strong> none</p><p><strong>Environment variables:</strong> <code>GHIDRA_HOME</code></p>
+
+<p>Download an official Ghidra release archive and extract it; select the extracted root directory.</p></article><article class="card" id="adapter-gxx"><div class="card-title">gxx — GCC C++ compiler</div>
+<p><strong>Kind:</strong> <code>executable</code> · <strong>Optional flag:</strong> <code>false</code></p>
+<p><strong>Verification suites:</strong> <code>compiler-regression</code></p><p><strong>Executable candidates:</strong> <code>g++</code>, <code>g++.exe</code></p>
+<p><strong>Python modules:</strong> none</p><p><strong>Environment variables:</strong> none</p>
+
+<p>Install GCC or select g++.</p></article><article class="card" id="adapter-java"><div class="card-title">java — Java runtime</div>
+<p><strong>Kind:</strong> <code>executable</code> · <strong>Optional flag:</strong> <code>false</code></p>
+<p><strong>Verification suites:</strong> <code>ghidra</code></p><p><strong>Executable candidates:</strong> <code>java</code></p>
+<p><strong>Python modules:</strong> none</p><p><strong>Environment variables:</strong> <code>JAVA_HOME</code></p>
+
+<p>Install a Java version supported by the selected Ghidra release.</p></article><article class="card" id="adapter-javalang"><div class="card-title">javalang — javalang</div>
+<p><strong>Kind:</strong> <code>python</code> · <strong>Optional flag:</strong> <code>false</code></p>
+<p><strong>Verification suites:</strong> <code>ghidra-static</code></p><p><strong>Executable candidates:</strong> none</p>
+<p><strong>Python modules:</strong> <code>javalang</code></p><p><strong>Environment variables:</strong> none</p>
+<p><strong>Pip requirement:</strong> <code>javalang&gt;=0.13,&lt;1</code></p>
+</article><article class="card" id="adapter-jsonschema"><div class="card-title">jsonschema — jsonschema</div>
+<p><strong>Kind:</strong> <code>python</code> · <strong>Optional flag:</strong> <code>false</code></p>
+<p><strong>Verification suites:</strong> <code>contracts</code></p><p><strong>Executable candidates:</strong> none</p>
+<p><strong>Python modules:</strong> <code>jsonschema</code></p><p><strong>Environment variables:</strong> none</p>
+<p><strong>Pip requirement:</strong> <code>jsonschema&gt;=4.23,&lt;5</code></p>
+</article><article class="card" id="adapter-lief"><div class="card-title">lief — LIEF</div>
+<p><strong>Kind:</strong> <code>python</code> · <strong>Optional flag:</strong> <code>false</code></p>
+<p><strong>Verification suites:</strong> <code>independent-pe</code></p><p><strong>Executable candidates:</strong> none</p>
+<p><strong>Python modules:</strong> <code>lief</code></p><p><strong>Environment variables:</strong> none</p>
+<p><strong>Pip requirement:</strong> <code>lief&gt;=0.17,&lt;0.18</code></p>
+</article><article class="card" id="adapter-lld-link"><div class="card-title">lld-link — LLD COFF linker</div>
+<p><strong>Kind:</strong> <code>executable</code> · <strong>Optional flag:</strong> <code>false</code></p>
+<p><strong>Verification suites:</strong> <code>relink</code>, <code>whole-image</code></p><p><strong>Executable candidates:</strong> <code>lld-link</code>, <code>lld-link.exe</code></p>
+<p><strong>Python modules:</strong> none</p><p><strong>Environment variables:</strong> <code>LLD_LINK</code></p>
+
+<p>Install LLVM/LLD or select lld-link.</p></article><article class="card" id="adapter-llvm-lib"><div class="card-title">llvm-lib — LLVM librarian</div>
+<p><strong>Kind:</strong> <code>executable</code> · <strong>Optional flag:</strong> <code>false</code></p>
+<p><strong>Verification suites:</strong> <code>coff-archive</code></p><p><strong>Executable candidates:</strong> <code>llvm-lib</code>, <code>llvm-lib.exe</code>, <code>llvm-ar</code></p>
+<p><strong>Python modules:</strong> none</p><p><strong>Environment variables:</strong> none</p>
+
+<p>Install LLVM tools or select llvm-lib/llvm-ar.</p></article><article class="card" id="adapter-llvm-objdump"><div class="card-title">llvm-objdump — LLVM objdump</div>
+<p><strong>Kind:</strong> <code>executable</code> · <strong>Optional flag:</strong> <code>false</code></p>
+<p><strong>Verification suites:</strong> <code>independent-disassembly</code></p><p><strong>Executable candidates:</strong> <code>llvm-objdump</code>, <code>llvm-objdump.exe</code></p>
+<p><strong>Python modules:</strong> none</p><p><strong>Environment variables:</strong> none</p>
+
+<p>Install LLVM tools or select llvm-objdump.</p></article><article class="card" id="adapter-llvm-readobj"><div class="card-title">llvm-readobj — LLVM object inspector</div>
+<p><strong>Kind:</strong> <code>executable</code> · <strong>Optional flag:</strong> <code>false</code></p>
+<p><strong>Verification suites:</strong> <code>independent-coff</code></p><p><strong>Executable candidates:</strong> <code>llvm-readobj</code>, <code>llvm-readobj.exe</code></p>
+<p><strong>Python modules:</strong> none</p><p><strong>Environment variables:</strong> none</p>
+
+<p>Install LLVM tools or select llvm-readobj.</p></article><article class="card" id="adapter-msvc"><div class="card-title">msvc — User-owned Microsoft C/C++ toolchain</div>
+<p><strong>Kind:</strong> <code>toolchain</code> · <strong>Optional flag:</strong> <code>true</code></p>
+<p><strong>Verification suites:</strong> <code>historical-msvc</code>, <code>matching</code></p><p><strong>Executable candidates:</strong> <code>cl.exe</code>, <code>link.exe</code></p>
+<p><strong>Python modules:</strong> none</p><p><strong>Environment variables:</strong> <code>VCINSTALLDIR</code>, <code>VSINSTALLDIR</code></p>
+
+<p>Select an authorized Visual C++ installation root or Developer Command Prompt environment. Historical proprietary compilers are never downloaded by this suite.</p></article><article class="card" id="adapter-ninja"><div class="card-title">ninja — Ninja</div>
+<p><strong>Kind:</strong> <code>executable</code> · <strong>Optional flag:</strong> <code>false</code></p>
+<p><strong>Verification suites:</strong> <code>native-build</code></p><p><strong>Executable candidates:</strong> <code>ninja</code>, <code>ninja.exe</code></p>
+<p><strong>Python modules:</strong> none</p><p><strong>Environment variables:</strong> none</p>
+
+<p>Install Ninja or select ninja.</p></article><article class="card" id="adapter-objdiff"><div class="card-title">objdiff — objdiff CLI</div>
+<p><strong>Kind:</strong> <code>executable</code> · <strong>Optional flag:</strong> <code>false</code></p>
+<p><strong>Verification suites:</strong> <code>objdiff</code>, <code>matching</code></p><p><strong>Executable candidates:</strong> <code>objdiff-cli</code>, <code>objdiff</code></p>
+<p><strong>Python modules:</strong> none</p><p><strong>Environment variables:</strong> <code>OBJDIFF</code></p>
+
+<p>Install the objdiff release CLI or select the objdiff executable.</p></article><article class="card" id="adapter-pip-audit"><div class="card-title">pip-audit — pip-audit</div>
+<p><strong>Kind:</strong> <code>python</code> · <strong>Optional flag:</strong> <code>false</code></p>
+<p><strong>Verification suites:</strong> <code>dependency-security</code>, <code>release</code></p><p><strong>Executable candidates:</strong> none</p>
+<p><strong>Python modules:</strong> <code>pip_audit</code></p><p><strong>Environment variables:</strong> none</p>
+<p><strong>Pip requirement:</strong> <code>pip-audit&gt;=2.7,&lt;3</code></p>
+<p>Install pip-audit in the test-suite Python environment.</p></article><article class="card" id="adapter-pytest"><div class="card-title">pytest — pytest</div>
+<p><strong>Kind:</strong> <code>python</code> · <strong>Optional flag:</strong> <code>false</code></p>
+<p><strong>Verification suites:</strong> <code>unit</code>, <code>integration</code></p><p><strong>Executable candidates:</strong> none</p>
+<p><strong>Python modules:</strong> <code>pytest</code></p><p><strong>Environment variables:</strong> none</p>
+<p><strong>Pip requirement:</strong> <code>pytest&gt;=8,&lt;10</code></p>
+</article><article class="card" id="adapter-python"><div class="card-title">python — Python 3.11+</div>
+<p><strong>Kind:</strong> <code>executable</code> · <strong>Optional flag:</strong> <code>false</code></p>
+<p><strong>Verification suites:</strong> <code>all</code></p><p><strong>Executable candidates:</strong> <code>python3</code>, <code>python</code></p>
+<p><strong>Python modules:</strong> none</p><p><strong>Environment variables:</strong> none</p>
+
+<p>Install Python 3.11 or newer using your operating-system package manager or python.org.</p></article><article class="card" id="adapter-pyyaml"><div class="card-title">pyyaml — PyYAML</div>
+<p><strong>Kind:</strong> <code>python</code> · <strong>Optional flag:</strong> <code>false</code></p>
+<p><strong>Verification suites:</strong> <code>skill-frontmatter</code></p><p><strong>Executable candidates:</strong> none</p>
+<p><strong>Python modules:</strong> <code>yaml</code></p><p><strong>Environment variables:</strong> none</p>
+<p><strong>Pip requirement:</strong> <code>PyYAML&gt;=6,&lt;7</code></p>
+</article><article class="card" id="adapter-unicorn"><div class="card-title">unicorn — Unicorn Python bindings</div>
+<p><strong>Kind:</strong> <code>python</code> · <strong>Optional flag:</strong> <code>false</code></p>
+<p><strong>Verification suites:</strong> <code>dynamic</code>, <code>functional</code></p><p><strong>Executable candidates:</strong> none</p>
+<p><strong>Python modules:</strong> <code>unicorn</code></p><p><strong>Environment variables:</strong> none</p>
+<p><strong>Pip requirement:</strong> <code>unicorn&gt;=2.1.4,&lt;3</code></p>
+</article><article class="card" id="adapter-uvicorn"><div class="card-title">uvicorn — Uvicorn</div>
+<p><strong>Kind:</strong> <code>python</code> · <strong>Optional flag:</strong> <code>false</code></p>
+<p><strong>Verification suites:</strong> <code>service</code></p><p><strong>Executable candidates:</strong> none</p>
+<p><strong>Python modules:</strong> <code>uvicorn</code></p><p><strong>Environment variables:</strong> none</p>
+<p><strong>Pip requirement:</strong> <code>uvicorn&gt;=0.48,&lt;1</code></p>
+</article><article class="card" id="adapter-z3"><div class="card-title">z3 — Z3 Python bindings</div>
+<p><strong>Kind:</strong> <code>python</code> · <strong>Optional flag:</strong> <code>false</code></p>
+<p><strong>Verification suites:</strong> <code>symbolic</code>, <code>functional</code></p><p><strong>Executable candidates:</strong> none</p>
+<p><strong>Python modules:</strong> <code>z3</code></p><p><strong>Environment variables:</strong> none</p>
+<p><strong>Pip requirement:</strong> <code>z3-solver&gt;=4.13,&lt;5</code></p>
+</article></div>
+    <footer class="page-footer"><span>x86decomp-toolkit 0.7.4</span><a href="about.html">About this documentation</a></footer>
+  </main>
+</div>
+<div class="search-dialog" data-search-dialog hidden>
+  <div class="search-panel" role="dialog" aria-modal="true" aria-label="Search documentation">
+    <div class="search-box"><input data-search-input type="search" placeholder="Search commands, functions, tests, schemas, and source" autocomplete="off"><button data-search-close aria-label="Close search">×</button></div>
+    <div class="search-hint">Type at least two characters. Press Escape to close.</div>
+    <div class="search-results" data-search-results></div>
+  </div>
+</div>
+</body>
+</html>

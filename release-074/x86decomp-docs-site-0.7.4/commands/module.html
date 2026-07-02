@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Canonical module commands implemented by the current capability subsystem.">
+<title>x86decomp module · x86decomp 0.7.4 Docs</title>
+<link rel="stylesheet" href="../assets/styles.css">
+<script>window.X86DOCS_ROOT="../";</script>
+<script defer src="../assets/search-index.js"></script>
+<script defer src="../assets/app.js"></script>
+</head>
+<body data-root="../">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="icon-button mobile-menu" data-menu-toggle aria-label="Open navigation">☰</button>
+  <a class="brand" href="../index.html"><span class="brand-mark">x86</span><span>decomp docs</span><small>0.7.4</small></a>
+  <button class="search-trigger" data-search-trigger aria-label="Search documentation"><span>Search docs</span><kbd>Ctrl K</kbd></button>
+  <button class="icon-button" data-theme-toggle aria-label="Toggle color theme">◐</button>
+</header>
+<div class="layout">
+  <aside class="sidebar" data-sidebar>
+    <nav><a href="../index.html">Home</a><a href="../getting-started.html">Getting started</a><a href="../workflows.html">Workflows</a><a href="../project-examples.html">Project examples</a><a href="../commands/index.html">Commands</a><a href="../features/index.html">Features &amp; functions</a><a href="../tests/index.html">Tests</a><a href="../schemas.html">Schemas</a><a href="../integrations.html">Integrations</a><a href="../source-coverage.html">Source coverage</a><a href="../verification.html">Verification</a><a href="../changelog.html">Changelog</a><a href="../about.html">About</a></nav>
+    <div class="sidebar-note"><strong>Current release only</strong><span>Source-derived documentation for the sealed 0.7.4 release.</span></div>
+  </aside>
+  <main id="main" class="content">
+<div class="breadcrumbs"><a href="../index.html">Docs</a><span>/</span><span>x86decomp module</span></div>
+<div class="eyebrow">Command reference</div><h1><code>x86decomp module</code></h1>
+<p class="lead">Canonical module commands implemented by the current capability subsystem.</p><div class="meta-row"><span class="tag tag-current">current</span><span class="tag tag-canonical">canonical group</span><span class="tag">7 runnable paths</span></div>
+<h2>Help</h2><pre><code class="language-bash">x86decomp module --help</code></pre><section class="command-section" id="command-module-add-member">
+<div class="meta-row"><span class="tag tag-current">current</span><span class="tag">reconstruction</span></div>
+<h2><code>x86decomp module add-member</code></h2>
+<p>add-member command</p>
+<h3>Usage</h3><pre><code class="language-bash">x86decomp module add-member [-h] [--ordinal ORDINAL]
+                                   [--evidence-json EVIDENCE_JSON]
+                                   module_id member_kind member_id</code></pre>
+<h3>Syntax example</h3><pre><code class="language-bash">x86decomp module add-member example-001 analysis example-001</code></pre>
+<h3>Arguments</h3><div class="table-wrap"><table><thead><tr><th>Argument</th><th>Source-declared parser metadata</th></tr></thead><tbody><tr><td><code>module_id</code><br><small>required</small></td><td>No argument help text is declared; parser destination is <code>module_id</code>.</td></tr><tr><td><code>member_kind</code><br><small>required</small></td><td>No argument help text is declared; parser destination is <code>member_kind</code>.</td></tr><tr><td><code>member_id</code><br><small>required</small></td><td>No argument help text is declared; parser destination is <code>member_id</code>.</td></tr><tr><td><code>--ordinal</code><br><small>default: 0 · type: int</small></td><td>No argument help text is declared; parser destination is <code>ordinal</code>.</td></tr><tr><td><code>--evidence-json</code></td><td>No argument help text is declared; parser destination is <code>evidence_json</code>.</td></tr></tbody></table></div>
+<div class="callout"><strong>Source basis.</strong> Parser definition: <code>src/x86decomp/reconstruction/cli.py</code>; SHA-256 <code>9535cc526a12ee85a8e41c836c800a4591f3935f9ef7f5a3c3f14f9277356027</code>. Descriptions above use only parser-declared text or an explicit no-help notice.</div>
+</section><section class="command-section" id="command-module-add-unit-member">
+<div class="meta-row"><span class="tag tag-current">current</span><span class="tag">reconstruction</span></div>
+<h2><code>x86decomp module add-unit-member</code></h2>
+<p>add-unit-member command</p>
+<h3>Usage</h3><pre><code class="language-bash">x86decomp module add-unit-member [-h] [--linkage LINKAGE]
+                                        [--ordinal ORDINAL]
+                                        unit_id member_kind member_id</code></pre>
+<h3>Syntax example</h3><pre><code class="language-bash">x86decomp module add-unit-member example-001 analysis example-001</code></pre>
+<h3>Arguments</h3><div class="table-wrap"><table><thead><tr><th>Argument</th><th>Source-declared parser metadata</th></tr></thead><tbody><tr><td><code>unit_id</code><br><small>required</small></td><td>No argument help text is declared; parser destination is <code>unit_id</code>.</td></tr><tr><td><code>member_kind</code><br><small>required</small></td><td>No argument help text is declared; parser destination is <code>member_kind</code>.</td></tr><tr><td><code>member_id</code><br><small>required</small></td><td>No argument help text is declared; parser destination is <code>member_id</code>.</td></tr><tr><td><code>--linkage</code><br><small>default: &#x27;external&#x27;</small></td><td>No argument help text is declared; parser destination is <code>linkage</code>.</td></tr><tr><td><code>--ordinal</code><br><small>default: 0 · type: int</small></td><td>No argument help text is declared; parser destination is <code>ordinal</code>.</td></tr></tbody></table></div>
+<div class="callout"><strong>Source basis.</strong> Parser definition: <code>src/x86decomp/reconstruction/cli.py</code>; SHA-256 <code>9535cc526a12ee85a8e41c836c800a4591f3935f9ef7f5a3c3f14f9277356027</code>. Descriptions above use only parser-declared text or an explicit no-help notice.</div>
+</section><section class="command-section" id="command-module-create">
+<div class="meta-row"><span class="tag tag-current">current</span><span class="tag">reconstruction</span></div>
+<h2><code>x86decomp module create</code></h2>
+<p>create command</p>
+<h3>Usage</h3><pre><code class="language-bash">x86decomp module create [-h] [--kind KIND] [--source-path SOURCE_PATH]
+                               [--confidence CONFIDENCE]
+                               [--evidence-json EVIDENCE_JSON]
+                               name</code></pre>
+<h3>Syntax example</h3><pre><code class="language-bash">x86decomp module create example</code></pre>
+<h3>Arguments</h3><div class="table-wrap"><table><thead><tr><th>Argument</th><th>Source-declared parser metadata</th></tr></thead><tbody><tr><td><code>name</code><br><small>required</small></td><td>No argument help text is declared; parser destination is <code>name</code>.</td></tr><tr><td><code>--kind</code><br><small>default: &#x27;static-library&#x27;</small></td><td>No argument help text is declared; parser destination is <code>kind</code>.</td></tr><tr><td><code>--source-path</code></td><td>No argument help text is declared; parser destination is <code>source_path</code>.</td></tr><tr><td><code>--confidence</code><br><small>default: 1.0 · type: float</small></td><td>No argument help text is declared; parser destination is <code>confidence</code>.</td></tr><tr><td><code>--evidence-json</code></td><td>No argument help text is declared; parser destination is <code>evidence_json</code>.</td></tr></tbody></table></div>
+<div class="callout"><strong>Source basis.</strong> Parser definition: <code>src/x86decomp/reconstruction/cli.py</code>; SHA-256 <code>9535cc526a12ee85a8e41c836c800a4591f3935f9ef7f5a3c3f14f9277356027</code>. Descriptions above use only parser-declared text or an explicit no-help notice.</div>
+</section><section class="command-section" id="command-module-create-unit">
+<div class="meta-row"><span class="tag tag-current">current</span><span class="tag">reconstruction</span></div>
+<h2><code>x86decomp module create-unit</code></h2>
+<p>create-unit command</p>
+<h3>Usage</h3><pre><code class="language-bash">x86decomp module create-unit [-h] [--module-id MODULE_ID]
+                                    [--language LANGUAGE]
+                                    [--confidence CONFIDENCE]
+                                    [--evidence-json EVIDENCE_JSON]
+                                    source_path</code></pre>
+<h3>Syntax example</h3><pre><code class="language-bash">x86decomp module create-unit ./candidate.c</code></pre>
+<h3>Arguments</h3><div class="table-wrap"><table><thead><tr><th>Argument</th><th>Source-declared parser metadata</th></tr></thead><tbody><tr><td><code>source_path</code><br><small>required</small></td><td>No argument help text is declared; parser destination is <code>source_path</code>.</td></tr><tr><td><code>--module-id</code></td><td>No argument help text is declared; parser destination is <code>module_id</code>.</td></tr><tr><td><code>--language</code><br><small>default: &#x27;cpp&#x27;</small></td><td>No argument help text is declared; parser destination is <code>language</code>.</td></tr><tr><td><code>--confidence</code><br><small>default: 1.0 · type: float</small></td><td>No argument help text is declared; parser destination is <code>confidence</code>.</td></tr><tr><td><code>--evidence-json</code></td><td>No argument help text is declared; parser destination is <code>evidence_json</code>.</td></tr></tbody></table></div>
+<div class="callout"><strong>Source basis.</strong> Parser definition: <code>src/x86decomp/reconstruction/cli.py</code>; SHA-256 <code>9535cc526a12ee85a8e41c836c800a4591f3935f9ef7f5a3c3f14f9277356027</code>. Descriptions above use only parser-declared text or an explicit no-help notice.</div>
+</section><section class="command-section" id="command-module-list">
+<div class="meta-row"><span class="tag tag-current">current</span><span class="tag">reconstruction</span></div>
+<h2><code>x86decomp module list</code></h2>
+<p>list command</p>
+<h3>Usage</h3><pre><code class="language-bash">x86decomp module list [-h]</code></pre>
+<h3>Syntax example</h3><pre><code class="language-bash">x86decomp module list</code></pre>
+<h3>Arguments</h3><p>No route-specific arguments are declared.</p>
+<div class="callout"><strong>Source basis.</strong> Parser definition: <code>src/x86decomp/reconstruction/cli.py</code>; SHA-256 <code>9535cc526a12ee85a8e41c836c800a4591f3935f9ef7f5a3c3f14f9277356027</code>. Descriptions above use only parser-declared text or an explicit no-help notice.</div>
+</section><section class="command-section" id="command-module-show">
+<div class="meta-row"><span class="tag tag-current">current</span><span class="tag">reconstruction</span></div>
+<h2><code>x86decomp module show</code></h2>
+<p>show command</p>
+<h3>Usage</h3><pre><code class="language-bash">x86decomp module show [-h] module_id</code></pre>
+<h3>Syntax example</h3><pre><code class="language-bash">x86decomp module show example-001</code></pre>
+<h3>Arguments</h3><div class="table-wrap"><table><thead><tr><th>Argument</th><th>Source-declared parser metadata</th></tr></thead><tbody><tr><td><code>module_id</code><br><small>required</small></td><td>No argument help text is declared; parser destination is <code>module_id</code>.</td></tr></tbody></table></div>
+<div class="callout"><strong>Source basis.</strong> Parser definition: <code>src/x86decomp/reconstruction/cli.py</code>; SHA-256 <code>9535cc526a12ee85a8e41c836c800a4591f3935f9ef7f5a3c3f14f9277356027</code>. Descriptions above use only parser-declared text or an explicit no-help notice.</div>
+</section><section class="command-section" id="command-module-show-unit">
+<div class="meta-row"><span class="tag tag-current">current</span><span class="tag">reconstruction</span></div>
+<h2><code>x86decomp module show-unit</code></h2>
+<p>show-unit command</p>
+<h3>Usage</h3><pre><code class="language-bash">x86decomp module show-unit [-h] unit_id</code></pre>
+<h3>Syntax example</h3><pre><code class="language-bash">x86decomp module show-unit example-001</code></pre>
+<h3>Arguments</h3><div class="table-wrap"><table><thead><tr><th>Argument</th><th>Source-declared parser metadata</th></tr></thead><tbody><tr><td><code>unit_id</code><br><small>required</small></td><td>No argument help text is declared; parser destination is <code>unit_id</code>.</td></tr></tbody></table></div>
+<div class="callout"><strong>Source basis.</strong> Parser definition: <code>src/x86decomp/reconstruction/cli.py</code>; SHA-256 <code>9535cc526a12ee85a8e41c836c800a4591f3935f9ef7f5a3c3f14f9277356027</code>. Descriptions above use only parser-declared text or an explicit no-help notice.</div>
+</section>
+    <footer class="page-footer"><span>x86decomp-toolkit 0.7.4</span><a href="../about.html">About this documentation</a></footer>
+  </main>
+</div>
+<div class="search-dialog" data-search-dialog hidden>
+  <div class="search-panel" role="dialog" aria-modal="true" aria-label="Search documentation">
+    <div class="search-box"><input data-search-input type="search" placeholder="Search commands, functions, tests, schemas, and source" autocomplete="off"><button data-search-close aria-label="Close search">×</button></div>
+    <div class="search-hint">Type at least two characters. Press Escape to close.</div>
+    <div class="search-results" data-search-results></div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Exact release and documentation verification results">
+<title>Verification · x86decomp 0.7.4 Docs</title>
+<link rel="stylesheet" href="assets/styles.css">
+<script>window.X86DOCS_ROOT="";</script>
+<script defer src="assets/search-index.js"></script>
+<script defer src="assets/app.js"></script>
+</head>
+<body data-root="">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="icon-button mobile-menu" data-menu-toggle aria-label="Open navigation">☰</button>
+  <a class="brand" href="index.html"><span class="brand-mark">x86</span><span>decomp docs</span><small>0.7.4</small></a>
+  <button class="search-trigger" data-search-trigger aria-label="Search documentation"><span>Search docs</span><kbd>Ctrl K</kbd></button>
+  <button class="icon-button" data-theme-toggle aria-label="Toggle color theme">◐</button>
+</header>
+<div class="layout">
+  <aside class="sidebar" data-sidebar>
+    <nav><a href="index.html">Home</a><a href="getting-started.html">Getting started</a><a href="workflows.html">Workflows</a><a href="project-examples.html">Project examples</a><a href="commands/index.html">Commands</a><a href="features/index.html">Features &amp; functions</a><a href="tests/index.html">Tests</a><a href="schemas.html">Schemas</a><a href="integrations.html">Integrations</a><a href="source-coverage.html">Source coverage</a><a href="verification.html">Verification</a><a href="changelog.html">Changelog</a><a href="about.html">About</a></nav>
+    <div class="sidebar-note"><strong>Current release only</strong><span>Source-derived documentation for the sealed 0.7.4 release.</span></div>
+  </aside>
+  <main id="main" class="content">
+<div class="breadcrumbs"><a href="index.html">Docs</a><span>/</span><span>Verification</span></div>
+<div class="eyebrow">Release and documentation evidence</div><h1>Verification</h1>
+<p class="lead">The release evidence and the documentation audit are separate contracts. This page reports both without merging their claims.</p>
+<h2>Sealed release evidence</h2><div class="stats"><div class="stat"><strong>215/215</strong><span>exact tests passed</span></div><div class="stat"><strong>843/843</strong><span>toolkit bodies executed</span></div><div class="stat"><strong>189</strong><span>harness passes</span></div><div class="stat"><strong>7</strong><span>explicitly blocked adapters</span></div></div>
+<ul><li>Exact gate: 0 failures, 0 errors, 0 skipped across 79 partitions.</li><li>Comprehensive harness: 189 PASS, 0 FAIL, 0 ERROR, 7 BLOCKED.</li><li>Statement coverage: 79.03% against a 70% floor.</li><li>Branch coverage: 51.70% against a 50% floor.</li><li>Root manifest: 411/411 valid.</li><li>Test-suite manifest: 60/60 valid.</li></ul>
+<h3>Blocked external integrations in the sealed environment</h3><p><code>container-runtime</code>, <code>dynamorio</code>, <code>ghidra</code>, <code>llvm-readobj</code>, <code>msvc</code>, <code>objdiff</code>, <code>pip-audit</code>.</p>
+<h2>Documentation audit</h2><p>The post-patch audit is published as <a href="FULL_DOCSITE_AUDIT.md"><code>FULL_DOCSITE_AUDIT.md</code></a> and <a href="FULL_DOCSITE_AUDIT.json"><code>FULL_DOCSITE_AUDIT.json</code></a>. Complete source-file coverage is available on <a href="source-coverage.html">Source coverage</a>.</p>
+<h2>Common verification commands</h2><pre><code class="language-bash">make verify-hashes
+make verify
+make test-suite
+x86decomp-test run --config ./x86decomp-test.json --verbose</code></pre>
+    <footer class="page-footer"><span>x86decomp-toolkit 0.7.4</span><a href="about.html">About this documentation</a></footer>
+  </main>
+</div>
+<div class="search-dialog" data-search-dialog hidden>
+  <div class="search-panel" role="dialog" aria-modal="true" aria-label="Search documentation">
+    <div class="search-box"><input data-search-input type="search" placeholder="Search commands, functions, tests, schemas, and source" autocomplete="off"><button data-search-close aria-label="Close search">×</button></div>
+    <div class="search-hint">Type at least two characters. Press Escape to close.</div>
+    <div class="search-results" data-search-results></div>
+  </div>
+</div>
+</body>
+</html>

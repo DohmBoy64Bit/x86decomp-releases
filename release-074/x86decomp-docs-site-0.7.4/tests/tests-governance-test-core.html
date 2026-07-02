@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="17 exact current test nodes">
+<title>tests/governance/test_core.py · x86decomp 0.7.4 Docs</title>
+<link rel="stylesheet" href="../assets/styles.css">
+<script>window.X86DOCS_ROOT="../";</script>
+<script defer src="../assets/search-index.js"></script>
+<script defer src="../assets/app.js"></script>
+</head>
+<body data-root="../">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="icon-button mobile-menu" data-menu-toggle aria-label="Open navigation">☰</button>
+  <a class="brand" href="../index.html"><span class="brand-mark">x86</span><span>decomp docs</span><small>0.7.4</small></a>
+  <button class="search-trigger" data-search-trigger aria-label="Search documentation"><span>Search docs</span><kbd>Ctrl K</kbd></button>
+  <button class="icon-button" data-theme-toggle aria-label="Toggle color theme">◐</button>
+</header>
+<div class="layout">
+  <aside class="sidebar" data-sidebar>
+    <nav><a href="../index.html">Home</a><a href="../getting-started.html">Getting started</a><a href="../workflows.html">Workflows</a><a href="../project-examples.html">Project examples</a><a href="../commands/index.html">Commands</a><a href="../features/index.html">Features &amp; functions</a><a href="../tests/index.html">Tests</a><a href="../schemas.html">Schemas</a><a href="../integrations.html">Integrations</a><a href="../source-coverage.html">Source coverage</a><a href="../verification.html">Verification</a><a href="../changelog.html">Changelog</a><a href="../about.html">About</a></nav>
+    <div class="sidebar-note"><strong>Current release only</strong><span>Source-derived documentation for the sealed 0.7.4 release.</span></div>
+  </aside>
+  <main id="main" class="content">
+<div class="breadcrumbs"><a href="../index.html">Docs</a><span>/</span><span>tests/governance/test_core.py</span></div>
+<div class="eyebrow">Source-derived test reference</div><h1><code>tests/governance/test_core.py</code></h1>
+<p class="lead">17 current test nodes in the Toolkit behavior inventory.</p>
+<div class="callout"><strong>Truth basis.</strong> Node IDs, line numbers, docstrings, and direct call names are extracted from the AST. No behavior is inferred when a test lacks a docstring. Source SHA-256: <code>d2c62ade326140850549e48c1255cab3a45ec3f69d2374f4aff21380cd1ccc0d</code>.</div>
+<article class="function-entry" id="test-test-store-is-additive-and-audit-chain">
+<div class="meta-row"><span class="tag">Toolkit behavior</span><span class="tag">line 24</span></div>
+<h3><code>test_store_is_additive_and_audit_chain</code></h3><p>No test docstring is declared. The node identifier and direct call names are shown without inferring additional behavior.</p>
+<p><strong>Direct call names in source:</strong> <code>store</code>, <code>s.initialize</code>, <code>s.audit</code>, <code>s.connect</code>, <code>con.execute</code>, <code>con.commit</code>, <code>s.check</code>, <code>s.verify_audit_chain</code>, <code>fetchone</code></p>
+<p class="muted"><strong>Node ID:</strong> <code>tests/governance/test_core.py::test_store_is_additive_and_audit_chain</code></p>
+</article><article class="function-entry" id="test-test-audit-tamper-detected">
+<div class="meta-row"><span class="tag">Toolkit behavior</span><span class="tag">line 36</span></div>
+<h3><code>test_audit_tamper_detected</code></h3><p>No test docstring is declared. The node identifier and direct call names are shown without inferring additional behavior.</p>
+<p><strong>Direct call names in source:</strong> <code>store</code>, <code>s.initialize</code>, <code>s.audit</code>, <code>s.connect</code>, <code>con.execute</code>, <code>con.commit</code>, <code>s.verify_audit_chain</code></p>
+<p class="muted"><strong>Node ID:</strong> <code>tests/governance/test_core.py::test_audit_tamper_detected</code></p>
+</article><article class="function-entry" id="test-test-hypothesis-gate-and-accept">
+<div class="meta-row"><span class="tag">Toolkit behavior</span><span class="tag">line 43</span></div>
+<h3><code>test_hypothesis_gate_and_accept</code></h3><p>No test docstring is declared. The node identifier and direct call names are shown without inferring additional behavior.</p>
+<p><strong>Direct call names in source:</strong> <code>HypothesisLedger</code>, <code>ledger.create</code>, <code>enumerate</code>, <code>ledger.transition</code>, <code>store</code>, <code>ledger.attach_evidence</code></p>
+<p class="muted"><strong>Node ID:</strong> <code>tests/governance/test_core.py::test_hypothesis_gate_and_accept</code></p>
+</article><article class="function-entry" id="test-test-hypothesis-contradiction-blocks-acceptance">
+<div class="meta-row"><span class="tag">Toolkit behavior</span><span class="tag">line 54</span></div>
+<h3><code>test_hypothesis_contradiction_blocks_acceptance</code></h3><p>No test docstring is declared. The node identifier and direct call names are shown without inferring additional behavior.</p>
+<p><strong>Direct call names in source:</strong> <code>HypothesisLedger</code>, <code>ledger.create</code>, <code>range</code>, <code>ledger.attach_evidence</code>, <code>store</code>, <code>ledger.acceptance_gate</code></p>
+<p class="muted"><strong>Node ID:</strong> <code>tests/governance/test_core.py::test_hypothesis_contradiction_blocks_acceptance</code></p>
+</article><article class="function-entry" id="test-test-hypothesis-dependency-cycle-rejected">
+<div class="meta-row"><span class="tag">Toolkit behavior</span><span class="tag">line 61</span></div>
+<h3><code>test_hypothesis_dependency_cycle_rejected</code></h3><p>No test docstring is declared. The node identifier and direct call names are shown without inferring additional behavior.</p>
+<p><strong>Direct call names in source:</strong> <code>HypothesisLedger</code>, <code>ledger.create</code>, <code>ledger.add_dependency</code>, <code>store</code>, <code>pytest.raises</code></p>
+<p class="muted"><strong>Node ID:</strong> <code>tests/governance/test_core.py::test_hypothesis_dependency_cycle_rejected</code></p>
+</article><article class="function-entry" id="test-test-campaign-lifecycle-and-planner">
+<div class="meta-row"><span class="tag">Toolkit behavior</span><span class="tag">line 67</span></div>
+<h3><code>test_campaign_lifecycle_and_planner</code></h3><p>No test docstring is declared. The node identifier and direct call names are shown without inferring additional behavior.</p>
+<p><strong>Direct call names in source:</strong> <code>store</code>, <code>CampaignEngine</code>, <code>api.create</code>, <code>api.start</code>, <code>api.plan_next</code>, <code>api.pause</code>, <code>api.resume</code>, <code>api.get</code></p>
+<p class="muted"><strong>Node ID:</strong> <code>tests/governance/test_core.py::test_campaign_lifecycle_and_planner</code></p>
+</article><article class="function-entry" id="test-test-campaign-budget-blocks">
+<div class="meta-row"><span class="tag">Toolkit behavior</span><span class="tag">line 75</span></div>
+<h3><code>test_campaign_budget_blocks</code></h3><p>No test docstring is declared. The node identifier and direct call names are shown without inferring additional behavior.</p>
+<p><strong>Direct call names in source:</strong> <code>CampaignEngine</code>, <code>api.create</code>, <code>api.start</code>, <code>store</code>, <code>pytest.raises</code>, <code>api.plan_next</code>, <code>api.get</code></p>
+<p class="muted"><strong>Node ID:</strong> <code>tests/governance/test_core.py::test_campaign_budget_blocks</code></p>
+</article><article class="function-entry" id="test-test-campaign-branch">
+<div class="meta-row"><span class="tag">Toolkit behavior</span><span class="tag">line 81</span></div>
+<h3><code>test_campaign_branch</code></h3><p>No test docstring is declared. The node identifier and direct call names are shown without inferring additional behavior.</p>
+<p><strong>Direct call names in source:</strong> <code>CampaignEngine</code>, <code>api.create</code>, <code>api.branch</code>, <code>store</code></p>
+<p class="muted"><strong>Node ID:</strong> <code>tests/governance/test_core.py::test_campaign_branch</code></p>
+</article><article class="function-entry" id="test-test-candidate-branch-compare-and-promotion">
+<div class="meta-row"><span class="tag">Toolkit behavior</span><span class="tag">line 87</span></div>
+<h3><code>test_candidate_branch_compare_and_promotion</code></h3><p>No test docstring is declared. The node identifier and direct call names are shown without inferring additional behavior.</p>
+<p><strong>Direct call names in source:</strong> <code>CandidateStore</code>, <code>source.write_text</code>, <code>api.create</code>, <code>api.add_file</code>, <code>api.record_evaluation</code>, <code>store</code>, <code>api.transition</code>, <code>api.compare</code></p>
+<p class="muted"><strong>Node ID:</strong> <code>tests/governance/test_core.py::test_candidate_branch_compare_and_promotion</code></p>
+</article><article class="function-entry" id="test-test-candidate-rejects-traversal">
+<div class="meta-row"><span class="tag">Toolkit behavior</span><span class="tag">line 96</span></div>
+<h3><code>test_candidate_rejects_traversal</code></h3><p>No test docstring is declared. The node identifier and direct call names are shown without inferring additional behavior.</p>
+<p><strong>Direct call names in source:</strong> <code>CandidateStore</code>, <code>f.write_text</code>, <code>api.create</code>, <code>store</code>, <code>pytest.raises</code>, <code>api.add_file</code></p>
+<p class="muted"><strong>Node ID:</strong> <code>tests/governance/test_core.py::test_candidate_rejects_traversal</code></p>
+</article><article class="function-entry" id="test-test-ddmin-and-counterexample-promotion">
+<div class="meta-row"><span class="tag">Toolkit behavior</span><span class="tag">line 101</span></div>
+<h3><code>test_ddmin_and_counterexample_promotion</code></h3><p>No test docstring is declared. The node identifier and direct call names are shown without inferring additional behavior.</p>
+<p><strong>Direct call names in source:</strong> <code>ddmin_bytes</code>, <code>CounterexampleStore</code>, <code>api.add</code>, <code>api.minimize</code>, <code>api.promote_to_regression</code>, <code>store</code>, <code>read_bytes</code>, <code>Path</code></p>
+<p class="muted"><strong>Node ID:</strong> <code>tests/governance/test_core.py::test_ddmin_and_counterexample_promotion</code></p>
+</article><article class="function-entry" id="test-test-consensus-conflict-and-resolution">
+<div class="meta-row"><span class="tag">Toolkit behavior</span><span class="tag">line 111</span></div>
+<h3><code>test_consensus_conflict_and_resolution</code></h3><p>No test docstring is declared. The node identifier and direct call names are shown without inferring additional behavior.</p>
+<p><strong>Direct call names in source:</strong> <code>ConsensusEngine</code>, <code>api.record</code>, <code>api.resolve</code>, <code>store</code>, <code>len</code>, <code>api.conflicts</code>, <code>api.explain</code></p>
+<p class="muted"><strong>Node ID:</strong> <code>tests/governance/test_core.py::test_consensus_conflict_and_resolution</code></p>
+</article><article class="function-entry" id="test-test-graph-impact">
+<div class="meta-row"><span class="tag">Toolkit behavior</span><span class="tag">line 120</span></div>
+<h3><code>test_graph_impact</code></h3><p>No test docstring is declared. The node identifier and direct call names are shown without inferring additional behavior.</p>
+<p><strong>Direct call names in source:</strong> <code>KnowledgeGraph</code>, <code>api.upsert_node</code>, <code>api.add_edge</code>, <code>api.impact</code>, <code>store</code></p>
+<p class="muted"><strong>Node ID:</strong> <code>tests/governance/test_core.py::test_graph_impact</code></p>
+</article><article class="function-entry" id="test-test-review-lock-resists-automation">
+<div class="meta-row"><span class="tag">Toolkit behavior</span><span class="tag">line 126</span></div>
+<h3><code>test_review_lock_resists_automation</code></h3><p>No test docstring is declared. The node identifier and direct call names are shown without inferring additional behavior.</p>
+<p><strong>Direct call names in source:</strong> <code>ReviewQueue</code>, <code>api.create</code>, <code>api.decide</code>, <code>store</code>, <code>pytest.raises</code></p>
+<p class="muted"><strong>Node ID:</strong> <code>tests/governance/test_core.py::test_review_lock_resists_automation</code></p>
+</article><article class="function-entry" id="test-test-family-correlation-is-bounded">
+<div class="meta-row"><span class="tag">Toolkit behavior</span><span class="tag">line 132</span></div>
+<h3><code>test_family_correlation_is_bounded</code></h3><p>No test docstring is declared. The node identifier and direct call names are shown without inferring additional behavior.</p>
+<p><strong>Direct call names in source:</strong> <code>BinaryFamilyStore</code>, <code>api.create</code>, <code>a.write_bytes</code>, <code>b.write_bytes</code>, <code>api.add</code>, <code>api.correlate</code>, <code>store</code>, <code>pytest.approx</code></p>
+<p class="muted"><strong>Node ID:</strong> <code>tests/governance/test_core.py::test_family_correlation_is_bounded</code></p>
+</article><article class="function-entry" id="test-test-remaining-public-list-snapshot-and-review-paths">
+<div class="meta-row"><span class="tag">Toolkit behavior</span><span class="tag">line 140</span></div>
+<h3><code>test_remaining_public_list_snapshot_and_review_paths</code></h3><p>No test docstring is declared. The node identifier and direct call names are shown without inferring additional behavior.</p>
+<p><strong>Direct call names in source:</strong> <code>store</code>, <code>CampaignEngine</code>, <code>campaigns.create</code>, <code>campaigns.start</code>, <code>campaigns.plan_next</code>, <code>CandidateStore</code>, <code>candidates.create</code>, <code>CounterexampleStore</code>, <code>counterexamples.add</code>, <code>HypothesisLedger</code>, <code>hypotheses.create</code>, <code>ReviewQueue</code>, <code>reviews.create</code>, <code>reviews.lock</code>, <code>campaigns.stop</code>, <code>reviews.assign</code>, <code>campaigns.list</code>, <code>candidates.list</code>, <code>counterexamples.list</code>, <code>hypotheses.list</code>, <code>reviews.list</code>, <code>campaigns.snapshot</code></p>
+<p class="muted"><strong>Node ID:</strong> <code>tests/governance/test_core.py::test_remaining_public_list_snapshot_and_review_paths</code></p>
+</article><article class="function-entry" id="test-test-family-report-path">
+<div class="meta-row"><span class="tag">Toolkit behavior</span><span class="tag">line 152</span></div>
+<h3><code>test_family_report_path</code></h3><p>No test docstring is declared. The node identifier and direct call names are shown without inferring additional behavior.</p>
+<p><strong>Direct call names in source:</strong> <code>BinaryFamilyStore</code>, <code>api.create</code>, <code>f.write_bytes</code>, <code>api.add</code>, <code>api.report</code>, <code>store</code>, <code>len</code></p>
+<p class="muted"><strong>Node ID:</strong> <code>tests/governance/test_core.py::test_family_report_path</code></p>
+</article>
+    <footer class="page-footer"><span>x86decomp-toolkit 0.7.4</span><a href="../about.html">About this documentation</a></footer>
+  </main>
+</div>
+<div class="search-dialog" data-search-dialog hidden>
+  <div class="search-panel" role="dialog" aria-modal="true" aria-label="Search documentation">
+    <div class="search-box"><input data-search-input type="search" placeholder="Search commands, functions, tests, schemas, and source" autocomplete="off"><button data-search-close aria-label="Close search">×</button></div>
+    <div class="search-hint">Type at least two characters. Press Escape to close.</div>
+    <div class="search-results" data-search-results></div>
+  </div>
+</div>
+</body>
+</html>

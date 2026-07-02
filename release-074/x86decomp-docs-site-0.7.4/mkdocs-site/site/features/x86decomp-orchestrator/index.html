@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+        <title>x86decomp.orchestrator - x86decomp 0.7.4 Docs</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        
+        
+        
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="../../assets/css/darcula-highlight.min.css">
+
+        <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../assets/css/dracula-ui.min.css">
+        <link rel="stylesheet" href="../../assets/css/mkdocs.min.css">
+            <link href="../../assets/x86decomp-dracula-overrides.css" rel="stylesheet">
+
+        
+            <link  rel="icon" type="image/x-icon" href="../../assets/img/favicon.ico">
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+                <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+
+<body class="drac-bg-black-secondary drac-text-grey-ternary drac-text drac-scrollbar-purple">
+
+    <main class="d-flex">
+
+        <!-- block sidebar -->
+            <nav id="sidebar" class="sidebar drac-bg-black">
+    <div class="custom-menu">
+        <button type="button" id="sidebarCollapse" class="btn btn-primary">
+            <i class="fa fa-bars"></i>
+            <span class="sr-only">Menu</span>
+        </button>
+    </div>
+
+    <div class="p-4">
+        
+
+        <div class="drac-text-center">
+            
+                <span class="drac-text drac-line-height drac-text-white">x86decomp 0.7.4 Docs</span>
+            
+        </div>
+
+        <div class="drac-box flex-column">
+            <ul class="dot-ul">
+                <li><div class="dot-li drac-bg-cyan"></div></li>
+                <li><div class="dot-li drac-bg-green"></div></li>
+                <li><div class="dot-li drac-bg-orange"></div></li>
+                <li><div class="dot-li drac-bg-pink"></div></li>
+                <li><div class="dot-li drac-bg-purple"></div></li>
+                <li><div class="dot-li drac-bg-red"></div></li>
+                <li><div class="dot-li drac-bg-yellow"></div></li>
+            </ul>
+        </div>
+
+        <hr class="drac-divider" />
+
+        <!-- block menu -->
+        <ul class="mb-5 drac-list drac-list-none">
+            
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Home
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../../getting-started/"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Getting Started
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../../workflows/"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Workflows
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../../project-examples/"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Project Examples
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#reference-collapse" aria-expanded="false">
+                    Reference
+                </a>
+                <div class="collapse" id="reference-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../reference/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../commands/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Commands
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../schemas/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Schemas
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../integrations/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Integrations
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Source Modules
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../functions/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Function Index
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../tests/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Tests
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#release-evidence-collapse" aria-expanded="false">
+                    Release Evidence
+                </a>
+                <div class="collapse" id="release-evidence-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../release-evidence/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../verification/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Verification
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../source-coverage/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Source Coverage
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../changelog/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Changelog
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../about/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            About
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <!-- endblock -->
+    </div>
+</nav>
+        <!-- endblock -->
+
+        <nav class="divider drac-bg-purple-cyan"></nav>
+
+        <div class="content">
+            <!-- block header -->
+                <header>
+    <nav class="navbar navbar-expand-xl drac-bg-purple">
+        <div class="container-fluid">
+            
+            <button class="navbar-toggler w-100 text-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMenu"
+                aria-controls="navbarsMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse flex-column ml-auto" id="navbarsMenu">
+                <ul class="navbar-nav text-md-center">
+
+                    <!-- block preview -->
+                    <li class="nav-item">
+                            
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block search -->
+                    <li class="nav-item"><div role="search" class="search-box">
+	<form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+		<input type="text" name="q" class="drac-input drac-input-search drac-input-white drac-text-white drac-bg-black-secondary"
+		placeholder="Search docs" title="Type search term here" />
+	</form>
+</div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block source -->
+                    <li class="nav-item">
+                        
+                    </li>
+                    <!--  endblock -->
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+</header>
+            <!-- endblock -->
+
+            <!-- block content -->
+                <section class="p-md-5 section-content">
+    <article>
+        <p><p><a id="function-pipelinestage-from-dict"></a>
+<a id="function-pipelinemanifest-load"></a>
+<a id="function-orchestrator-init"></a>
+<a id="function-orchestrator-close"></a>
+<a id="function-orchestrator-enter"></a>
+<a id="function-orchestrator-exit"></a>
+<a id="function-orchestrator-transaction"></a>
+<a id="function-orchestrator-register"></a>
+<a id="function-orchestrator-idempotency-key"></a>
+<a id="function-orchestrator-event"></a>
+<a id="function-orchestrator-completed-result-is-intact"></a>
+<a id="function-orchestrator-materialize-outputs"></a>
+<a id="function-orchestrator-dependency-states"></a>
+<a id="function-orchestrator-run"></a>
+<a id="function-orchestrator-set-state"></a>
+<a id="function-orchestrator-run-stage"></a>
+<a id="function-orchestrator-recover-stale-jobs"></a>
+<a id="function-orchestrator-cancel"></a>
+<a id="function-orchestrator-retry"></a>
+<a id="function-orchestrator-update-pipeline-status"></a>
+<a id="function-orchestrator-status"></a>
+<a id="function-create-default-pipeline"></a></p>
+<p>Section: Source-derived feature and function reference</p>
+<h1 id="x86decomporchestrator">x86decomp.orchestrator</h1>
+<p>Durable, resumable pipeline orchestration.</p>
+<p>Metadata: core · current · 22 functions/methods</p>
+<p><strong>Source:</strong> <code>src/x86decomp/orchestrator.py</code></p>
+<blockquote>
+<p><strong>Truth basis.</strong> Module and symbol names, signatures, line numbers, docstrings, and SHA-256 are read directly from the sealed source. When source docstrings are absent, this page says so instead of inferring behavior. Source SHA-256: <code>752a6e6b5d4f931007e93ee7898f6a0d2500b044266c7153a27be7e7eb49477e</code>.</p>
+</blockquote>
+<h2 id="functions-and-methods">Functions and methods</h2>
+<p>Metadata: public · line 100</p>
+<h3 id="pipelinestagefrom_dict">PipelineStage.from_dict</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def from_dict(cls, value: Any) -&gt; 'PipelineStage'
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.orchestrator:PipelineStage.from_dict</code></p>
+<p>Metadata: public · line 159</p>
+<h3 id="pipelinemanifestload">PipelineManifest.load</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def load(cls, path: Path) -&gt; 'PipelineManifest'
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.orchestrator:PipelineManifest.load</code></p>
+<p>Metadata: internal · line 188</p>
+<h3 id="orchestratorinit">Orchestrator.<strong>init</strong></h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def __init__(self, project_root: Path)
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.orchestrator:Orchestrator.__init__</code></p>
+<p>Metadata: public · line 218</p>
+<h3 id="orchestratorclose">Orchestrator.close</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def close(self) -&gt; None
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.orchestrator:Orchestrator.close</code></p>
+<p>Metadata: internal · line 221</p>
+<h3 id="orchestratorenter">Orchestrator.<strong>enter</strong></h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def __enter__(self) -&gt; 'Orchestrator'
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.orchestrator:Orchestrator.__enter__</code></p>
+<p>Metadata: internal · line 224</p>
+<h3 id="orchestratorexit">Orchestrator.<strong>exit</strong></h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def __exit__(self, exc_type: Any, exc: Any, traceback: Any) -&gt; None
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.orchestrator:Orchestrator.__exit__</code></p>
+<p>Metadata: internal · line 227</p>
+<h3 id="orchestrator_transaction">Orchestrator._transaction</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def _transaction(self) -&gt; None
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.orchestrator:Orchestrator._transaction</code></p>
+<p>Metadata: public · line 230</p>
+<h3 id="orchestratorregister">Orchestrator.register</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def register(self, manifest_path: Path) -&gt; dict[str, Any]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.orchestrator:Orchestrator.register</code></p>
+<p>Metadata: internal · line 271</p>
+<h3 id="orchestrator_idempotency_key">Orchestrator._idempotency_key</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def _idempotency_key(self, stage: PipelineStage) -&gt; str
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.orchestrator:Orchestrator._idempotency_key</code></p>
+<p>Metadata: internal · line 295</p>
+<h3 id="orchestrator_event">Orchestrator._event</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def _event(self, job_id: str, event: str, details: dict[str, Any]) -&gt; None
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.orchestrator:Orchestrator._event</code></p>
+<p>Metadata: internal · line 301</p>
+<h3 id="orchestrator_completed_result_is_intact">Orchestrator._completed_result_is_intact</h3>
+<p>Verify materialized outputs before reusing a succeeded job.</p>
+<pre><code>def _completed_result_is_intact(self, row: sqlite3.Row) -&gt; bool
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.orchestrator:Orchestrator._completed_result_is_intact</code></p>
+<p>Metadata: internal · line 326</p>
+<h3 id="orchestrator_materialize_outputs">Orchestrator._materialize_outputs</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def _materialize_outputs(self, pipeline_id: str, stage: PipelineStage, job_id: str, work: Path) -&gt; list[dict[str, Any]]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.orchestrator:Orchestrator._materialize_outputs</code></p>
+<p>Metadata: internal · line 360</p>
+<h3 id="orchestrator_dependency_states">Orchestrator._dependency_states</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def _dependency_states(self, pipeline_id: str, dependencies: Iterable[str]) -&gt; dict[str, str]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.orchestrator:Orchestrator._dependency_states</code></p>
+<p>Metadata: public · line 370</p>
+<h3 id="orchestratorrun">Orchestrator.run</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def run(self, manifest_path: Path, *, stop_on_failure: bool = True) -&gt; dict[str, Any]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.orchestrator:Orchestrator.run</code></p>
+<p>Metadata: internal · line 402</p>
+<h3 id="orchestrator_set_state">Orchestrator._set_state</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def _set_state(self, job_id: str, state: JobState, *, result: dict[str, Any] | None = None, error: str | None = None) -&gt; None
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.orchestrator:Orchestrator._set_state</code></p>
+<p>Metadata: internal · line 417</p>
+<h3 id="orchestrator_run_stage">Orchestrator._run_stage</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def _run_stage(self, manifest: PipelineManifest, stage: PipelineStage, job_id: str) -&gt; dict[str, Any]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.orchestrator:Orchestrator._run_stage</code></p>
+<p>Metadata: public · line 526</p>
+<h3 id="orchestratorrecover_stale_jobs">Orchestrator.recover_stale_jobs</h3>
+<p>Reset only RUNNING jobs whose durable heartbeat is older than the bound.</p>
+<pre><code>def recover_stale_jobs(self, *, pipeline_id: str | None = None, stale_seconds: int = 600) -&gt; dict[str, Any]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.orchestrator:Orchestrator.recover_stale_jobs</code></p>
+<p>Metadata: public · line 571</p>
+<h3 id="orchestratorcancel">Orchestrator.cancel</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def cancel(self, pipeline_id: str, stage_id: str | None = None) -&gt; dict[str, Any]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.orchestrator:Orchestrator.cancel</code></p>
+<p>Metadata: public · line 590</p>
+<h3 id="orchestratorretry">Orchestrator.retry</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def retry(self, pipeline_id: str, stage_id: str, *, cascade: bool = False) -&gt; dict[str, Any]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.orchestrator:Orchestrator.retry</code></p>
+<p>Metadata: internal · line 615</p>
+<h3 id="orchestrator_update_pipeline_status">Orchestrator._update_pipeline_status</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def _update_pipeline_status(self, pipeline_id: str) -&gt; None
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.orchestrator:Orchestrator._update_pipeline_status</code></p>
+<p>Metadata: public · line 631</p>
+<h3 id="orchestratorstatus">Orchestrator.status</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def status(self, pipeline_id: str) -&gt; dict[str, Any]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.orchestrator:Orchestrator.status</code></p>
+<p>Metadata: public · line 662</p>
+<h3 id="create_default_pipeline">create_default_pipeline</h3>
+<p>Generate a concrete pipeline for the current project.</p>
+<pre><code>def create_default_pipeline(project_root: Path, output: Path, *, include_ghidra: bool = True) -&gt; dict[str, Any]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.orchestrator:create_default_pipeline</code></p></p>
+    </article>
+</section>
+            <!-- endblock -->
+
+            <!-- block footer -->
+                <footer>
+    <div class="d-flex flex-sm-row justify-content-between py-2 border-top drac-text-black drac-bg-cyan-green">
+        <a href="https://github.com/dracula/mkdocs" target="_blank" style="padding-left: 1%;"
+            class="footer-text drac-anchor drac-text-black drac-text-purple--hover">
+            Made with Dracula Theme for MkDocs
+        </a>
+    </div>
+</footer>
+            <!-- endblock -->
+        </div>
+
+    </main>
+
+        <script>var base_url = '../..';</script>
+        <script src="../../assets/js/jquery-3.3.1.slim.min.js"></script>
+        <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+        <script src="../../assets/js/mkdocs.js"></script>
+			<script src="../../search/main.js" defer></script>
+
+</body>
+
+</html>

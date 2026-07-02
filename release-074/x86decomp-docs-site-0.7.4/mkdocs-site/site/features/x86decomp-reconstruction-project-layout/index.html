@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+        <title>x86decomp.reconstruction.project_layout - x86decomp 0.7.4 Docs</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        
+        
+        
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="../../assets/css/darcula-highlight.min.css">
+
+        <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../assets/css/dracula-ui.min.css">
+        <link rel="stylesheet" href="../../assets/css/mkdocs.min.css">
+            <link href="../../assets/x86decomp-dracula-overrides.css" rel="stylesheet">
+
+        
+            <link  rel="icon" type="image/x-icon" href="../../assets/img/favicon.ico">
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+                <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+
+<body class="drac-bg-black-secondary drac-text-grey-ternary drac-text drac-scrollbar-purple">
+
+    <main class="d-flex">
+
+        <!-- block sidebar -->
+            <nav id="sidebar" class="sidebar drac-bg-black">
+    <div class="custom-menu">
+        <button type="button" id="sidebarCollapse" class="btn btn-primary">
+            <i class="fa fa-bars"></i>
+            <span class="sr-only">Menu</span>
+        </button>
+    </div>
+
+    <div class="p-4">
+        
+
+        <div class="drac-text-center">
+            
+                <span class="drac-text drac-line-height drac-text-white">x86decomp 0.7.4 Docs</span>
+            
+        </div>
+
+        <div class="drac-box flex-column">
+            <ul class="dot-ul">
+                <li><div class="dot-li drac-bg-cyan"></div></li>
+                <li><div class="dot-li drac-bg-green"></div></li>
+                <li><div class="dot-li drac-bg-orange"></div></li>
+                <li><div class="dot-li drac-bg-pink"></div></li>
+                <li><div class="dot-li drac-bg-purple"></div></li>
+                <li><div class="dot-li drac-bg-red"></div></li>
+                <li><div class="dot-li drac-bg-yellow"></div></li>
+            </ul>
+        </div>
+
+        <hr class="drac-divider" />
+
+        <!-- block menu -->
+        <ul class="mb-5 drac-list drac-list-none">
+            
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Home
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../../getting-started/"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Getting Started
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../../workflows/"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Workflows
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../../project-examples/"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Project Examples
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#reference-collapse" aria-expanded="false">
+                    Reference
+                </a>
+                <div class="collapse" id="reference-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../reference/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../commands/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Commands
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../schemas/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Schemas
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../integrations/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Integrations
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Source Modules
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../functions/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Function Index
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../tests/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Tests
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#release-evidence-collapse" aria-expanded="false">
+                    Release Evidence
+                </a>
+                <div class="collapse" id="release-evidence-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../release-evidence/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../verification/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Verification
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../source-coverage/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Source Coverage
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../changelog/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Changelog
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../about/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            About
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <!-- endblock -->
+    </div>
+</nav>
+        <!-- endblock -->
+
+        <nav class="divider drac-bg-purple-cyan"></nav>
+
+        <div class="content">
+            <!-- block header -->
+                <header>
+    <nav class="navbar navbar-expand-xl drac-bg-purple">
+        <div class="container-fluid">
+            
+            <button class="navbar-toggler w-100 text-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMenu"
+                aria-controls="navbarsMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse flex-column ml-auto" id="navbarsMenu">
+                <ul class="navbar-nav text-md-center">
+
+                    <!-- block preview -->
+                    <li class="nav-item">
+                            
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block search -->
+                    <li class="nav-item"><div role="search" class="search-box">
+	<form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+		<input type="text" name="q" class="drac-input drac-input-search drac-input-white drac-text-white drac-bg-black-secondary"
+		placeholder="Search docs" title="Type search term here" />
+	</form>
+</div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block source -->
+                    <li class="nav-item">
+                        
+                    </li>
+                    <!--  endblock -->
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+</header>
+            <!-- endblock -->
+
+            <!-- block content -->
+                <section class="p-md-5 section-content">
+    <article>
+        <p><p><a id="function-projectlayout-init"></a>
+<a id="function-projectlayout-create-module"></a>
+<a id="function-projectlayout-add-member"></a>
+<a id="function-projectlayout-create-translation-unit"></a>
+<a id="function-projectlayout-add-translation-unit-member"></a>
+<a id="function-projectlayout-synthesize"></a>
+<a id="function-projectlayout-show-module"></a>
+<a id="function-projectlayout-show-translation-unit"></a>
+<a id="function-projectlayout-list-modules"></a>
+<a id="function-projectlayout-explain-boundaries"></a>
+<a id="function-projectlayout-export"></a></p>
+<p>Section: Source-derived feature and function reference</p>
+<h1 id="x86decompreconstructionproject_layout">x86decomp.reconstruction.project_layout</h1>
+<p>No module docstring is declared in the v0.7.4 source.</p>
+<p>Metadata: reconstruction · current · 11 functions/methods</p>
+<p><strong>Source:</strong> <code>src/x86decomp/reconstruction/project_layout.py</code></p>
+<blockquote>
+<p><strong>Truth basis.</strong> Module and symbol names, signatures, line numbers, docstrings, and SHA-256 are read directly from the sealed source. When source docstrings are absent, this page says so instead of inferring behavior. Source SHA-256: <code>c56585dbc14339e024cf8fa5d4e4f31f06d7bce0a238b67212a3278a9282f4e7</code>.</p>
+</blockquote>
+<h2 id="functions-and-methods">Functions and methods</h2>
+<p>Metadata: internal · line 11</p>
+<h3 id="projectlayoutinit">ProjectLayout.<strong>init</strong></h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def __init__(self, store: ReconstructionStore)
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.reconstruction.project_layout:ProjectLayout.__init__</code></p>
+<p>Metadata: public · line 13</p>
+<h3 id="projectlayoutcreate_module">ProjectLayout.create_module</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def create_module(self, name: str, *, kind: str = 'static-library', source_path: str | None = None, confidence: float = 1.0, evidence: list[dict[str, Any]] | None = None, actor: str = 'analyst') -&gt; dict[str, Any]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.reconstruction.project_layout:ProjectLayout.create_module</code></p>
+<p>Metadata: public · line 23</p>
+<h3 id="projectlayoutadd_member">ProjectLayout.add_member</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def add_member(self, module_id: str, member_kind: str, member_id: str, *, ordinal: int = 0, evidence: list[dict[str, Any]] | None = None, actor: str = 'analyst') -&gt; dict[str, Any]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.reconstruction.project_layout:ProjectLayout.add_member</code></p>
+<p>Metadata: public · line 32</p>
+<h3 id="projectlayoutcreate_translation_unit">ProjectLayout.create_translation_unit</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def create_translation_unit(self, source_path: str, *, module_id: str | None = None, language: str = 'cpp', confidence: float = 1.0, evidence: list[dict[str, Any]] | None = None, actor: str = 'analyst') -&gt; dict[str, Any]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.reconstruction.project_layout:ProjectLayout.create_translation_unit</code></p>
+<p>Metadata: public · line 44</p>
+<h3 id="projectlayoutadd_translation_unit_member">ProjectLayout.add_translation_unit_member</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def add_translation_unit_member(self, unit_id: str, member_kind: str, member_id: str, *, linkage: str = 'external', ordinal: int = 0, actor: str = 'analyst') -&gt; dict[str, Any]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.reconstruction.project_layout:ProjectLayout.add_translation_unit_member</code></p>
+<p>Metadata: public · line 53</p>
+<h3 id="projectlayoutsynthesize">ProjectLayout.synthesize</h3>
+<p>Deterministically group inventory records by explicit object/library/source hints.</p>
+<pre><code>def synthesize(self, inventory: list[dict[str, Any]], *, actor: str = 'planner') -&gt; dict[str, Any]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.reconstruction.project_layout:ProjectLayout.synthesize</code></p>
+<p>Metadata: public · line 72</p>
+<h3 id="projectlayoutshow_module">ProjectLayout.show_module</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def show_module(self, module_id: str) -&gt; dict[str, Any]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.reconstruction.project_layout:ProjectLayout.show_module</code></p>
+<p>Metadata: public · line 80</p>
+<h3 id="projectlayoutshow_translation_unit">ProjectLayout.show_translation_unit</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def show_translation_unit(self, unit_id: str) -&gt; dict[str, Any]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.reconstruction.project_layout:ProjectLayout.show_translation_unit</code></p>
+<p>Metadata: public · line 88</p>
+<h3 id="projectlayoutlist_modules">ProjectLayout.list_modules</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def list_modules(self) -&gt; list[dict[str, Any]]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.reconstruction.project_layout:ProjectLayout.list_modules</code></p>
+<p>Metadata: public · line 92</p>
+<h3 id="projectlayoutexplain_boundaries">ProjectLayout.explain_boundaries</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def explain_boundaries(self, module_id: str) -&gt; dict[str, Any]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.reconstruction.project_layout:ProjectLayout.explain_boundaries</code></p>
+<p>Metadata: public · line 96</p>
+<h3 id="projectlayoutexport">ProjectLayout.export</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def export(self, path: str | Path) -&gt; dict[str, Any]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.reconstruction.project_layout:ProjectLayout.export</code></p></p>
+    </article>
+</section>
+            <!-- endblock -->
+
+            <!-- block footer -->
+                <footer>
+    <div class="d-flex flex-sm-row justify-content-between py-2 border-top drac-text-black drac-bg-cyan-green">
+        <a href="https://github.com/dracula/mkdocs" target="_blank" style="padding-left: 1%;"
+            class="footer-text drac-anchor drac-text-black drac-text-purple--hover">
+            Made with Dracula Theme for MkDocs
+        </a>
+    </div>
+</footer>
+            <!-- endblock -->
+        </div>
+
+    </main>
+
+        <script>var base_url = '../..';</script>
+        <script src="../../assets/js/jquery-3.3.1.slim.min.js"></script>
+        <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+        <script src="../../assets/js/mkdocs.js"></script>
+			<script src="../../search/main.js" defer></script>
+
+</body>
+
+</html>

@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Bounded MSF 7.0 / PDB inventory and PE identity correlation.">
+<title>x86decomp.pdb · x86decomp 0.7.4 Docs</title>
+<link rel="stylesheet" href="../assets/styles.css">
+<script>window.X86DOCS_ROOT="../";</script>
+<script defer src="../assets/search-index.js"></script>
+<script defer src="../assets/app.js"></script>
+</head>
+<body data-root="../">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="icon-button mobile-menu" data-menu-toggle aria-label="Open navigation">☰</button>
+  <a class="brand" href="../index.html"><span class="brand-mark">x86</span><span>decomp docs</span><small>0.7.4</small></a>
+  <button class="search-trigger" data-search-trigger aria-label="Search documentation"><span>Search docs</span><kbd>Ctrl K</kbd></button>
+  <button class="icon-button" data-theme-toggle aria-label="Toggle color theme">◐</button>
+</header>
+<div class="layout">
+  <aside class="sidebar" data-sidebar>
+    <nav><a href="../index.html">Home</a><a href="../getting-started.html">Getting started</a><a href="../workflows.html">Workflows</a><a href="../project-examples.html">Project examples</a><a href="../commands/index.html">Commands</a><a href="../features/index.html">Features &amp; functions</a><a href="../tests/index.html">Tests</a><a href="../schemas.html">Schemas</a><a href="../integrations.html">Integrations</a><a href="../source-coverage.html">Source coverage</a><a href="../verification.html">Verification</a><a href="../changelog.html">Changelog</a><a href="../about.html">About</a></nav>
+    <div class="sidebar-note"><strong>Current release only</strong><span>Source-derived documentation for the sealed 0.7.4 release.</span></div>
+  </aside>
+  <main id="main" class="content">
+<div class="breadcrumbs"><a href="../index.html">Docs</a><span>/</span><span>x86decomp.pdb</span></div>
+<div class="eyebrow">Source-derived feature and function reference</div><h1>x86decomp.pdb</h1>
+<p class="lead">Bounded MSF 7.0 / PDB inventory and PE identity correlation.</p>
+<div class="meta-row"><span class="tag tag-current">core</span><span class="tag">current</span><span class="tag">21 functions/methods</span></div>
+<p><strong>Source:</strong> <code>src/x86decomp/pdb.py</code></p>
+<div class="callout"><strong>Truth basis.</strong> Module and symbol names, signatures, line numbers, docstrings, and SHA-256 are read directly from the sealed source. When source docstrings are absent, this page says so instead of inferring behavior. Source SHA-256: <code>0ad9c99f6a1b232ce33268d35097ea6b44343d65052339c701588bf4efa79690</code>.</div>
+<h2>Functions and methods</h2><article class="function-entry" id="function-require">
+<div class="meta-row"><span class="tag">internal</span><span class="tag">line 29</span></div>
+<h3>_require</h3><p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code class="language-python">def _require(data: bytes, offset: int, size: int, context: str) -&gt; None</code></pre>
+<p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.pdb:_require</code></p>
+</article><article class="function-entry" id="function-u16">
+<div class="meta-row"><span class="tag">internal</span><span class="tag">line 34</span></div>
+<h3>_u16</h3><p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code class="language-python">def _u16(data: bytes, offset: int, context: str) -&gt; int</code></pre>
+<p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.pdb:_u16</code></p>
+</article><article class="function-entry" id="function-u32">
+<div class="meta-row"><span class="tag">internal</span><span class="tag">line 39</span></div>
+<h3>_u32</h3><p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code class="language-python">def _u32(data: bytes, offset: int, context: str) -&gt; int</code></pre>
+<p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.pdb:_u32</code></p>
+</article><article class="function-entry" id="function-cstring">
+<div class="meta-row"><span class="tag">internal</span><span class="tag">line 44</span></div>
+<h3>_cstring</h3><p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code class="language-python">def _cstring(data: bytes, offset: int, limit: int, context: str) -&gt; tuple[str, int]</code></pre>
+<p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.pdb:_cstring</code></p>
+</article><article class="function-entry" id="function-align4">
+<div class="meta-row"><span class="tag">internal</span><span class="tag">line 53</span></div>
+<h3>_align4</h3><p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code class="language-python">def _align4(value: int) -&gt; int</code></pre>
+<p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.pdb:_align4</code></p>
+</article><article class="function-entry" id="function-pdbstream-to-dict">
+<div class="meta-row"><span class="tag">public</span><span class="tag">line 64</span></div>
+<h3>PDBStream.to_dict</h3><p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code class="language-python">def to_dict(self) -&gt; dict[str, Any]</code></pre>
+<p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.pdb:PDBStream.to_dict</code></p>
+</article><article class="function-entry" id="function-pdbfile-to-dict">
+<div class="meta-row"><span class="tag">public</span><span class="tag">line 89</span></div>
+<h3>PDBFile.to_dict</h3><p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code class="language-python">def to_dict(self) -&gt; dict[str, Any]</code></pre>
+<p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.pdb:PDBFile.to_dict</code></p>
+</article><article class="function-entry" id="function-msf-init">
+<div class="meta-row"><span class="tag">internal</span><span class="tag">line 121</span></div>
+<h3>_MSF.__init__</h3><p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code class="language-python">def __init__(self, data: bytes)</code></pre>
+<p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.pdb:_MSF.__init__</code></p>
+</article><article class="function-entry" id="function-msf-block">
+<div class="meta-row"><span class="tag">internal</span><span class="tag">line 148</span></div>
+<h3>_MSF._block</h3><p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code class="language-python">def _block(self, index: int, context: str) -&gt; bytes</code></pre>
+<p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.pdb:_MSF._block</code></p>
+</article><article class="function-entry" id="function-msf-parse-directory">
+<div class="meta-row"><span class="tag">internal</span><span class="tag">line 154</span></div>
+<h3>_MSF._parse_directory</h3><p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code class="language-python">def _parse_directory(self) -&gt; tuple[list[int | None], list[tuple[int, ...]]]</code></pre>
+<p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.pdb:_MSF._parse_directory</code></p>
+</article><article class="function-entry" id="function-msf-stream">
+<div class="meta-row"><span class="tag">internal</span><span class="tag">line 186</span></div>
+<h3>_MSF.stream</h3><p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code class="language-python">def stream(self, index: int) -&gt; bytes | None</code></pre>
+<p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.pdb:_MSF.stream</code></p>
+</article><article class="function-entry" id="function-parse-info">
+<div class="meta-row"><span class="tag">internal</span><span class="tag">line 195</span></div>
+<h3>_parse_info</h3><p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code class="language-python">def _parse_info(data: bytes | None) -&gt; dict[str, Any] | None</code></pre>
+<p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.pdb:_parse_info</code></p>
+</article><article class="function-entry" id="function-parse-tpi">
+<div class="meta-row"><span class="tag">internal</span><span class="tag">line 213</span></div>
+<h3>_parse_tpi</h3><p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code class="language-python">def _parse_tpi(data: bytes | None, name: str) -&gt; dict[str, Any] | None</code></pre>
+<p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.pdb:_parse_tpi</code></p>
+</article><article class="function-entry" id="function-parse-modules">
+<div class="meta-row"><span class="tag">internal</span><span class="tag">line 260</span></div>
+<h3>_parse_modules</h3><p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code class="language-python">def _parse_modules(data: bytes) -&gt; list[dict[str, Any]]</code></pre>
+<p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.pdb:_parse_modules</code></p>
+</article><article class="function-entry" id="function-parse-source-info">
+<div class="meta-row"><span class="tag">internal</span><span class="tag">line 324</span></div>
+<h3>_parse_source_info</h3><p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code class="language-python">def _parse_source_info(data: bytes) -&gt; dict[str, Any]</code></pre>
+<p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.pdb:_parse_source_info</code></p>
+</article><article class="function-entry" id="function-parse-section-contributions">
+<div class="meta-row"><span class="tag">internal</span><span class="tag">line 372</span></div>
+<h3>_parse_section_contributions</h3><p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code class="language-python">def _parse_section_contributions(data: bytes) -&gt; dict[str, Any]</code></pre>
+<p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.pdb:_parse_section_contributions</code></p>
+</article><article class="function-entry" id="function-parse-section-map">
+<div class="meta-row"><span class="tag">internal</span><span class="tag">line 402</span></div>
+<h3>_parse_section_map</h3><p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code class="language-python">def _parse_section_map(data: bytes) -&gt; dict[str, Any]</code></pre>
+<p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.pdb:_parse_section_map</code></p>
+</article><article class="function-entry" id="function-parse-dbi">
+<div class="meta-row"><span class="tag">internal</span><span class="tag">line 433</span></div>
+<h3>_parse_dbi</h3><p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code class="language-python">def _parse_dbi(data: bytes | None) -&gt; dict[str, Any] | None</code></pre>
+<p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.pdb:_parse_dbi</code></p>
+</article><article class="function-entry" id="function-correlate-pe">
+<div class="meta-row"><span class="tag">internal</span><span class="tag">line 545</span></div>
+<h3>_correlate_pe</h3><p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code class="language-python">def _correlate_pe(info: dict[str, Any] | None, pe_path: Path | None) -&gt; dict[str, Any] | None</code></pre>
+<p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.pdb:_correlate_pe</code></p>
+</article><article class="function-entry" id="function-parse-pdb-bytes">
+<div class="meta-row"><span class="tag">public</span><span class="tag">line 576</span></div>
+<h3>parse_pdb_bytes</h3><p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code class="language-python">def parse_pdb_bytes(data: bytes, *, path: Path | None = None, pe_path: Path | None = None) -&gt; PDBFile</code></pre>
+<p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.pdb:parse_pdb_bytes</code></p>
+</article><article class="function-entry" id="function-parse-pdb">
+<div class="meta-row"><span class="tag">public</span><span class="tag">line 612</span></div>
+<h3>parse_pdb</h3><p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code class="language-python">def parse_pdb(path: Path, *, pe_path: Path | None = None) -&gt; PDBFile</code></pre>
+<p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.pdb:parse_pdb</code></p>
+</article>
+    <footer class="page-footer"><span>x86decomp-toolkit 0.7.4</span><a href="../about.html">About this documentation</a></footer>
+  </main>
+</div>
+<div class="search-dialog" data-search-dialog hidden>
+  <div class="search-panel" role="dialog" aria-modal="true" aria-label="Search documentation">
+    <div class="search-box"><input data-search-input type="search" placeholder="Search commands, functions, tests, schemas, and source" autocomplete="off"><button data-search-close aria-label="Close search">×</button></div>
+    <div class="search-hint">Type at least two characters. Press Escape to close.</div>
+    <div class="search-results" data-search-results></div>
+  </div>
+</div>
+</body>
+</html>

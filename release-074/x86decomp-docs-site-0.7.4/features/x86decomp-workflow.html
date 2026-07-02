@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Per-function decompilation mode and validation-state management.">
+<title>x86decomp.workflow · x86decomp 0.7.4 Docs</title>
+<link rel="stylesheet" href="../assets/styles.css">
+<script>window.X86DOCS_ROOT="../";</script>
+<script defer src="../assets/search-index.js"></script>
+<script defer src="../assets/app.js"></script>
+</head>
+<body data-root="../">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="icon-button mobile-menu" data-menu-toggle aria-label="Open navigation">☰</button>
+  <a class="brand" href="../index.html"><span class="brand-mark">x86</span><span>decomp docs</span><small>0.7.4</small></a>
+  <button class="search-trigger" data-search-trigger aria-label="Search documentation"><span>Search docs</span><kbd>Ctrl K</kbd></button>
+  <button class="icon-button" data-theme-toggle aria-label="Toggle color theme">◐</button>
+</header>
+<div class="layout">
+  <aside class="sidebar" data-sidebar>
+    <nav><a href="../index.html">Home</a><a href="../getting-started.html">Getting started</a><a href="../workflows.html">Workflows</a><a href="../project-examples.html">Project examples</a><a href="../commands/index.html">Commands</a><a href="../features/index.html">Features &amp; functions</a><a href="../tests/index.html">Tests</a><a href="../schemas.html">Schemas</a><a href="../integrations.html">Integrations</a><a href="../source-coverage.html">Source coverage</a><a href="../verification.html">Verification</a><a href="../changelog.html">Changelog</a><a href="../about.html">About</a></nav>
+    <div class="sidebar-note"><strong>Current release only</strong><span>Source-derived documentation for the sealed 0.7.4 release.</span></div>
+  </aside>
+  <main id="main" class="content">
+<div class="breadcrumbs"><a href="../index.html">Docs</a><span>/</span><span>x86decomp.workflow</span></div>
+<div class="eyebrow">Source-derived feature and function reference</div><h1>x86decomp.workflow</h1>
+<p class="lead">Per-function decompilation mode and validation-state management.</p>
+<div class="meta-row"><span class="tag tag-current">core</span><span class="tag">current</span><span class="tag">7 functions/methods</span></div>
+<p><strong>Source:</strong> <code>src/x86decomp/workflow.py</code></p>
+<div class="callout"><strong>Truth basis.</strong> Module and symbol names, signatures, line numbers, docstrings, and SHA-256 are read directly from the sealed source. When source docstrings are absent, this page says so instead of inferring behavior. Source SHA-256: <code>cae8a093f08f66f9412393e59867c4d32ca7caf88533a175d22eebe1f325c0a5</code>.</div>
+<h2>Functions and methods</h2><article class="function-entry" id="function-functionworkflow-to-dict">
+<div class="meta-row"><span class="tag">public</span><span class="tag">line 79</span></div>
+<h3>FunctionWorkflow.to_dict</h3><p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code class="language-python">def to_dict(self) -&gt; dict[str, Any]</code></pre>
+<p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.workflow:FunctionWorkflow.to_dict</code></p>
+</article><article class="function-entry" id="function-functionworkflow-from-dict">
+<div class="meta-row"><span class="tag">public</span><span class="tag">line 95</span></div>
+<h3>FunctionWorkflow.from_dict</h3><p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code class="language-python">def from_dict(cls, value: Any) -&gt; &#x27;FunctionWorkflow&#x27;</code></pre>
+<p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.workflow:FunctionWorkflow.from_dict</code></p>
+</article><article class="function-entry" id="function-state-path">
+<div class="meta-row"><span class="tag">internal</span><span class="tag">line 126</span></div>
+<h3>_state_path</h3><p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code class="language-python">def _state_path(project_root: Path, function_id: str) -&gt; Path</code></pre>
+<p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.workflow:_state_path</code></p>
+</article><article class="function-entry" id="function-initialize-function-workflow">
+<div class="meta-row"><span class="tag">public</span><span class="tag">line 131</span></div>
+<h3>initialize_function_workflow</h3><p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code class="language-python">def initialize_function_workflow(project_root: Path, *, function_id: str | None = None, rva: int | None = None, modes: set[DecompilationMode] | None = None) -&gt; FunctionWorkflow</code></pre>
+<p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.workflow:initialize_function_workflow</code></p>
+</article><article class="function-entry" id="function-load-function-workflow">
+<div class="meta-row"><span class="tag">public</span><span class="tag">line 161</span></div>
+<h3>load_function_workflow</h3><p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code class="language-python">def load_function_workflow(project_root: Path, function_id: str) -&gt; FunctionWorkflow</code></pre>
+<p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.workflow:load_function_workflow</code></p>
+</article><article class="function-entry" id="function-save-function-workflow">
+<div class="meta-row"><span class="tag">public</span><span class="tag">line 168</span></div>
+<h3>save_function_workflow</h3><p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code class="language-python">def save_function_workflow(project_root: Path, workflow: FunctionWorkflow) -&gt; None</code></pre>
+<p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.workflow:save_function_workflow</code></p>
+</article><article class="function-entry" id="function-update-function-workflow">
+<div class="meta-row"><span class="tag">public</span><span class="tag">line 173</span></div>
+<h3>update_function_workflow</h3><p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code class="language-python">def update_function_workflow(project_root: Path, function_id: str, *, source_stage: SourceStage | None = None, matching_status: MatchingStatus | None = None, functional_status: FunctionalStatus | None = None, active_candidate: str | None = None, compiler_profile: str | None = None, report_kind: str | None = None, report_path: str | None = None, blocker: str | None = None, allow_regression: bool = False) -&gt; FunctionWorkflow</code></pre>
+<p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.workflow:update_function_workflow</code></p>
+</article>
+    <footer class="page-footer"><span>x86decomp-toolkit 0.7.4</span><a href="../about.html">About this documentation</a></footer>
+  </main>
+</div>
+<div class="search-dialog" data-search-dialog hidden>
+  <div class="search-panel" role="dialog" aria-modal="true" aria-label="Search documentation">
+    <div class="search-box"><input data-search-input type="search" placeholder="Search commands, functions, tests, schemas, and source" autocomplete="off"><button data-search-close aria-label="Close search">×</button></div>
+    <div class="search-hint">Type at least two characters. Press Escape to close.</div>
+    <div class="search-results" data-search-results></div>
+  </div>
+</div>
+</body>
+</html>

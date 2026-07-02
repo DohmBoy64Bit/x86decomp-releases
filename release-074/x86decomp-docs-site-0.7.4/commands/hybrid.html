@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Canonical hybrid commands implemented by the current capability subsystem.">
+<title>x86decomp hybrid · x86decomp 0.7.4 Docs</title>
+<link rel="stylesheet" href="../assets/styles.css">
+<script>window.X86DOCS_ROOT="../";</script>
+<script defer src="../assets/search-index.js"></script>
+<script defer src="../assets/app.js"></script>
+</head>
+<body data-root="../">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="icon-button mobile-menu" data-menu-toggle aria-label="Open navigation">☰</button>
+  <a class="brand" href="../index.html"><span class="brand-mark">x86</span><span>decomp docs</span><small>0.7.4</small></a>
+  <button class="search-trigger" data-search-trigger aria-label="Search documentation"><span>Search docs</span><kbd>Ctrl K</kbd></button>
+  <button class="icon-button" data-theme-toggle aria-label="Toggle color theme">◐</button>
+</header>
+<div class="layout">
+  <aside class="sidebar" data-sidebar>
+    <nav><a href="../index.html">Home</a><a href="../getting-started.html">Getting started</a><a href="../workflows.html">Workflows</a><a href="../project-examples.html">Project examples</a><a href="../commands/index.html">Commands</a><a href="../features/index.html">Features &amp; functions</a><a href="../tests/index.html">Tests</a><a href="../schemas.html">Schemas</a><a href="../integrations.html">Integrations</a><a href="../source-coverage.html">Source coverage</a><a href="../verification.html">Verification</a><a href="../changelog.html">Changelog</a><a href="../about.html">About</a></nav>
+    <div class="sidebar-note"><strong>Current release only</strong><span>Source-derived documentation for the sealed 0.7.4 release.</span></div>
+  </aside>
+  <main id="main" class="content">
+<div class="breadcrumbs"><a href="../index.html">Docs</a><span>/</span><span>x86decomp hybrid</span></div>
+<div class="eyebrow">Command reference</div><h1><code>x86decomp hybrid</code></h1>
+<p class="lead">Canonical hybrid commands implemented by the current capability subsystem.</p><div class="meta-row"><span class="tag tag-current">current</span><span class="tag tag-canonical">canonical group</span><span class="tag">3 runnable paths</span></div>
+<h2>Help</h2><pre><code class="language-bash">x86decomp hybrid --help</code></pre><section class="command-section" id="command-hybrid-compose">
+<div class="meta-row"><span class="tag tag-current">current</span><span class="tag">native</span></div>
+<h2><code>x86decomp hybrid compose</code></h2>
+<p>compose command</p>
+<h3>Usage</h3><pre><code class="language-bash">x86decomp hybrid compose [-h] run_id output</code></pre>
+<h3>Syntax example</h3><pre><code class="language-bash">x86decomp hybrid compose example-001 ./output.json</code></pre>
+<h3>Arguments</h3><div class="table-wrap"><table><thead><tr><th>Argument</th><th>Source-declared parser metadata</th></tr></thead><tbody><tr><td><code>run_id</code><br><small>required</small></td><td>No argument help text is declared; parser destination is <code>run_id</code>.</td></tr><tr><td><code>output</code><br><small>required</small></td><td>No argument help text is declared; parser destination is <code>output</code>.</td></tr></tbody></table></div>
+<div class="callout"><strong>Source basis.</strong> Parser definition: <code>src/x86decomp/native/cli.py</code>; SHA-256 <code>da601accbad512ec93400a9fd96a95b3419ce92ea17db8aefd9d03e67bd87950</code>. Descriptions above use only parser-declared text or an explicit no-help notice.</div>
+</section><section class="command-section" id="command-hybrid-generate">
+<div class="meta-row"><span class="tag tag-current">current</span><span class="tag">assembly</span></div>
+<h2><code>x86decomp hybrid generate</code></h2>
+<p>generate command</p>
+<h3>Usage</h3><pre><code class="language-bash">x86decomp hybrid generate [-h] [--architecture {x86,x86_64}]
+                                 [--asm-format {bytes,annotated,mnemonic}]
+                                 [--image-base IMAGE_BASE]
+                                 [--assembler-command-json ASSEMBLER_COMMAND_JSON]
+                                 [--symbol-map SYMBOL_MAP] [--overwrite]
+                                 source_project output</code></pre>
+<h3>Syntax example</h3><pre><code class="language-bash">x86decomp hybrid generate ./work ./output.json</code></pre>
+<h3>Arguments</h3><div class="table-wrap"><table><thead><tr><th>Argument</th><th>Source-declared parser metadata</th></tr></thead><tbody><tr><td><code>source_project</code><br><small>required</small></td><td>No argument help text is declared; parser destination is <code>source_project</code>.</td></tr><tr><td><code>output</code><br><small>required</small></td><td>No argument help text is declared; parser destination is <code>output</code>.</td></tr><tr><td><code>--architecture</code><br><small>default: &#x27;x86&#x27; · choices: x86, x86_64</small></td><td>No argument help text is declared; parser destination is <code>architecture</code>.</td></tr><tr><td><code>--asm-format</code><br><small>default: &#x27;bytes&#x27; · choices: bytes, annotated, mnemonic</small></td><td>No argument help text is declared; parser destination is <code>asm_format</code>.</td></tr><tr><td><code>--image-base</code><br><small>default: 0 · type: _int</small></td><td>No argument help text is declared; parser destination is <code>image_base</code>.</td></tr><tr><td><code>--assembler-command-json</code></td><td>No argument help text is declared; parser destination is <code>assembler_command_json</code>.</td></tr><tr><td><code>--symbol-map</code></td><td>No argument help text is declared; parser destination is <code>symbol_map</code>.</td></tr><tr><td><code>--overwrite</code><br><small>nargs: 0 · default: False</small></td><td>No argument help text is declared; parser destination is <code>overwrite</code>.</td></tr></tbody></table></div>
+<div class="callout"><strong>Source basis.</strong> Parser definition: <code>src/x86decomp/assembly/cli.py</code>; SHA-256 <code>f9fc081b2048d0c37591959352da1786d262cf26475932cba21977e24b652c58</code>. Descriptions above use only parser-declared text or an explicit no-help notice.</div>
+</section><section class="command-section" id="command-hybrid-verify">
+<div class="meta-row"><span class="tag tag-current">current</span><span class="tag">native</span></div>
+<h2><code>x86decomp hybrid verify</code></h2>
+<p>verify command</p>
+<h3>Usage</h3><pre><code class="language-bash">x86decomp hybrid verify [-h] composition_id</code></pre>
+<h3>Syntax example</h3><pre><code class="language-bash">x86decomp hybrid verify example-001</code></pre>
+<h3>Arguments</h3><div class="table-wrap"><table><thead><tr><th>Argument</th><th>Source-declared parser metadata</th></tr></thead><tbody><tr><td><code>composition_id</code><br><small>required</small></td><td>No argument help text is declared; parser destination is <code>composition_id</code>.</td></tr></tbody></table></div>
+<div class="callout"><strong>Source basis.</strong> Parser definition: <code>src/x86decomp/native/cli.py</code>; SHA-256 <code>da601accbad512ec93400a9fd96a95b3419ce92ea17db8aefd9d03e67bd87950</code>. Descriptions above use only parser-declared text or an explicit no-help notice.</div>
+</section>
+    <footer class="page-footer"><span>x86decomp-toolkit 0.7.4</span><a href="../about.html">About this documentation</a></footer>
+  </main>
+</div>
+<div class="search-dialog" data-search-dialog hidden>
+  <div class="search-panel" role="dialog" aria-modal="true" aria-label="Search documentation">
+    <div class="search-box"><input data-search-input type="search" placeholder="Search commands, functions, tests, schemas, and source" autocomplete="off"><button data-search-close aria-label="Close search">×</button></div>
+    <div class="search-hint">Type at least two characters. Press Escape to close.</div>
+    <div class="search-results" data-search-results></div>
+  </div>
+</div>
+</body>
+</html>

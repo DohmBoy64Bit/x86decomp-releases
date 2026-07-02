@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="No-silent-skip comprehensive verification harness for x86decomp-toolkit">
+<title>x86decomp-test · x86decomp 0.7.4 Docs</title>
+<link rel="stylesheet" href="../assets/styles.css">
+<script>window.X86DOCS_ROOT="../";</script>
+<script defer src="../assets/search-index.js"></script>
+<script defer src="../assets/app.js"></script>
+</head>
+<body data-root="../">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="icon-button mobile-menu" data-menu-toggle aria-label="Open navigation">☰</button>
+  <a class="brand" href="../index.html"><span class="brand-mark">x86</span><span>decomp docs</span><small>0.7.4</small></a>
+  <button class="search-trigger" data-search-trigger aria-label="Search documentation"><span>Search docs</span><kbd>Ctrl K</kbd></button>
+  <button class="icon-button" data-theme-toggle aria-label="Toggle color theme">◐</button>
+</header>
+<div class="layout">
+  <aside class="sidebar" data-sidebar>
+    <nav><a href="../index.html">Home</a><a href="../getting-started.html">Getting started</a><a href="../workflows.html">Workflows</a><a href="../project-examples.html">Project examples</a><a href="../commands/index.html">Commands</a><a href="../features/index.html">Features &amp; functions</a><a href="../tests/index.html">Tests</a><a href="../schemas.html">Schemas</a><a href="../integrations.html">Integrations</a><a href="../source-coverage.html">Source coverage</a><a href="../verification.html">Verification</a><a href="../changelog.html">Changelog</a><a href="../about.html">About</a></nav>
+    <div class="sidebar-note"><strong>Current release only</strong><span>Source-derived documentation for the sealed 0.7.4 release.</span></div>
+  </aside>
+  <main id="main" class="content">
+<div class="breadcrumbs"><a href="../index.html">Docs</a><span>/</span><span>x86decomp-test</span></div>
+<div class="eyebrow">Verification command reference</div><h1><code>x86decomp-test</code></h1>
+<p class="lead">No-silent-skip comprehensive verification harness for x86decomp-toolkit</p>
+<div class="meta-row"><span class="tag tag-current">current</span><span class="tag">verification executable</span><span class="tag">5 runnable paths</span></div>
+<h2>Help</h2><pre><code class="language-bash">x86decomp-test --help</code></pre><section class="command-section" id="command-adapters">
+<div class="meta-row"><span class="tag tag-current">current</span><span class="tag">verification harness</span></div>
+<h2><code>x86decomp-test adapters</code></h2>
+<p>detect adapters and optionally resolve missing ones</p>
+<h3>Usage</h3><pre><code class="language-bash">x86decomp-test adapters [-h] [--config CONFIG] [--resolve] [--verbose]</code></pre>
+<h3>Syntax example</h3><pre><code class="language-bash">x86decomp-test adapters --config ./x86decomp-test.json</code></pre>
+<h3>Arguments</h3><div class="table-wrap"><table><thead><tr><th>Argument</th><th>Source-declared parser metadata</th></tr></thead><tbody><tr><td><code>--config</code><br><small>default: x86decomp-test.json · type: _path</small></td><td>No argument help text is declared; parser destination is <code>config</code>.</td></tr><tr><td><code>--resolve</code><br><small>nargs: 0 · default: False</small></td><td>No argument help text is declared; parser destination is <code>resolve</code>.</td></tr><tr><td><code>--verbose</code><br><small>nargs: 0 · default: False</small></td><td>No argument help text is declared; parser destination is <code>verbose</code>.</td></tr></tbody></table></div>
+<div class="callout"><strong>Source basis.</strong> Parser definition: <code>test-suite/src/x86decomp_testkit/cli.py</code>; SHA-256 <code>fc69ddd59b29350727a5762fe78f440d3538bee7c83d5342478d18ee3a0dcd67</code>. Descriptions above use only parser-declared text or an explicit no-help notice.</div>
+</section><section class="command-section" id="command-catalog">
+<div class="meta-row"><span class="tag tag-current">current</span><span class="tag">verification harness</span></div>
+<h2><code>x86decomp-test catalog</code></h2>
+<p>show the pinned feature catalog path</p>
+<h3>Usage</h3><pre><code class="language-bash">x86decomp-test catalog [-h] [--print]</code></pre>
+<h3>Syntax example</h3><pre><code class="language-bash">x86decomp-test catalog</code></pre>
+<h3>Arguments</h3><div class="table-wrap"><table><thead><tr><th>Argument</th><th>Source-declared parser metadata</th></tr></thead><tbody><tr><td><code>--print</code><br><small>nargs: 0 · default: False</small></td><td>No argument help text is declared; parser destination is <code>print_catalog</code>.</td></tr></tbody></table></div>
+<div class="callout"><strong>Source basis.</strong> Parser definition: <code>test-suite/src/x86decomp_testkit/cli.py</code>; SHA-256 <code>fc69ddd59b29350727a5762fe78f440d3538bee7c83d5342478d18ee3a0dcd67</code>. Descriptions above use only parser-declared text or an explicit no-help notice.</div>
+</section><section class="command-section" id="command-init-config">
+<div class="meta-row"><span class="tag tag-current">current</span><span class="tag">verification harness</span></div>
+<h2><code>x86decomp-test init-config</code></h2>
+<p>create a test configuration</p>
+<h3>Usage</h3><pre><code class="language-bash">x86decomp-test init-config [-h] --toolkit-root TOOLKIT_ROOT
+                                  [--output-root OUTPUT_ROOT]
+                                  [--config CONFIG]
+                                  [--install-root INSTALL_ROOT]
+                                  [--non-interactive] [--allow-network]
+                                  [--allow-install] [--non-strict]</code></pre>
+<h3>Syntax example</h3><pre><code class="language-bash">x86decomp-test init-config --toolkit-root . --output-root ./test-results --install-root ./.x86decomp-test-tools --config ./x86decomp-test.json</code></pre>
+<h3>Arguments</h3><div class="table-wrap"><table><thead><tr><th>Argument</th><th>Source-declared parser metadata</th></tr></thead><tbody><tr><td><code>--toolkit-root</code><br><small>required · type: _path</small></td><td>No argument help text is declared; parser destination is <code>toolkit_root</code>.</td></tr><tr><td><code>--output-root</code><br><small>default: test-results · type: _path</small></td><td>No argument help text is declared; parser destination is <code>output_root</code>.</td></tr><tr><td><code>--config</code><br><small>default: x86decomp-test.json · type: _path</small></td><td>No argument help text is declared; parser destination is <code>config</code>.</td></tr><tr><td><code>--install-root</code><br><small>type: _path</small></td><td>No argument help text is declared; parser destination is <code>install_root</code>.</td></tr><tr><td><code>--non-interactive</code><br><small>nargs: 0 · default: False</small></td><td>No argument help text is declared; parser destination is <code>non_interactive</code>.</td></tr><tr><td><code>--allow-network</code><br><small>nargs: 0 · default: False</small></td><td>No argument help text is declared; parser destination is <code>allow_network</code>.</td></tr><tr><td><code>--allow-install</code><br><small>nargs: 0 · default: False</small></td><td>No argument help text is declared; parser destination is <code>allow_install</code>.</td></tr><tr><td><code>--non-strict</code><br><small>nargs: 0 · default: False</small></td><td>No argument help text is declared; parser destination is <code>non_strict</code>.</td></tr></tbody></table></div>
+<div class="callout"><strong>Source basis.</strong> Parser definition: <code>test-suite/src/x86decomp_testkit/cli.py</code>; SHA-256 <code>fc69ddd59b29350727a5762fe78f440d3538bee7c83d5342478d18ee3a0dcd67</code>. Descriptions above use only parser-declared text or an explicit no-help notice.</div>
+</section><section class="command-section" id="command-inventory">
+<div class="meta-row"><span class="tag tag-current">current</span><span class="tag">verification harness</span></div>
+<h2><code>x86decomp-test inventory</code></h2>
+<p>print the discovered toolkit surface</p>
+<h3>Usage</h3><pre><code class="language-bash">x86decomp-test inventory [-h] [--config CONFIG] [--output OUTPUT]</code></pre>
+<h3>Syntax example</h3><pre><code class="language-bash">x86decomp-test inventory --config ./x86decomp-test.json --output ./inventory.json</code></pre>
+<h3>Arguments</h3><div class="table-wrap"><table><thead><tr><th>Argument</th><th>Source-declared parser metadata</th></tr></thead><tbody><tr><td><code>--config</code><br><small>default: x86decomp-test.json · type: _path</small></td><td>No argument help text is declared; parser destination is <code>config</code>.</td></tr><tr><td><code>--output</code><br><small>type: _path</small></td><td>No argument help text is declared; parser destination is <code>output</code>.</td></tr></tbody></table></div>
+<div class="callout"><strong>Source basis.</strong> Parser definition: <code>test-suite/src/x86decomp_testkit/cli.py</code>; SHA-256 <code>fc69ddd59b29350727a5762fe78f440d3538bee7c83d5342478d18ee3a0dcd67</code>. Descriptions above use only parser-declared text or an explicit no-help notice.</div>
+</section><section class="command-section" id="command-run">
+<div class="meta-row"><span class="tag tag-current">current</span><span class="tag">verification harness</span></div>
+<h2><code>x86decomp-test run</code></h2>
+<p>run the complete suite</p>
+<h3>Usage</h3><pre><code class="language-bash">x86decomp-test run [-h] [--config CONFIG] [--verbose]</code></pre>
+<h3>Syntax example</h3><pre><code class="language-bash">x86decomp-test run --config ./x86decomp-test.json --verbose</code></pre>
+<h3>Arguments</h3><div class="table-wrap"><table><thead><tr><th>Argument</th><th>Source-declared parser metadata</th></tr></thead><tbody><tr><td><code>--config</code><br><small>default: x86decomp-test.json · type: _path</small></td><td>No argument help text is declared; parser destination is <code>config</code>.</td></tr><tr><td><code>--verbose</code><br><small>nargs: 0 · default: False</small></td><td>No argument help text is declared; parser destination is <code>verbose</code>.</td></tr></tbody></table></div>
+<div class="callout"><strong>Source basis.</strong> Parser definition: <code>test-suite/src/x86decomp_testkit/cli.py</code>; SHA-256 <code>fc69ddd59b29350727a5762fe78f440d3538bee7c83d5342478d18ee3a0dcd67</code>. Descriptions above use only parser-declared text or an explicit no-help notice.</div>
+</section>
+    <footer class="page-footer"><span>x86decomp-toolkit 0.7.4</span><a href="../about.html">About this documentation</a></footer>
+  </main>
+</div>
+<div class="search-dialog" data-search-dialog hidden>
+  <div class="search-panel" role="dialog" aria-modal="true" aria-label="Search documentation">
+    <div class="search-box"><input data-search-input type="search" placeholder="Search commands, functions, tests, schemas, and source" autocomplete="off"><button data-search-close aria-label="Close search">×</button></div>
+    <div class="search-hint">Type at least two characters. Press Escape to close.</div>
+    <div class="search-results" data-search-results></div>
+  </div>
+</div>
+</body>
+</html>

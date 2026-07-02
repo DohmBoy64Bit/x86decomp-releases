@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+        <title>Workflows - x86decomp 0.7.4 Docs</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        
+        
+        
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="../assets/css/darcula-highlight.min.css">
+
+        <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../assets/css/dracula-ui.min.css">
+        <link rel="stylesheet" href="../assets/css/mkdocs.min.css">
+            <link href="../assets/x86decomp-dracula-overrides.css" rel="stylesheet">
+
+        
+            <link  rel="icon" type="image/x-icon" href="../assets/img/favicon.ico">
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+                <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+
+<body class="drac-bg-black-secondary drac-text-grey-ternary drac-text drac-scrollbar-purple">
+
+    <main class="d-flex">
+
+        <!-- block sidebar -->
+            <nav id="sidebar" class="sidebar drac-bg-black">
+    <div class="custom-menu">
+        <button type="button" id="sidebarCollapse" class="btn btn-primary">
+            <i class="fa fa-bars"></i>
+            <span class="sr-only">Menu</span>
+        </button>
+    </div>
+
+    <div class="p-4">
+        
+
+        <div class="drac-text-center">
+            
+                <span class="drac-text drac-line-height drac-text-white">x86decomp 0.7.4 Docs</span>
+            
+        </div>
+
+        <div class="drac-box flex-column">
+            <ul class="dot-ul">
+                <li><div class="dot-li drac-bg-cyan"></div></li>
+                <li><div class="dot-li drac-bg-green"></div></li>
+                <li><div class="dot-li drac-bg-orange"></div></li>
+                <li><div class="dot-li drac-bg-pink"></div></li>
+                <li><div class="dot-li drac-bg-purple"></div></li>
+                <li><div class="dot-li drac-bg-red"></div></li>
+                <li><div class="dot-li drac-bg-yellow"></div></li>
+            </ul>
+        </div>
+
+        <hr class="drac-divider" />
+
+        <!-- block menu -->
+        <ul class="mb-5 drac-list drac-list-none">
+            
+            <li class="drac-box">
+                <a href=".."
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Home
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../getting-started/"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Getting Started
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="./"
+                    class=" active 
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Workflows
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../project-examples/"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Project Examples
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href=".."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#reference-collapse" aria-expanded="false">
+                    Reference
+                </a>
+                <div class="collapse" id="reference-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../reference/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../commands/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Commands
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../schemas/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Schemas
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../integrations/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Integrations
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../features/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Source Modules
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../functions/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Function Index
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../tests/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Tests
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href=".."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#release-evidence-collapse" aria-expanded="false">
+                    Release Evidence
+                </a>
+                <div class="collapse" id="release-evidence-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../release-evidence/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../verification/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Verification
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../source-coverage/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Source Coverage
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../changelog/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Changelog
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../about/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            About
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <!-- endblock -->
+    </div>
+</nav>
+        <!-- endblock -->
+
+        <nav class="divider drac-bg-purple-cyan"></nav>
+
+        <div class="content">
+            <!-- block header -->
+                <header>
+    <nav class="navbar navbar-expand-xl drac-bg-purple">
+        <div class="container-fluid">
+            
+            <button class="navbar-toggler w-100 text-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMenu"
+                aria-controls="navbarsMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse flex-column ml-auto" id="navbarsMenu">
+                <ul class="navbar-nav text-md-center">
+
+                    <!-- block preview -->
+                    <li class="nav-item">
+                            
+        <div class="container">
+            <div class="row row-preview">
+                <div class="col">
+                    <a href="../getting-started/"
+                        class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover">
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="../project-examples/"
+                        class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover" style="padding-left: 3%;">
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block search -->
+                    <li class="nav-item"><div role="search" class="search-box">
+	<form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+		<input type="text" name="q" class="drac-input drac-input-search drac-input-white drac-text-white drac-bg-black-secondary"
+		placeholder="Search docs" title="Type search term here" />
+	</form>
+</div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block source -->
+                    <li class="nav-item">
+                        
+                    </li>
+                    <!--  endblock -->
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+</header>
+            <!-- endblock -->
+
+            <!-- block content -->
+                <section class="p-md-5 section-content">
+    <article>
+        <p><p><a id="workflow-1"></a>
+<a id="workflow-2"></a>
+<a id="workflow-3"></a>
+<a id="workflow-4"></a>
+<a id="workflow-5"></a>
+<a id="workflow-6"></a>
+<a id="workflow-7"></a>
+<a id="workflow-8"></a></p>
+<p>Section: Example workflows</p>
+<h1 id="practical-paths-through-the-toolkit">Practical paths through the toolkit</h1>
+<p>Each workflow is intentionally small. Open the linked command reference when you need every available option.</p>
+<p>Metadata: Workflow 1</p>
+<h2 class="doc-workflow-step" id="inspect-a-pe-image">Inspect a PE image</h2>
+<p>Understand the target before making reconstruction claims.</p>
+<pre><code>x86decomp inspect-pe ./target.exe
+x86decomp image-profile ./reference.exe ./output.json
+x86decomp metadata-scan ./target.exe
+</code></pre>
+<p>Metadata: Workflow 2</p>
+<h2 class="doc-workflow-step" id="create-and-verify-a-project">Create and verify a project</h2>
+<p>Create durable project state and confirm that required files and contracts are intact.</p>
+<pre><code>x86decomp init ./target.exe ./work
+x86decomp verify-project ./work
+x86decomp project check
+</code></pre>
+<p>Metadata: Workflow 3</p>
+<h2 class="doc-workflow-step" id="disassemble-and-compare-a-function">Disassemble and compare a function</h2>
+<p>Decode a bounded range and compare linked output with a candidate object.</p>
+<pre><code>x86decomp disassemble ./function.bin
+x86decomp diff-function ./target.exe 0x1000 1 ./candidate.obj example
+x86decomp diff-bytes ./target.exe ./candidate.bin
+</code></pre>
+<p>Metadata: Workflow 4</p>
+<h2 class="doc-workflow-step" id="materialize-conservative-assembly">Materialize conservative assembly</h2>
+<p>Keep exact byte-form output as the default, then opt into annotations when useful.</p>
+<pre><code>x86decomp asm materialize ./input.json ./generated.asm ./generated.obj ./resolved.bin --symbol example --rva 0x1000 --symbol-map ./target.map
+x86decomp asm annotate ./candidate.c ./output.json --symbol example --rva 0x1000
+x86decomp asm verify-roundtrip ./candidate.c ./original.bin ./generated.obj ./resolved.bin --symbol example --rva 0x1000 --symbol-map ./target.map
+</code></pre>
+<p>Metadata: Workflow 5</p>
+<h2 class="doc-workflow-step" id="run-an-evidence-led-hypothesis">Run an evidence-led hypothesis</h2>
+<p>Record a proposed explanation, attach evidence, and gate its transition.</p>
+<pre><code>x86decomp hypothesis create recovered-parser-loop function pe-rva:00001000 --origin analyst
+x86decomp hypothesis evidence hypothesis-001 example-001 --stance support --weight 1.0 --kind analysis --group independent-source
+x86decomp hypothesis gate hypothesis-001
+</code></pre>
+<p>Metadata: Workflow 6</p>
+<h2 class="doc-workflow-step" id="build-and-evaluate-a-candidate">Build and evaluate a candidate</h2>
+<p>Create a candidate, add source, compile it, and compare the result.</p>
+<pre><code>x86decomp candidate create candidate-main
+x86decomp candidate add-file ./candidate.bin ./candidate.c src/candidate.c
+x86decomp candidate evaluate ./candidate.bin exact-bytes active
+</code></pre>
+<p>Metadata: Workflow 7</p>
+<h2 class="doc-workflow-step" id="run-the-exact-source-verification">Run the exact source verification</h2>
+<p>Reconcile the entire current test inventory and source manifests.</p>
+<pre><code>make verify-hashes
+make verify
+make test-suite
+</code></pre>
+<p>Metadata: Workflow 8</p>
+<h2 class="doc-workflow-step" id="run-the-adapter-aware-harness">Run the adapter-aware harness</h2>
+<p>Detect optional tools, run available checks, and record unavailable tools as blocked.</p>
+<pre><code>x86decomp-test init-config --toolkit-root . --output-root ./test-results --install-root ./.x86decomp-test-tools --config ./x86decomp-test.json
+x86decomp-test run --config ./x86decomp-test.json --verbose
+</code></pre>
+<blockquote>
+<p><strong>Source-verified project examples.</strong> See <a href="../project-examples/">Project examples</a> for matching, functional, both-mode hybrid, and major supporting workflows grounded in the 0.7.4 source.</p>
+<p><strong>Audit status.</strong> Every x86decomp and x86decomp-test command on this page parses with the real 0.7.4 parser. Runtime success still depends on the declared input files, tools, and authorization boundary.</p>
+</blockquote></p>
+    </article>
+</section>
+            <!-- endblock -->
+
+            <!-- block footer -->
+                <footer>
+    <div class="d-flex flex-sm-row justify-content-between py-2 border-top drac-text-black drac-bg-cyan-green">
+        <a href="https://github.com/dracula/mkdocs" target="_blank" style="padding-left: 1%;"
+            class="footer-text drac-anchor drac-text-black drac-text-purple--hover">
+            Made with Dracula Theme for MkDocs
+        </a>
+    </div>
+</footer>
+            <!-- endblock -->
+        </div>
+
+    </main>
+
+        <script>var base_url = '..';</script>
+        <script src="../assets/js/jquery-3.3.1.slim.min.js"></script>
+        <script src="../assets/js/bootstrap.bundle.min.js"></script>
+        <script src="../assets/js/mkdocs.js"></script>
+			<script src="../search/main.js" defer></script>
+
+</body>
+
+</html>

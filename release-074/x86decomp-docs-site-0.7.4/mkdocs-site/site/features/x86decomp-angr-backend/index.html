@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+        <title>x86decomp.angr_backend - x86decomp 0.7.4 Docs</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        
+        
+        
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="../../assets/css/darcula-highlight.min.css">
+
+        <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../assets/css/dracula-ui.min.css">
+        <link rel="stylesheet" href="../../assets/css/mkdocs.min.css">
+            <link href="../../assets/x86decomp-dracula-overrides.css" rel="stylesheet">
+
+        
+            <link  rel="icon" type="image/x-icon" href="../../assets/img/favicon.ico">
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+                <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+
+<body class="drac-bg-black-secondary drac-text-grey-ternary drac-text drac-scrollbar-purple">
+
+    <main class="d-flex">
+
+        <!-- block sidebar -->
+            <nav id="sidebar" class="sidebar drac-bg-black">
+    <div class="custom-menu">
+        <button type="button" id="sidebarCollapse" class="btn btn-primary">
+            <i class="fa fa-bars"></i>
+            <span class="sr-only">Menu</span>
+        </button>
+    </div>
+
+    <div class="p-4">
+        
+
+        <div class="drac-text-center">
+            
+                <span class="drac-text drac-line-height drac-text-white">x86decomp 0.7.4 Docs</span>
+            
+        </div>
+
+        <div class="drac-box flex-column">
+            <ul class="dot-ul">
+                <li><div class="dot-li drac-bg-cyan"></div></li>
+                <li><div class="dot-li drac-bg-green"></div></li>
+                <li><div class="dot-li drac-bg-orange"></div></li>
+                <li><div class="dot-li drac-bg-pink"></div></li>
+                <li><div class="dot-li drac-bg-purple"></div></li>
+                <li><div class="dot-li drac-bg-red"></div></li>
+                <li><div class="dot-li drac-bg-yellow"></div></li>
+            </ul>
+        </div>
+
+        <hr class="drac-divider" />
+
+        <!-- block menu -->
+        <ul class="mb-5 drac-list drac-list-none">
+            
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Home
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../../getting-started/"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Getting Started
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../../workflows/"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Workflows
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../../project-examples/"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Project Examples
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#reference-collapse" aria-expanded="false">
+                    Reference
+                </a>
+                <div class="collapse" id="reference-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../reference/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../commands/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Commands
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../schemas/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Schemas
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../integrations/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Integrations
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Source Modules
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../functions/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Function Index
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../tests/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Tests
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#release-evidence-collapse" aria-expanded="false">
+                    Release Evidence
+                </a>
+                <div class="collapse" id="release-evidence-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../release-evidence/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../verification/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Verification
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../source-coverage/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Source Coverage
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../changelog/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Changelog
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../about/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            About
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <!-- endblock -->
+    </div>
+</nav>
+        <!-- endblock -->
+
+        <nav class="divider drac-bg-purple-cyan"></nav>
+
+        <div class="content">
+            <!-- block header -->
+                <header>
+    <nav class="navbar navbar-expand-xl drac-bg-purple">
+        <div class="container-fluid">
+            
+            <button class="navbar-toggler w-100 text-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMenu"
+                aria-controls="navbarsMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse flex-column ml-auto" id="navbarsMenu">
+                <ul class="navbar-nav text-md-center">
+
+                    <!-- block preview -->
+                    <li class="nav-item">
+                            
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block search -->
+                    <li class="nav-item"><div role="search" class="search-box">
+	<form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+		<input type="text" name="q" class="drac-input drac-input-search drac-input-white drac-text-white drac-bg-black-secondary"
+		placeholder="Search docs" title="Type search term here" />
+	</form>
+</div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block source -->
+                    <li class="nav-item">
+                        
+                    </li>
+                    <!--  endblock -->
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+</header>
+            <!-- endblock -->
+
+            <!-- block content -->
+                <section class="p-md-5 section-content">
+    <article>
+        <p><p><a id="function-load-angr"></a>
+<a id="function-arch-name"></a>
+<a id="function-summaries"></a>
+<a id="function-counterexample"></a>
+<a id="function-angr-bounded-compare"></a>
+<a id="function-angr-bounded-compare-files"></a>
+<a id="function-load-memory-harness"></a>
+<a id="function-memory-summaries"></a>
+<a id="function-memory-counterexample"></a>
+<a id="function-angr-memory-alias-compare"></a>
+<a id="function-angr-memory-alias-compare-files"></a></p>
+<p>Section: Source-derived feature and function reference</p>
+<h1 id="x86decompangr_backend">x86decomp.angr_backend</h1>
+<p>Optional angr comparative symbolic execution backend for bounded code blobs.</p>
+<p>Metadata: core · current · 11 functions/methods</p>
+<p><strong>Source:</strong> <code>src/x86decomp/angr_backend.py</code></p>
+<blockquote>
+<p><strong>Truth basis.</strong> Module and symbol names, signatures, line numbers, docstrings, and SHA-256 are read directly from the sealed source. When source docstrings are absent, this page says so instead of inferring behavior. Source SHA-256: <code>b3f95fbeec7f4d726ba52f50df9d4d7986cfad9ed5c789ab0a3932c0dea8b7a3</code>.</p>
+</blockquote>
+<h2 id="functions-and-methods">Functions and methods</h2>
+<p>Metadata: internal · line 18</p>
+<h3 id="_load_angr">_load_angr</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def _load_angr() -&gt; tuple[Any, Any]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.angr_backend:_load_angr</code></p>
+<p>Metadata: internal · line 27</p>
+<h3 id="_arch_name">_arch_name</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def _arch_name(architecture: str) -&gt; str
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.angr_backend:_arch_name</code></p>
+<p>Metadata: internal · line 35</p>
+<h3 id="_summaries">_summaries</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def _summaries(code: bytes, *, architecture: str, input_registers: tuple[str, ...], stack_argument_words: int, output_registers: tuple[str, ...], max_steps: int, max_paths: int) -&gt; tuple[list[dict[str, Any]], dict[str, Any]]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.angr_backend:_summaries</code></p>
+<p>Metadata: internal · line 110</p>
+<h3 id="_counterexample">_counterexample</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def _counterexample(left: list[dict[str, Any]], right: list[dict[str, Any]], output_registers: tuple[str, ...]) -&gt; dict[str, int] | None
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.angr_backend:_counterexample</code></p>
+<p>Metadata: public · line 128</p>
+<h3 id="angr_bounded_compare">angr_bounded_compare</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def angr_bounded_compare(target: bytes, candidate: bytes, *, architecture: str = 'x86', input_registers: tuple[str, ...] = (), stack_argument_words: int = 0, output_registers: tuple[str, ...] | None = None, max_steps: int = 1000, max_paths: int = 64, report_path: Path | None = None) -&gt; dict[str, Any]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.angr_backend:angr_bounded_compare</code></p>
+<p>Metadata: public · line 173</p>
+<h3 id="angr_bounded_compare_files">angr_bounded_compare_files</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def angr_bounded_compare_files(target: Path, candidate: Path, **kwargs: Any) -&gt; dict[str, Any]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.angr_backend:angr_bounded_compare_files</code></p>
+<p>Metadata: internal · line 181</p>
+<h3 id="_load_memory_harness">_load_memory_harness</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def _load_memory_harness(path: Path) -&gt; dict[str, Any]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.angr_backend:_load_memory_harness</code></p>
+<p>Metadata: internal · line 208</p>
+<h3 id="_memory_summaries">_memory_summaries</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def _memory_summaries(code: bytes, *, harness: dict[str, Any], side: str) -&gt; tuple[list[dict[str, Any]], dict[str, Any]]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.angr_backend:_memory_summaries</code></p>
+<p>Metadata: internal · line 375</p>
+<h3 id="_memory_counterexample">_memory_counterexample</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def _memory_counterexample(left: list[dict[str, Any]], right: list[dict[str, Any]]) -&gt; dict[str, int] | None
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.angr_backend:_memory_counterexample</code></p>
+<p>Metadata: public · line 404</p>
+<h3 id="angr_memory_alias_compare">angr_memory_alias_compare</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def angr_memory_alias_compare(target: bytes, candidate: bytes, harness: dict[str, Any], *, report_path: Path | None = None) -&gt; dict[str, Any]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.angr_backend:angr_memory_alias_compare</code></p>
+<p>Metadata: public · line 442</p>
+<h3 id="angr_memory_alias_compare_files">angr_memory_alias_compare_files</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def angr_memory_alias_compare_files(target_path: Path, candidate_path: Path, harness_path: Path, *, report_path: Path | None = None) -&gt; dict[str, Any]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.angr_backend:angr_memory_alias_compare_files</code></p></p>
+    </article>
+</section>
+            <!-- endblock -->
+
+            <!-- block footer -->
+                <footer>
+    <div class="d-flex flex-sm-row justify-content-between py-2 border-top drac-text-black drac-bg-cyan-green">
+        <a href="https://github.com/dracula/mkdocs" target="_blank" style="padding-left: 1%;"
+            class="footer-text drac-anchor drac-text-black drac-text-purple--hover">
+            Made with Dracula Theme for MkDocs
+        </a>
+    </div>
+</footer>
+            <!-- endblock -->
+        </div>
+
+    </main>
+
+        <script>var base_url = '../..';</script>
+        <script src="../../assets/js/jquery-3.3.1.slim.min.js"></script>
+        <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+        <script src="../../assets/js/mkdocs.js"></script>
+			<script src="../../search/main.js" defer></script>
+
+</body>
+
+</html>

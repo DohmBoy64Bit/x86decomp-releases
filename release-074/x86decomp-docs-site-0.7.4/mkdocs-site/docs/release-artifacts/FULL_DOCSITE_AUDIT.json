@@ -1,0 +1,384 @@
+{
+  "baseline": {
+    "docs_archive": "x86decomp-docs-site-0.7.4(1).zip",
+    "docs_archive_sha256": "ccf250ecb431795bb5cc4a0f37560bc362db3dcb91bff222e4c42c869bfb9145",
+    "release_archive": "x86decomp-toolkit-0.7.4-release-bundle(3).zip",
+    "release_archive_sha256": "7fae1658b0eccb980d54a3c80a5f91a6cf09f8eb4e2eb4ebcae3bd477f6d36e8",
+    "source_release": "0.7.4"
+  },
+  "checks": [
+    {
+      "details": {
+        "actual": "7fae1658b0eccb980d54a3c80a5f91a6cf09f8eb4e2eb4ebcae3bd477f6d36e8",
+        "expected": "7fae1658b0eccb980d54a3c80a5f91a6cf09f8eb4e2eb4ebcae3bd477f6d36e8"
+      },
+      "name": "current release archive identity",
+      "status": "pass"
+    },
+    {
+      "details": {
+        "sha256": "ccf250ecb431795bb5cc4a0f37560bc362db3dcb91bff222e4c42c869bfb9145"
+      },
+      "name": "current docs archive readable",
+      "status": "pass"
+    },
+    {
+      "details": {
+        "release": "0.7.4",
+        "status": "sealed"
+      },
+      "name": "release status and version",
+      "status": "pass"
+    },
+    {
+      "details": {
+        "entries": 2703,
+        "failures": []
+      },
+      "name": "release SHA256SUMS",
+      "status": "pass"
+    },
+    {
+      "details": {
+        "entries": 411,
+        "failures": []
+      },
+      "name": "root source manifest",
+      "status": "pass"
+    },
+    {
+      "details": {
+        "entries": 60,
+        "failures": []
+      },
+      "name": "test-suite source manifest",
+      "status": "pass"
+    },
+    {
+      "details": {
+        "actual": {
+          "adapters": 31,
+          "canonical_routes": 173,
+          "capability_groups": 33,
+          "ghidra_scripts": 3,
+          "public_symbols": 682,
+          "root_commands": 140,
+          "schemas": 93,
+          "tests": 215,
+          "toolkit_functions_and_methods": 843,
+          "toolkit_modules": 108
+        },
+        "expected": {
+          "adapters": 31,
+          "canonical_routes": 173,
+          "capability_groups": 33,
+          "ghidra_scripts": 3,
+          "public_symbols": 682,
+          "root_commands": 140,
+          "schemas": 93,
+          "tests": 215,
+          "toolkit_functions_and_methods": 843,
+          "toolkit_modules": 108
+        }
+      },
+      "name": "source/parser inventory contract",
+      "status": "pass"
+    },
+    {
+      "details": {
+        "actual": {
+          "adapters": 31,
+          "canonical_routes": 173,
+          "capability_groups": 33,
+          "ghidra_scripts": 3,
+          "public_symbols": 682,
+          "root_commands": 140,
+          "schemas": 93,
+          "tests": 215,
+          "toolkit_functions_and_methods": 843,
+          "toolkit_modules": 108
+        },
+        "release_evidence": {
+          "adapters": 31,
+          "canonical_routes": 173,
+          "capability_groups": 33,
+          "ghidra_scripts": 3,
+          "public_symbols": 682,
+          "root_commands": 140,
+          "schemas": 93,
+          "tests": 215,
+          "toolkit_functions_and_methods": 843,
+          "toolkit_modules": 108
+        }
+      },
+      "name": "source inventory matches sealed release evidence",
+      "status": "pass"
+    },
+    {
+      "details": {
+        "actual": 354,
+        "expected": 354
+      },
+      "name": "live HTML page count",
+      "status": "pass"
+    },
+    {
+      "details": {
+        "backups": []
+      },
+      "name": "no embedded backup trees",
+      "status": "pass"
+    },
+    {
+      "details": {
+        "failures": [],
+        "references": 8954
+      },
+      "name": "local links, fragments, scripts, and styles",
+      "status": "pass"
+    },
+    {
+      "details": {
+        "references": []
+      },
+      "name": "no external runtime assets",
+      "status": "pass"
+    },
+    {
+      "details": {
+        "failures": [],
+        "pages": 354
+      },
+      "name": "consistent global navigation",
+      "status": "pass"
+    },
+    {
+      "details": {
+        "failures": []
+      },
+      "name": "no placeholder or unfinished-content markers",
+      "status": "pass"
+    },
+    {
+      "details": {
+        "failures": [],
+        "sections": 285,
+        "source_hash_checks": 285,
+        "usage_matches": 285
+      },
+      "name": "command reference exactness",
+      "status": "pass"
+    },
+    {
+      "details": {
+        "examples": 622,
+        "failures": [],
+        "skipped_usage_blocks": 285
+      },
+      "name": "all documented executable examples parse",
+      "status": "pass"
+    },
+    {
+      "details": {
+        "exact_symbol_checks": 983,
+        "failures": [],
+        "functions_and_methods": 983,
+        "modules": 137
+      },
+      "name": "module and function reference exactness",
+      "status": "pass"
+    },
+    {
+      "details": {
+        "failures": [],
+        "tests": 215
+      },
+      "name": "test reference exactness",
+      "status": "pass"
+    },
+    {
+      "details": {
+        "failures": [],
+        "meta_validated": 93,
+        "schemas": 93
+      },
+      "name": "schema reference and meta-schema validation",
+      "status": "pass"
+    },
+    {
+      "details": {
+        "adapters": 31,
+        "failures": []
+      },
+      "name": "adapter catalog exactness",
+      "status": "pass"
+    },
+    {
+      "details": {
+        "failures": [],
+        "files": 411
+      },
+      "name": "complete manifest-backed source coverage",
+      "status": "pass"
+    },
+    {
+      "details": {
+        "failures": [],
+        "scripts": 3
+      },
+      "name": "Ghidra script coverage",
+      "status": "pass"
+    },
+    {
+      "details": {
+        "anchors": 95,
+        "failures": [],
+        "pages": 11
+      },
+      "name": "project examples exact-source ledger",
+      "status": "pass"
+    },
+    {
+      "details": {
+        "entries": 2183,
+        "failures": []
+      },
+      "name": "search index completeness",
+      "status": "pass"
+    },
+    {
+      "details": {
+        "counts": {
+          "adapters": 31,
+          "all_command_paths": 285,
+          "canonical_routes": 173,
+          "features": 137,
+          "functions": 983,
+          "ghidra_scripts": 3,
+          "root_commands": 140,
+          "schemas": 93,
+          "search_entries": 2183,
+          "source_manifest_files": 411,
+          "test_suite_commands": 5,
+          "tests": 215,
+          "toolkit_functions": 843,
+          "toolkit_runnable_paths": 280,
+          "verification_functions": 140
+        },
+        "failures": []
+      },
+      "name": "coverage manifest exactness",
+      "status": "pass"
+    },
+    {
+      "details": {
+        "failures": [],
+        "files": 2
+      },
+      "name": "JavaScript syntax",
+      "status": "pass"
+    },
+    {
+      "details": {
+        "missing": [],
+        "values": [
+          "215/215",
+          "843/843",
+          "189",
+          "7",
+          "79.03%",
+          "51.70%"
+        ]
+      },
+      "name": "rendered release evidence matches sealed report",
+      "status": "pass"
+    },
+    {
+      "details": {
+        "sha256": "449fd66ae2a59087535c7ed16820006be65d0ea1d2c20e241149d864a13c8b7f",
+        "source": "CHANGELOG.md"
+      },
+      "name": "changelog source provenance",
+      "status": "pass"
+    }
+  ],
+  "counts": {
+    "adapters": 31,
+    "checks": 28,
+    "command_sections": 285,
+    "failed_checks": 0,
+    "functions_and_methods": 983,
+    "html_pages": 354,
+    "modules": 137,
+    "parsed_examples": 622,
+    "passed_checks": 28,
+    "project_example_source_anchors": 95,
+    "schemas": 93,
+    "search_entries": 2183,
+    "source_manifest_files": 411,
+    "tests": 215
+  },
+  "errors": [],
+  "generated_at": "2026-07-02T00:33:30.309667+00:00",
+  "sealed_release_evidence": {
+    "comprehensive_gate": {
+      "blocked": 7,
+      "blocked_adapters": [
+        "container-runtime",
+        "dynamorio",
+        "ghidra",
+        "llvm-readobj",
+        "msvc",
+        "objdiff",
+        "pip-audit"
+      ],
+      "error": 0,
+      "fail": 0,
+      "pass": 189
+    },
+    "coverage": {
+      "branch_floor": 50.0,
+      "branch_percent": 51.7029702970297,
+      "statement_floor": 70.0,
+      "statement_percent": 79.0310650887574
+    },
+    "exact_test_gate": {
+      "errors": 0,
+      "failed": 0,
+      "partitions": 79,
+      "passed": 215,
+      "skipped": 0,
+      "tests": 215
+    },
+    "inventory": {
+      "canonical_routes": 173,
+      "capability_groups": 33,
+      "executed_functions_and_methods": 843,
+      "functions_and_methods": 843,
+      "ghidra_scripts": 3,
+      "modules": 108,
+      "public_symbols": 682,
+      "root_commands": 140,
+      "schemas": 93
+    },
+    "note": "These test and coverage results are authenticated release evidence. The documentation audit does not relabel them as a fresh full test-suite run.",
+    "source_hash_manifests": {
+      "root": {
+        "checked": 411,
+        "expected": 411,
+        "failures": [],
+        "valid": true
+      },
+      "test_suite": {
+        "checked": 60,
+        "expected": 60,
+        "failures": [],
+        "valid": true
+      },
+      "valid": true
+    }
+  },
+  "status": "pass",
+  "truth_boundary": "The audit proves structural completeness and exact correspondence for enumerated parser, AST, schema, adapter, manifest, source-ledger, link, search, and placeholder contracts. It does not prove target-specific outcomes or all-input semantic equivalence, and it does not reinterpret sealed release test evidence as a newly executed complete test run.",
+  "warnings": []
+}

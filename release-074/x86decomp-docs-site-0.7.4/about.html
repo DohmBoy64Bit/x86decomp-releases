@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Source identity and documentation policy">
+<title>About · x86decomp 0.7.4 Docs</title>
+<link rel="stylesheet" href="assets/styles.css">
+<script>window.X86DOCS_ROOT="";</script>
+<script defer src="assets/search-index.js"></script>
+<script defer src="assets/app.js"></script>
+</head>
+<body data-root="">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="icon-button mobile-menu" data-menu-toggle aria-label="Open navigation">☰</button>
+  <a class="brand" href="index.html"><span class="brand-mark">x86</span><span>decomp docs</span><small>0.7.4</small></a>
+  <button class="search-trigger" data-search-trigger aria-label="Search documentation"><span>Search docs</span><kbd>Ctrl K</kbd></button>
+  <button class="icon-button" data-theme-toggle aria-label="Toggle color theme">◐</button>
+</header>
+<div class="layout">
+  <aside class="sidebar" data-sidebar>
+    <nav><a href="index.html">Home</a><a href="getting-started.html">Getting started</a><a href="workflows.html">Workflows</a><a href="project-examples.html">Project examples</a><a href="commands/index.html">Commands</a><a href="features/index.html">Features &amp; functions</a><a href="tests/index.html">Tests</a><a href="schemas.html">Schemas</a><a href="integrations.html">Integrations</a><a href="source-coverage.html">Source coverage</a><a href="verification.html">Verification</a><a href="changelog.html">Changelog</a><a href="about.html">About</a></nav>
+    <div class="sidebar-note"><strong>Current release only</strong><span>Source-derived documentation for the sealed 0.7.4 release.</span></div>
+  </aside>
+  <main id="main" class="content">
+<div class="breadcrumbs"><a href="index.html">Docs</a><span>/</span><span>About</span></div>
+<div class="eyebrow">About</div><h1>About x86decomp and this site</h1>
+<p class="lead">This site documents the sealed x86decomp-toolkit 0.7.4 release supplied in the current release bundle.</p>
+<h2>Source of truth</h2><p>Release bundle SHA-256: <code>7fae1658b0eccb980d54a3c80a5f91a6cf09f8eb4e2eb4ebcae3bd477f6d36e8</code>.</p><p>Deterministic source ZIP SHA-256: <code>f6d5f97454b405891dc89ad9329372e2005b91ea9ba0d8116df987023f834d8e</code>.</p>
+<h2>Documentation policy</h2><ul class="checklist"><li>Parser metadata is read from the actual command trees.</li><li>Module, signature, line, and test inventories are read from the source AST.</li><li>Function and test behavior is not inferred when source docstrings are absent.</li><li>All schema facts are read from the JSON files.</li><li>All packaged source paths are reconciled against <code>MANIFEST.sha256</code>.</li><li>Unavailable integrations remain BLOCKED, never converted to pass or skip.</li><li>Unfinished-content and insertion markers are not permitted anywhere in the published site.</li></ul>
+<h2>Authorization and safety</h2><p>Use the toolkit only on binaries, systems, and environments you are permitted to analyze. Review generated changes and isolate native execution appropriately.</p>
+    <footer class="page-footer"><span>x86decomp-toolkit 0.7.4</span><a href="about.html">About this documentation</a></footer>
+  </main>
+</div>
+<div class="search-dialog" data-search-dialog hidden>
+  <div class="search-panel" role="dialog" aria-modal="true" aria-label="Search documentation">
+    <div class="search-box"><input data-search-input type="search" placeholder="Search commands, functions, tests, schemas, and source" autocomplete="off"><button data-search-close aria-label="Close search">×</button></div>
+    <div class="search-hint">Type at least two characters. Press Escape to close.</div>
+    <div class="search-results" data-search-results></div>
+  </div>
+</div>
+</body>
+</html>

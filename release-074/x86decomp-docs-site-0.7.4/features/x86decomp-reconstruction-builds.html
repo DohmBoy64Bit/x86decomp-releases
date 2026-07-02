@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="No module docstring is declared in the v0.7.4 source.">
+<title>x86decomp.reconstruction.builds · x86decomp 0.7.4 Docs</title>
+<link rel="stylesheet" href="../assets/styles.css">
+<script>window.X86DOCS_ROOT="../";</script>
+<script defer src="../assets/search-index.js"></script>
+<script defer src="../assets/app.js"></script>
+</head>
+<body data-root="../">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="icon-button mobile-menu" data-menu-toggle aria-label="Open navigation">☰</button>
+  <a class="brand" href="../index.html"><span class="brand-mark">x86</span><span>decomp docs</span><small>0.7.4</small></a>
+  <button class="search-trigger" data-search-trigger aria-label="Search documentation"><span>Search docs</span><kbd>Ctrl K</kbd></button>
+  <button class="icon-button" data-theme-toggle aria-label="Toggle color theme">◐</button>
+</header>
+<div class="layout">
+  <aside class="sidebar" data-sidebar>
+    <nav><a href="../index.html">Home</a><a href="../getting-started.html">Getting started</a><a href="../workflows.html">Workflows</a><a href="../project-examples.html">Project examples</a><a href="../commands/index.html">Commands</a><a href="../features/index.html">Features &amp; functions</a><a href="../tests/index.html">Tests</a><a href="../schemas.html">Schemas</a><a href="../integrations.html">Integrations</a><a href="../source-coverage.html">Source coverage</a><a href="../verification.html">Verification</a><a href="../changelog.html">Changelog</a><a href="../about.html">About</a></nav>
+    <div class="sidebar-note"><strong>Current release only</strong><span>Source-derived documentation for the sealed 0.7.4 release.</span></div>
+  </aside>
+  <main id="main" class="content">
+<div class="breadcrumbs"><a href="../index.html">Docs</a><span>/</span><span>x86decomp.reconstruction.builds</span></div>
+<div class="eyebrow">Source-derived feature and function reference</div><h1>x86decomp.reconstruction.builds</h1>
+<p class="lead">No module docstring is declared in the v0.7.4 source.</p>
+<div class="meta-row"><span class="tag tag-current">reconstruction</span><span class="tag">current</span><span class="tag">11 functions/methods</span></div>
+<p><strong>Source:</strong> <code>src/x86decomp/reconstruction/builds.py</code></p>
+<div class="callout"><strong>Truth basis.</strong> Module and symbol names, signatures, line numbers, docstrings, and SHA-256 are read directly from the sealed source. When source docstrings are absent, this page says so instead of inferring behavior. Source SHA-256: <code>b31ec8291d840a45ac78f86bc5ece98f8eca736f2c04eb02d1faba3754826254</code>.</div>
+<h2>Functions and methods</h2><article class="function-entry" id="function-buildmanager-init">
+<div class="meta-row"><span class="tag">internal</span><span class="tag">line 11</span></div>
+<h3>BuildManager.__init__</h3><p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code class="language-python">def __init__(self, store: ReconstructionStore)</code></pre>
+<p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.reconstruction.builds:BuildManager.__init__</code></p>
+</article><article class="function-entry" id="function-buildmanager-create">
+<div class="meta-row"><span class="tag">public</span><span class="tag">line 12</span></div>
+<h3>BuildManager.create</h3><p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code class="language-python">def create(self, name: str, *, mode: str, generator: str = &#x27;cmake&#x27;, output_root: str = &#x27;build&#x27;, metadata: dict[str, Any] | None = None, actor: str = &#x27;analyst&#x27;) -&gt; dict[str, Any]</code></pre>
+<p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.reconstruction.builds:BuildManager.create</code></p>
+</article><article class="function-entry" id="function-buildmanager-add-target">
+<div class="meta-row"><span class="tag">public</span><span class="tag">line 20</span></div>
+<h3>BuildManager.add_target</h3><p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code class="language-python">def add_target(self, build_id: str, name: str, *, kind: str = &#x27;executable&#x27;, output_name: str | None = None, sources: list[str] | None = None, dependencies: list[str] | None = None, actor: str = &#x27;analyst&#x27;) -&gt; dict[str, Any]</code></pre>
+<p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.reconstruction.builds:BuildManager.add_target</code></p>
+</article><article class="function-entry" id="function-buildmanager-add-variant">
+<div class="meta-row"><span class="tag">public</span><span class="tag">line 28</span></div>
+<h3>BuildManager.add_variant</h3><p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code class="language-python">def add_variant(self, target_id: str, name: str, *, compiler: str, linker: str, compile_flags: list[str] | None = None, link_flags: list[str] | None = None, environment: dict[str, str] | None = None, actor: str = &#x27;analyst&#x27;) -&gt; dict[str, Any]</code></pre>
+<p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.reconstruction.builds:BuildManager.add_variant</code></p>
+</article><article class="function-entry" id="function-buildmanager-show">
+<div class="meta-row"><span class="tag">public</span><span class="tag">line 35</span></div>
+<h3>BuildManager.show</h3><p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code class="language-python">def show(self, build_id: str) -&gt; dict[str, Any]</code></pre>
+<p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.reconstruction.builds:BuildManager.show</code></p>
+</article><article class="function-entry" id="function-buildmanager-show-target">
+<div class="meta-row"><span class="tag">public</span><span class="tag">line 41</span></div>
+<h3>BuildManager.show_target</h3><p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code class="language-python">def show_target(self, target_id: str) -&gt; dict[str, Any]</code></pre>
+<p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.reconstruction.builds:BuildManager.show_target</code></p>
+</article><article class="function-entry" id="function-buildmanager-show-variant">
+<div class="meta-row"><span class="tag">public</span><span class="tag">line 47</span></div>
+<h3>BuildManager.show_variant</h3><p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code class="language-python">def show_variant(self, variant_id: str) -&gt; dict[str, Any]</code></pre>
+<p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.reconstruction.builds:BuildManager.show_variant</code></p>
+</article><article class="function-entry" id="function-buildmanager-generate">
+<div class="meta-row"><span class="tag">public</span><span class="tag">line 52</span></div>
+<h3>BuildManager.generate</h3><p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code class="language-python">def generate(self, build_id: str, *, output_root: str | Path | None = None) -&gt; dict[str, Any]</code></pre>
+<p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.reconstruction.builds:BuildManager.generate</code></p>
+</article><article class="function-entry" id="function-buildmanager-validate">
+<div class="meta-row"><span class="tag">public</span><span class="tag">line 71</span></div>
+<h3>BuildManager.validate</h3><p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code class="language-python">def validate(self, target_id: str, variant_id: str | None = None, *, actor: str = &#x27;validator&#x27;) -&gt; dict[str, Any]</code></pre>
+<p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.reconstruction.builds:BuildManager.validate</code></p>
+</article><article class="function-entry" id="function-buildmanager-compare-modes">
+<div class="meta-row"><span class="tag">public</span><span class="tag">line 81</span></div>
+<h3>BuildManager.compare_modes</h3><p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code class="language-python">def compare_modes(self, historical_build_id: str, portable_build_id: str) -&gt; dict[str, Any]</code></pre>
+<p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.reconstruction.builds:BuildManager.compare_modes</code></p>
+</article><article class="function-entry" id="function-buildmanager-matrix">
+<div class="meta-row"><span class="tag">public</span><span class="tag">line 85</span></div>
+<h3>BuildManager.matrix</h3><p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code class="language-python">def matrix(self) -&gt; dict[str, Any]</code></pre>
+<p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.reconstruction.builds:BuildManager.matrix</code></p>
+</article>
+    <footer class="page-footer"><span>x86decomp-toolkit 0.7.4</span><a href="../about.html">About this documentation</a></footer>
+  </main>
+</div>
+<div class="search-dialog" data-search-dialog hidden>
+  <div class="search-panel" role="dialog" aria-modal="true" aria-label="Search documentation">
+    <div class="search-box"><input data-search-input type="search" placeholder="Search commands, functions, tests, schemas, and source" autocomplete="off"><button data-search-close aria-label="Close search">×</button></div>
+    <div class="search-hint">Type at least two characters. Press Escape to close.</div>
+    <div class="search-results" data-search-results></div>
+  </div>
+</div>
+</body>
+</html>

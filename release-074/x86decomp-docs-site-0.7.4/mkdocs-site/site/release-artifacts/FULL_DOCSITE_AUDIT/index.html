@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+        <title>Full documentation-site audit — x86decomp 0.7.4 - x86decomp 0.7.4 Docs</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        
+        
+        
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="../../assets/css/darcula-highlight.min.css">
+
+        <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../assets/css/dracula-ui.min.css">
+        <link rel="stylesheet" href="../../assets/css/mkdocs.min.css">
+            <link href="../../assets/x86decomp-dracula-overrides.css" rel="stylesheet">
+
+        
+            <link  rel="icon" type="image/x-icon" href="../../assets/img/favicon.ico">
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+                <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+
+<body class="drac-bg-black-secondary drac-text-grey-ternary drac-text drac-scrollbar-purple">
+
+    <main class="d-flex">
+
+        <!-- block sidebar -->
+            <nav id="sidebar" class="sidebar drac-bg-black">
+    <div class="custom-menu">
+        <button type="button" id="sidebarCollapse" class="btn btn-primary">
+            <i class="fa fa-bars"></i>
+            <span class="sr-only">Menu</span>
+        </button>
+    </div>
+
+    <div class="p-4">
+        
+
+        <div class="drac-text-center">
+            
+                <span class="drac-text drac-line-height drac-text-white">x86decomp 0.7.4 Docs</span>
+            
+        </div>
+
+        <div class="drac-box flex-column">
+            <ul class="dot-ul">
+                <li><div class="dot-li drac-bg-cyan"></div></li>
+                <li><div class="dot-li drac-bg-green"></div></li>
+                <li><div class="dot-li drac-bg-orange"></div></li>
+                <li><div class="dot-li drac-bg-pink"></div></li>
+                <li><div class="dot-li drac-bg-purple"></div></li>
+                <li><div class="dot-li drac-bg-red"></div></li>
+                <li><div class="dot-li drac-bg-yellow"></div></li>
+            </ul>
+        </div>
+
+        <hr class="drac-divider" />
+
+        <!-- block menu -->
+        <ul class="mb-5 drac-list drac-list-none">
+            
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Home
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../../getting-started/"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Getting Started
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../../workflows/"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Workflows
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../../project-examples/"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Project Examples
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#reference-collapse" aria-expanded="false">
+                    Reference
+                </a>
+                <div class="collapse" id="reference-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../reference/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../commands/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Commands
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../schemas/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Schemas
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../integrations/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Integrations
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../features/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Source Modules
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../functions/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Function Index
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../tests/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Tests
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#release-evidence-collapse" aria-expanded="false">
+                    Release Evidence
+                </a>
+                <div class="collapse" id="release-evidence-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../release-evidence/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../verification/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Verification
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../source-coverage/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Source Coverage
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../changelog/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Changelog
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../about/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            About
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <!-- endblock -->
+    </div>
+</nav>
+        <!-- endblock -->
+
+        <nav class="divider drac-bg-purple-cyan"></nav>
+
+        <div class="content">
+            <!-- block header -->
+                <header>
+    <nav class="navbar navbar-expand-xl drac-bg-purple">
+        <div class="container-fluid">
+            
+            <button class="navbar-toggler w-100 text-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMenu"
+                aria-controls="navbarsMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse flex-column ml-auto" id="navbarsMenu">
+                <ul class="navbar-nav text-md-center">
+
+                    <!-- block preview -->
+                    <li class="nav-item">
+                            
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block search -->
+                    <li class="nav-item"><div role="search" class="search-box">
+	<form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+		<input type="text" name="q" class="drac-input drac-input-search drac-input-white drac-text-white drac-bg-black-secondary"
+		placeholder="Search docs" title="Type search term here" />
+	</form>
+</div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block source -->
+                    <li class="nav-item">
+                        
+                    </li>
+                    <!--  endblock -->
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+</header>
+            <!-- endblock -->
+
+            <!-- block content -->
+                <section class="p-md-5 section-content">
+    <article>
+        <p><h1 id="full-documentation-site-audit-x86decomp-074">Full documentation-site audit — x86decomp 0.7.4</h1>
+<p><strong>Status:</strong> PASS</p>
+<h2 id="baselines">Baselines</h2>
+<ul>
+<li>Documentation archive: <code>x86decomp-docs-site-0.7.4(1).zip</code> — <code>ccf250ecb431795bb5cc4a0f37560bc362db3dcb91bff222e4c42c869bfb9145</code></li>
+<li>Release archive: <code>x86decomp-toolkit-0.7.4-release-bundle(3).zip</code> — <code>7fae1658b0eccb980d54a3c80a5f91a6cf09f8eb4e2eb4ebcae3bd477f6d36e8</code></li>
+<li>Only these two newly supplied archives were used as the audit baseline.</li>
+</ul>
+<h2 id="coverage">Coverage</h2>
+<ul>
+<li><strong>checks:</strong> 28</li>
+<li><strong>passed checks:</strong> 28</li>
+<li><strong>failed checks:</strong> 0</li>
+<li><strong>html pages:</strong> 354</li>
+<li><strong>command sections:</strong> 285</li>
+<li><strong>parsed examples:</strong> 622</li>
+<li><strong>modules:</strong> 137</li>
+<li><strong>functions and methods:</strong> 983</li>
+<li><strong>tests:</strong> 215</li>
+<li><strong>schemas:</strong> 93</li>
+<li><strong>adapters:</strong> 31</li>
+<li><strong>source manifest files:</strong> 411</li>
+<li><strong>project example source anchors:</strong> 95</li>
+<li><strong>search entries:</strong> 2183</li>
+</ul>
+<h2 id="checks">Checks</h2>
+<ul>
+<li><strong>PASS</strong> — current release archive identity</li>
+<li><strong>PASS</strong> — current docs archive readable</li>
+<li><strong>PASS</strong> — release status and version</li>
+<li><strong>PASS</strong> — release SHA256SUMS (entries=2703)</li>
+<li><strong>PASS</strong> — root source manifest (entries=411)</li>
+<li><strong>PASS</strong> — test-suite source manifest (entries=60)</li>
+<li><strong>PASS</strong> — source/parser inventory contract</li>
+<li><strong>PASS</strong> — source inventory matches sealed release evidence</li>
+<li><strong>PASS</strong> — live HTML page count</li>
+<li><strong>PASS</strong> — no embedded backup trees</li>
+<li><strong>PASS</strong> — local links, fragments, scripts, and styles</li>
+<li><strong>PASS</strong> — no external runtime assets</li>
+<li><strong>PASS</strong> — consistent global navigation (pages=354)</li>
+<li><strong>PASS</strong> — no placeholder or unfinished-content markers</li>
+<li><strong>PASS</strong> — command reference exactness (sections=285)</li>
+<li><strong>PASS</strong> — all documented executable examples parse (examples=622)</li>
+<li><strong>PASS</strong> — module and function reference exactness (modules=137, functions_and_methods=983)</li>
+<li><strong>PASS</strong> — test reference exactness (tests=215)</li>
+<li><strong>PASS</strong> — schema reference and meta-schema validation (schemas=93)</li>
+<li><strong>PASS</strong> — adapter catalog exactness (adapters=31)</li>
+<li><strong>PASS</strong> — complete manifest-backed source coverage (files=411)</li>
+<li><strong>PASS</strong> — Ghidra script coverage (scripts=3)</li>
+<li><strong>PASS</strong> — project examples exact-source ledger (pages=11, anchors=95)</li>
+<li><strong>PASS</strong> — search index completeness (entries=2183)</li>
+<li><strong>PASS</strong> — coverage manifest exactness</li>
+<li><strong>PASS</strong> — JavaScript syntax (files=2)</li>
+<li><strong>PASS</strong> — rendered release evidence matches sealed report</li>
+<li><strong>PASS</strong> — changelog source provenance</li>
+</ul>
+<h2 id="sealed-release-evidence">Sealed release evidence</h2>
+<ul>
+<li>Exact gate: 215/215 passed, with 0 failures, 0 errors, and 0 skips.</li>
+<li>Comprehensive harness: 189 PASS, 0 FAIL, 0 ERROR, 7 BLOCKED.</li>
+<li>Coverage: 79.03% statements and 51.70% branches.</li>
+<li>These are authenticated values from <code>release-verification.json</code>, not a newly claimed full-suite run by this documentation audit.</li>
+</ul>
+<h2 id="truth-boundary">Truth boundary</h2>
+<p>The audit proves structural completeness and exact correspondence for enumerated parser, AST, schema, adapter, manifest, source-ledger, link, search, and placeholder contracts. It does not prove target-specific outcomes or all-input semantic equivalence, and it does not reinterpret sealed release test evidence as a newly executed complete test run.</p></p>
+    </article>
+</section>
+            <!-- endblock -->
+
+            <!-- block footer -->
+                <footer>
+    <div class="d-flex flex-sm-row justify-content-between py-2 border-top drac-text-black drac-bg-cyan-green">
+        <a href="https://github.com/dracula/mkdocs" target="_blank" style="padding-left: 1%;"
+            class="footer-text drac-anchor drac-text-black drac-text-purple--hover">
+            Made with Dracula Theme for MkDocs
+        </a>
+    </div>
+</footer>
+            <!-- endblock -->
+        </div>
+
+    </main>
+
+        <script>var base_url = '../..';</script>
+        <script src="../../assets/js/jquery-3.3.1.slim.min.js"></script>
+        <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+        <script src="../../assets/js/mkdocs.js"></script>
+			<script src="../../search/main.js" defer></script>
+
+</body>
+
+</html>

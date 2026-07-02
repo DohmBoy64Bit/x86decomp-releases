@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Canonical reloc commands implemented by the current capability subsystem.">
+<title>x86decomp reloc · x86decomp 0.7.4 Docs</title>
+<link rel="stylesheet" href="../assets/styles.css">
+<script>window.X86DOCS_ROOT="../";</script>
+<script defer src="../assets/search-index.js"></script>
+<script defer src="../assets/app.js"></script>
+</head>
+<body data-root="../">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="icon-button mobile-menu" data-menu-toggle aria-label="Open navigation">☰</button>
+  <a class="brand" href="../index.html"><span class="brand-mark">x86</span><span>decomp docs</span><small>0.7.4</small></a>
+  <button class="search-trigger" data-search-trigger aria-label="Search documentation"><span>Search docs</span><kbd>Ctrl K</kbd></button>
+  <button class="icon-button" data-theme-toggle aria-label="Toggle color theme">◐</button>
+</header>
+<div class="layout">
+  <aside class="sidebar" data-sidebar>
+    <nav><a href="../index.html">Home</a><a href="../getting-started.html">Getting started</a><a href="../workflows.html">Workflows</a><a href="../project-examples.html">Project examples</a><a href="../commands/index.html">Commands</a><a href="../features/index.html">Features &amp; functions</a><a href="../tests/index.html">Tests</a><a href="../schemas.html">Schemas</a><a href="../integrations.html">Integrations</a><a href="../source-coverage.html">Source coverage</a><a href="../verification.html">Verification</a><a href="../changelog.html">Changelog</a><a href="../about.html">About</a></nav>
+    <div class="sidebar-note"><strong>Current release only</strong><span>Source-derived documentation for the sealed 0.7.4 release.</span></div>
+  </aside>
+  <main id="main" class="content">
+<div class="breadcrumbs"><a href="../index.html">Docs</a><span>/</span><span>x86decomp reloc</span></div>
+<div class="eyebrow">Command reference</div><h1><code>x86decomp reloc</code></h1>
+<p class="lead">Canonical reloc commands implemented by the current capability subsystem.</p><div class="meta-row"><span class="tag tag-current">current</span><span class="tag tag-canonical">canonical group</span><span class="tag">3 runnable paths</span></div>
+<h2>Help</h2><pre><code class="language-bash">x86decomp reloc --help</code></pre><section class="command-section" id="command-reloc-inspect">
+<div class="meta-row"><span class="tag tag-current">current</span><span class="tag">assembly</span></div>
+<h2><code>x86decomp reloc inspect</code></h2>
+<p>inspect command</p>
+<h3>Usage</h3><pre><code class="language-bash">x86decomp reloc inspect [-h] [--symbol SYMBOL] object</code></pre>
+<h3>Syntax example</h3><pre><code class="language-bash">x86decomp reloc inspect ./candidate.obj</code></pre>
+<h3>Arguments</h3><div class="table-wrap"><table><thead><tr><th>Argument</th><th>Source-declared parser metadata</th></tr></thead><tbody><tr><td><code>object</code><br><small>required</small></td><td>No argument help text is declared; parser destination is <code>object</code>.</td></tr><tr><td><code>--symbol</code></td><td>No argument help text is declared; parser destination is <code>symbol</code>.</td></tr></tbody></table></div>
+<div class="callout"><strong>Source basis.</strong> Parser definition: <code>src/x86decomp/assembly/cli.py</code>; SHA-256 <code>f9fc081b2048d0c37591959352da1786d262cf26475932cba21977e24b652c58</code>. Descriptions above use only parser-declared text or an explicit no-help notice.</div>
+</section><section class="command-section" id="command-reloc-resolve">
+<div class="meta-row"><span class="tag tag-current">current</span><span class="tag">assembly</span></div>
+<h2><code>x86decomp reloc resolve</code></h2>
+<p>resolve command</p>
+<h3>Usage</h3><pre><code class="language-bash">x86decomp reloc resolve [-h] [--image-base IMAGE_BASE]
+                               object symbol base_rva symbol_map output</code></pre>
+<h3>Syntax example</h3><pre><code class="language-bash">x86decomp reloc resolve ./candidate.obj example 0x400000 ./target.map ./output.json</code></pre>
+<h3>Arguments</h3><div class="table-wrap"><table><thead><tr><th>Argument</th><th>Source-declared parser metadata</th></tr></thead><tbody><tr><td><code>object</code><br><small>required</small></td><td>No argument help text is declared; parser destination is <code>object</code>.</td></tr><tr><td><code>symbol</code><br><small>required</small></td><td>No argument help text is declared; parser destination is <code>symbol</code>.</td></tr><tr><td><code>base_rva</code><br><small>required · type: _int</small></td><td>No argument help text is declared; parser destination is <code>base_rva</code>.</td></tr><tr><td><code>symbol_map</code><br><small>required</small></td><td>No argument help text is declared; parser destination is <code>symbol_map</code>.</td></tr><tr><td><code>output</code><br><small>required</small></td><td>No argument help text is declared; parser destination is <code>output</code>.</td></tr><tr><td><code>--image-base</code><br><small>default: 0 · type: _int</small></td><td>No argument help text is declared; parser destination is <code>image_base</code>.</td></tr></tbody></table></div>
+<div class="callout"><strong>Source basis.</strong> Parser definition: <code>src/x86decomp/assembly/cli.py</code>; SHA-256 <code>f9fc081b2048d0c37591959352da1786d262cf26475932cba21977e24b652c58</code>. Descriptions above use only parser-declared text or an explicit no-help notice.</div>
+</section><section class="command-section" id="command-reloc-supported">
+<div class="meta-row"><span class="tag tag-current">current</span><span class="tag">assembly</span></div>
+<h2><code>x86decomp reloc supported</code></h2>
+<p>supported command</p>
+<h3>Usage</h3><pre><code class="language-bash">x86decomp reloc supported [-h]</code></pre>
+<h3>Syntax example</h3><pre><code class="language-bash">x86decomp reloc supported</code></pre>
+<h3>Arguments</h3><p>No route-specific arguments are declared.</p>
+<div class="callout"><strong>Source basis.</strong> Parser definition: <code>src/x86decomp/assembly/cli.py</code>; SHA-256 <code>f9fc081b2048d0c37591959352da1786d262cf26475932cba21977e24b652c58</code>. Descriptions above use only parser-declared text or an explicit no-help notice.</div>
+</section>
+    <footer class="page-footer"><span>x86decomp-toolkit 0.7.4</span><a href="../about.html">About this documentation</a></footer>
+  </main>
+</div>
+<div class="search-dialog" data-search-dialog hidden>
+  <div class="search-panel" role="dialog" aria-modal="true" aria-label="Search documentation">
+    <div class="search-box"><input data-search-input type="search" placeholder="Search commands, functions, tests, schemas, and source" autocomplete="off"><button data-search-close aria-label="Close search">×</button></div>
+    <div class="search-hint">Type at least two characters. Press Escape to close.</div>
+    <div class="search-results" data-search-results></div>
+  </div>
+</div>
+</body>
+</html>
