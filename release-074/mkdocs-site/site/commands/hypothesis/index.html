@@ -1,0 +1,567 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+        <title>x86decomp hypothesis - x86decomp 0.7.4 Docs</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        
+        
+        
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="../../assets/css/darcula-highlight.min.css">
+
+        <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../assets/css/dracula-ui.min.css">
+        <link rel="stylesheet" href="../../assets/css/mkdocs.min.css">
+            <link href="../../assets/x86decomp-dracula-overrides.css" rel="stylesheet">
+
+        
+            <link  rel="icon" type="image/x-icon" href="../../assets/img/favicon.ico">
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+                <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+
+<body class="drac-bg-black-secondary drac-text-grey-ternary drac-text drac-scrollbar-purple">
+
+    <main class="d-flex">
+
+        <!-- block sidebar -->
+            <nav id="sidebar" class="sidebar drac-bg-black">
+    <div class="custom-menu">
+        <button type="button" id="sidebarCollapse" class="btn btn-primary">
+            <i class="fa fa-bars"></i>
+            <span class="sr-only">Menu</span>
+        </button>
+    </div>
+
+    <div class="p-4">
+        
+
+        <div class="drac-text-center">
+            
+                <span class="drac-text drac-line-height drac-text-white">x86decomp 0.7.4 Docs</span>
+            
+        </div>
+
+        <div class="drac-box flex-column">
+            <ul class="dot-ul">
+                <li><div class="dot-li drac-bg-cyan"></div></li>
+                <li><div class="dot-li drac-bg-green"></div></li>
+                <li><div class="dot-li drac-bg-orange"></div></li>
+                <li><div class="dot-li drac-bg-pink"></div></li>
+                <li><div class="dot-li drac-bg-purple"></div></li>
+                <li><div class="dot-li drac-bg-red"></div></li>
+                <li><div class="dot-li drac-bg-yellow"></div></li>
+            </ul>
+        </div>
+
+        <hr class="drac-divider" />
+
+        <!-- block menu -->
+        <ul class="mb-5 drac-list drac-list-none">
+            
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Home
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../../getting-started/"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Getting Started
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../../workflows/"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Workflows
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../../project-examples/"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Project Examples
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#reference-collapse" aria-expanded="false">
+                    Reference
+                </a>
+                <div class="collapse" id="reference-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../reference/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Commands
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../schemas/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Schemas
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../integrations/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Integrations
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../features/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Source Modules
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../functions/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Function Index
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../tests/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Tests
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#release-evidence-collapse" aria-expanded="false">
+                    Release Evidence
+                </a>
+                <div class="collapse" id="release-evidence-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../release-evidence/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../verification/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Verification
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../source-coverage/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Source Coverage
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../changelog/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Changelog
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../about/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            About
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <!-- endblock -->
+    </div>
+</nav>
+        <!-- endblock -->
+
+        <nav class="divider drac-bg-purple-cyan"></nav>
+
+        <div class="content">
+            <!-- block header -->
+                <header>
+    <nav class="navbar navbar-expand-xl drac-bg-purple">
+        <div class="container-fluid">
+            
+            <button class="navbar-toggler w-100 text-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMenu"
+                aria-controls="navbarsMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse flex-column ml-auto" id="navbarsMenu">
+                <ul class="navbar-nav text-md-center">
+
+                    <!-- block preview -->
+                    <li class="nav-item">
+                            
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block search -->
+                    <li class="nav-item"><div role="search" class="search-box">
+	<form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+		<input type="text" name="q" class="drac-input drac-input-search drac-input-white drac-text-white drac-bg-black-secondary"
+		placeholder="Search docs" title="Type search term here" />
+	</form>
+</div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block source -->
+                    <li class="nav-item">
+                        
+                    </li>
+                    <!--  endblock -->
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+</header>
+            <!-- endblock -->
+
+            <!-- block content -->
+                <section class="p-md-5 section-content">
+    <article>
+        <p><p><a id="command-hypothesis-create"></a>
+<a id="command-hypothesis-dependency"></a>
+<a id="command-hypothesis-evidence"></a>
+<a id="command-hypothesis-gate"></a>
+<a id="command-hypothesis-list"></a>
+<a id="command-hypothesis-show"></a>
+<a id="command-hypothesis-transition"></a></p>
+<p>Section: Command reference</p>
+<h1 id="x86decomp-hypothesis"><code>x86decomp hypothesis</code></h1>
+<p>Canonical hypothesis commands implemented by the current capability subsystem.</p>
+<p>Metadata: current · canonical group · 7 runnable paths</p>
+<h2 id="help">Help</h2>
+<pre><code>x86decomp hypothesis --help
+</code></pre>
+<p>Metadata: current · governance</p>
+<h2 id="x86decomp-hypothesis-create"><code>x86decomp hypothesis create</code></h2>
+<p>create command</p>
+<h3 id="usage">Usage</h3>
+<pre><code>x86decomp hypothesis create [-h] --origin ORIGIN
+                                   statement scope_kind scope_id
+</code></pre>
+<h3 id="syntax-example">Syntax example</h3>
+<pre><code>x86decomp hypothesis create recovered-parser-loop function pe-rva:00001000 --origin analyst
+</code></pre>
+<h3 id="arguments">Arguments</h3>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Source-declared parser metadata</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>statement</code> required</td>
+<td>No argument help text is declared; parser destination is <code>statement</code>.</td>
+</tr>
+<tr>
+<td><code>scope_kind</code> required</td>
+<td>No argument help text is declared; parser destination is <code>scope_kind</code>.</td>
+</tr>
+<tr>
+<td><code>scope_id</code> required</td>
+<td>No argument help text is declared; parser destination is <code>scope_id</code>.</td>
+</tr>
+<tr>
+<td><code>--origin</code> required</td>
+<td>No argument help text is declared; parser destination is <code>origin</code>.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Source basis.</strong> Parser definition: <code>src/x86decomp/governance/cli.py</code>; SHA-256 <code>690a4e9b2db9efbe402f77a87c0e7d5eaedddd487aebc3efabed9e3df208f5eb</code>. Descriptions above use only parser-declared text or an explicit no-help notice.</p>
+</blockquote>
+<p>Metadata: current · governance</p>
+<h2 id="x86decomp-hypothesis-dependency"><code>x86decomp hypothesis dependency</code></h2>
+<p>dependency command</p>
+<h3 id="usage_1">Usage</h3>
+<pre><code>x86decomp hypothesis dependency [-h] hypothesis_id depends_on_id
+</code></pre>
+<h3 id="syntax-example_1">Syntax example</h3>
+<pre><code>x86decomp hypothesis dependency hypothesis-001 ./target.exe
+</code></pre>
+<h3 id="arguments_1">Arguments</h3>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Source-declared parser metadata</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>hypothesis_id</code> required</td>
+<td>No argument help text is declared; parser destination is <code>hypothesis_id</code>.</td>
+</tr>
+<tr>
+<td><code>depends_on_id</code> required</td>
+<td>No argument help text is declared; parser destination is <code>depends_on_id</code>.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Source basis.</strong> Parser definition: <code>src/x86decomp/governance/cli.py</code>; SHA-256 <code>690a4e9b2db9efbe402f77a87c0e7d5eaedddd487aebc3efabed9e3df208f5eb</code>. Descriptions above use only parser-declared text or an explicit no-help notice.</p>
+</blockquote>
+<p>Metadata: current · governance</p>
+<h2 id="x86decomp-hypothesis-evidence"><code>x86decomp hypothesis evidence</code></h2>
+<p>evidence command</p>
+<h3 id="usage_2">Usage</h3>
+<pre><code>x86decomp hypothesis evidence [-h] --stance STANCE --weight WEIGHT
+                                     --kind KIND --group GROUP
+                                     [--artifact-sha256 ARTIFACT_SHA256]
+                                     [--details-json DETAILS_JSON]
+                                     hypothesis_id evidence_id
+</code></pre>
+<h3 id="syntax-example_2">Syntax example</h3>
+<pre><code>x86decomp hypothesis evidence hypothesis-001 example-001 --stance support --weight 1.0 --kind analysis --group independent-source
+</code></pre>
+<h3 id="arguments_2">Arguments</h3>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Source-declared parser metadata</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>hypothesis_id</code> required</td>
+<td>No argument help text is declared; parser destination is <code>hypothesis_id</code>.</td>
+</tr>
+<tr>
+<td><code>evidence_id</code> required</td>
+<td>No argument help text is declared; parser destination is <code>evidence_id</code>.</td>
+</tr>
+<tr>
+<td><code>--stance</code> required</td>
+<td>No argument help text is declared; parser destination is <code>stance</code>.</td>
+</tr>
+<tr>
+<td><code>--weight</code> required · type: float</td>
+<td>No argument help text is declared; parser destination is <code>weight</code>.</td>
+</tr>
+<tr>
+<td><code>--kind</code> required</td>
+<td>No argument help text is declared; parser destination is <code>kind</code>.</td>
+</tr>
+<tr>
+<td><code>--group</code> required · default: 'hypothesis'</td>
+<td>No argument help text is declared; parser destination is <code>group</code>.</td>
+</tr>
+<tr>
+<td><code>--artifact-sha256</code></td>
+<td>No argument help text is declared; parser destination is <code>artifact_sha256</code>.</td>
+</tr>
+<tr>
+<td><code>--details-json</code></td>
+<td>No argument help text is declared; parser destination is <code>details_json</code>.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Source basis.</strong> Parser definition: <code>src/x86decomp/governance/cli.py</code>; SHA-256 <code>690a4e9b2db9efbe402f77a87c0e7d5eaedddd487aebc3efabed9e3df208f5eb</code>. Descriptions above use only parser-declared text or an explicit no-help notice.</p>
+</blockquote>
+<p>Metadata: current · governance</p>
+<h2 id="x86decomp-hypothesis-gate"><code>x86decomp hypothesis gate</code></h2>
+<p>gate command</p>
+<h3 id="usage_3">Usage</h3>
+<pre><code>x86decomp hypothesis gate [-h] hypothesis_id
+</code></pre>
+<h3 id="syntax-example_3">Syntax example</h3>
+<pre><code>x86decomp hypothesis gate hypothesis-001
+</code></pre>
+<h3 id="arguments_3">Arguments</h3>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Source-declared parser metadata</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>hypothesis_id</code> required</td>
+<td>No argument help text is declared; parser destination is <code>hypothesis_id</code>.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Source basis.</strong> Parser definition: <code>src/x86decomp/governance/cli.py</code>; SHA-256 <code>690a4e9b2db9efbe402f77a87c0e7d5eaedddd487aebc3efabed9e3df208f5eb</code>. Descriptions above use only parser-declared text or an explicit no-help notice.</p>
+</blockquote>
+<p>Metadata: current · governance</p>
+<h2 id="x86decomp-hypothesis-list"><code>x86decomp hypothesis list</code></h2>
+<p>list command</p>
+<h3 id="usage_4">Usage</h3>
+<pre><code>x86decomp hypothesis list [-h] [--state STATE] [--scope-id SCOPE_ID]
+</code></pre>
+<h3 id="syntax-example_4">Syntax example</h3>
+<pre><code>x86decomp hypothesis list
+</code></pre>
+<h3 id="arguments_4">Arguments</h3>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Source-declared parser metadata</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--state</code></td>
+<td>No argument help text is declared; parser destination is <code>state</code>.</td>
+</tr>
+<tr>
+<td><code>--scope-id</code></td>
+<td>No argument help text is declared; parser destination is <code>scope_id</code>.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Source basis.</strong> Parser definition: <code>src/x86decomp/governance/cli.py</code>; SHA-256 <code>690a4e9b2db9efbe402f77a87c0e7d5eaedddd487aebc3efabed9e3df208f5eb</code>. Descriptions above use only parser-declared text or an explicit no-help notice.</p>
+</blockquote>
+<p>Metadata: current · governance</p>
+<h2 id="x86decomp-hypothesis-show"><code>x86decomp hypothesis show</code></h2>
+<p>show command</p>
+<h3 id="usage_5">Usage</h3>
+<pre><code>x86decomp hypothesis show [-h] hypothesis_id
+</code></pre>
+<h3 id="syntax-example_5">Syntax example</h3>
+<pre><code>x86decomp hypothesis show hypothesis-001
+</code></pre>
+<h3 id="arguments_5">Arguments</h3>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Source-declared parser metadata</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>hypothesis_id</code> required</td>
+<td>No argument help text is declared; parser destination is <code>hypothesis_id</code>.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Source basis.</strong> Parser definition: <code>src/x86decomp/governance/cli.py</code>; SHA-256 <code>690a4e9b2db9efbe402f77a87c0e7d5eaedddd487aebc3efabed9e3df208f5eb</code>. Descriptions above use only parser-declared text or an explicit no-help notice.</p>
+</blockquote>
+<p>Metadata: current · governance</p>
+<h2 id="x86decomp-hypothesis-transition"><code>x86decomp hypothesis transition</code></h2>
+<p>transition command</p>
+<h3 id="usage_6">Usage</h3>
+<pre><code>x86decomp hypothesis transition [-h] --reason REASON [--lock]
+                                       hypothesis_id state
+</code></pre>
+<h3 id="syntax-example_6">Syntax example</h3>
+<pre><code>x86decomp hypothesis transition hypothesis-001 active --reason reviewed-change
+</code></pre>
+<h3 id="arguments_6">Arguments</h3>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Source-declared parser metadata</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>hypothesis_id</code> required</td>
+<td>No argument help text is declared; parser destination is <code>hypothesis_id</code>.</td>
+</tr>
+<tr>
+<td><code>state</code> required</td>
+<td>No argument help text is declared; parser destination is <code>state</code>.</td>
+</tr>
+<tr>
+<td><code>--reason</code> required</td>
+<td>No argument help text is declared; parser destination is <code>reason</code>.</td>
+</tr>
+<tr>
+<td><code>--lock</code> nargs: 0 · default: False</td>
+<td>No argument help text is declared; parser destination is <code>lock</code>.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Source basis.</strong> Parser definition: <code>src/x86decomp/governance/cli.py</code>; SHA-256 <code>690a4e9b2db9efbe402f77a87c0e7d5eaedddd487aebc3efabed9e3df208f5eb</code>. Descriptions above use only parser-declared text or an explicit no-help notice.</p>
+</blockquote></p>
+    </article>
+</section>
+            <!-- endblock -->
+
+            <!-- block footer -->
+                <footer>
+    <div class="d-flex flex-sm-row justify-content-between py-2 border-top drac-text-black drac-bg-cyan-green">
+        <a href="https://github.com/dracula/mkdocs" target="_blank" style="padding-left: 1%;"
+            class="footer-text drac-anchor drac-text-black drac-text-purple--hover">
+            Made with Dracula Theme for MkDocs
+        </a>
+    </div>
+</footer>
+            <!-- endblock -->
+        </div>
+
+    </main>
+
+        <script>var base_url = '../..';</script>
+        <script src="../../assets/js/jquery-3.3.1.slim.min.js"></script>
+        <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+        <script src="../../assets/js/mkdocs.js"></script>
+			<script src="../../search/main.js" defer></script>
+
+</body>
+
+</html>

@@ -1,0 +1,468 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+        <title>x86decomp.mcp - x86decomp 0.7.4 Docs</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        
+        
+        
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="../../assets/css/darcula-highlight.min.css">
+
+        <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../assets/css/dracula-ui.min.css">
+        <link rel="stylesheet" href="../../assets/css/mkdocs.min.css">
+            <link href="../../assets/x86decomp-dracula-overrides.css" rel="stylesheet">
+
+        
+            <link  rel="icon" type="image/x-icon" href="../../assets/img/favicon.ico">
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+                <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+
+<body class="drac-bg-black-secondary drac-text-grey-ternary drac-text drac-scrollbar-purple">
+
+    <main class="d-flex">
+
+        <!-- block sidebar -->
+            <nav id="sidebar" class="sidebar drac-bg-black">
+    <div class="custom-menu">
+        <button type="button" id="sidebarCollapse" class="btn btn-primary">
+            <i class="fa fa-bars"></i>
+            <span class="sr-only">Menu</span>
+        </button>
+    </div>
+
+    <div class="p-4">
+        
+
+        <div class="drac-text-center">
+            
+                <span class="drac-text drac-line-height drac-text-white">x86decomp 0.7.4 Docs</span>
+            
+        </div>
+
+        <div class="drac-box flex-column">
+            <ul class="dot-ul">
+                <li><div class="dot-li drac-bg-cyan"></div></li>
+                <li><div class="dot-li drac-bg-green"></div></li>
+                <li><div class="dot-li drac-bg-orange"></div></li>
+                <li><div class="dot-li drac-bg-pink"></div></li>
+                <li><div class="dot-li drac-bg-purple"></div></li>
+                <li><div class="dot-li drac-bg-red"></div></li>
+                <li><div class="dot-li drac-bg-yellow"></div></li>
+            </ul>
+        </div>
+
+        <hr class="drac-divider" />
+
+        <!-- block menu -->
+        <ul class="mb-5 drac-list drac-list-none">
+            
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Home
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../../getting-started/"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Getting Started
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../../workflows/"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Workflows
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../../project-examples/"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Project Examples
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#reference-collapse" aria-expanded="false">
+                    Reference
+                </a>
+                <div class="collapse" id="reference-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../reference/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../commands/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Commands
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../schemas/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Schemas
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../integrations/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Integrations
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Source Modules
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../functions/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Function Index
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../tests/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Tests
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#release-evidence-collapse" aria-expanded="false">
+                    Release Evidence
+                </a>
+                <div class="collapse" id="release-evidence-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../release-evidence/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../verification/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Verification
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../source-coverage/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Source Coverage
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../changelog/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Changelog
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../about/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            About
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <!-- endblock -->
+    </div>
+</nav>
+        <!-- endblock -->
+
+        <nav class="divider drac-bg-purple-cyan"></nav>
+
+        <div class="content">
+            <!-- block header -->
+                <header>
+    <nav class="navbar navbar-expand-xl drac-bg-purple">
+        <div class="container-fluid">
+            
+            <button class="navbar-toggler w-100 text-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMenu"
+                aria-controls="navbarsMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse flex-column ml-auto" id="navbarsMenu">
+                <ul class="navbar-nav text-md-center">
+
+                    <!-- block preview -->
+                    <li class="nav-item">
+                            
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block search -->
+                    <li class="nav-item"><div role="search" class="search-box">
+	<form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+		<input type="text" name="q" class="drac-input drac-input-search drac-input-white drac-text-white drac-bg-black-secondary"
+		placeholder="Search docs" title="Type search term here" />
+	</form>
+</div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block source -->
+                    <li class="nav-item">
+                        
+                    </li>
+                    <!--  endblock -->
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+</header>
+            <!-- endblock -->
+
+            <!-- block content -->
+                <section class="p-md-5 section-content">
+    <article>
+        <p><p><a id="function-stdiomcpclient-init"></a>
+<a id="function-stdiomcpclient-send"></a>
+<a id="function-stdiomcpclient-request"></a>
+<a id="function-stdiomcpclient-initialize"></a>
+<a id="function-stdiomcpclient-ensure-initialized"></a>
+<a id="function-stdiomcpclient-list-tools"></a>
+<a id="function-stdiomcpclient-call-tool"></a>
+<a id="function-stdiomcpclient-close"></a>
+<a id="function-stdiomcpclient-enter"></a>
+<a id="function-stdiomcpclient-exit"></a>
+<a id="function-streamablehttpmcpclient-init"></a>
+<a id="function-streamablehttpmcpclient-request"></a>
+<a id="function-streamablehttpmcpclient-notify"></a>
+<a id="function-streamablehttpmcpclient-initialize"></a>
+<a id="function-streamablehttpmcpclient-ensure-initialized"></a>
+<a id="function-streamablehttpmcpclient-list-tools"></a>
+<a id="function-streamablehttpmcpclient-call-tool"></a>
+<a id="function-streamablehttpmcpclient-close"></a>
+<a id="function-is-probable-mutation"></a>
+<a id="function-ghidramcpgateway-init"></a>
+<a id="function-ghidramcpgateway-read"></a>
+<a id="function-ghidramcpgateway-propose-mutation"></a>
+<a id="function-ghidramcpgateway-commit-mutation"></a></p>
+<p>Section: Source-derived feature and function reference</p>
+<h1 id="x86decompmcp">x86decomp.mcp</h1>
+<p>MCP 2025-06-18 client and evidence-gated Ghidra mutation journal.</p>
+<p>Metadata: core · current · 23 functions/methods</p>
+<p><strong>Source:</strong> <code>src/x86decomp/mcp.py</code></p>
+<blockquote>
+<p><strong>Truth basis.</strong> Module and symbol names, signatures, line numbers, docstrings, and SHA-256 are read directly from the sealed source. When source docstrings are absent, this page says so instead of inferring behavior. Source SHA-256: <code>72627e41c628c756443bc5d57e38b583b1744923902735b55a3d6c9e29f6cca9</code>.</p>
+</blockquote>
+<h2 id="functions-and-methods">Functions and methods</h2>
+<p>Metadata: internal · line 30</p>
+<h3 id="stdiomcpclientinit">StdioMCPClient.<strong>init</strong></h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def __init__(self, command: list[str], *, cwd: Path | None = None)
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.mcp:StdioMCPClient.__init__</code></p>
+<p>Metadata: internal · line 46</p>
+<h3 id="stdiomcpclient_send">StdioMCPClient._send</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def _send(self, message: dict[str, Any]) -&gt; None
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.mcp:StdioMCPClient._send</code></p>
+<p>Metadata: internal · line 52</p>
+<h3 id="stdiomcpclient_request">StdioMCPClient._request</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def _request(self, method: str, params: dict[str, Any] | None = None) -&gt; dict[str, Any]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.mcp:StdioMCPClient._request</code></p>
+<p>Metadata: public · line 79</p>
+<h3 id="stdiomcpclientinitialize">StdioMCPClient.initialize</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def initialize(self) -&gt; dict[str, Any]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.mcp:StdioMCPClient.initialize</code></p>
+<p>Metadata: internal · line 92</p>
+<h3 id="stdiomcpclient_ensure_initialized">StdioMCPClient._ensure_initialized</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def _ensure_initialized(self) -&gt; None
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.mcp:StdioMCPClient._ensure_initialized</code></p>
+<p>Metadata: public · line 96</p>
+<h3 id="stdiomcpclientlist_tools">StdioMCPClient.list_tools</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def list_tools(self) -&gt; list[MCPTool]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.mcp:StdioMCPClient.list_tools</code></p>
+<p>Metadata: public · line 115</p>
+<h3 id="stdiomcpclientcall_tool">StdioMCPClient.call_tool</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def call_tool(self, name: str, arguments: dict[str, Any]) -&gt; dict[str, Any]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.mcp:StdioMCPClient.call_tool</code></p>
+<p>Metadata: public · line 119</p>
+<h3 id="stdiomcpclientclose">StdioMCPClient.close</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def close(self) -&gt; None
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.mcp:StdioMCPClient.close</code></p>
+<p>Metadata: internal · line 132</p>
+<h3 id="stdiomcpcliententer">StdioMCPClient.<strong>enter</strong></h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def __enter__(self) -&gt; 'StdioMCPClient'
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.mcp:StdioMCPClient.__enter__</code></p>
+<p>Metadata: internal · line 135</p>
+<h3 id="stdiomcpclientexit">StdioMCPClient.<strong>exit</strong></h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def __exit__(self, exc_type: Any, exc: Any, traceback: Any) -&gt; None
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.mcp:StdioMCPClient.__exit__</code></p>
+<p>Metadata: internal · line 140</p>
+<h3 id="streamablehttpmcpclientinit">StreamableHTTPMCPClient.<strong>init</strong></h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def __init__(self, url: str, *, timeout: int = 60)
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.mcp:StreamableHTTPMCPClient.__init__</code></p>
+<p>Metadata: internal · line 149</p>
+<h3 id="streamablehttpmcpclient_request">StreamableHTTPMCPClient._request</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def _request(self, method: str, params: dict[str, Any] | None = None) -&gt; dict[str, Any]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.mcp:StreamableHTTPMCPClient._request</code></p>
+<p>Metadata: internal · line 183</p>
+<h3 id="streamablehttpmcpclient_notify">StreamableHTTPMCPClient._notify</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def _notify(self, method: str) -&gt; None
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.mcp:StreamableHTTPMCPClient._notify</code></p>
+<p>Metadata: public · line 192</p>
+<h3 id="streamablehttpmcpclientinitialize">StreamableHTTPMCPClient.initialize</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def initialize(self) -&gt; dict[str, Any]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.mcp:StreamableHTTPMCPClient.initialize</code></p>
+<p>Metadata: internal · line 198</p>
+<h3 id="streamablehttpmcpclient_ensure_initialized">StreamableHTTPMCPClient._ensure_initialized</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def _ensure_initialized(self) -&gt; None
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.mcp:StreamableHTTPMCPClient._ensure_initialized</code></p>
+<p>Metadata: public · line 202</p>
+<h3 id="streamablehttpmcpclientlist_tools">StreamableHTTPMCPClient.list_tools</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def list_tools(self) -&gt; list[MCPTool]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.mcp:StreamableHTTPMCPClient.list_tools</code></p>
+<p>Metadata: public · line 207</p>
+<h3 id="streamablehttpmcpclientcall_tool">StreamableHTTPMCPClient.call_tool</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def call_tool(self, name: str, arguments: dict[str, Any]) -&gt; dict[str, Any]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.mcp:StreamableHTTPMCPClient.call_tool</code></p>
+<p>Metadata: public · line 211</p>
+<h3 id="streamablehttpmcpclientclose">StreamableHTTPMCPClient.close</h3>
+<p>Streamable HTTP has no persistent local process to close.</p>
+<pre><code>def close(self) -&gt; None
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.mcp:StreamableHTTPMCPClient.close</code></p>
+<p>Metadata: public · line 221</p>
+<h3 id="is_probable_mutation">is_probable_mutation</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def is_probable_mutation(tool_name: str) -&gt; bool
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.mcp:is_probable_mutation</code></p>
+<p>Metadata: internal · line 229</p>
+<h3 id="ghidramcpgatewayinit">GhidraMCPGateway.<strong>init</strong></h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def __init__(self, project_root: Path, client: StdioMCPClient | StreamableHTTPMCPClient, *, mutation_allowlist: set[str] | None = None)
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.mcp:GhidraMCPGateway.__init__</code></p>
+<p>Metadata: public · line 236</p>
+<h3 id="ghidramcpgatewayread">GhidraMCPGateway.read</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def read(self, tool: str, arguments: dict[str, Any]) -&gt; dict[str, Any]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.mcp:GhidraMCPGateway.read</code></p>
+<p>Metadata: public · line 243</p>
+<h3 id="ghidramcpgatewaypropose_mutation">GhidraMCPGateway.propose_mutation</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def propose_mutation(self, *, tool: str, arguments: dict[str, Any], rationale: str, evidence_ids: list[str]) -&gt; dict[str, Any]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.mcp:GhidraMCPGateway.propose_mutation</code></p>
+<p>Metadata: public · line 269</p>
+<h3 id="ghidramcpgatewaycommit_mutation">GhidraMCPGateway.commit_mutation</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def commit_mutation(self, approval_hash: str) -&gt; dict[str, Any]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.mcp:GhidraMCPGateway.commit_mutation</code></p></p>
+    </article>
+</section>
+            <!-- endblock -->
+
+            <!-- block footer -->
+                <footer>
+    <div class="d-flex flex-sm-row justify-content-between py-2 border-top drac-text-black drac-bg-cyan-green">
+        <a href="https://github.com/dracula/mkdocs" target="_blank" style="padding-left: 1%;"
+            class="footer-text drac-anchor drac-text-black drac-text-purple--hover">
+            Made with Dracula Theme for MkDocs
+        </a>
+    </div>
+</footer>
+            <!-- endblock -->
+        </div>
+
+    </main>
+
+        <script>var base_url = '../..';</script>
+        <script src="../../assets/js/jquery-3.3.1.slim.min.js"></script>
+        <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+        <script src="../../assets/js/mkdocs.js"></script>
+			<script src="../../search/main.js" defer></script>
+
+</body>
+
+</html>

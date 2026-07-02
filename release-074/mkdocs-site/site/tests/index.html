@@ -1,0 +1,564 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+        <title>Tests - x86decomp 0.7.4 Docs</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        
+        
+        
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="../assets/css/darcula-highlight.min.css">
+
+        <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../assets/css/dracula-ui.min.css">
+        <link rel="stylesheet" href="../assets/css/mkdocs.min.css">
+            <link href="../assets/x86decomp-dracula-overrides.css" rel="stylesheet">
+
+        
+            <link  rel="icon" type="image/x-icon" href="../assets/img/favicon.ico">
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+                <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+
+<body class="drac-bg-black-secondary drac-text-grey-ternary drac-text drac-scrollbar-purple">
+
+    <main class="d-flex">
+
+        <!-- block sidebar -->
+            <nav id="sidebar" class="sidebar drac-bg-black">
+    <div class="custom-menu">
+        <button type="button" id="sidebarCollapse" class="btn btn-primary">
+            <i class="fa fa-bars"></i>
+            <span class="sr-only">Menu</span>
+        </button>
+    </div>
+
+    <div class="p-4">
+        
+
+        <div class="drac-text-center">
+            
+                <span class="drac-text drac-line-height drac-text-white">x86decomp 0.7.4 Docs</span>
+            
+        </div>
+
+        <div class="drac-box flex-column">
+            <ul class="dot-ul">
+                <li><div class="dot-li drac-bg-cyan"></div></li>
+                <li><div class="dot-li drac-bg-green"></div></li>
+                <li><div class="dot-li drac-bg-orange"></div></li>
+                <li><div class="dot-li drac-bg-pink"></div></li>
+                <li><div class="dot-li drac-bg-purple"></div></li>
+                <li><div class="dot-li drac-bg-red"></div></li>
+                <li><div class="dot-li drac-bg-yellow"></div></li>
+            </ul>
+        </div>
+
+        <hr class="drac-divider" />
+
+        <!-- block menu -->
+        <ul class="mb-5 drac-list drac-list-none">
+            
+            <li class="drac-box">
+                <a href=".."
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Home
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../getting-started/"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Getting Started
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../workflows/"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Workflows
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../project-examples/"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Project Examples
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href=".."
+                    class=" active 
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#reference-collapse" aria-expanded="false">
+                    Reference
+                </a>
+                <div class="collapse" id="reference-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../reference/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../commands/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Commands
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../schemas/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Schemas
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../integrations/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Integrations
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../features/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Source Modules
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../functions/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Function Index
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="./"
+            class=" active 
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Tests
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href=".."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#release-evidence-collapse" aria-expanded="false">
+                    Release Evidence
+                </a>
+                <div class="collapse" id="release-evidence-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../release-evidence/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../verification/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Verification
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../source-coverage/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Source Coverage
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../changelog/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Changelog
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../about/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            About
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <!-- endblock -->
+    </div>
+</nav>
+        <!-- endblock -->
+
+        <nav class="divider drac-bg-purple-cyan"></nav>
+
+        <div class="content">
+            <!-- block header -->
+                <header>
+    <nav class="navbar navbar-expand-xl drac-bg-purple">
+        <div class="container-fluid">
+            
+            <button class="navbar-toggler w-100 text-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMenu"
+                aria-controls="navbarsMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse flex-column ml-auto" id="navbarsMenu">
+                <ul class="navbar-nav text-md-center">
+
+                    <!-- block preview -->
+                    <li class="nav-item">
+                            
+        <div class="container">
+            <div class="row row-preview">
+                <div class="col">
+                    <a href="../functions/"
+                        class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover">
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="../release-evidence/"
+                        class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover" style="padding-left: 3%;">
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block search -->
+                    <li class="nav-item"><div role="search" class="search-box">
+	<form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+		<input type="text" name="q" class="drac-input drac-input-search drac-input-white drac-text-white drac-bg-black-secondary"
+		placeholder="Search docs" title="Type search term here" />
+	</form>
+</div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block source -->
+                    <li class="nav-item">
+                        
+                    </li>
+                    <!--  endblock -->
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+</header>
+            <!-- endblock -->
+
+            <!-- block content -->
+                <section class="p-md-5 section-content">
+    <article>
+        <p><h1 id="tests">Tests</h1>
+<p>The test reference preserves the current test inventory and links each source file to its node list.</p>
+<h2 id="reference">Reference</h2>
+<div class="doc-card-grid">
+<a class="doc-card" href="test-suite-src-x86decomp-testkit-toolkit-tests-test-public-api-contract/">
+<strong>test-suite/src/x86decomp_testkit/toolkit_tests/test_public_api_contract.py</strong>
+<span>21 test nodes.</span>
+<small>Public-surface contract</small>
+</a>
+<a class="doc-card" href="test-suite-tests-test-adapter-detection-resolution/">
+<strong>test-suite/tests/test_adapter_detection_resolution.py</strong>
+<span>6 test nodes.</span>
+<small>Standalone verifier</small>
+</a>
+<a class="doc-card" href="test-suite-tests-test-architecture-maps/">
+<strong>test-suite/tests/test_architecture_maps.py</strong>
+<span>4 test nodes.</span>
+<small>Standalone verifier</small>
+</a>
+<a class="doc-card" href="test-suite-tests-test-archive-security/">
+<strong>test-suite/tests/test_archive_security.py</strong>
+<span>4 test nodes.</span>
+<small>Standalone verifier</small>
+</a>
+<a class="doc-card" href="test-suite-tests-test-cli-and-installation/">
+<strong>test-suite/tests/test_cli_and_installation.py</strong>
+<span>2 test nodes.</span>
+<small>Standalone verifier</small>
+</a>
+<a class="doc-card" href="test-suite-tests-test-config-models/">
+<strong>test-suite/tests/test_config_models.py</strong>
+<span>2 test nodes.</span>
+<small>Standalone verifier</small>
+</a>
+<a class="doc-card" href="test-suite-tests-test-inventory-reports-process/">
+<strong>test-suite/tests/test_inventory_reports_process.py</strong>
+<span>4 test nodes.</span>
+<small>Standalone verifier</small>
+</a>
+<a class="doc-card" href="tests-assembly-test-annotation-materialize/">
+<strong>tests/assembly/test_annotation_materialize.py</strong>
+<span>8 test nodes.</span>
+<small>Toolkit behavior</small>
+</a>
+<a class="doc-card" href="tests-assembly-test-helpers-and-relocations/">
+<strong>tests/assembly/test_helpers_and_relocations.py</strong>
+<span>3 test nodes.</span>
+<small>Toolkit behavior</small>
+</a>
+<a class="doc-card" href="tests-assembly-test-pipeline-cli-schemas/">
+<strong>tests/assembly/test_pipeline_cli_schemas.py</strong>
+<span>8 test nodes.</span>
+<small>Toolkit behavior</small>
+</a>
+<a class="doc-card" href="tests-governance-test-core/">
+<strong>tests/governance/test_core.py</strong>
+<span>17 test nodes.</span>
+<small>Toolkit behavior</small>
+</a>
+<a class="doc-card" href="tests-governance-test-governance-cli-schemas/">
+<strong>tests/governance/test_governance_cli_schemas.py</strong>
+<span>5 test nodes.</span>
+<small>Toolkit behavior</small>
+</a>
+<a class="doc-card" href="tests-governance-test-proof-plugin-worker/">
+<strong>tests/governance/test_proof_plugin_worker.py</strong>
+<span>8 test nodes.</span>
+<small>Toolkit behavior</small>
+</a>
+<a class="doc-card" href="tests-governance-test-worker-thread-safety/">
+<strong>tests/governance/test_worker_thread_safety.py</strong>
+<span>2 test nodes.</span>
+<small>Toolkit behavior</small>
+</a>
+<a class="doc-card" href="tests-native-test-cli-schemas/">
+<strong>tests/native/test_cli_schemas.py</strong>
+<span>4 test nodes.</span>
+<small>Toolkit behavior</small>
+</a>
+<a class="doc-card" href="tests-native-test-inventory-and-loops/">
+<strong>tests/native/test_inventory_and_loops.py</strong>
+<span>3 test nodes.</span>
+<small>Toolkit behavior</small>
+</a>
+<a class="doc-card" href="tests-native-test-pe-hybrid/">
+<strong>tests/native/test_pe_hybrid.py</strong>
+<span>4 test nodes.</span>
+<small>Toolkit behavior</small>
+</a>
+<a class="doc-card" href="tests-native-test-slots-matching/">
+<strong>tests/native/test_slots_matching.py</strong>
+<span>4 test nodes.</span>
+<small>Toolkit behavior</small>
+</a>
+<a class="doc-card" href="tests-native-test-staging-loop-runtime-windows/">
+<strong>tests/native/test_staging_loop_runtime_windows.py</strong>
+<span>4 test nodes.</span>
+<small>Toolkit behavior</small>
+</a>
+<a class="doc-card" href="tests-reconstruction-test-capsules-security-changesets/">
+<strong>tests/reconstruction/test_capsules_security_changesets.py</strong>
+<span>4 test nodes.</span>
+<small>Toolkit behavior</small>
+</a>
+<a class="doc-card" href="tests-reconstruction-test-cli-schemas-retention/">
+<strong>tests/reconstruction/test_cli_schemas_retention.py</strong>
+<span>6 test nodes.</span>
+<small>Toolkit behavior</small>
+</a>
+<a class="doc-card" href="tests-reconstruction-test-project-headers-builds/">
+<strong>tests/reconstruction/test_project_headers_builds.py</strong>
+<span>3 test nodes.</span>
+<small>Toolkit behavior</small>
+</a>
+<a class="doc-card" href="tests-reconstruction-test-provenance-abi-tests/">
+<strong>tests/reconstruction/test_provenance_abi_tests.py</strong>
+<span>3 test nodes.</span>
+<small>Toolkit behavior</small>
+</a>
+<a class="doc-card" href="tests-test-abi-disassembly/">
+<strong>tests/test_abi_disassembly.py</strong>
+<span>1 test nodes.</span>
+<small>Toolkit behavior</small>
+</a>
+<a class="doc-card" href="tests-test-artifacts/">
+<strong>tests/test_artifacts.py</strong>
+<span>2 test nodes.</span>
+<small>Toolkit behavior</small>
+</a>
+<a class="doc-card" href="tests-test-coff/">
+<strong>tests/test_coff.py</strong>
+<span>2 test nodes.</span>
+<small>Toolkit behavior</small>
+</a>
+<a class="doc-card" href="tests-test-coff-archive/">
+<strong>tests/test_coff_archive.py</strong>
+<span>3 test nodes.</span>
+<small>Toolkit behavior</small>
+</a>
+<a class="doc-card" href="tests-test-compiler/">
+<strong>tests/test_compiler.py</strong>
+<span>1 test nodes.</span>
+<small>Toolkit behavior</small>
+</a>
+<a class="doc-card" href="tests-test-decompme-objdiff/">
+<strong>tests/test_decompme_objdiff.py</strong>
+<span>2 test nodes.</span>
+<small>Toolkit behavior</small>
+</a>
+<a class="doc-card" href="tests-test-diffing/">
+<strong>tests/test_diffing.py</strong>
+<span>2 test nodes.</span>
+<small>Toolkit behavior</small>
+</a>
+<a class="doc-card" href="tests-test-documentation/">
+<strong>tests/test_documentation.py</strong>
+<span>3 test nodes.</span>
+<small>Toolkit behavior</small>
+</a>
+<a class="doc-card" href="tests-test-dynamic-symbolic/">
+<strong>tests/test_dynamic_symbolic.py</strong>
+<span>2 test nodes.</span>
+<small>Toolkit behavior</small>
+</a>
+<a class="doc-card" href="tests-test-dynamorio/">
+<strong>tests/test_dynamorio.py</strong>
+<span>2 test nodes.</span>
+<small>Toolkit behavior</small>
+</a>
+<a class="doc-card" href="tests-test-evidence/">
+<strong>tests/test_evidence.py</strong>
+<span>2 test nodes.</span>
+<small>Toolkit behavior</small>
+</a>
+<a class="doc-card" href="tests-test-ghidra/">
+<strong>tests/test_ghidra.py</strong>
+<span>1 test nodes.</span>
+<small>Toolkit behavior</small>
+</a>
+<a class="doc-card" href="tests-test-integration/">
+<strong>tests/test_integration.py</strong>
+<span>2 test nodes.</span>
+<small>Toolkit behavior</small>
+</a>
+<a class="doc-card" href="tests-test-linker-metadata-corpus/">
+<strong>tests/test_linker_metadata_corpus.py</strong>
+<span>10 test nodes.</span>
+<small>Toolkit behavior</small>
+</a>
+<a class="doc-card" href="tests-test-mcp/">
+<strong>tests/test_mcp.py</strong>
+<span>1 test nodes.</span>
+<small>Toolkit behavior</small>
+</a>
+<a class="doc-card" href="tests-test-memory/">
+<strong>tests/test_memory.py</strong>
+<span>2 test nodes.</span>
+<small>Toolkit behavior</small>
+</a>
+<a class="doc-card" href="tests-test-modes-and-db/">
+<strong>tests/test_modes_and_db.py</strong>
+<span>2 test nodes.</span>
+<small>Toolkit behavior</small>
+</a>
+<a class="doc-card" href="tests-test-pdb/">
+<strong>tests/test_pdb.py</strong>
+<span>2 test nodes.</span>
+<small>Toolkit behavior</small>
+</a>
+<a class="doc-card" href="tests-test-pe32/">
+<strong>tests/test_pe32.py</strong>
+<span>2 test nodes.</span>
+<small>Toolkit behavior</small>
+</a>
+<a class="doc-card" href="tests-test-pe64-patch-hybrid/">
+<strong>tests/test_pe64_patch_hybrid.py</strong>
+<span>3 test nodes.</span>
+<small>Toolkit behavior</small>
+</a>
+<a class="doc-card" href="tests-test-production/">
+<strong>tests/test_production.py</strong>
+<span>22 test nodes.</span>
+<small>Toolkit behavior</small>
+</a>
+<a class="doc-card" href="tests-test-project/">
+<strong>tests/test_project.py</strong>
+<span>2 test nodes.</span>
+<small>Toolkit behavior</small>
+</a>
+<a class="doc-card" href="tests-test-release-contract/">
+<strong>tests/test_release_contract.py</strong>
+<span>8 test nodes.</span>
+<small>Toolkit behavior</small>
+</a>
+<a class="doc-card" href="tests-test-relink/">
+<strong>tests/test_relink.py</strong>
+<span>1 test nodes.</span>
+<small>Toolkit behavior</small>
+</a>
+<a class="doc-card" href="tests-test-test-bundle/">
+<strong>tests/test_test_bundle.py</strong>
+<span>5 test nodes.</span>
+<small>Toolkit behavior</small>
+</a>
+<a class="doc-card" href="tests-test-workqueue/">
+<strong>tests/test_workqueue.py</strong>
+<span>1 test nodes.</span>
+<small>Toolkit behavior</small>
+</a>
+</div></p>
+    </article>
+</section>
+            <!-- endblock -->
+
+            <!-- block footer -->
+                <footer>
+    <div class="d-flex flex-sm-row justify-content-between py-2 border-top drac-text-black drac-bg-cyan-green">
+        <a href="https://github.com/dracula/mkdocs" target="_blank" style="padding-left: 1%;"
+            class="footer-text drac-anchor drac-text-black drac-text-purple--hover">
+            Made with Dracula Theme for MkDocs
+        </a>
+    </div>
+</footer>
+            <!-- endblock -->
+        </div>
+
+    </main>
+
+        <script>var base_url = '..';</script>
+        <script src="../assets/js/jquery-3.3.1.slim.min.js"></script>
+        <script src="../assets/js/bootstrap.bundle.min.js"></script>
+        <script src="../assets/js/mkdocs.js"></script>
+			<script src="../search/main.js" defer></script>
+
+</body>
+
+</html>

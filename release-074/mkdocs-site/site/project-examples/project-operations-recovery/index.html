@@ -1,0 +1,468 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+        <title>Example: project operations and recovery workflow - x86decomp 0.7.4 Docs</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        
+        
+        
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="../../assets/css/darcula-highlight.min.css">
+
+        <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../assets/css/dracula-ui.min.css">
+        <link rel="stylesheet" href="../../assets/css/mkdocs.min.css">
+            <link href="../../assets/x86decomp-dracula-overrides.css" rel="stylesheet">
+
+        
+            <link  rel="icon" type="image/x-icon" href="../../assets/img/favicon.ico">
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+                <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+
+<body class="drac-bg-black-secondary drac-text-grey-ternary drac-text drac-scrollbar-purple">
+
+    <main class="d-flex">
+
+        <!-- block sidebar -->
+            <nav id="sidebar" class="sidebar drac-bg-black">
+    <div class="custom-menu">
+        <button type="button" id="sidebarCollapse" class="btn btn-primary">
+            <i class="fa fa-bars"></i>
+            <span class="sr-only">Menu</span>
+        </button>
+    </div>
+
+    <div class="p-4">
+        
+
+        <div class="drac-text-center">
+            
+                <span class="drac-text drac-line-height drac-text-white">x86decomp 0.7.4 Docs</span>
+            
+        </div>
+
+        <div class="drac-box flex-column">
+            <ul class="dot-ul">
+                <li><div class="dot-li drac-bg-cyan"></div></li>
+                <li><div class="dot-li drac-bg-green"></div></li>
+                <li><div class="dot-li drac-bg-orange"></div></li>
+                <li><div class="dot-li drac-bg-pink"></div></li>
+                <li><div class="dot-li drac-bg-purple"></div></li>
+                <li><div class="dot-li drac-bg-red"></div></li>
+                <li><div class="dot-li drac-bg-yellow"></div></li>
+            </ul>
+        </div>
+
+        <hr class="drac-divider" />
+
+        <!-- block menu -->
+        <ul class="mb-5 drac-list drac-list-none">
+            
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Home
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../../getting-started/"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Getting Started
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../../workflows/"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Workflows
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Project Examples
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#reference-collapse" aria-expanded="false">
+                    Reference
+                </a>
+                <div class="collapse" id="reference-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../reference/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../commands/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Commands
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../schemas/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Schemas
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../integrations/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Integrations
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../features/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Source Modules
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../functions/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Function Index
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../tests/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Tests
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#release-evidence-collapse" aria-expanded="false">
+                    Release Evidence
+                </a>
+                <div class="collapse" id="release-evidence-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../release-evidence/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../verification/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Verification
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../source-coverage/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Source Coverage
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../changelog/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Changelog
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../about/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            About
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <!-- endblock -->
+    </div>
+</nav>
+        <!-- endblock -->
+
+        <nav class="divider drac-bg-purple-cyan"></nav>
+
+        <div class="content">
+            <!-- block header -->
+                <header>
+    <nav class="navbar navbar-expand-xl drac-bg-purple">
+        <div class="container-fluid">
+            
+            <button class="navbar-toggler w-100 text-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMenu"
+                aria-controls="navbarsMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse flex-column ml-auto" id="navbarsMenu">
+                <ul class="navbar-nav text-md-center">
+
+                    <!-- block preview -->
+                    <li class="nav-item">
+                            
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block search -->
+                    <li class="nav-item"><div role="search" class="search-box">
+	<form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+		<input type="text" name="q" class="drac-input drac-input-search drac-input-white drac-text-white drac-bg-black-secondary"
+		placeholder="Search docs" title="Type search term here" />
+	</form>
+</div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block source -->
+                    <li class="nav-item">
+                        
+                    </li>
+                    <!--  endblock -->
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+</header>
+            <!-- endblock -->
+
+            <!-- block content -->
+                <section class="p-md-5 section-content">
+    <article>
+        <p><p><a id="model"></a>
+<a id="project-operations-recovery-flow-title"></a>
+<a id="project-operations-recovery-flow-desc"></a>
+<a id="arrow-project-operations-recovery"></a>
+<a id="project-operations-recovery-flow-caption"></a>
+<a id="check"></a>
+<a id="migrate"></a>
+<a id="gc"></a>
+<a id="pipeline"></a>
+<a id="control"></a>
+<a id="recover"></a>
+<a id="restore"></a>
+<a id="limits"></a>
+<a id="source-basis"></a></p>
+<p>Section: Project examples</p>
+<h1 id="example-project-operations-and-recovery-workflow">Example: project operations and recovery workflow</h1>
+<p>Maintain a long-lived project with checks, deterministic backups, safe restore, dry-run migration and repair, content-addressed garbage collection, durable pipelines, retries, cancellation, and stale-run recovery.</p>
+<blockquote>
+<p><strong>Example notation.</strong> Paths and function identifiers are representative local names. Commands and options are exact v0.7.4 parser forms; target-specific hashes, addresses, profiles, reports, and passing outcomes must come from the actual project.</p>
+<p><strong>Classification.</strong> This is an operational lifecycle workflow shared by matching, functional, and both-mode projects.</p>
+</blockquote>
+<p><strong>On this page</strong></p>
+<ol>
+<li><a href="#model">Operations model</a></li>
+<li><a href="#check">Check and back up</a></li>
+<li><a href="#migrate">Migrate and repair</a></li>
+<li><a href="#gc">Verify and collect content</a></li>
+<li><a href="#pipeline">Create and run pipeline</a></li>
+<li><a href="#control">Inspect/retry/cancel</a></li>
+<li><a href="#recover">Recover stale jobs</a></li>
+<li><a href="#restore">Restore safely</a></li>
+<li><a href="#limits">Truth boundary</a></li>
+<li><a href="#source-basis">Source basis</a></li>
+</ol>
+<h2 id="operations-model">Operations model</h2>
+<p>Destructive or state-changing operations are separated from inspection and use explicit apply or destination choices.Project check → Deterministic backup → Dry-run change → Apply repair → Durable pipeline → Recovery → Verified restore</p>
+<p>Project checkDeterministic backupDry-run changeApply repairDurable pipelineRecoveryVerified restore</p>
+<p>Destructive or state-changing operations are separated from inspection and use explicit apply or destination choices.</p>
+<pre><code class="language-ascii-fallback">Project check → Deterministic backup → Dry-run change → Apply repair → Durable pipeline → Recovery → Verified restore
+</code></pre>
+<p>1</p>
+<h2 id="check-state-and-create-a-backup-first">Check state and create a backup first</h2>
+<pre><code>x86decomp project-check project
+x86decomp project-backup project backups/project-before-change.tar.gz
+</code></pre>
+<p>The backup is a deterministic gzip/tar archive for the same project content and rejects symlinks. Keep it outside the project root that may be repaired or migrated.</p>
+<p>2</p>
+<h2 id="preview-migrations-and-repairs">Preview migrations and repairs</h2>
+<pre><code>x86decomp project-migrate project --dry-run
+x86decomp project-repair project
+</code></pre>
+<p>Both commands are inspection-first. <code>project-repair</code> is dry-run unless <code>--apply</code> is supplied and repairs only derivable infrastructure; it does not invent missing source, toolchains, evidence, or validation results.</p>
+<pre><code>x86decomp project-migrate project --backup backups/project-migration.tar.gz
+x86decomp project-repair project --apply
+</code></pre>
+<p>3</p>
+<h2 id="verify-the-content-store-before-garbage-collection">Verify the content store before garbage collection</h2>
+<pre><code>x86decomp content-verify project/artifacts
+x86decomp project-gc project
+x86decomp project-gc project --apply
+</code></pre>
+<p>GC is dry-run by default and removes only unreferenced content-store objects when applied. It is not a generic deletion command for project reports or source files.</p>
+<p>4</p>
+<h2 id="create-and-run-a-durable-pipeline">Create and run a durable pipeline</h2>
+<pre><code>x86decomp pipeline-create project project/orchestration/pipelines/default.json
+x86decomp pipeline-run project project/orchestration/pipelines/default.json
+</code></pre>
+<p>Use <code>--without-ghidra</code> when the default pipeline must omit that stage. The orchestrator persists jobs in SQLite, computes idempotency keys from normalized contracts and input hashes, materializes outputs into the content store, and revalidates successful outputs before reuse.</p>
+<p>5</p>
+<h2 id="inspect-retry-or-cancel-explicit-jobs">Inspect, retry, or cancel explicit jobs</h2>
+<pre><code>x86decomp pipeline-status project PIPELINE_ID
+x86decomp pipeline-retry project PIPELINE_ID STAGE_ID --cascade
+x86decomp pipeline-cancel project PIPELINE_ID --stage-id STAGE_ID
+</code></pre>
+<p>Retry and cancellation operate on durable identifiers returned by the pipeline. <code>--cascade</code> deliberately invalidates dependent stages; it is not implied by a normal retry.</p>
+<p>6</p>
+<h2 id="recover-only-stale-runner-heartbeats">Recover only stale runner heartbeats</h2>
+<pre><code>x86decomp pipeline-recover project --pipeline-id PIPELINE_ID --stale-seconds 600
+</code></pre>
+<p>Recovery resets jobs whose durable runner heartbeat is stale under the supplied threshold. It does not declare failed validators successful or reconstruct lost outputs.</p>
+<p>7</p>
+<h2 id="restore-into-a-deliberate-destination">Restore into a deliberate destination</h2>
+<pre><code>x86decomp project-restore backups/project-before-change.tar.gz restored-project
+x86decomp project-check restored-project
+x86decomp content-verify restored-project/artifacts
+</code></pre>
+<p>Restore uses staging and archive safety bounds before committing the destination. Verify the restored project before replacing any active workspace.</p>
+<h2 id="operational-guarantees-and-limits">Operational guarantees and limits</h2>
+<ul>
+<li>Backups protect recorded project state, not external toolchains or referenced artifacts that were never copied.</li>
+<li>Repair restores derivable infrastructure only.</li>
+<li>Pipeline reuse depends on validated identities and materialized outputs.</li>
+<li>Stale-job recovery changes runner state, not scientific or validation conclusions.</li>
+<li>Always retain a verified backup before applying migrations, repair, or GC.</li>
+</ul>
+<h2 id="v074-source-basis">v0.7.4 source basis</h2>
+<blockquote>
+<p><strong>Triple-check model.</strong> Each example was checked against the CLI parser, implementation behavior, and an independent test, schema, or contract document. Full hashes and search anchors are in <a href="../source-audit/">the source audit</a>.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Evidence class</th>
+<th>File</th>
+<th>Lines</th>
+<th>SHA-256</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>parser</td>
+<td><code>src/x86decomp/cli.py</code></td>
+<td>L210–L213</td>
+<td><code>21e0654ced2f</code></td>
+</tr>
+<tr>
+<td>parser</td>
+<td><code>src/x86decomp/cli.py</code></td>
+<td>L220–L223</td>
+<td><code>21e0654ced2f</code></td>
+</tr>
+<tr>
+<td>implementation</td>
+<td><code>src/x86decomp/content_store.py</code></td>
+<td>L45–L48</td>
+<td><code>4902a167d8d4</code></td>
+</tr>
+<tr>
+<td>implementation</td>
+<td><code>src/x86decomp/orchestrator.py</code></td>
+<td>L187–L190</td>
+<td><code>752a6e6b5d4f</code></td>
+</tr>
+<tr>
+<td>implementation</td>
+<td><code>src/x86decomp/project.py</code></td>
+<td>L103–L106</td>
+<td><code>a9077107216c</code></td>
+</tr>
+<tr>
+<td>implementation</td>
+<td><code>src/x86decomp/project_state.py</code></td>
+<td>L186–L189</td>
+<td><code>8d063061a36e</code></td>
+</tr>
+<tr>
+<td>implementation</td>
+<td><code>src/x86decomp/project_state.py</code></td>
+<td>L243–L246</td>
+<td><code>8d063061a36e</code></td>
+</tr>
+<tr>
+<td>test</td>
+<td><code>tests/test_production.py</code></td>
+<td>L94–L97</td>
+<td><code>da0d4bd57f7f</code></td>
+</tr>
+<tr>
+<td>test</td>
+<td><code>tests/test_production.py</code></td>
+<td>L122–L125</td>
+<td><code>da0d4bd57f7f</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="related-examples">Related examples</h2>
+<p>[Matching project</p>
+<p>Open the source-verified workflow.](matching-project.md)[Functional project</p>
+<p>Open the source-verified workflow.](functional-project.md)[Hybrid composition</p>
+<p>Open the source-verified workflow.](hybrid-project.md)</p></p>
+    </article>
+</section>
+            <!-- endblock -->
+
+            <!-- block footer -->
+                <footer>
+    <div class="d-flex flex-sm-row justify-content-between py-2 border-top drac-text-black drac-bg-cyan-green">
+        <a href="https://github.com/dracula/mkdocs" target="_blank" style="padding-left: 1%;"
+            class="footer-text drac-anchor drac-text-black drac-text-purple--hover">
+            Made with Dracula Theme for MkDocs
+        </a>
+    </div>
+</footer>
+            <!-- endblock -->
+        </div>
+
+    </main>
+
+        <script>var base_url = '../..';</script>
+        <script src="../../assets/js/jquery-3.3.1.slim.min.js"></script>
+        <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+        <script src="../../assets/js/mkdocs.js"></script>
+			<script src="../../search/main.js" defer></script>
+
+</body>
+
+</html>

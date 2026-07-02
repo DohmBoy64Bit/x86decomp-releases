@@ -1,0 +1,44 @@
+site_name: x86decomp 0.7.4 Docs
+site_description: End-user documentation for x86decomp-toolkit 0.7.4
+docs_dir: docs
+site_dir: site
+use_directory_urls: true
+theme:
+  name: dracula
+plugins:
+- search
+markdown_extensions:
+- admonition
+- attr_list
+- def_list
+- fenced_code
+- footnotes
+- md_in_html
+- sane_lists
+- tables
+- toc:
+    permalink: false
+extra_css:
+- assets/x86decomp-dracula-overrides.css
+validation:
+  nav:
+    omitted_files: ignore
+nav:
+- Home: index.md
+- Getting Started: getting-started.md
+- Workflows: workflows.md
+- Project Examples: project-examples.md
+- Reference:
+  - Overview: reference.md
+  - Commands: commands/index.md
+  - Schemas: schemas.md
+  - Integrations: integrations.md
+  - Source Modules: features/index.md
+  - Function Index: functions/index.md
+  - Tests: tests/index.md
+- Release Evidence:
+  - Overview: release-evidence.md
+  - Verification: verification.md
+  - Source Coverage: source-coverage.md
+  - Changelog: changelog.md
+  - About: about.md

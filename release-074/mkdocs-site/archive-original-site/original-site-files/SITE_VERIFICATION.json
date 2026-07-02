@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "status": "pass",
+  "verification_scope": "offline site integrity and completeness",
+  "source_audit_status": "pass",
+  "source_audit_check_families": 28,
+  "source_audit_failures": 0,
+  "html_pages": 354,
+  "search_entries": 2183,
+  "command_sections": 285,
+  "parsed_examples": 622,
+  "modules": 137,
+  "functions_and_methods": 983,
+  "tests": 215,
+  "schemas": 93,
+  "adapters": 31,
+  "source_manifest_files": 411,
+  "project_example_source_anchors": 95,
+  "note": "Regenerate SHA256SUMS.txt after modifying any published site file, then run python verify_site.py."
+}

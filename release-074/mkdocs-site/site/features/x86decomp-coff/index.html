@@ -1,0 +1,678 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+        <title>x86decomp.coff - x86decomp 0.7.4 Docs</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        
+        
+        
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="../../assets/css/darcula-highlight.min.css">
+
+        <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../assets/css/dracula-ui.min.css">
+        <link rel="stylesheet" href="../../assets/css/mkdocs.min.css">
+            <link href="../../assets/x86decomp-dracula-overrides.css" rel="stylesheet">
+
+        
+            <link  rel="icon" type="image/x-icon" href="../../assets/img/favicon.ico">
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+                <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+
+<body class="drac-bg-black-secondary drac-text-grey-ternary drac-text drac-scrollbar-purple">
+
+    <main class="d-flex">
+
+        <!-- block sidebar -->
+            <nav id="sidebar" class="sidebar drac-bg-black">
+    <div class="custom-menu">
+        <button type="button" id="sidebarCollapse" class="btn btn-primary">
+            <i class="fa fa-bars"></i>
+            <span class="sr-only">Menu</span>
+        </button>
+    </div>
+
+    <div class="p-4">
+        
+
+        <div class="drac-text-center">
+            
+                <span class="drac-text drac-line-height drac-text-white">x86decomp 0.7.4 Docs</span>
+            
+        </div>
+
+        <div class="drac-box flex-column">
+            <ul class="dot-ul">
+                <li><div class="dot-li drac-bg-cyan"></div></li>
+                <li><div class="dot-li drac-bg-green"></div></li>
+                <li><div class="dot-li drac-bg-orange"></div></li>
+                <li><div class="dot-li drac-bg-pink"></div></li>
+                <li><div class="dot-li drac-bg-purple"></div></li>
+                <li><div class="dot-li drac-bg-red"></div></li>
+                <li><div class="dot-li drac-bg-yellow"></div></li>
+            </ul>
+        </div>
+
+        <hr class="drac-divider" />
+
+        <!-- block menu -->
+        <ul class="mb-5 drac-list drac-list-none">
+            
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Home
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../../getting-started/"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Getting Started
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../../workflows/"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Workflows
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../../project-examples/"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Project Examples
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#reference-collapse" aria-expanded="false">
+                    Reference
+                </a>
+                <div class="collapse" id="reference-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../reference/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../commands/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Commands
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../schemas/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Schemas
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../integrations/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Integrations
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Source Modules
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../functions/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Function Index
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../tests/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Tests
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#release-evidence-collapse" aria-expanded="false">
+                    Release Evidence
+                </a>
+                <div class="collapse" id="release-evidence-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../release-evidence/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../verification/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Verification
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../source-coverage/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Source Coverage
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../changelog/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Changelog
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../about/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            About
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <!-- endblock -->
+    </div>
+</nav>
+        <!-- endblock -->
+
+        <nav class="divider drac-bg-purple-cyan"></nav>
+
+        <div class="content">
+            <!-- block header -->
+                <header>
+    <nav class="navbar navbar-expand-xl drac-bg-purple">
+        <div class="container-fluid">
+            
+            <button class="navbar-toggler w-100 text-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMenu"
+                aria-controls="navbarsMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse flex-column ml-auto" id="navbarsMenu">
+                <ul class="navbar-nav text-md-center">
+
+                    <!-- block preview -->
+                    <li class="nav-item">
+                            
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block search -->
+                    <li class="nav-item"><div role="search" class="search-box">
+	<form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+		<input type="text" name="q" class="drac-input drac-input-search drac-input-white drac-text-white drac-bg-black-secondary"
+		placeholder="Search docs" title="Type search term here" />
+	</form>
+</div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block source -->
+                    <li class="nav-item">
+                        
+                    </li>
+                    <!--  endblock -->
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+</header>
+            <!-- endblock -->
+
+            <!-- block content -->
+                <section class="p-md-5 section-content">
+    <article>
+        <p><p><a id="function-relocation-name"></a>
+<a id="function-relocation-width"></a>
+<a id="function-relocation-is-pc-relative"></a>
+<a id="function-coffrelocation-width"></a>
+<a id="function-coffrelocation-to-dict"></a>
+<a id="function-sectiondefinitionaux-selection-name"></a>
+<a id="function-sectiondefinitionaux-to-dict"></a>
+<a id="function-functiondefinitionaux-to-dict"></a>
+<a id="function-weakexternalaux-to-dict"></a>
+<a id="function-fileaux-to-dict"></a>
+<a id="function-rawaux-to-dict"></a>
+<a id="function-coffsection-is-comdat"></a>
+<a id="function-coffsection-comdat-selection-name"></a>
+<a id="function-coffsection-alignment-power"></a>
+<a id="function-coffsection-alignment"></a>
+<a id="function-coffsection-to-dict"></a>
+<a id="function-coffsymbol-is-function"></a>
+<a id="function-coffsymbol-section-definition"></a>
+<a id="function-coffsymbol-function-definition"></a>
+<a id="function-coffsymbol-weak-external"></a>
+<a id="function-coffsymbol-to-dict"></a>
+<a id="function-coffobject-architecture"></a>
+<a id="function-coffobject-section"></a>
+<a id="function-coffobject-find-symbols"></a>
+<a id="function-coffobject-symbol-by-index"></a>
+<a id="function-coffobject-to-dict"></a>
+<a id="function-extractedsymbol-to-dict"></a>
+<a id="function-comdatcandidate-to-dict"></a>
+<a id="function-comdatresolution-valid"></a>
+<a id="function-comdatresolution-to-dict"></a>
+<a id="function-reader-init"></a>
+<a id="function-reader-require"></a>
+<a id="function-reader-unpack"></a>
+<a id="function-read-string-table"></a>
+<a id="function-string-at"></a>
+<a id="function-decode-symbol-name"></a>
+<a id="function-decode-section-name"></a>
+<a id="function-parse-header"></a>
+<a id="function-parse-auxiliary-records"></a>
+<a id="function-read-addend"></a>
+<a id="function-parse-coff-bytes"></a>
+<a id="function-parse-coff"></a>
+<a id="function-extract-symbol"></a>
+<a id="function-collect-comdat-candidates"></a>
+<a id="function-resolve-comdats"></a>
+<a id="function-encode-name"></a>
+<a id="function-section-aux-bytes"></a>
+<a id="function-build-synthetic-coff-object"></a>
+<a id="function-synthetic-symbol-indices"></a>
+<a id="function-build-synthetic-coff"></a>
+<a id="function-build-comdat-coff"></a>
+<a id="function-write-synthetic-coff"></a>
+<a id="function-write-synthetic-coff-object"></a></p>
+<p>Section: Source-derived feature and function reference</p>
+<h1 id="x86decompcoff">x86decomp.coff</h1>
+<p>Strict COFF object parsing, COMDAT resolution, and deterministic synthesis.</p>
+<p>Metadata: core · current · 53 functions/methods</p>
+<p><strong>Source:</strong> <code>src/x86decomp/coff.py</code></p>
+<blockquote>
+<p><strong>Truth basis.</strong> Module and symbol names, signatures, line numbers, docstrings, and SHA-256 are read directly from the sealed source. When source docstrings are absent, this page says so instead of inferring behavior. Source SHA-256: <code>f6900af73b991d2ed380250c78d4a228ff6b10f45bd4bcf04fb449c45f13d28e</code>.</p>
+</blockquote>
+<h2 id="functions-and-methods">Functions and methods</h2>
+<p>Metadata: public · line 127</p>
+<h3 id="relocation_name">relocation_name</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def relocation_name(machine: int, relocation_type: int) -&gt; str
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.coff:relocation_name</code></p>
+<p>Metadata: public · line 132</p>
+<h3 id="relocation_width">relocation_width</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def relocation_width(machine: int, relocation_type: int) -&gt; int | None
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.coff:relocation_width</code></p>
+<p>Metadata: public · line 137</p>
+<h3 id="relocation_is_pc_relative">relocation_is_pc_relative</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def relocation_is_pc_relative(machine: int, relocation_type: int) -&gt; bool
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.coff:relocation_is_pc_relative</code></p>
+<p>Metadata: public · line 151</p>
+<h3 id="coffrelocationwidth">CoffRelocation.width</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def width(self, machine: int) -&gt; int | None
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.coff:CoffRelocation.width</code></p>
+<p>Metadata: public · line 154</p>
+<h3 id="coffrelocationto_dict">CoffRelocation.to_dict</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def to_dict(self, machine: int) -&gt; dict[str, Any]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.coff:CoffRelocation.to_dict</code></p>
+<p>Metadata: public · line 178</p>
+<h3 id="sectiondefinitionauxselection_name">SectionDefinitionAux.selection_name</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def selection_name(self) -&gt; str
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.coff:SectionDefinitionAux.selection_name</code></p>
+<p>Metadata: public · line 181</p>
+<h3 id="sectiondefinitionauxto_dict">SectionDefinitionAux.to_dict</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def to_dict(self) -&gt; dict[str, Any]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.coff:SectionDefinitionAux.to_dict</code></p>
+<p>Metadata: public · line 202</p>
+<h3 id="functiondefinitionauxto_dict">FunctionDefinitionAux.to_dict</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def to_dict(self) -&gt; dict[str, Any]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.coff:FunctionDefinitionAux.to_dict</code></p>
+<p>Metadata: public · line 217</p>
+<h3 id="weakexternalauxto_dict">WeakExternalAux.to_dict</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def to_dict(self) -&gt; dict[str, Any]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.coff:WeakExternalAux.to_dict</code></p>
+<p>Metadata: public · line 231</p>
+<h3 id="fileauxto_dict">FileAux.to_dict</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def to_dict(self) -&gt; dict[str, Any]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.coff:FileAux.to_dict</code></p>
+<p>Metadata: public · line 239</p>
+<h3 id="rawauxto_dict">RawAux.to_dict</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def to_dict(self) -&gt; dict[str, Any]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.coff:RawAux.to_dict</code></p>
+<p>Metadata: public · line 263</p>
+<h3 id="coffsectionis_comdat">CoffSection.is_comdat</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def is_comdat(self) -&gt; bool
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.coff:CoffSection.is_comdat</code></p>
+<p>Metadata: public · line 267</p>
+<h3 id="coffsectioncomdat_selection_name">CoffSection.comdat_selection_name</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def comdat_selection_name(self) -&gt; str
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.coff:CoffSection.comdat_selection_name</code></p>
+<p>Metadata: public · line 271</p>
+<h3 id="coffsectionalignment_power">CoffSection.alignment_power</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def alignment_power(self) -&gt; int | None
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.coff:CoffSection.alignment_power</code></p>
+<p>Metadata: public · line 280</p>
+<h3 id="coffsectionalignment">CoffSection.alignment</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def alignment(self) -&gt; int | None
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.coff:CoffSection.alignment</code></p>
+<p>Metadata: public · line 284</p>
+<h3 id="coffsectionto_dict">CoffSection.to_dict</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def to_dict(self, machine: int) -&gt; dict[str, Any]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.coff:CoffSection.to_dict</code></p>
+<p>Metadata: public · line 320</p>
+<h3 id="coffsymbolis_function">CoffSymbol.is_function</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def is_function(self) -&gt; bool
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.coff:CoffSymbol.is_function</code></p>
+<p>Metadata: public · line 326</p>
+<h3 id="coffsymbolsection_definition">CoffSymbol.section_definition</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def section_definition(self) -&gt; SectionDefinitionAux | None
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.coff:CoffSymbol.section_definition</code></p>
+<p>Metadata: public · line 333</p>
+<h3 id="coffsymbolfunction_definition">CoffSymbol.function_definition</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def function_definition(self) -&gt; FunctionDefinitionAux | None
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.coff:CoffSymbol.function_definition</code></p>
+<p>Metadata: public · line 340</p>
+<h3 id="coffsymbolweak_external">CoffSymbol.weak_external</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def weak_external(self) -&gt; WeakExternalAux | None
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.coff:CoffSymbol.weak_external</code></p>
+<p>Metadata: public · line 346</p>
+<h3 id="coffsymbolto_dict">CoffSymbol.to_dict</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def to_dict(self) -&gt; dict[str, Any]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.coff:CoffSymbol.to_dict</code></p>
+<p>Metadata: public · line 373</p>
+<h3 id="coffobjectarchitecture">CoffObject.architecture</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def architecture(self) -&gt; str
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.coff:CoffObject.architecture</code></p>
+<p>Metadata: public · line 380</p>
+<h3 id="coffobjectsection">CoffObject.section</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def section(self, number: int) -&gt; CoffSection
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.coff:CoffObject.section</code></p>
+<p>Metadata: public · line 385</p>
+<h3 id="coffobjectfind_symbols">CoffObject.find_symbols</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def find_symbols(self, name: str) -&gt; list[CoffSymbol]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.coff:CoffObject.find_symbols</code></p>
+<p>Metadata: public · line 391</p>
+<h3 id="coffobjectsymbol_by_index">CoffObject.symbol_by_index</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def symbol_by_index(self, index: int) -&gt; CoffSymbol | None
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.coff:CoffObject.symbol_by_index</code></p>
+<p>Metadata: public · line 394</p>
+<h3 id="coffobjectto_dict">CoffObject.to_dict</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def to_dict(self) -&gt; dict[str, Any]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.coff:CoffObject.to_dict</code></p>
+<p>Metadata: public · line 420</p>
+<h3 id="extractedsymbolto_dict">ExtractedSymbol.to_dict</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def to_dict(self, machine: int) -&gt; dict[str, Any]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.coff:ExtractedSymbol.to_dict</code></p>
+<p>Metadata: public · line 443</p>
+<h3 id="comdatcandidateto_dict">ComdatCandidate.to_dict</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def to_dict(self) -&gt; dict[str, Any]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.coff:ComdatCandidate.to_dict</code></p>
+<p>Metadata: public · line 465</p>
+<h3 id="comdatresolutionvalid">ComdatResolution.valid</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def valid(self) -&gt; bool
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.coff:ComdatResolution.valid</code></p>
+<p>Metadata: public · line 468</p>
+<h3 id="comdatresolutionto_dict">ComdatResolution.to_dict</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def to_dict(self) -&gt; dict[str, Any]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.coff:ComdatResolution.to_dict</code></p>
+<p>Metadata: internal · line 501</p>
+<h3 id="_readerinit">_Reader.<strong>init</strong></h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def __init__(self, data: bytes)
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.coff:_Reader.__init__</code></p>
+<p>Metadata: internal · line 504</p>
+<h3 id="_readerrequire">_Reader.require</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def require(self, offset: int, size: int, context: str) -&gt; None
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.coff:_Reader.require</code></p>
+<p>Metadata: internal · line 510</p>
+<h3 id="_readerunpack">_Reader.unpack</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def unpack(self, fmt: str, offset: int, context: str) -&gt; tuple[Any, ...]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.coff:_Reader.unpack</code></p>
+<p>Metadata: internal · line 516</p>
+<h3 id="_read_string_table">_read_string_table</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def _read_string_table(reader: _Reader, pointer_to_symbols: int, count: int, symbol_record_size: int) -&gt; bytes
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.coff:_read_string_table</code></p>
+<p>Metadata: internal · line 530</p>
+<h3 id="_string_at">_string_at</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def _string_at(table: bytes, offset: int, context: str) -&gt; str
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.coff:_string_at</code></p>
+<p>Metadata: internal · line 539</p>
+<h3 id="_decode_symbol_name">_decode_symbol_name</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def _decode_symbol_name(raw: bytes, table: bytes) -&gt; str
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.coff:_decode_symbol_name</code></p>
+<p>Metadata: internal · line 546</p>
+<h3 id="_decode_section_name">_decode_section_name</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def _decode_section_name(raw: bytes, table: bytes) -&gt; str
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.coff:_decode_section_name</code></p>
+<p>Metadata: internal · line 553</p>
+<h3 id="_parse_header">_parse_header</h3>
+<p>Return variant, machine, sections, timestamp, symptr, symcount, characteristics, section-header-offset, symbol-record-size.</p>
+<pre><code>def _parse_header(reader: _Reader) -&gt; tuple[str, int, int, int, int, int, int, int, int]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.coff:_parse_header</code></p>
+<p>Metadata: internal · line 607</p>
+<h3 id="_parse_auxiliary_records">_parse_auxiliary_records</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def _parse_auxiliary_records(*, symbol_name: str, section_number: int, symbol_type: int, storage_class: int, raw_records: Sequence[bytes], symbol_record_size: int) -&gt; tuple[CoffAuxRecord, ...]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.coff:_parse_auxiliary_records</code></p>
+<p>Metadata: internal · line 665</p>
+<h3 id="_read_addend">_read_addend</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def _read_addend(raw_data: bytes, offset: int, width: int | None) -&gt; int | None
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.coff:_read_addend</code></p>
+<p>Metadata: public · line 671</p>
+<h3 id="parse_coff_bytes">parse_coff_bytes</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def parse_coff_bytes(data: bytes, *, path: Path | None = None) -&gt; CoffObject
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.coff:parse_coff_bytes</code></p>
+<p>Metadata: public · line 869</p>
+<h3 id="parse_coff">parse_coff</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def parse_coff(path: Path) -&gt; CoffObject
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.coff:parse_coff</code></p>
+<p>Metadata: public · line 876</p>
+<h3 id="extract_symbol">extract_symbol</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def extract_symbol(obj: CoffObject, name: str, *, size: int | None = None) -&gt; ExtractedSymbol
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.coff:extract_symbol</code></p>
+<p>Metadata: public · line 931</p>
+<h3 id="collect_comdat_candidates">collect_comdat_candidates</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def collect_comdat_candidates(objects: Sequence[CoffObject]) -&gt; tuple[ComdatCandidate, ...]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.coff:collect_comdat_candidates</code></p>
+<p>Metadata: public · line 958</p>
+<h3 id="resolve_comdats">resolve_comdats</h3>
+<p>Resolve COMDAT groups using PE/COFF selection semantics.</p>
+<pre><code>def resolve_comdats(objects: Sequence[CoffObject]) -&gt; ComdatResolution
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.coff:resolve_comdats</code></p>
+<p>Metadata: internal · line 1059</p>
+<h3 id="_encode_name">_encode_name</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def _encode_name(name: str, strings: bytearray) -&gt; bytes
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.coff:_encode_name</code></p>
+<p>Metadata: internal · line 1068</p>
+<h3 id="_section_aux_bytes">_section_aux_bytes</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def _section_aux_bytes(*, length: int, relocation_count: int, checksum: int, associative_section: int, selection: int) -&gt; bytes
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.coff:_section_aux_bytes</code></p>
+<p>Metadata: public · line 1084</p>
+<h3 id="build_synthetic_coff_object">build_synthetic_coff_object</h3>
+<p>Build a deterministic classic COFF object with multiple sections.</p>
+<pre><code>def build_synthetic_coff_object(*, sections: Sequence[SyntheticSectionSpec], symbols: Sequence[SyntheticSymbolSpec], machine: int = IMAGE_FILE_MACHINE_I386, timestamp: int = 0) -&gt; bytes
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.coff:build_synthetic_coff_object</code></p>
+<p>Metadata: public · line 1201</p>
+<h3 id="synthetic_symbol_indices">synthetic_symbol_indices</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def synthetic_symbol_indices(symbols: Sequence[SyntheticSymbolSpec]) -&gt; dict[str, int]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.coff:synthetic_symbol_indices</code></p>
+<p>Metadata: public · line 1212</p>
+<h3 id="build_synthetic_coff">build_synthetic_coff</h3>
+<p>Backward-compatible one-section synthetic COFF builder.</p>
+<pre><code>def build_synthetic_coff(*, code: bytes, symbol_name: str, machine: int = IMAGE_FILE_MACHINE_I386, relocations: Iterable[CoffRelocation] = (), timestamp: int = 0) -&gt; bytes
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.coff:build_synthetic_coff</code></p>
+<p>Metadata: public · line 1252</p>
+<h3 id="build_comdat_coff">build_comdat_coff</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def build_comdat_coff(*, data: bytes, symbol_name: str, section_name: str = '.text$mn', machine: int = IMAGE_FILE_MACHINE_I386, selection: int = IMAGE_COMDAT_SELECT_ANY, associative_section: int = 0, timestamp: int = 0, characteristics: int = IMAGE_SCN_CNT_CODE | IMAGE_SCN_MEM_EXECUTE | IMAGE_SCN_MEM_READ, relocations: Iterable[CoffRelocation] = ()) -&gt; bytes
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.coff:build_comdat_coff</code></p>
+<p>Metadata: public · line 1317</p>
+<h3 id="write_synthetic_coff">write_synthetic_coff</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def write_synthetic_coff(path: Path, *, code: bytes, symbol_name: str, machine: int = IMAGE_FILE_MACHINE_I386, relocations: Iterable[CoffRelocation] = ()) -&gt; dict[str, Any]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.coff:write_synthetic_coff</code></p>
+<p>Metadata: public · line 1334</p>
+<h3 id="write_synthetic_coff_object">write_synthetic_coff_object</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def write_synthetic_coff_object(path: Path, *, sections: Sequence[SyntheticSectionSpec], symbols: Sequence[SyntheticSymbolSpec], machine: int = IMAGE_FILE_MACHINE_I386, timestamp: int = 0) -&gt; dict[str, Any]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.coff:write_synthetic_coff_object</code></p></p>
+    </article>
+</section>
+            <!-- endblock -->
+
+            <!-- block footer -->
+                <footer>
+    <div class="d-flex flex-sm-row justify-content-between py-2 border-top drac-text-black drac-bg-cyan-green">
+        <a href="https://github.com/dracula/mkdocs" target="_blank" style="padding-left: 1%;"
+            class="footer-text drac-anchor drac-text-black drac-text-purple--hover">
+            Made with Dracula Theme for MkDocs
+        </a>
+    </div>
+</footer>
+            <!-- endblock -->
+        </div>
+
+    </main>
+
+        <script>var base_url = '../..';</script>
+        <script src="../../assets/js/jquery-3.3.1.slim.min.js"></script>
+        <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+        <script src="../../assets/js/mkdocs.js"></script>
+			<script src="../../search/main.js" defer></script>
+
+</body>
+
+</html>

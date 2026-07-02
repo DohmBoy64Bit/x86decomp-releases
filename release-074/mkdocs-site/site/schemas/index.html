@@ -1,0 +1,1328 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+        <title>Schemas - x86decomp 0.7.4 Docs</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        
+        
+        
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="../assets/css/darcula-highlight.min.css">
+
+        <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../assets/css/dracula-ui.min.css">
+        <link rel="stylesheet" href="../assets/css/mkdocs.min.css">
+            <link href="../assets/x86decomp-dracula-overrides.css" rel="stylesheet">
+
+        
+            <link  rel="icon" type="image/x-icon" href="../assets/img/favicon.ico">
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+                <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+
+<body class="drac-bg-black-secondary drac-text-grey-ternary drac-text drac-scrollbar-purple">
+
+    <main class="d-flex">
+
+        <!-- block sidebar -->
+            <nav id="sidebar" class="sidebar drac-bg-black">
+    <div class="custom-menu">
+        <button type="button" id="sidebarCollapse" class="btn btn-primary">
+            <i class="fa fa-bars"></i>
+            <span class="sr-only">Menu</span>
+        </button>
+    </div>
+
+    <div class="p-4">
+        
+
+        <div class="drac-text-center">
+            
+                <span class="drac-text drac-line-height drac-text-white">x86decomp 0.7.4 Docs</span>
+            
+        </div>
+
+        <div class="drac-box flex-column">
+            <ul class="dot-ul">
+                <li><div class="dot-li drac-bg-cyan"></div></li>
+                <li><div class="dot-li drac-bg-green"></div></li>
+                <li><div class="dot-li drac-bg-orange"></div></li>
+                <li><div class="dot-li drac-bg-pink"></div></li>
+                <li><div class="dot-li drac-bg-purple"></div></li>
+                <li><div class="dot-li drac-bg-red"></div></li>
+                <li><div class="dot-li drac-bg-yellow"></div></li>
+            </ul>
+        </div>
+
+        <hr class="drac-divider" />
+
+        <!-- block menu -->
+        <ul class="mb-5 drac-list drac-list-none">
+            
+            <li class="drac-box">
+                <a href=".."
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Home
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../getting-started/"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Getting Started
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../workflows/"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Workflows
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../project-examples/"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Project Examples
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href=".."
+                    class=" active 
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#reference-collapse" aria-expanded="false">
+                    Reference
+                </a>
+                <div class="collapse" id="reference-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../reference/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../commands/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Commands
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="./"
+            class=" active 
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Schemas
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../integrations/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Integrations
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../features/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Source Modules
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../functions/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Function Index
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../tests/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Tests
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href=".."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#release-evidence-collapse" aria-expanded="false">
+                    Release Evidence
+                </a>
+                <div class="collapse" id="release-evidence-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../release-evidence/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../verification/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Verification
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../source-coverage/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Source Coverage
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../changelog/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Changelog
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../about/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            About
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <!-- endblock -->
+    </div>
+</nav>
+        <!-- endblock -->
+
+        <nav class="divider drac-bg-purple-cyan"></nav>
+
+        <div class="content">
+            <!-- block header -->
+                <header>
+    <nav class="navbar navbar-expand-xl drac-bg-purple">
+        <div class="container-fluid">
+            
+            <button class="navbar-toggler w-100 text-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMenu"
+                aria-controls="navbarsMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse flex-column ml-auto" id="navbarsMenu">
+                <ul class="navbar-nav text-md-center">
+
+                    <!-- block preview -->
+                    <li class="nav-item">
+                            
+        <div class="container">
+            <div class="row row-preview">
+                <div class="col">
+                    <a href="../commands/"
+                        class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover">
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="../integrations/"
+                        class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover" style="padding-left: 3%;">
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block search -->
+                    <li class="nav-item"><div role="search" class="search-box">
+	<form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+		<input type="text" name="q" class="drac-input drac-input-search drac-input-white drac-text-white drac-bg-black-secondary"
+		placeholder="Search docs" title="Type search term here" />
+	</form>
+</div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block source -->
+                    <li class="nav-item">
+                        
+                    </li>
+                    <!--  endblock -->
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+</header>
+            <!-- endblock -->
+
+            <!-- block content -->
+                <section class="p-md-5 section-content">
+    <article>
+        <p><p><a id="schema-abi-contract-schema-json"></a>
+<a id="schema-assembly-asm-function-schema-json"></a>
+<a id="schema-assembly-asm-run-schema-json"></a>
+<a id="schema-assembly-relocation-resolution-schema-json"></a>
+<a id="schema-assembly-roundtrip-report-schema-json"></a>
+<a id="schema-assembly-symbol-map-schema-json"></a>
+<a id="schema-benchmark-corpus-schema-json"></a>
+<a id="schema-claim-schema-json"></a>
+<a id="schema-coff-archive-schema-json"></a>
+<a id="schema-comdat-resolution-schema-json"></a>
+<a id="schema-compiler-ground-truth-comparison-schema-json"></a>
+<a id="schema-compiler-ground-truth-schema-json"></a>
+<a id="schema-compiler-lab-schema-json"></a>
+<a id="schema-compiler-profile-schema-json"></a>
+<a id="schema-convergence-report-schema-json"></a>
+<a id="schema-cpp-recovery-schema-json"></a>
+<a id="schema-decompme-packet-schema-json"></a>
+<a id="schema-dependency-audit-schema-json"></a>
+<a id="schema-drcov-trace-schema-json"></a>
+<a id="schema-dynamic-report-schema-json"></a>
+<a id="schema-evidence-schema-json"></a>
+<a id="schema-exe-diff-report-schema-json"></a>
+<a id="schema-execution-harness-generated-schema-json"></a>
+<a id="schema-execution-harness-schema-json"></a>
+<a id="schema-function-workflow-schema-json"></a>
+<a id="schema-function-schema-json"></a>
+<a id="schema-governance-campaign-schema-json"></a>
+<a id="schema-governance-candidate-schema-json"></a>
+<a id="schema-governance-changeset-schema-json"></a>
+<a id="schema-governance-consensus-schema-json"></a>
+<a id="schema-governance-counterexample-schema-json"></a>
+<a id="schema-governance-family-schema-json"></a>
+<a id="schema-governance-hypothesis-schema-json"></a>
+<a id="schema-governance-knowledge-graph-schema-json"></a>
+<a id="schema-governance-plugin-schema-json"></a>
+<a id="schema-governance-proof-bundle-schema-json"></a>
+<a id="schema-governance-review-schema-json"></a>
+<a id="schema-governance-worker-schema-json"></a>
+<a id="schema-hybrid-project-schema-json"></a>
+<a id="schema-image-match-report-schema-json"></a>
+<a id="schema-image-profile-schema-json"></a>
+<a id="schema-integration-report-schema-json"></a>
+<a id="schema-integration-scenarios-schema-json"></a>
+<a id="schema-linker-layout-schema-json"></a>
+<a id="schema-linker-reconstruction-plan-schema-json"></a>
+<a id="schema-mcp-mutation-schema-json"></a>
+<a id="schema-memory-event-schema-json"></a>
+<a id="schema-msvc-metadata-schema-json"></a>
+<a id="schema-native-boundary-finding-schema-json"></a>
+<a id="schema-native-candidate-manifest-schema-json"></a>
+<a id="schema-native-function-match-schema-json"></a>
+<a id="schema-native-function-slot-schema-json"></a>
+<a id="schema-native-hybrid-composition-schema-json"></a>
+<a id="schema-native-loop-run-schema-json"></a>
+<a id="schema-native-match-run-schema-json"></a>
+<a id="schema-native-patch-plan-schema-json"></a>
+<a id="schema-native-runtime-validation-schema-json"></a>
+<a id="schema-native-section-export-schema-json"></a>
+<a id="schema-native-staging-symbol-schema-json"></a>
+<a id="schema-native-windows-tool-schema-json"></a>
+<a id="schema-objdiff-manifest-schema-json"></a>
+<a id="schema-pdb-schema-json"></a>
+<a id="schema-pipeline-schema-json"></a>
+<a id="schema-project-template-schema-json"></a>
+<a id="schema-project-schema-json"></a>
+<a id="schema-reconstruction-abi-contract-schema-json"></a>
+<a id="schema-reconstruction-build-schema-json"></a>
+<a id="schema-reconstruction-capsule-schema-json"></a>
+<a id="schema-reconstruction-compatibility-shim-schema-json"></a>
+<a id="schema-reconstruction-generated-test-schema-json"></a>
+<a id="schema-reconstruction-header-schema-json"></a>
+<a id="schema-reconstruction-library-match-schema-json"></a>
+<a id="schema-reconstruction-module-schema-json"></a>
+<a id="schema-reconstruction-security-finding-schema-json"></a>
+<a id="schema-reconstruction-semantic-changeset-schema-json"></a>
+<a id="schema-reconstruction-source-provenance-schema-json"></a>
+<a id="schema-reconstruction-translation-unit-schema-json"></a>
+<a id="schema-release-gate-schema-json"></a>
+<a id="schema-relink-manifest-schema-json"></a>
+<a id="schema-reproduction-schema-json"></a>
+<a id="schema-security-audit-schema-json"></a>
+<a id="schema-symbolic-memory-harness-schema-json"></a>
+<a id="schema-symbolic-memory-report-schema-json"></a>
+<a id="schema-symbolic-report-schema-json"></a>
+<a id="schema-synthetic-corpus-schema-json"></a>
+<a id="schema-target-decisions-schema-json"></a>
+<a id="schema-target-pack-schema-json"></a>
+<a id="schema-test-bundle-report-schema-json"></a>
+<a id="schema-test-bundle-schema-json"></a>
+<a id="schema-type-constraint-schema-json"></a>
+<a id="schema-verification-schema-json"></a>
+<a id="schema-work-task-schema-json"></a>
+<a id="schema-worker-report-schema-json"></a></p>
+<p>Section: Exact contract inventory</p>
+<h1 id="all-93-json-schemas">All 93 JSON Schemas</h1>
+<p>Each entry is read from the sealed schema file; no field purpose is invented when the schema omits a title or description.</p>
+<p><code>abi-contract.schema.json</code></p>
+<p>x86decomp ABI contract</p>
+<ul>
+<li><strong>Meta-schema:</strong> <code>https://json-schema.org/draft/2020-12/schema</code></li>
+<li><strong>$id:</strong> <code>urn:x86decomp:schema:abi-contract:1</code></li>
+<li><strong>Top-level type:</strong> <code>object</code></li>
+<li><strong>Required fields:</strong> <code>architecture</code>, <code>convention</code></li>
+<li><strong>Top-level properties:</strong> <code>architecture</code>, <code>callee_stack_cleanup</code>, <code>convention</code>, <code>floating_point</code>, <code>register_arguments</code>, <code>return_registers</code>, <code>stack_argument_bytes</code>, <code>structure_return</code>, <code>this_register</code>, <code>variadic</code></li>
+</ul>
+<p>SHA-256: <code>536e89f5ab760329f3799138b17c8a321170fc1fc729528d97b7f75d4af96c76</code></p>
+<p><code>assembly/asm-function.schema.json</code></p>
+<p>v0.7.4 function assembly result</p>
+<ul>
+<li><strong>Meta-schema:</strong> <code>https://json-schema.org/draft/2020-12/schema</code></li>
+<li><strong>$id:</strong> <code>https://x86decomp.local/schemas/assembly/asm-function.schema.json</code></li>
+<li><strong>Top-level type:</strong> <code>object</code></li>
+<li><strong>Required fields:</strong> <code>function_id</code>, <code>symbol</code>, <code>rva</code>, <code>format</code>, <code>classification</code>, <code>exact_match</code>, <code>input_sha256</code>, <code>source_sha256</code></li>
+<li><strong>Top-level properties:</strong> <code>byte_escape_count</code>, <code>classification</code>, <code>exact_match</code>, <code>format</code>, <code>function_id</code>, <code>input_sha256</code>, <code>instruction_count</code>, <code>mnemonic_count</code>, <code>relocation_count</code>, <code>resolved_relocation_count</code>, <code>rva</code>, <code>source_sha256</code>, <code>symbol</code>, <code>unresolved_relocation_count</code></li>
+</ul>
+<p>SHA-256: <code>9ae31159426d4b49aa320db1e33a5d38450aaffcb33f5b5329aed4b8819c7fea</code></p>
+<p><code>assembly/asm-run.schema.json</code></p>
+<p>v0.7.4 assembly run</p>
+<ul>
+<li><strong>Meta-schema:</strong> <code>https://json-schema.org/draft/2020-12/schema</code></li>
+<li><strong>$id:</strong> <code>https://x86decomp.local/schemas/assembly/asm-run.schema.json</code></li>
+<li><strong>Top-level type:</strong> <code>object</code></li>
+<li><strong>Required fields:</strong> <code>run_id</code>, <code>asm_format</code>, <code>architecture</code>, <code>status</code>, <code>summary</code></li>
+<li><strong>Top-level properties:</strong> <code>architecture</code>, <code>asm_format</code>, <code>run_id</code>, <code>status</code>, <code>summary</code></li>
+</ul>
+<p>SHA-256: <code>50c7a6ba318c9380e5ca9ee78e4f8183f9db66b55cbd55071aecd094a86e339f</code></p>
+<p><code>assembly/relocation-resolution.schema.json</code></p>
+<p>v0.7.4 COFF relocation resolution</p>
+<ul>
+<li><strong>Meta-schema:</strong> <code>https://json-schema.org/draft/2020-12/schema</code></li>
+<li><strong>$id:</strong> <code>https://x86decomp.local/schemas/assembly/relocation-resolution.schema.json</code></li>
+<li><strong>Top-level type:</strong> <code>object</code></li>
+<li><strong>Required fields:</strong> <code>object</code>, <code>symbol</code>, <code>architecture</code>, <code>base_rva</code>, <code>resolved_count</code>, <code>unresolved_count</code>, <code>relocations</code>, <code>exact_match</code></li>
+<li><strong>Top-level properties:</strong> <code>architecture</code>, <code>base_rva</code>, <code>exact_match</code>, <code>object</code>, <code>relocations</code>, <code>resolved_count</code>, <code>symbol</code>, <code>unresolved_count</code></li>
+</ul>
+<p>SHA-256: <code>435ffaa5de3c015c366f7f16c8c258753e8490530fe81a4d4f00b27e024d77a4</code></p>
+<p><code>assembly/roundtrip-report.schema.json</code></p>
+<p>v0.7.4 mnemonic round-trip report</p>
+<ul>
+<li><strong>Meta-schema:</strong> <code>https://json-schema.org/draft/2020-12/schema</code></li>
+<li><strong>$id:</strong> <code>https://x86decomp.local/schemas/assembly/roundtrip-report.schema.json</code></li>
+<li><strong>Top-level type:</strong> <code>object</code></li>
+<li><strong>Required fields:</strong> <code>source</code>, <code>object</code>, <code>symbol</code>, <code>rva</code>, <code>architecture</code>, <code>input_sha256</code>, <code>resolved_sha256</code>, <code>exact_match</code>, <code>classification</code></li>
+<li><strong>Top-level properties:</strong> <code>architecture</code>, <code>classification</code>, <code>exact_match</code>, <code>input_sha256</code>, <code>object</code>, <code>resolved_sha256</code>, <code>rva</code>, <code>semantic_equivalence_claimed</code>, <code>source</code>, <code>symbol</code></li>
+</ul>
+<p>SHA-256: <code>099b5806f963045b2a3f440dd0c25fe7a1286fe9e71fb5d6e0979f9fb4c1ec26</code></p>
+<p><code>assembly/symbol-map.schema.json</code></p>
+<p>v0.7.4 original-RVA symbol map</p>
+<ul>
+<li><strong>Meta-schema:</strong> <code>https://json-schema.org/draft/2020-12/schema</code></li>
+<li><strong>$id:</strong> <code>https://x86decomp.local/schemas/assembly/symbol-map.schema.json</code></li>
+<li><strong>Top-level type:</strong> <code>object</code></li>
+<li><strong>Required fields:</strong> none declared</li>
+<li><strong>Top-level properties:</strong> none declared</li>
+</ul>
+<p>SHA-256: <code>e46212d20e9eed2d774dffd1cf2bc62aca637a2025302761a86117430f42f25c</code></p>
+<p><code>benchmark-corpus.schema.json</code></p>
+<p>Ground-truth benchmark corpus</p>
+<ul>
+<li><strong>Meta-schema:</strong> <code>https://json-schema.org/draft/2020-12/schema</code></li>
+<li><strong>$id:</strong> <code>urn:x86decomp:schema:benchmark-corpus:1</code></li>
+<li><strong>Top-level type:</strong> <code>object</code></li>
+<li><strong>Required fields:</strong> <code>schema_version</code>, <code>name</code>, <code>cases</code></li>
+<li><strong>Top-level properties:</strong> <code>cases</code>, <code>name</code>, <code>schema_version</code></li>
+</ul>
+<p>SHA-256: <code>0081dd4d038287641f14ccd228dd0e824bff8bd3745f8251aaa0a94c1c61e36c</code></p>
+<p><code>claim.schema.json</code></p>
+<p>x86decomp claim</p>
+<ul>
+<li><strong>Meta-schema:</strong> <code>https://json-schema.org/draft/2020-12/schema</code></li>
+<li><strong>$id:</strong> <code>urn:x86decomp:schema:claim:1</code></li>
+<li><strong>Top-level type:</strong> <code>object</code></li>
+<li><strong>Required fields:</strong> <code>id</code>, <code>subject</code>, <code>predicate</code>, <code>object</code>, <code>state</code>, <code>evidence_ids</code>, <code>contradiction_ids</code>, <code>notes</code>, <code>created_at</code>, <code>updated_at</code></li>
+<li><strong>Top-level properties:</strong> <code>contradiction_ids</code>, <code>created_at</code>, <code>evidence_ids</code>, <code>id</code>, <code>notes</code>, <code>object</code>, <code>predicate</code>, <code>state</code>, <code>subject</code>, <code>updated_at</code></li>
+</ul>
+<p>SHA-256: <code>362341adcb81640a7839c77d37d7203b911e7e79655be6c0ab4115f460609532</code></p>
+<p><code>coff-archive.schema.json</code></p>
+<p>x86decomp COFF Archive Inspection</p>
+<ul>
+<li><strong>Meta-schema:</strong> <code>https://json-schema.org/draft/2020-12/schema</code></li>
+<li><strong>$id:</strong> <code>urn:x86decomp:schema:coff-archive:1</code></li>
+<li><strong>Top-level type:</strong> <code>object</code></li>
+<li><strong>Required fields:</strong> <code>schema_version</code>, <code>format</code>, <code>source_path</code>, <code>source_sha256</code>, <code>member_count</code>, <code>members</code>, <code>linker_symbols</code></li>
+<li><strong>Top-level properties:</strong> <code>format</code>, <code>linker_symbols</code>, <code>member_count</code>, <code>members</code>, <code>schema_version</code>, <code>source_path</code>, <code>source_sha256</code></li>
+</ul>
+<p>SHA-256: <code>5f5a43f1ce6ae1221df24107f7b9db057156731736ff4aad5c81c93a73abaab3</code></p>
+<p><code>comdat-resolution.schema.json</code></p>
+<p>COFF COMDAT resolution report</p>
+<ul>
+<li><strong>Meta-schema:</strong> <code>https://json-schema.org/draft/2020-12/schema</code></li>
+<li><strong>$id:</strong> <code>urn:x86decomp:schema:comdat-resolution:1</code></li>
+<li><strong>Top-level type:</strong> <code>object</code></li>
+<li><strong>Required fields:</strong> <code>schema_version</code>, <code>valid</code>, <code>winners</code>, <code>discarded</code>, <code>conflicts</code></li>
+<li><strong>Top-level properties:</strong> <code>conflicts</code>, <code>discarded</code>, <code>schema_version</code>, <code>valid</code>, <code>winners</code></li>
+</ul>
+<p>SHA-256: <code>01fd177dfa983202ca8770e7985aa623e166fd22c20fdecc1d3d37f9cbfe0aae</code></p>
+<p><code>compiler-ground-truth-comparison.schema.json</code></p>
+<p>Compiler/version ground-truth corpus comparison</p>
+<ul>
+<li><strong>Meta-schema:</strong> <code>https://json-schema.org/draft/2020-12/schema</code></li>
+<li><strong>$id:</strong> <code>urn:x86decomp:schema:compiler-ground-truth-comparison:1</code></li>
+<li><strong>Top-level type:</strong> <code>object</code></li>
+<li><strong>Required fields:</strong> <code>schema_version</code>, <code>kind</code>, <code>reports</code>, <code>comparisons</code>, <code>summary</code>, <code>semantic_equivalence_claimed</code></li>
+<li><strong>Top-level properties:</strong> <code>comparisons</code>, <code>kind</code>, <code>reports</code>, <code>schema_version</code>, <code>semantic_equivalence_claimed</code>, <code>summary</code></li>
+</ul>
+<p>SHA-256: <code>1ea55d940c62d4e60487f74ac4d9756e4ff4c7cb2c39c9dd629b1d4150646dfb</code></p>
+<p><code>compiler-ground-truth.schema.json</code></p>
+<p>Compiler ground-truth corpus manifest</p>
+<ul>
+<li><strong>Meta-schema:</strong> <code>https://json-schema.org/draft/2020-12/schema</code></li>
+<li><strong>$id:</strong> <code>urn:x86decomp:schema:compiler-ground-truth:1</code></li>
+<li><strong>Top-level type:</strong> <code>object</code></li>
+<li><strong>Required fields:</strong> <code>schema_version</code>, <code>compilers</code>, <code>cases</code></li>
+<li><strong>Top-level properties:</strong> <code>cases</code>, <code>compilers</code>, <code>flag_matrix</code>, <code>schema_version</code>, <code>timeout_seconds</code></li>
+</ul>
+<p>SHA-256: <code>1f8d15358ce71168a0f7c4d61ba7ad9db1ef12b534b27444bdda1f77f96392a2</code></p>
+<p><code>compiler-lab.schema.json</code></p>
+<p>Compiler experiment matrix</p>
+<ul>
+<li><strong>Meta-schema:</strong> <code>https://json-schema.org/draft/2020-12/schema</code></li>
+<li><strong>$id:</strong> <code>urn:x86decomp:schema:compiler-lab:1</code></li>
+<li><strong>Top-level type:</strong> <code>object</code></li>
+<li><strong>Required fields:</strong> <code>source</code>, <code>profiles</code></li>
+<li><strong>Top-level properties:</strong> <code>cache_root</code>, <code>matrix</code>, <code>max_experiments</code>, <code>output_name</code>, <code>output_root</code>, <code>profiles</code>, <code>source</code>, <code>target</code></li>
+</ul>
+<p>SHA-256: <code>37bc55f945daffc31844a78c2b4788191f501589303826a6cee207c5c4717506</code></p>
+<p><code>compiler-profile.schema.json</code></p>
+<p>x86decomp compiler profile</p>
+<ul>
+<li><strong>Meta-schema:</strong> <code>https://json-schema.org/draft/2020-12/schema</code></li>
+<li><strong>$id:</strong> <code>urn:x86decomp:schema:compiler-profile:2</code></li>
+<li><strong>Top-level type:</strong> <code>object</code></li>
+<li><strong>Required fields:</strong> <code>schema_version</code>, <code>id</code>, <code>description</code>, <code>executable</code>, <code>language</code>, <code>output_kind</code>, <code>timeout_seconds</code>, <code>arguments</code>, <code>environment</code></li>
+<li><strong>Top-level properties:</strong> <code>arguments</code>, <code>command_prefix</code>, <code>description</code>, <code>environment</code>, <code>executable</code>, <code>family</code>, <code>id</code>, <code>inherit_environment</code>, <code>language</code>, <code>output_kind</code>, <code>schema_version</code>, <code>timeout_seconds</code>, <code>version</code>, <code>version_arguments</code></li>
+</ul>
+<p>SHA-256: <code>6903f160acf5cfb8329567efbdd2da82b9f171705971e9842afcae21a4a4f844</code></p>
+<p><code>convergence-report.schema.json</code></p>
+<p>No schema title or description is declared in the source file.</p>
+<ul>
+<li><strong>Meta-schema:</strong> <code>https://json-schema.org/draft/2020-12/schema</code></li>
+<li><strong>$id:</strong> <code>urn:x86decomp:schema:convergence-report:1</code></li>
+<li><strong>Top-level type:</strong> <code>object</code></li>
+<li><strong>Required fields:</strong> <code>schema_version</code>, <code>kind</code>, <code>reference_sha256</code>, <code>candidate_sha256</code>, <code>image_match</code>, <code>totals</code>, <code>sections</code>, <code>next_actions</code>, <code>complete</code>, <code>normalized_complete</code></li>
+<li><strong>Top-level properties:</strong> <code>candidate_sha256</code>, <code>complete</code>, <code>created_at</code>, <code>delta_from_previous</code>, <code>image_match</code>, <code>kind</code>, <code>limitations</code>, <code>next_actions</code>, <code>normalized_complete</code>, <code>reference_sha256</code>, <code>root_cause_claimed</code>, <code>schema_version</code>, <code>sections</code>, <code>totals</code></li>
+</ul>
+<p>SHA-256: <code>ace195921a16f72366e2920e6e2ce4e464b51f665d4d12ff5117dbea49119185</code></p>
+<p><code>cpp-recovery.schema.json</code></p>
+<p>No schema title or description is declared in the source file.</p>
+<ul>
+<li><strong>Meta-schema:</strong> <code>https://json-schema.org/draft/2020-12/schema</code></li>
+<li><strong>$id:</strong> <code>urn:x86decomp:schema:cpp-recovery:1</code></li>
+<li><strong>Top-level type:</strong> <code>object</code></li>
+<li><strong>Required fields:</strong> <code>schema_version</code>, <code>kind</code>, <code>classes</code>, <code>vtable_groups</code>, <code>adjustor_thunk_candidates</code>, <code>counts</code>, <code>claims</code>, <code>limitations</code></li>
+<li><strong>Top-level properties:</strong> <code>adjustor_thunk_candidates</code>, <code>claims</code>, <code>classes</code>, <code>counts</code>, <code>created_at</code>, <code>image</code>, <code>kind</code>, <code>limitations</code>, <code>metadata_source</code>, <code>schema_version</code>, <code>static_initializer_order_evidence</code>, <code>vtable_groups</code></li>
+</ul>
+<p>SHA-256: <code>9eda5eb04cdd6404ed82077dab0b1f2668f3682b33f864fec3c7348439515d8a</code></p>
+<p><code>decompme-packet.schema.json</code></p>
+<p>Local decomp.me-style function packet</p>
+<ul>
+<li><strong>Meta-schema:</strong> <code>https://json-schema.org/draft/2020-12/schema</code></li>
+<li><strong>$id:</strong> <code>urn:x86decomp:schema:decompme-packet:1</code></li>
+<li><strong>Top-level type:</strong> <code>object</code></li>
+<li><strong>Required fields:</strong> <code>schema_version</code>, <code>created_at</code>, <code>kind</code>, <code>function_id</code>, <code>source_artifact</code>, <code>output_directory</code>, <code>files</code>, <code>uploaded</code>, <code>limitations</code></li>
+<li><strong>Top-level properties:</strong> <code>created_at</code>, <code>files</code>, <code>function_id</code>, <code>kind</code>, <code>limitations</code>, <code>output_directory</code>, <code>schema_version</code>, <code>source_artifact</code>, <code>uploaded</code></li>
+</ul>
+<p>SHA-256: <code>65cd0a5d3197e6de85ec46c8eb372a387102192d9341ee252a7f40ca83b91704</code></p>
+<p><code>dependency-audit.schema.json</code></p>
+<p>x86decomp dependency vulnerability audit</p>
+<ul>
+<li><strong>Meta-schema:</strong> <code>https://json-schema.org/draft/2020-12/schema</code></li>
+<li><strong>$id:</strong> <code>urn:x86decomp:schema:dependency-audit:1</code></li>
+<li><strong>Top-level type:</strong> <code>object</code></li>
+<li><strong>Required fields:</strong> <code>schema_version</code>, <code>kind</code>, <code>created_at</code>, <code>tool</code>, <code>tool_sha256</code>, <code>return_code</code>, <code>dependency_count</code>, <code>vulnerability_count</code>, <code>vulnerabilities</code>, <code>passed</code>, <code>raw_report</code></li>
+<li><strong>Top-level properties:</strong> <code>created_at</code>, <code>dependency_count</code>, <code>kind</code>, <code>passed</code>, <code>raw_report</code>, <code>return_code</code>, <code>schema_version</code>, <code>stderr</code>, <code>tool</code>, <code>tool_sha256</code>, <code>vulnerabilities</code>, <code>vulnerability_count</code></li>
+</ul>
+<p>SHA-256: <code>2eef4097789050d846536b406ccd7b9e8e639467bdf1ca530045fcc6050c8ee2</code></p>
+<p><code>drcov-trace.schema.json</code></p>
+<p>Normalized DynamoRIO drcov text trace</p>
+<ul>
+<li><strong>Meta-schema:</strong> <code>https://json-schema.org/draft/2020-12/schema</code></li>
+<li><strong>$id:</strong> <code>urn:x86decomp:schema:drcov-trace:1</code></li>
+<li><strong>Top-level type:</strong> <code>object</code></li>
+<li><strong>Required fields:</strong> <code>schema_version</code>, <code>kind</code>, <code>source</code>, <code>source_sha256</code>, <code>drcov_version</code>, <code>modules</code>, <code>basic_blocks</code>, <code>unique_basic_blocks</code></li>
+<li><strong>Top-level properties:</strong> <code>basic_blocks</code>, <code>drcov_flavor</code>, <code>drcov_version</code>, <code>kind</code>, <code>module_table_version</code>, <code>modules</code>, <code>schema_version</code>, <code>source</code>, <code>source_sha256</code>, <code>unique_basic_blocks</code></li>
+</ul>
+<p>SHA-256: <code>aedc8ab92612b4b325552d3de98da9d04e2e4c3aa2bb2ab319e20f85616cfe7f</code></p>
+<p><code>dynamic-report.schema.json</code></p>
+<p>Bounded Unicorn differential report</p>
+<ul>
+<li><strong>Meta-schema:</strong> <code>https://json-schema.org/draft/2020-12/schema</code></li>
+<li><strong>$id:</strong> <code>urn:x86decomp:schema:dynamic-report:1</code></li>
+<li><strong>Top-level type:</strong> <code>object</code></li>
+<li><strong>Required fields:</strong> <code>schema_version</code>, <code>equivalent_for_harness</code>, <code>target</code>, <code>candidate</code>, <code>scope_statement</code></li>
+<li><strong>Top-level properties:</strong> <code>candidate</code>, <code>equivalent_for_harness</code>, <code>schema_version</code>, <code>scope_statement</code>, <code>target</code></li>
+</ul>
+<p>SHA-256: <code>1af7c179c9d4fedbf542c098eab126d556fc8345a464176d211640f391effce0</code></p>
+<p><code>evidence.schema.json</code></p>
+<p>x86decomp evidence item</p>
+<ul>
+<li><strong>Meta-schema:</strong> <code>https://json-schema.org/draft/2020-12/schema</code></li>
+<li><strong>$id:</strong> <code>urn:x86decomp:schema:evidence:1</code></li>
+<li><strong>Top-level type:</strong> <code>object</code></li>
+<li><strong>Required fields:</strong> <code>id</code>, <code>kind</code>, <code>source</code>, <code>locator</code>, <code>assertion</code>, <code>independent_group</code>, <code>digest_sha256</code>, <code>observed_at</code>, <code>metadata</code></li>
+<li><strong>Top-level properties:</strong> <code>assertion</code>, <code>digest_sha256</code>, <code>id</code>, <code>independent_group</code>, <code>kind</code>, <code>locator</code>, <code>metadata</code>, <code>observed_at</code>, <code>source</code></li>
+</ul>
+<p>SHA-256: <code>5c5199ae9f480dbbb28eb3ebd889a53a46c08535cabf346d3a0bf04f4a4aa7bd</code></p>
+<p><code>exe-diff-report.schema.json</code></p>
+<p>PE function to COFF symbol comparison</p>
+<ul>
+<li><strong>Meta-schema:</strong> <code>https://json-schema.org/draft/2020-12/schema</code></li>
+<li><strong>$id:</strong> <code>urn:x86decomp:schema:exe-diff-report:2</code></li>
+<li><strong>Top-level type:</strong> <code>object</code></li>
+<li><strong>Required fields:</strong> <code>schema_version</code>, <code>classification</code>, <code>pe</code>, <code>coff</code>, <code>normalization_masks</code>, <code>raw_byte_comparison</code>, <code>normalized_byte_comparison</code>, <code>semantic_equivalence_claimed</code></li>
+<li><strong>Top-level properties:</strong> <code>architecture</code>, <code>classification</code>, <code>coff</code>, <code>created_at</code>, <code>instruction_comparison</code>, <code>instruction_comparison_error</code>, <code>kind</code>, <code>limitations</code>, <code>normalization_masks</code>, <code>normalized_byte_comparison</code>, <code>pe</code>, <code>raw_byte_comparison</code>, <code>schema_version</code>, <code>semantic_equivalence_claimed</code></li>
+</ul>
+<p>SHA-256: <code>3bfb70b7158750523074f638ff5955cc519097a37543f9f097909f4576373b50</code></p>
+<p><code>execution-harness-generated.schema.json</code></p>
+<p>No schema title or description is declared in the source file.</p>
+<ul>
+<li><strong>Meta-schema:</strong> <code>https://json-schema.org/draft/2020-12/schema</code></li>
+<li><strong>$id:</strong> <code>urn:x86decomp:schema:execution-harness-generated:1</code></li>
+<li><strong>Top-level type:</strong> <code>object</code></li>
+<li><strong>Required fields:</strong> <code>schema_version</code>, <code>architecture</code>, <code>code_base</code>, <code>stack_base</code>, <code>stack_size</code>, <code>sentinel_address</code>, <code>max_instructions</code>, <code>timeout_ms</code>, <code>registers</code>, <code>stack_arguments_hex</code>, <code>memory</code>, <code>observe_registers</code>, <code>observe_memory</code>, <code>stubs</code>, <code>generation</code>, <code>limitations</code></li>
+<li><strong>Top-level properties:</strong> <code>architecture</code>, <code>code_base</code>, <code>created_at</code>, <code>generation</code>, <code>limitations</code>, <code>max_instructions</code>, <code>memory</code>, <code>observe_memory</code>, <code>observe_registers</code>, <code>registers</code>, <code>schema_version</code>, <code>sentinel_address</code>, <code>stack_arguments_hex</code>, <code>stack_base</code>, <code>stack_size</code>, <code>stubs</code>, <code>timeout_ms</code></li>
+</ul>
+<p>SHA-256: <code>7ba43bfcb6b5b8736d784112af5531e1a890630e379eb2c345f15442c18a2c6d</code></p>
+<p><code>execution-harness.schema.json</code></p>
+<p>Bounded Unicorn execution harness</p>
+<ul>
+<li><strong>Meta-schema:</strong> <code>https://json-schema.org/draft/2020-12/schema</code></li>
+<li><strong>$id:</strong> <code>urn:x86decomp:schema:execution-harness:1</code></li>
+<li><strong>Top-level type:</strong> <code>object</code></li>
+<li><strong>Required fields:</strong> <code>architecture</code></li>
+<li><strong>Top-level properties:</strong> <code>architecture</code>, <code>code_base</code>, <code>max_instructions</code>, <code>memory</code>, <code>observe_memory</code>, <code>observe_registers</code>, <code>registers</code>, <code>sentinel_address</code>, <code>stack_arguments_hex</code>, <code>stack_base</code>, <code>stack_size</code>, <code>stubs</code>, <code>timeout_ms</code></li>
+</ul>
+<p>SHA-256: <code>2ec27dc202dcf7ab923c646c71e30769b0c18527aaf2e6ba44e70536574e4f68</code></p>
+<p><code>function-workflow.schema.json</code></p>
+<p>x86decomp per-function workflow</p>
+<ul>
+<li><strong>Meta-schema:</strong> <code>https://json-schema.org/draft/2020-12/schema</code></li>
+<li><strong>$id:</strong> <code>urn:x86decomp:schema:function-workflow:2</code></li>
+<li><strong>Top-level type:</strong> <code>object</code></li>
+<li><strong>Required fields:</strong> <code>schema_version</code>, <code>function_id</code>, <code>selected_modes</code>, <code>source_stage</code>, <code>matching_status</code>, <code>functional_status</code>, <code>reports</code>, <code>blockers</code>, <code>updated_at</code></li>
+<li><strong>Top-level properties:</strong> <code>active_candidate</code>, <code>blockers</code>, <code>compiler_profile</code>, <code>function_id</code>, <code>functional_status</code>, <code>matching_status</code>, <code>reports</code>, <code>schema_version</code>, <code>selected_modes</code>, <code>source_stage</code>, <code>updated_at</code></li>
+</ul>
+<p>SHA-256: <code>972f7c4fef555a4653a57cad04f1dedb186cc70a6c59de7e674645b30c240351</code></p>
+<p><code>function.schema.json</code></p>
+<p>x86decomp Ghidra function artifact (schema versions 1 and 2)</p>
+<ul>
+<li><strong>Meta-schema:</strong> <code>https://json-schema.org/draft/2020-12/schema</code></li>
+<li><strong>$id:</strong> <code>urn:x86decomp:schema:function:2</code></li>
+<li><strong>Top-level type:</strong> <code>object</code></li>
+<li><strong>Required fields:</strong> <code>schema_version</code>, <code>id</code>, <code>entry</code>, <code>entry_rva</code>, <code>name</code>, <code>name_source</code>, <code>calling_convention</code>, <code>signature</code>, <code>return_type</code>, <code>body_ranges</code>, <code>parameters</code></li>
+<li><strong>Top-level properties:</strong> <code>artifacts</code>, <code>body_ranges</code>, <code>calling_convention</code>, <code>decompile_completed</code>, <code>decompile_error</code>, <code>entry</code>, <code>entry_rva</code>, <code>functional_status</code>, <code>id</code>, <code>is_thunk</code>, <code>matching_status</code>, <code>name</code>, <code>name_source</code>, <code>parameters</code>, <code>qualified_name</code>, <code>return_type</code>, <code>schema_version</code>, <code>selected_modes</code>, <code>signature</code></li>
+</ul>
+<p>SHA-256: <code>00c65be77cc237df28a9112019c07019f88f38072ceb329907adc88bcfc34704</code></p>
+<p><code>governance/campaign.schema.json</code></p>
+<p>campaign</p>
+<ul>
+<li><strong>Meta-schema:</strong> <code>https://json-schema.org/draft/2020-12/schema</code></li>
+<li><strong>Top-level type:</strong> <code>object</code></li>
+<li><strong>Required fields:</strong> <code>goal</code>, <code>status</code>, <code>budget</code>, <code>used</code></li>
+<li><strong>Top-level properties:</strong> <code>budget</code>, <code>goal</code>, <code>policy</code>, <code>status</code>, <code>used</code></li>
+</ul>
+<p>SHA-256: <code>df027ea63ef0017b5a9ecae133a21ab7fa13f68e00545529e8606b5f39d1f854</code></p>
+<p><code>governance/candidate.schema.json</code></p>
+<p>candidate</p>
+<ul>
+<li><strong>Meta-schema:</strong> <code>https://json-schema.org/draft/2020-12/schema</code></li>
+<li><strong>Top-level type:</strong> <code>object</code></li>
+<li><strong>Required fields:</strong> <code>branch_name</code>, <code>state</code>, <code>objective</code></li>
+<li><strong>Top-level properties:</strong> <code>branch_name</code>, <code>evaluations</code>, <code>files</code>, <code>objective</code>, <code>state</code></li>
+</ul>
+<p>SHA-256: <code>db23f94af8b37ebdfff2798c271a0ef02ea9d77aae83fa8c8ebdab3d2f55ad67</code></p>
+<p><code>governance/changeset.schema.json</code></p>
+<p>changeset manifest</p>
+<ul>
+<li><strong>Meta-schema:</strong> <code>https://json-schema.org/draft/2020-12/schema</code></li>
+<li><strong>Top-level type:</strong> <code>object</code></li>
+<li><strong>Required fields:</strong> <code>format</code>, <code>changeset_id</code>, <code>base_event_hash</code>, <code>tip_event_hash</code>, <code>event_count</code></li>
+<li><strong>Top-level properties:</strong> <code>base_event_hash</code>, <code>changeset_id</code>, <code>created_at</code>, <code>event_count</code>, <code>format</code>, <code>tip_event_hash</code></li>
+</ul>
+<p>SHA-256: <code>6788b90056dbf46cdaaaab292bdc6c3102e20ff47c790f131b47c15d08f5cbd3</code></p>
+<p><code>governance/consensus.schema.json</code></p>
+<p>consensus observation</p>
+<ul>
+<li><strong>Meta-schema:</strong> <code>https://json-schema.org/draft/2020-12/schema</code></li>
+<li><strong>Top-level type:</strong> <code>object</code></li>
+<li><strong>Required fields:</strong> <code>subject_kind</code>, <code>subject_id</code>, <code>property_name</code>, <code>value</code>, <code>adapter_name</code>, <code>adapter_version</code>, <code>evidence_id</code>, <code>independence_group</code>, <code>confidence</code></li>
+<li><strong>Top-level properties:</strong> <code>adapter_name</code>, <code>adapter_version</code>, <code>confidence</code>, <code>evidence_id</code>, <code>independence_group</code>, <code>property_name</code>, <code>subject_id</code>, <code>subject_kind</code>, <code>value</code></li>
+</ul>
+<p>SHA-256: <code>f3edcf4a5962701cde7a0f4f483a19d49e9f5beea5e6a4dc3c643c9970ee9c43</code></p>
+<p><code>governance/counterexample.schema.json</code></p>
+<p>counterexample</p>
+<ul>
+<li><strong>Meta-schema:</strong> <code>https://json-schema.org/draft/2020-12/schema</code></li>
+<li><strong>Top-level type:</strong> <code>object</code></li>
+<li><strong>Required fields:</strong> <code>scope_kind</code>, <code>scope_id</code>, <code>current_sha256</code>, <code>size_bytes</code>, <code>state</code>, <code>predicate</code></li>
+<li><strong>Top-level properties:</strong> <code>current_sha256</code>, <code>predicate</code>, <code>provenance</code>, <code>scope_id</code>, <code>scope_kind</code>, <code>size_bytes</code>, <code>state</code></li>
+</ul>
+<p>SHA-256: <code>0e2b706ed1bf89e6c07a483dd171dbb23fbac4f67c87ef1df16be6c2fe50d19c</code></p>
+<p><code>governance/family.schema.json</code></p>
+<p>binary family report</p>
+<ul>
+<li><strong>Meta-schema:</strong> <code>https://json-schema.org/draft/2020-12/schema</code></li>
+<li><strong>Top-level type:</strong> <code>object</code></li>
+<li><strong>Required fields:</strong> <code>family_id</code>, <code>name</code>, <code>members</code>, <code>correlations</code>, <code>non_claims</code></li>
+<li><strong>Top-level properties:</strong> <code>correlations</code>, <code>family_id</code>, <code>members</code>, <code>name</code>, <code>non_claims</code></li>
+</ul>
+<p>SHA-256: <code>cd02347eefe68396b21d7ec5af6ef9c1554dd4715e962e302ece657cb0b851ed</code></p>
+<p><code>governance/hypothesis.schema.json</code></p>
+<p>hypothesis</p>
+<ul>
+<li><strong>Meta-schema:</strong> <code>https://json-schema.org/draft/2020-12/schema</code></li>
+<li><strong>Top-level type:</strong> <code>object</code></li>
+<li><strong>Required fields:</strong> <code>statement</code>, <code>scope_kind</code>, <code>scope_id</code>, <code>state</code>, <code>confidence</code>, <code>origin</code></li>
+<li><strong>Top-level properties:</strong> <code>confidence</code>, <code>locked</code>, <code>origin</code>, <code>scope_id</code>, <code>scope_kind</code>, <code>state</code>, <code>statement</code></li>
+</ul>
+<p>SHA-256: <code>1013bee5c093d4cf0e619dbcdc52a2b2ff79c0b768da9c699ad0483bfc283a83</code></p>
+<p><code>governance/knowledge-graph.schema.json</code></p>
+<p>knowledge graph impact</p>
+<ul>
+<li><strong>Meta-schema:</strong> <code>https://json-schema.org/draft/2020-12/schema</code></li>
+<li><strong>Top-level type:</strong> <code>object</code></li>
+<li><strong>Required fields:</strong> <code>root</code>, <code>direction</code>, <code>max_depth</code>, <code>nodes</code>, <code>edges</code></li>
+<li><strong>Top-level properties:</strong> <code>direction</code>, <code>edges</code>, <code>max_depth</code>, <code>nodes</code>, <code>root</code></li>
+</ul>
+<p>SHA-256: <code>d1bc76932c0264e763eb4cdb47d46397ddf00bb57e1c240371ef42049631db28</code></p>
+<p><code>governance/plugin.schema.json</code></p>
+<p>plugin manifest</p>
+<ul>
+<li><strong>Meta-schema:</strong> <code>https://json-schema.org/draft/2020-12/schema</code></li>
+<li><strong>Top-level type:</strong> <code>object</code></li>
+<li><strong>Required fields:</strong> <code>name</code>, <code>version</code>, <code>api_version</code>, <code>executable</code>, <code>capabilities</code></li>
+<li><strong>Top-level properties:</strong> <code>api_version</code>, <code>capabilities</code>, <code>executable</code>, <code>name</code>, <code>version</code></li>
+</ul>
+<p>SHA-256: <code>1fb5e12f5c8eb5408dea6372c5442273b1694559dc9c09784bbca4309dbf5fd2</code></p>
+<p><code>governance/proof-bundle.schema.json</code></p>
+<p>proof bundle manifest</p>
+<ul>
+<li><strong>Meta-schema:</strong> <code>https://json-schema.org/draft/2020-12/schema</code></li>
+<li><strong>Top-level type:</strong> <code>object</code></li>
+<li><strong>Required fields:</strong> <code>format</code>, <code>release</code>, <code>files</code></li>
+<li><strong>Top-level properties:</strong> <code>audit_tip</code>, <code>files</code>, <code>format</code>, <code>release</code></li>
+</ul>
+<p>SHA-256: <code>1afe8003d5fc80540188ed757588d320f8b29bacdf4b293e5e5ab2275e1e4219</code></p>
+<p><code>governance/review.schema.json</code></p>
+<p>review item</p>
+<ul>
+<li><strong>Meta-schema:</strong> <code>https://json-schema.org/draft/2020-12/schema</code></li>
+<li><strong>Top-level type:</strong> <code>object</code></li>
+<li><strong>Required fields:</strong> <code>kind</code>, <code>subject_id</code>, <code>priority</code>, <code>status</code>, <code>summary</code></li>
+<li><strong>Top-level properties:</strong> <code>details</code>, <code>kind</code>, <code>locked</code>, <code>priority</code>, <code>status</code>, <code>subject_id</code>, <code>summary</code></li>
+</ul>
+<p>SHA-256: <code>280cfe7963adcdcbbb3a1fde01b921cad82751d2240a4fcdaa9b9543db071bc2</code></p>
+<p><code>governance/worker.schema.json</code></p>
+<p>worker profile</p>
+<ul>
+<li><strong>Meta-schema:</strong> <code>https://json-schema.org/draft/2020-12/schema</code></li>
+<li><strong>Top-level type:</strong> <code>object</code></li>
+<li><strong>Required fields:</strong> <code>name</code>, <code>status</code>, <code>capabilities</code></li>
+<li><strong>Top-level properties:</strong> <code>capabilities</code>, <code>endpoint</code>, <code>environment_sha256</code>, <code>name</code>, <code>status</code></li>
+</ul>
+<p>SHA-256: <code>ca8f6768a4c7dfe89e80f2107c4bb43badde4d01d3ec6947ff001c9b207b403c</code></p>
+<p><code>hybrid-project.schema.json</code></p>
+<p>Continuously buildable hybrid project</p>
+<ul>
+<li><strong>Meta-schema:</strong> <code>https://json-schema.org/draft/2020-12/schema</code></li>
+<li><strong>$id:</strong> <code>urn:x86decomp:schema:hybrid-project:1</code></li>
+<li><strong>Top-level type:</strong> <code>object</code></li>
+<li><strong>Required fields:</strong> <code>schema_version</code>, <code>created_at</code>, <code>project_root</code>, <code>architecture</code>, <code>functions</code>, <code>build</code></li>
+<li><strong>Top-level properties:</strong> <code>architecture</code>, <code>build</code>, <code>created_at</code>, <code>functions</code>, <code>project_root</code>, <code>schema_version</code></li>
+</ul>
+<p>SHA-256: <code>c72692b4469f7ba92b2945968974d495371e2c0f03ad438c970418c3ce31d9b0</code></p>
+<p><code>image-match-report.schema.json</code></p>
+<p>Target-specific whole-image match report</p>
+<ul>
+<li><strong>Meta-schema:</strong> <code>https://json-schema.org/draft/2020-12/schema</code></li>
+<li><strong>$id:</strong> <code>urn:x86decomp:schema:image-match-report:1</code></li>
+<li><strong>Top-level type:</strong> <code>object</code></li>
+<li><strong>Required fields:</strong> <code>schema_version</code>, <code>kind</code>, <code>reference</code>, <code>candidate</code>, <code>profile</code>, <code>raw_exact_match</code>, <code>normalized_match</code>, <code>sections</code>, <code>classification</code>, <code>universal_equivalence_claimed</code></li>
+<li><strong>Top-level properties:</strong> <code>candidate</code>, <code>classification</code>, <code>kind</code>, <code>normalized_match</code>, <code>normalized_mismatch_count</code>, <code>profile</code>, <code>raw_exact_match</code>, <code>raw_mismatch_count</code>, <code>reference</code>, <code>schema_version</code>, <code>sections</code>, <code>universal_equivalence_claimed</code></li>
+</ul>
+<p>SHA-256: <code>f81f81c2581b2941b9a3850aa2d296957e1d14de2ad3d8ee92839b34ccfadc23</code></p>
+<p><code>image-profile.schema.json</code></p>
+<p>Target-specific PE image layout profile</p>
+<ul>
+<li><strong>Meta-schema:</strong> <code>https://json-schema.org/draft/2020-12/schema</code></li>
+<li><strong>$id:</strong> <code>urn:x86decomp:schema:image-profile:1</code></li>
+<li><strong>Top-level type:</strong> <code>object</code></li>
+<li><strong>Required fields:</strong> <code>schema_version</code>, <code>kind</code>, <code>reference_sha256</code>, <code>architecture</code>, <code>section_order</code>, <code>normalization</code></li>
+<li><strong>Top-level properties:</strong> <code>architecture</code>, <code>entry_rva</code>, <code>image_base</code>, <code>kind</code>, <code>normalization</code>, <code>reference_sha256</code>, <code>schema_version</code>, <code>section_order</code>, <code>sections</code></li>
+</ul>
+<p>SHA-256: <code>5916e3589fb77876a26861ccfea7dfbfbf4b9c55e92243ed66dae4270dad70d7</code></p>
+<p><code>integration-report.schema.json</code></p>
+<p>Bounded integration comparison report</p>
+<ul>
+<li><strong>Meta-schema:</strong> <code>https://json-schema.org/draft/2020-12/schema</code></li>
+<li><strong>$id:</strong> <code>urn:x86decomp:schema:integration-report:1</code></li>
+<li><strong>Top-level type:</strong> <code>object</code></li>
+<li><strong>Required fields:</strong> <code>schema_version</code>, <code>created_at</code>, <code>kind</code>, <code>execution</code>, <code>scenario_count</code>, <code>passed_count</code>, <code>failed_count</code>, <code>all_scenarios_equivalent</code>, <code>scenarios</code>, <code>limitations</code></li>
+<li><strong>Top-level properties:</strong> <code>all_scenarios_equivalent</code>, <code>failed_count</code>, <code>kind</code>, <code>limitations</code>, <code>passed_count</code>, <code>scenario_count</code>, <code>scenarios</code>, <code>schema_version</code></li>
+</ul>
+<p>SHA-256: <code>4732a3a8f4038739f46c7b7b74b20999c68d9f637bac783a53b03eee91e91d1a</code></p>
+<p><code>integration-scenarios.schema.json</code></p>
+<p>Integration scenario manifest</p>
+<ul>
+<li><strong>Meta-schema:</strong> <code>https://json-schema.org/draft/2020-12/schema</code></li>
+<li><strong>$id:</strong> <code>urn:x86decomp:schema:integration-scenarios:1</code></li>
+<li><strong>Top-level type:</strong> <code>object</code></li>
+<li><strong>Required fields:</strong> <code>schema_version</code>, <code>name</code>, <code>execution</code>, <code>scenarios</code></li>
+<li><strong>Top-level properties:</strong> <code>captured_output_limit</code>, <code>execution</code>, <code>name</code>, <code>scenarios</code>, <code>schema_version</code></li>
+</ul>
+<p>SHA-256: <code>60799068b8df90e7d457415f6e08fa236a0620630ddab2641dec2ff8bac6e43e</code></p>
+<p><code>linker-layout.schema.json</code></p>
+<p>Linker layout reconstruction report</p>
+<ul>
+<li><strong>Meta-schema:</strong> <code>https://json-schema.org/draft/2020-12/schema</code></li>
+<li><strong>$id:</strong> <code>urn:x86decomp:schema:linker-layout:1</code></li>
+<li><strong>Top-level type:</strong> <code>object</code></li>
+<li><strong>Required fields:</strong> <code>schema_version</code>, <code>kind</code>, <code>image</code>, <code>map</code>, <code>contributions</code>, <code>unresolved</code></li>
+<li><strong>Top-level properties:</strong> <code>comdat_resolution</code>, <code>complete_original_layout_claimed</code>, <code>contributions</code>, <code>image</code>, <code>kind</code>, <code>map</code>, <code>object_order_evidenced</code>, <code>schema_version</code>, <code>unresolved</code></li>
+</ul>
+<p>SHA-256: <code>a8faf6022c8b70e04c3375d47a480b9a811e72edd55ea7e0ec4e80a77a8ca934</code></p>
+<p><code>linker-reconstruction-plan.schema.json</code></p>
+<p>No schema title or description is declared in the source file.</p>
+<ul>
+<li><strong>Meta-schema:</strong> <code>https://json-schema.org/draft/2020-12/schema</code></li>
+<li><strong>$id:</strong> <code>urn:x86decomp:schema:linker-reconstruction-plan:1</code></li>
+<li><strong>Top-level type:</strong> <code>object</code></li>
+<li><strong>Required fields:</strong> <code>schema_version</code>, <code>kind</code>, <code>reference_image</code>, <code>map</code>, <code>objects</code>, <code>sections</code>, <code>placements</code>, <code>comdat_resolution</code>, <code>relink_manifest</code>, <code>unresolved</code>, <code>ready_for_relink</code></li>
+<li><strong>Top-level properties:</strong> <code>archives</code>, <code>comdat_resolution</code>, <code>complete_original_link_command_claimed</code>, <code>created_at</code>, <code>kind</code>, <code>libraries</code>, <code>limitations</code>, <code>linker</code>, <code>map</code>, <code>objects</code>, <code>placements</code>, <code>ready_for_relink</code>, <code>reference_image</code>, <code>relink_manifest</code>, <code>schema_version</code>, <code>sections</code>, <code>unresolved</code></li>
+</ul>
+<p>SHA-256: <code>1d6fadf9737abed4d02cc90d3859898785edf62d3909c39fe893c8841c57f504</code></p>
+<p><code>mcp-mutation.schema.json</code></p>
+<p>Evidence-gated MCP mutation</p>
+<ul>
+<li><strong>Meta-schema:</strong> <code>https://json-schema.org/draft/2020-12/schema</code></li>
+<li><strong>$id:</strong> <code>urn:x86decomp:schema:mcp-mutation:1</code></li>
+<li><strong>Top-level type:</strong> <code>object</code></li>
+<li><strong>Required fields:</strong> <code>schema_version</code>, <code>created_at</code>, <code>tool</code>, <code>arguments</code>, <code>rationale</code>, <code>evidence_ids</code>, <code>status</code>, <code>approval_hash</code></li>
+<li><strong>Top-level properties:</strong> <code>approval_hash</code>, <code>arguments</code>, <code>committed_at</code>, <code>created_at</code>, <code>evidence_ids</code>, <code>rationale</code>, <code>result</code>, <code>schema_version</code>, <code>status</code>, <code>tool</code></li>
+</ul>
+<p>SHA-256: <code>64335798160269133e880d823f14de7f0cb4f2dafbf0c47526e24fb9fb16ea29</code></p>
+<p><code>memory-event.schema.json</code></p>
+<p>x86decomp project memory event</p>
+<ul>
+<li><strong>Meta-schema:</strong> <code>https://json-schema.org/draft/2020-12/schema</code></li>
+<li><strong>$id:</strong> <code>urn:x86decomp:schema:memory-event:1</code></li>
+<li><strong>Top-level type:</strong> <code>object</code></li>
+<li><strong>Required fields:</strong> <code>schema_version</code>, <code>id</code>, <code>sequence</code>, <code>timestamp</code>, <code>actor</code>, <code>category</code>, <code>summary</code>, <code>details</code>, <code>evidence_ids</code>, <code>previous_hash</code>, <code>event_hash</code></li>
+<li><strong>Top-level properties:</strong> <code>actor</code>, <code>category</code>, <code>details</code>, <code>event_hash</code>, <code>evidence_ids</code>, <code>id</code>, <code>previous_hash</code>, <code>schema_version</code>, <code>sequence</code>, <code>summary</code>, <code>timestamp</code></li>
+</ul>
+<p>SHA-256: <code>d2f38971ac7dda92dda0564bb77bb4858160b5a342476d36fe52238eb5289e74</code></p>
+<p><code>msvc-metadata.schema.json</code></p>
+<p>Bounded MSVC metadata analysis report</p>
+<ul>
+<li><strong>Meta-schema:</strong> <code>https://json-schema.org/draft/2020-12/schema</code></li>
+<li><strong>$id:</strong> <code>urn:x86decomp:schema:msvc-metadata:1</code></li>
+<li><strong>Top-level type:</strong> <code>object</code></li>
+<li><strong>Required fields:</strong> <code>schema_version</code>, <code>kind</code>, <code>image</code>, <code>rtti</code>, <code>exceptions</code>, <code>tls</code>, <code>static_initializers</code>, <code>source_level_recovery_claimed</code></li>
+<li><strong>Top-level properties:</strong> <code>exceptions</code>, <code>image</code>, <code>kind</code>, <code>rtti</code>, <code>schema_version</code>, <code>source_level_recovery_claimed</code>, <code>static_initializers</code>, <code>tls</code></li>
+</ul>
+<p>SHA-256: <code>84d0b6bc880ab47954f951a4eed4db317c14ee33ed5cdbe0ee098ce61c1d6273</code></p>
+<p><code>native/boundary-finding.schema.json</code></p>
+<p>x86decomp boundary-finding</p>
+<ul>
+<li><strong>Meta-schema:</strong> <code>https://json-schema.org/draft/2020-12/schema</code></li>
+<li><strong>$id:</strong> <code>https://x86decomp.invalid/schemas/native/boundary-finding.schema.json</code></li>
+<li><strong>Top-level type:</strong> <code>object</code></li>
+<li><strong>Required fields:</strong> <code>function_id</code>, <code>finding_kind</code>, <code>severity</code></li>
+<li><strong>Top-level properties:</strong> <code>finding_kind</code>, <code>function_id</code>, <code>severity</code></li>
+</ul>
+<p>SHA-256: <code>58d723eee6c5c374f78dcac68a23be5d0b60c6f002c3e8285d307eef496e74fc</code></p>
+<p><code>native/candidate-manifest.schema.json</code></p>
+<p>x86decomp candidate-manifest</p>
+<ul>
+<li><strong>Meta-schema:</strong> <code>https://json-schema.org/draft/2020-12/schema</code></li>
+<li><strong>$id:</strong> <code>https://x86decomp.invalid/schemas/native/candidate-manifest.schema.json</code></li>
+<li><strong>Top-level type:</strong> <code>object</code></li>
+<li><strong>Required fields:</strong> <code>function_id</code>, <code>rva</code>, <code>slot_size</code>, <code>candidate_path</code></li>
+<li><strong>Top-level properties:</strong> <code>candidate_path</code>, <code>function_id</code>, <code>rva</code>, <code>slot_size</code>, <code>symbol</code></li>
+</ul>
+<p>SHA-256: <code>d3bad2e693b4b7d6e1c230d9e03ff775298273523c8b562d3b78400c13313029</code></p>
+<p><code>native/function-match.schema.json</code></p>
+<p>x86decomp function-match</p>
+<ul>
+<li><strong>Meta-schema:</strong> <code>https://json-schema.org/draft/2020-12/schema</code></li>
+<li><strong>$id:</strong> <code>https://x86decomp.invalid/schemas/native/function-match.schema.json</code></li>
+<li><strong>Top-level type:</strong> <code>object</code></li>
+<li><strong>Required fields:</strong> <code>function_id</code>, <code>rva</code>, <code>slot_size</code>, <code>classification</code>, <code>replacement_safe</code></li>
+<li><strong>Top-level properties:</strong> <code>classification</code>, <code>function_id</code>, <code>replacement_safe</code>, <code>rva</code>, <code>slot_size</code></li>
+</ul>
+<p>SHA-256: <code>e598ca859f33c96b62fe8dac7fcf78ec77b53e4b8f178b9f19e1f288e2725cd1</code></p>
+<p><code>native/function-slot.schema.json</code></p>
+<p>x86decomp function-slot</p>
+<ul>
+<li><strong>Meta-schema:</strong> <code>https://json-schema.org/draft/2020-12/schema</code></li>
+<li><strong>$id:</strong> <code>https://x86decomp.invalid/schemas/native/function-slot.schema.json</code></li>
+<li><strong>Top-level type:</strong> <code>object</code></li>
+<li><strong>Required fields:</strong> <code>function_id</code>, <code>rva</code>, <code>body_size</code>, <code>slot_size</code>, <code>classification</code></li>
+<li><strong>Top-level properties:</strong> <code>body_size</code>, <code>classification</code>, <code>function_id</code>, <code>rva</code>, <code>slot_size</code></li>
+</ul>
+<p>SHA-256: <code>61bb10550455068b1c58073dfb30939aea8095cefbd775abab4d044efe9a2914</code></p>
+<p><code>native/hybrid-composition.schema.json</code></p>
+<p>x86decomp hybrid-composition</p>
+<ul>
+<li><strong>Meta-schema:</strong> <code>https://json-schema.org/draft/2020-12/schema</code></li>
+<li><strong>$id:</strong> <code>https://x86decomp.invalid/schemas/native/hybrid-composition.schema.json</code></li>
+<li><strong>Top-level type:</strong> <code>object</code></li>
+<li><strong>Required fields:</strong> <code>run_id</code>, <code>output</code>, <code>promoted_count</code>, <code>fallback_count</code></li>
+<li><strong>Top-level properties:</strong> <code>fallback_count</code>, <code>output</code>, <code>promoted_count</code>, <code>run_id</code></li>
+</ul>
+<p>SHA-256: <code>feb6682c1aa1ed0a3bc3c06230ce27f006641d96238050151ad22584eb02cb9d</code></p>
+<p><code>native/loop-run.schema.json</code></p>
+<p>x86decomp loop-run</p>
+<ul>
+<li><strong>Meta-schema:</strong> <code>https://json-schema.org/draft/2020-12/schema</code></li>
+<li><strong>$id:</strong> <code>https://x86decomp.invalid/schemas/native/loop-run.schema.json</code></li>
+<li><strong>Top-level type:</strong> <code>object</code></li>
+<li><strong>Required fields:</strong> <code>function_id</code>, <code>source_path</code>, <code>compile_command</code>, <code>candidate_path</code></li>
+<li><strong>Top-level properties:</strong> <code>candidate_path</code>, <code>compile_command</code>, <code>function_id</code>, <code>source_path</code></li>
+</ul>
+<p>SHA-256: <code>de5d1a277444c3ea53ae0c4860d1a7978b478893fb893cf4c1ba1fca4a11b038</code></p>
+<p><code>native/match-run.schema.json</code></p>
+<p>x86decomp match-run</p>
+<ul>
+<li><strong>Meta-schema:</strong> <code>https://json-schema.org/draft/2020-12/schema</code></li>
+<li><strong>$id:</strong> <code>https://x86decomp.invalid/schemas/native/match-run.schema.json</code></li>
+<li><strong>Top-level type:</strong> <code>object</code></li>
+<li><strong>Required fields:</strong> <code>original_path</code>, <code>comparison_policy</code></li>
+<li><strong>Top-level properties:</strong> <code>comparison_policy</code>, <code>original_path</code></li>
+</ul>
+<p>SHA-256: <code>7afbfb42c5995ff375a050c93bb119ce50f2a761220c610f2c1622f082c23fb5</code></p>
+<p><code>native/patch-plan.schema.json</code></p>
+<p>x86decomp patch-plan</p>
+<ul>
+<li><strong>Meta-schema:</strong> <code>https://json-schema.org/draft/2020-12/schema</code></li>
+<li><strong>$id:</strong> <code>https://x86decomp.invalid/schemas/native/patch-plan.schema.json</code></li>
+<li><strong>Top-level type:</strong> <code>object</code></li>
+<li><strong>Required fields:</strong> <code>original_path</code>, <code>output_path</code>, <code>operations</code></li>
+<li><strong>Top-level properties:</strong> <code>operations</code>, <code>original_path</code>, <code>output_path</code></li>
+</ul>
+<p>SHA-256: <code>90a1f06eaa3f6a3d6b235cc0439c57fec0187006ccc4c01b8fbb76571bb31958</code></p>
+<p><code>native/runtime-validation.schema.json</code></p>
+<p>x86decomp runtime-validation</p>
+<ul>
+<li><strong>Meta-schema:</strong> <code>https://json-schema.org/draft/2020-12/schema</code></li>
+<li><strong>$id:</strong> <code>https://x86decomp.invalid/schemas/native/runtime-validation.schema.json</code></li>
+<li><strong>Top-level type:</strong> <code>object</code></li>
+<li><strong>Required fields:</strong> <code>image_path</code>, <code>validation_kind</code>, <code>status</code>, <code>checks</code></li>
+<li><strong>Top-level properties:</strong> <code>checks</code>, <code>image_path</code>, <code>status</code>, <code>validation_kind</code></li>
+</ul>
+<p>SHA-256: <code>f314d1ae2b72314a6ebf6c6d2905a8eb2f314498f256f567e01ae08622da90f3</code></p>
+<p><code>native/section-export.schema.json</code></p>
+<p>x86decomp section-export</p>
+<ul>
+<li><strong>Meta-schema:</strong> <code>https://json-schema.org/draft/2020-12/schema</code></li>
+<li><strong>$id:</strong> <code>https://x86decomp.invalid/schemas/native/section-export.schema.json</code></li>
+<li><strong>Top-level type:</strong> <code>object</code></li>
+<li><strong>Required fields:</strong> <code>source</code>, <code>sections</code></li>
+<li><strong>Top-level properties:</strong> <code>sections</code>, <code>source</code></li>
+</ul>
+<p>SHA-256: <code>121ed87fe1b51a248b230acafd9780b96e74e01c72e9cba7fcd20fbb466eb317</code></p>
+<p><code>native/staging-symbol.schema.json</code></p>
+<p>x86decomp staging-symbol</p>
+<ul>
+<li><strong>Meta-schema:</strong> <code>https://json-schema.org/draft/2020-12/schema</code></li>
+<li><strong>$id:</strong> <code>https://x86decomp.invalid/schemas/native/staging-symbol.schema.json</code></li>
+<li><strong>Top-level type:</strong> <code>object</code></li>
+<li><strong>Required fields:</strong> <code>symbol_name</code>, <code>symbol_kind</code>, <code>declaration</code>, <code>status</code></li>
+<li><strong>Top-level properties:</strong> <code>declaration</code>, <code>status</code>, <code>symbol_kind</code>, <code>symbol_name</code></li>
+</ul>
+<p>SHA-256: <code>44b3ce02db0758435f6a230a9ad37bd00c3a6308bf71761836050e5c90c6c4d0</code></p>
+<p><code>native/windows-tool.schema.json</code></p>
+<p>x86decomp windows-tool</p>
+<ul>
+<li><strong>Meta-schema:</strong> <code>https://json-schema.org/draft/2020-12/schema</code></li>
+<li><strong>$id:</strong> <code>https://x86decomp.invalid/schemas/native/windows-tool.schema.json</code></li>
+<li><strong>Top-level type:</strong> <code>object</code></li>
+<li><strong>Required fields:</strong> <code>tool_name</code>, <code>available</code></li>
+<li><strong>Top-level properties:</strong> <code>available</code>, <code>path</code>, <code>tool_name</code></li>
+</ul>
+<p>SHA-256: <code>22af6f0e3266250f1c741e95e231c4ee3d62fd3944e0000e6ab6e652089906e0</code></p>
+<p><code>objdiff-manifest.schema.json</code></p>
+<p>objdiff external invocation manifest</p>
+<ul>
+<li><strong>Meta-schema:</strong> <code>https://json-schema.org/draft/2020-12/schema</code></li>
+<li><strong>$id:</strong> <code>urn:x86decomp:schema:objdiff-manifest:1</code></li>
+<li><strong>Top-level type:</strong> <code>object</code></li>
+<li><strong>Required fields:</strong> <code>schema_version</code>, <code>target</code>, <code>candidate</code>, <code>arguments</code></li>
+<li><strong>Top-level properties:</strong> <code>arguments</code>, <code>candidate</code>, <code>environment</code>, <code>executable</code>, <code>inherit_environment</code>, <code>output</code>, <code>output_format</code>, <code>require_output</code>, <code>schema_version</code>, <code>success_exit_codes</code>, <code>target</code>, <code>timeout_seconds</code></li>
+</ul>
+<p>SHA-256: <code>2fe8f65399749687b2890cc643f474c0b8de221e90f6ae5013ce0d8b46590360</code></p>
+<p><code>pdb.schema.json</code></p>
+<p>x86decomp bounded PDB/MSF inventory</p>
+<ul>
+<li><strong>Meta-schema:</strong> <code>https://json-schema.org/draft/2020-12/schema</code></li>
+<li><strong>$id:</strong> <code>urn:x86decomp:schema:pdb:1</code></li>
+<li><strong>Top-level type:</strong> <code>object</code></li>
+<li><strong>Required fields:</strong> <code>schema_version</code>, <code>format</code>, <code>source_path</code>, <code>source_sha256</code>, <code>superblock</code>, <code>stream_count</code>, <code>streams</code>, <code>pdb_info</code>, <code>tpi</code>, <code>ipi</code>, <code>dbi</code>, <code>pe_match</code>, <code>scope</code></li>
+<li><strong>Top-level properties:</strong> <code>dbi</code>, <code>format</code>, <code>ipi</code>, <code>pdb_info</code>, <code>pe_match</code>, <code>schema_version</code>, <code>scope</code>, <code>source_path</code>, <code>source_sha256</code>, <code>stream_count</code>, <code>streams</code>, <code>superblock</code>, <code>tpi</code></li>
+</ul>
+<p>SHA-256: <code>850bbf885fa040ac4601dc4d93c2fb4b3afda1dd86612a0d8866a34bacf07008</code></p>
+<p><code>pipeline.schema.json</code></p>
+<p>No schema title or description is declared in the source file.</p>
+<ul>
+<li><strong>Meta-schema:</strong> <code>https://json-schema.org/draft/2020-12/schema</code></li>
+<li><strong>$id:</strong> <code>urn:x86decomp:schema:pipeline:1</code></li>
+<li><strong>Top-level type:</strong> <code>object</code></li>
+<li><strong>Required fields:</strong> <code>schema_version</code>, <code>pipeline_id</code>, <code>project_root</code>, <code>stages</code></li>
+<li><strong>Top-level properties:</strong> <code>created_at</code>, <code>pipeline_id</code>, <code>project_root</code>, <code>schema_version</code>, <code>stages</code></li>
+</ul>
+<p>SHA-256: <code>a9b7b790fb6c877370a4c61ecbdf0f92eac13d9aba389cc0ab8d8723aee92ca6</code></p>
+<p><code>project-template.schema.json</code></p>
+<p>Grounded x86decomp project-template contract</p>
+<ul>
+<li><strong>Meta-schema:</strong> <code>https://json-schema.org/draft/2020-12/schema</code></li>
+<li><strong>$id:</strong> <code>urn:x86decomp:schema:project-template:1</code></li>
+<li><strong>Top-level type:</strong> <code>object</code></li>
+<li><strong>Required fields:</strong> <code>schema_version</code>, <code>created_at</code>, <code>target_id</code>, <code>architecture</code>, <code>image_kind</code>, <code>selected_modes</code>, <code>matching</code>, <code>functional</code>, <code>artifact_roles</code>, <code>blockers</code>, <code>truth_policy</code></li>
+<li><strong>Top-level properties:</strong> <code>architecture</code>, <code>artifact_roles</code>, <code>blockers</code>, <code>created_at</code>, <code>functional</code>, <code>image_kind</code>, <code>matching</code>, <code>schema_version</code>, <code>selected_modes</code>, <code>source_language_candidates</code>, <code>source_language_decision</code>, <code>target_id</code>, <code>truth_policy</code></li>
+</ul>
+<p>SHA-256: <code>1bf881ea328d3a6c00d727c0cbe1e47763726e70362a085354178add994458ce</code></p>
+<p><code>project.schema.json</code></p>
+<p>x86decomp project (schema versions 1, 2, and 3)</p>
+<ul>
+<li><strong>Meta-schema:</strong> <code>https://json-schema.org/draft/2020-12/schema</code></li>
+<li><strong>$id:</strong> <code>urn:x86decomp:schema:project:3</code></li>
+<li><strong>Top-level type:</strong> <code>object</code></li>
+<li><strong>Required fields:</strong> <code>schema_version</code>, <code>project_id</code>, <code>created_at</code>, <code>supported_scope</code>, <code>binary</code>, <code>program_manifest</code>, <code>memory_ledger</code>, <code>function_root</code>, <code>evidence_root</code>, <code>status</code></li>
+<li><strong>Top-level properties:</strong> <code>analysis_database</code>, <code>architecture</code>, <code>binary</code>, <code>content_store</code>, <code>created_at</code>, <code>default_modes</code>, <code>evidence_root</code>, <code>function_root</code>, <code>memory_ledger</code>, <code>orchestration_root</code>, <code>program_manifest</code>, <code>project_id</code>, <code>project_state_database</code>, <code>schema_version</code>, <code>status</code>, <code>supported_scope</code>, <code>target_id</code>, <code>target_pack</code>, <code>template_kind</code>, <code>toolkit_release</code>, <code>work_queue</code></li>
+</ul>
+<p>SHA-256: <code>4ab19d9064e8d249fdd545d1fa183920902d6afbe647d004ddd571a208295b0b</code></p>
+<p><code>reconstruction/abi-contract.schema.json</code></p>
+<p>ABI contract</p>
+<ul>
+<li><strong>Meta-schema:</strong> <code>https://json-schema.org/draft/2020-12/schema</code></li>
+<li><strong>$id:</strong> <code>https://x86decomp.dev/schemas/reconstruction/abi-contract.schema.json</code></li>
+<li><strong>Top-level type:</strong> <code>object</code></li>
+<li><strong>Required fields:</strong> <code>contract_id</code>, <code>subject_kind</code>, <code>subject_id</code>, <code>architecture</code>, <code>contract</code>, <code>evidence</code></li>
+<li><strong>Top-level properties:</strong> <code>architecture</code>, <code>contract</code>, <code>contract_id</code>, <code>evidence</code>, <code>subject_id</code>, <code>subject_kind</code></li>
+</ul>
+<p>SHA-256: <code>d2286943caed629e873a4107fcceb21f18b0759cfebd17b71f761af14e68e016</code></p>
+<p><code>reconstruction/build.schema.json</code></p>
+<p>Build reconstruction contract</p>
+<ul>
+<li><strong>Meta-schema:</strong> <code>https://json-schema.org/draft/2020-12/schema</code></li>
+<li><strong>$id:</strong> <code>https://x86decomp.dev/schemas/reconstruction/build.schema.json</code></li>
+<li><strong>Top-level type:</strong> <code>object</code></li>
+<li><strong>Required fields:</strong> <code>build_id</code>, <code>mode</code>, <code>generator</code>, <code>targets</code></li>
+<li><strong>Top-level properties:</strong> <code>build_id</code>, <code>generator</code>, <code>mode</code>, <code>targets</code></li>
+</ul>
+<p>SHA-256: <code>647d938812825abaa84206de119ebc4a18d8fad70a4f50121f990a4af2571dd0</code></p>
+<p><code>reconstruction/capsule.schema.json</code></p>
+<p>Reconstruction capsule manifest</p>
+<ul>
+<li><strong>Meta-schema:</strong> <code>https://json-schema.org/draft/2020-12/schema</code></li>
+<li><strong>$id:</strong> <code>https://x86decomp.dev/schemas/reconstruction/capsule.schema.json</code></li>
+<li><strong>Top-level type:</strong> <code>object</code></li>
+<li><strong>Required fields:</strong> <code>schema</code>, <code>toolkit_version</code>, <code>members</code>, <code>external_requirements</code></li>
+<li><strong>Top-level properties:</strong> <code>external_requirements</code>, <code>members</code>, <code>schema</code>, <code>toolkit_version</code></li>
+</ul>
+<p>SHA-256: <code>4c5543017ddf58e9e9268633d7699f648289b431a95de7171bae325938ccb310</code></p>
+<p><code>reconstruction/compatibility-shim.schema.json</code></p>
+<p>Explicit compatibility shim</p>
+<ul>
+<li><strong>Meta-schema:</strong> <code>https://json-schema.org/draft/2020-12/schema</code></li>
+<li><strong>$id:</strong> <code>https://x86decomp.dev/schemas/reconstruction/compatibility-shim.schema.json</code></li>
+<li><strong>Top-level type:</strong> <code>object</code></li>
+<li><strong>Required fields:</strong> <code>shim_id</code>, <code>subject_id</code>, <code>shim_kind</code>, <code>source_path</code>, <code>contract</code>, <code>status</code></li>
+<li><strong>Top-level properties:</strong> <code>contract</code>, <code>shim_id</code>, <code>shim_kind</code>, <code>source_path</code>, <code>status</code>, <code>subject_id</code></li>
+</ul>
+<p>SHA-256: <code>714bcc499ffc2db676e163a5886ce9ca4fca7df0b2382a94488c6dfc5a782926</code></p>
+<p><code>reconstruction/generated-test.schema.json</code></p>
+<p>Generated regression test</p>
+<ul>
+<li><strong>Meta-schema:</strong> <code>https://json-schema.org/draft/2020-12/schema</code></li>
+<li><strong>$id:</strong> <code>https://x86decomp.dev/schemas/reconstruction/generated-test.schema.json</code></li>
+<li><strong>Top-level type:</strong> <code>object</code></li>
+<li><strong>Required fields:</strong> <code>generated_test_id</code>, <code>name</code>, <code>scope_kind</code>, <code>scope_id</code>, <code>test_kind</code>, <code>relative_path</code>, <code>content_sha256</code></li>
+<li><strong>Top-level properties:</strong> <code>content_sha256</code>, <code>generated_test_id</code>, <code>name</code>, <code>relative_path</code>, <code>scope_id</code>, <code>scope_kind</code>, <code>test_kind</code></li>
+</ul>
+<p>SHA-256: <code>8e99342ae82922d0c5c17c41e857074a5a2cec9b1269e23572aea09b5715a7b5</code></p>
+<p><code>reconstruction/header.schema.json</code></p>
+<p>Recovered header contract</p>
+<ul>
+<li><strong>Meta-schema:</strong> <code>https://json-schema.org/draft/2020-12/schema</code></li>
+<li><strong>$id:</strong> <code>https://x86decomp.dev/schemas/reconstruction/header.schema.json</code></li>
+<li><strong>Top-level type:</strong> <code>object</code></li>
+<li><strong>Required fields:</strong> <code>header_id</code>, <code>path</code>, <code>visibility</code>, <code>declarations</code></li>
+<li><strong>Top-level properties:</strong> <code>declarations</code>, <code>header_id</code>, <code>path</code>, <code>visibility</code></li>
+</ul>
+<p>SHA-256: <code>c878f851e64b11db9e0dad34785d5ef3ba3baa753e380af72f554fe44529a850</code></p>
+<p><code>reconstruction/library-match.schema.json</code></p>
+<p>Static library recognition candidate</p>
+<ul>
+<li><strong>Meta-schema:</strong> <code>https://json-schema.org/draft/2020-12/schema</code></li>
+<li><strong>$id:</strong> <code>https://x86decomp.dev/schemas/reconstruction/library-match.schema.json</code></li>
+<li><strong>Top-level type:</strong> <code>object</code></li>
+<li><strong>Required fields:</strong> <code>match_id</code>, <code>subject_id</code>, <code>library_name</code>, <code>confidence</code>, <code>evidence</code>, <code>disposition</code></li>
+<li><strong>Top-level properties:</strong> <code>confidence</code>, <code>disposition</code>, <code>evidence</code>, <code>library_name</code>, <code>match_id</code>, <code>subject_id</code>, <code>version_range</code></li>
+</ul>
+<p>SHA-256: <code>cdf8967118c99e0f1d224829f1e3067a2b9db50f31ca945db68a3cec61b0f36e</code></p>
+<p><code>reconstruction/module.schema.json</code></p>
+<p>Recovered module hypothesis</p>
+<ul>
+<li><strong>Meta-schema:</strong> <code>https://json-schema.org/draft/2020-12/schema</code></li>
+<li><strong>$id:</strong> <code>https://x86decomp.dev/schemas/reconstruction/module.schema.json</code></li>
+<li><strong>Top-level type:</strong> <code>object</code></li>
+<li><strong>Required fields:</strong> <code>module_id</code>, <code>name</code>, <code>kind</code>, <code>confidence</code>, <code>evidence</code></li>
+<li><strong>Top-level properties:</strong> <code>confidence</code>, <code>evidence</code>, <code>kind</code>, <code>module_id</code>, <code>name</code>, <code>source_path</code></li>
+</ul>
+<p>SHA-256: <code>4aa87665cf31d30d9395bff7fb9388c9bd55257718808572669a874922436a4f</code></p>
+<p><code>reconstruction/security-finding.schema.json</code></p>
+<p>Security finding</p>
+<ul>
+<li><strong>Meta-schema:</strong> <code>https://json-schema.org/draft/2020-12/schema</code></li>
+<li><strong>$id:</strong> <code>https://x86decomp.dev/schemas/reconstruction/security-finding.schema.json</code></li>
+<li><strong>Top-level type:</strong> <code>object</code></li>
+<li><strong>Required fields:</strong> <code>finding_id</code>, <code>rule_id</code>, <code>severity</code>, <code>subject_id</code>, <code>summary</code>, <code>evidence</code>, <code>status</code></li>
+<li><strong>Top-level properties:</strong> <code>evidence</code>, <code>finding_id</code>, <code>rule_id</code>, <code>severity</code>, <code>status</code>, <code>subject_id</code>, <code>summary</code></li>
+</ul>
+<p>SHA-256: <code>9a4f8a220e2e2d1d7dbc8116968bf2752d57a5725e18673faf59a192ace1826e</code></p>
+<p><code>reconstruction/semantic-changeset.schema.json</code></p>
+<p>Semantic changeset</p>
+<ul>
+<li><strong>Meta-schema:</strong> <code>https://json-schema.org/draft/2020-12/schema</code></li>
+<li><strong>$id:</strong> <code>https://x86decomp.dev/schemas/reconstruction/semantic-changeset.schema.json</code></li>
+<li><strong>Top-level type:</strong> <code>object</code></li>
+<li><strong>Required fields:</strong> <code>changeset_id</code>, <code>name</code>, <code>operations</code>, <code>status</code></li>
+<li><strong>Top-level properties:</strong> <code>base_audit_hash</code>, <code>changeset_id</code>, <code>name</code>, <code>operations</code>, <code>status</code></li>
+</ul>
+<p>SHA-256: <code>2cc66c0075ba39a54d86a20ca3705d4656ce90e922ce5a8c0b9357db1bc27b28</code></p>
+<p><code>reconstruction/source-provenance.schema.json</code></p>
+<p>Source provenance record</p>
+<ul>
+<li><strong>Meta-schema:</strong> <code>https://json-schema.org/draft/2020-12/schema</code></li>
+<li><strong>$id:</strong> <code>https://x86decomp.dev/schemas/reconstruction/source-provenance.schema.json</code></li>
+<li><strong>Top-level type:</strong> <code>object</code></li>
+<li><strong>Required fields:</strong> <code>provenance_id</code>, <code>source_path</code>, <code>line_start</code>, <code>line_end</code>, <code>binary_id</code>, <code>address_start</code>, <code>address_end</code>, <code>evidence</code>, <code>confidence</code></li>
+<li><strong>Top-level properties:</strong> <code>address_end</code>, <code>address_start</code>, <code>binary_id</code>, <code>confidence</code>, <code>evidence</code>, <code>line_end</code>, <code>line_start</code>, <code>provenance_id</code>, <code>source_path</code></li>
+</ul>
+<p>SHA-256: <code>d80a00434549c01f14f1afa7c43cb65b9eb653808b42fb5fa10f25b1d7ac1b0c</code></p>
+<p><code>reconstruction/translation-unit.schema.json</code></p>
+<p>Translation unit hypothesis</p>
+<ul>
+<li><strong>Meta-schema:</strong> <code>https://json-schema.org/draft/2020-12/schema</code></li>
+<li><strong>$id:</strong> <code>https://x86decomp.dev/schemas/reconstruction/translation-unit.schema.json</code></li>
+<li><strong>Top-level type:</strong> <code>object</code></li>
+<li><strong>Required fields:</strong> <code>unit_id</code>, <code>source_path</code>, <code>language</code>, <code>confidence</code>, <code>evidence</code></li>
+<li><strong>Top-level properties:</strong> <code>confidence</code>, <code>evidence</code>, <code>language</code>, <code>source_path</code>, <code>unit_id</code></li>
+</ul>
+<p>SHA-256: <code>ea17fb7bfec69c8e9e3eb5d14179194acece94ba90d5e0ad76c5f3e653dca642</code></p>
+<p><code>release-gate.schema.json</code></p>
+<p>No schema title or description is declared in the source file.</p>
+<ul>
+<li><strong>Meta-schema:</strong> <code>https://json-schema.org/draft/2020-12/schema</code></li>
+<li><strong>$id:</strong> <code>urn:x86decomp:schema:release-gate:1</code></li>
+<li><strong>Top-level type:</strong> <code>object</code></li>
+<li><strong>Required fields:</strong> <code>schema_version</code>, <code>kind</code>, <code>created_at</code>, <code>project_root</code>, <code>checks</code>, <code>requirements</code>, <code>failures</code>, <code>passed</code>, <code>truth_statement</code></li>
+<li><strong>Top-level properties:</strong> <code>checks</code>, <code>created_at</code>, <code>failures</code>, <code>kind</code>, <code>passed</code>, <code>project_root</code>, <code>requirements</code>, <code>schema_version</code>, <code>truth_statement</code></li>
+</ul>
+<p>SHA-256: <code>50e1f5a6cb46b67f833c881a7f025be5c7c047c1f23c3607608488afe17256cd</code></p>
+<p><code>relink-manifest.schema.json</code></p>
+<p>Manifest-driven full relink</p>
+<ul>
+<li><strong>Meta-schema:</strong> <code>https://json-schema.org/draft/2020-12/schema</code></li>
+<li><strong>$id:</strong> <code>urn:x86decomp:schema:relink-manifest:1</code></li>
+<li><strong>Top-level type:</strong> <code>object</code></li>
+<li><strong>Required fields:</strong> <code>schema_version</code>, <code>linker</code>, <code>objects</code>, <code>output</code>, <code>arguments</code>, <code>environment</code>, <code>timeout_seconds</code></li>
+<li><strong>Top-level properties:</strong> <code>arguments</code>, <code>environment</code>, <code>inherit_environment</code>, <code>linker</code>, <code>objects</code>, <code>output</code>, <code>reference_image</code>, <code>schema_version</code>, <code>timeout_seconds</code></li>
+</ul>
+<p>SHA-256: <code>ca2b77b7be6b562589e841753a9afa8c6baf1fc7cf8c703409c90fc56507e890</code></p>
+<p><code>reproduction.schema.json</code></p>
+<p>No schema title or description is declared in the source file.</p>
+<ul>
+<li><strong>Meta-schema:</strong> <code>https://json-schema.org/draft/2020-12/schema</code></li>
+<li><strong>$id:</strong> <code>urn:x86decomp:schema:reproduction:1</code></li>
+<li><strong>Top-level type:</strong> <code>object</code></li>
+<li><strong>Required fields:</strong> <code>schema_version</code>, <code>project_id</code>, <code>project_schema_version</code>, <code>binary</code>, <code>critical_files</code>, <code>tools</code></li>
+<li><strong>Top-level properties:</strong> <code>binary</code>, <code>content_store</code>, <code>created_at</code>, <code>critical_files</code>, <code>host</code>, <code>limitations</code>, <code>project_check</code>, <code>project_id</code>, <code>project_schema_version</code>, <code>schema_version</code>, <code>target_pack_check</code>, <code>toolkit_release</code>, <code>tools</code></li>
+</ul>
+<p>SHA-256: <code>aea350be271c7795406a2dd55096775e9d0b531215e05f43b75a9c6b5bd98281</code></p>
+<p><code>security-audit.schema.json</code></p>
+<p>No schema title or description is declared in the source file.</p>
+<ul>
+<li><strong>Meta-schema:</strong> <code>https://json-schema.org/draft/2020-12/schema</code></li>
+<li><strong>$id:</strong> <code>urn:x86decomp:schema:security-audit:1</code></li>
+<li><strong>Top-level type:</strong> <code>object</code></li>
+<li><strong>Required fields:</strong> <code>schema_version</code>, <code>kind</code>, <code>root</code>, <code>file_count</code>, <code>findings</code>, <code>severity_counts</code>, <code>passed</code>, <code>vulnerability_database_checked</code></li>
+<li><strong>Top-level properties:</strong> <code>created_at</code>, <code>file_count</code>, <code>findings</code>, <code>kind</code>, <code>limitations</code>, <code>passed</code>, <code>root</code>, <code>schema_version</code>, <code>severity_counts</code>, <code>total_bytes</code>, <code>vulnerability_database_checked</code></li>
+</ul>
+<p>SHA-256: <code>d62a14bd5c6d796dd52aee929ccfdf8e1265f825167070c8ffd680321a00b637</code></p>
+<p><code>symbolic-memory-harness.schema.json</code></p>
+<p>Bounded symbolic memory and alias harness</p>
+<ul>
+<li><strong>Meta-schema:</strong> <code>https://json-schema.org/draft/2020-12/schema</code></li>
+<li><strong>$id:</strong> <code>urn:x86decomp:schema:symbolic-memory-harness:1</code></li>
+<li><strong>Top-level type:</strong> <code>object</code></li>
+<li><strong>Required fields:</strong> <code>architecture</code>, <code>regions</code></li>
+<li><strong>Top-level properties:</strong> <code>alias_constraints</code>, <code>alias_slots</code>, <code>architecture</code>, <code>input_registers</code>, <code>max_paths</code>, <code>max_steps</code>, <code>observe_memory</code>, <code>output_registers</code>, <code>regions</code>, <code>slot_stride</code>, <code>stack_argument_words</code></li>
+</ul>
+<p>SHA-256: <code>e7ce53b843c172758fc086503e040cd1c60a3836f528b2c8396a7e77ab7c200a</code></p>
+<p><code>symbolic-memory-report.schema.json</code></p>
+<p>Bounded angr symbolic memory-alias comparison</p>
+<ul>
+<li><strong>Meta-schema:</strong> <code>https://json-schema.org/draft/2020-12/schema</code></li>
+<li><strong>$id:</strong> <code>urn:x86decomp:schema:symbolic-memory-report:1</code></li>
+<li><strong>Top-level type:</strong> <code>object</code></li>
+<li><strong>Required fields:</strong> <code>schema_version</code>, <code>kind</code>, <code>architecture</code>, <code>harness</code>, <code>target_execution</code>, <code>candidate_execution</code>, <code>equivalent_within_completed_model</code>, <code>scope_statement</code>, <code>universal_equivalence_claimed</code></li>
+<li><strong>Top-level properties:</strong> <code>architecture</code>, <code>candidate_execution</code>, <code>candidate_sha256</code>, <code>equivalent_within_completed_model</code>, <code>harness</code>, <code>kind</code>, <code>schema_version</code>, <code>scope_statement</code>, <code>target_execution</code>, <code>target_sha256</code>, <code>universal_equivalence_claimed</code></li>
+</ul>
+<p>SHA-256: <code>5e17dedb1bedf6581662f4cced118e40b8075957a161daea2abfab778d0298ba</code></p>
+<p><code>symbolic-report.schema.json</code></p>
+<p>Bounded symbolic comparison report</p>
+<ul>
+<li><strong>Meta-schema:</strong> <code>https://json-schema.org/draft/2020-12/schema</code></li>
+<li><strong>$id:</strong> <code>urn:x86decomp:schema:symbolic-report:1</code></li>
+<li><strong>Top-level type:</strong> <code>object</code></li>
+<li><strong>Required fields:</strong> <code>schema_version</code>, <code>equivalent_within_model</code>, <code>scope_statement</code></li>
+<li><strong>Top-level properties:</strong> <code>equivalent_within_model</code>, <code>schema_version</code>, <code>scope_statement</code></li>
+</ul>
+<p>SHA-256: <code>cc596ec7c42bc74e7810dbf52bf50cba2d17375e9438f0a3fcbb3dae67a88e29</code></p>
+<p><code>synthetic-corpus.schema.json</code></p>
+<p>Deterministic synthetic source corpus</p>
+<ul>
+<li><strong>Meta-schema:</strong> <code>https://json-schema.org/draft/2020-12/schema</code></li>
+<li><strong>$id:</strong> <code>urn:x86decomp:schema:synthetic-corpus:1</code></li>
+<li><strong>Top-level type:</strong> <code>object</code></li>
+<li><strong>Required fields:</strong> <code>schema_version</code>, <code>kind</code>, <code>created_at</code>, <code>seed</code>, <code>cases_per_family</code>, <code>families</code>, <code>case_count</code>, <code>cases</code>, <code>truth_scope</code></li>
+<li><strong>Top-level properties:</strong> <code>case_count</code>, <code>cases</code>, <code>cases_per_family</code>, <code>created_at</code>, <code>families</code>, <code>kind</code>, <code>schema_version</code>, <code>seed</code>, <code>truth_scope</code></li>
+</ul>
+<p>SHA-256: <code>3c05d2c0a766021805afdd306d6a08068af6a24cdb0adb82fb3eca4d0f1d7c7d</code></p>
+<p><code>target-decisions.schema.json</code></p>
+<p>Operator-confirmed target decisions</p>
+<ul>
+<li><strong>Meta-schema:</strong> <code>https://json-schema.org/draft/2020-12/schema</code></li>
+<li><strong>$id:</strong> <code>urn:x86decomp:schema:target-decisions:1</code></li>
+<li><strong>Top-level type:</strong> <code>object</code></li>
+<li><strong>Required fields:</strong> <code>preferred_mode</code>, <code>compiler_family</code>, <code>compiler_version</code>, <code>linker_family</code>, <code>source_language</code>, <code>allow_host_execution</code>, <code>target_description</code></li>
+<li><strong>Top-level properties:</strong> <code>allow_host_execution</code>, <code>compiler_family</code>, <code>compiler_version</code>, <code>linker_family</code>, <code>preferred_mode</code>, <code>source_language</code>, <code>target_description</code></li>
+</ul>
+<p>SHA-256: <code>647192549c5e079a02e597648a0d3d2ade5078866f869b7e0da34324b5976ed6</code></p>
+<p><code>target-pack.schema.json</code></p>
+<p>No schema title or description is declared in the source file.</p>
+<ul>
+<li><strong>Meta-schema:</strong> <code>https://json-schema.org/draft/2020-12/schema</code></li>
+<li><strong>$id:</strong> <code>urn:x86decomp:schema:target-pack:1</code></li>
+<li><strong>Top-level type:</strong> <code>object</code></li>
+<li><strong>Required fields:</strong> <code>schema_version</code>, <code>target_id</code>, <code>name</code>, <code>created_at</code>, <code>architecture</code>, <code>image_kind</code>, <code>primary_image</code>, <code>primary_sha256</code>, <code>default_modes</code>, <code>scope</code>, <code>decisions</code>, <code>artifacts</code></li>
+<li><strong>Top-level properties:</strong> <code>architecture</code>, <code>artifacts</code>, <code>created_at</code>, <code>decisions</code>, <code>default_modes</code>, <code>image_kind</code>, <code>name</code>, <code>primary_image</code>, <code>primary_sha256</code>, <code>schema_version</code>, <code>scope</code>, <code>target_id</code></li>
+</ul>
+<p>SHA-256: <code>867b89f3738ff1310340d078c5ae530f0087277e96cd00106fa1275cd0bcc954</code></p>
+<p><code>test-bundle-report.schema.json</code></p>
+<p>x86decomp Static Test Bundle Report</p>
+<ul>
+<li><strong>Meta-schema:</strong> <code>https://json-schema.org/draft/2020-12/schema</code></li>
+<li><strong>$id:</strong> <code>urn:x86decomp:schema:test-bundle-report:1</code></li>
+<li><strong>Top-level type:</strong> <code>object</code></li>
+<li><strong>Required fields:</strong> <code>schema_version</code>, <code>kind</code>, <code>archive</code>, <code>bundle</code>, <code>artifacts</code>, <code>analyses</code>, <code>errors</code>, <code>static_analysis_only</code>, <code>supplied_code_executed</code>, <code>passed</code></li>
+<li><strong>Top-level properties:</strong> <code>analyses</code>, <code>archive</code>, <code>artifacts</code>, <code>bundle</code>, <code>created_at</code>, <code>errors</code>, <code>kind</code>, <code>limitations</code>, <code>passed</code>, <code>schema_version</code>, <code>static_analysis_only</code>, <code>supplied_code_executed</code></li>
+</ul>
+<p>SHA-256: <code>482f5b618cd46eb5e815392f2655bb9fe4f3683e1f5122b8f7ab0ea69f8a2820</code></p>
+<p><code>test-bundle.schema.json</code></p>
+<p>x86decomp Authorized Static Test Bundle</p>
+<ul>
+<li><strong>Meta-schema:</strong> <code>https://json-schema.org/draft/2020-12/schema</code></li>
+<li><strong>$id:</strong> <code>urn:x86decomp:schema:test-bundle:1</code></li>
+<li><strong>Top-level type:</strong> <code>object</code></li>
+<li><strong>Required fields:</strong> <code>schema_version</code>, <code>authorization</code>, <code>artifacts</code></li>
+<li><strong>Top-level properties:</strong> <code>artifacts</code>, <code>authorization</code>, <code>description</code>, <code>expected_architecture</code>, <code>name</code>, <code>schema_version</code></li>
+</ul>
+<p>SHA-256: <code>398d162a3ccc9e3bd1e984af67efbfaf12a840f4013b406c0cf8d150f490deab</code></p>
+<p><code>type-constraint.schema.json</code></p>
+<p>Type/ABI constraint record</p>
+<ul>
+<li><strong>Meta-schema:</strong> <code>https://json-schema.org/draft/2020-12/schema</code></li>
+<li><strong>$id:</strong> <code>urn:x86decomp:schema:type-constraint:1</code></li>
+<li><strong>Top-level type:</strong> <code>object</code></li>
+<li><strong>Required fields:</strong> <code>subject_entity</code>, <code>relation</code>, <code>object_value</code>, <code>provenance</code>, <code>status</code></li>
+<li><strong>Top-level properties:</strong> <code>confidence</code>, <code>constraint_id</code>, <code>evidence_id</code>, <code>object_value</code>, <code>provenance</code>, <code>relation</code>, <code>status</code>, <code>subject_entity</code></li>
+</ul>
+<p>SHA-256: <code>f98328b457deccc685ea8be764507320d5ff94deddb366e47c5018a678baa59d</code></p>
+<p><code>verification.schema.json</code></p>
+<p>x86decomp byte verification report</p>
+<ul>
+<li><strong>Meta-schema:</strong> <code>https://json-schema.org/draft/2020-12/schema</code></li>
+<li><strong>$id:</strong> <code>urn:x86decomp:schema:verification:1</code></li>
+<li><strong>Top-level type:</strong> <code>object</code></li>
+<li><strong>Required fields:</strong> <code>schema_version</code>, <code>created_at</code>, <code>equal</code>, <code>target_size</code>, <code>candidate_size</code>, <code>target_sha256</code>, <code>candidate_sha256</code>, <code>matching_prefix_bytes</code>, <code>matching_suffix_bytes</code>, <code>sequence_similarity</code>, <code>reported_mismatches</code>, <code>mismatch_report_truncated</code>, <code>semantic_equivalence_claimed</code></li>
+<li><strong>Top-level properties:</strong> <code>candidate_sha256</code>, <code>candidate_size</code>, <code>created_at</code>, <code>equal</code>, <code>matching_prefix_bytes</code>, <code>matching_suffix_bytes</code>, <code>mismatch_report_truncated</code>, <code>reported_mismatches</code>, <code>schema_version</code>, <code>semantic_equivalence_claimed</code>, <code>sequence_similarity</code>, <code>target_sha256</code>, <code>target_size</code></li>
+</ul>
+<p>SHA-256: <code>a70e3422e6b0bec967695257c7b66d44f17a0cfe3f15d99799eb1c038ccb7fa0</code></p>
+<p><code>work-task.schema.json</code></p>
+<p>Validator-gated work item</p>
+<ul>
+<li><strong>Meta-schema:</strong> <code>https://json-schema.org/draft/2020-12/schema</code></li>
+<li><strong>$id:</strong> <code>urn:x86decomp:schema:work-task:1</code></li>
+<li><strong>Top-level type:</strong> <code>object</code></li>
+<li><strong>Required fields:</strong> <code>id</code>, <code>function_id</code>, <code>mode</code>, <code>kind</code>, <code>status</code>, <code>priority</code>, <code>instructions</code>, <code>required_validators</code>, <code>validator_results</code>, <code>evidence_ids</code>, <code>created_at</code>, <code>updated_at</code></li>
+<li><strong>Top-level properties:</strong> <code>assignee</code>, <code>created_at</code>, <code>evidence_ids</code>, <code>function_id</code>, <code>id</code>, <code>instructions</code>, <code>kind</code>, <code>mode</code>, <code>priority</code>, <code>proposal</code>, <code>required_validators</code>, <code>status</code>, <code>updated_at</code>, <code>validator_results</code></li>
+</ul>
+<p>SHA-256: <code>36794b2e24e785918a28d8bd7f5fedd100c090ed64030c71eefa0a8c933b92c9</code></p>
+<p><code>worker-report.schema.json</code></p>
+<p>No schema title or description is declared in the source file.</p>
+<ul>
+<li><strong>Meta-schema:</strong> <code>https://json-schema.org/draft/2020-12/schema</code></li>
+<li><strong>$id:</strong> <code>urn:x86decomp:schema:worker-report:1</code></li>
+<li><strong>Top-level type:</strong> <code>object</code></li>
+<li><strong>Required fields:</strong> <code>schema_version</code>, <code>status</code>, <code>command</code>, <code>isolation</code>, <code>isolation_strength</code>, <code>input_hashes</code>, <code>output_hashes</code></li>
+<li><strong>Top-level properties:</strong> <code>command</code>, <code>duration_seconds</code>, <code>error</code>, <code>input_hashes</code>, <code>isolation</code>, <code>isolation_strength</code>, <code>output_hashes</code>, <code>returncode</code>, <code>schema_version</code>, <code>started_at</code>, <code>status</code>, <code>stderr_path</code>, <code>stderr_truncated</code>, <code>stdout_path</code>, <code>stdout_truncated</code></li>
+</ul>
+<p>SHA-256: <code>f4fee8d629c5e963519a4f5ab25c4bb0856592421ee218fe7d047b5ebe089b3c</code></p></p>
+    </article>
+</section>
+            <!-- endblock -->
+
+            <!-- block footer -->
+                <footer>
+    <div class="d-flex flex-sm-row justify-content-between py-2 border-top drac-text-black drac-bg-cyan-green">
+        <a href="https://github.com/dracula/mkdocs" target="_blank" style="padding-left: 1%;"
+            class="footer-text drac-anchor drac-text-black drac-text-purple--hover">
+            Made with Dracula Theme for MkDocs
+        </a>
+    </div>
+</footer>
+            <!-- endblock -->
+        </div>
+
+    </main>
+
+        <script>var base_url = '..';</script>
+        <script src="../assets/js/jquery-3.3.1.slim.min.js"></script>
+        <script src="../assets/js/bootstrap.bundle.min.js"></script>
+        <script src="../assets/js/mkdocs.js"></script>
+			<script src="../search/main.js" defer></script>
+
+</body>
+
+</html>

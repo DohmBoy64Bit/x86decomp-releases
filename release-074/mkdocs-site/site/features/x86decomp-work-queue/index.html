@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+        <title>x86decomp.work_queue - x86decomp 0.7.4 Docs</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        
+        
+        
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="../../assets/css/darcula-highlight.min.css">
+
+        <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../assets/css/dracula-ui.min.css">
+        <link rel="stylesheet" href="../../assets/css/mkdocs.min.css">
+            <link href="../../assets/x86decomp-dracula-overrides.css" rel="stylesheet">
+
+        
+            <link  rel="icon" type="image/x-icon" href="../../assets/img/favicon.ico">
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+                <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+
+<body class="drac-bg-black-secondary drac-text-grey-ternary drac-text drac-scrollbar-purple">
+
+    <main class="d-flex">
+
+        <!-- block sidebar -->
+            <nav id="sidebar" class="sidebar drac-bg-black">
+    <div class="custom-menu">
+        <button type="button" id="sidebarCollapse" class="btn btn-primary">
+            <i class="fa fa-bars"></i>
+            <span class="sr-only">Menu</span>
+        </button>
+    </div>
+
+    <div class="p-4">
+        
+
+        <div class="drac-text-center">
+            
+                <span class="drac-text drac-line-height drac-text-white">x86decomp 0.7.4 Docs</span>
+            
+        </div>
+
+        <div class="drac-box flex-column">
+            <ul class="dot-ul">
+                <li><div class="dot-li drac-bg-cyan"></div></li>
+                <li><div class="dot-li drac-bg-green"></div></li>
+                <li><div class="dot-li drac-bg-orange"></div></li>
+                <li><div class="dot-li drac-bg-pink"></div></li>
+                <li><div class="dot-li drac-bg-purple"></div></li>
+                <li><div class="dot-li drac-bg-red"></div></li>
+                <li><div class="dot-li drac-bg-yellow"></div></li>
+            </ul>
+        </div>
+
+        <hr class="drac-divider" />
+
+        <!-- block menu -->
+        <ul class="mb-5 drac-list drac-list-none">
+            
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Home
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../../getting-started/"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Getting Started
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../../workflows/"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Workflows
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../../project-examples/"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Project Examples
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#reference-collapse" aria-expanded="false">
+                    Reference
+                </a>
+                <div class="collapse" id="reference-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../reference/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../commands/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Commands
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../schemas/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Schemas
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../integrations/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Integrations
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Source Modules
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../functions/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Function Index
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../tests/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Tests
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#release-evidence-collapse" aria-expanded="false">
+                    Release Evidence
+                </a>
+                <div class="collapse" id="release-evidence-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../release-evidence/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../verification/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Verification
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../source-coverage/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Source Coverage
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../changelog/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Changelog
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../about/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            About
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <!-- endblock -->
+    </div>
+</nav>
+        <!-- endblock -->
+
+        <nav class="divider drac-bg-purple-cyan"></nav>
+
+        <div class="content">
+            <!-- block header -->
+                <header>
+    <nav class="navbar navbar-expand-xl drac-bg-purple">
+        <div class="container-fluid">
+            
+            <button class="navbar-toggler w-100 text-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMenu"
+                aria-controls="navbarsMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse flex-column ml-auto" id="navbarsMenu">
+                <ul class="navbar-nav text-md-center">
+
+                    <!-- block preview -->
+                    <li class="nav-item">
+                            
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block search -->
+                    <li class="nav-item"><div role="search" class="search-box">
+	<form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+		<input type="text" name="q" class="drac-input drac-input-search drac-input-white drac-text-white drac-bg-black-secondary"
+		placeholder="Search docs" title="Type search term here" />
+	</form>
+</div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block source -->
+                    <li class="nav-item">
+                        
+                    </li>
+                    <!--  endblock -->
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+</header>
+            <!-- endblock -->
+
+            <!-- block content -->
+                <section class="p-md-5 section-content">
+    <article>
+        <p><p><a id="function-workqueue-init"></a>
+<a id="function-workqueue-close"></a>
+<a id="function-workqueue-create"></a>
+<a id="function-workqueue-get"></a>
+<a id="function-workqueue-claim"></a>
+<a id="function-workqueue-propose"></a>
+<a id="function-workqueue-record-validator"></a>
+<a id="function-workqueue-next"></a></p>
+<p>Section: Source-derived feature and function reference</p>
+<h1 id="x86decompwork_queue">x86decomp.work_queue</h1>
+<p>Evidence-gated human/AI work queue with validator acceptance rules.</p>
+<p>Metadata: core · current · 8 functions/methods</p>
+<p><strong>Source:</strong> <code>src/x86decomp/work_queue.py</code></p>
+<blockquote>
+<p><strong>Truth basis.</strong> Module and symbol names, signatures, line numbers, docstrings, and SHA-256 are read directly from the sealed source. When source docstrings are absent, this page says so instead of inferring behavior. Source SHA-256: <code>b1392399ca7536f6f1c1a78b16b62b61f7b70a744d2a529860e03d3371377c6e</code>.</p>
+</blockquote>
+<h2 id="functions-and-methods">Functions and methods</h2>
+<p>Metadata: internal · line 36</p>
+<h3 id="workqueueinit">WorkQueue.<strong>init</strong></h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def __init__(self, path: Path)
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.work_queue:WorkQueue.__init__</code></p>
+<p>Metadata: public · line 43</p>
+<h3 id="workqueueclose">WorkQueue.close</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def close(self) -&gt; None
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.work_queue:WorkQueue.close</code></p>
+<p>Metadata: public · line 46</p>
+<h3 id="workqueuecreate">WorkQueue.create</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def create(self, *, function_id: str, mode: str, kind: str, instructions: str, required_validators: list[str], priority: int = 0) -&gt; dict[str, Any]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.work_queue:WorkQueue.create</code></p>
+<p>Metadata: public · line 69</p>
+<h3 id="workqueueget">WorkQueue.get</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def get(self, task_id: str) -&gt; dict[str, Any]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.work_queue:WorkQueue.get</code></p>
+<p>Metadata: public · line 79</p>
+<h3 id="workqueueclaim">WorkQueue.claim</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def claim(self, task_id: str, assignee: str) -&gt; dict[str, Any]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.work_queue:WorkQueue.claim</code></p>
+<p>Metadata: public · line 88</p>
+<h3 id="workqueuepropose">WorkQueue.propose</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def propose(self, task_id: str, proposal: dict[str, Any], evidence_ids: list[str]) -&gt; dict[str, Any]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.work_queue:WorkQueue.propose</code></p>
+<p>Metadata: public · line 100</p>
+<h3 id="workqueuerecord_validator">WorkQueue.record_validator</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def record_validator(self, task_id: str, validator: str, report_path: str, passed: bool) -&gt; dict[str, Any]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.work_queue:WorkQueue.record_validator</code></p>
+<p>Metadata: public · line 114</p>
+<h3 id="workqueuenext">WorkQueue.next</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def next(self, *, mode: str | None = None) -&gt; dict[str, Any] | None
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.work_queue:WorkQueue.next</code></p></p>
+    </article>
+</section>
+            <!-- endblock -->
+
+            <!-- block footer -->
+                <footer>
+    <div class="d-flex flex-sm-row justify-content-between py-2 border-top drac-text-black drac-bg-cyan-green">
+        <a href="https://github.com/dracula/mkdocs" target="_blank" style="padding-left: 1%;"
+            class="footer-text drac-anchor drac-text-black drac-text-purple--hover">
+            Made with Dracula Theme for MkDocs
+        </a>
+    </div>
+</footer>
+            <!-- endblock -->
+        </div>
+
+    </main>
+
+        <script>var base_url = '../..';</script>
+        <script src="../../assets/js/jquery-3.3.1.slim.min.js"></script>
+        <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+        <script src="../../assets/js/mkdocs.js"></script>
+			<script src="../../search/main.js" defer></script>
+
+</body>
+
+</html>

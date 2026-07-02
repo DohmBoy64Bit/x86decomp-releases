@@ -1,0 +1,531 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+        <title>x86decomp.pe32 - x86decomp 0.7.4 Docs</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        
+        
+        
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="../../assets/css/darcula-highlight.min.css">
+
+        <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../assets/css/dracula-ui.min.css">
+        <link rel="stylesheet" href="../../assets/css/mkdocs.min.css">
+            <link href="../../assets/x86decomp-dracula-overrides.css" rel="stylesheet">
+
+        
+            <link  rel="icon" type="image/x-icon" href="../../assets/img/favicon.ico">
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+                <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+
+<body class="drac-bg-black-secondary drac-text-grey-ternary drac-text drac-scrollbar-purple">
+
+    <main class="d-flex">
+
+        <!-- block sidebar -->
+            <nav id="sidebar" class="sidebar drac-bg-black">
+    <div class="custom-menu">
+        <button type="button" id="sidebarCollapse" class="btn btn-primary">
+            <i class="fa fa-bars"></i>
+            <span class="sr-only">Menu</span>
+        </button>
+    </div>
+
+    <div class="p-4">
+        
+
+        <div class="drac-text-center">
+            
+                <span class="drac-text drac-line-height drac-text-white">x86decomp 0.7.4 Docs</span>
+            
+        </div>
+
+        <div class="drac-box flex-column">
+            <ul class="dot-ul">
+                <li><div class="dot-li drac-bg-cyan"></div></li>
+                <li><div class="dot-li drac-bg-green"></div></li>
+                <li><div class="dot-li drac-bg-orange"></div></li>
+                <li><div class="dot-li drac-bg-pink"></div></li>
+                <li><div class="dot-li drac-bg-purple"></div></li>
+                <li><div class="dot-li drac-bg-red"></div></li>
+                <li><div class="dot-li drac-bg-yellow"></div></li>
+            </ul>
+        </div>
+
+        <hr class="drac-divider" />
+
+        <!-- block menu -->
+        <ul class="mb-5 drac-list drac-list-none">
+            
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Home
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../../getting-started/"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Getting Started
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../../workflows/"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Workflows
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../../project-examples/"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Project Examples
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#reference-collapse" aria-expanded="false">
+                    Reference
+                </a>
+                <div class="collapse" id="reference-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../reference/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../commands/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Commands
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../schemas/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Schemas
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../integrations/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Integrations
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Source Modules
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../functions/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Function Index
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../tests/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Tests
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#release-evidence-collapse" aria-expanded="false">
+                    Release Evidence
+                </a>
+                <div class="collapse" id="release-evidence-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../release-evidence/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../verification/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Verification
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../source-coverage/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Source Coverage
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../changelog/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Changelog
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../about/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            About
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <!-- endblock -->
+    </div>
+</nav>
+        <!-- endblock -->
+
+        <nav class="divider drac-bg-purple-cyan"></nav>
+
+        <div class="content">
+            <!-- block header -->
+                <header>
+    <nav class="navbar navbar-expand-xl drac-bg-purple">
+        <div class="container-fluid">
+            
+            <button class="navbar-toggler w-100 text-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMenu"
+                aria-controls="navbarsMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse flex-column ml-auto" id="navbarsMenu">
+                <ul class="navbar-nav text-md-center">
+
+                    <!-- block preview -->
+                    <li class="nav-item">
+                            
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block search -->
+                    <li class="nav-item"><div role="search" class="search-box">
+	<form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+		<input type="text" name="q" class="drac-input drac-input-search drac-input-white drac-text-white drac-bg-black-secondary"
+		placeholder="Search docs" title="Type search term here" />
+	</form>
+</div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block source -->
+                    <li class="nav-item">
+                        
+                    </li>
+                    <!--  endblock -->
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+</header>
+            <!-- endblock -->
+
+            <!-- block content -->
+                <section class="p-md-5 section-content">
+    <article>
+        <p><p><a id="function-datadirectory-to-dict"></a>
+<a id="function-section-mapped-size"></a>
+<a id="function-section-to-dict"></a>
+<a id="function-importsymbol-to-dict"></a>
+<a id="function-importlibrary-to-dict"></a>
+<a id="function-exportsymbol-to-dict"></a>
+<a id="function-baserelocation-to-dict"></a>
+<a id="function-debugrecord-to-dict"></a>
+<a id="function-tlsinfo-to-dict"></a>
+<a id="function-resourceleaf-to-dict"></a>
+<a id="function-delayimportlibrary-to-dict"></a>
+<a id="function-loadconfiginfo-to-dict"></a>
+<a id="function-pe32image-entry-va"></a>
+<a id="function-pe32image-to-dict"></a>
+<a id="function-reader-init"></a>
+<a id="function-reader-require"></a>
+<a id="function-reader-unpack"></a>
+<a id="function-reader-u16"></a>
+<a id="function-reader-u32"></a>
+<a id="function-reader-u64"></a>
+<a id="function-reader-c-string"></a>
+<a id="function-rva-to-offset"></a>
+<a id="function-directory"></a>
+<a id="function-parse-imports"></a>
+<a id="function-parse-exports"></a>
+<a id="function-parse-relocations"></a>
+<a id="function-parse-debug-records"></a>
+<a id="function-parse-tls"></a>
+<a id="function-parse-resources"></a>
+<a id="function-parse-delay-imports"></a>
+<a id="function-parse-load-config"></a>
+<a id="function-parse-pe32"></a></p>
+<p>Section: Source-derived feature and function reference</p>
+<h1 id="x86decomppe32">x86decomp.pe32</h1>
+<p>Strict, dependency-free parser for native x86 PE32 images.</p>
+<p>Metadata: core · current · 32 functions/methods</p>
+<p><strong>Source:</strong> <code>src/x86decomp/pe32.py</code></p>
+<blockquote>
+<p><strong>Truth basis.</strong> Module and symbol names, signatures, line numbers, docstrings, and SHA-256 are read directly from the sealed source. When source docstrings are absent, this page says so instead of inferring behavior. Source SHA-256: <code>746651d78b0b8401565dd22e99f73c8c902b13400fd80094d4675ab52c8c4be5</code>.</p>
+</blockquote>
+<h2 id="functions-and-methods">Functions and methods</h2>
+<p>Metadata: public · line 47</p>
+<h3 id="datadirectoryto_dict">DataDirectory.to_dict</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def to_dict(self) -&gt; dict[str, Any]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.pe32:DataDirectory.to_dict</code></p>
+<p>Metadata: public · line 62</p>
+<h3 id="sectionmapped_size">Section.mapped_size</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def mapped_size(self) -&gt; int
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.pe32:Section.mapped_size</code></p>
+<p>Metadata: public · line 65</p>
+<h3 id="sectionto_dict">Section.to_dict</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def to_dict(self) -&gt; dict[str, Any]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.pe32:Section.to_dict</code></p>
+<p>Metadata: public · line 87</p>
+<h3 id="importsymbolto_dict">ImportSymbol.to_dict</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def to_dict(self) -&gt; dict[str, Any]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.pe32:ImportSymbol.to_dict</code></p>
+<p>Metadata: public · line 102</p>
+<h3 id="importlibraryto_dict">ImportLibrary.to_dict</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def to_dict(self) -&gt; dict[str, Any]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.pe32:ImportLibrary.to_dict</code></p>
+<p>Metadata: public · line 113</p>
+<h3 id="exportsymbolto_dict">ExportSymbol.to_dict</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def to_dict(self) -&gt; dict[str, Any]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.pe32:ExportSymbol.to_dict</code></p>
+<p>Metadata: public · line 128</p>
+<h3 id="baserelocationto_dict">BaseRelocation.to_dict</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def to_dict(self) -&gt; dict[str, Any]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.pe32:BaseRelocation.to_dict</code></p>
+<p>Metadata: public · line 143</p>
+<h3 id="debugrecordto_dict">DebugRecord.to_dict</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def to_dict(self) -&gt; dict[str, Any]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.pe32:DebugRecord.to_dict</code></p>
+<p>Metadata: public · line 166</p>
+<h3 id="tlsinfoto_dict">TLSInfo.to_dict</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def to_dict(self) -&gt; dict[str, Any]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.pe32:TLSInfo.to_dict</code></p>
+<p>Metadata: public · line 188</p>
+<h3 id="resourceleafto_dict">ResourceLeaf.to_dict</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def to_dict(self) -&gt; dict[str, Any]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.pe32:ResourceLeaf.to_dict</code></p>
+<p>Metadata: public · line 206</p>
+<h3 id="delayimportlibraryto_dict">DelayImportLibrary.to_dict</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def to_dict(self) -&gt; dict[str, Any]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.pe32:DelayImportLibrary.to_dict</code></p>
+<p>Metadata: public · line 232</p>
+<h3 id="loadconfiginfoto_dict">LoadConfigInfo.to_dict</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def to_dict(self) -&gt; dict[str, Any]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.pe32:LoadConfigInfo.to_dict</code></p>
+<p>Metadata: public · line 280</p>
+<h3 id="pe32imageentry_va">PE32Image.entry_va</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def entry_va(self) -&gt; int
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.pe32:PE32Image.entry_va</code></p>
+<p>Metadata: public · line 283</p>
+<h3 id="pe32imageto_dict">PE32Image.to_dict</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def to_dict(self) -&gt; dict[str, Any]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.pe32:PE32Image.to_dict</code></p>
+<p>Metadata: internal · line 323</p>
+<h3 id="_readerinit">_Reader.<strong>init</strong></h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def __init__(self, data: bytes)
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.pe32:_Reader.__init__</code></p>
+<p>Metadata: internal · line 326</p>
+<h3 id="_readerrequire">_Reader.require</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def require(self, offset: int, size: int, context: str) -&gt; None
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.pe32:_Reader.require</code></p>
+<p>Metadata: internal · line 332</p>
+<h3 id="_readerunpack">_Reader.unpack</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def unpack(self, fmt: str, offset: int, context: str) -&gt; tuple[Any, ...]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.pe32:_Reader.unpack</code></p>
+<p>Metadata: internal · line 337</p>
+<h3 id="_readeru16">_Reader.u16</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def u16(self, offset: int, context: str) -&gt; int
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.pe32:_Reader.u16</code></p>
+<p>Metadata: internal · line 340</p>
+<h3 id="_readeru32">_Reader.u32</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def u32(self, offset: int, context: str) -&gt; int
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.pe32:_Reader.u32</code></p>
+<p>Metadata: internal · line 343</p>
+<h3 id="_readeru64">_Reader.u64</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def u64(self, offset: int, context: str) -&gt; int
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.pe32:_Reader.u64</code></p>
+<p>Metadata: internal · line 346</p>
+<h3 id="_readerc_string">_Reader.c_string</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def c_string(self, offset: int, context: str, max_length: int = 4096) -&gt; str
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.pe32:_Reader.c_string</code></p>
+<p>Metadata: internal · line 355</p>
+<h3 id="_rva_to_offset">_rva_to_offset</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def _rva_to_offset(rva: int, sections: tuple[Section, ...], size_of_headers: int, file_size: int) -&gt; int
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.pe32:_rva_to_offset</code></p>
+<p>Metadata: internal · line 376</p>
+<h3 id="_directory">_directory</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def _directory(directories: tuple[DataDirectory, ...], name: str) -&gt; DataDirectory
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.pe32:_directory</code></p>
+<p>Metadata: internal · line 383</p>
+<h3 id="_parse_imports">_parse_imports</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def _parse_imports(reader: _Reader, directories: tuple[DataDirectory, ...], sections: tuple[Section, ...], size_of_headers: int) -&gt; tuple[ImportLibrary, ...]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.pe32:_parse_imports</code></p>
+<p>Metadata: internal · line 455</p>
+<h3 id="_parse_exports">_parse_exports</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def _parse_exports(reader: _Reader, directories: tuple[DataDirectory, ...], sections: tuple[Section, ...], size_of_headers: int) -&gt; tuple[ExportSymbol, ...]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.pe32:_parse_exports</code></p>
+<p>Metadata: internal · line 521</p>
+<h3 id="_parse_relocations">_parse_relocations</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def _parse_relocations(reader: _Reader, directories: tuple[DataDirectory, ...], sections: tuple[Section, ...], size_of_headers: int) -&gt; tuple[BaseRelocation, ...]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.pe32:_parse_relocations</code></p>
+<p>Metadata: internal · line 554</p>
+<h3 id="_parse_debug_records">_parse_debug_records</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def _parse_debug_records(reader: _Reader, directories: tuple[DataDirectory, ...], sections: tuple[Section, ...], size_of_headers: int) -&gt; tuple[DebugRecord, ...]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.pe32:_parse_debug_records</code></p>
+<p>Metadata: internal · line 615</p>
+<h3 id="_parse_tls">_parse_tls</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def _parse_tls(reader: _Reader, directories: tuple[DataDirectory, ...], sections: tuple[Section, ...], size_of_headers: int, image_base: int) -&gt; TLSInfo | None
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.pe32:_parse_tls</code></p>
+<p>Metadata: internal · line 661</p>
+<h3 id="_parse_resources">_parse_resources</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def _parse_resources(reader: _Reader, directories: tuple[DataDirectory, ...], sections: tuple[Section, ...], size_of_headers: int) -&gt; tuple[ResourceLeaf, ...]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.pe32:_parse_resources</code></p>
+<p>Metadata: internal · line 726</p>
+<h3 id="_parse_delay_imports">_parse_delay_imports</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def _parse_delay_imports(reader: _Reader, directories: tuple[DataDirectory, ...], sections: tuple[Section, ...], size_of_headers: int, image_base: int) -&gt; tuple[DelayImportLibrary, ...]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.pe32:_parse_delay_imports</code></p>
+<p>Metadata: internal · line 785</p>
+<h3 id="_parse_load_config">_parse_load_config</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def _parse_load_config(reader: _Reader, directories: tuple[DataDirectory, ...], sections: tuple[Section, ...], size_of_headers: int) -&gt; LoadConfigInfo | None
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.pe32:_parse_load_config</code></p>
+<p>Metadata: public · line 823</p>
+<h3 id="parse_pe32">parse_pe32</h3>
+<p>No function or method docstring is declared in the v0.7.4 source.</p>
+<pre><code>def parse_pe32(path: Path) -&gt; PE32Image
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.pe32:parse_pe32</code></p></p>
+    </article>
+</section>
+            <!-- endblock -->
+
+            <!-- block footer -->
+                <footer>
+    <div class="d-flex flex-sm-row justify-content-between py-2 border-top drac-text-black drac-bg-cyan-green">
+        <a href="https://github.com/dracula/mkdocs" target="_blank" style="padding-left: 1%;"
+            class="footer-text drac-anchor drac-text-black drac-text-purple--hover">
+            Made with Dracula Theme for MkDocs
+        </a>
+    </div>
+</footer>
+            <!-- endblock -->
+        </div>
+
+    </main>
+
+        <script>var base_url = '../..';</script>
+        <script src="../../assets/js/jquery-3.3.1.slim.min.js"></script>
+        <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+        <script src="../../assets/js/mkdocs.js"></script>
+			<script src="../../search/main.js" defer></script>
+
+</body>
+
+</html>

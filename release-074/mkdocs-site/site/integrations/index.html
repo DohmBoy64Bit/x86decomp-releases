@@ -1,0 +1,569 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+        <title>Integrations - x86decomp 0.7.4 Docs</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        
+        
+        
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="../assets/css/darcula-highlight.min.css">
+
+        <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../assets/css/dracula-ui.min.css">
+        <link rel="stylesheet" href="../assets/css/mkdocs.min.css">
+            <link href="../assets/x86decomp-dracula-overrides.css" rel="stylesheet">
+
+        
+            <link  rel="icon" type="image/x-icon" href="../assets/img/favicon.ico">
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+                <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+
+<body class="drac-bg-black-secondary drac-text-grey-ternary drac-text drac-scrollbar-purple">
+
+    <main class="d-flex">
+
+        <!-- block sidebar -->
+            <nav id="sidebar" class="sidebar drac-bg-black">
+    <div class="custom-menu">
+        <button type="button" id="sidebarCollapse" class="btn btn-primary">
+            <i class="fa fa-bars"></i>
+            <span class="sr-only">Menu</span>
+        </button>
+    </div>
+
+    <div class="p-4">
+        
+
+        <div class="drac-text-center">
+            
+                <span class="drac-text drac-line-height drac-text-white">x86decomp 0.7.4 Docs</span>
+            
+        </div>
+
+        <div class="drac-box flex-column">
+            <ul class="dot-ul">
+                <li><div class="dot-li drac-bg-cyan"></div></li>
+                <li><div class="dot-li drac-bg-green"></div></li>
+                <li><div class="dot-li drac-bg-orange"></div></li>
+                <li><div class="dot-li drac-bg-pink"></div></li>
+                <li><div class="dot-li drac-bg-purple"></div></li>
+                <li><div class="dot-li drac-bg-red"></div></li>
+                <li><div class="dot-li drac-bg-yellow"></div></li>
+            </ul>
+        </div>
+
+        <hr class="drac-divider" />
+
+        <!-- block menu -->
+        <ul class="mb-5 drac-list drac-list-none">
+            
+            <li class="drac-box">
+                <a href=".."
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Home
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../getting-started/"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Getting Started
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../workflows/"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Workflows
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../project-examples/"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Project Examples
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href=".."
+                    class=" active 
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#reference-collapse" aria-expanded="false">
+                    Reference
+                </a>
+                <div class="collapse" id="reference-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../reference/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../commands/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Commands
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../schemas/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Schemas
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="./"
+            class=" active 
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Integrations
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../features/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Source Modules
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../functions/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Function Index
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../tests/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Tests
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href=".."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#release-evidence-collapse" aria-expanded="false">
+                    Release Evidence
+                </a>
+                <div class="collapse" id="release-evidence-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../release-evidence/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../verification/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Verification
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../source-coverage/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Source Coverage
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../changelog/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Changelog
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../about/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            About
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <!-- endblock -->
+    </div>
+</nav>
+        <!-- endblock -->
+
+        <nav class="divider drac-bg-purple-cyan"></nav>
+
+        <div class="content">
+            <!-- block header -->
+                <header>
+    <nav class="navbar navbar-expand-xl drac-bg-purple">
+        <div class="container-fluid">
+            
+            <button class="navbar-toggler w-100 text-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMenu"
+                aria-controls="navbarsMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse flex-column ml-auto" id="navbarsMenu">
+                <ul class="navbar-nav text-md-center">
+
+                    <!-- block preview -->
+                    <li class="nav-item">
+                            
+        <div class="container">
+            <div class="row row-preview">
+                <div class="col">
+                    <a href="../schemas/"
+                        class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover">
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="../features/"
+                        class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover" style="padding-left: 3%;">
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block search -->
+                    <li class="nav-item"><div role="search" class="search-box">
+	<form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+		<input type="text" name="q" class="drac-input drac-input-search drac-input-white drac-text-white drac-bg-black-secondary"
+		placeholder="Search docs" title="Type search term here" />
+	</form>
+</div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block source -->
+                    <li class="nav-item">
+                        
+                    </li>
+                    <!--  endblock -->
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+</header>
+            <!-- endblock -->
+
+            <!-- block content -->
+                <section class="p-md-5 section-content">
+    <article>
+        <p><p><a id="adapter-angr"></a>
+<a id="adapter-build"></a>
+<a id="adapter-capstone"></a>
+<a id="adapter-clang"></a>
+<a id="adapter-clangxx"></a>
+<a id="adapter-cmake"></a>
+<a id="adapter-container-runtime"></a>
+<a id="adapter-coverage"></a>
+<a id="adapter-dynamorio"></a>
+<a id="adapter-fastapi"></a>
+<a id="adapter-gcc"></a>
+<a id="adapter-ghidra"></a>
+<a id="adapter-gxx"></a>
+<a id="adapter-java"></a>
+<a id="adapter-javalang"></a>
+<a id="adapter-jsonschema"></a>
+<a id="adapter-lief"></a>
+<a id="adapter-lld-link"></a>
+<a id="adapter-llvm-lib"></a>
+<a id="adapter-llvm-objdump"></a>
+<a id="adapter-llvm-readobj"></a>
+<a id="adapter-msvc"></a>
+<a id="adapter-ninja"></a>
+<a id="adapter-objdiff"></a>
+<a id="adapter-pip-audit"></a>
+<a id="adapter-pytest"></a>
+<a id="adapter-python"></a>
+<a id="adapter-pyyaml"></a>
+<a id="adapter-unicorn"></a>
+<a id="adapter-uvicorn"></a>
+<a id="adapter-z3"></a></p>
+<p>Section: Exact adapter catalog</p>
+<h1 id="integrations-and-adapters">Integrations and adapters</h1>
+<p>All 31 adapter specifications declared by <code>test-suite/src/x86decomp_testkit/adapters/catalog.py</code>.</p>
+<blockquote>
+<p><strong>Important:</strong> The source catalog marks most adapters <code>optional=False</code> for the comprehensive harness. Missing adapters are reported as BLOCKED rather than silently skipped; the <code>msvc</code> adapter is explicitly optional and user-owned.</p>
+</blockquote>
+<p>angr — angr</p>
+<p><strong>Kind:</strong> <code>python</code> · <strong>Optional flag:</strong> <code>false</code></p>
+<p><strong>Verification suites:</strong> <code>angr</code>, <code>symbolic-memory</code></p>
+<p><strong>Executable candidates:</strong> none</p>
+<p><strong>Python modules:</strong> <code>angr</code></p>
+<p><strong>Environment variables:</strong> none</p>
+<p><strong>Pip requirement:</strong> <code>angr&gt;=9.2,&lt;10</code></p>
+<p>build — Python build</p>
+<p><strong>Kind:</strong> <code>python</code> · <strong>Optional flag:</strong> <code>false</code></p>
+<p><strong>Verification suites:</strong> <code>packaging</code></p>
+<p><strong>Executable candidates:</strong> none</p>
+<p><strong>Python modules:</strong> <code>build</code></p>
+<p><strong>Environment variables:</strong> none</p>
+<p><strong>Pip requirement:</strong> <code>build&gt;=1.2,&lt;2</code></p>
+<p>capstone — Capstone Python bindings</p>
+<p><strong>Kind:</strong> <code>python</code> · <strong>Optional flag:</strong> <code>false</code></p>
+<p><strong>Verification suites:</strong> <code>disassembly</code>, <code>matching</code>, <code>symbolic</code></p>
+<p><strong>Executable candidates:</strong> none</p>
+<p><strong>Python modules:</strong> <code>capstone</code></p>
+<p><strong>Environment variables:</strong> none</p>
+<p><strong>Pip requirement:</strong> <code>capstone&gt;=5.0.6,&lt;6</code></p>
+<p>clang — Clang C compiler</p>
+<p><strong>Kind:</strong> <code>executable</code> · <strong>Optional flag:</strong> <code>false</code></p>
+<p><strong>Verification suites:</strong> <code>compiler</code>, <code>corpus</code>, <code>coff</code></p>
+<p><strong>Executable candidates:</strong> <code>clang</code>, <code>clang.exe</code></p>
+<p><strong>Python modules:</strong> none</p>
+<p><strong>Environment variables:</strong> <code>CLANG</code></p>
+<p>Install LLVM/Clang or select the clang executable.</p>
+<p>clangxx — Clang C++ compiler</p>
+<p><strong>Kind:</strong> <code>executable</code> · <strong>Optional flag:</strong> <code>false</code></p>
+<p><strong>Verification suites:</strong> <code>compiler</code>, <code>corpus</code>, <code>cpp</code></p>
+<p><strong>Executable candidates:</strong> <code>clang++</code>, <code>clang++.exe</code></p>
+<p><strong>Python modules:</strong> none</p>
+<p><strong>Environment variables:</strong> <code>CLANGXX</code></p>
+<p>Install LLVM/Clang or select the clang++ executable.</p>
+<p>cmake — CMake</p>
+<p><strong>Kind:</strong> <code>executable</code> · <strong>Optional flag:</strong> <code>false</code></p>
+<p><strong>Verification suites:</strong> <code>native-build</code></p>
+<p><strong>Executable candidates:</strong> <code>cmake</code>, <code>cmake.exe</code></p>
+<p><strong>Python modules:</strong> none</p>
+<p><strong>Environment variables:</strong> none</p>
+<p>Install CMake or select cmake.</p>
+<p>container-runtime — Docker or Podman container runtime</p>
+<p><strong>Kind:</strong> <code>executable</code> · <strong>Optional flag:</strong> <code>false</code></p>
+<p><strong>Verification suites:</strong> <code>isolated-workers</code>, <code>compiler-worker</code></p>
+<p><strong>Executable candidates:</strong> <code>docker</code>, <code>podman</code>, <code>docker.exe</code>, <code>podman.exe</code></p>
+<p><strong>Python modules:</strong> none</p>
+<p><strong>Environment variables:</strong> none</p>
+<p>Install Docker or Podman, or select an existing runtime executable.</p>
+<p>coverage — coverage.py</p>
+<p><strong>Kind:</strong> <code>python</code> · <strong>Optional flag:</strong> <code>false</code></p>
+<p><strong>Verification suites:</strong> <code>coverage</code>, <code>public-api</code></p>
+<p><strong>Executable candidates:</strong> none</p>
+<p><strong>Python modules:</strong> <code>coverage</code></p>
+<p><strong>Environment variables:</strong> none</p>
+<p><strong>Pip requirement:</strong> <code>coverage&gt;=7,&lt;8</code></p>
+<p>dynamorio — DynamoRIO</p>
+<p><strong>Kind:</strong> <code>directory</code> · <strong>Optional flag:</strong> <code>false</code></p>
+<p><strong>Verification suites:</strong> <code>drcov-live</code>, <code>runtime-tracing</code></p>
+<p><strong>Executable candidates:</strong> <code>drrun</code>, <code>drrun.exe</code></p>
+<p><strong>Python modules:</strong> none</p>
+<p><strong>Environment variables:</strong> <code>DYNAMORIO_HOME</code></p>
+<p>Download a DynamoRIO release package and select its extracted root or drrun executable.</p>
+<p>fastapi — FastAPI</p>
+<p><strong>Kind:</strong> <code>python</code> · <strong>Optional flag:</strong> <code>false</code></p>
+<p><strong>Verification suites:</strong> <code>service</code></p>
+<p><strong>Executable candidates:</strong> none</p>
+<p><strong>Python modules:</strong> <code>fastapi</code></p>
+<p><strong>Environment variables:</strong> none</p>
+<p><strong>Pip requirement:</strong> <code>fastapi&gt;=0.128,&lt;1</code></p>
+<p>gcc — GCC C compiler</p>
+<p><strong>Kind:</strong> <code>executable</code> · <strong>Optional flag:</strong> <code>false</code></p>
+<p><strong>Verification suites:</strong> <code>compiler-regression</code></p>
+<p><strong>Executable candidates:</strong> <code>gcc</code>, <code>gcc.exe</code></p>
+<p><strong>Python modules:</strong> none</p>
+<p><strong>Environment variables:</strong> none</p>
+<p>Install GCC or select gcc.</p>
+<p>ghidra — Ghidra</p>
+<p><strong>Kind:</strong> <code>directory</code> · <strong>Optional flag:</strong> <code>false</code></p>
+<p><strong>Verification suites:</strong> <code>ghidra-live</code>, <code>pcode</code>, <code>decompiler</code></p>
+<p><strong>Executable candidates:</strong> <code>analyzeHeadless</code>, <code>analyzeHeadless.bat</code></p>
+<p><strong>Python modules:</strong> none</p>
+<p><strong>Environment variables:</strong> <code>GHIDRA_HOME</code></p>
+<p>Download an official Ghidra release archive and extract it; select the extracted root directory.</p>
+<p>gxx — GCC C++ compiler</p>
+<p><strong>Kind:</strong> <code>executable</code> · <strong>Optional flag:</strong> <code>false</code></p>
+<p><strong>Verification suites:</strong> <code>compiler-regression</code></p>
+<p><strong>Executable candidates:</strong> <code>g++</code>, <code>g++.exe</code></p>
+<p><strong>Python modules:</strong> none</p>
+<p><strong>Environment variables:</strong> none</p>
+<p>Install GCC or select g++.</p>
+<p>java — Java runtime</p>
+<p><strong>Kind:</strong> <code>executable</code> · <strong>Optional flag:</strong> <code>false</code></p>
+<p><strong>Verification suites:</strong> <code>ghidra</code></p>
+<p><strong>Executable candidates:</strong> <code>java</code></p>
+<p><strong>Python modules:</strong> none</p>
+<p><strong>Environment variables:</strong> <code>JAVA_HOME</code></p>
+<p>Install a Java version supported by the selected Ghidra release.</p>
+<p>javalang — javalang</p>
+<p><strong>Kind:</strong> <code>python</code> · <strong>Optional flag:</strong> <code>false</code></p>
+<p><strong>Verification suites:</strong> <code>ghidra-static</code></p>
+<p><strong>Executable candidates:</strong> none</p>
+<p><strong>Python modules:</strong> <code>javalang</code></p>
+<p><strong>Environment variables:</strong> none</p>
+<p><strong>Pip requirement:</strong> <code>javalang&gt;=0.13,&lt;1</code></p>
+<p>jsonschema — jsonschema</p>
+<p><strong>Kind:</strong> <code>python</code> · <strong>Optional flag:</strong> <code>false</code></p>
+<p><strong>Verification suites:</strong> <code>contracts</code></p>
+<p><strong>Executable candidates:</strong> none</p>
+<p><strong>Python modules:</strong> <code>jsonschema</code></p>
+<p><strong>Environment variables:</strong> none</p>
+<p><strong>Pip requirement:</strong> <code>jsonschema&gt;=4.23,&lt;5</code></p>
+<p>lief — LIEF</p>
+<p><strong>Kind:</strong> <code>python</code> · <strong>Optional flag:</strong> <code>false</code></p>
+<p><strong>Verification suites:</strong> <code>independent-pe</code></p>
+<p><strong>Executable candidates:</strong> none</p>
+<p><strong>Python modules:</strong> <code>lief</code></p>
+<p><strong>Environment variables:</strong> none</p>
+<p><strong>Pip requirement:</strong> <code>lief&gt;=0.17,&lt;0.18</code></p>
+<p>lld-link — LLD COFF linker</p>
+<p><strong>Kind:</strong> <code>executable</code> · <strong>Optional flag:</strong> <code>false</code></p>
+<p><strong>Verification suites:</strong> <code>relink</code>, <code>whole-image</code></p>
+<p><strong>Executable candidates:</strong> <code>lld-link</code>, <code>lld-link.exe</code></p>
+<p><strong>Python modules:</strong> none</p>
+<p><strong>Environment variables:</strong> <code>LLD_LINK</code></p>
+<p>Install LLVM/LLD or select lld-link.</p>
+<p>llvm-lib — LLVM librarian</p>
+<p><strong>Kind:</strong> <code>executable</code> · <strong>Optional flag:</strong> <code>false</code></p>
+<p><strong>Verification suites:</strong> <code>coff-archive</code></p>
+<p><strong>Executable candidates:</strong> <code>llvm-lib</code>, <code>llvm-lib.exe</code>, <code>llvm-ar</code></p>
+<p><strong>Python modules:</strong> none</p>
+<p><strong>Environment variables:</strong> none</p>
+<p>Install LLVM tools or select llvm-lib/llvm-ar.</p>
+<p>llvm-objdump — LLVM objdump</p>
+<p><strong>Kind:</strong> <code>executable</code> · <strong>Optional flag:</strong> <code>false</code></p>
+<p><strong>Verification suites:</strong> <code>independent-disassembly</code></p>
+<p><strong>Executable candidates:</strong> <code>llvm-objdump</code>, <code>llvm-objdump.exe</code></p>
+<p><strong>Python modules:</strong> none</p>
+<p><strong>Environment variables:</strong> none</p>
+<p>Install LLVM tools or select llvm-objdump.</p>
+<p>llvm-readobj — LLVM object inspector</p>
+<p><strong>Kind:</strong> <code>executable</code> · <strong>Optional flag:</strong> <code>false</code></p>
+<p><strong>Verification suites:</strong> <code>independent-coff</code></p>
+<p><strong>Executable candidates:</strong> <code>llvm-readobj</code>, <code>llvm-readobj.exe</code></p>
+<p><strong>Python modules:</strong> none</p>
+<p><strong>Environment variables:</strong> none</p>
+<p>Install LLVM tools or select llvm-readobj.</p>
+<p>msvc — User-owned Microsoft C/C++ toolchain</p>
+<p><strong>Kind:</strong> <code>toolchain</code> · <strong>Optional flag:</strong> <code>true</code></p>
+<p><strong>Verification suites:</strong> <code>historical-msvc</code>, <code>matching</code></p>
+<p><strong>Executable candidates:</strong> <code>cl.exe</code>, <code>link.exe</code></p>
+<p><strong>Python modules:</strong> none</p>
+<p><strong>Environment variables:</strong> <code>VCINSTALLDIR</code>, <code>VSINSTALLDIR</code></p>
+<p>Select an authorized Visual C++ installation root or Developer Command Prompt environment. Historical proprietary compilers are never downloaded by this suite.</p>
+<p>ninja — Ninja</p>
+<p><strong>Kind:</strong> <code>executable</code> · <strong>Optional flag:</strong> <code>false</code></p>
+<p><strong>Verification suites:</strong> <code>native-build</code></p>
+<p><strong>Executable candidates:</strong> <code>ninja</code>, <code>ninja.exe</code></p>
+<p><strong>Python modules:</strong> none</p>
+<p><strong>Environment variables:</strong> none</p>
+<p>Install Ninja or select ninja.</p>
+<p>objdiff — objdiff CLI</p>
+<p><strong>Kind:</strong> <code>executable</code> · <strong>Optional flag:</strong> <code>false</code></p>
+<p><strong>Verification suites:</strong> <code>objdiff</code>, <code>matching</code></p>
+<p><strong>Executable candidates:</strong> <code>objdiff-cli</code>, <code>objdiff</code></p>
+<p><strong>Python modules:</strong> none</p>
+<p><strong>Environment variables:</strong> <code>OBJDIFF</code></p>
+<p>Install the objdiff release CLI or select the objdiff executable.</p>
+<p>pip-audit — pip-audit</p>
+<p><strong>Kind:</strong> <code>python</code> · <strong>Optional flag:</strong> <code>false</code></p>
+<p><strong>Verification suites:</strong> <code>dependency-security</code>, <code>release</code></p>
+<p><strong>Executable candidates:</strong> none</p>
+<p><strong>Python modules:</strong> <code>pip_audit</code></p>
+<p><strong>Environment variables:</strong> none</p>
+<p><strong>Pip requirement:</strong> <code>pip-audit&gt;=2.7,&lt;3</code></p>
+<p>Install pip-audit in the test-suite Python environment.</p>
+<p>pytest — pytest</p>
+<p><strong>Kind:</strong> <code>python</code> · <strong>Optional flag:</strong> <code>false</code></p>
+<p><strong>Verification suites:</strong> <code>unit</code>, <code>integration</code></p>
+<p><strong>Executable candidates:</strong> none</p>
+<p><strong>Python modules:</strong> <code>pytest</code></p>
+<p><strong>Environment variables:</strong> none</p>
+<p><strong>Pip requirement:</strong> <code>pytest&gt;=8,&lt;10</code></p>
+<p>python — Python 3.11+</p>
+<p><strong>Kind:</strong> <code>executable</code> · <strong>Optional flag:</strong> <code>false</code></p>
+<p><strong>Verification suites:</strong> <code>all</code></p>
+<p><strong>Executable candidates:</strong> <code>python3</code>, <code>python</code></p>
+<p><strong>Python modules:</strong> none</p>
+<p><strong>Environment variables:</strong> none</p>
+<p>Install Python 3.11 or newer using your operating-system package manager or python.org.</p>
+<p>pyyaml — PyYAML</p>
+<p><strong>Kind:</strong> <code>python</code> · <strong>Optional flag:</strong> <code>false</code></p>
+<p><strong>Verification suites:</strong> <code>skill-frontmatter</code></p>
+<p><strong>Executable candidates:</strong> none</p>
+<p><strong>Python modules:</strong> <code>yaml</code></p>
+<p><strong>Environment variables:</strong> none</p>
+<p><strong>Pip requirement:</strong> <code>PyYAML&gt;=6,&lt;7</code></p>
+<p>unicorn — Unicorn Python bindings</p>
+<p><strong>Kind:</strong> <code>python</code> · <strong>Optional flag:</strong> <code>false</code></p>
+<p><strong>Verification suites:</strong> <code>dynamic</code>, <code>functional</code></p>
+<p><strong>Executable candidates:</strong> none</p>
+<p><strong>Python modules:</strong> <code>unicorn</code></p>
+<p><strong>Environment variables:</strong> none</p>
+<p><strong>Pip requirement:</strong> <code>unicorn&gt;=2.1.4,&lt;3</code></p>
+<p>uvicorn — Uvicorn</p>
+<p><strong>Kind:</strong> <code>python</code> · <strong>Optional flag:</strong> <code>false</code></p>
+<p><strong>Verification suites:</strong> <code>service</code></p>
+<p><strong>Executable candidates:</strong> none</p>
+<p><strong>Python modules:</strong> <code>uvicorn</code></p>
+<p><strong>Environment variables:</strong> none</p>
+<p><strong>Pip requirement:</strong> <code>uvicorn&gt;=0.48,&lt;1</code></p>
+<p>z3 — Z3 Python bindings</p>
+<p><strong>Kind:</strong> <code>python</code> · <strong>Optional flag:</strong> <code>false</code></p>
+<p><strong>Verification suites:</strong> <code>symbolic</code>, <code>functional</code></p>
+<p><strong>Executable candidates:</strong> none</p>
+<p><strong>Python modules:</strong> <code>z3</code></p>
+<p><strong>Environment variables:</strong> none</p>
+<p><strong>Pip requirement:</strong> <code>z3-solver&gt;=4.13,&lt;5</code></p></p>
+    </article>
+</section>
+            <!-- endblock -->
+
+            <!-- block footer -->
+                <footer>
+    <div class="d-flex flex-sm-row justify-content-between py-2 border-top drac-text-black drac-bg-cyan-green">
+        <a href="https://github.com/dracula/mkdocs" target="_blank" style="padding-left: 1%;"
+            class="footer-text drac-anchor drac-text-black drac-text-purple--hover">
+            Made with Dracula Theme for MkDocs
+        </a>
+    </div>
+</footer>
+            <!-- endblock -->
+        </div>
+
+    </main>
+
+        <script>var base_url = '..';</script>
+        <script src="../assets/js/jquery-3.3.1.slim.min.js"></script>
+        <script src="../assets/js/bootstrap.bundle.min.js"></script>
+        <script src="../assets/js/mkdocs.js"></script>
+			<script src="../search/main.js" defer></script>
+
+</body>
+
+</html>
