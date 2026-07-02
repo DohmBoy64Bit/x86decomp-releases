@@ -1,0 +1,79 @@
+{
+  "format": "x86decomp-project-examples-content-verification-v1",
+  "target_release": "0.7.4",
+  "status": "pass",
+  "example_pages": 11,
+  "metrics": {
+    "matching-project": {
+      "words": 921,
+      "svg_count": 1,
+      "command_count": 20,
+      "source_rows": 9
+    },
+    "functional-project": {
+      "words": 942,
+      "svg_count": 1,
+      "command_count": 19,
+      "source_rows": 15
+    },
+    "hybrid-project": {
+      "words": 1010,
+      "svg_count": 1,
+      "command_count": 18,
+      "source_rows": 8
+    },
+    "static-analysis-evidence": {
+      "words": 888,
+      "svg_count": 1,
+      "command_count": 23,
+      "source_rows": 10
+    },
+    "compiler-laboratory": {
+      "words": 911,
+      "svg_count": 1,
+      "command_count": 10,
+      "source_rows": 9
+    },
+    "patch-image-integration": {
+      "words": 787,
+      "svg_count": 1,
+      "command_count": 12,
+      "source_rows": 6
+    },
+    "full-relink-convergence": {
+      "words": 781,
+      "svg_count": 1,
+      "command_count": 15,
+      "source_rows": 7
+    },
+    "abi-type-recovery": {
+      "words": 729,
+      "svg_count": 1,
+      "command_count": 13,
+      "source_rows": 8
+    },
+    "target-release-reproducibility": {
+      "words": 776,
+      "svg_count": 1,
+      "command_count": 15,
+      "source_rows": 8
+    },
+    "benchmark-validation-corpus": {
+      "words": 808,
+      "svg_count": 1,
+      "command_count": 10,
+      "source_rows": 10
+    },
+    "project-operations-recovery": {
+      "words": 722,
+      "svg_count": 1,
+      "command_count": 19,
+      "source_rows": 9
+    },
+    "source_audit": {
+      "anchors": 95,
+      "unique_files": 50
+    }
+  },
+  "failures": []
+}

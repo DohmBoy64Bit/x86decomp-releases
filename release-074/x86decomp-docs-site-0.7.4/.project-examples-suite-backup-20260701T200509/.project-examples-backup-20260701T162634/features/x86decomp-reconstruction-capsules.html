@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Implements capsules operations for the reconstruction capability plane.">
+<title>x86decomp.reconstruction.capsules · x86decomp 0.7.4 Docs</title>
+<link rel="stylesheet" href="../assets/styles.css">
+<script>window.X86DOCS_ROOT="../";</script>
+<script defer src="../assets/search-index.js"></script>
+<script defer src="../assets/app.js"></script>
+</head>
+<body data-root="../">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="icon-button mobile-menu" data-menu-toggle aria-label="Open navigation">☰</button>
+  <a class="brand" href="../index.html"><span class="brand-mark">x86</span><span>decomp docs</span><small>0.7.4</small></a>
+  <button class="search-trigger" data-search-trigger aria-label="Search documentation"><span>Search docs</span><kbd>Ctrl K</kbd></button>
+  <button class="icon-button" data-theme-toggle aria-label="Toggle color theme">◐</button>
+</header>
+<div class="layout">
+  <aside class="sidebar" data-sidebar>
+    <nav><a href="../index.html">Home</a><a href="../getting-started.html">Getting started</a><a href="../workflows.html">Workflows</a><a href="../commands/index.html">Commands</a><a href="../features/index.html">Features &amp; functions</a><a href="../tests/index.html">Tests</a><a href="../schemas.html">Schemas</a><a href="../integrations.html">Integrations</a><a href="../verification.html">Verification</a><a href="../changelog.html">Changelog</a><a href="../about.html">About</a></nav>
+    <div class="sidebar-note"><strong>Current release only</strong><span>One unified interface and one documentation contract.</span></div>
+  </aside>
+  <main id="main" class="content">
+    <div class="breadcrumbs"><a href="../index.html">Docs</a><span>/</span><span>x86decomp.reconstruction.capsules</span></div>
+    <div class="eyebrow">Feature and function reference</div><h1>x86decomp.reconstruction.capsules</h1><p class="lead">Implements capsules operations for the reconstruction capability plane.</p><div class="meta-row"><span class="tag tag-current">reconstruction</span><span class="tag">current</span><span class="tag">5 functions</span></div><p><strong>Source:</strong> <code>src/x86decomp/reconstruction/capsules.py</code></p><h2>Related commands</h2><div class="meta-row"><a class="tag tag-canonical" href="../commands/abi.html">abi</a> <a class="tag tag-canonical" href="../commands/build.html">build</a> <a class="tag tag-canonical" href="../commands/capsule.html">capsule</a> <a class="tag tag-canonical" href="../commands/changeset.html">changeset</a> <a class="tag tag-canonical" href="../commands/headers.html">headers</a> <a class="tag tag-canonical" href="../commands/library.html">library</a> <a class="tag tag-canonical" href="../commands/module.html">module</a> <a class="tag tag-canonical" href="../commands/project.html">project</a> <a class="tag tag-canonical" href="../commands/provenance.html">provenance</a> <a class="tag tag-canonical" href="../commands/security.html">security</a> <a class="tag tag-canonical" href="../commands/source.html">source</a> <a class="tag tag-canonical" href="../commands/tests.html">tests</a></div><h2>Functions and methods</h2><article class="function-entry" id="function-capsules-init"><div class="meta-row"><span class="tag">public</span><span class="tag">line 12</span></div><h3>Capsules.__init__</h3><p>Initializes a new Capsules instance.</p><pre><code class="language-python">def __init__(self, store: ReconstructionStore)</code></pre><p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.reconstruction.capsules:Capsules.__init__</code></p></article><article class="function-entry" id="function-capsules-create"><div class="meta-row"><span class="tag">public</span><span class="tag">line 13</span></div><h3>Capsules.create</h3><p>Creates capsules.</p><pre><code class="language-python">def create(self, name: str, output: str | Path, *, include: list[str], external_requirements: list[dict[str, Any]] | None = None, actor: str = &#x27;analyst&#x27;) -&gt; dict[str, Any]</code></pre><p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.reconstruction.capsules:Capsules.create</code></p></article><article class="function-entry" id="function-capsules-inspect"><div class="meta-row"><span class="tag">public</span><span class="tag">line 29</span></div><h3>Capsules.inspect</h3><p>Inspects capsules.</p><pre><code class="language-python">def inspect(self, path: str | Path) -&gt; dict[str, Any]</code></pre><p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.reconstruction.capsules:Capsules.inspect</code></p></article><article class="function-entry" id="function-capsules-verify"><div class="meta-row"><span class="tag">public</span><span class="tag">line 33</span></div><h3>Capsules.verify</h3><p>Verifies capsules.</p><pre><code class="language-python">def verify(self, path: str | Path) -&gt; dict[str, Any]</code></pre><p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.reconstruction.capsules:Capsules.verify</code></p></article><article class="function-entry" id="function-capsules-reproduce"><div class="meta-row"><span class="tag">public</span><span class="tag">line 47</span></div><h3>Capsules.reproduce</h3><p>Reproduces capsules.</p><pre><code class="language-python">def reproduce(self, path: str | Path, destination: str | Path) -&gt; dict[str, Any]</code></pre><p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.reconstruction.capsules:Capsules.reproduce</code></p></article>
+    <footer class="page-footer"><span>x86decomp-toolkit 0.7.4</span><a href="../about.html">About this documentation</a></footer>
+  </main>
+  
+</div>
+<div class="search-dialog" data-search-dialog hidden>
+  <div class="search-panel" role="dialog" aria-modal="true" aria-label="Search documentation">
+    <div class="search-box"><input data-search-input type="search" placeholder="Search commands, functions, tests, and guides" autocomplete="off"><button data-search-close aria-label="Close search">×</button></div>
+    <div class="search-hint">Type at least two characters. Press Escape to close.</div>
+    <div class="search-results" data-search-results></div>
+  </div>
+</div>
+</body>
+</html>

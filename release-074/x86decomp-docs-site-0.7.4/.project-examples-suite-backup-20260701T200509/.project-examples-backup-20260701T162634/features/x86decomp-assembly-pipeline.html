@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Implements pipeline operations for the assembly capability plane.">
+<title>x86decomp.assembly.pipeline · x86decomp 0.7.4 Docs</title>
+<link rel="stylesheet" href="../assets/styles.css">
+<script>window.X86DOCS_ROOT="../";</script>
+<script defer src="../assets/search-index.js"></script>
+<script defer src="../assets/app.js"></script>
+</head>
+<body data-root="../">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="icon-button mobile-menu" data-menu-toggle aria-label="Open navigation">☰</button>
+  <a class="brand" href="../index.html"><span class="brand-mark">x86</span><span>decomp docs</span><small>0.7.4</small></a>
+  <button class="search-trigger" data-search-trigger aria-label="Search documentation"><span>Search docs</span><kbd>Ctrl K</kbd></button>
+  <button class="icon-button" data-theme-toggle aria-label="Toggle color theme">◐</button>
+</header>
+<div class="layout">
+  <aside class="sidebar" data-sidebar>
+    <nav><a href="../index.html">Home</a><a href="../getting-started.html">Getting started</a><a href="../workflows.html">Workflows</a><a href="../commands/index.html">Commands</a><a href="../features/index.html">Features &amp; functions</a><a href="../tests/index.html">Tests</a><a href="../schemas.html">Schemas</a><a href="../integrations.html">Integrations</a><a href="../verification.html">Verification</a><a href="../changelog.html">Changelog</a><a href="../about.html">About</a></nav>
+    <div class="sidebar-note"><strong>Current release only</strong><span>One unified interface and one documentation contract.</span></div>
+  </aside>
+  <main id="main" class="content">
+    <div class="breadcrumbs"><a href="../index.html">Docs</a><span>/</span><span>x86decomp.assembly.pipeline</span></div>
+    <div class="eyebrow">Feature and function reference</div><h1>x86decomp.assembly.pipeline</h1><p class="lead">Implements pipeline operations for the assembly capability plane.</p><div class="meta-row"><span class="tag tag-current">assembly</span><span class="tag">current</span><span class="tag">8 functions</span></div><p><strong>Source:</strong> <code>src/x86decomp/assembly/pipeline.py</code></p><h2>Related commands</h2><div class="meta-row"><a class="tag tag-canonical" href="../commands/asm.html">asm</a> <a class="tag tag-canonical" href="../commands/hybrid.html">hybrid</a> <a class="tag tag-canonical" href="../commands/project.html">project</a> <a class="tag tag-canonical" href="../commands/reloc.html">reloc</a></div><h2>Functions and methods</h2><article class="function-entry" id="function-load-json"><div class="meta-row"><span class="tag">internal</span><span class="tag">line 25</span></div><h3>_load_json</h3><p>Internal helper that loads json for pipeline operations.</p><pre><code class="language-python">def _load_json(path: Path) -&gt; Any</code></pre><p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.assembly.pipeline:_load_json</code></p></article><article class="function-entry" id="function-resolve-path"><div class="meta-row"><span class="tag">internal</span><span class="tag">line 32</span></div><h3>_resolve_path</h3><p>Internal helper that resolves path for pipeline operations.</p><pre><code class="language-python">def _resolve_path(base: Path, raw: str | Path) -&gt; Path</code></pre><p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.assembly.pipeline:_resolve_path</code></p></article><article class="function-entry" id="function-function-bytes"><div class="meta-row"><span class="tag">internal</span><span class="tag">line 37</span></div><h3>_function_bytes</h3><p>Internal helper that performs function bytes for pipeline.</p><pre><code class="language-python">def _function_bytes(item: Mapping[str, Any], *, base: Path) -&gt; bytes</code></pre><p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.assembly.pipeline:_function_bytes</code></p></article><article class="function-entry" id="function-symbol-map"><div class="meta-row"><span class="tag">internal</span><span class="tag">line 56</span></div><h3>_symbol_map</h3><p>Internal helper that performs symbol map for pipeline.</p><pre><code class="language-python">def _symbol_map(functions: list[Mapping[str, Any]], supplemental: Mapping[str, Any] | list[Mapping[str, Any]] | None = None) -&gt; dict[str, dict[str, Any]]</code></pre><p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.assembly.pipeline:_symbol_map</code></p></article><article class="function-entry" id="function-assemblypipeline-init"><div class="meta-row"><span class="tag">public</span><span class="tag">line 80</span></div><h3>AssemblyPipeline.__init__</h3><p>Initializes a new Assembly Pipeline instance.</p><pre><code class="language-python">def __init__(self, store: AssemblyStore)</code></pre><p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.assembly.pipeline:AssemblyPipeline.__init__</code></p></article><article class="function-entry" id="function-assemblypipeline-batch"><div class="meta-row"><span class="tag">public</span><span class="tag">line 84</span></div><h3>AssemblyPipeline.batch</h3><p>Runs batch processing for assembly pipeline.</p><pre><code class="language-python">def batch(self, manifest_path: Path, output_root: Path, *, asm_format: str = &#x27;bytes&#x27;, assembler_command: Sequence[str] | None = None, image_base: int | None = None, actor: str = &#x27;analyst&#x27;) -&gt; dict[str, Any]</code></pre><p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.assembly.pipeline:AssemblyPipeline.batch</code></p></article><article class="function-entry" id="function-assemblypipeline-report"><div class="meta-row"><span class="tag">public</span><span class="tag">line 311</span></div><h3>AssemblyPipeline.report</h3><p>Performs report for assembly pipeline.</p><pre><code class="language-python">def report(self, run_id: str) -&gt; dict[str, Any]</code></pre><p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.assembly.pipeline:AssemblyPipeline.report</code></p></article><article class="function-entry" id="function-assemblypipeline-list-runs"><div class="meta-row"><span class="tag">public</span><span class="tag">line 327</span></div><h3>AssemblyPipeline.list_runs</h3><p>Lists runs for pipeline operations.</p><pre><code class="language-python">def list_runs(self) -&gt; list[dict[str, Any]]</code></pre><p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.assembly.pipeline:AssemblyPipeline.list_runs</code></p></article>
+    <footer class="page-footer"><span>x86decomp-toolkit 0.7.4</span><a href="../about.html">About this documentation</a></footer>
+  </main>
+  
+</div>
+<div class="search-dialog" data-search-dialog hidden>
+  <div class="search-panel" role="dialog" aria-modal="true" aria-label="Search documentation">
+    <div class="search-box"><input data-search-input type="search" placeholder="Search commands, functions, tests, and guides" autocomplete="off"><button data-search-close aria-label="Close search">×</button></div>
+    <div class="search-hint">Type at least two characters. Press Escape to close.</div>
+    <div class="search-results" data-search-results></div>
+  </div>
+</div>
+</body>
+</html>

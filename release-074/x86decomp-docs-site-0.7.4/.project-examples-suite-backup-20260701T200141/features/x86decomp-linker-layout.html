@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Linker map and section-layout correlation.">
+<title>x86decomp.linker_layout · x86decomp 0.7.4 Docs</title>
+<link rel="stylesheet" href="../assets/styles.css">
+<script>window.X86DOCS_ROOT="../";</script>
+<script defer src="../assets/search-index.js"></script>
+<script defer src="../assets/app.js"></script>
+</head>
+<body data-root="../">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="icon-button mobile-menu" data-menu-toggle aria-label="Open navigation">☰</button>
+  <a class="brand" href="../index.html"><span class="brand-mark">x86</span><span>decomp docs</span><small>0.7.4</small></a>
+  <button class="search-trigger" data-search-trigger aria-label="Search documentation"><span>Search docs</span><kbd>Ctrl K</kbd></button>
+  <button class="icon-button" data-theme-toggle aria-label="Toggle color theme">◐</button>
+</header>
+<div class="layout">
+  <aside class="sidebar" data-sidebar>
+    <nav><a href="../index.html">Home</a><a href="../getting-started.html">Getting started</a><a href="../workflows.html">Workflows</a><a href="../project-examples.html">Project examples</a><a href="../commands/index.html">Commands</a><a href="../features/index.html">Features &amp; functions</a><a href="../tests/index.html">Tests</a><a href="../schemas.html">Schemas</a><a href="../integrations.html">Integrations</a><a href="../verification.html">Verification</a><a href="../changelog.html">Changelog</a><a href="../about.html">About</a></nav>
+    <div class="sidebar-note"><strong>Current release only</strong><span>One unified interface and one documentation contract.</span></div>
+  </aside>
+  <main id="main" class="content">
+    <div class="breadcrumbs"><a href="../index.html">Docs</a><span>/</span><span>x86decomp.linker_layout</span></div>
+    <div class="eyebrow">Feature and function reference</div><h1>x86decomp.linker_layout</h1><p class="lead">Linker map and section-layout correlation.</p><div class="meta-row"><span class="tag tag-current">core</span><span class="tag">current</span><span class="tag">8 functions</span></div><p><strong>Source:</strong> <code>src/x86decomp/linker_layout.py</code></p><h2>Functions and methods</h2><article class="function-entry" id="function-mapsegment-to-dict"><div class="meta-row"><span class="tag">public</span><span class="tag">line 42</span></div><h3>MapSegment.to_dict</h3><p>Converts the Map Segment into a JSON-friendly dictionary.</p><pre><code class="language-python">def to_dict(self) -&gt; dict[str, Any]</code></pre><p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.linker_layout:MapSegment.to_dict</code></p></article><article class="function-entry" id="function-mapcontribution-to-dict"><div class="meta-row"><span class="tag">public</span><span class="tag">line 59</span></div><h3>MapContribution.to_dict</h3><p>Converts the Map Contribution into a JSON-friendly dictionary.</p><pre><code class="language-python">def to_dict(self) -&gt; dict[str, Any]</code></pre><p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.linker_layout:MapContribution.to_dict</code></p></article><article class="function-entry" id="function-mappublic-to-dict"><div class="meta-row"><span class="tag">public</span><span class="tag">line 77</span></div><h3>MapPublic.to_dict</h3><p>Converts the Map Public into a JSON-friendly dictionary.</p><pre><code class="language-python">def to_dict(self) -&gt; dict[str, Any]</code></pre><p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.linker_layout:MapPublic.to_dict</code></p></article><article class="function-entry" id="function-linkermap-to-dict"><div class="meta-row"><span class="tag">public</span><span class="tag">line 100</span></div><h3>LinkerMap.to_dict</h3><p>Converts the Linker Map into a JSON-friendly dictionary.</p><pre><code class="language-python">def to_dict(self) -&gt; dict[str, Any]</code></pre><p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.linker_layout:LinkerMap.to_dict</code></p></article><article class="function-entry" id="function-parse-msvc-map-text"><div class="meta-row"><span class="tag">public</span><span class="tag">line 118</span></div><h3>parse_msvc_map_text</h3><p>Parses msvc map text for linker layout operations.</p><pre><code class="language-python">def parse_msvc_map_text(text: str, *, path: Path | None = None) -&gt; LinkerMap</code></pre><p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.linker_layout:parse_msvc_map_text</code></p></article><article class="function-entry" id="function-parse-msvc-map"><div class="meta-row"><span class="tag">public</span><span class="tag">line 215</span></div><h3>parse_msvc_map</h3><p>Parses msvc map for linker layout operations.</p><pre><code class="language-python">def parse_msvc_map(path: Path) -&gt; LinkerMap</code></pre><p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.linker_layout:parse_msvc_map</code></p></article><article class="function-entry" id="function-normalize-object-key"><div class="meta-row"><span class="tag">internal</span><span class="tag">line 222</span></div><h3>_normalize_object_key</h3><p>Internal helper that normalizes object key for linker layout operations.</p><pre><code class="language-python">def _normalize_object_key(value: str) -&gt; str</code></pre><p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.linker_layout:_normalize_object_key</code></p></article><article class="function-entry" id="function-reconstruct-linker-layout"><div class="meta-row"><span class="tag">public</span><span class="tag">line 229</span></div><h3>reconstruct_linker_layout</h3><p>Performs reconstruct linker layout for linker layout.</p><pre><code class="language-python">def reconstruct_linker_layout(pe_path: Path, map_path: Path, *, object_paths: Iterable[Path] = (), report_path: Path | None = None) -&gt; dict[str, Any]</code></pre><p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.linker_layout:reconstruct_linker_layout</code></p></article>
+    <footer class="page-footer"><span>x86decomp-toolkit 0.7.4</span><a href="../about.html">About this documentation</a></footer>
+  </main>
+  
+</div>
+<div class="search-dialog" data-search-dialog hidden>
+  <div class="search-panel" role="dialog" aria-modal="true" aria-label="Search documentation">
+    <div class="search-box"><input data-search-input type="search" placeholder="Search commands, functions, tests, and guides" autocomplete="off"><button data-search-close aria-label="Close search">×</button></div>
+    <div class="search-hint">Type at least two characters. Press Escape to close.</div>
+    <div class="search-results" data-search-results></div>
+  </div>
+</div>
+</body>
+</html>

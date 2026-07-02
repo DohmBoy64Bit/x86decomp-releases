@@ -1,0 +1,212 @@
+[
+  {
+    "title": "Project examples",
+    "href": "project-examples.html",
+    "url": "project-examples.html",
+    "kind": "guide",
+    "type": "guide",
+    "section": "Project examples",
+    "summary": "Source-verified matching, functional, hybrid, analysis, compiler, patching, relinking, ABI, release, benchmark, and operations workflows.",
+    "text": "project examples matching functional hybrid static analysis compiler laboratory patch image relink convergence ABI type recovery release reproducibility benchmark corpus operations recovery",
+    "content": "All v0.7.4 project examples with bounded claims and source audit.",
+    "keywords": [
+      "project examples",
+      "matching",
+      "functional",
+      "hybrid",
+      "source audit"
+    ]
+  },
+  {
+    "title": "End-to-end matching project",
+    "href": "project-examples/matching-project.html",
+    "url": "project-examples/matching-project.html",
+    "kind": "guide",
+    "type": "guide",
+    "section": "Project examples",
+    "summary": "Compile, ABI-check, function-diff, image-match, and converge toward relink validation.",
+    "text": "End-to-end matching project Compile, ABI-check, function-diff, image-match, and converge toward relink validation. x86decomp 0.7.4 source verified workflow",
+    "content": "Compile, ABI-check, function-diff, image-match, and converge toward relink validation.",
+    "keywords": [
+      "official mode",
+      "matching project",
+      "x86decomp 0.7.4"
+    ]
+  },
+  {
+    "title": "End-to-end functional project",
+    "href": "project-examples/functional-project.html",
+    "url": "project-examples/functional-project.html",
+    "kind": "guide",
+    "type": "guide",
+    "section": "Project examples",
+    "summary": "Use bounded concrete, symbolic, and integration validation without requiring byte identity.",
+    "text": "End-to-end functional project Use bounded concrete, symbolic, and integration validation without requiring byte identity. x86decomp 0.7.4 source verified workflow",
+    "content": "Use bounded concrete, symbolic, and integration validation without requiring byte identity.",
+    "keywords": [
+      "official mode",
+      "functional project",
+      "x86decomp 0.7.4"
+    ]
+  },
+  {
+    "title": "End-to-end hybrid composition",
+    "href": "project-examples/hybrid-project.html",
+    "url": "project-examples/hybrid-project.html",
+    "kind": "guide",
+    "type": "guide",
+    "section": "Project examples",
+    "summary": "Keep assembly fallbacks while matching and functional lanes progress independently.",
+    "text": "End-to-end hybrid composition Keep assembly fallbacks while matching and functional lanes progress independently. x86decomp 0.7.4 source verified workflow",
+    "content": "Keep assembly fallbacks while matching and functional lanes progress independently.",
+    "keywords": [
+      "both modes",
+      "hybrid project",
+      "x86decomp 0.7.4"
+    ]
+  },
+  {
+    "title": "Static analysis and evidence",
+    "href": "project-examples/static-analysis-evidence.html",
+    "url": "project-examples/static-analysis-evidence.html",
+    "kind": "guide",
+    "type": "guide",
+    "section": "Project examples",
+    "summary": "Inventory formats, import analysis artifacts, cross-check instructions, and govern claims.",
+    "text": "Static analysis and evidence Inventory formats, import analysis artifacts, cross-check instructions, and govern claims. x86decomp 0.7.4 source verified workflow",
+    "content": "Inventory formats, import analysis artifacts, cross-check instructions, and govern claims.",
+    "keywords": [
+      "supporting workflow",
+      "static analysis evidence",
+      "x86decomp 0.7.4"
+    ]
+  },
+  {
+    "title": "Compiler identification and lab",
+    "href": "project-examples/compiler-laboratory.html",
+    "url": "project-examples/compiler-laboratory.html",
+    "kind": "guide",
+    "type": "guide",
+    "section": "Project examples",
+    "summary": "Register toolchains, run bounded matrices, preserve provenance, and rank evidence.",
+    "text": "Compiler identification and lab Register toolchains, run bounded matrices, preserve provenance, and rank evidence. x86decomp 0.7.4 source verified workflow",
+    "content": "Register toolchains, run bounded matrices, preserve provenance, and rank evidence.",
+    "keywords": [
+      "supporting workflow",
+      "compiler laboratory",
+      "x86decomp 0.7.4"
+    ]
+  },
+  {
+    "title": "Patch-image integration",
+    "href": "project-examples/patch-image-integration.html",
+    "url": "project-examples/patch-image-integration.html",
+    "kind": "guide",
+    "type": "guide",
+    "section": "Project examples",
+    "summary": "Create a fixed-length derived patch image after independently establishing the allowed target range.",
+    "text": "Patch-image integration Create a fixed-length derived patch image after independently establishing the allowed target range. x86decomp 0.7.4 source verified workflow",
+    "content": "Create a fixed-length derived patch image after independently establishing the allowed target range.",
+    "keywords": [
+      "supporting workflow",
+      "patch image integration",
+      "x86decomp 0.7.4"
+    ]
+  },
+  {
+    "title": "Full relink and convergence",
+    "href": "project-examples/full-relink-convergence.html",
+    "url": "project-examples/full-relink-convergence.html",
+    "kind": "guide",
+    "type": "guide",
+    "section": "Project examples",
+    "summary": "Build evidence-limited linker plans, relink, compare images, and track convergence.",
+    "text": "Full relink and convergence Build evidence-limited linker plans, relink, compare images, and track convergence. x86decomp 0.7.4 source verified workflow",
+    "content": "Build evidence-limited linker plans, relink, compare images, and track convergence.",
+    "keywords": [
+      "supporting workflow",
+      "full relink convergence",
+      "x86decomp 0.7.4"
+    ]
+  },
+  {
+    "title": "ABI and type recovery",
+    "href": "project-examples/abi-type-recovery.html",
+    "url": "project-examples/abi-type-recovery.html",
+    "kind": "guide",
+    "type": "guide",
+    "section": "Project examples",
+    "summary": "Recover interface candidates, manage constraint conflicts, and generate harnesses.",
+    "text": "ABI and type recovery Recover interface candidates, manage constraint conflicts, and generate harnesses. x86decomp 0.7.4 source verified workflow",
+    "content": "Recover interface candidates, manage constraint conflicts, and generate harnesses.",
+    "keywords": [
+      "supporting workflow",
+      "abi type recovery",
+      "x86decomp 0.7.4"
+    ]
+  },
+  {
+    "title": "Target release and reproducibility",
+    "href": "project-examples/target-release-reproducibility.html",
+    "url": "project-examples/target-release-reproducibility.html",
+    "kind": "guide",
+    "type": "guide",
+    "section": "Project examples",
+    "summary": "Verify manifests, audits, workflows, claims, pipelines, and release contracts.",
+    "text": "Target release and reproducibility Verify manifests, audits, workflows, claims, pipelines, and release contracts. x86decomp 0.7.4 source verified workflow",
+    "content": "Verify manifests, audits, workflows, claims, pipelines, and release contracts.",
+    "keywords": [
+      "supporting workflow",
+      "target release reproducibility",
+      "x86decomp 0.7.4"
+    ]
+  },
+  {
+    "title": "Benchmark and validation corpus",
+    "href": "project-examples/benchmark-validation-corpus.html",
+    "url": "project-examples/benchmark-validation-corpus.html",
+    "kind": "guide",
+    "type": "guide",
+    "section": "Project examples",
+    "summary": "Run controlled byte, dynamic, symbolic, integration, and corpus experiments.",
+    "text": "Benchmark and validation corpus Run controlled byte, dynamic, symbolic, integration, and corpus experiments. x86decomp 0.7.4 source verified workflow",
+    "content": "Run controlled byte, dynamic, symbolic, integration, and corpus experiments.",
+    "keywords": [
+      "supporting workflow",
+      "benchmark validation corpus",
+      "x86decomp 0.7.4"
+    ]
+  },
+  {
+    "title": "Project operations and recovery",
+    "href": "project-examples/project-operations-recovery.html",
+    "url": "project-examples/project-operations-recovery.html",
+    "kind": "guide",
+    "type": "guide",
+    "section": "Project examples",
+    "summary": "Back up, migrate, repair, collect, orchestrate, recover, and restore safely.",
+    "text": "Project operations and recovery Back up, migrate, repair, collect, orchestrate, recover, and restore safely. x86decomp 0.7.4 source verified workflow",
+    "content": "Back up, migrate, repair, collect, orchestrate, recover, and restore safely.",
+    "keywords": [
+      "supporting workflow",
+      "project operations recovery",
+      "x86decomp 0.7.4"
+    ]
+  },
+  {
+    "title": "Project examples source audit",
+    "href": "project-examples/source-audit.html",
+    "url": "project-examples/source-audit.html",
+    "kind": "verification",
+    "type": "guide",
+    "section": "Project examples",
+    "summary": "Parser, implementation, test, schema, documentation, line, and SHA-256 evidence for every example.",
+    "text": "source audit parser implementation tests schemas hashes line numbers project examples",
+    "content": "Exact v0.7.4 source basis for the project examples.",
+    "keywords": [
+      "source audit",
+      "fact check",
+      "sha256"
+    ]
+  }
+]

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Compiler profile execution and cache identity.">
+<title>x86decomp.compiler · x86decomp 0.7.4 Docs</title>
+<link rel="stylesheet" href="../assets/styles.css">
+<script>window.X86DOCS_ROOT="../";</script>
+<script defer src="../assets/search-index.js"></script>
+<script defer src="../assets/app.js"></script>
+</head>
+<body data-root="../">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="icon-button mobile-menu" data-menu-toggle aria-label="Open navigation">☰</button>
+  <a class="brand" href="../index.html"><span class="brand-mark">x86</span><span>decomp docs</span><small>0.7.4</small></a>
+  <button class="search-trigger" data-search-trigger aria-label="Search documentation"><span>Search docs</span><kbd>Ctrl K</kbd></button>
+  <button class="icon-button" data-theme-toggle aria-label="Toggle color theme">◐</button>
+</header>
+<div class="layout">
+  <aside class="sidebar" data-sidebar>
+    <nav><a href="../index.html">Home</a><a href="../getting-started.html">Getting started</a><a href="../workflows.html">Workflows</a><a href="../commands/index.html">Commands</a><a href="../features/index.html">Features &amp; functions</a><a href="../tests/index.html">Tests</a><a href="../schemas.html">Schemas</a><a href="../integrations.html">Integrations</a><a href="../verification.html">Verification</a><a href="../changelog.html">Changelog</a><a href="../about.html">About</a></nav>
+    <div class="sidebar-note"><strong>Current release only</strong><span>One unified interface and one documentation contract.</span></div>
+  </aside>
+  <main id="main" class="content">
+    <div class="breadcrumbs"><a href="../index.html">Docs</a><span>/</span><span>x86decomp.compiler</span></div>
+    <div class="eyebrow">Feature and function reference</div><h1>x86decomp.compiler</h1><p class="lead">Compiler profile execution and cache identity.</p><div class="meta-row"><span class="tag tag-current">core</span><span class="tag">current</span><span class="tag">5 functions</span></div><p><strong>Source:</strong> <code>src/x86decomp/compiler.py</code></p><h2>Functions and methods</h2><article class="function-entry" id="function-load-profile"><div class="meta-row"><span class="tag">public</span><span class="tag">line 19</span></div><h3>load_profile</h3><p>Loads profile for compiler operations.</p><pre><code class="language-python">def load_profile(path: Path) -&gt; dict[str, Any]</code></pre><p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.compiler:load_profile</code></p></article><article class="function-entry" id="function-tool-version"><div class="meta-row"><span class="tag">internal</span><span class="tag">line 58</span></div><h3>_tool_version</h3><p>Internal helper that performs tool version for compiler.</p><pre><code class="language-python">def _tool_version(executable: str, version_arguments: list[str] | None = None) -&gt; str | None</code></pre><p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.compiler:_tool_version</code></p></article><article class="function-entry" id="function-resolve-executable"><div class="meta-row"><span class="tag">internal</span><span class="tag">line 73</span></div><h3>_resolve_executable</h3><p>Internal helper that resolves executable for compiler operations.</p><pre><code class="language-python">def _resolve_executable(value: str) -&gt; str</code></pre><p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.compiler:_resolve_executable</code></p></article><article class="function-entry" id="function-compiler-cache-key"><div class="meta-row"><span class="tag">public</span><span class="tag">line 85</span></div><h3>compiler_cache_key</h3><p>Performs compiler cache key for compiler.</p><pre><code class="language-python">def compiler_cache_key(profile: dict[str, Any], *, executable_sha256: str, source_sha256: str, extra_arguments: list[str]) -&gt; str</code></pre><p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.compiler:compiler_cache_key</code></p></article><article class="function-entry" id="function-run-compiler-profile"><div class="meta-row"><span class="tag">public</span><span class="tag">line 101</span></div><h3>run_compiler_profile</h3><p>Runs compiler profile for compiler operations.</p><pre><code class="language-python">def run_compiler_profile(profile_path: Path, source: Path, output: Path, *, report_path: Path | None = None, extra_arguments: list[str] | None = None, working_directory: Path | None = None, cache_directory: Path | None = None) -&gt; dict[str, Any]</code></pre><p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.compiler:run_compiler_profile</code></p></article>
+    <footer class="page-footer"><span>x86decomp-toolkit 0.7.4</span><a href="../about.html">About this documentation</a></footer>
+  </main>
+  
+</div>
+<div class="search-dialog" data-search-dialog hidden>
+  <div class="search-panel" role="dialog" aria-modal="true" aria-label="Search documentation">
+    <div class="search-box"><input data-search-input type="search" placeholder="Search commands, functions, tests, and guides" autocomplete="off"><button data-search-close aria-label="Close search">×</button></div>
+    <div class="search-hint">Type at least two characters. Press Escape to close.</div>
+    <div class="search-results" data-search-results></div>
+  </div>
+</div>
+</body>
+</html>

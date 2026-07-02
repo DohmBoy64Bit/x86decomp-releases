@@ -1,0 +1,126 @@
+{
+  "format": "x86decomp-project-examples-installation-verification-v2",
+  "target_release": "0.7.4",
+  "status": "pass",
+  "run_1": {
+    "format": "x86decomp-project-examples-docs-patch-v2",
+    "patch_id": "x86decomp-project-examples-suite-v2",
+    "target_release": "0.7.4",
+    "applied_at": "2026-07-01T21:20:10.306369+00:00",
+    "status": "pass",
+    "backup_directory": ".project-examples-suite-backup-20260701T212010",
+    "installed_pages": [
+      "project-examples.html",
+      "project-examples/abi-type-recovery.html",
+      "project-examples/benchmark-validation-corpus.html",
+      "project-examples/compiler-laboratory.html",
+      "project-examples/full-relink-convergence.html",
+      "project-examples/functional-project.html",
+      "project-examples/hybrid-project.html",
+      "project-examples/matching-project.html",
+      "project-examples/patch-image-integration.html",
+      "project-examples/project-operations-recovery.html",
+      "project-examples/source-audit.html",
+      "project-examples/static-analysis-evidence.html",
+      "project-examples/target-release-reproducibility.html"
+    ],
+    "changed_files": [
+      "PROJECT_EXAMPLES_SOURCE_AUDIT.json",
+      "assets/project-examples.css",
+      "assets/search-index.js",
+      "index.html",
+      "project-examples.html",
+      "project-examples/abi-type-recovery.html",
+      "project-examples/benchmark-validation-corpus.html",
+      "project-examples/compiler-laboratory.html",
+      "project-examples/full-relink-convergence.html",
+      "project-examples/functional-project.html",
+      "project-examples/hybrid-project.html",
+      "project-examples/matching-project.html",
+      "project-examples/patch-image-integration.html",
+      "project-examples/project-operations-recovery.html",
+      "project-examples/source-audit.html",
+      "project-examples/static-analysis-evidence.html",
+      "project-examples/target-release-reproducibility.html",
+      "workflows.html"
+    ],
+    "search_index": "installed 13 project-example entries",
+    "refreshed_hash_manifests": [
+      "SHA256SUMS.txt"
+    ],
+    "checks": {
+      "landing_present": true,
+      "detailed_example_pages": true,
+      "source_audit_json_present": true,
+      "local_links_and_fragments_valid": true,
+      "zero_placeholder_markers": true,
+      "single_navigation_entry": true
+    },
+    "link_errors": [],
+    "truth_boundary": "This report verifies installation, navigation, search replacement, placeholder scan, local links, and site checksums. Source semantics are separately recorded in PROJECT_EXAMPLES_SOURCE_AUDIT.json and the patch source-verification report."
+  },
+  "run_2": {
+    "format": "x86decomp-project-examples-docs-patch-v2",
+    "patch_id": "x86decomp-project-examples-suite-v2",
+    "target_release": "0.7.4",
+    "applied_at": "2026-07-01T21:20:13.236583+00:00",
+    "status": "pass",
+    "backup_directory": ".project-examples-suite-backup-disabled",
+    "installed_pages": [
+      "project-examples.html",
+      "project-examples/abi-type-recovery.html",
+      "project-examples/benchmark-validation-corpus.html",
+      "project-examples/compiler-laboratory.html",
+      "project-examples/full-relink-convergence.html",
+      "project-examples/functional-project.html",
+      "project-examples/hybrid-project.html",
+      "project-examples/matching-project.html",
+      "project-examples/patch-image-integration.html",
+      "project-examples/project-operations-recovery.html",
+      "project-examples/source-audit.html",
+      "project-examples/static-analysis-evidence.html",
+      "project-examples/target-release-reproducibility.html"
+    ],
+    "changed_files": [
+      "PROJECT_EXAMPLES_SOURCE_AUDIT.json",
+      "assets/project-examples.css",
+      "assets/search-index.js",
+      "project-examples.html",
+      "project-examples/abi-type-recovery.html",
+      "project-examples/benchmark-validation-corpus.html",
+      "project-examples/compiler-laboratory.html",
+      "project-examples/full-relink-convergence.html",
+      "project-examples/functional-project.html",
+      "project-examples/hybrid-project.html",
+      "project-examples/matching-project.html",
+      "project-examples/patch-image-integration.html",
+      "project-examples/project-operations-recovery.html",
+      "project-examples/source-audit.html",
+      "project-examples/static-analysis-evidence.html",
+      "project-examples/target-release-reproducibility.html",
+      "workflows.html"
+    ],
+    "search_index": "installed 13 project-example entries",
+    "refreshed_hash_manifests": [
+      "SHA256SUMS.txt"
+    ],
+    "checks": {
+      "landing_present": true,
+      "detailed_example_pages": true,
+      "source_audit_json_present": true,
+      "local_links_and_fragments_valid": true,
+      "zero_placeholder_markers": true,
+      "single_navigation_entry": true
+    },
+    "link_errors": [],
+    "truth_boundary": "This report verifies installation, navigation, search replacement, placeholder scan, local links, and site checksums. Source semantics are separately recorded in PROJECT_EXAMPLES_SOURCE_AUDIT.json and the patch source-verification report."
+  },
+  "post_second_run": {
+    "active_html_pages": 24,
+    "project_example_search_entries": 13,
+    "unique_project_example_search_hrefs": 13,
+    "source_audit_rows": 95,
+    "project_pages_have_current_navigation_state": true,
+    "default_backup_created": true
+  }
+}

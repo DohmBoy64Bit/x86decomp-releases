@@ -1,0 +1,10 @@
+{
+  "format": "x86decomp-project-examples-command-surface-verification-v1",
+  "target_release": "0.7.4",
+  "source_root": "/mnt/data/x86decomp-074-source/x86decomp-toolkit-0.7.4",
+  "pages_root": "/mnt/data/x86decomp-project-examples-suite-docs-patch/payload",
+  "command_lines_checked": 163,
+  "unique_commands": 80,
+  "status": "pass",
+  "failures": []
+}

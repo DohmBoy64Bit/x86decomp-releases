@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Creates controlled fixtures used by verification checks.">
+<title>x86decomp_testkit.fixtures · x86decomp 0.7.4 Docs</title>
+<link rel="stylesheet" href="../assets/styles.css">
+<script>window.X86DOCS_ROOT="../";</script>
+<script defer src="../assets/search-index.js"></script>
+<script defer src="../assets/app.js"></script>
+</head>
+<body data-root="../">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="icon-button mobile-menu" data-menu-toggle aria-label="Open navigation">☰</button>
+  <a class="brand" href="../index.html"><span class="brand-mark">x86</span><span>decomp docs</span><small>0.7.4</small></a>
+  <button class="search-trigger" data-search-trigger aria-label="Search documentation"><span>Search docs</span><kbd>Ctrl K</kbd></button>
+  <button class="icon-button" data-theme-toggle aria-label="Toggle color theme">◐</button>
+</header>
+<div class="layout">
+  <aside class="sidebar" data-sidebar>
+    <nav><a href="../index.html">Home</a><a href="../getting-started.html">Getting started</a><a href="../workflows.html">Workflows</a><a href="../project-examples.html">Project examples</a><a href="../commands/index.html">Commands</a><a href="../features/index.html">Features &amp; functions</a><a href="../tests/index.html">Tests</a><a href="../schemas.html">Schemas</a><a href="../integrations.html">Integrations</a><a href="../verification.html">Verification</a><a href="../changelog.html">Changelog</a><a href="../about.html">About</a></nav>
+    <div class="sidebar-note"><strong>Current release only</strong><span>One unified interface and one documentation contract.</span></div>
+  </aside>
+  <main id="main" class="content">
+    <div class="breadcrumbs"><a href="../index.html">Docs</a><span>/</span><span>x86decomp_testkit.fixtures</span></div>
+    <div class="eyebrow">Feature and function reference</div><h1>x86decomp_testkit.fixtures</h1><p class="lead">Creates controlled fixtures used by verification checks.</p><div class="meta-row"><span class="tag tag-current">test-suite</span><span class="tag">current</span><span class="tag">4 functions</span></div><p><strong>Source:</strong> <code>test-suite/src/x86decomp_testkit/fixtures.py</code></p><h2>Functions and methods</h2><article class="function-entry" id="function-write-json"><div class="meta-row"><span class="tag">public</span><span class="tag">line 9</span></div><h3>write_json</h3><p>Writes json for fixtures operations.</p><pre><code class="language-python">def write_json(path: Path, value: Any) -&gt; Path</code></pre><p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp_testkit.fixtures:write_json</code></p></article><article class="function-entry" id="function-build-minimal-pe32"><div class="meta-row"><span class="tag">public</span><span class="tag">line 15</span></div><h3>build_minimal_pe32</h3><p>Builds minimal pe32 for fixtures operations.</p><pre><code class="language-python">def build_minimal_pe32(path: Path, code: bytes = b&#x27;U\x8b\xec1\xc0]\xc3&#x27;) -&gt; Path</code></pre><p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp_testkit.fixtures:build_minimal_pe32</code></p></article><article class="function-entry" id="function-build-minimal-pe64"><div class="meta-row"><span class="tag">public</span><span class="tag">line 48</span></div><h3>build_minimal_pe64</h3><p>Builds minimal pe64 for fixtures operations.</p><pre><code class="language-python">def build_minimal_pe64(path: Path, code: bytes = b&#x27;1\xc0\xc3&#x27;) -&gt; Path</code></pre><p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp_testkit.fixtures:build_minimal_pe64</code></p></article><article class="function-entry" id="function-create-common-fixtures"><div class="meta-row"><span class="tag">public</span><span class="tag">line 82</span></div><h3>create_common_fixtures</h3><p>Creates common fixtures for fixtures operations.</p><pre><code class="language-python">def create_common_fixtures(root: Path) -&gt; dict[str, Path]</code></pre><p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp_testkit.fixtures:create_common_fixtures</code></p></article>
+    <footer class="page-footer"><span>x86decomp-toolkit 0.7.4</span><a href="../about.html">About this documentation</a></footer>
+  </main>
+  
+</div>
+<div class="search-dialog" data-search-dialog hidden>
+  <div class="search-panel" role="dialog" aria-modal="true" aria-label="Search documentation">
+    <div class="search-box"><input data-search-input type="search" placeholder="Search commands, functions, tests, and guides" autocomplete="off"><button data-search-close aria-label="Close search">×</button></div>
+    <div class="search-hint">Type at least two characters. Press Escape to close.</div>
+    <div class="search-results" data-search-results></div>
+  </div>
+</div>
+</body>
+</html>

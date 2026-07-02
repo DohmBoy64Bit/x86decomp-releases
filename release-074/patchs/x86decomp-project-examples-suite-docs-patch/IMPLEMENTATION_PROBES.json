@@ -1,0 +1,69 @@
+{
+  "format": "x86decomp-project-examples-implementation-probes-v1",
+  "target_release": "0.7.4",
+  "source_root": "/mnt/data/x86decomp-074-source/x86decomp-toolkit-0.7.4",
+  "status": "pass",
+  "probes": {
+    "decompilation_mode_enum": {
+      "actual": [
+        "matching",
+        "functional"
+      ],
+      "expected": [
+        "matching",
+        "functional"
+      ]
+    },
+    "target_decisions_preferred_mode_enum": {
+      "actual": [
+        "matching",
+        "functional",
+        "both"
+      ],
+      "expected": [
+        "matching",
+        "functional",
+        "both"
+      ]
+    },
+    "public_workflow_schema_v2_serialization": {
+      "schema_version": 2,
+      "function_id": "pe-rva:00401230",
+      "selected_modes": [
+        "functional",
+        "matching"
+      ],
+      "source_stage": "original_bytes",
+      "matching_status": "byte_matched",
+      "functional_status": "differentially_validated",
+      "active_candidate": null,
+      "compiler_profile": null,
+      "reports": {},
+      "blockers": [],
+      "updated_at": "2026-07-01T21:15:33Z"
+    },
+    "release_gate_workflow_reader_result": {
+      "matching_minimum": "byte_matched",
+      "functional_minimum": "differentially_validated",
+      "workflow_count": 1,
+      "records": [
+        {
+          "function_id": "pe-rva:00401230",
+          "matching": null,
+          "functional": null
+        }
+      ],
+      "failures": [],
+      "passed": true
+    },
+    "release_gate_schema_compatibility_observation": "The public workflow serializer writes selected_modes/matching_status/functional_status, while the v0.7.4 release gate reader looks for a modes object. The probe therefore records one workflow but no matching or functional status values."
+  },
+  "checks": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+  ]
+}

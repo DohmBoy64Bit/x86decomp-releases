@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Group and correlate related functions or artifacts.">
+<title>x86decomp family · x86decomp 0.7.4 Docs</title>
+<link rel="stylesheet" href="../assets/styles.css">
+<script>window.X86DOCS_ROOT="../";</script>
+<script defer src="../assets/search-index.js"></script>
+<script defer src="../assets/app.js"></script>
+</head>
+<body data-root="../">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="icon-button mobile-menu" data-menu-toggle aria-label="Open navigation">☰</button>
+  <a class="brand" href="../index.html"><span class="brand-mark">x86</span><span>decomp docs</span><small>0.7.4</small></a>
+  <button class="search-trigger" data-search-trigger aria-label="Search documentation"><span>Search docs</span><kbd>Ctrl K</kbd></button>
+  <button class="icon-button" data-theme-toggle aria-label="Toggle color theme">◐</button>
+</header>
+<div class="layout">
+  <aside class="sidebar" data-sidebar>
+    <nav><a href="../index.html">Home</a><a href="../getting-started.html">Getting started</a><a href="../workflows.html">Workflows</a><a href="../project-examples.html">Project examples</a><a href="../commands/index.html">Commands</a><a href="../features/index.html">Features &amp; functions</a><a href="../tests/index.html">Tests</a><a href="../schemas.html">Schemas</a><a href="../integrations.html">Integrations</a><a href="../verification.html">Verification</a><a href="../changelog.html">Changelog</a><a href="../about.html">About</a></nav>
+    <div class="sidebar-note"><strong>Current release only</strong><span>One unified interface and one documentation contract.</span></div>
+  </aside>
+  <main id="main" class="content">
+    <div class="breadcrumbs"><a href="../index.html">Docs</a><span>/</span><span>x86decomp family</span></div>
+    <div class="eyebrow">Command reference</div><h1><code>x86decomp family</code></h1><p class="lead">Group and correlate related functions or artifacts.</p><div class="meta-row"><span class="tag tag-current">current</span><span class="tag tag-canonical">canonical group</span><span class="tag">4 runnable paths</span></div><h2>Quick example</h2><pre><code class="language-bash">x86decomp family --help</code></pre><section class="command-section" id="command-family-add"><div class="meta-row"><span class="tag tag-canonical">canonical</span><span class="tag">governance</span></div><h2><code>x86decomp family add</code></h2><p>Adds a record to the selected related-function families.</p><h3>Usage</h3><pre><code class="language-bash">x86decomp family add [-h] [--metadata-json METADATA_JSON] family_id label path</code></pre><h3>Example</h3><pre><code class="language-bash">x86decomp family add example-001 example ./input.json</code></pre><h3>Arguments</h3><div class="table-wrap"><table><thead><tr><th>Argument</th><th>What it controls</th></tr></thead><tbody><tr><td><code>family_id</code><br><small>required</small></td><td>Identifier of the family used by the command.</td></tr><tr><td><code>label</code><br><small>required</small></td><td>Controls label for this command.</td></tr><tr><td><code>path</code><br><small>required</small></td><td>Controls path for this command.</td></tr><tr><td><code>--metadata-json</code></td><td>Path to the JSON file containing metadata data.</td></tr></tbody></table></div></section><section class="command-section" id="command-family-correlate"><div class="meta-row"><span class="tag tag-canonical">canonical</span><span class="tag">governance</span></div><h2><code>x86decomp family correlate</code></h2><p>Correlates related evidence in related-function families.</p><h3>Usage</h3><pre><code class="language-bash">x86decomp family correlate [-h] [--block-size BLOCK_SIZE] left_member_id right_member_id</code></pre><h3>Example</h3><pre><code class="language-bash">x86decomp family correlate example-001 example-001</code></pre><h3>Arguments</h3><div class="table-wrap"><table><thead><tr><th>Argument</th><th>What it controls</th></tr></thead><tbody><tr><td><code>left_member_id</code><br><small>required</small></td><td>Identifier of the left member used by the command.</td></tr><tr><td><code>right_member_id</code><br><small>required</small></td><td>Identifier of the right member used by the command.</td></tr><tr><td><code>--block-size</code><br><small>default: 64</small></td><td>Controls block size for this command.</td></tr></tbody></table></div></section><section class="command-section" id="command-family-create"><div class="meta-row"><span class="tag tag-canonical">canonical</span><span class="tag">governance</span></div><h2><code>x86decomp family create</code></h2><p>Creates a new related-function families record.</p><h3>Usage</h3><pre><code class="language-bash">x86decomp family create [-h] name</code></pre><h3>Example</h3><pre><code class="language-bash">x86decomp family create example</code></pre><h3>Arguments</h3><div class="table-wrap"><table><thead><tr><th>Argument</th><th>What it controls</th></tr></thead><tbody><tr><td><code>name</code><br><small>required</small></td><td>Controls name for this command.</td></tr></tbody></table></div></section><section class="command-section" id="command-family-report"><div class="meta-row"><span class="tag tag-canonical">canonical</span><span class="tag">governance</span></div><h2><code>x86decomp family report</code></h2><p>Generates a report for related-function families.</p><h3>Usage</h3><pre><code class="language-bash">x86decomp family report [-h] family_id</code></pre><h3>Example</h3><pre><code class="language-bash">x86decomp family report example-001</code></pre><h3>Arguments</h3><div class="table-wrap"><table><thead><tr><th>Argument</th><th>What it controls</th></tr></thead><tbody><tr><td><code>family_id</code><br><small>required</small></td><td>Identifier of the family used by the command.</td></tr></tbody></table></div></section>
+    <footer class="page-footer"><span>x86decomp-toolkit 0.7.4</span><a href="../about.html">About this documentation</a></footer>
+  </main>
+  
+</div>
+<div class="search-dialog" data-search-dialog hidden>
+  <div class="search-panel" role="dialog" aria-modal="true" aria-label="Search documentation">
+    <div class="search-box"><input data-search-input type="search" placeholder="Search commands, functions, tests, and guides" autocomplete="off"><button data-search-close aria-label="Close search">×</button></div>
+    <div class="search-hint">Type at least two characters. Press Escape to close.</div>
+    <div class="search-results" data-search-results></div>
+  </div>
+</div>
+</body>
+</html>

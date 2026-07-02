@@ -1,0 +1,124 @@
+{
+  "format": "x86decomp-project-examples-suite-patch-verification-v1",
+  "patch_id": "x86decomp-project-examples-suite-v2",
+  "target_release": "0.7.4",
+  "created_at": "2026-07-01T21:21:04+00:00",
+  "uploaded_release_bundle_sha256": "7fae1658b0eccb980d54a3c80a5f91a6cf09f8eb4e2eb4ebcae3bd477f6d36e8",
+  "embedded_source_zip_sha256": "f6d5f97454b405891dc89ad9329372e2005b91ea9ba0d8116df987023f834d8e",
+  "status": "pass",
+  "deliverable": {
+    "landing_pages": 1,
+    "detailed_examples": 11,
+    "source_audit_pages": 1,
+    "html_pages_installed": 13,
+    "examples": [
+      "end-to-end matching project",
+      "end-to-end functional project",
+      "end-to-end hybrid composition",
+      "static analysis and evidence",
+      "compiler identification and compiler laboratory",
+      "patch-image integration",
+      "full relink and whole-image convergence",
+      "ABI and type recovery",
+      "target release and reproducibility",
+      "benchmark and validation corpus",
+      "project operations and recovery"
+    ]
+  },
+  "verification": {
+    "source": {
+      "status": "pass",
+      "detected_release": "0.7.4",
+      "files_checked": 50,
+      "anchors_checked": 95,
+      "failures": []
+    },
+    "command_surface": {
+      "status": "pass",
+      "command_lines_checked": 163,
+      "unique_commands": 80,
+      "failures": []
+    },
+    "content": {
+      "status": "pass",
+      "example_pages": 11,
+      "source_audit": {
+        "anchors": 95,
+        "unique_files": 50
+      },
+      "failures": []
+    },
+    "implementation_probes": {
+      "status": "pass",
+      "checks": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "mode_enum": [
+        "matching",
+        "functional"
+      ],
+      "preferred_mode_enum": [
+        "matching",
+        "functional",
+        "both"
+      ],
+      "release_gate_record": {
+        "function_id": "pe-rva:00401230",
+        "matching": null,
+        "functional": null
+      }
+    },
+    "targeted_tests": {
+      "status": "pass",
+      "passed": 17,
+      "skipped": 3,
+      "failed": 0,
+      "errors": 0,
+      "scope": [
+        "evidence verification",
+        "COFF extraction",
+        "independent workflow modes and DB conflicts",
+        "dynamic and symbolic validators",
+        "integration host-consent gate",
+        "patch-image byte count",
+        "image normalization",
+        "content store",
+        "harness generation",
+        "linker-plan evidence limits",
+        "reproducibility and security reports",
+        "release-gate truth scope",
+        "synthetic corpus reproducibility",
+        "artifact integrity",
+        "ABI disassembly"
+      ]
+    },
+    "installation": {
+      "status": "pass",
+      "first_run": "pass",
+      "second_run": "pass",
+      "post_second_run": {
+        "active_html_pages": 24,
+        "project_example_search_entries": 13,
+        "unique_project_example_search_hrefs": 13,
+        "source_audit_rows": 95,
+        "project_pages_have_current_navigation_state": true,
+        "default_backup_created": true
+      }
+    }
+  },
+  "source_backed_corrections_and_limits": [
+    "v0.7.4 has two DecompilationMode values: matching and functional. preferred_mode=both composes both lanes; hybrid is not a third mode enum.",
+    "hybrid-generate takes project and output positional arguments; its generated Makefile builds the assembly fallback path, not an automatic accepted-source switch.",
+    "patch-image overwrites exactly the candidate file length. It checks PE bounds and optional hashes but does not independently discover or enforce the intended function boundary.",
+    "The v0.7.4 release gate reads a legacy modes object, while public workflow commands serialize selected_modes, matching_status, and functional_status. --require-workflows can require workflow existence but does not enforce those public schema-v2 status minima.",
+    "Validators write reports but do not automatically promote workflow status; workflow-update is a separate operator action.",
+    "The strict evidence gate checks record count, independent groups, evidence kinds, contradictions, and file hashes; it does not semantically interpret referenced report contents.",
+    "Concrete, symbolic, integration, normalization, convergence, and release results remain bounded by their explicit contracts and do not establish universal equivalence or original-source recovery."
+  ],
+  "truth_boundary": "This verification covers the documentation patch, exact v0.7.4 source anchors, parser compatibility, selected implementation tests/probes, and static-site installation. It is not a rerun of the complete 0.7.4 release suite and does not make target-specific assumptions or outcomes true."
+}

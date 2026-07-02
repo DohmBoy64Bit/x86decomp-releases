@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Whole-image profiling and comparison.">
+<title>x86decomp.image_match · x86decomp 0.7.4 Docs</title>
+<link rel="stylesheet" href="../assets/styles.css">
+<script>window.X86DOCS_ROOT="../";</script>
+<script defer src="../assets/search-index.js"></script>
+<script defer src="../assets/app.js"></script>
+</head>
+<body data-root="../">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="icon-button mobile-menu" data-menu-toggle aria-label="Open navigation">☰</button>
+  <a class="brand" href="../index.html"><span class="brand-mark">x86</span><span>decomp docs</span><small>0.7.4</small></a>
+  <button class="search-trigger" data-search-trigger aria-label="Search documentation"><span>Search docs</span><kbd>Ctrl K</kbd></button>
+  <button class="icon-button" data-theme-toggle aria-label="Toggle color theme">◐</button>
+</header>
+<div class="layout">
+  <aside class="sidebar" data-sidebar>
+    <nav><a href="../index.html">Home</a><a href="../getting-started.html">Getting started</a><a href="../workflows.html">Workflows</a><a href="../project-examples.html">Project examples</a><a href="../commands/index.html">Commands</a><a href="../features/index.html">Features &amp; functions</a><a href="../tests/index.html">Tests</a><a href="../schemas.html">Schemas</a><a href="../integrations.html">Integrations</a><a href="../verification.html">Verification</a><a href="../changelog.html">Changelog</a><a href="../about.html">About</a></nav>
+    <div class="sidebar-note"><strong>Current release only</strong><span>One unified interface and one documentation contract.</span></div>
+  </aside>
+  <main id="main" class="content">
+    <div class="breadcrumbs"><a href="../index.html">Docs</a><span>/</span><span>x86decomp.image_match</span></div>
+    <div class="eyebrow">Feature and function reference</div><h1>x86decomp.image_match</h1><p class="lead">Whole-image profiling and comparison.</p><div class="meta-row"><span class="tag tag-current">core</span><span class="tag">current</span><span class="tag">9 functions</span></div><p><strong>Source:</strong> <code>src/x86decomp/image_match.py</code></p><h2>Related commands</h2><div class="meta-row"><a class="tag tag-canonical" href="../commands/image-match.html">image-match</a></div><h2>Functions and methods</h2><article class="function-entry" id="function-byterange-to-dict"><div class="meta-row"><span class="tag">public</span><span class="tag">line 26</span></div><h3>ByteRange.to_dict</h3><p>Converts the Byte Range into a JSON-friendly dictionary.</p><pre><code class="language-python">def to_dict(self) -&gt; dict[str, Any]</code></pre><p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.image_match:ByteRange.to_dict</code></p></article><article class="function-entry" id="function-pe-offsets"><div class="meta-row"><span class="tag">internal</span><span class="tag">line 30</span></div><h3>_pe_offsets</h3><p>Internal helper that performs pe offsets for image match.</p><pre><code class="language-python">def _pe_offsets(data: bytes) -&gt; dict[str, int]</code></pre><p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.image_match:_pe_offsets</code></p></article><article class="function-entry" id="function-derive-layout-profile"><div class="meta-row"><span class="tag">public</span><span class="tag">line 52</span></div><h3>derive_layout_profile</h3><p>Performs derive layout profile for image match.</p><pre><code class="language-python">def derive_layout_profile(reference: Path, *, output: Path | None = None) -&gt; dict[str, Any]</code></pre><p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.image_match:derive_layout_profile</code></p></article><article class="function-entry" id="function-mask-ranges"><div class="meta-row"><span class="tag">internal</span><span class="tag">line 91</span></div><h3>_mask_ranges</h3><p>Internal helper that performs mask ranges for image match.</p><pre><code class="language-python">def _mask_ranges(data: bytes, ranges: Iterable[ByteRange]) -&gt; bytes</code></pre><p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.image_match:_mask_ranges</code></p></article><article class="function-entry" id="function-rva-to-file-offset"><div class="meta-row"><span class="tag">internal</span><span class="tag">line 100</span></div><h3>_rva_to_file_offset</h3><p>Internal helper that performs rva to file offset for image match.</p><pre><code class="language-python">def _rva_to_file_offset(image: Any, rva: int, file_size: int) -&gt; int | None</code></pre><p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.image_match:_rva_to_file_offset</code></p></article><article class="function-entry" id="function-profile-ranges"><div class="meta-row"><span class="tag">internal</span><span class="tag">line 110</span></div><h3>_profile_ranges</h3><p>Internal helper that performs profile ranges for image match.</p><pre><code class="language-python">def _profile_ranges(data: bytes, profile: dict[str, Any], image: Any) -&gt; list[ByteRange]</code></pre><p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.image_match:_profile_ranges</code></p></article><article class="function-entry" id="function-apply-rebase"><div class="meta-row"><span class="tag">internal</span><span class="tag">line 145</span></div><h3>_apply_rebase</h3><p>Internal helper that applies rebase for image match operations.</p><pre><code class="language-python">def _apply_rebase(data: bytes, *, target_base: int, candidate_base: int, image: Any) -&gt; bytes</code></pre><p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.image_match:_apply_rebase</code></p></article><article class="function-entry" id="function-mismatches"><div class="meta-row"><span class="tag">internal</span><span class="tag">line 173</span></div><h3>_mismatches</h3><p>Internal helper that performs mismatches for image match.</p><pre><code class="language-python">def _mismatches(left: bytes, right: bytes, limit: int = 256) -&gt; tuple[int, list[dict[str, int]]]</code></pre><p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.image_match:_mismatches</code></p></article><article class="function-entry" id="function-compare-whole-images"><div class="meta-row"><span class="tag">public</span><span class="tag">line 186</span></div><h3>compare_whole_images</h3><p>Compares whole images for image match operations.</p><pre><code class="language-python">def compare_whole_images(reference: Path, candidate: Path, *, profile_path: Path | None = None, report_path: Path | None = None) -&gt; dict[str, Any]</code></pre><p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.image_match:compare_whole_images</code></p></article>
+    <footer class="page-footer"><span>x86decomp-toolkit 0.7.4</span><a href="../about.html">About this documentation</a></footer>
+  </main>
+  
+</div>
+<div class="search-dialog" data-search-dialog hidden>
+  <div class="search-panel" role="dialog" aria-modal="true" aria-label="Search documentation">
+    <div class="search-box"><input data-search-input type="search" placeholder="Search commands, functions, tests, and guides" autocomplete="off"><button data-search-close aria-label="Close search">×</button></div>
+    <div class="search-hint">Type at least two characters. Press Escape to close.</div>
+    <div class="search-results" data-search-results></div>
+  </div>
+</div>
+</body>
+</html>

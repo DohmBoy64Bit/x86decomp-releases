@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Downloads and safely extracts supported tool archives when permitted.">
+<title>x86decomp_testkit.adapters.download · x86decomp 0.7.4 Docs</title>
+<link rel="stylesheet" href="../assets/styles.css">
+<script>window.X86DOCS_ROOT="../";</script>
+<script defer src="../assets/search-index.js"></script>
+<script defer src="../assets/app.js"></script>
+</head>
+<body data-root="../">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="icon-button mobile-menu" data-menu-toggle aria-label="Open navigation">☰</button>
+  <a class="brand" href="../index.html"><span class="brand-mark">x86</span><span>decomp docs</span><small>0.7.4</small></a>
+  <button class="search-trigger" data-search-trigger aria-label="Search documentation"><span>Search docs</span><kbd>Ctrl K</kbd></button>
+  <button class="icon-button" data-theme-toggle aria-label="Toggle color theme">◐</button>
+</header>
+<div class="layout">
+  <aside class="sidebar" data-sidebar>
+    <nav><a href="../index.html">Home</a><a href="../getting-started.html">Getting started</a><a href="../workflows.html">Workflows</a><a href="../project-examples.html">Project examples</a><a href="../commands/index.html">Commands</a><a href="../features/index.html">Features &amp; functions</a><a href="../tests/index.html">Tests</a><a href="../schemas.html">Schemas</a><a href="../integrations.html">Integrations</a><a href="../verification.html">Verification</a><a href="../changelog.html">Changelog</a><a href="../about.html">About</a></nav>
+    <div class="sidebar-note"><strong>Current release only</strong><span>One unified interface and one documentation contract.</span></div>
+  </aside>
+  <main id="main" class="content">
+    <div class="breadcrumbs"><a href="../index.html">Docs</a><span>/</span><span>x86decomp_testkit.adapters.download</span></div>
+    <div class="eyebrow">Feature and function reference</div><h1>x86decomp_testkit.adapters.download</h1><p class="lead">Downloads and safely extracts supported tool archives when permitted.</p><div class="meta-row"><span class="tag tag-current">test-suite</span><span class="tag">current</span><span class="tag">6 functions</span></div><p><strong>Source:</strong> <code>test-suite/src/x86decomp_testkit/adapters/download.py</code></p><h2>Functions and methods</h2><article class="function-entry" id="function-platform-key"><div class="meta-row"><span class="tag">public</span><span class="tag">line 21</span></div><h3>platform_key</h3><p>Performs platform key for download.</p><pre><code class="language-python">def platform_key() -&gt; str</code></pre><p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp_testkit.adapters.download:platform_key</code></p></article><article class="function-entry" id="function-github-latest-release"><div class="meta-row"><span class="tag">public</span><span class="tag">line 31</span></div><h3>github_latest_release</h3><p>Performs github latest release for download.</p><pre><code class="language-python">def github_latest_release(repository: str, timeout: int = 30) -&gt; dict[str, Any]</code></pre><p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp_testkit.adapters.download:github_latest_release</code></p></article><article class="function-entry" id="function-select-release-asset"><div class="meta-row"><span class="tag">public</span><span class="tag">line 43</span></div><h3>select_release_asset</h3><p>Selects release asset for download operations.</p><pre><code class="language-python">def select_release_asset(release: dict[str, Any], required_tokens: tuple[str, ...]) -&gt; dict[str, Any]</code></pre><p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp_testkit.adapters.download:select_release_asset</code></p></article><article class="function-entry" id="function-download-file"><div class="meta-row"><span class="tag">public</span><span class="tag">line 58</span></div><h3>download_file</h3><p>Performs download file for download.</p><pre><code class="language-python">def download_file(url: str, destination: Path, max_bytes: int = 2000000000) -&gt; str</code></pre><p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp_testkit.adapters.download:download_file</code></p></article><article class="function-entry" id="function-safe-destination"><div class="meta-row"><span class="tag">internal</span><span class="tag">line 83</span></div><h3>_safe_destination</h3><p>Internal helper that performs safe destination for download.</p><pre><code class="language-python">def _safe_destination(root: Path, member_name: str) -&gt; Path</code></pre><p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp_testkit.adapters.download:_safe_destination</code></p></article><article class="function-entry" id="function-safe-extract-archive"><div class="meta-row"><span class="tag">public</span><span class="tag">line 94</span></div><h3>safe_extract_archive</h3><p>Performs safe extract archive for download.</p><pre><code class="language-python">def safe_extract_archive(archive: Path, destination: Path, max_members: int = 200000) -&gt; None</code></pre><p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp_testkit.adapters.download:safe_extract_archive</code></p></article>
+    <footer class="page-footer"><span>x86decomp-toolkit 0.7.4</span><a href="../about.html">About this documentation</a></footer>
+  </main>
+  
+</div>
+<div class="search-dialog" data-search-dialog hidden>
+  <div class="search-panel" role="dialog" aria-modal="true" aria-label="Search documentation">
+    <div class="search-box"><input data-search-input type="search" placeholder="Search commands, functions, tests, and guides" autocomplete="off"><button data-search-close aria-label="Close search">×</button></div>
+    <div class="search-hint">Type at least two characters. Press Escape to close.</div>
+    <div class="search-results" data-search-results></div>
+  </div>
+</div>
+</body>
+</html>

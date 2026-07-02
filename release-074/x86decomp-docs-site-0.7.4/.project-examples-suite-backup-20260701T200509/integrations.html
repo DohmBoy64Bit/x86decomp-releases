@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Optional x86decomp tools and adapter behavior.">
+<title>Integrations · x86decomp 0.7.4 Docs</title>
+<link rel="stylesheet" href="assets/styles.css">
+<script>window.X86DOCS_ROOT="";</script>
+<script defer src="assets/search-index.js"></script>
+<script defer src="assets/app.js"></script>
+</head>
+<body data-root="">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="icon-button mobile-menu" data-menu-toggle aria-label="Open navigation">☰</button>
+  <a class="brand" href="index.html"><span class="brand-mark">x86</span><span>decomp docs</span><small>0.7.4</small></a>
+  <button class="search-trigger" data-search-trigger aria-label="Search documentation"><span>Search docs</span><kbd>Ctrl K</kbd></button>
+  <button class="icon-button" data-theme-toggle aria-label="Toggle color theme">◐</button>
+</header>
+<div class="layout">
+  <aside class="sidebar" data-sidebar>
+    <nav><a href="index.html">Home</a><a href="getting-started.html">Getting started</a><a href="workflows.html">Workflows</a><a href="project-examples.html">Project examples</a><a href="commands/index.html">Commands</a><a href="features/index.html">Features &amp; functions</a><a href="tests/index.html">Tests</a><a href="schemas.html">Schemas</a><a href="integrations.html">Integrations</a><a href="verification.html">Verification</a><a href="changelog.html">Changelog</a><a href="about.html">About</a></nav>
+    <div class="sidebar-note"><strong>Current release only</strong><span>One unified interface and one documentation contract.</span></div>
+  </aside>
+  <main id="main" class="content">
+    <div class="breadcrumbs"><a href="index.html">Docs</a><span>/</span><span>Integrations</span></div>
+    
+<div class="eyebrow">Optional tools</div><h1>Integrations and adapters</h1>
+<p class="lead">The verifier detects each integration before use. Missing tools are reported as blocked rather than silently skipped or reported as passing.</p>
+<div class="filter-bar"><input data-filter-input data-filter-target="#adapter-list" type="search" placeholder="Filter integrations"></div>
+<div id="adapter-list" class="card list-index"><div class="list-row" data-filter-item><div><strong>angr</strong></div><div class="muted">Optional integration check for angr.</div><div><span class="tag">detected at run time</span></div></div><div class="list-row" data-filter-item><div><strong>build</strong></div><div class="muted">Optional integration check for build.</div><div><span class="tag">detected at run time</span></div></div><div class="list-row" data-filter-item><div><strong>capstone</strong></div><div class="muted">Optional integration check for capstone.</div><div><span class="tag">detected at run time</span></div></div><div class="list-row" data-filter-item><div><strong>clang</strong></div><div class="muted">Optional integration check for clang.</div><div><span class="tag">detected at run time</span></div></div><div class="list-row" data-filter-item><div><strong>clangxx</strong></div><div class="muted">Optional integration check for clangxx.</div><div><span class="tag">detected at run time</span></div></div><div class="list-row" data-filter-item><div><strong>cmake</strong></div><div class="muted">Optional integration check for cmake.</div><div><span class="tag">detected at run time</span></div></div><div class="list-row" data-filter-item><div><strong>container-runtime</strong></div><div class="muted">Optional integration check for container runtime.</div><div><span class="tag">detected at run time</span></div></div><div class="list-row" data-filter-item><div><strong>coverage</strong></div><div class="muted">Optional integration check for coverage.</div><div><span class="tag">detected at run time</span></div></div><div class="list-row" data-filter-item><div><strong>dynamorio</strong></div><div class="muted">Optional integration check for dynamorio.</div><div><span class="tag">detected at run time</span></div></div><div class="list-row" data-filter-item><div><strong>fastapi</strong></div><div class="muted">Optional integration check for fastapi.</div><div><span class="tag">detected at run time</span></div></div><div class="list-row" data-filter-item><div><strong>gcc</strong></div><div class="muted">Optional integration check for gcc.</div><div><span class="tag">detected at run time</span></div></div><div class="list-row" data-filter-item><div><strong>ghidra</strong></div><div class="muted">Optional integration check for Ghidra.</div><div><span class="tag">detected at run time</span></div></div><div class="list-row" data-filter-item><div><strong>gxx</strong></div><div class="muted">Optional integration check for gxx.</div><div><span class="tag">detected at run time</span></div></div><div class="list-row" data-filter-item><div><strong>java</strong></div><div class="muted">Optional integration check for java.</div><div><span class="tag">detected at run time</span></div></div><div class="list-row" data-filter-item><div><strong>javalang</strong></div><div class="muted">Optional integration check for javalang.</div><div><span class="tag">detected at run time</span></div></div><div class="list-row" data-filter-item><div><strong>jsonschema</strong></div><div class="muted">Optional integration check for jsonschema.</div><div><span class="tag">detected at run time</span></div></div><div class="list-row" data-filter-item><div><strong>lief</strong></div><div class="muted">Optional integration check for lief.</div><div><span class="tag">detected at run time</span></div></div><div class="list-row" data-filter-item><div><strong>lld-link</strong></div><div class="muted">Optional integration check for lld link.</div><div><span class="tag">detected at run time</span></div></div><div class="list-row" data-filter-item><div><strong>llvm-lib</strong></div><div class="muted">Optional integration check for llvm lib.</div><div><span class="tag">detected at run time</span></div></div><div class="list-row" data-filter-item><div><strong>llvm-objdump</strong></div><div class="muted">Optional integration check for llvm objdump.</div><div><span class="tag">detected at run time</span></div></div><div class="list-row" data-filter-item><div><strong>llvm-readobj</strong></div><div class="muted">Optional integration check for llvm readobj.</div><div><span class="tag">detected at run time</span></div></div><div class="list-row" data-filter-item><div><strong>msvc</strong></div><div class="muted">Optional integration check for MSVC.</div><div><span class="tag">detected at run time</span></div></div><div class="list-row" data-filter-item><div><strong>ninja</strong></div><div class="muted">Optional integration check for ninja.</div><div><span class="tag">detected at run time</span></div></div><div class="list-row" data-filter-item><div><strong>objdiff</strong></div><div class="muted">Optional integration check for objdiff.</div><div><span class="tag">detected at run time</span></div></div><div class="list-row" data-filter-item><div><strong>pip-audit</strong></div><div class="muted">Optional integration check for pip audit.</div><div><span class="tag">detected at run time</span></div></div><div class="list-row" data-filter-item><div><strong>pytest</strong></div><div class="muted">Optional integration check for pytest.</div><div><span class="tag">detected at run time</span></div></div><div class="list-row" data-filter-item><div><strong>python</strong></div><div class="muted">Optional integration check for python.</div><div><span class="tag">detected at run time</span></div></div><div class="list-row" data-filter-item><div><strong>pyyaml</strong></div><div class="muted">Optional integration check for pyyaml.</div><div><span class="tag">detected at run time</span></div></div><div class="list-row" data-filter-item><div><strong>unicorn</strong></div><div class="muted">Optional integration check for unicorn.</div><div><span class="tag">detected at run time</span></div></div><div class="list-row" data-filter-item><div><strong>uvicorn</strong></div><div class="muted">Optional integration check for uvicorn.</div><div><span class="tag">detected at run time</span></div></div><div class="list-row" data-filter-item><div><strong>z3</strong></div><div class="muted">Optional integration check for z3.</div><div><span class="tag">detected at run time</span></div></div></div>
+<div class="callout"><strong>Run detection:</strong> use <code>x86decomp-test run --config ./x86decomp-test.json --verbose</code> after creating the configuration described in Getting started.</div>
+
+    <footer class="page-footer"><span>x86decomp-toolkit 0.7.4</span><a href="about.html">About this documentation</a></footer>
+  </main>
+  
+</div>
+<div class="search-dialog" data-search-dialog hidden>
+  <div class="search-panel" role="dialog" aria-modal="true" aria-label="Search documentation">
+    <div class="search-box"><input data-search-input type="search" placeholder="Search commands, functions, tests, and guides" autocomplete="off"><button data-search-close aria-label="Close search">×</button></div>
+    <div class="search-hint">Type at least two characters. Press Escape to close.</div>
+    <div class="search-results" data-search-results></div>
+  </div>
+</div>
+</body>
+</html>

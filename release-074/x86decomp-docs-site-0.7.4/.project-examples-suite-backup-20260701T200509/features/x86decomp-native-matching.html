@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Implements matching operations for the native capability plane.">
+<title>x86decomp.native.matching · x86decomp 0.7.4 Docs</title>
+<link rel="stylesheet" href="../assets/styles.css">
+<script>window.X86DOCS_ROOT="../";</script>
+<script defer src="../assets/search-index.js"></script>
+<script defer src="../assets/app.js"></script>
+</head>
+<body data-root="../">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="icon-button mobile-menu" data-menu-toggle aria-label="Open navigation">☰</button>
+  <a class="brand" href="../index.html"><span class="brand-mark">x86</span><span>decomp docs</span><small>0.7.4</small></a>
+  <button class="search-trigger" data-search-trigger aria-label="Search documentation"><span>Search docs</span><kbd>Ctrl K</kbd></button>
+  <button class="icon-button" data-theme-toggle aria-label="Toggle color theme">◐</button>
+</header>
+<div class="layout">
+  <aside class="sidebar" data-sidebar>
+    <nav><a href="../index.html">Home</a><a href="../getting-started.html">Getting started</a><a href="../workflows.html">Workflows</a><a href="../project-examples.html">Project examples</a><a href="../commands/index.html">Commands</a><a href="../features/index.html">Features &amp; functions</a><a href="../tests/index.html">Tests</a><a href="../schemas.html">Schemas</a><a href="../integrations.html">Integrations</a><a href="../verification.html">Verification</a><a href="../changelog.html">Changelog</a><a href="../about.html">About</a></nav>
+    <div class="sidebar-note"><strong>Current release only</strong><span>One unified interface and one documentation contract.</span></div>
+  </aside>
+  <main id="main" class="content">
+    <div class="breadcrumbs"><a href="../index.html">Docs</a><span>/</span><span>x86decomp.native.matching</span></div>
+    <div class="eyebrow">Feature and function reference</div><h1>x86decomp.native.matching</h1><p class="lead">Implements matching operations for the native capability plane.</p><div class="meta-row"><span class="tag tag-current">native</span><span class="tag">current</span><span class="tag">7 functions</span></div><p><strong>Source:</strong> <code>src/x86decomp/native/matching.py</code></p><h2>Related commands</h2><div class="meta-row"><a class="tag tag-canonical" href="../commands/boundary.html">boundary</a> <a class="tag tag-canonical" href="../commands/hybrid.html">hybrid</a> <a class="tag tag-canonical" href="../commands/loop.html">loop</a> <a class="tag tag-canonical" href="../commands/match.html">match</a> <a class="tag tag-canonical" href="../commands/pe.html">pe</a> <a class="tag tag-canonical" href="../commands/runtime.html">runtime</a> <a class="tag tag-canonical" href="../commands/staging.html">staging</a> <a class="tag tag-canonical" href="../commands/windows.html">windows</a></div><h2>Functions and methods</h2><article class="function-entry" id="function-rva-to-file-offset"><div class="meta-row"><span class="tag">public</span><span class="tag">line 16</span></div><h3>rva_to_file_offset</h3><p>Performs rva to file offset for matching.</p><pre><code class="language-python">def rva_to_file_offset(image: Any, rva: int) -&gt; int</code></pre><p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.native.matching:rva_to_file_offset</code></p></article><article class="function-entry" id="function-extract-candidate"><div class="meta-row"><span class="tag">public</span><span class="tag">line 26</span></div><h3>extract_candidate</h3><p>Extracts candidate for matching operations.</p><pre><code class="language-python">def extract_candidate(path: Path, *, symbol: str | None = None, size: int | None = None) -&gt; bytes</code></pre><p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.native.matching:extract_candidate</code></p></article><article class="function-entry" id="function-compare-function-bytes"><div class="meta-row"><span class="tag">public</span><span class="tag">line 34</span></div><h3>compare_function_bytes</h3><p>Compares function bytes for matching operations.</p><pre><code class="language-python">def compare_function_bytes(original: bytes, candidate: bytes, *, policy: str = &#x27;exact&#x27;, pad_bytes: Iterable[int] = DEFAULT_PAD_BYTES, protected_offsets: Iterable[int] = ()) -&gt; dict[str, Any]</code></pre><p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.native.matching:compare_function_bytes</code></p></article><article class="function-entry" id="function-functionmatching-init"><div class="meta-row"><span class="tag">public</span><span class="tag">line 79</span></div><h3>FunctionMatching.__init__</h3><p>Initializes a new Function Matching instance.</p><pre><code class="language-python">def __init__(self, store: NativeStore)</code></pre><p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.native.matching:FunctionMatching.__init__</code></p></article><article class="function-entry" id="function-functionmatching-batch"><div class="meta-row"><span class="tag">public</span><span class="tag">line 82</span></div><h3>FunctionMatching.batch</h3><p>Runs batch processing for function matching.</p><pre><code class="language-python">def batch(self, original_path: Path, candidates: Iterable[dict[str, Any]], *, policy: str = &#x27;trailing-padding&#x27;, pad_bytes: Iterable[int] = DEFAULT_PAD_BYTES, actor: str = &#x27;analyst&#x27;) -&gt; dict[str, Any]</code></pre><p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.native.matching:FunctionMatching.batch</code></p></article><article class="function-entry" id="function-functionmatching-report"><div class="meta-row"><span class="tag">public</span><span class="tag">line 147</span></div><h3>FunctionMatching.report</h3><p>Performs report for function matching.</p><pre><code class="language-python">def report(self, run_id: str) -&gt; dict[str, Any]</code></pre><p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.native.matching:FunctionMatching.report</code></p></article><article class="function-entry" id="function-functionmatching-mismatches"><div class="meta-row"><span class="tag">public</span><span class="tag">line 157</span></div><h3>FunctionMatching.mismatches</h3><p>Performs mismatches for function matching.</p><pre><code class="language-python">def mismatches(self, run_id: str) -&gt; list[dict[str, Any]]</code></pre><p class="muted"><strong>Catalog symbol:</strong> <code>x86decomp.native.matching:FunctionMatching.mismatches</code></p></article>
+    <footer class="page-footer"><span>x86decomp-toolkit 0.7.4</span><a href="../about.html">About this documentation</a></footer>
+  </main>
+  
+</div>
+<div class="search-dialog" data-search-dialog hidden>
+  <div class="search-panel" role="dialog" aria-modal="true" aria-label="Search documentation">
+    <div class="search-box"><input data-search-input type="search" placeholder="Search commands, functions, tests, and guides" autocomplete="off"><button data-search-close aria-label="Close search">×</button></div>
+    <div class="search-hint">Type at least two characters. Press Escape to close.</div>
+    <div class="search-results" data-search-results></div>
+  </div>
+</div>
+</body>
+</html>

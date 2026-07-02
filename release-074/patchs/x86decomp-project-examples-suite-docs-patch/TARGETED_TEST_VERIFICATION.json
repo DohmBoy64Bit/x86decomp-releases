@@ -1,0 +1,28 @@
+{
+  "format": "x86decomp-project-examples-targeted-tests-v1",
+  "target_release": "0.7.4",
+  "source_root": "/mnt/data/x86decomp-074-source/x86decomp-toolkit-0.7.4",
+  "status": "pass",
+  "passed": 17,
+  "skipped": 3,
+  "failed": 0,
+  "errors": 0,
+  "duration_seconds": 2.41,
+  "scope": [
+    "evidence verification",
+    "COFF extraction",
+    "independent workflow modes and DB conflicts",
+    "dynamic and symbolic validators",
+    "integration host-consent gate",
+    "patch-image byte count",
+    "image normalization",
+    "content store",
+    "harness generation",
+    "linker-plan evidence limits",
+    "reproducibility and security reports",
+    "release-gate truth scope",
+    "synthetic corpus reproducibility",
+    "artifact integrity",
+    "ABI disassembly"
+  ]
+}

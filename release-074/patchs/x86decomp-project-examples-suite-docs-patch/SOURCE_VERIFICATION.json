@@ -1,0 +1,10 @@
+{
+  "format": "x86decomp-project-examples-source-verification-v2",
+  "target_release": "0.7.4",
+  "detected_release": "0.7.4",
+  "source_root": "/mnt/data/x86decomp-074-source/x86decomp-toolkit-0.7.4",
+  "files_checked": 50,
+  "anchors_checked": 95,
+  "status": "pass",
+  "failures": []
+}
