@@ -1,0 +1,809 @@
+{
+  "built_site": {
+    "built_files": 418,
+    "built_html_pages": 367,
+    "checked_local_references": 20779,
+    "errors": [],
+    "expected_built_pages": 366,
+    "external_references": 367,
+    "external_runtime_assets": [],
+    "markdown_pages": 366,
+    "missing_search_pages": [],
+    "passed": true,
+    "schema_version": 1,
+    "search_locations": 366
+  },
+  "harness": {
+    "blocked_adapters": [
+      "container-runtime",
+      "dynamorio",
+      "ghidra",
+      "llama-server",
+      "llvm-readobj",
+      "lm-studio",
+      "localai",
+      "msvc",
+      "objdiff",
+      "ollama",
+      "vllm"
+    ],
+    "counts": {
+      "blocked": 11,
+      "error": 0,
+      "fail": 0,
+      "pass": 191
+    },
+    "coverage": {
+      "branch_floor": 50.0,
+      "branch_percent": 51.730624529721595,
+      "statement_floor": 70.0,
+      "statement_percent": 78.88716283010874
+    },
+    "exit_code": 0,
+    "finished_at": "2026-07-02T19:12:35.349Z",
+    "function_coverage": {
+      "executed": 879,
+      "missing": [],
+      "passed": true,
+      "total": 879
+    },
+    "installed_adapters": [
+      "angr",
+      "build",
+      "capstone",
+      "clang",
+      "clangxx",
+      "cmake",
+      "coverage",
+      "fastapi",
+      "gcc",
+      "gxx",
+      "java",
+      "javalang",
+      "jsonschema",
+      "lief",
+      "lld-link",
+      "llvm-lib",
+      "llvm-objdump",
+      "ninja",
+      "pip-audit",
+      "pytest",
+      "python",
+      "pyyaml",
+      "unicorn",
+      "uvicorn",
+      "z3"
+    ],
+    "run_id": "run-20260702T190158693Z-ab71426e",
+    "schema_version": 1,
+    "started_at": "2026-07-02T19:01:58.695Z",
+    "strict": false,
+    "suite_counts": {
+      "adapters": {
+        "blocked": 11,
+        "pass": 25
+      },
+      "cli-surface": {
+        "pass": 141
+      },
+      "coverage": {
+        "pass": 6
+      },
+      "harness": {
+        "pass": 2
+      },
+      "inventory": {
+        "pass": 3
+      },
+      "packaging": {
+        "pass": 5
+      },
+      "pytest": {
+        "pass": 2
+      },
+      "structure": {
+        "pass": 7
+      }
+    },
+    "toolkit_version": "0.7.5",
+    "truth_boundary": "BLOCKED adapters were unavailable in the verification environment. No live model-quality result is inferred for those runtimes."
+  },
+  "passed": true,
+  "release_tests": {
+    "passed": 223,
+    "public_contract": 21,
+    "standalone": 22,
+    "toolkit": 180,
+    "total": 223
+  },
+  "schema_version": 2,
+  "source_coverage_reference": {},
+  "source_manifests": {
+    "root": {
+      "expected": 427,
+      "verified": 427
+    },
+    "test_suite": {
+      "expected": 60,
+      "verified": 60
+    }
+  },
+  "source_reference": {
+    "counts": {
+      "adapters": 36,
+      "canonical_groups": 34,
+      "canonical_routes": 181,
+      "documented_command_paths": 293,
+      "functions_and_methods": 1019,
+      "modules": 142,
+      "project_example_commands": 163,
+      "provider_presets": 6,
+      "schemas": 97,
+      "tests": 223,
+      "toolkit_root_commands": 141
+    },
+    "errors": [],
+    "passed": true,
+    "project_example_command_audit": {
+      "checked": [
+        {
+          "command": "x86decomp metadata-scan target.exe --object original/foo.obj --map target.map --report reports/metadata.json",
+          "page": "project-examples/abi-type-recovery.md"
+        },
+        {
+          "command": "x86decomp disassemble target/sub_00401230.bin --base 0x401230 --architecture x86 --report reports/disassembly/sub_00401230.json",
+          "page": "project-examples/abi-type-recovery.md"
+        },
+        {
+          "command": "x86decomp crosscheck-ghidra project/functions/pe-rva_00401230/instructions.jsonl target/sub_00401230.bin --base 0x401230 --architecture x86 --report reports/crosscheck/sub_00401230.json",
+          "page": "project-examples/abi-type-recovery.md"
+        },
+        {
+          "command": "x86decomp abi-check target/sub_00401230.bin examples/abi/stdcall-two-ints.json --base 0x401230 --report reports/abi/target.json",
+          "page": "project-examples/abi-type-recovery.md"
+        },
+        {
+          "command": "x86decomp abi-check build/sub_00401230.bin examples/abi/stdcall-two-ints.json --base 0 --report reports/abi/candidate.json",
+          "page": "project-examples/abi-type-recovery.md"
+        },
+        {
+          "command": "x86decomp cpp-recover target.exe --metadata-report reports/metadata.json --object original/foo.obj --map target.map --report reports/cpp-recovery.json",
+          "page": "project-examples/abi-type-recovery.md"
+        },
+        {
+          "command": "x86decomp db-constraint-add project/analysis.sqlite pe-rva:00401230 calling_convention stdcall disassembly-crosscheck --evidence-id ev-callsite-1 --confidence 0.85",
+          "page": "project-examples/abi-type-recovery.md"
+        },
+        {
+          "command": "x86decomp db-constraint-add project/analysis.sqlite pe-rva:00401230 return_register eax abi-report --evidence-id ev-abi-1 --confidence 0.95",
+          "page": "project-examples/abi-type-recovery.md"
+        },
+        {
+          "command": "x86decomp db-constraint-conflicts project/analysis.sqlite pe-rva:00401230 calling_convention",
+          "page": "project-examples/abi-type-recovery.md"
+        },
+        {
+          "command": "x86decomp db-query project/analysis.sqlite \"SELECT id, subject_entity, relation, object_value, provenance, status FROM type_constraints WHERE subject_entity = ?\" --parameters-json '[\"pe-rva:00401230\"]'",
+          "page": "project-examples/abi-type-recovery.md"
+        },
+        {
+          "command": "x86decomp db-constraint-accept project/analysis.sqlite 42",
+          "page": "project-examples/abi-type-recovery.md"
+        },
+        {
+          "command": "x86decomp harness-generate contracts/sub_00401230-abi.json harnesses/sub_00401230.json --pointer-parameters contracts/sub_00401230-pointers.json --max-instructions 100000 --timeout-ms 1000",
+          "page": "project-examples/abi-type-recovery.md"
+        },
+        {
+          "command": "x86decomp corpus-generate build/generated-corpus --cases-per-family 8 --seed 0x86DEC0DE --report reports/generated-corpus.json",
+          "page": "project-examples/benchmark-validation-corpus.md"
+        },
+        {
+          "command": "x86decomp corpus-generated-verify reports/generated-corpus.json",
+          "page": "project-examples/benchmark-validation-corpus.md"
+        },
+        {
+          "command": "x86decomp corpus-create-manifest . build/ground-truth-manifest.json",
+          "page": "project-examples/benchmark-validation-corpus.md"
+        },
+        {
+          "command": "x86decomp corpus-build build/ground-truth-manifest.json build/ground-truth --report reports/ground-truth.json",
+          "page": "project-examples/benchmark-validation-corpus.md"
+        },
+        {
+          "command": "x86decomp corpus-verify reports/ground-truth.json",
+          "page": "project-examples/benchmark-validation-corpus.md"
+        },
+        {
+          "command": "x86decomp benchmark-run examples/benchmarks/bounded-demo.json --report reports/benchmark-bounded-demo.json",
+          "page": "project-examples/benchmark-validation-corpus.md"
+        },
+        {
+          "command": "x86decomp corpus-compare reports/gcc-12-ground-truth.json reports/gcc-13-ground-truth.json --report reports/ground-truth-comparison.json",
+          "page": "project-examples/benchmark-validation-corpus.md"
+        },
+        {
+          "command": "x86decomp test-bundle-create build/authorized-test-bundle.zip --artifact primary_image=authorized/target.exe --artifact pdb=authorized/target.pdb --authorization \"I own these artifacts or have permission to analyze them.\" --name regression-target --description \"Static regression corpus\" --expected-architecture x86",
+          "page": "project-examples/benchmark-validation-corpus.md"
+        },
+        {
+          "command": "x86decomp test-bundle-inspect build/authorized-test-bundle.zip --report reports/test-bundle-inspection.json",
+          "page": "project-examples/benchmark-validation-corpus.md"
+        },
+        {
+          "command": "x86decomp toolchain-register config/toolchains.json gcc-13-x86 gcc 13.2 --executable cc=C:\\Toolchains\\gcc\\bin\\gcc.exe",
+          "page": "project-examples/compiler-laboratory.md"
+        },
+        {
+          "command": "x86decomp toolchain-verify config/toolchains.json gcc-13-x86",
+          "page": "project-examples/compiler-laboratory.md"
+        },
+        {
+          "command": "x86decomp compiler-lab examples/labs/gcc-optimization-matrix.json --report reports/compiler-lab.json",
+          "page": "project-examples/compiler-laboratory.md"
+        },
+        {
+          "command": "x86decomp compiler-lab config/coff-matching-lab.json --report reports/compiler-lab-coff.json",
+          "page": "project-examples/compiler-laboratory.md"
+        },
+        {
+          "command": "x86decomp corpus-create-manifest . build/ground-truth-manifest.json",
+          "page": "project-examples/compiler-laboratory.md"
+        },
+        {
+          "command": "x86decomp corpus-build build/ground-truth-manifest.json build/ground-truth --report reports/ground-truth.json",
+          "page": "project-examples/compiler-laboratory.md"
+        },
+        {
+          "command": "x86decomp corpus-verify reports/ground-truth.json",
+          "page": "project-examples/compiler-laboratory.md"
+        },
+        {
+          "command": "x86decomp corpus-compare reports/gcc-12.json reports/gcc-13.json --report reports/compiler-comparison.json",
+          "page": "project-examples/compiler-laboratory.md"
+        },
+        {
+          "command": "x86decomp compile-worker profiles/target.json src/candidate.c build/candidate.obj --isolation local_bounded --cache build/compiler-cache --report reports/compiler-worker.json",
+          "page": "project-examples/compiler-laboratory.md"
+        },
+        {
+          "command": "x86decomp inspect-pe target.exe",
+          "page": "project-examples/full-relink-convergence.md"
+        },
+        {
+          "command": "x86decomp map-inspect target.map",
+          "page": "project-examples/full-relink-convergence.md"
+        },
+        {
+          "command": "x86decomp coff-inspect build/entry.obj",
+          "page": "project-examples/full-relink-convergence.md"
+        },
+        {
+          "command": "x86decomp lib-inspect runtime.lib",
+          "page": "project-examples/full-relink-convergence.md"
+        },
+        {
+          "command": "x86decomp coff-comdat-resolve build/entry.obj build/sub_00401230.obj --report reports/comdat.json",
+          "page": "project-examples/full-relink-convergence.md"
+        },
+        {
+          "command": "x86decomp layout-reconstruct target.exe target.map build/entry.obj build/sub_00401230.obj --report reports/layout.json",
+          "page": "project-examples/full-relink-convergence.md"
+        },
+        {
+          "command": "x86decomp linker-plan target.exe target.map build/entry.obj build/sub_00401230.obj --library runtime.lib --linker lld-link --output-image build/reconstructed.exe --report reports/linker-plan.json --write-relink-manifest config/relink.json",
+          "page": "project-examples/full-relink-convergence.md"
+        },
+        {
+          "command": "x86decomp relink config/relink.json --report reports/relink.json",
+          "page": "project-examples/full-relink-convergence.md"
+        },
+        {
+          "command": "x86decomp image-profile target.exe config/image-profile.json",
+          "page": "project-examples/full-relink-convergence.md"
+        },
+        {
+          "command": "x86decomp image-match target.exe build/reconstructed.exe --profile config/image-profile.json --report reports/image-match.json",
+          "page": "project-examples/full-relink-convergence.md"
+        },
+        {
+          "command": "x86decomp convergence-analyze target.exe build/reconstructed.exe --profile config/image-profile.json --report reports/convergence-001.json --history reports/convergence-history.json",
+          "page": "project-examples/full-relink-convergence.md"
+        },
+        {
+          "command": "x86decomp convergence-analyze target.exe build/reconstructed-002.exe --profile config/image-profile.json --previous reports/convergence-001.json --report reports/convergence-002.json --history reports/convergence-history.json",
+          "page": "project-examples/full-relink-convergence.md"
+        },
+        {
+          "command": "x86decomp workflow-update project pe-rva:00401230 --matching-status image_integrated --report-kind image-match --report-path reports/image-match.json",
+          "page": "project-examples/full-relink-convergence.md"
+        },
+        {
+          "command": "x86decomp workflow-update project pe-rva:00401230 --matching-status full_relink_validated --report-kind convergence --report-path reports/convergence-002.json",
+          "page": "project-examples/full-relink-convergence.md"
+        },
+        {
+          "command": "x86decomp target-pack-infer target.exe target-pack --decisions decisions-functional.json",
+          "page": "project-examples/functional-project.md"
+        },
+        {
+          "command": "x86decomp target-pack-verify target-pack",
+          "page": "project-examples/functional-project.md"
+        },
+        {
+          "command": "x86decomp project-from-target target-pack project",
+          "page": "project-examples/functional-project.md"
+        },
+        {
+          "command": "x86decomp workflow-init project pe-rva:00401230 --mode functional",
+          "page": "project-examples/functional-project.md"
+        },
+        {
+          "command": "x86decomp ghidra-export target.exe ghidra-projects TargetProject exports/ghidra --selector all --report reports/ghidra-export.json",
+          "page": "project-examples/functional-project.md"
+        },
+        {
+          "command": "x86decomp artifact-import project exports/ghidra/functions/pe-rva_00401230",
+          "page": "project-examples/functional-project.md"
+        },
+        {
+          "command": "x86decomp artifact-verify project/functions/pe-rva_00401230",
+          "page": "project-examples/functional-project.md"
+        },
+        {
+          "command": "x86decomp harness-generate contracts/sub_00401230-abi.json harnesses/sub_00401230.json --no-observe-pointers --max-instructions 100000 --timeout-ms 1000",
+          "page": "project-examples/functional-project.md"
+        },
+        {
+          "command": "x86decomp compile profiles/functional-x86.json src/sub_00401230.c build/sub_00401230.obj --report reports/compile/sub_00401230.json",
+          "page": "project-examples/functional-project.md"
+        },
+        {
+          "command": "x86decomp coff-extract build/sub_00401230.obj sub_00401230 build/sub_00401230.bin",
+          "page": "project-examples/functional-project.md"
+        },
+        {
+          "command": "x86decomp abi-check build/sub_00401230.bin contracts/sub_00401230-abi.json --base 0 --report reports/abi/sub_00401230.json",
+          "page": "project-examples/functional-project.md"
+        },
+        {
+          "command": "x86decomp dynamic-validate target/sub_00401230.bin build/sub_00401230.bin harnesses/sub_00401230.json --target-base $targetBase --candidate-base 0 --report reports/dynamic/sub_00401230.json",
+          "page": "project-examples/functional-project.md"
+        },
+        {
+          "command": "x86decomp symbolic-validate target/sub_00401230.bin build/sub_00401230.bin --architecture x86 --stack-argument-words 2 --output-register eax --max-steps 64 --max-paths 16 --report reports/symbolic/sub_00401230.json",
+          "page": "project-examples/functional-project.md"
+        },
+        {
+          "command": "x86decomp symbolic-memory-validate target/sub_00401230.bin build/sub_00401230.bin harnesses/sub_00401230-memory.json --report reports/symbolic-memory/sub_00401230.json",
+          "page": "project-examples/functional-project.md"
+        },
+        {
+          "command": "x86decomp integration-run integration/sub_00401230.json --report reports/integration/sub_00401230.json",
+          "page": "project-examples/functional-project.md"
+        },
+        {
+          "command": "x86decomp integration-run integration/sub_00401230-host.json --allow-host-execution --report reports/integration/sub_00401230-host.json",
+          "page": "project-examples/functional-project.md"
+        },
+        {
+          "command": "x86decomp workflow-update project pe-rva:00401230 --source-stage human_candidate --functional-status integration_validated --candidate src/sub_00401230.c --report-kind integration --report-path reports/integration/sub_00401230.json",
+          "page": "project-examples/functional-project.md"
+        },
+        {
+          "command": "x86decomp workflow-show project pe-rva:00401230",
+          "page": "project-examples/functional-project.md"
+        },
+        {
+          "command": "x86decomp target-pack-infer target.exe target-pack --pdb target.pdb --map target.map --decisions examples/release/target-decisions.json",
+          "page": "project-examples/hybrid-project.md"
+        },
+        {
+          "command": "x86decomp target-pack-verify target-pack",
+          "page": "project-examples/hybrid-project.md"
+        },
+        {
+          "command": "x86decomp project-from-target target-pack project",
+          "page": "project-examples/hybrid-project.md"
+        },
+        {
+          "command": "x86decomp project-check project",
+          "page": "project-examples/hybrid-project.md"
+        },
+        {
+          "command": "x86decomp ghidra-export target.exe ghidra-projects TargetProject exports/ghidra --selector all --report reports/ghidra-export.json",
+          "page": "project-examples/hybrid-project.md"
+        },
+        {
+          "command": "x86decomp artifact-import project exports/ghidra/functions/pe-rva_00401230",
+          "page": "project-examples/hybrid-project.md"
+        },
+        {
+          "command": "x86decomp artifact-verify project/functions/pe-rva_00401230",
+          "page": "project-examples/hybrid-project.md"
+        },
+        {
+          "command": "x86decomp hybrid-generate project hybrid-output --architecture x86 --asm-format bytes --image-base 0x400000",
+          "page": "project-examples/hybrid-project.md"
+        },
+        {
+          "command": "x86decomp compile profiles/target-coff.json hybrid-output/src/staging/sub_00401230.c build/sub_00401230.obj --report reports/compile/sub_00401230.json",
+          "page": "project-examples/hybrid-project.md"
+        },
+        {
+          "command": "x86decomp workflow-update project pe-rva:00401230 --source-stage human_candidate --candidate hybrid-output/src/staging/sub_00401230.c --compiler-profile profiles/target-coff.json",
+          "page": "project-examples/hybrid-project.md"
+        },
+        {
+          "command": "x86decomp coff-extract build/sub_00401230.obj sub_00401230 build/sub_00401230.bin --size 0x20",
+          "page": "project-examples/hybrid-project.md"
+        },
+        {
+          "command": "x86decomp diff-function target.exe 0x401230 0x20 build/sub_00401230.obj sub_00401230 --report reports/diff/sub_00401230.json",
+          "page": "project-examples/hybrid-project.md"
+        },
+        {
+          "command": "x86decomp dynamic-validate hybrid-output/config/original/sub_00401230.bin build/sub_00401230.bin harnesses/sub_00401230.json --target-base 0x401230 --candidate-base 0 --report reports/dynamic/sub_00401230.json",
+          "page": "project-examples/hybrid-project.md"
+        },
+        {
+          "command": "x86decomp symbolic-validate hybrid-output/config/original/sub_00401230.bin build/sub_00401230.bin --architecture x86 --stack-argument-words 2 --output-register eax --max-steps 64 --max-paths 16 --report reports/symbolic/sub_00401230.json",
+          "page": "project-examples/hybrid-project.md"
+        },
+        {
+          "command": "x86decomp workflow-update project pe-rva:00401230 --matching-status byte_matched --report-kind function-diff --report-path reports/diff/sub_00401230.json",
+          "page": "project-examples/hybrid-project.md"
+        },
+        {
+          "command": "x86decomp workflow-update project pe-rva:00401230 --functional-status symbolically_bounded --report-kind symbolic --report-path reports/symbolic/sub_00401230.json",
+          "page": "project-examples/hybrid-project.md"
+        },
+        {
+          "command": "x86decomp workflow-show project pe-rva:00401230",
+          "page": "project-examples/hybrid-project.md"
+        },
+        {
+          "command": "x86decomp target-pack-infer target.exe target-pack --pdb target.pdb --map target.map --decisions decisions-matching.json",
+          "page": "project-examples/matching-project.md"
+        },
+        {
+          "command": "x86decomp target-pack-verify target-pack",
+          "page": "project-examples/matching-project.md"
+        },
+        {
+          "command": "x86decomp project-from-target target-pack project",
+          "page": "project-examples/matching-project.md"
+        },
+        {
+          "command": "x86decomp project-check project",
+          "page": "project-examples/matching-project.md"
+        },
+        {
+          "command": "x86decomp ghidra-export target.exe ghidra-projects TargetProject exports/ghidra --selector all --report reports/ghidra-export.json",
+          "page": "project-examples/matching-project.md"
+        },
+        {
+          "command": "x86decomp artifact-import project exports/ghidra/functions/pe-rva_00401230",
+          "page": "project-examples/matching-project.md"
+        },
+        {
+          "command": "x86decomp artifact-verify project/functions/pe-rva_00401230",
+          "page": "project-examples/matching-project.md"
+        },
+        {
+          "command": "x86decomp workflow-init project pe-rva:00401230 --mode matching",
+          "page": "project-examples/matching-project.md"
+        },
+        {
+          "command": "x86decomp compile profiles/target-coff.json src/sub_00401230.c build/sub_00401230.obj --cache build/compiler-cache --report reports/compile/sub_00401230.json",
+          "page": "project-examples/matching-project.md"
+        },
+        {
+          "command": "x86decomp coff-extract build/sub_00401230.obj sub_00401230 build/sub_00401230.bin --size 0x20",
+          "page": "project-examples/matching-project.md"
+        },
+        {
+          "command": "x86decomp abi-check build/sub_00401230.bin contracts/sub_00401230-abi.json --base 0 --report reports/abi/sub_00401230.json",
+          "page": "project-examples/matching-project.md"
+        },
+        {
+          "command": "x86decomp diff-function target.exe 0x401230 0x20 build/sub_00401230.obj sub_00401230 --report reports/diff/sub_00401230.json",
+          "page": "project-examples/matching-project.md"
+        },
+        {
+          "command": "x86decomp linker-plan target.exe target.map build/entry.obj build/sub_00401230.obj --library runtime.lib --report reports/linker-plan.json --write-relink-manifest config/relink.json",
+          "page": "project-examples/matching-project.md"
+        },
+        {
+          "command": "x86decomp relink config/relink.json --report reports/relink.json",
+          "page": "project-examples/matching-project.md"
+        },
+        {
+          "command": "x86decomp image-profile target.exe config/image-profile.json",
+          "page": "project-examples/matching-project.md"
+        },
+        {
+          "command": "x86decomp image-match target.exe build/reconstructed.exe --profile config/image-profile.json --report reports/image-match.json",
+          "page": "project-examples/matching-project.md"
+        },
+        {
+          "command": "x86decomp convergence-analyze target.exe build/reconstructed.exe --profile config/image-profile.json --report reports/convergence.json --history reports/convergence-history.json",
+          "page": "project-examples/matching-project.md"
+        },
+        {
+          "command": "x86decomp workflow-update project pe-rva:00401230 --source-stage human_candidate --matching-status byte_matched --candidate src/sub_00401230.c --compiler-profile profiles/target-coff.json --report-kind function-diff --report-path reports/diff/sub_00401230.json",
+          "page": "project-examples/matching-project.md"
+        },
+        {
+          "command": "x86decomp workflow-show project pe-rva:00401230",
+          "page": "project-examples/matching-project.md"
+        },
+        {
+          "command": "x86decomp inspect-pe target.exe",
+          "page": "project-examples/patch-image-integration.md"
+        },
+        {
+          "command": "x86decomp diff-bytes target/sub_00401230.bin candidate/sub_00401230.bin --report reports/prepatch-byte-diff.json",
+          "page": "project-examples/patch-image-integration.md"
+        },
+        {
+          "command": "x86decomp compile profiles/target-coff.json src/sub_00401230.c build/sub_00401230.obj --report reports/compile/sub_00401230.json",
+          "page": "project-examples/patch-image-integration.md"
+        },
+        {
+          "command": "x86decomp coff-extract build/sub_00401230.obj sub_00401230 build/sub_00401230.bin --size 0x20",
+          "page": "project-examples/patch-image-integration.md"
+        },
+        {
+          "command": "x86decomp patch-image target.exe build/sub_00401230.bin build/target-patched.exe --rva 0x401230 --expected-original-sha256 ORIGINAL_SHA256 --expected-function-sha256 FUNCTION_SHA256 --report reports/patch/sub_00401230.json",
+          "page": "project-examples/patch-image-integration.md"
+        },
+        {
+          "command": "x86decomp inspect-pe build/target-patched.exe",
+          "page": "project-examples/patch-image-integration.md"
+        },
+        {
+          "command": "x86decomp image-profile target.exe config/patch-image-profile.json",
+          "page": "project-examples/patch-image-integration.md"
+        },
+        {
+          "command": "x86decomp image-match target.exe build/target-patched.exe --profile config/patch-image-profile.json --report reports/patch/image-match.json",
+          "page": "project-examples/patch-image-integration.md"
+        },
+        {
+          "command": "x86decomp integration-run integration/patched-image.json --report reports/integration/patched-image.json",
+          "page": "project-examples/patch-image-integration.md"
+        },
+        {
+          "command": "x86decomp evidence-add project --kind human_review --source analyst --locator pe-rva:00401230 --assertion \"Analyst reviewed the same-size patch report and derived image\" --independent-group patch-review --file reports/patch/sub_00401230.json --id ev-patch-00401230",
+          "page": "project-examples/patch-image-integration.md"
+        },
+        {
+          "command": "x86decomp memory-add project --actor analyst --category integration --summary \"Created and tested derived patch image\" --details-json '{\"rva\":\"0x401230\",\"output\":\"build/target-patched.exe\"}' --evidence ev-patch-00401230",
+          "page": "project-examples/patch-image-integration.md"
+        },
+        {
+          "command": "x86decomp project-check project",
+          "page": "project-examples/project-operations-recovery.md"
+        },
+        {
+          "command": "x86decomp project-backup project backups/project-before-change.tar.gz",
+          "page": "project-examples/project-operations-recovery.md"
+        },
+        {
+          "command": "x86decomp project-migrate project --dry-run",
+          "page": "project-examples/project-operations-recovery.md"
+        },
+        {
+          "command": "x86decomp project-repair project",
+          "page": "project-examples/project-operations-recovery.md"
+        },
+        {
+          "command": "x86decomp project-migrate project --backup backups/project-migration.tar.gz",
+          "page": "project-examples/project-operations-recovery.md"
+        },
+        {
+          "command": "x86decomp project-repair project --apply",
+          "page": "project-examples/project-operations-recovery.md"
+        },
+        {
+          "command": "x86decomp content-verify project/artifacts",
+          "page": "project-examples/project-operations-recovery.md"
+        },
+        {
+          "command": "x86decomp project-gc project",
+          "page": "project-examples/project-operations-recovery.md"
+        },
+        {
+          "command": "x86decomp project-gc project --apply",
+          "page": "project-examples/project-operations-recovery.md"
+        },
+        {
+          "command": "x86decomp pipeline-create project project/orchestration/pipelines/default.json",
+          "page": "project-examples/project-operations-recovery.md"
+        },
+        {
+          "command": "x86decomp pipeline-run project project/orchestration/pipelines/default.json",
+          "page": "project-examples/project-operations-recovery.md"
+        },
+        {
+          "command": "x86decomp pipeline-status project PIPELINE_ID",
+          "page": "project-examples/project-operations-recovery.md"
+        },
+        {
+          "command": "x86decomp pipeline-retry project PIPELINE_ID STAGE_ID --cascade",
+          "page": "project-examples/project-operations-recovery.md"
+        },
+        {
+          "command": "x86decomp pipeline-cancel project PIPELINE_ID --stage-id STAGE_ID",
+          "page": "project-examples/project-operations-recovery.md"
+        },
+        {
+          "command": "x86decomp pipeline-recover project --pipeline-id PIPELINE_ID --stale-seconds 600",
+          "page": "project-examples/project-operations-recovery.md"
+        },
+        {
+          "command": "x86decomp project-restore backups/project-before-change.tar.gz restored-project",
+          "page": "project-examples/project-operations-recovery.md"
+        },
+        {
+          "command": "x86decomp project-check restored-project",
+          "page": "project-examples/project-operations-recovery.md"
+        },
+        {
+          "command": "x86decomp content-verify restored-project/artifacts",
+          "page": "project-examples/project-operations-recovery.md"
+        },
+        {
+          "command": "x86decomp target-pack-infer target.exe target-pack --pdb target.pdb --map target.map --object original/foo.obj --library original/runtime.lib --decisions decisions.json",
+          "page": "project-examples/static-analysis-evidence.md"
+        },
+        {
+          "command": "x86decomp target-pack-verify target-pack",
+          "page": "project-examples/static-analysis-evidence.md"
+        },
+        {
+          "command": "x86decomp inspect-pe target.exe",
+          "page": "project-examples/static-analysis-evidence.md"
+        },
+        {
+          "command": "x86decomp pdb-inspect target.pdb --pe target.exe",
+          "page": "project-examples/static-analysis-evidence.md"
+        },
+        {
+          "command": "x86decomp map-inspect target.map",
+          "page": "project-examples/static-analysis-evidence.md"
+        },
+        {
+          "command": "x86decomp coff-inspect original/foo.obj",
+          "page": "project-examples/static-analysis-evidence.md"
+        },
+        {
+          "command": "x86decomp lib-inspect original/runtime.lib",
+          "page": "project-examples/static-analysis-evidence.md"
+        },
+        {
+          "command": "x86decomp metadata-scan target.exe --object original/foo.obj --map target.map --report reports/metadata.json",
+          "page": "project-examples/static-analysis-evidence.md"
+        },
+        {
+          "command": "x86decomp ghidra-export target.exe ghidra-projects TargetProject exports/ghidra --selector all --report reports/ghidra-export.json",
+          "page": "project-examples/static-analysis-evidence.md"
+        },
+        {
+          "command": "x86decomp artifact-import project exports/ghidra/functions/pe-rva_00401230",
+          "page": "project-examples/static-analysis-evidence.md"
+        },
+        {
+          "command": "x86decomp artifact-verify project/functions/pe-rva_00401230",
+          "page": "project-examples/static-analysis-evidence.md"
+        },
+        {
+          "command": "x86decomp disassemble $rangePath --base 0x401230 --architecture x86 --report reports/disassembly/sub_00401230.json",
+          "page": "project-examples/static-analysis-evidence.md"
+        },
+        {
+          "command": "x86decomp crosscheck-ghidra \"$functionDir/instructions.jsonl\" $rangePath --base 0x401230 --architecture x86 --report reports/crosscheck/sub_00401230.json",
+          "page": "project-examples/static-analysis-evidence.md"
+        },
+        {
+          "command": "x86decomp evidence-add project --kind static_analysis --source ghidra --locator pe-rva:00401230 --assertion \"Ghidra exported a function beginning at RVA 0x401230\" --independent-group ghidra-export --file project/functions/pe-rva_00401230/function.json --id ev-ghidra-00401230",
+          "page": "project-examples/static-analysis-evidence.md"
+        },
+        {
+          "command": "x86decomp evidence-add project --kind static_analysis --source independent-disassembler --locator pe-rva:00401230 --assertion \"Independent disassembly starts at RVA 0x401230\" --independent-group independent-disassembly --file reports/crosscheck/sub_00401230.json --id ev-crosscheck-00401230",
+          "page": "project-examples/static-analysis-evidence.md"
+        },
+        {
+          "command": "x86decomp evidence-add project --kind human_review --source analyst --locator pe-rva:00401230 --assertion \"Analyst reviewed the exported manifest and independent cross-check\" --independent-group analyst-review --id ev-review-00401230",
+          "page": "project-examples/static-analysis-evidence.md"
+        },
+        {
+          "command": "x86decomp claim-create project --subject pe-rva:00401230 --predicate has-entry-rva --object 0x401230 --evidence ev-ghidra-00401230 --evidence ev-crosscheck-00401230 --evidence ev-review-00401230 --id claim-entry-00401230",
+          "page": "project-examples/static-analysis-evidence.md"
+        },
+        {
+          "command": "x86decomp claim-verify project claim-entry-00401230",
+          "page": "project-examples/static-analysis-evidence.md"
+        },
+        {
+          "command": "x86decomp db-ingest project/analysis.sqlite project/functions/pe-rva_00401230 --image-base 0x400000",
+          "page": "project-examples/static-analysis-evidence.md"
+        },
+        {
+          "command": "x86decomp db-query project/analysis.sqlite \"SELECT id, address_rva, name FROM entities WHERE kind = 'function' ORDER BY address_rva\"",
+          "page": "project-examples/static-analysis-evidence.md"
+        },
+        {
+          "command": "x86decomp db-constraint-add project/analysis.sqlite pe-rva:00401230 calling_convention stdcall analyst-note --evidence-id ev-abi-1 --confidence 0.8",
+          "page": "project-examples/static-analysis-evidence.md"
+        },
+        {
+          "command": "x86decomp db-constraint-conflicts project/analysis.sqlite pe-rva:00401230 calling_convention",
+          "page": "project-examples/static-analysis-evidence.md"
+        },
+        {
+          "command": "x86decomp project-check project",
+          "page": "project-examples/target-release-reproducibility.md"
+        },
+        {
+          "command": "x86decomp memory-verify project",
+          "page": "project-examples/target-release-reproducibility.md"
+        },
+        {
+          "command": "x86decomp content-verify project/artifacts",
+          "page": "project-examples/target-release-reproducibility.md"
+        },
+        {
+          "command": "x86decomp workflow-show project pe-rva:00401230",
+          "page": "project-examples/target-release-reproducibility.md"
+        },
+        {
+          "command": "x86decomp reproduce-create project reports/reproducibility/manifest.json --required-tool gcc --required-tool lld-link",
+          "page": "project-examples/target-release-reproducibility.md"
+        },
+        {
+          "command": "x86decomp reproduce-verify project reports/reproducibility/manifest.json",
+          "page": "project-examples/target-release-reproducibility.md"
+        },
+        {
+          "command": "x86decomp security-audit project --report reports/security/source-audit.json",
+          "page": "project-examples/target-release-reproducibility.md"
+        },
+        {
+          "command": "x86decomp dependency-audit --executable pip-audit --timeout 300 --report reports/security/dependencies.json",
+          "page": "project-examples/target-release-reproducibility.md"
+        },
+        {
+          "command": "x86decomp sbom-generate reports/security/sbom.json",
+          "page": "project-examples/target-release-reproducibility.md"
+        },
+        {
+          "command": "x86decomp release-manifest-verify project --manifest MANIFEST.sha256",
+          "page": "project-examples/target-release-reproducibility.md"
+        },
+        {
+          "command": "x86decomp claim-verify project claim-entry-00401230",
+          "page": "project-examples/target-release-reproducibility.md"
+        },
+        {
+          "command": "x86decomp pipeline-status project PIPELINE_ID",
+          "page": "project-examples/target-release-reproducibility.md"
+        },
+        {
+          "command": "x86decomp release-gate project --reproduction-manifest reports/reproducibility/manifest.json --security-report reports/security/source-audit.json --convergence-report reports/convergence/latest.json --require-workflows --require-verified-claims --require-succeeded-pipelines --report reports/release-gate.json",
+          "page": "project-examples/target-release-reproducibility.md"
+        },
+        {
+          "command": "x86decomp project-backup project releases/project-release-backup.tar.gz",
+          "page": "project-examples/target-release-reproducibility.md"
+        }
+      ],
+      "failures": [],
+      "passed": true
+    },
+    "schema_version": 1,
+    "toolkit_version": "0.7.5"
+  },
+  "toolkit_version": "0.7.5"
+}

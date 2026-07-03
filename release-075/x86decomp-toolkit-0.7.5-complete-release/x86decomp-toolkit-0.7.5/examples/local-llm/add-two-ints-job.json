@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "id": "add-two-ints",
+  "function_name": "target_add",
+  "symbol": "target_add",
+  "architecture": "x86",
+  "mnemonics": "push ebp\nmov ebp, esp\nmov eax, dword ptr [ebp + 8]\nadd eax, dword ptr [ebp + 12]\npop ebp\nret",
+  "target_bytes_hex": "5589e58b450803450c5dc3",
+  "base_rva": 4096,
+  "image_base": 4194304,
+  "symbol_map": {},
+  "section_placements": {},
+  "abi": {
+    "calling_convention": "cdecl",
+    "return_type": "signed 32-bit integer",
+    "parameters": [
+      "signed 32-bit integer a",
+      "signed 32-bit integer b"
+    ]
+  },
+  "evidence": {
+    "analyst_notes": "The listing is a bounded example. The compiler profile determines whether a proposal can match it."
+  },
+  "max_attempts": 4
+}

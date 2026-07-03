@@ -1,0 +1,25 @@
+{
+  "$id": "https://x86decomp.invalid/schemas/native/windows-tool.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "properties": {
+    "available": {
+      "type": "boolean"
+    },
+    "path": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "tool_name": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "tool_name",
+    "available"
+  ],
+  "title": "x86decomp windows-tool",
+  "type": "object"
+}

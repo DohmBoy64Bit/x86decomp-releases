@@ -1,0 +1,43 @@
+{
+  "$id": "https://x86decomp.dev/schemas/reconstruction/translation-unit.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "confidence": {
+      "maximum": 1,
+      "minimum": 0,
+      "type": "number"
+    },
+    "evidence": {
+      "items": {
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "language": {
+      "enum": [
+        "c",
+        "cpp",
+        "asm",
+        "resource"
+      ]
+    },
+    "source_path": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "unit_id": {
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$",
+      "type": "string"
+    }
+  },
+  "required": [
+    "unit_id",
+    "source_path",
+    "language",
+    "confidence",
+    "evidence"
+  ],
+  "title": "Translation unit hypothesis",
+  "type": "object"
+}

@@ -1,0 +1,15 @@
+{
+  "root": {
+    "checked": 427,
+    "expected": 427,
+    "failures": [],
+    "valid": true
+  },
+  "test_suite": {
+    "checked": 60,
+    "expected": 60,
+    "failures": [],
+    "valid": true
+  },
+  "valid": true
+}

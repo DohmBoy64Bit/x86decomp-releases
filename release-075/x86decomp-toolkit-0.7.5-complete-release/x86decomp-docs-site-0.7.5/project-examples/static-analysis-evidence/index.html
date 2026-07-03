@@ -1,0 +1,1386 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Inventory a native PE, supporting symbols, objects, libraries, and function artifacts without executing the target or claiming reconstructed source.">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Example: static analysis and evidence project - x86decomp 0.7.5 Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/x86decomp-material-overrides.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#example-static-analysis-and-evidence-project" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="x86decomp 0.7.5 Docs" class="md-header__button md-logo" aria-label="x86decomp 0.7.5 Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            x86decomp 0.7.5 Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Example: static analysis and evidence project
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../getting-started/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Getting Started
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../workflows/" class="md-tabs__link">
+          
+  
+  
+  Workflows
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../reference/" class="md-tabs__link">
+          
+  
+  
+  Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../release-evidence/" class="md-tabs__link">
+          
+  
+  
+  Release Evidence
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="x86decomp 0.7.5 Docs" class="md-nav__button md-logo" aria-label="x86decomp 0.7.5 Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    x86decomp 0.7.5 Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Workflows
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Workflows
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflows/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Workflow Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../local-llm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Local LLM C Generation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Project Examples
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../commands/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Commands
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../schemas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Schemas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integrations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Integrations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Source Modules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Function Index
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tests/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tests
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Release Evidence
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Release Evidence
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../release-evidence/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../verification/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Verification
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../source-coverage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Source Coverage
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Changelog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#evidence-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Evidence flow
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-and-verify-the-target-pack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create and verify the target pack
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inspect-every-available-binary-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inspect every available binary format
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#export-and-import-ghidra-function-artifacts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Export and import Ghidra function artifacts
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#independently-disassemble-and-cross-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Independently disassemble and cross-check
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#store-evidence-before-making-claims" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Store evidence before making claims
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ingest-artifacts-and-inspect-type-constraints" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ingest artifacts and inspect type constraints
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#typical-deliverables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Typical deliverables
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#truth-boundary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Truth boundary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v075-source-basis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        v0.7.5 source basis
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related examples
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<p><a id="model"></a>
+<a id="static-analysis-evidence-flow-title"></a>
+<a id="static-analysis-evidence-flow-desc"></a>
+<a id="arrow-static-analysis-evidence"></a>
+<a id="static-analysis-evidence-flow-caption"></a>
+<a id="pack"></a>
+<a id="inspect"></a>
+<a id="ghidra"></a>
+<a id="crosscheck"></a>
+<a id="claims"></a>
+<a id="database"></a>
+<a id="deliverables"></a>
+<a id="limits"></a>
+<a id="source-basis"></a></p>
+<p>Section: Project examples</p>
+<h1 id="example-static-analysis-and-evidence-project">Example: static analysis and evidence project<a class="headerlink" href="#example-static-analysis-and-evidence-project" title="Permanent link">&para;</a></h1>
+<p>Inventory a native PE, supporting symbols, objects, libraries, and function artifacts without executing the target or claiming reconstructed source.</p>
+<blockquote>
+<p><strong>Example notation.</strong> Paths and function identifiers are representative local names. Commands and options are exact v0.7.5 parser forms; target-specific hashes, addresses, profiles, reports, and passing outcomes must come from the actual project.</p>
+<p><strong>Classification.</strong> This is a supporting analysis workflow, not an additional project mode. It can feed either matching or functional work.</p>
+</blockquote>
+<p><strong>On this page</strong></p>
+<ol>
+<li><a href="#model">Evidence flow</a></li>
+<li><a href="#pack">Seal inputs</a></li>
+<li><a href="#inspect">Inspect formats</a></li>
+<li><a href="#ghidra">Export Ghidra artifacts</a></li>
+<li><a href="#crosscheck">Cross-check instructions</a></li>
+<li><a href="#claims">Record evidence and claims</a></li>
+<li><a href="#database">Ingest/query analysis</a></li>
+<li><a href="#deliverables">Deliverables</a></li>
+<li><a href="#limits">Truth boundary</a></li>
+<li><a href="#source-basis">Source basis</a></li>
+</ol>
+<h2 id="evidence-flow">Evidence flow<a class="headerlink" href="#evidence-flow" title="Permanent link">&para;</a></h2>
+<p>Static observations remain provenance-bearing and separate from operator decisions or reconstructed-source claims.Authorized files → Target pack → PE/PDB/MAP/COFF → Ghidra export → Disassembly check → Evidence claims → Analysis report</p>
+<p>Authorized filesTarget packPE/PDB/MAP/COFFGhidra exportDisassembly checkEvidence claimsAnalysis report</p>
+<p>Static observations remain provenance-bearing and separate from operator decisions or reconstructed-source claims.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Authorized files → Target pack → PE/PDB/MAP/COFF → Ghidra export → Disassembly check → Evidence claims → Analysis report
+</code></pre></div>
+<p>1</p>
+<h2 id="create-and-verify-the-target-pack">Create and verify the target pack<a class="headerlink" href="#create-and-verify-the-target-pack" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>x86decomp target-pack-infer target.exe target-pack --pdb target.pdb --map target.map --object original/foo.obj --library original/runtime.lib --decisions decisions.json
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>x86decomp target-pack-verify target-pack
+</code></pre></div>
+<p>By default the pack copies regular-file artifacts and records their identities. <code>--reference-artifacts</code> stores references instead; use it only when that storage policy is deliberate.</p>
+<p>2</p>
+<h2 id="inspect-every-available-binary-format">Inspect every available binary format<a class="headerlink" href="#inspect-every-available-binary-format" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>x86decomp inspect-pe target.exe
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>x86decomp pdb-inspect target.pdb --pe target.exe
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>x86decomp map-inspect target.map
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>x86decomp coff-inspect original/foo.obj
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>x86decomp lib-inspect original/runtime.lib
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>x86decomp metadata-scan target.exe --object original/foo.obj --map target.map --report reports/metadata.json
+</code></pre></div>
+<p>These parsers expose format metadata and bounded recoveries. Unsupported, malformed, packed, virtualized, encrypted, self-modifying, CLR, kernel-mode, or anti-analysis targets must not be silently treated as ordinary supported inputs.</p>
+<p>3</p>
+<h2 id="export-and-import-ghidra-function-artifacts">Export and import Ghidra function artifacts<a class="headerlink" href="#export-and-import-ghidra-function-artifacts" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>x86decomp ghidra-export target.exe ghidra-projects TargetProject exports/ghidra --selector all --report reports/ghidra-export.json
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>x86decomp artifact-import project exports/ghidra/functions/pe-rva_00401230
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>x86decomp artifact-verify project/functions/pe-rva_00401230
+</code></pre></div>
+<p>The exporter records function body ranges, instructions, references, decompiler output, and p-code where available. Imported hashes protect the packet from unnoticed mutation; they do not authenticate Ghidra’s semantic interpretation.</p>
+<p>4</p>
+<h2 id="independently-disassemble-and-cross-check">Independently disassemble and cross-check<a class="headerlink" href="#independently-disassemble-and-cross-check" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>$functionDir = &quot;project/functions/pe-rva_00401230&quot;
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>$rangeFile = (Get-Content &quot;$functionDir/function.json&quot; | ConvertFrom-Json).body_ranges[0].file
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>$rangePath = Join-Path $functionDir $rangeFile
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>x86decomp disassemble $rangePath --base 0x401230 --architecture x86 --report reports/disassembly/sub_00401230.json
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>x86decomp crosscheck-ghidra &quot;$functionDir/instructions.jsonl&quot; $rangePath --base 0x401230 --architecture x86 --report reports/crosscheck/sub_00401230.json
+</code></pre></div>
+<p>The cross-check compares an independent decoder’s view with the exported instruction stream. Agreement strengthens a bounded observation; disagreement is evidence to investigate, not something to normalize away.</p>
+<p>5</p>
+<h2 id="store-evidence-before-making-claims">Store evidence before making claims<a class="headerlink" href="#store-evidence-before-making-claims" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>x86decomp evidence-add project --kind static_analysis --source ghidra --locator pe-rva:00401230 --assertion &quot;Ghidra exported a function beginning at RVA 0x401230&quot; --independent-group ghidra-export --file project/functions/pe-rva_00401230/function.json --id ev-ghidra-00401230
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>x86decomp evidence-add project --kind static_analysis --source independent-disassembler --locator pe-rva:00401230 --assertion &quot;Independent disassembly starts at RVA 0x401230&quot; --independent-group independent-disassembly --file reports/crosscheck/sub_00401230.json --id ev-crosscheck-00401230
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>x86decomp evidence-add project --kind human_review --source analyst --locator pe-rva:00401230 --assertion &quot;Analyst reviewed the exported manifest and independent cross-check&quot; --independent-group analyst-review --id ev-review-00401230
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>x86decomp claim-create project --subject pe-rva:00401230 --predicate has-entry-rva --object 0x401230 --evidence ev-ghidra-00401230 --evidence ev-crosscheck-00401230 --evidence ev-review-00401230 --id claim-entry-00401230
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>x86decomp claim-verify project claim-entry-00401230
+</code></pre></div>
+<p>The strict governance gate requires at least three evidence records, three independent groups, two evidence kinds, no unresolved contradiction records, and intact hashes for file-backed evidence. It does not parse the referenced report files to decide whether their substantive conclusions support the assertion, so only add each evidence record after review. Passing the gate records a governed <code>verified</code> state; it is not a mathematical guarantee that the proposition is true. Contradictory evidence can be attached with <code>claim-contradict</code>.</p>
+<p>6</p>
+<h2 id="ingest-artifacts-and-inspect-type-constraints">Ingest artifacts and inspect type constraints<a class="headerlink" href="#ingest-artifacts-and-inspect-type-constraints" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>x86decomp db-ingest project/analysis.sqlite project/functions/pe-rva_00401230 --image-base 0x400000
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>x86decomp db-query project/analysis.sqlite &quot;SELECT id, address_rva, name FROM entities WHERE kind = &#39;function&#39; ORDER BY address_rva&quot;
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>x86decomp db-constraint-add project/analysis.sqlite pe-rva:00401230 calling_convention stdcall analyst-note --evidence-id ev-abi-1 --confidence 0.8
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>x86decomp db-constraint-conflicts project/analysis.sqlite pe-rva:00401230 calling_convention
+</code></pre></div>
+<p>Constraints retain provenance and confidence. A contradictory constraint cannot be accepted until conflicts are resolved; the database is not a truth oracle.</p>
+<h2 id="typical-deliverables">Typical deliverables<a class="headerlink" href="#typical-deliverables" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Verified target pack and artifact inventory.</li>
+<li>PE/PDB/MAP/COFF/library parser reports.</li>
+<li>Hash-verified per-function analysis packets.</li>
+<li>Independent disassembly cross-check reports.</li>
+<li>Provenance-bearing evidence, claims, and unresolved contradictions.</li>
+<li>An analysis database ready for ABI, matching, functional, or linker work.</li>
+</ul>
+<h2 id="truth-boundary">Truth boundary<a class="headerlink" href="#truth-boundary" title="Permanent link">&para;</a></h2>
+<p>Static analysis can establish observed bytes, metadata, references, and tool-derived hypotheses. It does not recover authenticated original source, prove decompiler types, or establish runtime equivalence without later validation.</p>
+<h2 id="v075-source-basis">v0.7.5 source basis<a class="headerlink" href="#v075-source-basis" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>Verification model.</strong> Command syntax is checked against the live parser. The source files below are hashed from the current release; implementation and test rows are retained as independent truth boundaries.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Evidence file</th>
+<th>SHA-256</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>src/x86decomp/cli.py</code></td>
+<td><code>21e0654ced2f5dd0588adcbedec328613fba524ff1e0a91ef07d63cbbf88288c</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/pe.py</code></td>
+<td><code>39a5dd1b26da8d0ef84e8ff247183068eb4943ab38211df3c56c43ca9a6911c0</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/ghidra.py</code></td>
+<td><code>98657d48a9d3ebb79eaf951aa8676ffd7ca696c2ba2f07fe8a5c4f0ad622c2b3</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/disassembly.py</code></td>
+<td><code>cc86a46f8c8674a6e14304158bd1d2467fb09ccbb00778c116204b0a639638b3</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/evidence.py</code></td>
+<td><code>de8befd97c8e7f0529f7c3c2750836f8f38fab52e26987cf390d725faad3ee1e</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/analysis_db.py</code></td>
+<td><code>409e503d6c264dba48a00e1d1afc475ce735cf25f1ec4aab7ac41b07ed5b9bad</code></td>
+</tr>
+<tr>
+<td><code>tests/test_ghidra.py</code></td>
+<td><code>1c9a934bad943761f8d9b6bc22509a054a8ead82747d2091d5f7e84c5682b88b</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="related-examples">Related examples<a class="headerlink" href="#related-examples" title="Permanent link">&para;</a></h2>
+<p>[Matching project</p>
+<p>Open the source-verified workflow.](matching-project.md)[Functional project</p>
+<p>Open the source-verified workflow.](functional-project.md)[Hybrid composition</p>
+<p>Open the source-verified workflow.](hybrid-project.md)</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tabs", "navigation.sections", "navigation.top", "search.highlight", "search.suggest", "content.code.copy", "content.code.annotate", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

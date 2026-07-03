@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "adapter_name": {
+      "type": "string"
+    },
+    "adapter_version": {
+      "type": "string"
+    },
+    "confidence": {
+      "maximum": 1,
+      "minimum": 0,
+      "type": "number"
+    },
+    "evidence_id": {
+      "type": "string"
+    },
+    "independence_group": {
+      "type": "string"
+    },
+    "property_name": {
+      "type": "string"
+    },
+    "subject_id": {
+      "type": "string"
+    },
+    "subject_kind": {
+      "type": "string"
+    },
+    "value": {}
+  },
+  "required": [
+    "subject_kind",
+    "subject_id",
+    "property_name",
+    "value",
+    "adapter_name",
+    "adapter_version",
+    "evidence_id",
+    "independence_group",
+    "confidence"
+  ],
+  "title": "consensus observation",
+  "type": "object"
+}

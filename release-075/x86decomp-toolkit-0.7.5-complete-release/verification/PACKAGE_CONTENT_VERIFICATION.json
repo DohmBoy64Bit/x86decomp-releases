@@ -1,0 +1,14 @@
+{
+  "manifest_sha256": {
+    "docs_site": "b592b7083df84fd5d1fa9ee54b0c2aa68fb37fc14d836b144f514c765b86b839",
+    "docs_source": "c7fcb40c59bd26aea3955f709d870a7eb88627add97d85a060c38894feac27c0",
+    "toolkit_release": "3f2e4784dc99e4fc5e2978c351f5715d20fb75ff10f06435d3194c38c962c4e7"
+  },
+  "release": "0.7.5",
+  "schema_version": 1,
+  "staged_file_counts": {
+    "docs_site": 418,
+    "docs_source": 381,
+    "toolkit_release": 433
+  }
+}

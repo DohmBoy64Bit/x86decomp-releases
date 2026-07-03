@@ -1,0 +1,168 @@
+{
+  "comprehensive_harness": {
+    "blocked_adapters": [
+      "container-runtime",
+      "dynamorio",
+      "ghidra",
+      "llama-server",
+      "llvm-readobj",
+      "lm-studio",
+      "localai",
+      "msvc",
+      "objdiff",
+      "ollama",
+      "vllm"
+    ],
+    "counts": {
+      "blocked": 11,
+      "error": 0,
+      "fail": 0,
+      "pass": 191
+    },
+    "exit_code": 0,
+    "installed_adapters": [
+      "angr",
+      "build",
+      "capstone",
+      "clang",
+      "clangxx",
+      "cmake",
+      "coverage",
+      "fastapi",
+      "gcc",
+      "gxx",
+      "java",
+      "javalang",
+      "jsonschema",
+      "lief",
+      "lld-link",
+      "llvm-lib",
+      "llvm-objdump",
+      "ninja",
+      "pip-audit",
+      "pytest",
+      "python",
+      "pyyaml",
+      "unicorn",
+      "uvicorn",
+      "z3"
+    ],
+    "run_id": "run-20260702T190158693Z-ab71426e"
+  },
+  "coverage": {
+    "branch_floor": 50.0,
+    "branch_percent": 51.730624529721595,
+    "function_bodies": {
+      "executed": 879,
+      "total": 879
+    },
+    "statement_floor": 70.0,
+    "statement_percent": 78.88716283010874
+  },
+  "distinct_tests": {
+    "bundled_public_contract": {
+      "passed": 21,
+      "total": 21
+    },
+    "errors": 0,
+    "failures": 0,
+    "local_llm_dedicated": {
+      "passed": 8,
+      "total": 8
+    },
+    "skips": 0,
+    "standalone_test_suite": {
+      "passed": 22,
+      "total": 22
+    },
+    "toolkit": {
+      "passed": 180,
+      "total": 180
+    },
+    "total": {
+      "passed": 223,
+      "total": 223
+    }
+  },
+  "documentation": {
+    "built_files": 418,
+    "built_html_pages": 367,
+    "byte_reproducible": true,
+    "checked_local_references": 20779,
+    "external_runtime_assets": 0,
+    "mkdocs": "1.6.1",
+    "search_indexed_pages": 366,
+    "source_pages": 366,
+    "source_reference_counts": {
+      "adapters": 36,
+      "canonical_groups": 34,
+      "canonical_routes": 181,
+      "documented_command_paths": 293,
+      "functions_and_methods": 1019,
+      "modules": 142,
+      "project_example_commands": 163,
+      "provider_presets": 6,
+      "schemas": 97,
+      "tests": 223,
+      "toolkit_root_commands": 141
+    },
+    "strict_build": true,
+    "theme": "Material for MkDocs 9.7.6"
+  },
+  "inventories": {
+    "adapters": 36,
+    "canonical_groups": 34,
+    "canonical_routes": 181,
+    "ghidra_scripts": 3,
+    "local_model_provider_presets": 6,
+    "root_commands": 141,
+    "schemas": 97,
+    "toolkit_functions_and_methods": 879,
+    "toolkit_modules": 113
+  },
+  "packaging": {
+    "canonical_sdist_reproducible": true,
+    "clean_wheel_install": true,
+    "distributions": {
+      "x86decomp_test_suite-0.7.5-py3-none-any.whl": {
+        "sha256": "7f106fc2ac087be481c8c4039941be6bae99ae89b200a74afe47415936372074",
+        "size_bytes": 64744
+      },
+      "x86decomp_test_suite-0.7.5.tar.gz": {
+        "sha256": "f83c5a8a1e4557e7907b36ab2f411439d106846681ac62adfad094eeb098f757",
+        "size_bytes": 68075
+      },
+      "x86decomp_toolkit-0.7.5-py3-none-any.whl": {
+        "sha256": "209910a97add6171cb62cc0881db15c29addfd5dfd3f3a3b5873d2ea6b6acab6",
+        "size_bytes": 331187
+      },
+      "x86decomp_toolkit-0.7.5.tar.gz": {
+        "sha256": "02f1be6599d3215cdfdbc43780cb215d0f64e6ff0b530ca1d55d6c0ee8a0fa56",
+        "size_bytes": 454935
+      }
+    },
+    "installed_cli_smoke": true,
+    "pip_check": true,
+    "sdist_rebuild_smoke": true,
+    "wheel_reproducible": true
+  },
+  "release": "0.7.5",
+  "schema_version": 1,
+  "source_manifests": {
+    "test_suite": {
+      "expected": 60,
+      "verified": 60
+    },
+    "toolkit": {
+      "expected": 427,
+      "verified": 427
+    }
+  },
+  "status": "PASS",
+  "truth_boundaries": [
+    "Local-model output is an untrusted C proposal and cannot accept itself.",
+    "A match requires deterministic compilation, COFF extraction, complete relocation resolution, equal length, and exact byte identity for the declared contiguous target range.",
+    "The live LM Studio, Ollama, llama.cpp, vLLM, and LocalAI runtimes were unavailable in this environment and are BLOCKED; no live model-quality claim is made.",
+    "Passing tests and documentation audits do not prove original-source recovery or all-input semantic equivalence for a target program."
+  ]
+}

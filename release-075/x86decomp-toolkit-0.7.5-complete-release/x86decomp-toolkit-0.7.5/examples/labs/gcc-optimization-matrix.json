@@ -1,0 +1,19 @@
+{
+  "source": "../sample_source/add.c",
+  "profiles": [
+    "../compiler-profiles/gcc-i686-object.json"
+  ],
+  "output_root": "../../build/example-lab/output",
+  "cache_root": "../../build/example-lab/cache",
+  "output_name": "add.o",
+  "max_experiments": 4,
+  "matrix": {
+    "axes": {
+      "optimization": [
+        "-O0",
+        "-O2"
+      ]
+    }
+  },
+  "target": {}
+}

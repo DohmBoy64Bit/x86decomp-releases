@@ -1,0 +1,115 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:x86decomp:schema:work-task:1",
+  "title": "Validator-gated work item",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "function_id",
+    "mode",
+    "kind",
+    "status",
+    "priority",
+    "instructions",
+    "required_validators",
+    "validator_results",
+    "evidence_ids",
+    "created_at",
+    "updated_at"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^task-[0-9a-f]{32}$"
+    },
+    "function_id": {
+      "type": "string",
+      "pattern": "^pe-rva:[0-9a-f]{8}$"
+    },
+    "mode": {
+      "enum": [
+        "matching",
+        "functional"
+      ]
+    },
+    "kind": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "queued",
+        "claimed",
+        "proposed",
+        "validating",
+        "accepted",
+        "rejected",
+        "blocked"
+      ]
+    },
+    "priority": {
+      "type": "integer"
+    },
+    "instructions": {
+      "type": "string",
+      "minLength": 1
+    },
+    "assignee": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "proposal": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "required_validators": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string"
+      }
+    },
+    "validator_results": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": [
+          "report_path",
+          "passed",
+          "recorded_at"
+        ],
+        "properties": {
+          "report_path": {
+            "type": "string"
+          },
+          "passed": {
+            "type": "boolean"
+          },
+          "recorded_at": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      }
+    },
+    "evidence_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

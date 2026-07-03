@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://x86decomp.local/schemas/local-llm/profile.schema.json",
+  "title": "Local LLM provider profile",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "id",
+    "provider",
+    "protocol",
+    "base_url",
+    "models_path",
+    "chat_path",
+    "structured_output",
+    "model",
+    "temperature",
+    "max_tokens",
+    "timeout_seconds",
+    "max_response_bytes",
+    "verify_tls",
+    "allow_remote",
+    "api_key_env",
+    "headers"
+  ],
+  "properties": {
+    "schema_version": {"const": 1},
+    "id": {"type": "string", "minLength": 1, "maxLength": 256},
+    "provider": {
+      "enum": ["lm-studio", "ollama", "llama.cpp", "vllm", "localai", "openai-compatible"]
+    },
+    "protocol": {"enum": ["openai-chat", "ollama-chat"]},
+    "base_url": {"type": "string", "format": "uri", "pattern": "^https?://"},
+    "models_path": {"type": "string", "pattern": "^/"},
+    "chat_path": {"type": "string", "pattern": "^/"},
+    "structured_output": {
+      "enum": ["openai-json-schema", "ollama-json-schema", "none"]
+    },
+    "model": {"type": "string", "minLength": 1},
+    "temperature": {"type": "number", "minimum": 0, "maximum": 2},
+    "max_tokens": {"type": "integer", "minimum": 1, "maximum": 1000000},
+    "timeout_seconds": {"type": "integer", "minimum": 1, "maximum": 3600},
+    "max_response_bytes": {"type": "integer", "minimum": 1024, "maximum": 67108864},
+    "verify_tls": {"type": "boolean"},
+    "allow_remote": {"type": "boolean"},
+    "api_key_env": {"type": ["string", "null"], "minLength": 1},
+    "headers": {
+      "type": "object",
+      "additionalProperties": {"type": "string"}
+    }
+  }
+}

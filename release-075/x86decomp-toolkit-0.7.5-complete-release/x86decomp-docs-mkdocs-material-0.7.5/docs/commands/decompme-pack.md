@@ -1,0 +1,30 @@
+---
+title: x86decomp decompme-pack
+description: Exact parser-derived reference for x86decomp decompme-pack in 0.7.5.
+---
+
+# `x86decomp decompme-pack`
+
+## `x86decomp decompme-pack`
+
+usage: x86decomp decompme-pack [-h] [--overwrite] artifact_dir output_dir
+
+### Usage
+
+```text
+x86decomp decompme-pack [-h] [--overwrite] artifact_dir output_dir
+```
+
+### Arguments
+
+| Argument | Exact parser declaration |
+| --- | --- |
+| `artifact_dir` | required · type: `_path`. No help text is declared; parser destination is `artifact_dir`. |
+| `output_dir` | required · type: `_path`. No help text is declared; parser destination is `output_dir`. |
+| `--overwrite` | default: `False` · nargs: `0`. No help text is declared; parser destination is `overwrite`. |
+
+### Source basis
+
+| Parser owner | Source file and SHA-256 |
+| --- | --- |
+| `core` | `src/x86decomp/cli.py` · `21e0654ced2f5dd0588adcbedec328613fba524ff1e0a91ef07d63cbbf88288c` |

@@ -1,0 +1,22 @@
+{
+  "$id": "https://x86decomp.invalid/schemas/native/section-export.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "properties": {
+    "sections": {
+      "items": {
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "source": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "source",
+    "sections"
+  ],
+  "title": "x86decomp section-export",
+  "type": "object"
+}

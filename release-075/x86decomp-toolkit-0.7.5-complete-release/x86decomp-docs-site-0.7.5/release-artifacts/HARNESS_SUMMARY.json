@@ -1,0 +1,95 @@
+{
+  "blocked_adapters": [
+    "container-runtime",
+    "dynamorio",
+    "ghidra",
+    "llama-server",
+    "llvm-readobj",
+    "lm-studio",
+    "localai",
+    "msvc",
+    "objdiff",
+    "ollama",
+    "vllm"
+  ],
+  "counts": {
+    "blocked": 11,
+    "error": 0,
+    "fail": 0,
+    "pass": 191
+  },
+  "coverage": {
+    "branch_floor": 50.0,
+    "branch_percent": 51.730624529721595,
+    "statement_floor": 70.0,
+    "statement_percent": 78.88716283010874
+  },
+  "exit_code": 0,
+  "finished_at": "2026-07-02T19:12:35.349Z",
+  "function_coverage": {
+    "executed": 879,
+    "missing": [],
+    "passed": true,
+    "total": 879
+  },
+  "installed_adapters": [
+    "angr",
+    "build",
+    "capstone",
+    "clang",
+    "clangxx",
+    "cmake",
+    "coverage",
+    "fastapi",
+    "gcc",
+    "gxx",
+    "java",
+    "javalang",
+    "jsonschema",
+    "lief",
+    "lld-link",
+    "llvm-lib",
+    "llvm-objdump",
+    "ninja",
+    "pip-audit",
+    "pytest",
+    "python",
+    "pyyaml",
+    "unicorn",
+    "uvicorn",
+    "z3"
+  ],
+  "run_id": "run-20260702T190158693Z-ab71426e",
+  "schema_version": 1,
+  "started_at": "2026-07-02T19:01:58.695Z",
+  "strict": false,
+  "suite_counts": {
+    "adapters": {
+      "blocked": 11,
+      "pass": 25
+    },
+    "cli-surface": {
+      "pass": 141
+    },
+    "coverage": {
+      "pass": 6
+    },
+    "harness": {
+      "pass": 2
+    },
+    "inventory": {
+      "pass": 3
+    },
+    "packaging": {
+      "pass": 5
+    },
+    "pytest": {
+      "pass": 2
+    },
+    "structure": {
+      "pass": 7
+    }
+  },
+  "toolkit_version": "0.7.5",
+  "truth_boundary": "BLOCKED adapters were unavailable in the verification environment. No live model-quality result is inferred for those runtimes."
+}

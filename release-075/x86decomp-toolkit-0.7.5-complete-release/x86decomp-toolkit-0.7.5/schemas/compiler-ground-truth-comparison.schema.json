@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:x86decomp:schema:compiler-ground-truth-comparison:1",
+  "title": "Compiler/version ground-truth corpus comparison",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["schema_version", "kind", "reports", "comparisons", "summary", "semantic_equivalence_claimed"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "kind": {"const": "compiler_ground_truth_comparison"},
+    "reports": {"type": "array", "minItems": 2, "items": {"type": "object"}},
+    "comparisons": {"type": "array", "items": {"type": "object"}},
+    "summary": {"type": "object"},
+    "semantic_equivalence_claimed": {"const": false}
+  }
+}
