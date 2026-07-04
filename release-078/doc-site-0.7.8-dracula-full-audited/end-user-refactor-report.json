@@ -1,0 +1,11 @@
+{
+  "published_site_changes": [
+    "Removed migration-report.md, original-site-files.md, search.md, and original-site-files/ from docs_dir.",
+    "Moved removed migration/archive material to mkdocs-site/archive-original-site/ so it is retained outside the published site.",
+    "Published only user-facing release artifacts under docs/release-artifacts/ for pages that link to audit evidence.",
+    "Replaced huge global nav with end-user sections: Home, Getting Started, Workflows, Project Examples, Reference, Release Evidence.",
+    "Rebuilt major index pages as responsive card grids rather than concatenated converted links.",
+    "Kept command, feature, test, schema, source coverage, and release evidence pages published and searchable."
+  ],
+  "major_content_deletions": []
+}
