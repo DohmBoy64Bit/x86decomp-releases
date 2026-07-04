@@ -159,14 +159,6 @@
     </li>
                             
     <li class="drac-box-ternary">
-        <a href="../../release-artifacts/COMMAND_REFERENCE_STRICT_AUDIT/"
-            class="
-            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Command Audit
-        </a>
-    </li>
-                            
-    <li class="drac-box-ternary">
         <a href="../../schemas/"
             class="
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
@@ -212,35 +204,11 @@
                 <a href="../.."
                     class="
                     drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
-                    data-bs-toggle="collapse" data-bs-target="#release-evidence-collapse" aria-expanded="false">
-                    Release Evidence
+                    data-bs-toggle="collapse" data-bs-target="#project-collapse" aria-expanded="false">
+                    Project
                 </a>
-                <div class="collapse" id="release-evidence-collapse">
+                <div class="collapse" id="project-collapse">
                     <ul class="mb-5 drac-list drac-list-none">
-                            
-    <li class="drac-box-ternary">
-        <a href="../../release-evidence/"
-            class="
-            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Overview
-        </a>
-    </li>
-                            
-    <li class="drac-box-ternary">
-        <a href="../../verification/"
-            class="
-            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Verification
-        </a>
-    </li>
-                            
-    <li class="drac-box-ternary">
-        <a href="../../source-coverage/"
-            class="
-            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Source Coverage
-        </a>
-    </li>
                             
     <li class="drac-box-ternary">
         <a href="../../changelog/"
@@ -328,7 +296,6 @@
 <a id="archive"></a>
 <a id="limits"></a>
 <a id="source-basis"></a></p>
-<p>Section: Project examples</p>
 <h1 id="example-target-release-and-reproducibility-project">Example: target release and reproducibility project</h1>
 <p>Hash the project and required tools, verify reproducibility inputs, audit source and dependencies, and evaluate an explicit target release contract without overclaiming correctness.</p>
 <blockquote>
@@ -404,41 +371,35 @@ x86decomp pipeline-status project PIPELINE_ID
 <thead>
 <tr>
 <th>Evidence file</th>
-<th>SHA-256</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>src/x86decomp/cli.py</code></td>
-<td><code>21e0654ced2f5dd0588adcbedec328613fba524ff1e0a91ef07d63cbbf88288c</code></td>
 </tr>
 <tr>
 <td><code>src/x86decomp/reproducibility.py</code></td>
-<td><code>bcc5e2a773d7eb7589f28df90c0fe898155788b8e695d15e363e6dbad249ae7b</code></td>
 </tr>
 <tr>
 <td><code>src/x86decomp/security_audit.py</code></td>
-<td><code>0b7574a71e4c8677352766c9358f8022871e566f43a9277050b887648f4ab22c</code></td>
 </tr>
 <tr>
 <td><code>src/x86decomp/release_gate.py</code></td>
-<td><code>8e79be8c5af67a90063af185b2239a5ce5a8ca828627ee05c14d897f891e02fd</code></td>
 </tr>
 <tr>
 <td><code>src/x86decomp/project_state.py</code></td>
-<td><code>e78c286125050d9b582e38acdefcf3c901f0634372af8b287942ca8b10aa9aee</code></td>
 </tr>
 <tr>
 <td><code>tests/test_production.py</code></td>
-<td><code>da0d4bd57f7f4bb68957fa8aa42a67f7eb34347f35137849e360dc95e796db89</code></td>
 </tr>
 </tbody>
 </table>
 <h2 id="related-examples">Related examples</h2>
-<p>[Matching project</p>
-<p>Open the source-verified workflow.](matching-project.md)[Functional project</p>
-<p>Open the source-verified workflow.](functional-project.md)[Hybrid composition</p>
-<p>Open the source-verified workflow.](hybrid-project.md)</p></p>
+<ul>
+<li><a href="../matching-project/">Matching project</a></li>
+<li><a href="../functional-project/">Functional project</a></li>
+<li><a href="../hybrid-project/">Hybrid composition</a></li>
+</ul></p>
     </article>
 </section>
             <!-- endblock -->

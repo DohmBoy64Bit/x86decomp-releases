@@ -1,6 +1,6 @@
 ---
 title: x86decomp runtime
-description: Exact v0.7.8 parser-derived reference for `x86decomp runtime`.
+description: Command reference for `x86decomp runtime`.
 ---
 
 
@@ -17,10 +17,10 @@ usage: x86decomp runtime [-h] [--project PROJECT] [--actor ACTOR]
 
 ## Arguments
 
-| Argument | Exact parser declaration |
+| Argument | Details |
 | --- | --- |
-| `--project` | default: `'.'` · parser destination: `project`. project root used by the capability implementation (default: current directory) |
-| `--actor` | default: `'analyst'` · parser destination: `actor`. No help text declared. |
+| `--project` | default: `'.'`. project root used by the capability implementation (default: current directory) |
+| `--actor` | default: `'analyst'`. |
 
 ## Actions
 
@@ -38,12 +38,12 @@ usage: x86decomp runtime launch [-h] [--argument ARGUMENT] [--timeout TIMEOUT]
                                 image
 ```
 
-| Argument | Exact parser declaration |
+| Argument | Details |
 | --- | --- |
-| `image` | required · parser destination: `image`. No help text declared. |
-| `--argument` | default: `[]` · parser destination: `argument`. No help text declared. |
-| `--timeout` | type: `int` · default: `10` · parser destination: `timeout`. No help text declared. |
-| `--execute` | nargs: `0` · default: `False` · parser destination: `execute`. No help text declared. |
+| `image` | required. |
+| `--argument` | default: `[]`. |
+| `--timeout` | type: `int` · default: `10`. |
+| `--execute` | nargs: `0` · default: `False`. |
 
 ### `x86decomp runtime map-crash`
 
@@ -51,9 +51,9 @@ usage: x86decomp runtime launch [-h] [--argument ARGUMENT] [--timeout TIMEOUT]
 usage: x86decomp runtime map-crash [-h] rva
 ```
 
-| Argument | Exact parser declaration |
+| Argument | Details |
 | --- | --- |
-| `rva` | required · parser destination: `rva`. No help text declared. |
+| `rva` | required. |
 
 ### `x86decomp runtime validate-image`
 
@@ -61,17 +61,8 @@ usage: x86decomp runtime map-crash [-h] rva
 usage: x86decomp runtime validate-image [-h] image
 ```
 
-| Argument | Exact parser declaration |
+| Argument | Details |
 | --- | --- |
-| `image` | required · parser destination: `image`. No help text declared. |
+| `image` | required. |
 
-## Source basis
 
-| Parser owner | Source file | SHA-256 |
-| --- | --- | --- |
-| canonical cli | `src/x86decomp/canonical.py` | `9dfc1a2d1ba31559b1a9cd31a0cda1ab1a1e88ffef0a47c4632995f649296166` |
-| native cli | `src/x86decomp/native/cli.py` | `13ff944cc50ff6ed433c32975a8edcd6318b4d4fd4c6c30580c27329a951dbf2` |
-
-## Verification boundary
-
-This page is regenerated from the v0.7.8 parser surface. It documents syntax, parser-declared arguments, canonical owners, and source files; it does not claim that optional adapters, target binaries, compiler toolchains, or runtime inputs exist on the reader's machine.

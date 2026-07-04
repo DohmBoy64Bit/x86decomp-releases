@@ -159,14 +159,6 @@
     </li>
                             
     <li class="drac-box-ternary">
-        <a href="../../release-artifacts/COMMAND_REFERENCE_STRICT_AUDIT/"
-            class="
-            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Command Audit
-        </a>
-    </li>
-                            
-    <li class="drac-box-ternary">
         <a href="../../schemas/"
             class="
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
@@ -212,35 +204,11 @@
                 <a href="../.."
                     class="
                     drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
-                    data-bs-toggle="collapse" data-bs-target="#release-evidence-collapse" aria-expanded="false">
-                    Release Evidence
+                    data-bs-toggle="collapse" data-bs-target="#project-collapse" aria-expanded="false">
+                    Project
                 </a>
-                <div class="collapse" id="release-evidence-collapse">
+                <div class="collapse" id="project-collapse">
                     <ul class="mb-5 drac-list drac-list-none">
-                            
-    <li class="drac-box-ternary">
-        <a href="../../release-evidence/"
-            class="
-            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Overview
-        </a>
-    </li>
-                            
-    <li class="drac-box-ternary">
-        <a href="../../verification/"
-            class="
-            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Verification
-        </a>
-    </li>
-                            
-    <li class="drac-box-ternary">
-        <a href="../../source-coverage/"
-            class="
-            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Source Coverage
-        </a>
-    </li>
                             
     <li class="drac-box-ternary">
         <a href="../../changelog/"
@@ -327,59 +295,40 @@
 <thead>
 <tr>
 <th>Argument</th>
-<th>Exact parser declaration</th>
+<th>Details</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>database</code></td>
-<td>required · type: <code>_path</code> · parser destination: <code>database</code>. No help text declared.</td>
+<td>required · type: <code>path</code>.</td>
 </tr>
 <tr>
 <td><code>subject</code></td>
-<td>required · parser destination: <code>subject</code>. No help text declared.</td>
+<td>required.</td>
 </tr>
 <tr>
 <td><code>relation</code></td>
-<td>required · parser destination: <code>relation</code>. No help text declared.</td>
+<td>required.</td>
 </tr>
 <tr>
 <td><code>object_value</code></td>
-<td>required · parser destination: <code>object_value</code>. No help text declared.</td>
+<td>required.</td>
 </tr>
 <tr>
 <td><code>provenance</code></td>
-<td>required · parser destination: <code>provenance</code>. No help text declared.</td>
+<td>required.</td>
 </tr>
 <tr>
 <td><code>--evidence-id</code></td>
-<td>parser destination: <code>evidence_id</code>. No help text declared.</td>
+<td>—</td>
 </tr>
 <tr>
 <td><code>--confidence</code></td>
-<td>type: <code>float</code> · parser destination: <code>confidence</code>. No help text declared.</td>
+<td>type: <code>float</code>.</td>
 </tr>
 </tbody>
-</table>
-<h2 id="source-basis">Source basis</h2>
-<table>
-<thead>
-<tr>
-<th>Parser owner</th>
-<th>Source file</th>
-<th>SHA-256</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>root cli</td>
-<td><code>src/x86decomp/cli.py</code></td>
-<td><code>21e0654ced2f5dd0588adcbedec328613fba524ff1e0a91ef07d63cbbf88288c</code></td>
-</tr>
-</tbody>
-</table>
-<h2 id="verification-boundary">Verification boundary</h2>
-<p>This page is regenerated from the v0.7.8 parser surface. It documents syntax, parser-declared arguments, canonical owners, and source files; it does not claim that optional adapters, target binaries, compiler toolchains, or runtime inputs exist on the reader's machine.</p></p>
+</table></p>
     </article>
 </section>
             <!-- endblock -->

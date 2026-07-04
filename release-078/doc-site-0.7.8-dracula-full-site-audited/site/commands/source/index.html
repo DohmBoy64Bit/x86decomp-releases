@@ -159,14 +159,6 @@
     </li>
                             
     <li class="drac-box-ternary">
-        <a href="../../release-artifacts/COMMAND_REFERENCE_STRICT_AUDIT/"
-            class="
-            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Command Audit
-        </a>
-    </li>
-                            
-    <li class="drac-box-ternary">
         <a href="../../schemas/"
             class="
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
@@ -212,35 +204,11 @@
                 <a href="../.."
                     class="
                     drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
-                    data-bs-toggle="collapse" data-bs-target="#release-evidence-collapse" aria-expanded="false">
-                    Release Evidence
+                    data-bs-toggle="collapse" data-bs-target="#project-collapse" aria-expanded="false">
+                    Project
                 </a>
-                <div class="collapse" id="release-evidence-collapse">
+                <div class="collapse" id="project-collapse">
                     <ul class="mb-5 drac-list drac-list-none">
-                            
-    <li class="drac-box-ternary">
-        <a href="../../release-evidence/"
-            class="
-            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Overview
-        </a>
-    </li>
-                            
-    <li class="drac-box-ternary">
-        <a href="../../verification/"
-            class="
-            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Verification
-        </a>
-    </li>
-                            
-    <li class="drac-box-ternary">
-        <a href="../../source-coverage/"
-            class="
-            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Source Coverage
-        </a>
-    </li>
                             
     <li class="drac-box-ternary">
         <a href="../../changelog/"
@@ -326,17 +294,17 @@
 <thead>
 <tr>
 <th>Argument</th>
-<th>Exact parser declaration</th>
+<th>Details</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>--project</code></td>
-<td>default: <code>'.'</code> · parser destination: <code>project</code>. project root used by the capability implementation (default: current directory)</td>
+<td>default: <code>'.'</code>. project root used by the capability implementation (default: current directory)</td>
 </tr>
 <tr>
 <td><code>--actor</code></td>
-<td>default: <code>'analyst'</code> · parser destination: <code>actor</code>. No help text declared.</td>
+<td>default: <code>'analyst'</code>.</td>
 </tr>
 </tbody>
 </table>
@@ -379,13 +347,13 @@
 <thead>
 <tr>
 <th>Argument</th>
-<th>Exact parser declaration</th>
+<th>Details</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>path</code></td>
-<td>required · parser destination: <code>path</code>. No help text declared.</td>
+<td>required.</td>
 </tr>
 </tbody>
 </table>
@@ -396,17 +364,17 @@
 <thead>
 <tr>
 <th>Argument</th>
-<th>Exact parser declaration</th>
+<th>Details</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>path</code></td>
-<td>required · parser destination: <code>path</code>. No help text declared.</td>
+<td>required.</td>
 </tr>
 <tr>
 <td><code>--reason</code></td>
-<td>required · parser destination: <code>reason</code>. No help text declared.</td>
+<td>required.</td>
 </tr>
 </tbody>
 </table>
@@ -419,21 +387,21 @@
 <thead>
 <tr>
 <th>Argument</th>
-<th>Exact parser declaration</th>
+<th>Details</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>path</code></td>
-<td>required · parser destination: <code>path</code>. No help text declared.</td>
+<td>required.</td>
 </tr>
 <tr>
 <td><code>--before-sha256</code></td>
-<td>parser destination: <code>before_sha256</code>. No help text declared.</td>
+<td>—</td>
 </tr>
 <tr>
 <td><code>--semantic</code></td>
-<td>choices: <code>true</code>, <code>false</code> · parser destination: <code>semantic</code>. No help text declared.</td>
+<td>choices: <code>true</code>, <code>false</code>.</td>
 </tr>
 </tbody>
 </table>
@@ -444,40 +412,16 @@
 <thead>
 <tr>
 <th>Argument</th>
-<th>Exact parser declaration</th>
+<th>Details</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>path</code></td>
-<td>required · parser destination: <code>path</code>. No help text declared.</td>
+<td>required.</td>
 </tr>
 </tbody>
-</table>
-<h2 id="source-basis">Source basis</h2>
-<table>
-<thead>
-<tr>
-<th>Parser owner</th>
-<th>Source file</th>
-<th>SHA-256</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>canonical cli</td>
-<td><code>src/x86decomp/canonical.py</code></td>
-<td><code>9dfc1a2d1ba31559b1a9cd31a0cda1ab1a1e88ffef0a47c4632995f649296166</code></td>
-</tr>
-<tr>
-<td>reconstruction cli</td>
-<td><code>src/x86decomp/reconstruction/cli.py</code></td>
-<td><code>dd5a6c7c987b3c49a3f7c1c635d60b34542e21f9346bd85f869013532c844cc4</code></td>
-</tr>
-</tbody>
-</table>
-<h2 id="verification-boundary">Verification boundary</h2>
-<p>This page is regenerated from the v0.7.8 parser surface. It documents syntax, parser-declared arguments, canonical owners, and source files; it does not claim that optional adapters, target binaries, compiler toolchains, or runtime inputs exist on the reader's machine.</p></p>
+</table></p>
     </article>
 </section>
             <!-- endblock -->

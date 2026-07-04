@@ -159,14 +159,6 @@
     </li>
                             
     <li class="drac-box-ternary">
-        <a href="../../release-artifacts/COMMAND_REFERENCE_STRICT_AUDIT/"
-            class="
-            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Command Audit
-        </a>
-    </li>
-                            
-    <li class="drac-box-ternary">
         <a href="../../schemas/"
             class="
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
@@ -212,35 +204,11 @@
                 <a href="../.."
                     class="
                     drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
-                    data-bs-toggle="collapse" data-bs-target="#release-evidence-collapse" aria-expanded="false">
-                    Release Evidence
+                    data-bs-toggle="collapse" data-bs-target="#project-collapse" aria-expanded="false">
+                    Project
                 </a>
-                <div class="collapse" id="release-evidence-collapse">
+                <div class="collapse" id="project-collapse">
                     <ul class="mb-5 drac-list drac-list-none">
-                            
-    <li class="drac-box-ternary">
-        <a href="../../release-evidence/"
-            class="
-            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Overview
-        </a>
-    </li>
-                            
-    <li class="drac-box-ternary">
-        <a href="../../verification/"
-            class="
-            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Verification
-        </a>
-    </li>
-                            
-    <li class="drac-box-ternary">
-        <a href="../../source-coverage/"
-            class="
-            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Source Coverage
-        </a>
-    </li>
                             
     <li class="drac-box-ternary">
         <a href="../../changelog/"
@@ -329,7 +297,6 @@
 <a id="state"></a>
 <a id="limits"></a>
 <a id="source-basis"></a></p>
-<p>Section: Project examples</p>
 <h1 id="example-end-to-end-matching-project">Example: end-to-end matching project</h1>
 <p>Reconstruct one PE function through compilation, ABI checks, instruction comparison, byte matching, image integration, and evidence-limited relinking.</p>
 <blockquote>
@@ -431,41 +398,35 @@ x86decomp workflow-show project pe-rva:00401230
 <thead>
 <tr>
 <th>Evidence file</th>
-<th>SHA-256</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>src/x86decomp/cli.py</code></td>
-<td><code>21e0654ced2f5dd0588adcbedec328613fba524ff1e0a91ef07d63cbbf88288c</code></td>
 </tr>
 <tr>
 <td><code>src/x86decomp/compiler.py</code></td>
-<td><code>f21f38f6ed0804a959188e31f5c9fa498d7d0740536fbb82594a375b12353944</code></td>
 </tr>
 <tr>
 <td><code>src/x86decomp/exe_diff.py</code></td>
-<td><code>997ffacbd833a3bb4c0545d1fb1981469e1d575680f4b39b7e6f34a4796abdf0</code></td>
 </tr>
 <tr>
 <td><code>src/x86decomp/image_match.py</code></td>
-<td><code>a9c72f376532369da77440496a1ea07564da5071ef8e6108e29c58e33e96fcf4</code></td>
 </tr>
 <tr>
 <td><code>src/x86decomp/workflow.py</code></td>
-<td><code>cae8a093f08f66f9412393e59867c4d32ca7caf88533a175d22eebe1f325c0a5</code></td>
 </tr>
 <tr>
 <td><code>tests/test_modes_and_db.py</code></td>
-<td><code>7b3e58d0cbef709f782c724956d752cd24fab83ec169cf6eb49562b883b4b174</code></td>
 </tr>
 </tbody>
 </table>
 <h2 id="related-examples">Related examples</h2>
-<p>[Functional project</p>
-<p>Open the source-verified workflow.](functional-project.md)[Hybrid composition</p>
-<p>Open the source-verified workflow.](hybrid-project.md)[Static analysis</p>
-<p>Open the source-verified workflow.](static-analysis-evidence.md)</p></p>
+<ul>
+<li><a href="../functional-project/">Functional project</a></li>
+<li><a href="../hybrid-project/">Hybrid composition</a></li>
+<li><a href="../static-analysis-evidence/">Static analysis</a></li>
+</ul></p>
     </article>
 </section>
             <!-- endblock -->

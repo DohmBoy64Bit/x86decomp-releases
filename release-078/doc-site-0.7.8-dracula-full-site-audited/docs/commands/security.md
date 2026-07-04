@@ -1,6 +1,6 @@
 ---
 title: x86decomp security
-description: Exact v0.7.8 parser-derived reference for `x86decomp security`.
+description: Command reference for `x86decomp security`.
 ---
 
 
@@ -17,10 +17,10 @@ usage: x86decomp security [-h] [--project PROJECT] [--actor ACTOR]
 
 ## Arguments
 
-| Argument | Exact parser declaration |
+| Argument | Details |
 | --- | --- |
-| `--project` | default: `'.'` · parser destination: `project`. project root used by the capability implementation (default: current directory) |
-| `--actor` | default: `'analyst'` · parser destination: `actor`. No help text declared. |
+| `--project` | default: `'.'`. project root used by the capability implementation (default: current directory) |
+| `--actor` | default: `'analyst'`. |
 
 ## Actions
 
@@ -38,13 +38,13 @@ usage: x86decomp security finding [-h] --evidence-json EVIDENCE_JSON
                                   rule_id severity subject_id summary
 ```
 
-| Argument | Exact parser declaration |
+| Argument | Details |
 | --- | --- |
-| `rule_id` | required · parser destination: `rule_id`. No help text declared. |
-| `severity` | required · parser destination: `severity`. No help text declared. |
-| `subject_id` | required · parser destination: `subject_id`. No help text declared. |
-| `summary` | required · parser destination: `summary`. No help text declared. |
-| `--evidence-json` | required · parser destination: `evidence_json`. No help text declared. |
+| `rule_id` | required. |
+| `severity` | required. |
+| `subject_id` | required. |
+| `summary` | required. |
+| `--evidence-json` | required. |
 
 ### `x86decomp security policy`
 
@@ -52,10 +52,10 @@ usage: x86decomp security finding [-h] --evidence-json EVIDENCE_JSON
 usage: x86decomp security policy [-h] name policy_json
 ```
 
-| Argument | Exact parser declaration |
+| Argument | Details |
 | --- | --- |
-| `name` | required · parser destination: `name`. No help text declared. |
-| `policy_json` | required · parser destination: `policy_json`. No help text declared. |
+| `name` | required. |
+| `policy_json` | required. |
 
 ### `x86decomp security report`
 
@@ -69,17 +69,8 @@ usage: x86decomp security report [-h]
 usage: x86decomp security scan [-h] observations_json
 ```
 
-| Argument | Exact parser declaration |
+| Argument | Details |
 | --- | --- |
-| `observations_json` | required · parser destination: `observations_json`. No help text declared. |
+| `observations_json` | required. |
 
-## Source basis
 
-| Parser owner | Source file | SHA-256 |
-| --- | --- | --- |
-| canonical cli | `src/x86decomp/canonical.py` | `9dfc1a2d1ba31559b1a9cd31a0cda1ab1a1e88ffef0a47c4632995f649296166` |
-| reconstruction cli | `src/x86decomp/reconstruction/cli.py` | `dd5a6c7c987b3c49a3f7c1c635d60b34542e21f9346bd85f869013532c844cc4` |
-
-## Verification boundary
-
-This page is regenerated from the v0.7.8 parser surface. It documents syntax, parser-declared arguments, canonical owners, and source files; it does not claim that optional adapters, target binaries, compiler toolchains, or runtime inputs exist on the reader's machine.

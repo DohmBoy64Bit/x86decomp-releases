@@ -5,7 +5,6 @@ description: Test source reference for tests/test_test_bundle.py.
 
 # `tests/test_test_bundle.py`
 
-**SHA-256:** `e07c08f3155c6ab4b45329aa9076a42632affa7d2c12daa2d70f8657e77e9af6`
 
 | Test symbol | Kind | Line | End line |
 | --- | --- | ---: | ---: |

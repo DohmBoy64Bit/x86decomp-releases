@@ -3,7 +3,6 @@ title: 'Example: compiler identification and compiler laboratory'
 description: Register real toolchains, compile a controlled matrix, preserve executable
   provenance, and rank candidate outputs without claiming the historical compiler
   from similarity alone.
-original_path: project-examples/compiler-laboratory.html
 ---
 
 <a id="model"></a>
@@ -19,8 +18,6 @@ original_path: project-examples/compiler-laboratory.html
 <a id="worker"></a>
 <a id="limits"></a>
 <a id="source-basis"></a>
-
-Section: Project examples
 
 # Example: compiler identification and compiler laboratory
 
@@ -201,21 +198,17 @@ The worker runs a real subprocess contract with bounded execution and output has
 
 > **Verification model.** Command syntax is checked against the live parser. The source files below are hashed from the current release; implementation and test rows are retained as independent truth boundaries.
 
-| Evidence file | SHA-256 |
-| --- | --- |
-| `src/x86decomp/cli.py` | `21e0654ced2f5dd0588adcbedec328613fba524ff1e0a91ef07d63cbbf88288c` |
-| `src/x86decomp/compiler.py` | `f21f38f6ed0804a959188e31f5c9fa498d7d0740536fbb82594a375b12353944` |
-| `src/x86decomp/compiler_lab.py` | `05a54baba63c926190c0e2fb45bff09c6eb338ed6a479e6e47be210a6b1de859` |
-| `src/x86decomp/toolchains.py` | `9dde5962b67d30fec64266313f5488a4e5501de9db26605d4719cbe276cde03f` |
-| `tests/test_compiler.py` | `9645daed68779957cd14addad7626d32d99056f551c27d873e3f475cfe862f64` |
+| Evidence file |
+| --- |
+| `src/x86decomp/cli.py` |
+| `src/x86decomp/compiler.py` |
+| `src/x86decomp/compiler_lab.py` |
+| `src/x86decomp/toolchains.py` |
+| `tests/test_compiler.py` |
 
 
 ## Related examples
 
-[Matching project
-
-Open the source-verified workflow.](matching-project.md)[Functional project
-
-Open the source-verified workflow.](functional-project.md)[Hybrid composition
-
-Open the source-verified workflow.](hybrid-project.md)
+- [Matching project](matching-project.md)
+- [Functional project](functional-project.md)
+- [Hybrid composition](hybrid-project.md)

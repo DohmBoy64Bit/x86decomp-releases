@@ -1,6 +1,6 @@
 ---
 title: x86decomp linker-plan
-description: Exact v0.7.8 parser-derived reference for `x86decomp linker-plan`.
+description: Command reference for `x86decomp linker-plan`.
 ---
 
 
@@ -17,23 +17,15 @@ usage: x86decomp linker-plan [-h] [--library LIBRARY] [--linker LINKER]
 
 ## Arguments
 
-| Argument | Exact parser declaration |
+| Argument | Details |
 | --- | --- |
-| `pe` | required · type: `_path` · parser destination: `pe`. No help text declared. |
-| `map` | required · type: `_path` · parser destination: `map`. No help text declared. |
-| `objects` | required · nargs: `+` · type: `_path` · parser destination: `objects`. No help text declared. |
-| `--library` | type: `_path` · default: `[]` · parser destination: `library`. No help text declared. |
-| `--linker` | default: `'lld-link'` · parser destination: `linker`. No help text declared. |
-| `--output-image` | default: `'build/reconstructed.exe'` · parser destination: `output_image`. No help text declared. |
-| `--report` | type: `_path` · parser destination: `report`. No help text declared. |
-| `--write-relink-manifest` | type: `_path` · parser destination: `write_relink_manifest`. No help text declared. |
+| `pe` | required · type: `path`. |
+| `map` | required · type: `path`. |
+| `objects` | required · nargs: `+` · type: `path`. |
+| `--library` | type: `path` · default: `[]`. |
+| `--linker` | default: `'lld-link'`. |
+| `--output-image` | default: `'build/reconstructed.exe'`. |
+| `--report` | type: `path`. |
+| `--write-relink-manifest` | type: `path`. |
 
-## Source basis
 
-| Parser owner | Source file | SHA-256 |
-| --- | --- | --- |
-| root cli | `src/x86decomp/cli.py` | `21e0654ced2f5dd0588adcbedec328613fba524ff1e0a91ef07d63cbbf88288c` |
-
-## Verification boundary
-
-This page is regenerated from the v0.7.8 parser surface. It documents syntax, parser-declared arguments, canonical owners, and source files; it does not claim that optional adapters, target binaries, compiler toolchains, or runtime inputs exist on the reader's machine.

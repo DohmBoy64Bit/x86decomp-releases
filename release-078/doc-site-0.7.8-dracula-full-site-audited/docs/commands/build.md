@@ -1,6 +1,6 @@
 ---
 title: x86decomp build
-description: Exact v0.7.8 parser-derived reference for `x86decomp build`.
+description: Command reference for `x86decomp build`.
 ---
 
 
@@ -17,10 +17,10 @@ usage: x86decomp build [-h] [--project PROJECT] [--actor ACTOR]
 
 ## Arguments
 
-| Argument | Exact parser declaration |
+| Argument | Details |
 | --- | --- |
-| `--project` | default: `'.'` · parser destination: `project`. project root used by the capability implementation (default: current directory) |
-| `--actor` | default: `'analyst'` · parser destination: `actor`. No help text declared. |
+| `--project` | default: `'.'`. project root used by the capability implementation (default: current directory) |
+| `--actor` | default: `'analyst'`. |
 
 ## Actions
 
@@ -45,14 +45,14 @@ usage: x86decomp build add-target [-h] [--kind KIND]
                                   build_id name
 ```
 
-| Argument | Exact parser declaration |
+| Argument | Details |
 | --- | --- |
-| `build_id` | required · parser destination: `build_id`. No help text declared. |
-| `name` | required · parser destination: `name`. No help text declared. |
-| `--kind` | default: `'executable'` · parser destination: `kind`. No help text declared. |
-| `--output-name` | parser destination: `output_name`. No help text declared. |
-| `--sources-json` | parser destination: `sources_json`. No help text declared. |
-| `--dependencies-json` | parser destination: `dependencies_json`. No help text declared. |
+| `build_id` | required. |
+| `name` | required. |
+| `--kind` | default: `'executable'`. |
+| `--output-name` | — |
+| `--sources-json` | — |
+| `--dependencies-json` | — |
 
 ### `x86decomp build add-variant`
 
@@ -64,15 +64,15 @@ usage: x86decomp build add-variant [-h] --compiler COMPILER --linker LINKER
                                    target_id name
 ```
 
-| Argument | Exact parser declaration |
+| Argument | Details |
 | --- | --- |
-| `target_id` | required · parser destination: `target_id`. No help text declared. |
-| `name` | required · parser destination: `name`. No help text declared. |
-| `--compiler` | required · parser destination: `compiler`. No help text declared. |
-| `--linker` | required · parser destination: `linker`. No help text declared. |
-| `--compile-flags-json` | parser destination: `compile_flags_json`. No help text declared. |
-| `--link-flags-json` | parser destination: `link_flags_json`. No help text declared. |
-| `--environment-json` | parser destination: `environment_json`. No help text declared. |
+| `target_id` | required. |
+| `name` | required. |
+| `--compiler` | required. |
+| `--linker` | required. |
+| `--compile-flags-json` | — |
+| `--link-flags-json` | — |
+| `--environment-json` | — |
 
 ### `x86decomp build compare-modes`
 
@@ -81,10 +81,10 @@ usage: x86decomp build compare-modes [-h]
                                      historical_build_id portable_build_id
 ```
 
-| Argument | Exact parser declaration |
+| Argument | Details |
 | --- | --- |
-| `historical_build_id` | required · parser destination: `historical_build_id`. No help text declared. |
-| `portable_build_id` | required · parser destination: `portable_build_id`. No help text declared. |
+| `historical_build_id` | required. |
+| `portable_build_id` | required. |
 
 ### `x86decomp build create`
 
@@ -95,13 +95,13 @@ usage: x86decomp build create [-h] --mode MODE [--generator GENERATOR]
                               name
 ```
 
-| Argument | Exact parser declaration |
+| Argument | Details |
 | --- | --- |
-| `name` | required · parser destination: `name`. No help text declared. |
-| `--mode` | required · parser destination: `mode`. No help text declared. |
-| `--generator` | default: `'cmake'` · parser destination: `generator`. No help text declared. |
-| `--output-root` | default: `'build'` · parser destination: `output_root`. No help text declared. |
-| `--metadata-json` | parser destination: `metadata_json`. No help text declared. |
+| `name` | required. |
+| `--mode` | required. |
+| `--generator` | default: `'cmake'`. |
+| `--output-root` | default: `'build'`. |
+| `--metadata-json` | — |
 
 ### `x86decomp build generate`
 
@@ -109,10 +109,10 @@ usage: x86decomp build create [-h] --mode MODE [--generator GENERATOR]
 usage: x86decomp build generate [-h] [--output-root OUTPUT_ROOT] build_id
 ```
 
-| Argument | Exact parser declaration |
+| Argument | Details |
 | --- | --- |
-| `build_id` | required · parser destination: `build_id`. No help text declared. |
-| `--output-root` | parser destination: `output_root`. No help text declared. |
+| `build_id` | required. |
+| `--output-root` | — |
 
 ### `x86decomp build matrix`
 
@@ -126,9 +126,9 @@ usage: x86decomp build matrix [-h]
 usage: x86decomp build show [-h] build_id
 ```
 
-| Argument | Exact parser declaration |
+| Argument | Details |
 | --- | --- |
-| `build_id` | required · parser destination: `build_id`. No help text declared. |
+| `build_id` | required. |
 
 ### `x86decomp build validate`
 
@@ -136,18 +136,9 @@ usage: x86decomp build show [-h] build_id
 usage: x86decomp build validate [-h] [--variant-id VARIANT_ID] target_id
 ```
 
-| Argument | Exact parser declaration |
+| Argument | Details |
 | --- | --- |
-| `target_id` | required · parser destination: `target_id`. No help text declared. |
-| `--variant-id` | parser destination: `variant_id`. No help text declared. |
+| `target_id` | required. |
+| `--variant-id` | — |
 
-## Source basis
 
-| Parser owner | Source file | SHA-256 |
-| --- | --- | --- |
-| canonical cli | `src/x86decomp/canonical.py` | `9dfc1a2d1ba31559b1a9cd31a0cda1ab1a1e88ffef0a47c4632995f649296166` |
-| reconstruction cli | `src/x86decomp/reconstruction/cli.py` | `dd5a6c7c987b3c49a3f7c1c635d60b34542e21f9346bd85f869013532c844cc4` |
-
-## Verification boundary
-
-This page is regenerated from the v0.7.8 parser surface. It documents syntax, parser-declared arguments, canonical owners, and source files; it does not claim that optional adapters, target binaries, compiler toolchains, or runtime inputs exist on the reader's machine.

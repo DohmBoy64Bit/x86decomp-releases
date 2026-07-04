@@ -5,7 +5,6 @@ description: Test source reference for tests/test_pe32.py.
 
 # `tests/test_pe32.py`
 
-**SHA-256:** `4952257965fe3a61bc43d6a099b190264e924ecc85fdc8ba4e42e4a32bdc79c4`
 
 | Test symbol | Kind | Line | End line |
 | --- | --- | ---: | ---: |

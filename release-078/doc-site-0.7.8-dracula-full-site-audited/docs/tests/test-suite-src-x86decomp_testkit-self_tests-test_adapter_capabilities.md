@@ -5,7 +5,6 @@ description: Test source reference for test-suite/src/x86decomp_testkit/self_tes
 
 # `test-suite/src/x86decomp_testkit/self_tests/test_adapter_capabilities.py`
 
-**SHA-256:** `3901fd9bca6c25cdf7e684139f5d5405504b1302dd912d5cd990a292935f812e`
 
 | Test symbol | Kind | Line | End line |
 | --- | --- | ---: | ---: |

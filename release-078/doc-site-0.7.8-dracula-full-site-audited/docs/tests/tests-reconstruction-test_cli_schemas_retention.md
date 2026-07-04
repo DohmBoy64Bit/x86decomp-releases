@@ -5,7 +5,6 @@ description: Test source reference for tests/reconstruction/test_cli_schemas_ret
 
 # `tests/reconstruction/test_cli_schemas_retention.py`
 
-**SHA-256:** `428edcca317bb666485608ce182aae207194f408292dc580d49c13aabe8e7ec7`
 
 | Test symbol | Kind | Line | End line |
 | --- | --- | ---: | ---: |

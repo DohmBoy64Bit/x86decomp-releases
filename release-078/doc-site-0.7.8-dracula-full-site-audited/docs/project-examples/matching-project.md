@@ -2,7 +2,6 @@
 title: 'Example: end-to-end matching project'
 description: Reconstruct one PE function through compilation, ABI checks, instruction
   comparison, byte matching, image integration, and evidence-limited relinking.
-original_path: project-examples/matching-project.html
 ---
 
 <a id="model"></a>
@@ -19,8 +18,6 @@ original_path: project-examples/matching-project.html
 <a id="state"></a>
 <a id="limits"></a>
 <a id="source-basis"></a>
-
-Section: Project examples
 
 # Example: end-to-end matching project
 
@@ -164,22 +161,18 @@ Advance to `image_integrated` or `full_relink_validated` only after the correspo
 
 > **Verification model.** Command syntax is checked against the live parser. The source files below are hashed from the current release; implementation and test rows are retained as independent truth boundaries.
 
-| Evidence file | SHA-256 |
-| --- | --- |
-| `src/x86decomp/cli.py` | `21e0654ced2f5dd0588adcbedec328613fba524ff1e0a91ef07d63cbbf88288c` |
-| `src/x86decomp/compiler.py` | `f21f38f6ed0804a959188e31f5c9fa498d7d0740536fbb82594a375b12353944` |
-| `src/x86decomp/exe_diff.py` | `997ffacbd833a3bb4c0545d1fb1981469e1d575680f4b39b7e6f34a4796abdf0` |
-| `src/x86decomp/image_match.py` | `a9c72f376532369da77440496a1ea07564da5071ef8e6108e29c58e33e96fcf4` |
-| `src/x86decomp/workflow.py` | `cae8a093f08f66f9412393e59867c4d32ca7caf88533a175d22eebe1f325c0a5` |
-| `tests/test_modes_and_db.py` | `7b3e58d0cbef709f782c724956d752cd24fab83ec169cf6eb49562b883b4b174` |
+| Evidence file |
+| --- |
+| `src/x86decomp/cli.py` |
+| `src/x86decomp/compiler.py` |
+| `src/x86decomp/exe_diff.py` |
+| `src/x86decomp/image_match.py` |
+| `src/x86decomp/workflow.py` |
+| `tests/test_modes_and_db.py` |
 
 
 ## Related examples
 
-[Functional project
-
-Open the source-verified workflow.](functional-project.md)[Hybrid composition
-
-Open the source-verified workflow.](hybrid-project.md)[Static analysis
-
-Open the source-verified workflow.](static-analysis-evidence.md)
+- [Functional project](functional-project.md)
+- [Hybrid composition](hybrid-project.md)
+- [Static analysis](static-analysis-evidence.md)

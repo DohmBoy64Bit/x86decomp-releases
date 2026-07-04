@@ -159,14 +159,6 @@
     </li>
                             
     <li class="drac-box-ternary">
-        <a href="../../release-artifacts/COMMAND_REFERENCE_STRICT_AUDIT/"
-            class="
-            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Command Audit
-        </a>
-    </li>
-                            
-    <li class="drac-box-ternary">
         <a href="../../schemas/"
             class="
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
@@ -212,35 +204,11 @@
                 <a href="../.."
                     class="
                     drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
-                    data-bs-toggle="collapse" data-bs-target="#release-evidence-collapse" aria-expanded="false">
-                    Release Evidence
+                    data-bs-toggle="collapse" data-bs-target="#project-collapse" aria-expanded="false">
+                    Project
                 </a>
-                <div class="collapse" id="release-evidence-collapse">
+                <div class="collapse" id="project-collapse">
                     <ul class="mb-5 drac-list drac-list-none">
-                            
-    <li class="drac-box-ternary">
-        <a href="../../release-evidence/"
-            class="
-            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Overview
-        </a>
-    </li>
-                            
-    <li class="drac-box-ternary">
-        <a href="../../verification/"
-            class="
-            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Verification
-        </a>
-    </li>
-                            
-    <li class="drac-box-ternary">
-        <a href="../../source-coverage/"
-            class="
-            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Source Coverage
-        </a>
-    </li>
                             
     <li class="drac-box-ternary">
         <a href="../../changelog/"
@@ -326,17 +294,17 @@
 <thead>
 <tr>
 <th>Argument</th>
-<th>Exact parser declaration</th>
+<th>Details</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>--project</code></td>
-<td>default: <code>'.'</code> · parser destination: <code>project</code>. project root used by the capability implementation (default: current directory)</td>
+<td>default: <code>'.'</code>. project root used by the capability implementation (default: current directory)</td>
 </tr>
 <tr>
 <td><code>--actor</code></td>
-<td>default: <code>'analyst'</code> · parser destination: <code>actor</code>. No help text declared.</td>
+<td>default: <code>'analyst'</code>.</td>
 </tr>
 </tbody>
 </table>
@@ -404,21 +372,21 @@
 <thead>
 <tr>
 <th>Argument</th>
-<th>Exact parser declaration</th>
+<th>Details</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>candidate_id</code></td>
-<td>required · parser destination: <code>candidate_id</code>. No help text declared.</td>
+<td>required.</td>
 </tr>
 <tr>
 <td><code>source</code></td>
-<td>required · parser destination: <code>source</code>. No help text declared.</td>
+<td>required.</td>
 </tr>
 <tr>
 <td><code>relative_path</code></td>
-<td>required · parser destination: <code>relative_path</code>. No help text declared.</td>
+<td>required.</td>
 </tr>
 </tbody>
 </table>
@@ -429,17 +397,17 @@
 <thead>
 <tr>
 <th>Argument</th>
-<th>Exact parser declaration</th>
+<th>Details</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>left_id</code></td>
-<td>required · parser destination: <code>left_id</code>. No help text declared.</td>
+<td>required.</td>
 </tr>
 <tr>
 <td><code>right_id</code></td>
-<td>required · parser destination: <code>right_id</code>. No help text declared.</td>
+<td>required.</td>
 </tr>
 </tbody>
 </table>
@@ -453,25 +421,25 @@
 <thead>
 <tr>
 <th>Argument</th>
-<th>Exact parser declaration</th>
+<th>Details</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>branch_name</code></td>
-<td>required · parser destination: <code>branch_name</code>. No help text declared.</td>
+<td>required.</td>
 </tr>
 <tr>
 <td><code>--campaign-id</code></td>
-<td>parser destination: <code>campaign_id</code>. No help text declared.</td>
+<td>—</td>
 </tr>
 <tr>
 <td><code>--parent</code></td>
-<td>parser destination: <code>parent</code>. No help text declared.</td>
+<td>—</td>
 </tr>
 <tr>
 <td><code>--objective-json</code></td>
-<td>parser destination: <code>objective_json</code>. No help text declared.</td>
+<td>—</td>
 </tr>
 </tbody>
 </table>
@@ -484,29 +452,29 @@
 <thead>
 <tr>
 <th>Argument</th>
-<th>Exact parser declaration</th>
+<th>Details</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>candidate_id</code></td>
-<td>required · parser destination: <code>candidate_id</code>. No help text declared.</td>
+<td>required.</td>
 </tr>
 <tr>
 <td><code>metric</code></td>
-<td>required · parser destination: <code>metric</code>. No help text declared.</td>
+<td>required.</td>
 </tr>
 <tr>
 <td><code>status</code></td>
-<td>required · parser destination: <code>status</code>. No help text declared.</td>
+<td>required.</td>
 </tr>
 <tr>
 <td><code>--value</code></td>
-<td>type: <code>float</code> · parser destination: <code>value</code>. No help text declared.</td>
+<td>type: <code>float</code>.</td>
 </tr>
 <tr>
 <td><code>--details-json</code></td>
-<td>parser destination: <code>details_json</code>. No help text declared.</td>
+<td>—</td>
 </tr>
 </tbody>
 </table>
@@ -517,13 +485,13 @@
 <thead>
 <tr>
 <th>Argument</th>
-<th>Exact parser declaration</th>
+<th>Details</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>--campaign-id</code></td>
-<td>parser destination: <code>campaign_id</code>. No help text declared.</td>
+<td>—</td>
 </tr>
 </tbody>
 </table>
@@ -537,37 +505,37 @@
 <thead>
 <tr>
 <th>Argument</th>
-<th>Exact parser declaration</th>
+<th>Details</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>function_id</code></td>
-<td>required · parser destination: <code>function_id</code>. No help text declared.</td>
+<td>required.</td>
 </tr>
 <tr>
 <td><code>--candidate</code></td>
-<td>required · parser destination: <code>candidate</code>. No help text declared.</td>
+<td>required.</td>
 </tr>
 <tr>
 <td><code>--report</code></td>
-<td>required · parser destination: <code>report</code>. No help text declared.</td>
+<td>required.</td>
 </tr>
 <tr>
 <td><code>--stage</code></td>
-<td>default: <code>'matched'</code> · parser destination: <code>stage</code>. No help text declared.</td>
+<td>default: <code>'matched'</code>.</td>
 </tr>
 <tr>
 <td><code>--update-workflow</code></td>
-<td>nargs: <code>0</code> · default: <code>False</code> · parser destination: <code>update_workflow</code>. No help text declared.</td>
+<td>nargs: <code>0</code> · default: <code>False</code>.</td>
 </tr>
 <tr>
 <td><code>--update-build</code></td>
-<td>nargs: <code>0</code> · default: <code>False</code> · parser destination: <code>update_build</code>. No help text declared.</td>
+<td>nargs: <code>0</code> · default: <code>False</code>.</td>
 </tr>
 <tr>
 <td><code>--overwrite</code></td>
-<td>nargs: <code>0</code> · default: <code>False</code> · parser destination: <code>overwrite</code>. No help text declared.</td>
+<td>nargs: <code>0</code> · default: <code>False</code>.</td>
 </tr>
 </tbody>
 </table>
@@ -578,17 +546,17 @@
 <thead>
 <tr>
 <th>Argument</th>
-<th>Exact parser declaration</th>
+<th>Details</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>--phase</code></td>
-<td>parser destination: <code>phase</code>. No help text declared.</td>
+<td>—</td>
 </tr>
 <tr>
 <td><code>--output</code></td>
-<td>parser destination: <code>output</code>. No help text declared.</td>
+<td>—</td>
 </tr>
 </tbody>
 </table>
@@ -599,13 +567,13 @@
 <thead>
 <tr>
 <th>Argument</th>
-<th>Exact parser declaration</th>
+<th>Details</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>candidate_id</code></td>
-<td>required · parser destination: <code>candidate_id</code>. No help text declared.</td>
+<td>required.</td>
 </tr>
 </tbody>
 </table>
@@ -616,53 +584,24 @@
 <thead>
 <tr>
 <th>Argument</th>
-<th>Exact parser declaration</th>
+<th>Details</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>candidate_id</code></td>
-<td>required · parser destination: <code>candidate_id</code>. No help text declared.</td>
+<td>required.</td>
 </tr>
 <tr>
 <td><code>state</code></td>
-<td>required · parser destination: <code>state</code>. No help text declared.</td>
+<td>required.</td>
 </tr>
 <tr>
 <td><code>--reason</code></td>
-<td>required · parser destination: <code>reason</code>. No help text declared.</td>
+<td>required.</td>
 </tr>
 </tbody>
-</table>
-<h2 id="source-basis">Source basis</h2>
-<table>
-<thead>
-<tr>
-<th>Parser owner</th>
-<th>Source file</th>
-<th>SHA-256</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>canonical cli</td>
-<td><code>src/x86decomp/canonical.py</code></td>
-<td><code>9dfc1a2d1ba31559b1a9cd31a0cda1ab1a1e88ffef0a47c4632995f649296166</code></td>
-</tr>
-<tr>
-<td>governance cli</td>
-<td><code>src/x86decomp/governance/cli.py</code></td>
-<td><code>34d9488f9d07dfded83f5e9191aa7faba7140e8b2d0a2d0da66925851fa090de</code></td>
-</tr>
-<tr>
-<td>reconstruction cli</td>
-<td><code>src/x86decomp/reconstruction/cli.py</code></td>
-<td><code>dd5a6c7c987b3c49a3f7c1c635d60b34542e21f9346bd85f869013532c844cc4</code></td>
-</tr>
-</tbody>
-</table>
-<h2 id="verification-boundary">Verification boundary</h2>
-<p>This page is regenerated from the v0.7.8 parser surface. It documents syntax, parser-declared arguments, canonical owners, and source files; it does not claim that optional adapters, target binaries, compiler toolchains, or runtime inputs exist on the reader's machine.</p></p>
+</table></p>
     </article>
 </section>
             <!-- endblock -->

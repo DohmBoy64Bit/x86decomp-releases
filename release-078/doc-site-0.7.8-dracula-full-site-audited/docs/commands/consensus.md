@@ -1,6 +1,6 @@
 ---
 title: x86decomp consensus
-description: Exact v0.7.8 parser-derived reference for `x86decomp consensus`.
+description: Command reference for `x86decomp consensus`.
 ---
 
 
@@ -17,10 +17,10 @@ usage: x86decomp consensus [-h] [--project PROJECT] [--actor ACTOR]
 
 ## Arguments
 
-| Argument | Exact parser declaration |
+| Argument | Details |
 | --- | --- |
-| `--project` | default: `'.'` · parser destination: `project`. project root used by the capability implementation (default: current directory) |
-| `--actor` | default: `'analyst'` · parser destination: `actor`. No help text declared. |
+| `--project` | default: `'.'`. project root used by the capability implementation (default: current directory) |
+| `--actor` | default: `'analyst'`. |
 
 ## Actions
 
@@ -44,11 +44,11 @@ usage: x86decomp consensus conflicts [-h]
 usage: x86decomp consensus explain [-h] subject_kind subject_id property_name
 ```
 
-| Argument | Exact parser declaration |
+| Argument | Details |
 | --- | --- |
-| `subject_kind` | required · parser destination: `subject_kind`. No help text declared. |
-| `subject_id` | required · parser destination: `subject_id`. No help text declared. |
-| `property_name` | required · parser destination: `property_name`. No help text declared. |
+| `subject_kind` | required. |
+| `subject_id` | required. |
+| `property_name` | required. |
 
 ### `x86decomp consensus record`
 
@@ -61,17 +61,17 @@ usage: x86decomp consensus record [-h] --adapter ADAPTER
                                   value_json
 ```
 
-| Argument | Exact parser declaration |
+| Argument | Details |
 | --- | --- |
-| `subject_kind` | required · parser destination: `subject_kind`. No help text declared. |
-| `subject_id` | required · parser destination: `subject_id`. No help text declared. |
-| `property_name` | required · parser destination: `property_name`. No help text declared. |
-| `value_json` | required · parser destination: `value_json`. No help text declared. |
-| `--adapter` | required · parser destination: `adapter`. No help text declared. |
-| `--adapter-version` | required · parser destination: `adapter_version`. No help text declared. |
-| `--evidence-id` | required · parser destination: `evidence_id`. No help text declared. |
-| `--group` | required · default: `'consensus'` · parser destination: `group`. No help text declared. |
-| `--confidence` | type: `float` · default: `1.0` · parser destination: `confidence`. No help text declared. |
+| `subject_kind` | required. |
+| `subject_id` | required. |
+| `property_name` | required. |
+| `value_json` | required. |
+| `--adapter` | required. |
+| `--adapter-version` | required. |
+| `--evidence-id` | required. |
+| `--group` | required · default: `'consensus'`. |
+| `--confidence` | type: `float` · default: `1.0`. |
 
 ### `x86decomp consensus resolve`
 
@@ -82,15 +82,15 @@ usage: x86decomp consensus resolve [-h] --method METHOD --rationale RATIONALE
                                    selected_value_json
 ```
 
-| Argument | Exact parser declaration |
+| Argument | Details |
 | --- | --- |
-| `subject_kind` | required · parser destination: `subject_kind`. No help text declared. |
-| `subject_id` | required · parser destination: `subject_id`. No help text declared. |
-| `property_name` | required · parser destination: `property_name`. No help text declared. |
-| `selected_value_json` | required · parser destination: `selected_value_json`. No help text declared. |
-| `--method` | required · parser destination: `method`. No help text declared. |
-| `--rationale` | required · parser destination: `rationale`. No help text declared. |
-| `--lock` | nargs: `0` · default: `False` · parser destination: `lock`. No help text declared. |
+| `subject_kind` | required. |
+| `subject_id` | required. |
+| `property_name` | required. |
+| `selected_value_json` | required. |
+| `--method` | required. |
+| `--rationale` | required. |
+| `--lock` | nargs: `0` · default: `False`. |
 
 ### `x86decomp consensus scan`
 
@@ -99,18 +99,9 @@ usage: x86decomp consensus scan [-h] [--subject-kind SUBJECT_KIND]
                                 [--subject-id SUBJECT_ID]
 ```
 
-| Argument | Exact parser declaration |
+| Argument | Details |
 | --- | --- |
-| `--subject-kind` | parser destination: `subject_kind`. No help text declared. |
-| `--subject-id` | parser destination: `subject_id`. No help text declared. |
+| `--subject-kind` | — |
+| `--subject-id` | — |
 
-## Source basis
 
-| Parser owner | Source file | SHA-256 |
-| --- | --- | --- |
-| canonical cli | `src/x86decomp/canonical.py` | `9dfc1a2d1ba31559b1a9cd31a0cda1ab1a1e88ffef0a47c4632995f649296166` |
-| governance cli | `src/x86decomp/governance/cli.py` | `34d9488f9d07dfded83f5e9191aa7faba7140e8b2d0a2d0da66925851fa090de` |
-
-## Verification boundary
-
-This page is regenerated from the v0.7.8 parser surface. It documents syntax, parser-declared arguments, canonical owners, and source files; it does not claim that optional adapters, target binaries, compiler toolchains, or runtime inputs exist on the reader's machine.

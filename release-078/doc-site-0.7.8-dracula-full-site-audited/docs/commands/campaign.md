@@ -1,6 +1,6 @@
 ---
 title: x86decomp campaign
-description: Exact v0.7.8 parser-derived reference for `x86decomp campaign`.
+description: Command reference for `x86decomp campaign`.
 ---
 
 
@@ -17,10 +17,10 @@ usage: x86decomp campaign [-h] [--project PROJECT] [--actor ACTOR]
 
 ## Arguments
 
-| Argument | Exact parser declaration |
+| Argument | Details |
 | --- | --- |
-| `--project` | default: `'.'` · parser destination: `project`. project root used by the capability implementation (default: current directory) |
-| `--actor` | default: `'analyst'` · parser destination: `actor`. No help text declared. |
+| `--project` | default: `'.'`. project root used by the capability implementation (default: current directory) |
+| `--actor` | default: `'analyst'`. |
 
 ## Actions
 
@@ -43,11 +43,11 @@ usage: x86decomp campaign [-h] [--project PROJECT] [--actor ACTOR]
 usage: x86decomp campaign branch [-h] [--parent PARENT] campaign_id name
 ```
 
-| Argument | Exact parser declaration |
+| Argument | Details |
 | --- | --- |
-| `campaign_id` | required · parser destination: `campaign_id`. No help text declared. |
-| `name` | required · parser destination: `name`. No help text declared. |
-| `--parent` | parser destination: `parent`. No help text declared. |
+| `campaign_id` | required. |
+| `name` | required. |
+| `--parent` | — |
 
 ### `x86decomp campaign create`
 
@@ -57,11 +57,11 @@ usage: x86decomp campaign create [-h] [--budget-json BUDGET_JSON]
                                  goal
 ```
 
-| Argument | Exact parser declaration |
+| Argument | Details |
 | --- | --- |
-| `goal` | required · parser destination: `goal`. No help text declared. |
-| `--budget-json` | parser destination: `budget_json`. No help text declared. |
-| `--policy-json` | parser destination: `policy_json`. No help text declared. |
+| `goal` | required. |
+| `--budget-json` | — |
+| `--policy-json` | — |
 
 ### `x86decomp campaign list`
 
@@ -75,9 +75,9 @@ usage: x86decomp campaign list [-h]
 usage: x86decomp campaign pause [-h] campaign_id
 ```
 
-| Argument | Exact parser declaration |
+| Argument | Details |
 | --- | --- |
-| `campaign_id` | required · parser destination: `campaign_id`. No help text declared. |
+| `campaign_id` | required. |
 
 ### `x86decomp campaign plan`
 
@@ -85,9 +85,9 @@ usage: x86decomp campaign pause [-h] campaign_id
 usage: x86decomp campaign plan [-h] campaign_id
 ```
 
-| Argument | Exact parser declaration |
+| Argument | Details |
 | --- | --- |
-| `campaign_id` | required · parser destination: `campaign_id`. No help text declared. |
+| `campaign_id` | required. |
 
 ### `x86decomp campaign resume`
 
@@ -95,9 +95,9 @@ usage: x86decomp campaign plan [-h] campaign_id
 usage: x86decomp campaign resume [-h] campaign_id
 ```
 
-| Argument | Exact parser declaration |
+| Argument | Details |
 | --- | --- |
-| `campaign_id` | required · parser destination: `campaign_id`. No help text declared. |
+| `campaign_id` | required. |
 
 ### `x86decomp campaign snapshot`
 
@@ -105,9 +105,9 @@ usage: x86decomp campaign resume [-h] campaign_id
 usage: x86decomp campaign snapshot [-h] campaign_id
 ```
 
-| Argument | Exact parser declaration |
+| Argument | Details |
 | --- | --- |
-| `campaign_id` | required · parser destination: `campaign_id`. No help text declared. |
+| `campaign_id` | required. |
 
 ### `x86decomp campaign start`
 
@@ -115,9 +115,9 @@ usage: x86decomp campaign snapshot [-h] campaign_id
 usage: x86decomp campaign start [-h] campaign_id
 ```
 
-| Argument | Exact parser declaration |
+| Argument | Details |
 | --- | --- |
-| `campaign_id` | required · parser destination: `campaign_id`. No help text declared. |
+| `campaign_id` | required. |
 
 ### `x86decomp campaign status`
 
@@ -125,9 +125,9 @@ usage: x86decomp campaign start [-h] campaign_id
 usage: x86decomp campaign status [-h] campaign_id
 ```
 
-| Argument | Exact parser declaration |
+| Argument | Details |
 | --- | --- |
-| `campaign_id` | required · parser destination: `campaign_id`. No help text declared. |
+| `campaign_id` | required. |
 
 ### `x86decomp campaign stop`
 
@@ -135,17 +135,8 @@ usage: x86decomp campaign status [-h] campaign_id
 usage: x86decomp campaign stop [-h] campaign_id
 ```
 
-| Argument | Exact parser declaration |
+| Argument | Details |
 | --- | --- |
-| `campaign_id` | required · parser destination: `campaign_id`. No help text declared. |
+| `campaign_id` | required. |
 
-## Source basis
 
-| Parser owner | Source file | SHA-256 |
-| --- | --- | --- |
-| canonical cli | `src/x86decomp/canonical.py` | `9dfc1a2d1ba31559b1a9cd31a0cda1ab1a1e88ffef0a47c4632995f649296166` |
-| governance cli | `src/x86decomp/governance/cli.py` | `34d9488f9d07dfded83f5e9191aa7faba7140e8b2d0a2d0da66925851fa090de` |
-
-## Verification boundary
-
-This page is regenerated from the v0.7.8 parser surface. It documents syntax, parser-declared arguments, canonical owners, and source files; it does not claim that optional adapters, target binaries, compiler toolchains, or runtime inputs exist on the reader's machine.

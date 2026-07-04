@@ -1,6 +1,6 @@
 ---
 title: x86decomp module
-description: Exact v0.7.8 parser-derived reference for `x86decomp module`.
+description: Command reference for `x86decomp module`.
 ---
 
 
@@ -17,10 +17,10 @@ usage: x86decomp module [-h] [--project PROJECT] [--actor ACTOR]
 
 ## Arguments
 
-| Argument | Exact parser declaration |
+| Argument | Details |
 | --- | --- |
-| `--project` | default: `'.'` · parser destination: `project`. project root used by the capability implementation (default: current directory) |
-| `--actor` | default: `'analyst'` · parser destination: `actor`. No help text declared. |
+| `--project` | default: `'.'`. project root used by the capability implementation (default: current directory) |
+| `--actor` | default: `'analyst'`. |
 
 ## Actions
 
@@ -44,13 +44,13 @@ usage: x86decomp module add-member [-h] [--ordinal ORDINAL]
                                    module_id member_kind member_id
 ```
 
-| Argument | Exact parser declaration |
+| Argument | Details |
 | --- | --- |
-| `module_id` | required · parser destination: `module_id`. No help text declared. |
-| `member_kind` | required · parser destination: `member_kind`. No help text declared. |
-| `member_id` | required · parser destination: `member_id`. No help text declared. |
-| `--ordinal` | type: `int` · default: `0` · parser destination: `ordinal`. No help text declared. |
-| `--evidence-json` | parser destination: `evidence_json`. No help text declared. |
+| `module_id` | required. |
+| `member_kind` | required. |
+| `member_id` | required. |
+| `--ordinal` | type: `int` · default: `0`. |
+| `--evidence-json` | — |
 
 ### `x86decomp module add-unit-member`
 
@@ -60,13 +60,13 @@ usage: x86decomp module add-unit-member [-h] [--linkage LINKAGE]
                                         unit_id member_kind member_id
 ```
 
-| Argument | Exact parser declaration |
+| Argument | Details |
 | --- | --- |
-| `unit_id` | required · parser destination: `unit_id`. No help text declared. |
-| `member_kind` | required · parser destination: `member_kind`. No help text declared. |
-| `member_id` | required · parser destination: `member_id`. No help text declared. |
-| `--linkage` | default: `'external'` · parser destination: `linkage`. No help text declared. |
-| `--ordinal` | type: `int` · default: `0` · parser destination: `ordinal`. No help text declared. |
+| `unit_id` | required. |
+| `member_kind` | required. |
+| `member_id` | required. |
+| `--linkage` | default: `'external'`. |
+| `--ordinal` | type: `int` · default: `0`. |
 
 ### `x86decomp module assign`
 
@@ -77,14 +77,14 @@ usage: x86decomp module assign [-h] --module MODULE [--class-name CLASS_NAME]
                                function_id
 ```
 
-| Argument | Exact parser declaration |
+| Argument | Details |
 | --- | --- |
-| `function_id` | required · parser destination: `function_id`. No help text declared. |
-| `--module` | required · parser destination: `module`. No help text declared. |
-| `--class-name` | parser destination: `class_name`. No help text declared. |
-| `--header` | parser destination: `header`. No help text declared. |
-| `--source` | parser destination: `source`. No help text declared. |
-| `--report` | parser destination: `report`. No help text declared. |
+| `function_id` | required. |
+| `--module` | required. |
+| `--class-name` | — |
+| `--header` | — |
+| `--source` | — |
+| `--report` | — |
 
 ### `x86decomp module create`
 
@@ -95,13 +95,13 @@ usage: x86decomp module create [-h] [--kind KIND] [--source-path SOURCE_PATH]
                                name
 ```
 
-| Argument | Exact parser declaration |
+| Argument | Details |
 | --- | --- |
-| `name` | required · parser destination: `name`. No help text declared. |
-| `--kind` | default: `'static-library'` · parser destination: `kind`. No help text declared. |
-| `--source-path` | parser destination: `source_path`. No help text declared. |
-| `--confidence` | type: `float` · default: `1.0` · parser destination: `confidence`. No help text declared. |
-| `--evidence-json` | parser destination: `evidence_json`. No help text declared. |
+| `name` | required. |
+| `--kind` | default: `'static-library'`. |
+| `--source-path` | — |
+| `--confidence` | type: `float` · default: `1.0`. |
+| `--evidence-json` | — |
 
 ### `x86decomp module create-unit`
 
@@ -113,13 +113,13 @@ usage: x86decomp module create-unit [-h] [--module-id MODULE_ID]
                                     source_path
 ```
 
-| Argument | Exact parser declaration |
+| Argument | Details |
 | --- | --- |
-| `source_path` | required · parser destination: `source_path`. No help text declared. |
-| `--module-id` | parser destination: `module_id`. No help text declared. |
-| `--language` | default: `'cpp'` · parser destination: `language`. No help text declared. |
-| `--confidence` | type: `float` · default: `1.0` · parser destination: `confidence`. No help text declared. |
-| `--evidence-json` | parser destination: `evidence_json`. No help text declared. |
+| `source_path` | required. |
+| `--module-id` | — |
+| `--language` | default: `'cpp'`. |
+| `--confidence` | type: `float` · default: `1.0`. |
+| `--evidence-json` | — |
 
 ### `x86decomp module list`
 
@@ -133,9 +133,9 @@ usage: x86decomp module list [-h]
 usage: x86decomp module show [-h] module_id
 ```
 
-| Argument | Exact parser declaration |
+| Argument | Details |
 | --- | --- |
-| `module_id` | required · parser destination: `module_id`. No help text declared. |
+| `module_id` | required. |
 
 ### `x86decomp module show-unit`
 
@@ -143,9 +143,9 @@ usage: x86decomp module show [-h] module_id
 usage: x86decomp module show-unit [-h] unit_id
 ```
 
-| Argument | Exact parser declaration |
+| Argument | Details |
 | --- | --- |
-| `unit_id` | required · parser destination: `unit_id`. No help text declared. |
+| `unit_id` | required. |
 
 ### `x86decomp module suggest`
 
@@ -153,17 +153,8 @@ usage: x86decomp module show-unit [-h] unit_id
 usage: x86decomp module suggest [-h] [--output OUTPUT]
 ```
 
-| Argument | Exact parser declaration |
+| Argument | Details |
 | --- | --- |
-| `--output` | parser destination: `output`. No help text declared. |
+| `--output` | — |
 
-## Source basis
 
-| Parser owner | Source file | SHA-256 |
-| --- | --- | --- |
-| canonical cli | `src/x86decomp/canonical.py` | `9dfc1a2d1ba31559b1a9cd31a0cda1ab1a1e88ffef0a47c4632995f649296166` |
-| reconstruction cli | `src/x86decomp/reconstruction/cli.py` | `dd5a6c7c987b3c49a3f7c1c635d60b34542e21f9346bd85f869013532c844cc4` |
-
-## Verification boundary
-
-This page is regenerated from the v0.7.8 parser surface. It documents syntax, parser-declared arguments, canonical owners, and source files; it does not claim that optional adapters, target binaries, compiler toolchains, or runtime inputs exist on the reader's machine.

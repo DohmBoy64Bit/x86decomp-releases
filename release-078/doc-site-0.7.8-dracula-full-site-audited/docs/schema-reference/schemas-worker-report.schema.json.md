@@ -1,25 +1,22 @@
 ---
 title: "worker-report.schema.json"
-description: "Exact source-derived schema reference for schemas/worker-report.schema.json"
+description: "Schema reference for schemas/worker-report.schema.json"
 ---
 
 # `schemas/worker-report.schema.json`
-
-This page is generated from the exact schema file in the v0.7.8 source tree. It is not an inferred or hand-written summary.
 
 | Field | Value |
 | --- | --- |
 | Scope | `toolkit` |
 | Source path | `schemas/worker-report.schema.json` |
-| SHA-256 | `f4fee8d629c5e963519a4f5ab25c4bb0856592421ee218fe7d047b5ebe089b3c` |
 | `$schema` | `https://json-schema.org/draft/2020-12/schema` |
 | `$id` | `urn:x86decomp:schema:worker-report:1` |
-| Title | Not declared |
+| Title | — |
 | Top-level type | `object` |
 | Top-level properties | 15 |
 | Required fields | 7 |
 | Definitions / `$defs` | 0 |
-| `additionalProperties` | Not declared |
+| `additionalProperties` | — |
 
 ## Required fields
 
@@ -35,21 +32,21 @@ This page is generated from the exact schema file in the v0.7.8 source tree. It 
 
 | Property | Type | Required | Description |
 | --- | --- | --- | --- |
-| `command` | `array` | yes | Not declared |
-| `duration_seconds` | `number` | no | Not declared |
-| `error` | `string, null` | no | Not declared |
-| `input_hashes` | `object` | yes | Not declared |
-| `isolation` | `Not declared` | yes | Not declared |
-| `isolation_strength` | `string` | yes | Not declared |
-| `output_hashes` | `object` | yes | Not declared |
-| `returncode` | `integer, null` | no | Not declared |
-| `schema_version` | `Not declared` | yes | Not declared |
-| `started_at` | `string` | no | Not declared |
-| `status` | `Not declared` | yes | Not declared |
-| `stderr_path` | `string` | no | Not declared |
-| `stderr_truncated` | `boolean` | no | Not declared |
-| `stdout_path` | `string` | no | Not declared |
-| `stdout_truncated` | `boolean` | no | Not declared |
+| `command` | `array` | yes | — |
+| `duration_seconds` | `number` | no | — |
+| `error` | `string, null` | no | — |
+| `input_hashes` | `object` | yes | — |
+| `isolation` | — | yes | — |
+| `isolation_strength` | `string` | yes | — |
+| `output_hashes` | `object` | yes | — |
+| `returncode` | `integer, null` | no | — |
+| `schema_version` | — | yes | — |
+| `started_at` | `string` | no | — |
+| `status` | — | yes | — |
+| `stderr_path` | `string` | no | — |
+| `stderr_truncated` | `boolean` | no | — |
+| `stdout_path` | `string` | no | — |
+| `stdout_truncated` | `boolean` | no | — |
 
 ## Definition keys
 
@@ -57,4 +54,3 @@ This schema declares no top-level `definitions` or `$defs` object.
 
 ## Source verification
 
-The schema audit verifies that this page names the same source path and SHA-256 hash as the file in the v0.7.8 toolkit archive, and that the source schema passes JSON Schema meta-validation.

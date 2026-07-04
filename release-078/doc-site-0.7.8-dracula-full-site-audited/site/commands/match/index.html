@@ -159,14 +159,6 @@
     </li>
                             
     <li class="drac-box-ternary">
-        <a href="../../release-artifacts/COMMAND_REFERENCE_STRICT_AUDIT/"
-            class="
-            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Command Audit
-        </a>
-    </li>
-                            
-    <li class="drac-box-ternary">
         <a href="../../schemas/"
             class="
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
@@ -212,35 +204,11 @@
                 <a href="../.."
                     class="
                     drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
-                    data-bs-toggle="collapse" data-bs-target="#release-evidence-collapse" aria-expanded="false">
-                    Release Evidence
+                    data-bs-toggle="collapse" data-bs-target="#project-collapse" aria-expanded="false">
+                    Project
                 </a>
-                <div class="collapse" id="release-evidence-collapse">
+                <div class="collapse" id="project-collapse">
                     <ul class="mb-5 drac-list drac-list-none">
-                            
-    <li class="drac-box-ternary">
-        <a href="../../release-evidence/"
-            class="
-            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Overview
-        </a>
-    </li>
-                            
-    <li class="drac-box-ternary">
-        <a href="../../verification/"
-            class="
-            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Verification
-        </a>
-    </li>
-                            
-    <li class="drac-box-ternary">
-        <a href="../../source-coverage/"
-            class="
-            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Source Coverage
-        </a>
-    </li>
                             
     <li class="drac-box-ternary">
         <a href="../../changelog/"
@@ -326,17 +294,17 @@
 <thead>
 <tr>
 <th>Argument</th>
-<th>Exact parser declaration</th>
+<th>Details</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>--project</code></td>
-<td>default: <code>'.'</code> · parser destination: <code>project</code>. project root used by the capability implementation (default: current directory)</td>
+<td>default: <code>'.'</code>. project root used by the capability implementation (default: current directory)</td>
 </tr>
 <tr>
 <td><code>--actor</code></td>
-<td>default: <code>'analyst'</code> · parser destination: <code>actor</code>. No help text declared.</td>
+<td>default: <code>'analyst'</code>.</td>
 </tr>
 </tbody>
 </table>
@@ -381,25 +349,25 @@
 <thead>
 <tr>
 <th>Argument</th>
-<th>Exact parser declaration</th>
+<th>Details</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>original</code></td>
-<td>required · parser destination: <code>original</code>. No help text declared.</td>
+<td>required.</td>
 </tr>
 <tr>
 <td><code>candidates_json</code></td>
-<td>required · parser destination: <code>candidates_json</code>. No help text declared.</td>
+<td>required.</td>
 </tr>
 <tr>
 <td><code>--policy</code></td>
-<td>choices: <code>exact</code>, <code>trailing-padding</code> · default: <code>'trailing-padding'</code> · parser destination: <code>policy</code>. No help text declared.</td>
+<td>choices: <code>exact</code>, <code>trailing-padding</code> · default: <code>'trailing-padding'</code>.</td>
 </tr>
 <tr>
 <td><code>--pad-bytes-json</code></td>
-<td>parser destination: <code>pad_bytes_json</code>. No help text declared.</td>
+<td>—</td>
 </tr>
 </tbody>
 </table>
@@ -413,29 +381,29 @@
 <thead>
 <tr>
 <th>Argument</th>
-<th>Exact parser declaration</th>
+<th>Details</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>original</code></td>
-<td>required · parser destination: <code>original</code>. No help text declared.</td>
+<td>required.</td>
 </tr>
 <tr>
 <td><code>candidate</code></td>
-<td>required · parser destination: <code>candidate</code>. No help text declared.</td>
+<td>required.</td>
 </tr>
 <tr>
 <td><code>--policy</code></td>
-<td>choices: <code>exact</code>, <code>trailing-padding</code> · default: <code>'trailing-padding'</code> · parser destination: <code>policy</code>. No help text declared.</td>
+<td>choices: <code>exact</code>, <code>trailing-padding</code> · default: <code>'trailing-padding'</code>.</td>
 </tr>
 <tr>
 <td><code>--pad-bytes-json</code></td>
-<td>parser destination: <code>pad_bytes_json</code>. No help text declared.</td>
+<td>—</td>
 </tr>
 <tr>
 <td><code>--protected-offsets-json</code></td>
-<td>parser destination: <code>protected_offsets_json</code>. No help text declared.</td>
+<td>—</td>
 </tr>
 </tbody>
 </table>
@@ -446,13 +414,13 @@
 <thead>
 <tr>
 <th>Argument</th>
-<th>Exact parser declaration</th>
+<th>Details</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>run_id</code></td>
-<td>required · parser destination: <code>run_id</code>. No help text declared.</td>
+<td>required.</td>
 </tr>
 </tbody>
 </table>
@@ -463,40 +431,16 @@
 <thead>
 <tr>
 <th>Argument</th>
-<th>Exact parser declaration</th>
+<th>Details</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>run_id</code></td>
-<td>required · parser destination: <code>run_id</code>. No help text declared.</td>
+<td>required.</td>
 </tr>
 </tbody>
-</table>
-<h2 id="source-basis">Source basis</h2>
-<table>
-<thead>
-<tr>
-<th>Parser owner</th>
-<th>Source file</th>
-<th>SHA-256</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>canonical cli</td>
-<td><code>src/x86decomp/canonical.py</code></td>
-<td><code>9dfc1a2d1ba31559b1a9cd31a0cda1ab1a1e88ffef0a47c4632995f649296166</code></td>
-</tr>
-<tr>
-<td>native cli</td>
-<td><code>src/x86decomp/native/cli.py</code></td>
-<td><code>13ff944cc50ff6ed433c32975a8edcd6318b4d4fd4c6c30580c27329a951dbf2</code></td>
-</tr>
-</tbody>
-</table>
-<h2 id="verification-boundary">Verification boundary</h2>
-<p>This page is regenerated from the v0.7.8 parser surface. It documents syntax, parser-declared arguments, canonical owners, and source files; it does not claim that optional adapters, target binaries, compiler toolchains, or runtime inputs exist on the reader's machine.</p></p>
+</table></p>
     </article>
 </section>
             <!-- endblock -->

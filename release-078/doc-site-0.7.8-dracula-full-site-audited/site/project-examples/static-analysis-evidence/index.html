@@ -159,14 +159,6 @@
     </li>
                             
     <li class="drac-box-ternary">
-        <a href="../../release-artifacts/COMMAND_REFERENCE_STRICT_AUDIT/"
-            class="
-            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Command Audit
-        </a>
-    </li>
-                            
-    <li class="drac-box-ternary">
         <a href="../../schemas/"
             class="
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
@@ -212,35 +204,11 @@
                 <a href="../.."
                     class="
                     drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
-                    data-bs-toggle="collapse" data-bs-target="#release-evidence-collapse" aria-expanded="false">
-                    Release Evidence
+                    data-bs-toggle="collapse" data-bs-target="#project-collapse" aria-expanded="false">
+                    Project
                 </a>
-                <div class="collapse" id="release-evidence-collapse">
+                <div class="collapse" id="project-collapse">
                     <ul class="mb-5 drac-list drac-list-none">
-                            
-    <li class="drac-box-ternary">
-        <a href="../../release-evidence/"
-            class="
-            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Overview
-        </a>
-    </li>
-                            
-    <li class="drac-box-ternary">
-        <a href="../../verification/"
-            class="
-            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Verification
-        </a>
-    </li>
-                            
-    <li class="drac-box-ternary">
-        <a href="../../source-coverage/"
-            class="
-            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Source Coverage
-        </a>
-    </li>
                             
     <li class="drac-box-ternary">
         <a href="../../changelog/"
@@ -329,7 +297,6 @@
 <a id="deliverables"></a>
 <a id="limits"></a>
 <a id="source-basis"></a></p>
-<p>Section: Project examples</p>
 <h1 id="example-static-analysis-and-evidence-project">Example: static analysis and evidence project</h1>
 <p>Inventory a native PE, supporting symbols, objects, libraries, and function artifacts without executing the target or claiming reconstructed source.</p>
 <blockquote>
@@ -423,45 +390,38 @@ x86decomp db-constraint-conflicts project/analysis.sqlite pe-rva:00401230 callin
 <thead>
 <tr>
 <th>Evidence file</th>
-<th>SHA-256</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>src/x86decomp/cli.py</code></td>
-<td><code>21e0654ced2f5dd0588adcbedec328613fba524ff1e0a91ef07d63cbbf88288c</code></td>
 </tr>
 <tr>
 <td><code>src/x86decomp/pe.py</code></td>
-<td><code>39a5dd1b26da8d0ef84e8ff247183068eb4943ab38211df3c56c43ca9a6911c0</code></td>
 </tr>
 <tr>
 <td><code>src/x86decomp/ghidra.py</code></td>
-<td><code>98657d48a9d3ebb79eaf951aa8676ffd7ca696c2ba2f07fe8a5c4f0ad622c2b3</code></td>
 </tr>
 <tr>
 <td><code>src/x86decomp/disassembly.py</code></td>
-<td><code>cc86a46f8c8674a6e14304158bd1d2467fb09ccbb00778c116204b0a639638b3</code></td>
 </tr>
 <tr>
 <td><code>src/x86decomp/evidence.py</code></td>
-<td><code>de8befd97c8e7f0529f7c3c2750836f8f38fab52e26987cf390d725faad3ee1e</code></td>
 </tr>
 <tr>
 <td><code>src/x86decomp/analysis_db.py</code></td>
-<td><code>409e503d6c264dba48a00e1d1afc475ce735cf25f1ec4aab7ac41b07ed5b9bad</code></td>
 </tr>
 <tr>
 <td><code>tests/test_ghidra.py</code></td>
-<td><code>1c9a934bad943761f8d9b6bc22509a054a8ead82747d2091d5f7e84c5682b88b</code></td>
 </tr>
 </tbody>
 </table>
 <h2 id="related-examples">Related examples</h2>
-<p>[Matching project</p>
-<p>Open the source-verified workflow.](matching-project.md)[Functional project</p>
-<p>Open the source-verified workflow.](functional-project.md)[Hybrid composition</p>
-<p>Open the source-verified workflow.](hybrid-project.md)</p></p>
+<ul>
+<li><a href="../matching-project/">Matching project</a></li>
+<li><a href="../functional-project/">Functional project</a></li>
+<li><a href="../hybrid-project/">Hybrid composition</a></li>
+</ul></p>
     </article>
 </section>
             <!-- endblock -->

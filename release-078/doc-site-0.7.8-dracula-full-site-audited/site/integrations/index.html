@@ -159,14 +159,6 @@
     </li>
                             
     <li class="drac-box-ternary">
-        <a href="../release-artifacts/COMMAND_REFERENCE_STRICT_AUDIT/"
-            class="
-            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Command Audit
-        </a>
-    </li>
-                            
-    <li class="drac-box-ternary">
         <a href="../schemas/"
             class="
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
@@ -212,35 +204,11 @@
                 <a href=".."
                     class="
                     drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
-                    data-bs-toggle="collapse" data-bs-target="#release-evidence-collapse" aria-expanded="false">
-                    Release Evidence
+                    data-bs-toggle="collapse" data-bs-target="#project-collapse" aria-expanded="false">
+                    Project
                 </a>
-                <div class="collapse" id="release-evidence-collapse">
+                <div class="collapse" id="project-collapse">
                     <ul class="mb-5 drac-list drac-list-none">
-                            
-    <li class="drac-box-ternary">
-        <a href="../release-evidence/"
-            class="
-            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Overview
-        </a>
-    </li>
-                            
-    <li class="drac-box-ternary">
-        <a href="../verification/"
-            class="
-            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Verification
-        </a>
-    </li>
-                            
-    <li class="drac-box-ternary">
-        <a href="../source-coverage/"
-            class="
-            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Source Coverage
-        </a>
-    </li>
                             
     <li class="drac-box-ternary">
         <a href="../changelog/"
@@ -636,8 +604,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Source:</strong> <code>test-suite/src/x86decomp_testkit/adapters/catalog.py</code><br />
-<strong>SHA-256:</strong> <code>48d74c2b917d045b5cc0fe50956d32e1f9717f245a77eb735bae0d9c5b4ca1b9</code></p>
+<p><strong>Source:</strong> <code>test-suite/src/x86decomp_testkit/adapters/catalog.py</code>  </p>
 <h2 id="local-model-provider-profiles">Local-model provider profiles</h2>
 <p>The <code>llm</code> capability implements <strong>6 provider presets</strong>. Provider support means the declared HTTP contract is implemented; it is not a claim that every served model can produce matching C.</p>
 <table>
@@ -702,8 +669,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Source:</strong> <code>src/x86decomp/local_llm/profiles.py</code><br />
-<strong>SHA-256:</strong> <code>5bce6554b8d5dbccd0a18c965bae92e82cc8517f7c86997621d662f3bcff1ca2</code></p>
+<p><strong>Source:</strong> <code>src/x86decomp/local_llm/profiles.py</code>  </p>
 <p>Profiles are loopback-only by default. Remote endpoints require explicit opt-in, and secrets are referenced by environment-variable name rather than stored in profile JSON.</p>
 <h2 id="078-adapter-capabilities">0.7.8 adapter capabilities</h2>
 <p>The harness now reports protocol capabilities separately from product adapters. <code>lm-studio-http</code> can satisfy OpenAI-compatible local-LLM coverage through a loopback <code>/v1/models</code> probe without marking <code>ollama</code>, <code>llama-server</code>, <code>localai</code>, or <code>vllm</code> as installed.</p></p>

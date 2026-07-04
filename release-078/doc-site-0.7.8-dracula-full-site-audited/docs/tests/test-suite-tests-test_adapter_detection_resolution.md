@@ -5,7 +5,6 @@ description: Test source reference for test-suite/tests/test_adapter_detection_r
 
 # `test-suite/tests/test_adapter_detection_resolution.py`
 
-**SHA-256:** `bb43b876b5eaaa74b2628c333716d035dcea15ae5231560b06bce4813abfb560`
 
 | Test symbol | Kind | Line | End line |
 | --- | --- | ---: | ---: |

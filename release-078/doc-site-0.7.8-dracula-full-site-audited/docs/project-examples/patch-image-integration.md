@@ -3,7 +3,6 @@ title: 'Example: patch-image integration project'
 description: Replace one caller-selected in-place byte range in a copied PE, preserve
   the pristine original, refresh the PE checksum, and validate the derived image under
   explicit hashes and scenarios.
-original_path: project-examples/patch-image-integration.html
 ---
 
 <a id="model"></a>
@@ -19,8 +18,6 @@ original_path: project-examples/patch-image-integration.html
 <a id="record"></a>
 <a id="limits"></a>
 <a id="source-basis"></a>
-
-Section: Project examples
 
 # Example: patch-image integration project
 
@@ -134,20 +131,16 @@ A successful patch-image workflow can claim only that a copied PE was modified a
 
 > **Verification model.** Command syntax is checked against the live parser. The source files below are hashed from the current release; implementation and test rows are retained as independent truth boundaries.
 
-| Evidence file | SHA-256 |
-| --- | --- |
-| `src/x86decomp/cli.py` | `21e0654ced2f5dd0588adcbedec328613fba524ff1e0a91ef07d63cbbf88288c` |
-| `src/x86decomp/patching.py` | `61b9d802fc2c9c89f06877876f72efb7fc16d3a1fb283dddfd561dfd4fe61741` |
-| `src/x86decomp/pe32.py` | `746651d78b0b8401565dd22e99f73c8c902b13400fd80094d4675ab52c8c4be5` |
-| `tests/test_pe64_patch_hybrid.py` | `6894dd0e5abce06a30df7ce445f6cf7faa87bcc16dac9f314f187e938697a62f` |
+| Evidence file |
+| --- |
+| `src/x86decomp/cli.py` |
+| `src/x86decomp/patching.py` |
+| `src/x86decomp/pe32.py` |
+| `tests/test_pe64_patch_hybrid.py` |
 
 
 ## Related examples
 
-[Matching project
-
-Open the source-verified workflow.](matching-project.md)[Functional project
-
-Open the source-verified workflow.](functional-project.md)[Hybrid composition
-
-Open the source-verified workflow.](hybrid-project.md)
+- [Matching project](matching-project.md)
+- [Functional project](functional-project.md)
+- [Hybrid composition](hybrid-project.md)

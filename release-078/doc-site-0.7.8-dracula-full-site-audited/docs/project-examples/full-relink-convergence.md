@@ -3,7 +3,6 @@ title: 'Example: full-relink and whole-image convergence project'
 description: Correlate PE, MAP, COFF, and library evidence into an explicit linker
   plan, execute a manifest-driven relink, compare whole images, and iterate with durable
   convergence history.
-original_path: project-examples/full-relink-convergence.html
 ---
 
 <a id="model"></a>
@@ -20,8 +19,6 @@ original_path: project-examples/full-relink-convergence.html
 <a id="state"></a>
 <a id="limits"></a>
 <a id="source-basis"></a>
-
-Section: Project examples
 
 # Example: full-relink and whole-image convergence project
 
@@ -167,22 +164,18 @@ x86decomp workflow-update project pe-rva:00401230 --matching-status full_relink_
 
 > **Verification model.** Command syntax is checked against the live parser. The source files below are hashed from the current release; implementation and test rows are retained as independent truth boundaries.
 
-| Evidence file | SHA-256 |
-| --- | --- |
-| `src/x86decomp/cli.py` | `21e0654ced2f5dd0588adcbedec328613fba524ff1e0a91ef07d63cbbf88288c` |
-| `src/x86decomp/linker_reconstruction.py` | `f67bc3077e7d54a9a32e542113cc28eadf00fa581c8e3d3c26e5c1b45a4e0900` |
-| `src/x86decomp/relink.py` | `d401db042d4cc8300ccd4babd28cea400dca824d187a7caf0a1f3ead407fb296` |
-| `src/x86decomp/image_match.py` | `a9c72f376532369da77440496a1ea07564da5071ef8e6108e29c58e33e96fcf4` |
-| `src/x86decomp/convergence.py` | `2b943e9c8c2399089e1b8c2815c0de4cb1bcf0468c09e64a647fef3508922f74` |
-| `tests/test_relink.py` | `580ca742c9d4f1d53de889f6f6bc5800e04147a31d86f0424a6d7a7252cefbb1` |
+| Evidence file |
+| --- |
+| `src/x86decomp/cli.py` |
+| `src/x86decomp/linker_reconstruction.py` |
+| `src/x86decomp/relink.py` |
+| `src/x86decomp/image_match.py` |
+| `src/x86decomp/convergence.py` |
+| `tests/test_relink.py` |
 
 
 ## Related examples
 
-[Matching project
-
-Open the source-verified workflow.](matching-project.md)[Functional project
-
-Open the source-verified workflow.](functional-project.md)[Hybrid composition
-
-Open the source-verified workflow.](hybrid-project.md)
+- [Matching project](matching-project.md)
+- [Functional project](functional-project.md)
+- [Hybrid composition](hybrid-project.md)

@@ -5,7 +5,6 @@ description: Test source reference for tests/native/test_cli_schemas.py.
 
 # `tests/native/test_cli_schemas.py`
 
-**SHA-256:** `25f55fd57cbd1d5d4bf38b67c0796cd95a199390ddce4c12ac2dcbeac7ec2aaa`
 
 | Test symbol | Kind | Line | End line |
 | --- | --- | ---: | ---: |

@@ -5,7 +5,6 @@ description: Test source reference for tests/test_coff.py.
 
 # `tests/test_coff.py`
 
-**SHA-256:** `57797f4ad3e7871224434918b93fa79fc4046042cf54aa4f2c1fc1ddca99a8df`
 
 | Test symbol | Kind | Line | End line |
 | --- | --- | ---: | ---: |

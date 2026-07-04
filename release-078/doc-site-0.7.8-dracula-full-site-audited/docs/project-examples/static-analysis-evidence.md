@@ -2,7 +2,6 @@
 title: 'Example: static analysis and evidence project'
 description: Inventory a native PE, supporting symbols, objects, libraries, and function
   artifacts without executing the target or claiming reconstructed source.
-original_path: project-examples/static-analysis-evidence.html
 ---
 
 <a id="model"></a>
@@ -19,8 +18,6 @@ original_path: project-examples/static-analysis-evidence.html
 <a id="deliverables"></a>
 <a id="limits"></a>
 <a id="source-basis"></a>
-
-Section: Project examples
 
 # Example: static analysis and evidence project
 
@@ -151,23 +148,19 @@ Static analysis can establish observed bytes, metadata, references, and tool-der
 
 > **Verification model.** Command syntax is checked against the live parser. The source files below are hashed from the current release; implementation and test rows are retained as independent truth boundaries.
 
-| Evidence file | SHA-256 |
-| --- | --- |
-| `src/x86decomp/cli.py` | `21e0654ced2f5dd0588adcbedec328613fba524ff1e0a91ef07d63cbbf88288c` |
-| `src/x86decomp/pe.py` | `39a5dd1b26da8d0ef84e8ff247183068eb4943ab38211df3c56c43ca9a6911c0` |
-| `src/x86decomp/ghidra.py` | `98657d48a9d3ebb79eaf951aa8676ffd7ca696c2ba2f07fe8a5c4f0ad622c2b3` |
-| `src/x86decomp/disassembly.py` | `cc86a46f8c8674a6e14304158bd1d2467fb09ccbb00778c116204b0a639638b3` |
-| `src/x86decomp/evidence.py` | `de8befd97c8e7f0529f7c3c2750836f8f38fab52e26987cf390d725faad3ee1e` |
-| `src/x86decomp/analysis_db.py` | `409e503d6c264dba48a00e1d1afc475ce735cf25f1ec4aab7ac41b07ed5b9bad` |
-| `tests/test_ghidra.py` | `1c9a934bad943761f8d9b6bc22509a054a8ead82747d2091d5f7e84c5682b88b` |
+| Evidence file |
+| --- |
+| `src/x86decomp/cli.py` |
+| `src/x86decomp/pe.py` |
+| `src/x86decomp/ghidra.py` |
+| `src/x86decomp/disassembly.py` |
+| `src/x86decomp/evidence.py` |
+| `src/x86decomp/analysis_db.py` |
+| `tests/test_ghidra.py` |
 
 
 ## Related examples
 
-[Matching project
-
-Open the source-verified workflow.](matching-project.md)[Functional project
-
-Open the source-verified workflow.](functional-project.md)[Hybrid composition
-
-Open the source-verified workflow.](hybrid-project.md)
+- [Matching project](matching-project.md)
+- [Functional project](functional-project.md)
+- [Hybrid composition](hybrid-project.md)

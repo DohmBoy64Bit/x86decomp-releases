@@ -5,7 +5,6 @@ description: Test source reference for tests/reconstruction/test_project_headers
 
 # `tests/reconstruction/test_project_headers_builds.py`
 
-**SHA-256:** `48264c55d224edf9ad5026b86eb4ef1ba7c900fe0e1ebe341c12c16aaec57d95`
 
 | Test symbol | Kind | Line | End line |
 | --- | --- | ---: | ---: |

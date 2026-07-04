@@ -5,7 +5,6 @@ description: Test source reference for test-suite/tests/test_archive_security.py
 
 # `test-suite/tests/test_archive_security.py`
 
-**SHA-256:** `e731b4d36cbf94828e09245b2118b858bfd6c284e1d8a4be43c7f72b36412792`
 
 | Test symbol | Kind | Line | End line |
 | --- | --- | ---: | ---: |

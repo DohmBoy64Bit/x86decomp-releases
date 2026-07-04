@@ -5,7 +5,6 @@ description: Test source reference for tests/test_integration.py.
 
 # `tests/test_integration.py`
 
-**SHA-256:** `0175ece91623baf3dd4092ddab3ba03bd47308082bccc85de135ce2b80b47ed0`
 
 | Test symbol | Kind | Line | End line |
 | --- | --- | ---: | ---: |

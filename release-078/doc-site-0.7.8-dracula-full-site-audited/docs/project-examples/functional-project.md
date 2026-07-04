@@ -3,7 +3,6 @@ title: 'Example: end-to-end functional project'
 description: Reconstruct a function for declared behavioral equivalence using compilation,
   ABI validation, bounded concrete execution, bounded symbolic checks, and explicit
   integration scenarios.
-original_path: project-examples/functional-project.html
 ---
 
 <a id="model"></a>
@@ -19,8 +18,6 @@ original_path: project-examples/functional-project.html
 <a id="state"></a>
 <a id="limits"></a>
 <a id="source-basis"></a>
-
-Section: Project examples
 
 # Example: end-to-end functional project
 
@@ -171,22 +168,18 @@ Attach additional dynamic and symbolic reports under distinct report kinds as th
 
 > **Verification model.** Command syntax is checked against the live parser. The source files below are hashed from the current release; implementation and test rows are retained as independent truth boundaries.
 
-| Evidence file | SHA-256 |
-| --- | --- |
-| `src/x86decomp/cli.py` | `21e0654ced2f5dd0588adcbedec328613fba524ff1e0a91ef07d63cbbf88288c` |
-| `src/x86decomp/dynamic.py` | `a09cbba16f498158cf30191397884f0a70051c767b778cd520ac229b6e85e451` |
-| `src/x86decomp/symbolic.py` | `93d98f6e85a01a107881131821d5eb04875d310795c4f173448918c5a96fdcd3` |
-| `src/x86decomp/integration.py` | `cb8157c8210544e2ed4730e8bdb01f0a77dc9d05f683d43154cba1bf93c1e845` |
-| `src/x86decomp/workflow.py` | `cae8a093f08f66f9412393e59867c4d32ca7caf88533a175d22eebe1f325c0a5` |
-| `tests/test_dynamic_symbolic.py` | `0b21be2ee69be29d2dde6951f147195bd8042462690dea72fac0b6509deb3402` |
+| Evidence file |
+| --- |
+| `src/x86decomp/cli.py` |
+| `src/x86decomp/dynamic.py` |
+| `src/x86decomp/symbolic.py` |
+| `src/x86decomp/integration.py` |
+| `src/x86decomp/workflow.py` |
+| `tests/test_dynamic_symbolic.py` |
 
 
 ## Related examples
 
-[Matching project
-
-Open the source-verified workflow.](matching-project.md)[Hybrid composition
-
-Open the source-verified workflow.](hybrid-project.md)[Static analysis
-
-Open the source-verified workflow.](static-analysis-evidence.md)
+- [Matching project](matching-project.md)
+- [Hybrid composition](hybrid-project.md)
+- [Static analysis](static-analysis-evidence.md)

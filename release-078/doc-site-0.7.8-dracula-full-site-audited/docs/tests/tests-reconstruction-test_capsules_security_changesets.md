@@ -5,7 +5,6 @@ description: Test source reference for tests/reconstruction/test_capsules_securi
 
 # `tests/reconstruction/test_capsules_security_changesets.py`
 
-**SHA-256:** `574337c2125e436536fcc35142cd12b667c218e5b6dece73bf32a44fb6ad0bd6`
 
 | Test symbol | Kind | Line | End line |
 | --- | --- | ---: | ---: |

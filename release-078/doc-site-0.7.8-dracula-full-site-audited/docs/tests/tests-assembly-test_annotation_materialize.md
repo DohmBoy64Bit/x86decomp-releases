@@ -5,7 +5,6 @@ description: Test source reference for tests/assembly/test_annotation_materializ
 
 # `tests/assembly/test_annotation_materialize.py`
 
-**SHA-256:** `46aeb940a0ccb02b0312ef413ce123c3c647c0224a1f8b1f571d128ab733574f`
 
 | Test symbol | Kind | Line | End line |
 | --- | --- | ---: | ---: |

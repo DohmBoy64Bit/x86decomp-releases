@@ -2,7 +2,6 @@
 title: 'Example: end-to-end hybrid composition'
 description: Keep byte-form assembly fallbacks continuously buildable while matching
   and functional source lanes advance independently for each imported function.
-original_path: project-examples/hybrid-project.html
 ---
 
 <a id="model"></a>
@@ -19,8 +18,6 @@ original_path: project-examples/hybrid-project.html
 <a id="state"></a>
 <a id="limits"></a>
 <a id="source-basis"></a>
-
-Section: Project examples
 
 # Example: end-to-end hybrid composition
 
@@ -173,22 +170,18 @@ This means the candidate passed the project’s declared integration scenarios b
 
 > **Verification model.** Command syntax is checked against the live parser. The source files below are hashed from the current release; implementation and test rows are retained as independent truth boundaries.
 
-| Evidence file | SHA-256 |
-| --- | --- |
-| `src/x86decomp/cli.py` | `21e0654ced2f5dd0588adcbedec328613fba524ff1e0a91ef07d63cbbf88288c` |
-| `src/x86decomp/hybrid.py` | `721221b69c86bd2e7152ea2f322c9b48d89a01891feb6906038509a1f4592e2f` |
-| `src/x86decomp/workflow.py` | `cae8a093f08f66f9412393e59867c4d32ca7caf88533a175d22eebe1f325c0a5` |
-| `src/x86decomp/dynamic.py` | `a09cbba16f498158cf30191397884f0a70051c767b778cd520ac229b6e85e451` |
-| `src/x86decomp/symbolic.py` | `93d98f6e85a01a107881131821d5eb04875d310795c4f173448918c5a96fdcd3` |
-| `tests/test_pe64_patch_hybrid.py` | `6894dd0e5abce06a30df7ce445f6cf7faa87bcc16dac9f314f187e938697a62f` |
+| Evidence file |
+| --- |
+| `src/x86decomp/cli.py` |
+| `src/x86decomp/hybrid.py` |
+| `src/x86decomp/workflow.py` |
+| `src/x86decomp/dynamic.py` |
+| `src/x86decomp/symbolic.py` |
+| `tests/test_pe64_patch_hybrid.py` |
 
 
 ## Related examples
 
-[Matching project
-
-Open the source-verified workflow.](matching-project.md)[Functional project
-
-Open the source-verified workflow.](functional-project.md)[Static analysis
-
-Open the source-verified workflow.](static-analysis-evidence.md)
+- [Matching project](matching-project.md)
+- [Functional project](functional-project.md)
+- [Static analysis](static-analysis-evidence.md)

@@ -1,6 +1,6 @@
 ---
 title: x86decomp loop
-description: Exact v0.7.8 parser-derived reference for `x86decomp loop`.
+description: Command reference for `x86decomp loop`.
 ---
 
 
@@ -17,10 +17,10 @@ usage: x86decomp loop [-h] [--project PROJECT] [--actor ACTOR]
 
 ## Arguments
 
-| Argument | Exact parser declaration |
+| Argument | Details |
 | --- | --- |
-| `--project` | default: `'.'` · parser destination: `project`. project root used by the capability implementation (default: current directory) |
-| `--actor` | default: `'analyst'` · parser destination: `actor`. No help text declared. |
+| `--project` | default: `'.'`. project root used by the capability implementation (default: current directory) |
+| `--actor` | default: `'analyst'`. |
 
 ## Actions
 
@@ -45,19 +45,19 @@ usage: x86decomp loop run [-h] [--symbol SYMBOL] [--policy POLICY]
                           original rva slot_size
 ```
 
-| Argument | Exact parser declaration |
+| Argument | Details |
 | --- | --- |
-| `function_id` | required · parser destination: `function_id`. No help text declared. |
-| `source` | required · parser destination: `source`. No help text declared. |
-| `compile_command_json` | required · parser destination: `compile_command_json`. No help text declared. |
-| `candidate` | required · parser destination: `candidate`. No help text declared. |
-| `original` | required · parser destination: `original`. No help text declared. |
-| `rva` | required · parser destination: `rva`. No help text declared. |
-| `slot_size` | required · type: `int` · parser destination: `slot_size`. No help text declared. |
-| `--symbol` | parser destination: `symbol`. No help text declared. |
-| `--policy` | default: `'trailing-padding'` · parser destination: `policy`. No help text declared. |
-| `--timeout` | type: `int` · default: `120` · parser destination: `timeout`. No help text declared. |
-| `--execute` | nargs: `0` · default: `False` · parser destination: `execute`. No help text declared. |
+| `function_id` | required. |
+| `source` | required. |
+| `compile_command_json` | required. |
+| `candidate` | required. |
+| `original` | required. |
+| `rva` | required. |
+| `slot_size` | required · type: `int`. |
+| `--symbol` | — |
+| `--policy` | default: `'trailing-padding'`. |
+| `--timeout` | type: `int` · default: `120`. |
+| `--execute` | nargs: `0` · default: `False`. |
 
 ### `x86decomp loop show`
 
@@ -65,17 +65,8 @@ usage: x86decomp loop run [-h] [--symbol SYMBOL] [--policy POLICY]
 usage: x86decomp loop show [-h] loop_id
 ```
 
-| Argument | Exact parser declaration |
+| Argument | Details |
 | --- | --- |
-| `loop_id` | required · parser destination: `loop_id`. No help text declared. |
+| `loop_id` | required. |
 
-## Source basis
 
-| Parser owner | Source file | SHA-256 |
-| --- | --- | --- |
-| canonical cli | `src/x86decomp/canonical.py` | `9dfc1a2d1ba31559b1a9cd31a0cda1ab1a1e88ffef0a47c4632995f649296166` |
-| native cli | `src/x86decomp/native/cli.py` | `13ff944cc50ff6ed433c32975a8edcd6318b4d4fd4c6c30580c27329a951dbf2` |
-
-## Verification boundary
-
-This page is regenerated from the v0.7.8 parser surface. It documents syntax, parser-declared arguments, canonical owners, and source files; it does not claim that optional adapters, target binaries, compiler toolchains, or runtime inputs exist on the reader's machine.

@@ -159,14 +159,6 @@
     </li>
                             
     <li class="drac-box-ternary">
-        <a href="../../release-artifacts/COMMAND_REFERENCE_STRICT_AUDIT/"
-            class="
-            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Command Audit
-        </a>
-    </li>
-                            
-    <li class="drac-box-ternary">
         <a href="../../schemas/"
             class="
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
@@ -212,35 +204,11 @@
                 <a href="../.."
                     class="
                     drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
-                    data-bs-toggle="collapse" data-bs-target="#release-evidence-collapse" aria-expanded="false">
-                    Release Evidence
+                    data-bs-toggle="collapse" data-bs-target="#project-collapse" aria-expanded="false">
+                    Project
                 </a>
-                <div class="collapse" id="release-evidence-collapse">
+                <div class="collapse" id="project-collapse">
                     <ul class="mb-5 drac-list drac-list-none">
-                            
-    <li class="drac-box-ternary">
-        <a href="../../release-evidence/"
-            class="
-            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Overview
-        </a>
-    </li>
-                            
-    <li class="drac-box-ternary">
-        <a href="../../verification/"
-            class="
-            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Verification
-        </a>
-    </li>
-                            
-    <li class="drac-box-ternary">
-        <a href="../../source-coverage/"
-            class="
-            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Source Coverage
-        </a>
-    </li>
                             
     <li class="drac-box-ternary">
         <a href="../../changelog/"
@@ -329,7 +297,6 @@
 <a id="restore"></a>
 <a id="limits"></a>
 <a id="source-basis"></a></p>
-<p>Section: Project examples</p>
 <h1 id="example-project-operations-and-recovery-workflow">Example: project operations and recovery workflow</h1>
 <p>Maintain a long-lived project with checks, deterministic backups, safe restore, dry-run migration and repair, content-addressed garbage collection, durable pipelines, retries, cancellation, and stale-run recovery.</p>
 <blockquote>
@@ -418,41 +385,35 @@ x86decomp content-verify restored-project/artifacts
 <thead>
 <tr>
 <th>Evidence file</th>
-<th>SHA-256</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>src/x86decomp/cli.py</code></td>
-<td><code>21e0654ced2f5dd0588adcbedec328613fba524ff1e0a91ef07d63cbbf88288c</code></td>
 </tr>
 <tr>
 <td><code>src/x86decomp/project_state.py</code></td>
-<td><code>e78c286125050d9b582e38acdefcf3c901f0634372af8b287942ca8b10aa9aee</code></td>
 </tr>
 <tr>
 <td><code>src/x86decomp/orchestrator.py</code></td>
-<td><code>752a6e6b5d4f931007e93ee7898f6a0d2500b044266c7153a27be7e7eb49477e</code></td>
 </tr>
 <tr>
 <td><code>src/x86decomp/content_store.py</code></td>
-<td><code>2348ce9593959da0a9f52b144435a70b30965443a06e701c0ff9cf7c86e7d1a4</code></td>
 </tr>
 <tr>
 <td><code>src/x86decomp/security_audit.py</code></td>
-<td><code>0b7574a71e4c8677352766c9358f8022871e566f43a9277050b887648f4ab22c</code></td>
 </tr>
 <tr>
 <td><code>tests/test_project.py</code></td>
-<td><code>04d73c197e4b7979731c140bef24e36ab323099e715d5462c95983a83d558c2b</code></td>
 </tr>
 </tbody>
 </table>
 <h2 id="related-examples">Related examples</h2>
-<p>[Matching project</p>
-<p>Open the source-verified workflow.](matching-project.md)[Functional project</p>
-<p>Open the source-verified workflow.](functional-project.md)[Hybrid composition</p>
-<p>Open the source-verified workflow.](hybrid-project.md)</p></p>
+<ul>
+<li><a href="../matching-project/">Matching project</a></li>
+<li><a href="../functional-project/">Functional project</a></li>
+<li><a href="../hybrid-project/">Hybrid composition</a></li>
+</ul></p>
     </article>
 </section>
             <!-- endblock -->

@@ -5,7 +5,6 @@ description: Test source reference for tests/governance/test_governance_cli_sche
 
 # `tests/governance/test_governance_cli_schemas.py`
 
-**SHA-256:** `dc1c807a185938728d8c9483e2cacd38ded6634c167fce3f5374759bc5917345`
 
 | Test symbol | Kind | Line | End line |
 | --- | --- | ---: | ---: |

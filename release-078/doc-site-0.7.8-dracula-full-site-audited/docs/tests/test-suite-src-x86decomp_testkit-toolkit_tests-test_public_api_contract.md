@@ -5,7 +5,6 @@ description: Test source reference for test-suite/src/x86decomp_testkit/toolkit_
 
 # `test-suite/src/x86decomp_testkit/toolkit_tests/test_public_api_contract.py`
 
-**SHA-256:** `ae0c0c90bdea8a422a26bc60094b8604d96824828dddde14ff718e8e86fd8700`
 
 | Test symbol | Kind | Line | End line |
 | --- | --- | ---: | ---: |

@@ -159,14 +159,6 @@
     </li>
                             
     <li class="drac-box-ternary">
-        <a href="../../release-artifacts/COMMAND_REFERENCE_STRICT_AUDIT/"
-            class="
-            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Command Audit
-        </a>
-    </li>
-                            
-    <li class="drac-box-ternary">
         <a href="../../schemas/"
             class="
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
@@ -212,35 +204,11 @@
                 <a href="../.."
                     class="
                     drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
-                    data-bs-toggle="collapse" data-bs-target="#release-evidence-collapse" aria-expanded="false">
-                    Release Evidence
+                    data-bs-toggle="collapse" data-bs-target="#project-collapse" aria-expanded="false">
+                    Project
                 </a>
-                <div class="collapse" id="release-evidence-collapse">
+                <div class="collapse" id="project-collapse">
                     <ul class="mb-5 drac-list drac-list-none">
-                            
-    <li class="drac-box-ternary">
-        <a href="../../release-evidence/"
-            class="
-            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Overview
-        </a>
-    </li>
-                            
-    <li class="drac-box-ternary">
-        <a href="../../verification/"
-            class="
-            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Verification
-        </a>
-    </li>
-                            
-    <li class="drac-box-ternary">
-        <a href="../../source-coverage/"
-            class="
-            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Source Coverage
-        </a>
-    </li>
                             
     <li class="drac-box-ternary">
         <a href="../../changelog/"
@@ -333,75 +301,56 @@
 <thead>
 <tr>
 <th>Argument</th>
-<th>Exact parser declaration</th>
+<th>Details</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>project</code></td>
-<td>required · type: <code>_path</code> · parser destination: <code>project</code>. No help text declared.</td>
+<td>required · type: <code>path</code>.</td>
 </tr>
 <tr>
 <td><code>function_id</code></td>
-<td>required · parser destination: <code>function_id</code>. No help text declared.</td>
+<td>required.</td>
 </tr>
 <tr>
 <td><code>--source-stage</code></td>
-<td>choices: <code>original_bytes</code>, <code>generated_assembly</code>, <code>decompiler_candidate</code>, <code>human_candidate</code>, <code>accepted_source</code> · parser destination: <code>source_stage</code>. No help text declared.</td>
+<td>choices: <code>original_bytes</code>, <code>generated_assembly</code>, <code>decompiler_candidate</code>, <code>human_candidate</code>, <code>accepted_source</code>.</td>
 </tr>
 <tr>
 <td><code>--matching-status</code></td>
-<td>choices: <code>not_started</code>, <code>decompiled</code>, <code>compiles</code>, <code>abi_compatible</code>, <code>instruction_similar</code>, <code>byte_matched</code>, <code>image_integrated</code>, <code>full_relink_validated</code>, <code>blocked</code> · parser destination: <code>matching_status</code>. No help text declared.</td>
+<td>choices: <code>not_started</code>, <code>decompiled</code>, <code>compiles</code>, <code>abi_compatible</code>, <code>instruction_similar</code>, <code>byte_matched</code>, <code>image_integrated</code>, <code>full_relink_validated</code>, <code>blocked</code>.</td>
 </tr>
 <tr>
 <td><code>--functional-status</code></td>
-<td>choices: <code>not_started</code>, <code>decompiled</code>, <code>compiles</code>, <code>abi_compatible</code>, <code>differentially_validated</code>, <code>symbolically_bounded</code>, <code>integration_validated</code>, <code>blocked</code> · parser destination: <code>functional_status</code>. No help text declared.</td>
+<td>choices: <code>not_started</code>, <code>decompiled</code>, <code>compiles</code>, <code>abi_compatible</code>, <code>differentially_validated</code>, <code>symbolically_bounded</code>, <code>integration_validated</code>, <code>blocked</code>.</td>
 </tr>
 <tr>
 <td><code>--candidate</code></td>
-<td>parser destination: <code>candidate</code>. No help text declared.</td>
+<td>—</td>
 </tr>
 <tr>
 <td><code>--compiler-profile</code></td>
-<td>parser destination: <code>compiler_profile</code>. No help text declared.</td>
+<td>—</td>
 </tr>
 <tr>
 <td><code>--report-kind</code></td>
-<td>parser destination: <code>report_kind</code>. No help text declared.</td>
+<td>—</td>
 </tr>
 <tr>
 <td><code>--report-path</code></td>
-<td>parser destination: <code>report_path</code>. No help text declared.</td>
+<td>—</td>
 </tr>
 <tr>
 <td><code>--blocker</code></td>
-<td>parser destination: <code>blocker</code>. No help text declared.</td>
+<td>—</td>
 </tr>
 <tr>
 <td><code>--allow-regression</code></td>
-<td>nargs: <code>0</code> · default: <code>False</code> · parser destination: <code>allow_regression</code>. No help text declared.</td>
+<td>nargs: <code>0</code> · default: <code>False</code>.</td>
 </tr>
 </tbody>
-</table>
-<h2 id="source-basis">Source basis</h2>
-<table>
-<thead>
-<tr>
-<th>Parser owner</th>
-<th>Source file</th>
-<th>SHA-256</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>root cli</td>
-<td><code>src/x86decomp/cli.py</code></td>
-<td><code>21e0654ced2f5dd0588adcbedec328613fba524ff1e0a91ef07d63cbbf88288c</code></td>
-</tr>
-</tbody>
-</table>
-<h2 id="verification-boundary">Verification boundary</h2>
-<p>This page is regenerated from the v0.7.8 parser surface. It documents syntax, parser-declared arguments, canonical owners, and source files; it does not claim that optional adapters, target binaries, compiler toolchains, or runtime inputs exist on the reader's machine.</p></p>
+</table></p>
     </article>
 </section>
             <!-- endblock -->

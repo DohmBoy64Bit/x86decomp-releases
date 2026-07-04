@@ -5,7 +5,6 @@ description: Test source reference for tests/native/test_slots_matching.py.
 
 # `tests/native/test_slots_matching.py`
 
-**SHA-256:** `1a028f9a8c827f3caa937c142c2f11b5234f46ddcb0315e9b1908be2bf5b967e`
 
 | Test symbol | Kind | Line | End line |
 | --- | --- | ---: | ---: |

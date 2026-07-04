@@ -159,14 +159,6 @@
     </li>
                             
     <li class="drac-box-ternary">
-        <a href="../../release-artifacts/COMMAND_REFERENCE_STRICT_AUDIT/"
-            class="
-            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Command Audit
-        </a>
-    </li>
-                            
-    <li class="drac-box-ternary">
         <a href="../../schemas/"
             class="
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
@@ -212,35 +204,11 @@
                 <a href="../.."
                     class="
                     drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
-                    data-bs-toggle="collapse" data-bs-target="#release-evidence-collapse" aria-expanded="false">
-                    Release Evidence
+                    data-bs-toggle="collapse" data-bs-target="#project-collapse" aria-expanded="false">
+                    Project
                 </a>
-                <div class="collapse" id="release-evidence-collapse">
+                <div class="collapse" id="project-collapse">
                     <ul class="mb-5 drac-list drac-list-none">
-                            
-    <li class="drac-box-ternary">
-        <a href="../../release-evidence/"
-            class="
-            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Overview
-        </a>
-    </li>
-                            
-    <li class="drac-box-ternary">
-        <a href="../../verification/"
-            class="
-            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Verification
-        </a>
-    </li>
-                            
-    <li class="drac-box-ternary">
-        <a href="../../source-coverage/"
-            class="
-            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Source Coverage
-        </a>
-    </li>
                             
     <li class="drac-box-ternary">
         <a href="../../changelog/"
@@ -326,17 +294,17 @@
 <thead>
 <tr>
 <th>Argument</th>
-<th>Exact parser declaration</th>
+<th>Details</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>--project</code></td>
-<td>default: <code>'.'</code> · parser destination: <code>project</code>. project root used by the capability implementation (default: current directory)</td>
+<td>default: <code>'.'</code>. project root used by the capability implementation (default: current directory)</td>
 </tr>
 <tr>
 <td><code>--actor</code></td>
-<td>default: <code>'analyst'</code> · parser destination: <code>actor</code>. No help text declared.</td>
+<td>default: <code>'analyst'</code>.</td>
 </tr>
 </tbody>
 </table>
@@ -406,29 +374,29 @@
 <thead>
 <tr>
 <th>Argument</th>
-<th>Exact parser declaration</th>
+<th>Details</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>module_id</code></td>
-<td>required · parser destination: <code>module_id</code>. No help text declared.</td>
+<td>required.</td>
 </tr>
 <tr>
 <td><code>member_kind</code></td>
-<td>required · parser destination: <code>member_kind</code>. No help text declared.</td>
+<td>required.</td>
 </tr>
 <tr>
 <td><code>member_id</code></td>
-<td>required · parser destination: <code>member_id</code>. No help text declared.</td>
+<td>required.</td>
 </tr>
 <tr>
 <td><code>--ordinal</code></td>
-<td>type: <code>int</code> · default: <code>0</code> · parser destination: <code>ordinal</code>. No help text declared.</td>
+<td>type: <code>int</code> · default: <code>0</code>.</td>
 </tr>
 <tr>
 <td><code>--evidence-json</code></td>
-<td>parser destination: <code>evidence_json</code>. No help text declared.</td>
+<td>—</td>
 </tr>
 </tbody>
 </table>
@@ -441,29 +409,29 @@
 <thead>
 <tr>
 <th>Argument</th>
-<th>Exact parser declaration</th>
+<th>Details</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>unit_id</code></td>
-<td>required · parser destination: <code>unit_id</code>. No help text declared.</td>
+<td>required.</td>
 </tr>
 <tr>
 <td><code>member_kind</code></td>
-<td>required · parser destination: <code>member_kind</code>. No help text declared.</td>
+<td>required.</td>
 </tr>
 <tr>
 <td><code>member_id</code></td>
-<td>required · parser destination: <code>member_id</code>. No help text declared.</td>
+<td>required.</td>
 </tr>
 <tr>
 <td><code>--linkage</code></td>
-<td>default: <code>'external'</code> · parser destination: <code>linkage</code>. No help text declared.</td>
+<td>default: <code>'external'</code>.</td>
 </tr>
 <tr>
 <td><code>--ordinal</code></td>
-<td>type: <code>int</code> · default: <code>0</code> · parser destination: <code>ordinal</code>. No help text declared.</td>
+<td>type: <code>int</code> · default: <code>0</code>.</td>
 </tr>
 </tbody>
 </table>
@@ -477,33 +445,33 @@
 <thead>
 <tr>
 <th>Argument</th>
-<th>Exact parser declaration</th>
+<th>Details</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>function_id</code></td>
-<td>required · parser destination: <code>function_id</code>. No help text declared.</td>
+<td>required.</td>
 </tr>
 <tr>
 <td><code>--module</code></td>
-<td>required · parser destination: <code>module</code>. No help text declared.</td>
+<td>required.</td>
 </tr>
 <tr>
 <td><code>--class-name</code></td>
-<td>parser destination: <code>class_name</code>. No help text declared.</td>
+<td>—</td>
 </tr>
 <tr>
 <td><code>--header</code></td>
-<td>parser destination: <code>header</code>. No help text declared.</td>
+<td>—</td>
 </tr>
 <tr>
 <td><code>--source</code></td>
-<td>parser destination: <code>source</code>. No help text declared.</td>
+<td>—</td>
 </tr>
 <tr>
 <td><code>--report</code></td>
-<td>parser destination: <code>report</code>. No help text declared.</td>
+<td>—</td>
 </tr>
 </tbody>
 </table>
@@ -517,29 +485,29 @@
 <thead>
 <tr>
 <th>Argument</th>
-<th>Exact parser declaration</th>
+<th>Details</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>name</code></td>
-<td>required · parser destination: <code>name</code>. No help text declared.</td>
+<td>required.</td>
 </tr>
 <tr>
 <td><code>--kind</code></td>
-<td>default: <code>'static-library'</code> · parser destination: <code>kind</code>. No help text declared.</td>
+<td>default: <code>'static-library'</code>.</td>
 </tr>
 <tr>
 <td><code>--source-path</code></td>
-<td>parser destination: <code>source_path</code>. No help text declared.</td>
+<td>—</td>
 </tr>
 <tr>
 <td><code>--confidence</code></td>
-<td>type: <code>float</code> · default: <code>1.0</code> · parser destination: <code>confidence</code>. No help text declared.</td>
+<td>type: <code>float</code> · default: <code>1.0</code>.</td>
 </tr>
 <tr>
 <td><code>--evidence-json</code></td>
-<td>parser destination: <code>evidence_json</code>. No help text declared.</td>
+<td>—</td>
 </tr>
 </tbody>
 </table>
@@ -554,29 +522,29 @@
 <thead>
 <tr>
 <th>Argument</th>
-<th>Exact parser declaration</th>
+<th>Details</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>source_path</code></td>
-<td>required · parser destination: <code>source_path</code>. No help text declared.</td>
+<td>required.</td>
 </tr>
 <tr>
 <td><code>--module-id</code></td>
-<td>parser destination: <code>module_id</code>. No help text declared.</td>
+<td>—</td>
 </tr>
 <tr>
 <td><code>--language</code></td>
-<td>default: <code>'cpp'</code> · parser destination: <code>language</code>. No help text declared.</td>
+<td>default: <code>'cpp'</code>.</td>
 </tr>
 <tr>
 <td><code>--confidence</code></td>
-<td>type: <code>float</code> · default: <code>1.0</code> · parser destination: <code>confidence</code>. No help text declared.</td>
+<td>type: <code>float</code> · default: <code>1.0</code>.</td>
 </tr>
 <tr>
 <td><code>--evidence-json</code></td>
-<td>parser destination: <code>evidence_json</code>. No help text declared.</td>
+<td>—</td>
 </tr>
 </tbody>
 </table>
@@ -590,13 +558,13 @@
 <thead>
 <tr>
 <th>Argument</th>
-<th>Exact parser declaration</th>
+<th>Details</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>module_id</code></td>
-<td>required · parser destination: <code>module_id</code>. No help text declared.</td>
+<td>required.</td>
 </tr>
 </tbody>
 </table>
@@ -607,13 +575,13 @@
 <thead>
 <tr>
 <th>Argument</th>
-<th>Exact parser declaration</th>
+<th>Details</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>unit_id</code></td>
-<td>required · parser destination: <code>unit_id</code>. No help text declared.</td>
+<td>required.</td>
 </tr>
 </tbody>
 </table>
@@ -624,40 +592,16 @@
 <thead>
 <tr>
 <th>Argument</th>
-<th>Exact parser declaration</th>
+<th>Details</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>--output</code></td>
-<td>parser destination: <code>output</code>. No help text declared.</td>
+<td>—</td>
 </tr>
 </tbody>
-</table>
-<h2 id="source-basis">Source basis</h2>
-<table>
-<thead>
-<tr>
-<th>Parser owner</th>
-<th>Source file</th>
-<th>SHA-256</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>canonical cli</td>
-<td><code>src/x86decomp/canonical.py</code></td>
-<td><code>9dfc1a2d1ba31559b1a9cd31a0cda1ab1a1e88ffef0a47c4632995f649296166</code></td>
-</tr>
-<tr>
-<td>reconstruction cli</td>
-<td><code>src/x86decomp/reconstruction/cli.py</code></td>
-<td><code>dd5a6c7c987b3c49a3f7c1c635d60b34542e21f9346bd85f869013532c844cc4</code></td>
-</tr>
-</tbody>
-</table>
-<h2 id="verification-boundary">Verification boundary</h2>
-<p>This page is regenerated from the v0.7.8 parser surface. It documents syntax, parser-declared arguments, canonical owners, and source files; it does not claim that optional adapters, target binaries, compiler toolchains, or runtime inputs exist on the reader's machine.</p></p>
+</table></p>
     </article>
 </section>
             <!-- endblock -->

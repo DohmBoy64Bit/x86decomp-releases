@@ -3,7 +3,6 @@ title: 'Example: ABI and type-recovery project'
 description: Recover calling-convention and C++ relationship candidates, store provenance-bearing
   constraints, reject conflicts, and generate bounded harnesses before implementation
   work proceeds.
-original_path: project-examples/abi-type-recovery.html
 ---
 
 <a id="model"></a>
@@ -19,8 +18,6 @@ original_path: project-examples/abi-type-recovery.html
 <a id="harness"></a>
 <a id="limits"></a>
 <a id="source-basis"></a>
-
-Section: Project examples
 
 # Example: ABI and type-recovery project
 
@@ -148,22 +145,18 @@ The generator creates deterministic test inputs from the ABI and declared pointe
 
 > **Verification model.** Command syntax is checked against the live parser. The source files below are hashed from the current release; implementation and test rows are retained as independent truth boundaries.
 
-| Evidence file | SHA-256 |
-| --- | --- |
-| `src/x86decomp/cli.py` | `21e0654ced2f5dd0588adcbedec328613fba524ff1e0a91ef07d63cbbf88288c` |
-| `src/x86decomp/abi.py` | `e69b8d4ba247b2e3dbd3553cd207ee8fbe24fe244878c4dabb4afffbebb33903` |
-| `src/x86decomp/cpp_recovery.py` | `c1f07b15f8649be4235cb56bb2e8f953ed31211b98311633d6beccde38dce8fa` |
-| `src/x86decomp/harness_generator.py` | `75ab6f14bcef35574409e280dad90a705f71bc5763d507258f705ad8f4c431f2` |
-| `src/x86decomp/analysis_db.py` | `409e503d6c264dba48a00e1d1afc475ce735cf25f1ec4aab7ac41b07ed5b9bad` |
-| `tests/test_abi_disassembly.py` | `7707cba729a70b66986595aea747f5c1e782023e2b58134d2786680b52840a64` |
+| Evidence file |
+| --- |
+| `src/x86decomp/cli.py` |
+| `src/x86decomp/abi.py` |
+| `src/x86decomp/cpp_recovery.py` |
+| `src/x86decomp/harness_generator.py` |
+| `src/x86decomp/analysis_db.py` |
+| `tests/test_abi_disassembly.py` |
 
 
 ## Related examples
 
-[Matching project
-
-Open the source-verified workflow.](matching-project.md)[Functional project
-
-Open the source-verified workflow.](functional-project.md)[Hybrid composition
-
-Open the source-verified workflow.](hybrid-project.md)
+- [Matching project](matching-project.md)
+- [Functional project](functional-project.md)
+- [Hybrid composition](hybrid-project.md)

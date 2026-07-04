@@ -5,7 +5,6 @@ description: Test source reference for tests/reconstruction/test_decomp_accelera
 
 # `tests/reconstruction/test_decomp_acceleration.py`
 
-**SHA-256:** `cc0816f6c15029a45408e6f0f57d4c9c5221fd8f7bfcee70f855097831e5a686`
 
 | Test symbol | Kind | Line | End line |
 | --- | --- | ---: | ---: |

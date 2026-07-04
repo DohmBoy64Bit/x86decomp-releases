@@ -5,7 +5,6 @@ description: Test source reference for tests/assembly/test_helpers_and_relocatio
 
 # `tests/assembly/test_helpers_and_relocations.py`
 
-**SHA-256:** `d103e5e3199aa32ceb99dd5867f3454cca6676d33956bd2aca3b035176bd4860`
 
 | Test symbol | Kind | Line | End line |
 | --- | --- | ---: | ---: |

@@ -7,150 +7,150 @@ description: Source-derived Python module coverage for x86decomp 0.7.8.
 
 This index covers **145** Python source modules from the toolkit and test-suite source trees.
 
-| Module | Area | Symbols | Source path | SHA-256 |
-| --- | --- | ---: | --- | --- |
-| [`x86decomp.__init__`](x86decomp---init--.md) | toolkit | 0 | `src/x86decomp/__init__.py` | `985607806530e1b85320b7aced1ac3f80f3b5d88872646a5d17df6250218edb5` |
-| [`x86decomp.__main__`](x86decomp---main--.md) | toolkit | 0 | `src/x86decomp/__main__.py` | `935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d` |
-| [`x86decomp.abi`](x86decomp-abi.md) | toolkit | 8 | `src/x86decomp/abi.py` | `e69b8d4ba247b2e3dbd3553cd207ee8fbe24fe244878c4dabb4afffbebb33903` |
-| [`x86decomp.analysis_db`](x86decomp-analysis-db.md) | toolkit | 12 | `src/x86decomp/analysis_db.py` | `409e503d6c264dba48a00e1d1afc475ce735cf25f1ec4aab7ac41b07ed5b9bad` |
-| [`x86decomp.angr_backend`](x86decomp-angr-backend.md) | toolkit | 11 | `src/x86decomp/angr_backend.py` | `b3f95fbeec7f4d726ba52f50df9d4d7986cfad9ed5c789ab0a3932c0dea8b7a3` |
-| [`x86decomp.artifacts`](x86decomp-artifacts.md) | toolkit | 4 | `src/x86decomp/artifacts.py` | `171833c573e11e5d40d7791f8fea523536905a8486145a1aa1b96ea2761e6e6b` |
-| [`x86decomp.assembly.__init__`](x86decomp-assembly---init--.md) | toolkit | 0 | `src/x86decomp/assembly/__init__.py` | `60dcbf406ebd10f56f155b70ea0657b0d40a2405ef65cf3caa32979fd90ca254` |
-| [`x86decomp.assembly.annotation`](x86decomp-assembly-annotation.md) | toolkit | 7 | `src/x86decomp/assembly/annotation.py` | `193333b07dc91fcfa6add9200b9f9e170c6d3705e169ac7d76056657759a59ef` |
-| [`x86decomp.assembly.cli`](x86decomp-assembly-cli.md) | toolkit | 7 | `src/x86decomp/assembly/cli.py` | `6c8a227f8c1a9c48a83e1f048f6160f8740e97552fa6967dea122f42fab45f88` |
-| [`x86decomp.assembly.materialize`](x86decomp-assembly-materialize.md) | toolkit | 16 | `src/x86decomp/assembly/materialize.py` | `bd19d35efc03ca7bc501fe4b87a028a9c36131d3eeee4a7f98c6aad5bdab2324` |
-| [`x86decomp.assembly.pipeline`](x86decomp-assembly-pipeline.md) | toolkit | 9 | `src/x86decomp/assembly/pipeline.py` | `f6ffb8a8282636b4f07854e6665bbe250b7bb405ceba0587e872d72d91dae04c` |
-| [`x86decomp.assembly.relocations`](x86decomp-assembly-relocations.md) | toolkit | 13 | `src/x86decomp/assembly/relocations.py` | `d9c90ac5d66b3a36560ef8d9539bbef0d2e184574912609d27c7848d4f40666d` |
-| [`x86decomp.assembly.store`](x86decomp-assembly-store.md) | toolkit | 4 | `src/x86decomp/assembly/store.py` | `77515c2355902f169945655c7976bf71a8407f094a91167c40f47b2ec7b58dd9` |
-| [`x86decomp.benchmarks`](x86decomp-benchmarks.md) | toolkit | 3 | `src/x86decomp/benchmarks.py` | `b9b28fbcb2f38723b274e4150b1c3914ddcbceab1b49461fc5797a84f9e13fb3` |
-| [`x86decomp.canonical`](x86decomp-canonical.md) | toolkit | 12 | `src/x86decomp/canonical.py` | `9dfc1a2d1ba31559b1a9cd31a0cda1ab1a1e88ffef0a47c4632995f649296166` |
-| [`x86decomp.cli`](x86decomp-cli.md) | toolkit | 8 | `src/x86decomp/cli.py` | `21e0654ced2f5dd0588adcbedec328613fba524ff1e0a91ef07d63cbbf88288c` |
-| [`x86decomp.coff`](x86decomp-coff.md) | toolkit | 68 | `src/x86decomp/coff.py` | `f6900af73b991d2ed380250c78d4a228ff6b10f45bd4bcf04fb449c45f13d28e` |
-| [`x86decomp.coff_archive`](x86decomp-coff-archive.md) | toolkit | 13 | `src/x86decomp/coff_archive.py` | `51cdfa71d8876054203d3f487c37ee12ece57e831abc8bca35e57112d4089584` |
-| [`x86decomp.compiler`](x86decomp-compiler.md) | toolkit | 5 | `src/x86decomp/compiler.py` | `f21f38f6ed0804a959188e31f5c9fa498d7d0740536fbb82594a375b12353944` |
-| [`x86decomp.compiler_lab`](x86decomp-compiler-lab.md) | toolkit | 2 | `src/x86decomp/compiler_lab.py` | `05a54baba63c926190c0e2fb45bff09c6eb338ed6a479e6e47be210a6b1de859` |
-| [`x86decomp.compiler_worker`](x86decomp-compiler-worker.md) | toolkit | 1 | `src/x86decomp/compiler_worker.py` | `d13aa472af6cfb824c896d7a32c9c99ff7a4fcf07019dbba5aa42beba7f82045` |
-| [`x86decomp.content_store`](x86decomp-content-store.md) | toolkit | 18 | `src/x86decomp/content_store.py` | `2348ce9593959da0a9f52b144435a70b30965443a06e701c0ff9cf7c86e7d1a4` |
-| [`x86decomp.contracts`](x86decomp-contracts.md) | toolkit | 13 | `src/x86decomp/contracts.py` | `59ed708757edb48209337ba38008c4522cd03106686c9b47b08da0b2a32e98ed` |
-| [`x86decomp.convergence`](x86decomp-convergence.md) | toolkit | 3 | `src/x86decomp/convergence.py` | `2b943e9c8c2399089e1b8c2815c0de4cb1bcf0468c09e64a647fef3508922f74` |
-| [`x86decomp.cpp_recovery`](x86decomp-cpp-recovery.md) | toolkit | 3 | `src/x86decomp/cpp_recovery.py` | `c1f07b15f8649be4235cb56bb2e8f953ed31211b98311633d6beccde38dce8fa` |
-| [`x86decomp.decompme`](x86decomp-decompme.md) | toolkit | 2 | `src/x86decomp/decompme.py` | `440f011b1a60d6a9549cd558927a158ce34f1377f699a58b922c696619172fe2` |
-| [`x86decomp.diffing`](x86decomp-diffing.md) | toolkit | 2 | `src/x86decomp/diffing.py` | `e981a093051ff6a0be9462256f6ea50c2784693c15b32df5144a1ca0374814e3` |
-| [`x86decomp.disassembly`](x86decomp-disassembly.md) | toolkit | 8 | `src/x86decomp/disassembly.py` | `cc86a46f8c8674a6e14304158bd1d2467fb09ccbb00778c116204b0a639638b3` |
-| [`x86decomp.dynamic`](x86decomp-dynamic.md) | toolkit | 12 | `src/x86decomp/dynamic.py` | `a09cbba16f498158cf30191397884f0a70051c767b778cd520ac229b6e85e451` |
-| [`x86decomp.dynamorio`](x86decomp-dynamorio.md) | toolkit | 2 | `src/x86decomp/dynamorio.py` | `8568a98326d91a775f2feec1847e8d3230c58253e1b015c3ee75dcb9b0d8b30d` |
-| [`x86decomp.errors`](x86decomp-errors.md) | toolkit | 5 | `src/x86decomp/errors.py` | `5bb50a4d169960abdc486866d2e68c894d8c13da401361931d86991ff9f8030d` |
-| [`x86decomp.evidence`](x86decomp-evidence.md) | toolkit | 13 | `src/x86decomp/evidence.py` | `de8befd97c8e7f0529f7c3c2750836f8f38fab52e26987cf390d725faad3ee1e` |
-| [`x86decomp.exe_diff`](x86decomp-exe-diff.md) | toolkit | 6 | `src/x86decomp/exe_diff.py` | `997ffacbd833a3bb4c0545d1fb1981469e1d575680f4b39b7e6f34a4796abdf0` |
-| [`x86decomp.ghidra`](x86decomp-ghidra.md) | toolkit | 2 | `src/x86decomp/ghidra.py` | `98657d48a9d3ebb79eaf951aa8676ffd7ca696c2ba2f07fe8a5c4f0ad622c2b3` |
-| [`x86decomp.governance.__init__`](x86decomp-governance---init--.md) | toolkit | 0 | `src/x86decomp/governance/__init__.py` | `a0483ba8e8314f9c9ba3a8387147195d183c6c7a47b067e2f6a92354f6612c00` |
-| [`x86decomp.governance.campaigns`](x86decomp-governance-campaigns.md) | toolkit | 17 | `src/x86decomp/governance/campaigns.py` | `0c43e0289c80013abf35c01f68f0214d968d3be681395621632a24e5d09dfd2a` |
-| [`x86decomp.governance.candidates`](x86decomp-governance-candidates.md) | toolkit | 10 | `src/x86decomp/governance/candidates.py` | `45b278d396b79ffecc4cfdd61e42af7e2cd5776f0b76f4f3a6b856283be0f1df` |
-| [`x86decomp.governance.changesets`](x86decomp-governance-changesets.md) | toolkit | 4 | `src/x86decomp/governance/changesets.py` | `b5fc108cbaa2b14f325deff21e849d49841c49550300221beefd8d489ac9fcee` |
-| [`x86decomp.governance.cli`](x86decomp-governance-cli.md) | toolkit | 6 | `src/x86decomp/governance/cli.py` | `34d9488f9d07dfded83f5e9191aa7faba7140e8b2d0a2d0da66925851fa090de` |
-| [`x86decomp.governance.consensus`](x86decomp-governance-consensus.md) | toolkit | 7 | `src/x86decomp/governance/consensus.py` | `41c250face5e2cb3dd5a56c6e741d5cbebdc25e6e9f1531a25181d9d944a5eb3` |
-| [`x86decomp.governance.counterexamples`](x86decomp-governance-counterexamples.md) | toolkit | 8 | `src/x86decomp/governance/counterexamples.py` | `2223bd0eec9a09b58739850670b5d3434dfce554a3578cbe2ab870e43e698096` |
-| [`x86decomp.governance.family`](x86decomp-governance-family.md) | toolkit | 10 | `src/x86decomp/governance/family.py` | `be9c27b2174ab2e046fae2d9937d7df2b73353d738f794db9f923bc11c9ede7c` |
-| [`x86decomp.governance.hypotheses`](x86decomp-governance-hypotheses.md) | toolkit | 14 | `src/x86decomp/governance/hypotheses.py` | `9b9601b00d885856a2311c6cf10fe62137eef992310ffd400cc0c84f7beff966` |
-| [`x86decomp.governance.knowledge_graph`](x86decomp-governance-knowledge-graph.md) | toolkit | 6 | `src/x86decomp/governance/knowledge_graph.py` | `8ab4ed3fe2315a0a44f7ac646a7759127283a436807ed80bc01e865c6eb0cc33` |
-| [`x86decomp.governance.plugins`](x86decomp-governance-plugins.md) | toolkit | 8 | `src/x86decomp/governance/plugins.py` | `1e339929f3ac6981f3338305eab797bc72ebcb5cf0b8717bbe3aef8a2df76ef7` |
-| [`x86decomp.governance.proofs`](x86decomp-governance-proofs.md) | toolkit | 13 | `src/x86decomp/governance/proofs.py` | `234ac5f77b13a125031cbea5513400cc2e7dfbf1337b60ccfd0d7bae71755f94` |
-| [`x86decomp.governance.reviews`](x86decomp-governance-reviews.md) | toolkit | 8 | `src/x86decomp/governance/reviews.py` | `ba9d5d2757485bdcfdb2ed1255287013fe710def654fcbc2cf8a6801fe25312f` |
-| [`x86decomp.governance.store`](x86decomp-governance-store.md) | toolkit | 8 | `src/x86decomp/governance/store.py` | `33a8e8524b3fec8bbd9fdec30f738fa77e7c140acac9d5ac216b110c11ca583b` |
-| [`x86decomp.governance.workers`](x86decomp-governance-workers.md) | toolkit | 8 | `src/x86decomp/governance/workers.py` | `4538ea72a7fe80900916a18a6bbba5ac7a3617d1765b1b981691ebad10f4e656` |
-| [`x86decomp.ground_truth`](x86decomp-ground-truth.md) | toolkit | 7 | `src/x86decomp/ground_truth.py` | `9684fbcda0fd5060b3c1f2d0efb83892900c69190d33e24fd7e49f91885181e2` |
-| [`x86decomp.harness_generator`](x86decomp-harness-generator.md) | toolkit | 3 | `src/x86decomp/harness_generator.py` | `75ab6f14bcef35574409e280dad90a705f71bc5763d507258f705ad8f4c431f2` |
-| [`x86decomp.hybrid`](x86decomp-hybrid.md) | toolkit | 2 | `src/x86decomp/hybrid.py` | `721221b69c86bd2e7152ea2f322c9b48d89a01891feb6906038509a1f4592e2f` |
-| [`x86decomp.image_match`](x86decomp-image-match.md) | toolkit | 10 | `src/x86decomp/image_match.py` | `a9c72f376532369da77440496a1ea07564da5071ef8e6108e29c58e33e96fcf4` |
-| [`x86decomp.integration`](x86decomp-integration.md) | toolkit | 10 | `src/x86decomp/integration.py` | `cb8157c8210544e2ed4730e8bdb01f0a77dc9d05f683d43154cba1bf93c1e845` |
-| [`x86decomp.linker_layout`](x86decomp-linker-layout.md) | toolkit | 12 | `src/x86decomp/linker_layout.py` | `e212e73f09b9559f17e0251eba8260a50b52931091a4972a2deabc462cd68682` |
-| [`x86decomp.linker_reconstruction`](x86decomp-linker-reconstruction.md) | toolkit | 2 | `src/x86decomp/linker_reconstruction.py` | `f67bc3077e7d54a9a32e542113cc28eadf00fa581c8e3d3c26e5c1b45a4e0900` |
-| [`x86decomp.local_llm.__init__`](x86decomp-local-llm---init--.md) | toolkit | 0 | `src/x86decomp/local_llm/__init__.py` | `471640b8f53e194e4f5f246699cfdabbfc5ba1ff818bed6d060e8348eaf09d25` |
-| [`x86decomp.local_llm.matching`](x86decomp-local-llm-matching.md) | toolkit | 7 | `src/x86decomp/local_llm/matching.py` | `349c75f943aaf119368d8eef401330917b1f0abb7fd9f3bc114ccd12ec3c26b5` |
-| [`x86decomp.local_llm.profiles`](x86decomp-local-llm-profiles.md) | toolkit | 8 | `src/x86decomp/local_llm/profiles.py` | `5bce6554b8d5dbccd0a18c965bae92e82cc8517f7c86997621d662f3bcff1ca2` |
-| [`x86decomp.local_llm.prompts`](x86decomp-local-llm-prompts.md) | toolkit | 7 | `src/x86decomp/local_llm/prompts.py` | `b1a06cda047e95e59b0b415753e88bca82d111e6898c056880d972ac89e270e7` |
-| [`x86decomp.local_llm.transport`](x86decomp-local-llm-transport.md) | toolkit | 16 | `src/x86decomp/local_llm/transport.py` | `65526331d46e71ae5625569b23e3312d9126d860ef1bd244135f21a47af25a3f` |
-| [`x86decomp.mcp`](x86decomp-mcp.md) | toolkit | 27 | `src/x86decomp/mcp.py` | `72627e41c628c756443bc5d57e38b583b1744923902735b55a3d6c9e29f6cca9` |
-| [`x86decomp.memory`](x86decomp-memory.md) | toolkit | 7 | `src/x86decomp/memory.py` | `4fd6948418a67ffdd502b92649a5b18af16376b55272018305b59d5cddcad813` |
-| [`x86decomp.models`](x86decomp-models.md) | toolkit | 7 | `src/x86decomp/models.py` | `2afe3f05650301116d1f789854dd5406ea2af88b0bebb19df7a2f1667bf1bd0f` |
-| [`x86decomp.msvc_metadata`](x86decomp-msvc-metadata.md) | toolkit | 41 | `src/x86decomp/msvc_metadata.py` | `a09e12dd6d748ba39648bf05d885656080c1c03be63d8dde592e26cb36b72951` |
-| [`x86decomp.native.__init__`](x86decomp-native---init--.md) | toolkit | 0 | `src/x86decomp/native/__init__.py` | `c06bf6b79e240a8ec82b7084a6f50358b49e0c28084ed2cece59bd0f803dfb0d` |
-| [`x86decomp.native.cli`](x86decomp-native-cli.md) | toolkit | 6 | `src/x86decomp/native/cli.py` | `13ff944cc50ff6ed433c32975a8edcd6318b4d4fd4c6c30580c27329a951dbf2` |
-| [`x86decomp.native.closed_loop`](x86decomp-native-closed-loop.md) | toolkit | 5 | `src/x86decomp/native/closed_loop.py` | `2928f6d9ecd646ec05c4cc204048ef0c303865b68e8ae45862aa81cfed3c758b` |
-| [`x86decomp.native.hybrid_composer`](x86decomp-native-hybrid-composer.md) | toolkit | 4 | `src/x86decomp/native/hybrid_composer.py` | `e2cd31ef794c1910a4deb0a7260d88de3bb090bf153c7f77f740024f86a4cea0` |
-| [`x86decomp.native.matching`](x86decomp-native-matching.md) | toolkit | 8 | `src/x86decomp/native/matching.py` | `3d2d67bc09fd863ffb366310883c6869b10c04545e48edc75089b7317927478a` |
-| [`x86decomp.native.pe_reconstruction`](x86decomp-native-pe-reconstruction.md) | toolkit | 11 | `src/x86decomp/native/pe_reconstruction.py` | `32c4ba5082d59f88439efe2af68c26f8820aaa82d6f551d506a0d7c63b517558` |
-| [`x86decomp.native.runtime`](x86decomp-native-runtime.md) | toolkit | 6 | `src/x86decomp/native/runtime.py` | `42a582f61d69ef1bc07096d003f19db4c0598d7386be494c124cf4272b1aa854` |
-| [`x86decomp.native.slots`](x86decomp-native-slots.md) | toolkit | 9 | `src/x86decomp/native/slots.py` | `e0f7164fa040306cab458e4dfe811590375a3a49023de7a33736e07b44032d2c` |
-| [`x86decomp.native.staging`](x86decomp-native-staging.md) | toolkit | 7 | `src/x86decomp/native/staging.py` | `0038cab527aaac36dc4ba8ea02eb526b2683f5329a03c4002673091f622239a1` |
-| [`x86decomp.native.store`](x86decomp-native-store.md) | toolkit | 4 | `src/x86decomp/native/store.py` | `531fa7eb2ab2f8a1ff9ef95e7be9d7ca06a0be094e9f35e6c128cfa73c88d977` |
-| [`x86decomp.native.windows_tools`](x86decomp-native-windows-tools.md) | toolkit | 6 | `src/x86decomp/native/windows_tools.py` | `0de581d6f2316540f99e7daf3d64fbd925e1998f786b3099488d766ed71bb2c0` |
-| [`x86decomp.objdiff_adapter`](x86decomp-objdiff-adapter.md) | toolkit | 2 | `src/x86decomp/objdiff_adapter.py` | `d312150b8b06b0e9b1656df7dab0a10e0e4a4db6047a4e83663875387b3851c1` |
-| [`x86decomp.orchestrator`](x86decomp-orchestrator.md) | toolkit | 28 | `src/x86decomp/orchestrator.py` | `752a6e6b5d4f931007e93ee7898f6a0d2500b044266c7153a27be7e7eb49477e` |
-| [`x86decomp.patching`](x86decomp-patching.md) | toolkit | 3 | `src/x86decomp/patching.py` | `61b9d802fc2c9c89f06877876f72efb7fc16d3a1fb283dddfd561dfd4fe61741` |
-| [`x86decomp.pdb`](x86decomp-pdb.md) | toolkit | 24 | `src/x86decomp/pdb.py` | `0ad9c99f6a1b232ce33268d35097ea6b44343d65052339c701588bf4efa79690` |
-| [`x86decomp.pe`](x86decomp-pe.md) | toolkit | 19 | `src/x86decomp/pe.py` | `39a5dd1b26da8d0ef84e8ff247183068eb4943ab38211df3c56c43ca9a6911c0` |
-| [`x86decomp.pe32`](x86decomp-pe32.md) | toolkit | 50 | `src/x86decomp/pe32.py` | `746651d78b0b8401565dd22e99f73c8c902b13400fd80094d4675ab52c8c4be5` |
-| [`x86decomp.project`](x86decomp-project.md) | toolkit | 4 | `src/x86decomp/project.py` | `cfb51a7b7da1d3ddc9af52dacc7d92e080dc3665c296cac24dd898b954e5e932` |
-| [`x86decomp.project_state`](x86decomp-project-state.md) | toolkit | 21 | `src/x86decomp/project_state.py` | `e78c286125050d9b582e38acdefcf3c901f0634372af8b287942ca8b10aa9aee` |
-| [`x86decomp.project_template`](x86decomp-project-template.md) | toolkit | 4 | `src/x86decomp/project_template.py` | `2a70050138d13bf73d963a6cb49d404b39c2d12dbc00298e7e1a79999d076f8f` |
-| [`x86decomp.reconstruction.__init__`](x86decomp-reconstruction---init--.md) | toolkit | 0 | `src/x86decomp/reconstruction/__init__.py` | `52313d0bee948e0909b7dbad630958a9631187f643927aa9b604acf3184599c8` |
-| [`x86decomp.reconstruction.abi_contracts`](x86decomp-reconstruction-abi-contracts.md) | toolkit | 8 | `src/x86decomp/reconstruction/abi_contracts.py` | `3a604b7e2a1519a524942ec0aa4cc06fa2281bea86cba2b2a29136ba04ab5bf0` |
-| [`x86decomp.reconstruction.acceleration`](x86decomp-reconstruction-acceleration.md) | toolkit | 70 | `src/x86decomp/reconstruction/acceleration.py` | `acada93918527df17da324b8697e7e5f6f6259238790526d8b6daecaa26ae396` |
-| [`x86decomp.reconstruction.builds`](x86decomp-reconstruction-builds.md) | toolkit | 12 | `src/x86decomp/reconstruction/builds.py` | `d7172392693ed466a2a5aa91a2cf8640437a46720c91bed57d598d304249574f` |
-| [`x86decomp.reconstruction.capsules`](x86decomp-reconstruction-capsules.md) | toolkit | 6 | `src/x86decomp/reconstruction/capsules.py` | `4000e3d9ba3e5292d83a32aea85dc00895439dd6ceb893eb3d6c6059e7a1c51a` |
-| [`x86decomp.reconstruction.cli`](x86decomp-reconstruction-cli.md) | toolkit | 6 | `src/x86decomp/reconstruction/cli.py` | `dd5a6c7c987b3c49a3f7c1c635d60b34542e21f9346bd85f869013532c844cc4` |
-| [`x86decomp.reconstruction.generated_tests`](x86decomp-reconstruction-generated-tests.md) | toolkit | 8 | `src/x86decomp/reconstruction/generated_tests.py` | `6822bf7dc5d508d8ee684f2a6c1f5eb0e141ef86dbb2c580c320561d2b760aaf` |
-| [`x86decomp.reconstruction.headers`](x86decomp-reconstruction-headers.md) | toolkit | 10 | `src/x86decomp/reconstruction/headers.py` | `438c0233df3581b7634dd878b01f5b32f6918d7dac836115ad7bc1c0c50fdacc` |
-| [`x86decomp.reconstruction.libraries`](x86decomp-reconstruction-libraries.md) | toolkit | 6 | `src/x86decomp/reconstruction/libraries.py` | `4892d5e00011085e4befce6cff5a24c9d065c6647933acd4dcb4618a3f514152` |
-| [`x86decomp.reconstruction.project_layout`](x86decomp-reconstruction-project-layout.md) | toolkit | 12 | `src/x86decomp/reconstruction/project_layout.py` | `c56585dbc14339e024cf8fa5d4e4f31f06d7bce0a238b67212a3278a9282f4e7` |
-| [`x86decomp.reconstruction.provenance`](x86decomp-reconstruction-provenance.md) | toolkit | 11 | `src/x86decomp/reconstruction/provenance.py` | `03790dbcf2863491fa3c28e4cb96013dc73be03b87a038fcc367a6f27933f9e3` |
-| [`x86decomp.reconstruction.security`](x86decomp-reconstruction-security.md) | toolkit | 7 | `src/x86decomp/reconstruction/security.py` | `0959bd8e9edb807a04058a9b81857c096e9c91ffb6f8591a885d56ae048760ba` |
-| [`x86decomp.reconstruction.semantic_changesets`](x86decomp-reconstruction-semantic-changesets.md) | toolkit | 9 | `src/x86decomp/reconstruction/semantic_changesets.py` | `4342cc6206f76716dcc2007d36fd18ed0aff99cd7ebb562ef544adeeb8a537f3` |
-| [`x86decomp.reconstruction.store`](x86decomp-reconstruction-store.md) | toolkit | 4 | `src/x86decomp/reconstruction/store.py` | `753bca5d80a9a829268f827f9afb127dec65d135ab60213fc78e13c159bda6b2` |
-| [`x86decomp.release_gate`](x86decomp-release-gate.md) | toolkit | 4 | `src/x86decomp/release_gate.py` | `8e79be8c5af67a90063af185b2239a5ce5a8ca828627ee05c14d897f891e02fd` |
-| [`x86decomp.relink`](x86decomp-relink.md) | toolkit | 1 | `src/x86decomp/relink.py` | `d401db042d4cc8300ccd4babd28cea400dca824d187a7caf0a1f3ead407fb296` |
-| [`x86decomp.reproducibility`](x86decomp-reproducibility.md) | toolkit | 3 | `src/x86decomp/reproducibility.py` | `bcc5e2a773d7eb7589f28df90c0fe898155788b8e695d15e363e6dbad249ae7b` |
-| [`x86decomp.security_audit`](x86decomp-security-audit.md) | toolkit | 5 | `src/x86decomp/security_audit.py` | `0b7574a71e4c8677352766c9358f8022871e566f43a9277050b887648f4ab22c` |
-| [`x86decomp.service`](x86decomp-service.md) | toolkit | 16 | `src/x86decomp/service.py` | `ef74988c5b19f8d2925ea07fb75a6cb3bea4304348bc9419e82f9ffddbd19584` |
-| [`x86decomp.symbolic`](x86decomp-symbolic.md) | toolkit | 27 | `src/x86decomp/symbolic.py` | `93d98f6e85a01a107881131821d5eb04875d310795c4f173448918c5a96fdcd3` |
-| [`x86decomp.synthetic_corpus`](x86decomp-synthetic-corpus.md) | toolkit | 15 | `src/x86decomp/synthetic_corpus.py` | `a0475235f70093de7171e32cbde918a9290569245efaa06f8549cd1ad480ece0` |
-| [`x86decomp.target_pack`](x86decomp-target-pack.md) | toolkit | 9 | `src/x86decomp/target_pack.py` | `18b4fa2ef39b61edd4c9ecc47d543ed6107395e841d81f9191d447dcaa5edb1d` |
-| [`x86decomp.test_bundle`](x86decomp-test-bundle.md) | toolkit | 9 | `src/x86decomp/test_bundle.py` | `7b65953eff2b3ba85cc543e11a8ab007f85565e85fe29e73e12db9eb099efc31` |
-| [`x86decomp.toolchains`](x86decomp-toolchains.md) | toolkit | 2 | `src/x86decomp/toolchains.py` | `9dde5962b67d30fec64266313f5488a4e5501de9db26605d4719cbe276cde03f` |
-| [`x86decomp.tools`](x86decomp-tools.md) | toolkit | 3 | `src/x86decomp/tools.py` | `8e068c2ef41fb99fd53f45b28808fd2bf3366978bffc6ba22e46207497f08f34` |
-| [`x86decomp.util`](x86decomp-util.md) | toolkit | 13 | `src/x86decomp/util.py` | `f38c92cec5d269f8597282a84f5cfb76dd9e952cedb3606be592e8f5f89d8fe1` |
-| [`x86decomp.work_queue`](x86decomp-work-queue.md) | toolkit | 9 | `src/x86decomp/work_queue.py` | `b1392399ca7536f6f1c1a78b16b62b61f7b70a744d2a529860e03d3371377c6e` |
-| [`x86decomp.worker`](x86decomp-worker.md) | toolkit | 13 | `src/x86decomp/worker.py` | `811287668595febda7c8a186d83e1683ad7c58fcc44259efe7271bf5d7b8249c` |
-| [`x86decomp.workflow`](x86decomp-workflow.md) | toolkit | 12 | `src/x86decomp/workflow.py` | `cae8a093f08f66f9412393e59867c4d32ca7caf88533a175d22eebe1f325c0a5` |
-| [`x86decomp_testkit.__init__`](x86decomp-testkit---init--.md) | test-suite | 0 | `test-suite/src/x86decomp_testkit/__init__.py` | `f756ba928069eba0c580b8ec09ba1355234e54b53286ea279c72bf50e59f095c` |
-| [`x86decomp_testkit.__main__`](x86decomp-testkit---main--.md) | test-suite | 0 | `test-suite/src/x86decomp_testkit/__main__.py` | `935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d` |
-| [`x86decomp_testkit.adapters.__init__`](x86decomp-testkit-adapters---init--.md) | test-suite | 0 | `test-suite/src/x86decomp_testkit/adapters/__init__.py` | `2dc1774610df60efa3ae3598d72c646850d7970253fabe118eefc949891b4794` |
-| [`x86decomp_testkit.adapters.capabilities`](x86decomp-testkit-adapters-capabilities.md) | test-suite | 9 | `test-suite/src/x86decomp_testkit/adapters/capabilities.py` | `4a1ed520119d5f437ee227d14be1e3b9783c9dd6a062b911f62b28207404aeec` |
-| [`x86decomp_testkit.adapters.catalog`](x86decomp-testkit-adapters-catalog.md) | test-suite | 1 | `test-suite/src/x86decomp_testkit/adapters/catalog.py` | `73428a61aa8c20bd45fa5df86dfc60614a28263e6e519ade9c180e908ea0d749` |
-| [`x86decomp_testkit.adapters.detection`](x86decomp-testkit-adapters-detection.md) | test-suite | 11 | `test-suite/src/x86decomp_testkit/adapters/detection.py` | `9550f0bbd707a04d6143efa4434670ee883d38eaae3a7465db572a6df517f2ae` |
-| [`x86decomp_testkit.adapters.download`](x86decomp-testkit-adapters-download.md) | test-suite | 6 | `test-suite/src/x86decomp_testkit/adapters/download.py` | `a70137db30465fce87008a17b6e7b1a5c98d60bfc87a7b970e4ae566812bf2a6` |
-| [`x86decomp_testkit.adapters.installation`](x86decomp-testkit-adapters-installation.md) | test-suite | 10 | `test-suite/src/x86decomp_testkit/adapters/installation.py` | `9aca25c287ecbd2ac4c24a22f69f0a9c3ab35737f591cfc784a6a6e777d61f05` |
-| [`x86decomp_testkit.cli`](x86decomp-testkit-cli.md) | test-suite | 4 | `test-suite/src/x86decomp_testkit/cli.py` | `c4be8f226c0b7067846b385618b2392017fbbb113082016b4d72855098b07c44` |
-| [`x86decomp_testkit.config`](x86decomp-testkit-config.md) | test-suite | 6 | `test-suite/src/x86decomp_testkit/config.py` | `766a7f68f96c2658782d99f806ea342fb09bfa734fd22de5fb890a60b0004427` |
-| [`x86decomp_testkit.coverage_audit`](x86decomp-testkit-coverage-audit.md) | test-suite | 2 | `test-suite/src/x86decomp_testkit/coverage_audit.py` | `8d7312862dc245a37131f5a53b5094684882082f46401920f8623af039f67809` |
-| [`x86decomp_testkit.fixtures`](x86decomp-testkit-fixtures.md) | test-suite | 4 | `test-suite/src/x86decomp_testkit/fixtures.py` | `503faabe75a6906a9feda50866fc275f80a0596d8605b6b9125c36330a7ef6ed` |
-| [`x86decomp_testkit.inventory`](x86decomp-testkit-inventory.md) | test-suite | 16 | `test-suite/src/x86decomp_testkit/inventory.py` | `d7c60ef575fc20122b84c635d9cdd8875dd629cabaa9a6f7810aaa1b306242a4` |
-| [`x86decomp_testkit.junit`](x86decomp-testkit-junit.md) | test-suite | 1 | `test-suite/src/x86decomp_testkit/junit.py` | `3651cdaf2fb723366239d6a2cc32f4b0a8af336509784c4c8bf1bf957c317d14` |
-| [`x86decomp_testkit.live_adapters`](x86decomp-testkit-live-adapters.md) | test-suite | 9 | `test-suite/src/x86decomp_testkit/live_adapters.py` | `fc5d0245f96eb7e22836fbb54a324921e023eb32a59a75936127e583bf16dc52` |
-| [`x86decomp_testkit.logging_utils`](x86decomp-testkit-logging-utils.md) | test-suite | 4 | `test-suite/src/x86decomp_testkit/logging_utils.py` | `973448e1f8708f80d4efebeec3246c51f90f35e6e1088a620d363b9767af0e8c` |
-| [`x86decomp_testkit.models`](x86decomp-testkit-models.md) | test-suite | 12 | `test-suite/src/x86decomp_testkit/models.py` | `d33ca1a0a8692924467c6940e19eecc6666b55f338104e4f5516857f65891a15` |
-| [`x86decomp_testkit.orchestrator`](x86decomp-testkit-orchestrator.md) | test-suite | 4 | `test-suite/src/x86decomp_testkit/orchestrator.py` | `aad61a056b28a28b921b0363595c50d95a4ce8b962b4bb48a97bb171271b18c5` |
-| [`x86decomp_testkit.process`](x86decomp-testkit-process.md) | test-suite | 2 | `test-suite/src/x86decomp_testkit/process.py` | `1968fbfaad57ef05e06e85613d6efa7fedf1f2c57aab895bcf1e90cd2854dbf9` |
-| [`x86decomp_testkit.reports`](x86decomp-testkit-reports.md) | test-suite | 5 | `test-suite/src/x86decomp_testkit/reports.py` | `9433db886acc7fc5f49f4dd2c575ef82d785f7096507b01074a47b2e60f06418` |
-| [`x86decomp_testkit.self_tests.__init__`](x86decomp-testkit-self-tests---init--.md) | test-suite | 0 | `test-suite/src/x86decomp_testkit/self_tests/__init__.py` | `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855` |
-| [`x86decomp_testkit.self_tests.test_adapter_capabilities`](x86decomp-testkit-self-tests-test-adapter-capabilities.md) | test-suite | 7 | `test-suite/src/x86decomp_testkit/self_tests/test_adapter_capabilities.py` | `3901fd9bca6c25cdf7e684139f5d5405504b1302dd912d5cd990a292935f812e` |
-| [`x86decomp_testkit.self_tests.test_adapter_detection_resolution`](x86decomp-testkit-self-tests-test-adapter-detection-resolution.md) | test-suite | 9 | `test-suite/src/x86decomp_testkit/self_tests/test_adapter_detection_resolution.py` | `d2b5626de04bac6ee52935b4db6e5437c56a6edf94ef300504008eccdf4d7812` |
-| [`x86decomp_testkit.self_tests.test_archive_security`](x86decomp-testkit-self-tests-test-archive-security.md) | test-suite | 4 | `test-suite/src/x86decomp_testkit/self_tests/test_archive_security.py` | `e731b4d36cbf94828e09245b2118b858bfd6c284e1d8a4be43c7f72b36412792` |
-| [`x86decomp_testkit.self_tests.test_cli_and_installation`](x86decomp-testkit-self-tests-test-cli-and-installation.md) | test-suite | 4 | `test-suite/src/x86decomp_testkit/self_tests/test_cli_and_installation.py` | `b2d0c38e67585e901fc45d1a82839da0989a70d099ab9625d092b1d9c38dde4b` |
-| [`x86decomp_testkit.self_tests.test_config_models`](x86decomp-testkit-self-tests-test-config-models.md) | test-suite | 3 | `test-suite/src/x86decomp_testkit/self_tests/test_config_models.py` | `5bd0d1b2b6da276b3f4ceced816b375a78fada639a16e469c2f4fe06ba720a60` |
-| [`x86decomp_testkit.self_tests.test_inventory_reports_process`](x86decomp-testkit-self-tests-test-inventory-reports-process.md) | test-suite | 5 | `test-suite/src/x86decomp_testkit/self_tests/test_inventory_reports_process.py` | `bb71bbcfe250bb2872fcd1da6c988f33dcc2721b6d217cdd441ca0ee4a24c5c0` |
-| [`x86decomp_testkit.suites`](x86decomp-testkit-suites.md) | test-suite | 12 | `test-suite/src/x86decomp_testkit/suites.py` | `c7c36e78f4a906ad593fa27e9789389b18e3d697a144c56b3bb324645b32d277` |
-| [`x86decomp_testkit.timeutil`](x86decomp-testkit-timeutil.md) | test-suite | 1 | `test-suite/src/x86decomp_testkit/timeutil.py` | `09f390dc5c11065df3bb8370bc2bbff2dd4f13bab9778fa8209f4c1d4d9c2b66` |
-| [`x86decomp_testkit.toolkit_tests.__init__`](x86decomp-testkit-toolkit-tests---init--.md) | test-suite | 0 | `test-suite/src/x86decomp_testkit/toolkit_tests/__init__.py` | `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855` |
-| [`x86decomp_testkit.toolkit_tests.test_public_api_contract`](x86decomp-testkit-toolkit-tests-test-public-api-contract.md) | test-suite | 32 | `test-suite/src/x86decomp_testkit/toolkit_tests/test_public_api_contract.py` | `ae0c0c90bdea8a422a26bc60094b8604d96824828dddde14ff718e8e86fd8700` |
+| Module | Area | Symbols | Source path |
+| --- | --- | ---: | --- |
+| [`x86decomp.__init__`](x86decomp---init--.md) | toolkit | 0 | `src/x86decomp/__init__.py` |
+| [`x86decomp.__main__`](x86decomp---main--.md) | toolkit | 0 | `src/x86decomp/__main__.py` |
+| [`x86decomp.abi`](x86decomp-abi.md) | toolkit | 8 | `src/x86decomp/abi.py` |
+| [`x86decomp.analysis_db`](x86decomp-analysis-db.md) | toolkit | 12 | `src/x86decomp/analysis_db.py` |
+| [`x86decomp.angr_backend`](x86decomp-angr-backend.md) | toolkit | 11 | `src/x86decomp/angr_backend.py` |
+| [`x86decomp.artifacts`](x86decomp-artifacts.md) | toolkit | 4 | `src/x86decomp/artifacts.py` |
+| [`x86decomp.assembly.__init__`](x86decomp-assembly---init--.md) | toolkit | 0 | `src/x86decomp/assembly/__init__.py` |
+| [`x86decomp.assembly.annotation`](x86decomp-assembly-annotation.md) | toolkit | 7 | `src/x86decomp/assembly/annotation.py` |
+| [`x86decomp.assembly.cli`](x86decomp-assembly-cli.md) | toolkit | 7 | `src/x86decomp/assembly/cli.py` |
+| [`x86decomp.assembly.materialize`](x86decomp-assembly-materialize.md) | toolkit | 16 | `src/x86decomp/assembly/materialize.py` |
+| [`x86decomp.assembly.pipeline`](x86decomp-assembly-pipeline.md) | toolkit | 9 | `src/x86decomp/assembly/pipeline.py` |
+| [`x86decomp.assembly.relocations`](x86decomp-assembly-relocations.md) | toolkit | 13 | `src/x86decomp/assembly/relocations.py` |
+| [`x86decomp.assembly.store`](x86decomp-assembly-store.md) | toolkit | 4 | `src/x86decomp/assembly/store.py` |
+| [`x86decomp.benchmarks`](x86decomp-benchmarks.md) | toolkit | 3 | `src/x86decomp/benchmarks.py` |
+| [`x86decomp.canonical`](x86decomp-canonical.md) | toolkit | 12 | `src/x86decomp/canonical.py` |
+| [`x86decomp.cli`](x86decomp-cli.md) | toolkit | 8 | `src/x86decomp/cli.py` |
+| [`x86decomp.coff`](x86decomp-coff.md) | toolkit | 68 | `src/x86decomp/coff.py` |
+| [`x86decomp.coff_archive`](x86decomp-coff-archive.md) | toolkit | 13 | `src/x86decomp/coff_archive.py` |
+| [`x86decomp.compiler`](x86decomp-compiler.md) | toolkit | 5 | `src/x86decomp/compiler.py` |
+| [`x86decomp.compiler_lab`](x86decomp-compiler-lab.md) | toolkit | 2 | `src/x86decomp/compiler_lab.py` |
+| [`x86decomp.compiler_worker`](x86decomp-compiler-worker.md) | toolkit | 1 | `src/x86decomp/compiler_worker.py` |
+| [`x86decomp.content_store`](x86decomp-content-store.md) | toolkit | 18 | `src/x86decomp/content_store.py` |
+| [`x86decomp.contracts`](x86decomp-contracts.md) | toolkit | 13 | `src/x86decomp/contracts.py` |
+| [`x86decomp.convergence`](x86decomp-convergence.md) | toolkit | 3 | `src/x86decomp/convergence.py` |
+| [`x86decomp.cpp_recovery`](x86decomp-cpp-recovery.md) | toolkit | 3 | `src/x86decomp/cpp_recovery.py` |
+| [`x86decomp.decompme`](x86decomp-decompme.md) | toolkit | 2 | `src/x86decomp/decompme.py` |
+| [`x86decomp.diffing`](x86decomp-diffing.md) | toolkit | 2 | `src/x86decomp/diffing.py` |
+| [`x86decomp.disassembly`](x86decomp-disassembly.md) | toolkit | 8 | `src/x86decomp/disassembly.py` |
+| [`x86decomp.dynamic`](x86decomp-dynamic.md) | toolkit | 12 | `src/x86decomp/dynamic.py` |
+| [`x86decomp.dynamorio`](x86decomp-dynamorio.md) | toolkit | 2 | `src/x86decomp/dynamorio.py` |
+| [`x86decomp.errors`](x86decomp-errors.md) | toolkit | 5 | `src/x86decomp/errors.py` |
+| [`x86decomp.evidence`](x86decomp-evidence.md) | toolkit | 13 | `src/x86decomp/evidence.py` |
+| [`x86decomp.exe_diff`](x86decomp-exe-diff.md) | toolkit | 6 | `src/x86decomp/exe_diff.py` |
+| [`x86decomp.ghidra`](x86decomp-ghidra.md) | toolkit | 2 | `src/x86decomp/ghidra.py` |
+| [`x86decomp.governance.__init__`](x86decomp-governance---init--.md) | toolkit | 0 | `src/x86decomp/governance/__init__.py` |
+| [`x86decomp.governance.campaigns`](x86decomp-governance-campaigns.md) | toolkit | 17 | `src/x86decomp/governance/campaigns.py` |
+| [`x86decomp.governance.candidates`](x86decomp-governance-candidates.md) | toolkit | 10 | `src/x86decomp/governance/candidates.py` |
+| [`x86decomp.governance.changesets`](x86decomp-governance-changesets.md) | toolkit | 4 | `src/x86decomp/governance/changesets.py` |
+| [`x86decomp.governance.cli`](x86decomp-governance-cli.md) | toolkit | 6 | `src/x86decomp/governance/cli.py` |
+| [`x86decomp.governance.consensus`](x86decomp-governance-consensus.md) | toolkit | 7 | `src/x86decomp/governance/consensus.py` |
+| [`x86decomp.governance.counterexamples`](x86decomp-governance-counterexamples.md) | toolkit | 8 | `src/x86decomp/governance/counterexamples.py` |
+| [`x86decomp.governance.family`](x86decomp-governance-family.md) | toolkit | 10 | `src/x86decomp/governance/family.py` |
+| [`x86decomp.governance.hypotheses`](x86decomp-governance-hypotheses.md) | toolkit | 14 | `src/x86decomp/governance/hypotheses.py` |
+| [`x86decomp.governance.knowledge_graph`](x86decomp-governance-knowledge-graph.md) | toolkit | 6 | `src/x86decomp/governance/knowledge_graph.py` |
+| [`x86decomp.governance.plugins`](x86decomp-governance-plugins.md) | toolkit | 8 | `src/x86decomp/governance/plugins.py` |
+| [`x86decomp.governance.proofs`](x86decomp-governance-proofs.md) | toolkit | 13 | `src/x86decomp/governance/proofs.py` |
+| [`x86decomp.governance.reviews`](x86decomp-governance-reviews.md) | toolkit | 8 | `src/x86decomp/governance/reviews.py` |
+| [`x86decomp.governance.store`](x86decomp-governance-store.md) | toolkit | 8 | `src/x86decomp/governance/store.py` |
+| [`x86decomp.governance.workers`](x86decomp-governance-workers.md) | toolkit | 8 | `src/x86decomp/governance/workers.py` |
+| [`x86decomp.ground_truth`](x86decomp-ground-truth.md) | toolkit | 7 | `src/x86decomp/ground_truth.py` |
+| [`x86decomp.harness_generator`](x86decomp-harness-generator.md) | toolkit | 3 | `src/x86decomp/harness_generator.py` |
+| [`x86decomp.hybrid`](x86decomp-hybrid.md) | toolkit | 2 | `src/x86decomp/hybrid.py` |
+| [`x86decomp.image_match`](x86decomp-image-match.md) | toolkit | 10 | `src/x86decomp/image_match.py` |
+| [`x86decomp.integration`](x86decomp-integration.md) | toolkit | 10 | `src/x86decomp/integration.py` |
+| [`x86decomp.linker_layout`](x86decomp-linker-layout.md) | toolkit | 12 | `src/x86decomp/linker_layout.py` |
+| [`x86decomp.linker_reconstruction`](x86decomp-linker-reconstruction.md) | toolkit | 2 | `src/x86decomp/linker_reconstruction.py` |
+| [`x86decomp.local_llm.__init__`](x86decomp-local-llm---init--.md) | toolkit | 0 | `src/x86decomp/local_llm/__init__.py` |
+| [`x86decomp.local_llm.matching`](x86decomp-local-llm-matching.md) | toolkit | 7 | `src/x86decomp/local_llm/matching.py` |
+| [`x86decomp.local_llm.profiles`](x86decomp-local-llm-profiles.md) | toolkit | 8 | `src/x86decomp/local_llm/profiles.py` |
+| [`x86decomp.local_llm.prompts`](x86decomp-local-llm-prompts.md) | toolkit | 7 | `src/x86decomp/local_llm/prompts.py` |
+| [`x86decomp.local_llm.transport`](x86decomp-local-llm-transport.md) | toolkit | 16 | `src/x86decomp/local_llm/transport.py` |
+| [`x86decomp.mcp`](x86decomp-mcp.md) | toolkit | 27 | `src/x86decomp/mcp.py` |
+| [`x86decomp.memory`](x86decomp-memory.md) | toolkit | 7 | `src/x86decomp/memory.py` |
+| [`x86decomp.models`](x86decomp-models.md) | toolkit | 7 | `src/x86decomp/models.py` |
+| [`x86decomp.msvc_metadata`](x86decomp-msvc-metadata.md) | toolkit | 41 | `src/x86decomp/msvc_metadata.py` |
+| [`x86decomp.native.__init__`](x86decomp-native---init--.md) | toolkit | 0 | `src/x86decomp/native/__init__.py` |
+| [`x86decomp.native.cli`](x86decomp-native-cli.md) | toolkit | 6 | `src/x86decomp/native/cli.py` |
+| [`x86decomp.native.closed_loop`](x86decomp-native-closed-loop.md) | toolkit | 5 | `src/x86decomp/native/closed_loop.py` |
+| [`x86decomp.native.hybrid_composer`](x86decomp-native-hybrid-composer.md) | toolkit | 4 | `src/x86decomp/native/hybrid_composer.py` |
+| [`x86decomp.native.matching`](x86decomp-native-matching.md) | toolkit | 8 | `src/x86decomp/native/matching.py` |
+| [`x86decomp.native.pe_reconstruction`](x86decomp-native-pe-reconstruction.md) | toolkit | 11 | `src/x86decomp/native/pe_reconstruction.py` |
+| [`x86decomp.native.runtime`](x86decomp-native-runtime.md) | toolkit | 6 | `src/x86decomp/native/runtime.py` |
+| [`x86decomp.native.slots`](x86decomp-native-slots.md) | toolkit | 9 | `src/x86decomp/native/slots.py` |
+| [`x86decomp.native.staging`](x86decomp-native-staging.md) | toolkit | 7 | `src/x86decomp/native/staging.py` |
+| [`x86decomp.native.store`](x86decomp-native-store.md) | toolkit | 4 | `src/x86decomp/native/store.py` |
+| [`x86decomp.native.windows_tools`](x86decomp-native-windows-tools.md) | toolkit | 6 | `src/x86decomp/native/windows_tools.py` |
+| [`x86decomp.objdiff_adapter`](x86decomp-objdiff-adapter.md) | toolkit | 2 | `src/x86decomp/objdiff_adapter.py` |
+| [`x86decomp.orchestrator`](x86decomp-orchestrator.md) | toolkit | 28 | `src/x86decomp/orchestrator.py` |
+| [`x86decomp.patching`](x86decomp-patching.md) | toolkit | 3 | `src/x86decomp/patching.py` |
+| [`x86decomp.pdb`](x86decomp-pdb.md) | toolkit | 24 | `src/x86decomp/pdb.py` |
+| [`x86decomp.pe`](x86decomp-pe.md) | toolkit | 19 | `src/x86decomp/pe.py` |
+| [`x86decomp.pe32`](x86decomp-pe32.md) | toolkit | 50 | `src/x86decomp/pe32.py` |
+| [`x86decomp.project`](x86decomp-project.md) | toolkit | 4 | `src/x86decomp/project.py` |
+| [`x86decomp.project_state`](x86decomp-project-state.md) | toolkit | 21 | `src/x86decomp/project_state.py` |
+| [`x86decomp.project_template`](x86decomp-project-template.md) | toolkit | 4 | `src/x86decomp/project_template.py` |
+| [`x86decomp.reconstruction.__init__`](x86decomp-reconstruction---init--.md) | toolkit | 0 | `src/x86decomp/reconstruction/__init__.py` |
+| [`x86decomp.reconstruction.abi_contracts`](x86decomp-reconstruction-abi-contracts.md) | toolkit | 8 | `src/x86decomp/reconstruction/abi_contracts.py` |
+| [`x86decomp.reconstruction.acceleration`](x86decomp-reconstruction-acceleration.md) | toolkit | 70 | `src/x86decomp/reconstruction/acceleration.py` |
+| [`x86decomp.reconstruction.builds`](x86decomp-reconstruction-builds.md) | toolkit | 12 | `src/x86decomp/reconstruction/builds.py` |
+| [`x86decomp.reconstruction.capsules`](x86decomp-reconstruction-capsules.md) | toolkit | 6 | `src/x86decomp/reconstruction/capsules.py` |
+| [`x86decomp.reconstruction.cli`](x86decomp-reconstruction-cli.md) | toolkit | 6 | `src/x86decomp/reconstruction/cli.py` |
+| [`x86decomp.reconstruction.generated_tests`](x86decomp-reconstruction-generated-tests.md) | toolkit | 8 | `src/x86decomp/reconstruction/generated_tests.py` |
+| [`x86decomp.reconstruction.headers`](x86decomp-reconstruction-headers.md) | toolkit | 10 | `src/x86decomp/reconstruction/headers.py` |
+| [`x86decomp.reconstruction.libraries`](x86decomp-reconstruction-libraries.md) | toolkit | 6 | `src/x86decomp/reconstruction/libraries.py` |
+| [`x86decomp.reconstruction.project_layout`](x86decomp-reconstruction-project-layout.md) | toolkit | 12 | `src/x86decomp/reconstruction/project_layout.py` |
+| [`x86decomp.reconstruction.provenance`](x86decomp-reconstruction-provenance.md) | toolkit | 11 | `src/x86decomp/reconstruction/provenance.py` |
+| [`x86decomp.reconstruction.security`](x86decomp-reconstruction-security.md) | toolkit | 7 | `src/x86decomp/reconstruction/security.py` |
+| [`x86decomp.reconstruction.semantic_changesets`](x86decomp-reconstruction-semantic-changesets.md) | toolkit | 9 | `src/x86decomp/reconstruction/semantic_changesets.py` |
+| [`x86decomp.reconstruction.store`](x86decomp-reconstruction-store.md) | toolkit | 4 | `src/x86decomp/reconstruction/store.py` |
+| [`x86decomp.release_gate`](x86decomp-release-gate.md) | toolkit | 4 | `src/x86decomp/release_gate.py` |
+| [`x86decomp.relink`](x86decomp-relink.md) | toolkit | 1 | `src/x86decomp/relink.py` |
+| [`x86decomp.reproducibility`](x86decomp-reproducibility.md) | toolkit | 3 | `src/x86decomp/reproducibility.py` |
+| [`x86decomp.security_audit`](x86decomp-security-audit.md) | toolkit | 5 | `src/x86decomp/security_audit.py` |
+| [`x86decomp.service`](x86decomp-service.md) | toolkit | 16 | `src/x86decomp/service.py` |
+| [`x86decomp.symbolic`](x86decomp-symbolic.md) | toolkit | 27 | `src/x86decomp/symbolic.py` |
+| [`x86decomp.synthetic_corpus`](x86decomp-synthetic-corpus.md) | toolkit | 15 | `src/x86decomp/synthetic_corpus.py` |
+| [`x86decomp.target_pack`](x86decomp-target-pack.md) | toolkit | 9 | `src/x86decomp/target_pack.py` |
+| [`x86decomp.test_bundle`](x86decomp-test-bundle.md) | toolkit | 9 | `src/x86decomp/test_bundle.py` |
+| [`x86decomp.toolchains`](x86decomp-toolchains.md) | toolkit | 2 | `src/x86decomp/toolchains.py` |
+| [`x86decomp.tools`](x86decomp-tools.md) | toolkit | 3 | `src/x86decomp/tools.py` |
+| [`x86decomp.util`](x86decomp-util.md) | toolkit | 13 | `src/x86decomp/util.py` |
+| [`x86decomp.work_queue`](x86decomp-work-queue.md) | toolkit | 9 | `src/x86decomp/work_queue.py` |
+| [`x86decomp.worker`](x86decomp-worker.md) | toolkit | 13 | `src/x86decomp/worker.py` |
+| [`x86decomp.workflow`](x86decomp-workflow.md) | toolkit | 12 | `src/x86decomp/workflow.py` |
+| [`x86decomp_testkit.__init__`](x86decomp-testkit---init--.md) | test-suite | 0 | `test-suite/src/x86decomp_testkit/__init__.py` |
+| [`x86decomp_testkit.__main__`](x86decomp-testkit---main--.md) | test-suite | 0 | `test-suite/src/x86decomp_testkit/__main__.py` |
+| [`x86decomp_testkit.adapters.__init__`](x86decomp-testkit-adapters---init--.md) | test-suite | 0 | `test-suite/src/x86decomp_testkit/adapters/__init__.py` |
+| [`x86decomp_testkit.adapters.capabilities`](x86decomp-testkit-adapters-capabilities.md) | test-suite | 9 | `test-suite/src/x86decomp_testkit/adapters/capabilities.py` |
+| [`x86decomp_testkit.adapters.catalog`](x86decomp-testkit-adapters-catalog.md) | test-suite | 1 | `test-suite/src/x86decomp_testkit/adapters/catalog.py` |
+| [`x86decomp_testkit.adapters.detection`](x86decomp-testkit-adapters-detection.md) | test-suite | 11 | `test-suite/src/x86decomp_testkit/adapters/detection.py` |
+| [`x86decomp_testkit.adapters.download`](x86decomp-testkit-adapters-download.md) | test-suite | 6 | `test-suite/src/x86decomp_testkit/adapters/download.py` |
+| [`x86decomp_testkit.adapters.installation`](x86decomp-testkit-adapters-installation.md) | test-suite | 10 | `test-suite/src/x86decomp_testkit/adapters/installation.py` |
+| [`x86decomp_testkit.cli`](x86decomp-testkit-cli.md) | test-suite | 4 | `test-suite/src/x86decomp_testkit/cli.py` |
+| [`x86decomp_testkit.config`](x86decomp-testkit-config.md) | test-suite | 6 | `test-suite/src/x86decomp_testkit/config.py` |
+| [`x86decomp_testkit.coverage_audit`](x86decomp-testkit-coverage-audit.md) | test-suite | 2 | `test-suite/src/x86decomp_testkit/coverage_audit.py` |
+| [`x86decomp_testkit.fixtures`](x86decomp-testkit-fixtures.md) | test-suite | 4 | `test-suite/src/x86decomp_testkit/fixtures.py` |
+| [`x86decomp_testkit.inventory`](x86decomp-testkit-inventory.md) | test-suite | 16 | `test-suite/src/x86decomp_testkit/inventory.py` |
+| [`x86decomp_testkit.junit`](x86decomp-testkit-junit.md) | test-suite | 1 | `test-suite/src/x86decomp_testkit/junit.py` |
+| [`x86decomp_testkit.live_adapters`](x86decomp-testkit-live-adapters.md) | test-suite | 9 | `test-suite/src/x86decomp_testkit/live_adapters.py` |
+| [`x86decomp_testkit.logging_utils`](x86decomp-testkit-logging-utils.md) | test-suite | 4 | `test-suite/src/x86decomp_testkit/logging_utils.py` |
+| [`x86decomp_testkit.models`](x86decomp-testkit-models.md) | test-suite | 12 | `test-suite/src/x86decomp_testkit/models.py` |
+| [`x86decomp_testkit.orchestrator`](x86decomp-testkit-orchestrator.md) | test-suite | 4 | `test-suite/src/x86decomp_testkit/orchestrator.py` |
+| [`x86decomp_testkit.process`](x86decomp-testkit-process.md) | test-suite | 2 | `test-suite/src/x86decomp_testkit/process.py` |
+| [`x86decomp_testkit.reports`](x86decomp-testkit-reports.md) | test-suite | 5 | `test-suite/src/x86decomp_testkit/reports.py` |
+| [`x86decomp_testkit.self_tests.__init__`](x86decomp-testkit-self-tests---init--.md) | test-suite | 0 | `test-suite/src/x86decomp_testkit/self_tests/__init__.py` |
+| [`x86decomp_testkit.self_tests.test_adapter_capabilities`](x86decomp-testkit-self-tests-test-adapter-capabilities.md) | test-suite | 7 | `test-suite/src/x86decomp_testkit/self_tests/test_adapter_capabilities.py` |
+| [`x86decomp_testkit.self_tests.test_adapter_detection_resolution`](x86decomp-testkit-self-tests-test-adapter-detection-resolution.md) | test-suite | 9 | `test-suite/src/x86decomp_testkit/self_tests/test_adapter_detection_resolution.py` |
+| [`x86decomp_testkit.self_tests.test_archive_security`](x86decomp-testkit-self-tests-test-archive-security.md) | test-suite | 4 | `test-suite/src/x86decomp_testkit/self_tests/test_archive_security.py` |
+| [`x86decomp_testkit.self_tests.test_cli_and_installation`](x86decomp-testkit-self-tests-test-cli-and-installation.md) | test-suite | 4 | `test-suite/src/x86decomp_testkit/self_tests/test_cli_and_installation.py` |
+| [`x86decomp_testkit.self_tests.test_config_models`](x86decomp-testkit-self-tests-test-config-models.md) | test-suite | 3 | `test-suite/src/x86decomp_testkit/self_tests/test_config_models.py` |
+| [`x86decomp_testkit.self_tests.test_inventory_reports_process`](x86decomp-testkit-self-tests-test-inventory-reports-process.md) | test-suite | 5 | `test-suite/src/x86decomp_testkit/self_tests/test_inventory_reports_process.py` |
+| [`x86decomp_testkit.suites`](x86decomp-testkit-suites.md) | test-suite | 12 | `test-suite/src/x86decomp_testkit/suites.py` |
+| [`x86decomp_testkit.timeutil`](x86decomp-testkit-timeutil.md) | test-suite | 1 | `test-suite/src/x86decomp_testkit/timeutil.py` |
+| [`x86decomp_testkit.toolkit_tests.__init__`](x86decomp-testkit-toolkit-tests---init--.md) | test-suite | 0 | `test-suite/src/x86decomp_testkit/toolkit_tests/__init__.py` |
+| [`x86decomp_testkit.toolkit_tests.test_public_api_contract`](x86decomp-testkit-toolkit-tests-test-public-api-contract.md) | test-suite | 32 | `test-suite/src/x86decomp_testkit/toolkit_tests/test_public_api_contract.py` |

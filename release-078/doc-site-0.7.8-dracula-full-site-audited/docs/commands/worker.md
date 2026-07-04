@@ -1,6 +1,6 @@
 ---
 title: x86decomp worker
-description: Exact v0.7.8 parser-derived reference for `x86decomp worker`.
+description: Command reference for `x86decomp worker`.
 ---
 
 
@@ -17,10 +17,10 @@ usage: x86decomp worker [-h] [--project PROJECT] [--actor ACTOR]
 
 ## Arguments
 
-| Argument | Exact parser declaration |
+| Argument | Details |
 | --- | --- |
-| `--project` | default: `'.'` · parser destination: `project`. project root used by the capability implementation (default: current directory) |
-| `--actor` | default: `'analyst'` · parser destination: `actor`. No help text declared. |
+| `--project` | default: `'.'`. project root used by the capability implementation (default: current directory) |
+| `--actor` | default: `'analyst'`. |
 
 ## Actions
 
@@ -38,9 +38,9 @@ usage: x86decomp worker [-h] [--project PROJECT] [--actor ACTOR]
 usage: x86decomp worker doctor [-h] worker_id
 ```
 
-| Argument | Exact parser declaration |
+| Argument | Details |
 | --- | --- |
-| `worker_id` | required · parser destination: `worker_id`. No help text declared. |
+| `worker_id` | required. |
 
 ### `x86decomp worker list`
 
@@ -48,9 +48,9 @@ usage: x86decomp worker doctor [-h] worker_id
 usage: x86decomp worker list [-h] [--status STATUS]
 ```
 
-| Argument | Exact parser declaration |
+| Argument | Details |
 | --- | --- |
-| `--status` | parser destination: `status`. No help text declared. |
+| `--status` | — |
 
 ### `x86decomp worker register`
 
@@ -60,12 +60,12 @@ usage: x86decomp worker register [-h] [--endpoint ENDPOINT]
                                  name capabilities_json
 ```
 
-| Argument | Exact parser declaration |
+| Argument | Details |
 | --- | --- |
-| `name` | required · parser destination: `name`. No help text declared. |
-| `capabilities_json` | required · parser destination: `capabilities_json`. No help text declared. |
-| `--endpoint` | parser destination: `endpoint`. No help text declared. |
-| `--environment-sha256` | parser destination: `environment_sha256`. No help text declared. |
+| `name` | required. |
+| `capabilities_json` | required. |
+| `--endpoint` | — |
+| `--environment-sha256` | — |
 
 ### `x86decomp worker select`
 
@@ -73,9 +73,9 @@ usage: x86decomp worker register [-h] [--endpoint ENDPOINT]
 usage: x86decomp worker select [-h] required_json
 ```
 
-| Argument | Exact parser declaration |
+| Argument | Details |
 | --- | --- |
-| `required_json` | required · parser destination: `required_json`. No help text declared. |
+| `required_json` | required. |
 
 ### `x86decomp worker status`
 
@@ -83,18 +83,9 @@ usage: x86decomp worker select [-h] required_json
 usage: x86decomp worker status [-h] worker_id status
 ```
 
-| Argument | Exact parser declaration |
+| Argument | Details |
 | --- | --- |
-| `worker_id` | required · parser destination: `worker_id`. No help text declared. |
-| `status` | required · parser destination: `status`. No help text declared. |
+| `worker_id` | required. |
+| `status` | required. |
 
-## Source basis
 
-| Parser owner | Source file | SHA-256 |
-| --- | --- | --- |
-| canonical cli | `src/x86decomp/canonical.py` | `9dfc1a2d1ba31559b1a9cd31a0cda1ab1a1e88ffef0a47c4632995f649296166` |
-| governance cli | `src/x86decomp/governance/cli.py` | `34d9488f9d07dfded83f5e9191aa7faba7140e8b2d0a2d0da66925851fa090de` |
-
-## Verification boundary
-
-This page is regenerated from the v0.7.8 parser surface. It documents syntax, parser-declared arguments, canonical owners, and source files; it does not claim that optional adapters, target binaries, compiler toolchains, or runtime inputs exist on the reader's machine.

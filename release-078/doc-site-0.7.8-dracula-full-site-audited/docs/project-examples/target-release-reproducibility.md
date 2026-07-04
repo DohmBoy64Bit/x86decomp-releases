@@ -3,7 +3,6 @@ title: 'Example: target release and reproducibility project'
 description: Hash the project and required tools, verify reproducibility inputs, audit
   source and dependencies, and evaluate an explicit target release contract without
   overclaiming correctness.
-original_path: project-examples/target-release-reproducibility.html
 ---
 
 <a id="model"></a>
@@ -19,8 +18,6 @@ original_path: project-examples/target-release-reproducibility.html
 <a id="archive"></a>
 <a id="limits"></a>
 <a id="source-basis"></a>
-
-Section: Project examples
 
 # Example: target release and reproducibility project
 
@@ -132,22 +129,18 @@ Store the backup together with the gate, reproduction, security, convergence, wo
 
 > **Verification model.** Command syntax is checked against the live parser. The source files below are hashed from the current release; implementation and test rows are retained as independent truth boundaries.
 
-| Evidence file | SHA-256 |
-| --- | --- |
-| `src/x86decomp/cli.py` | `21e0654ced2f5dd0588adcbedec328613fba524ff1e0a91ef07d63cbbf88288c` |
-| `src/x86decomp/reproducibility.py` | `bcc5e2a773d7eb7589f28df90c0fe898155788b8e695d15e363e6dbad249ae7b` |
-| `src/x86decomp/security_audit.py` | `0b7574a71e4c8677352766c9358f8022871e566f43a9277050b887648f4ab22c` |
-| `src/x86decomp/release_gate.py` | `8e79be8c5af67a90063af185b2239a5ce5a8ca828627ee05c14d897f891e02fd` |
-| `src/x86decomp/project_state.py` | `e78c286125050d9b582e38acdefcf3c901f0634372af8b287942ca8b10aa9aee` |
-| `tests/test_production.py` | `da0d4bd57f7f4bb68957fa8aa42a67f7eb34347f35137849e360dc95e796db89` |
+| Evidence file |
+| --- |
+| `src/x86decomp/cli.py` |
+| `src/x86decomp/reproducibility.py` |
+| `src/x86decomp/security_audit.py` |
+| `src/x86decomp/release_gate.py` |
+| `src/x86decomp/project_state.py` |
+| `tests/test_production.py` |
 
 
 ## Related examples
 
-[Matching project
-
-Open the source-verified workflow.](matching-project.md)[Functional project
-
-Open the source-verified workflow.](functional-project.md)[Hybrid composition
-
-Open the source-verified workflow.](hybrid-project.md)
+- [Matching project](matching-project.md)
+- [Functional project](functional-project.md)
+- [Hybrid composition](hybrid-project.md)

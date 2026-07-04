@@ -1,17 +1,14 @@
 ---
 title: "Build reconstruction contract"
-description: "Exact source-derived schema reference for schemas/reconstruction/build.schema.json"
+description: "Schema reference for schemas/reconstruction/build.schema.json"
 ---
 
 # `schemas/reconstruction/build.schema.json`
-
-This page is generated from the exact schema file in the v0.7.8 source tree. It is not an inferred or hand-written summary.
 
 | Field | Value |
 | --- | --- |
 | Scope | `toolkit` |
 | Source path | `schemas/reconstruction/build.schema.json` |
-| SHA-256 | `647d938812825abaa84206de119ebc4a18d8fad70a4f50121f990a4af2571dd0` |
 | `$schema` | `https://json-schema.org/draft/2020-12/schema` |
 | `$id` | `https://x86decomp.dev/schemas/reconstruction/build.schema.json` |
 | Title | Build reconstruction contract |
@@ -32,10 +29,10 @@ This page is generated from the exact schema file in the v0.7.8 source tree. It 
 
 | Property | Type | Required | Description |
 | --- | --- | --- | --- |
-| `build_id` | `string` | yes | Not declared |
-| `generator` | `Not declared` | yes | Not declared |
-| `mode` | `Not declared` | yes | Not declared |
-| `targets` | `array` | yes | Not declared |
+| `build_id` | `string` | yes | — |
+| `generator` | — | yes | — |
+| `mode` | — | yes | — |
+| `targets` | `array` | yes | — |
 
 ## Definition keys
 
@@ -43,4 +40,3 @@ This schema declares no top-level `definitions` or `$defs` object.
 
 ## Source verification
 
-The schema audit verifies that this page names the same source path and SHA-256 hash as the file in the v0.7.8 toolkit archive, and that the source schema passes JSON Schema meta-validation.

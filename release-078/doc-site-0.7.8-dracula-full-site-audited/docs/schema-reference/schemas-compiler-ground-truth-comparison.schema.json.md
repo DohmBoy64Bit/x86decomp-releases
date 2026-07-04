@@ -1,17 +1,14 @@
 ---
 title: "Compiler/version ground-truth corpus comparison"
-description: "Exact source-derived schema reference for schemas/compiler-ground-truth-comparison.schema.json"
+description: "Schema reference for schemas/compiler-ground-truth-comparison.schema.json"
 ---
 
 # `schemas/compiler-ground-truth-comparison.schema.json`
-
-This page is generated from the exact schema file in the v0.7.8 source tree. It is not an inferred or hand-written summary.
 
 | Field | Value |
 | --- | --- |
 | Scope | `toolkit` |
 | Source path | `schemas/compiler-ground-truth-comparison.schema.json` |
-| SHA-256 | `1ea55d940c62d4e60487f74ac4d9756e4ff4c7cb2c39c9dd629b1d4150646dfb` |
 | `$schema` | `https://json-schema.org/draft/2020-12/schema` |
 | `$id` | `urn:x86decomp:schema:compiler-ground-truth-comparison:1` |
 | Title | Compiler/version ground-truth corpus comparison |
@@ -34,12 +31,12 @@ This page is generated from the exact schema file in the v0.7.8 source tree. It 
 
 | Property | Type | Required | Description |
 | --- | --- | --- | --- |
-| `comparisons` | `array` | yes | Not declared |
-| `kind` | `Not declared` | yes | Not declared |
-| `reports` | `array` | yes | Not declared |
-| `schema_version` | `Not declared` | yes | Not declared |
-| `semantic_equivalence_claimed` | `Not declared` | yes | Not declared |
-| `summary` | `object` | yes | Not declared |
+| `comparisons` | `array` | yes | — |
+| `kind` | — | yes | — |
+| `reports` | `array` | yes | — |
+| `schema_version` | — | yes | — |
+| `semantic_equivalence_claimed` | — | yes | — |
+| `summary` | `object` | yes | — |
 
 ## Definition keys
 
@@ -47,4 +44,3 @@ This schema declares no top-level `definitions` or `$defs` object.
 
 ## Source verification
 
-The schema audit verifies that this page names the same source path and SHA-256 hash as the file in the v0.7.8 toolkit archive, and that the source schema passes JSON Schema meta-validation.

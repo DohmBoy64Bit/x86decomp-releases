@@ -5,7 +5,6 @@ description: Test source reference for tests/assembly/test_pipeline_cli_schemas.
 
 # `tests/assembly/test_pipeline_cli_schemas.py`
 
-**SHA-256:** `60c00f47c0a9735f8573b9acab35f961cf048f748db3d937dfc33f8a2ff18d36`
 
 | Test symbol | Kind | Line | End line |
 | --- | --- | ---: | ---: |

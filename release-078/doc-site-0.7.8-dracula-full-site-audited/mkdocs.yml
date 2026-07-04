@@ -38,15 +38,11 @@ nav:
       - Overview: reference.md
       - Architecture: architecture.md
       - Commands: commands/index.md
-      - Command Audit: release-artifacts/COMMAND_REFERENCE_STRICT_AUDIT.md
       - Schemas: schemas.md
       - Integrations: integrations.md
       - Source Modules: features/index.md
       - Function Index: functions/index.md
       - Tests: tests/index.md
-  - Release Evidence:
-      - Overview: release-evidence.md
-      - Verification: verification.md
-      - Source Coverage: source-coverage.md
+  - Project:
       - Changelog: changelog.md
       - About: about.md

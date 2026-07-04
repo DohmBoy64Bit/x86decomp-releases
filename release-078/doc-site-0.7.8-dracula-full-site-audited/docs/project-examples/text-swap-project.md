@@ -167,19 +167,15 @@ Those claims require separate matching, functional, source-stage, relink, integr
 
 > **Verification model.** Command syntax is checked against the live parser. The source files below are hashed from the current release; implementation and test rows are retained as independent truth boundaries.
 
-| Evidence file | SHA-256 |
-| --- | --- |
-| `src/x86decomp/cli.py` | `21e0654ced2f5dd0588adcbedec328613fba524ff1e0a91ef07d63cbbf88288c` |
-| `src/x86decomp/reconstruction/cli.py` | `dd5a6c7c987b3c49a3f7c1c635d60b34542e21f9346bd85f869013532c844cc4` |
-| `src/x86decomp/reconstruction/acceleration.py` | `acada93918527df17da324b8697e7e5f6f6259238790526d8b6daecaa26ae396` |
-| `tests/reconstruction/test_real_project_acceleration.py` | `449179fbd7c73f7f94d43957ee29a77d52c3473f35e0f8e43f370ea5dcd1c8d1` |
+| Evidence file |
+| --- |
+| `src/x86decomp/cli.py` |
+| `src/x86decomp/reconstruction/cli.py` |
+| `src/x86decomp/reconstruction/acceleration.py` |
+| `tests/reconstruction/test_real_project_acceleration.py` |
 
 ## Related examples
 
-[Full relink convergence
-
-Open the source-verified workflow.](full-relink-convergence.md)[Patch-image integration
-
-Open the source-verified workflow.](patch-image-integration.md)[Project operations and recovery
-
-Open the source-verified workflow.](project-operations-recovery.md)
+- [Full relink convergence](full-relink-convergence.md)
+- [Patch-image integration](patch-image-integration.md)
+- [Project operations and recovery](project-operations-recovery.md)

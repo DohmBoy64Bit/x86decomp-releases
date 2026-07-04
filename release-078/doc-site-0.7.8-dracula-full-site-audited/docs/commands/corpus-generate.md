@@ -1,6 +1,6 @@
 ---
 title: x86decomp corpus-generate
-description: Exact v0.7.8 parser-derived reference for `x86decomp corpus-generate`.
+description: Command reference for `x86decomp corpus-generate`.
 ---
 
 
@@ -17,21 +17,13 @@ usage: x86decomp corpus-generate [-h] [--cases-per-family CASES_PER_FAMILY]
 
 ## Arguments
 
-| Argument | Exact parser declaration |
+| Argument | Details |
 | --- | --- |
-| `output_directory` | required · type: `_path` · parser destination: `output_directory`. No help text declared. |
-| `--cases-per-family` | type: `int` · default: `8` · parser destination: `cases_per_family`. No help text declared. |
-| `--seed` | type: `_int` · default: `2262745310` · parser destination: `seed`. No help text declared. |
-| `--c-only` | nargs: `0` · default: `False` · parser destination: `c_only`. No help text declared. |
-| `--cpp-only` | nargs: `0` · default: `False` · parser destination: `cpp_only`. No help text declared. |
-| `--report` | type: `_path` · parser destination: `report`. No help text declared. |
+| `output_directory` | required · type: `path`. |
+| `--cases-per-family` | type: `int` · default: `8`. |
+| `--seed` | type: `int` · default: `2262745310`. |
+| `--c-only` | nargs: `0` · default: `False`. |
+| `--cpp-only` | nargs: `0` · default: `False`. |
+| `--report` | type: `path`. |
 
-## Source basis
 
-| Parser owner | Source file | SHA-256 |
-| --- | --- | --- |
-| root cli | `src/x86decomp/cli.py` | `21e0654ced2f5dd0588adcbedec328613fba524ff1e0a91ef07d63cbbf88288c` |
-
-## Verification boundary
-
-This page is regenerated from the v0.7.8 parser surface. It documents syntax, parser-declared arguments, canonical owners, and source files; it does not claim that optional adapters, target binaries, compiler toolchains, or runtime inputs exist on the reader's machine.

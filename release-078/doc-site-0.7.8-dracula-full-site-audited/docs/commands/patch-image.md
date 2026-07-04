@@ -1,6 +1,6 @@
 ---
 title: x86decomp patch-image
-description: Exact v0.7.8 parser-derived reference for `x86decomp patch-image`.
+description: Command reference for `x86decomp patch-image`.
 ---
 
 
@@ -18,22 +18,14 @@ usage: x86decomp patch-image [-h] --rva RVA
 
 ## Arguments
 
-| Argument | Exact parser declaration |
+| Argument | Details |
 | --- | --- |
-| `original` | required · type: `_path` · parser destination: `original`. No help text declared. |
-| `candidate` | required · type: `_path` · parser destination: `candidate`. No help text declared. |
-| `output` | required · type: `_path` · parser destination: `output`. No help text declared. |
-| `--rva` | required · type: `_int` · parser destination: `rva`. No help text declared. |
-| `--expected-original-sha256` | parser destination: `expected_original_sha256`. No help text declared. |
-| `--expected-function-sha256` | parser destination: `expected_function_sha256`. No help text declared. |
-| `--report` | type: `_path` · parser destination: `report`. No help text declared. |
+| `original` | required · type: `path`. |
+| `candidate` | required · type: `path`. |
+| `output` | required · type: `path`. |
+| `--rva` | required · type: `int`. |
+| `--expected-original-sha256` | — |
+| `--expected-function-sha256` | — |
+| `--report` | type: `path`. |
 
-## Source basis
 
-| Parser owner | Source file | SHA-256 |
-| --- | --- | --- |
-| root cli | `src/x86decomp/cli.py` | `21e0654ced2f5dd0588adcbedec328613fba524ff1e0a91ef07d63cbbf88288c` |
-
-## Verification boundary
-
-This page is regenerated from the v0.7.8 parser surface. It documents syntax, parser-declared arguments, canonical owners, and source files; it does not claim that optional adapters, target binaries, compiler toolchains, or runtime inputs exist on the reader's machine.

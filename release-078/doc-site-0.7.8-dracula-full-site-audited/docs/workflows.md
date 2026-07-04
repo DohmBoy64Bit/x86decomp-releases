@@ -2,7 +2,6 @@
 title: Practical paths through the toolkit
 description: Example x86decomp workflows for inspection, reconstruction, assembly,
   evidence, and verification.
-original_path: workflows.html
 ---
 
 <a id="workflow-1"></a>
@@ -13,8 +12,6 @@ original_path: workflows.html
 <a id="workflow-6"></a>
 <a id="workflow-7"></a>
 <a id="workflow-8"></a>
-
-Section: Example workflows
 
 # Practical paths through the toolkit
 

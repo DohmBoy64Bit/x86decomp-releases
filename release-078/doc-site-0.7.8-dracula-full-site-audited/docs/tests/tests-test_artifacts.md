@@ -5,7 +5,6 @@ description: Test source reference for tests/test_artifacts.py.
 
 # `tests/test_artifacts.py`
 
-**SHA-256:** `bcf7a774d955c365b701f002a37884e35babacc396f6a78188c6e2ada40bca67`
 
 | Test symbol | Kind | Line | End line |
 | --- | --- | ---: | ---: |

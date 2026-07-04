@@ -5,7 +5,6 @@ description: Test source reference for tests/native/test_staging_loop_runtime_wi
 
 # `tests/native/test_staging_loop_runtime_windows.py`
 
-**SHA-256:** `da1cf374737a7615578374f772b1d100e2756affcf6abf90c4e56941f4c82fe8`
 
 | Test symbol | Kind | Line | End line |
 | --- | --- | ---: | ---: |

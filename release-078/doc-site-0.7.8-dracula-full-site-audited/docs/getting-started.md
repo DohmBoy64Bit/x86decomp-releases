@@ -1,10 +1,7 @@
 ---
 title: From installation to a verified project
 description: Source-checked installation and first-project workflow
-original_path: getting-started.html
 ---
-
-Section: Source-checked setup
 
 # From installation to a verified project
 

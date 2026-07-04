@@ -3,7 +3,6 @@ title: 'Example: benchmark and validation-corpus project'
 description: Generate or build controlled corpora, run byte, dynamic, symbolic, integration,
   and analysis cases, preserve human-intervention counts, and compare reproducible
   reports.
-original_path: project-examples/benchmark-validation-corpus.html
 ---
 
 <a id="model"></a>
@@ -19,8 +18,6 @@ original_path: project-examples/benchmark-validation-corpus.html
 <a id="bundle"></a>
 <a id="limits"></a>
 <a id="source-basis"></a>
-
-Section: Project examples
 
 # Example: benchmark and validation-corpus project
 
@@ -172,23 +169,19 @@ Creation records authorization and hashes. Inspection uses safe extraction, veri
 
 > **Verification model.** Command syntax is checked against the live parser. The source files below are hashed from the current release; implementation and test rows are retained as independent truth boundaries.
 
-| Evidence file | SHA-256 |
-| --- | --- |
-| `src/x86decomp/cli.py` | `21e0654ced2f5dd0588adcbedec328613fba524ff1e0a91ef07d63cbbf88288c` |
-| `src/x86decomp/benchmarks.py` | `b9b28fbcb2f38723b274e4150b1c3914ddcbceab1b49461fc5797a84f9e13fb3` |
-| `src/x86decomp/ground_truth.py` | `9684fbcda0fd5060b3c1f2d0efb83892900c69190d33e24fd7e49f91885181e2` |
-| `src/x86decomp/dynamic.py` | `a09cbba16f498158cf30191397884f0a70051c767b778cd520ac229b6e85e451` |
-| `src/x86decomp/symbolic.py` | `93d98f6e85a01a107881131821d5eb04875d310795c4f173448918c5a96fdcd3` |
-| `src/x86decomp/integration.py` | `cb8157c8210544e2ed4730e8bdb01f0a77dc9d05f683d43154cba1bf93c1e845` |
-| `tests/test_linker_metadata_corpus.py` | `aa88771eecf6bbd2a6fcc6230848165884fea583b48688061d61c14756f9a1de` |
+| Evidence file |
+| --- |
+| `src/x86decomp/cli.py` |
+| `src/x86decomp/benchmarks.py` |
+| `src/x86decomp/ground_truth.py` |
+| `src/x86decomp/dynamic.py` |
+| `src/x86decomp/symbolic.py` |
+| `src/x86decomp/integration.py` |
+| `tests/test_linker_metadata_corpus.py` |
 
 
 ## Related examples
 
-[Matching project
-
-Open the source-verified workflow.](matching-project.md)[Functional project
-
-Open the source-verified workflow.](functional-project.md)[Hybrid composition
-
-Open the source-verified workflow.](hybrid-project.md)
+- [Matching project](matching-project.md)
+- [Functional project](functional-project.md)
+- [Hybrid composition](hybrid-project.md)

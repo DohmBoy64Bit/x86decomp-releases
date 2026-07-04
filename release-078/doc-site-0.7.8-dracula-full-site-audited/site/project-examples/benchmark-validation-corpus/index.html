@@ -159,14 +159,6 @@
     </li>
                             
     <li class="drac-box-ternary">
-        <a href="../../release-artifacts/COMMAND_REFERENCE_STRICT_AUDIT/"
-            class="
-            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Command Audit
-        </a>
-    </li>
-                            
-    <li class="drac-box-ternary">
         <a href="../../schemas/"
             class="
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
@@ -212,35 +204,11 @@
                 <a href="../.."
                     class="
                     drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
-                    data-bs-toggle="collapse" data-bs-target="#release-evidence-collapse" aria-expanded="false">
-                    Release Evidence
+                    data-bs-toggle="collapse" data-bs-target="#project-collapse" aria-expanded="false">
+                    Project
                 </a>
-                <div class="collapse" id="release-evidence-collapse">
+                <div class="collapse" id="project-collapse">
                     <ul class="mb-5 drac-list drac-list-none">
-                            
-    <li class="drac-box-ternary">
-        <a href="../../release-evidence/"
-            class="
-            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Overview
-        </a>
-    </li>
-                            
-    <li class="drac-box-ternary">
-        <a href="../../verification/"
-            class="
-            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Verification
-        </a>
-    </li>
-                            
-    <li class="drac-box-ternary">
-        <a href="../../source-coverage/"
-            class="
-            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Source Coverage
-        </a>
-    </li>
                             
     <li class="drac-box-ternary">
         <a href="../../changelog/"
@@ -328,7 +296,6 @@
 <a id="bundle"></a>
 <a id="limits"></a>
 <a id="source-basis"></a></p>
-<p>Section: Project examples</p>
 <h1 id="example-benchmark-and-validation-corpus-project">Example: benchmark and validation-corpus project</h1>
 <p>Generate or build controlled corpora, run byte, dynamic, symbolic, integration, and analysis cases, preserve human-intervention counts, and compare reproducible reports.</p>
 <blockquote>
@@ -444,45 +411,38 @@ x86decomp test-bundle-inspect build/authorized-test-bundle.zip --report reports/
 <thead>
 <tr>
 <th>Evidence file</th>
-<th>SHA-256</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>src/x86decomp/cli.py</code></td>
-<td><code>21e0654ced2f5dd0588adcbedec328613fba524ff1e0a91ef07d63cbbf88288c</code></td>
 </tr>
 <tr>
 <td><code>src/x86decomp/benchmarks.py</code></td>
-<td><code>b9b28fbcb2f38723b274e4150b1c3914ddcbceab1b49461fc5797a84f9e13fb3</code></td>
 </tr>
 <tr>
 <td><code>src/x86decomp/ground_truth.py</code></td>
-<td><code>9684fbcda0fd5060b3c1f2d0efb83892900c69190d33e24fd7e49f91885181e2</code></td>
 </tr>
 <tr>
 <td><code>src/x86decomp/dynamic.py</code></td>
-<td><code>a09cbba16f498158cf30191397884f0a70051c767b778cd520ac229b6e85e451</code></td>
 </tr>
 <tr>
 <td><code>src/x86decomp/symbolic.py</code></td>
-<td><code>93d98f6e85a01a107881131821d5eb04875d310795c4f173448918c5a96fdcd3</code></td>
 </tr>
 <tr>
 <td><code>src/x86decomp/integration.py</code></td>
-<td><code>cb8157c8210544e2ed4730e8bdb01f0a77dc9d05f683d43154cba1bf93c1e845</code></td>
 </tr>
 <tr>
 <td><code>tests/test_linker_metadata_corpus.py</code></td>
-<td><code>aa88771eecf6bbd2a6fcc6230848165884fea583b48688061d61c14756f9a1de</code></td>
 </tr>
 </tbody>
 </table>
 <h2 id="related-examples">Related examples</h2>
-<p>[Matching project</p>
-<p>Open the source-verified workflow.](matching-project.md)[Functional project</p>
-<p>Open the source-verified workflow.](functional-project.md)[Hybrid composition</p>
-<p>Open the source-verified workflow.](hybrid-project.md)</p></p>
+<ul>
+<li><a href="../matching-project/">Matching project</a></li>
+<li><a href="../functional-project/">Functional project</a></li>
+<li><a href="../hybrid-project/">Hybrid composition</a></li>
+</ul></p>
     </article>
 </section>
             <!-- endblock -->

@@ -1,0 +1,3019 @@
+{
+  "deleted": [
+    "release-evidence.md",
+    "verification.md",
+    "source-coverage.md",
+    "project-examples/source-audit.md",
+    "release-artifacts/COMMAND_REFERENCE_HASHES.json",
+    "release-artifacts/COMMAND_REFERENCE_STRICT_AUDIT.json",
+    "release-artifacts/COMMAND_REFERENCE_STRICT_AUDIT.md",
+    "release-artifacts/DOCSITE_MARKDOWN_HASHES.json",
+    "release-artifacts/DOCSITE_SYNC_AUDIT.json",
+    "release-artifacts/FULL_DOCSITE_AUDIT.json",
+    "release-artifacts/FULL_DOCSITE_AUDIT.md",
+    "release-artifacts/FULL_DOCSITE_HASH_PARITY_AUDIT.json",
+    "release-artifacts/FULL_DOCSITE_HASH_PARITY_AUDIT.md",
+    "release-artifacts/HARNESS_SUMMARY.json",
+    "release-artifacts/PROJECT_EXAMPLES_SOURCE_AUDIT.json",
+    "release-artifacts/PROJECT_EXAMPLES_STRICT_AUDIT.json",
+    "release-artifacts/PROJECT_EXAMPLES_STRICT_AUDIT.md",
+    "release-artifacts/SCHEMA_STRICT_AUDIT.json",
+    "release-artifacts/SCHEMA_STRICT_AUDIT.md",
+    "features/x86decomp-assembly.md",
+    "features/x86decomp-governance.md",
+    "features/x86decomp-local-llm.md",
+    "features/x86decomp-native.md",
+    "features/x86decomp-reconstruction.md",
+    "features/x86decomp-testkit-adapters.md",
+    "features/x86decomp-testkit-self-tests.md",
+    "features/x86decomp-testkit-toolkit-tests.md",
+    "features/x86decomp-testkit.md",
+    "features/x86decomp.md",
+    "tests/test-suite-src-x86decomp-testkit-toolkit-tests-test-public-api-contract.md",
+    "tests/test-suite-tests-test-adapter-detection-resolution.md",
+    "tests/test-suite-tests-test-architecture-maps.md",
+    "tests/test-suite-tests-test-archive-security.md",
+    "tests/test-suite-tests-test-cli-and-installation.md",
+    "tests/test-suite-tests-test-config-models.md",
+    "tests/test-suite-tests-test-inventory-reports-process.md",
+    "tests/tests-assembly-test-annotation-materialize.md",
+    "tests/tests-assembly-test-helpers-and-relocations.md",
+    "tests/tests-assembly-test-pipeline-cli-schemas.md",
+    "tests/tests-governance-test-core.md",
+    "tests/tests-governance-test-governance-cli-schemas.md",
+    "tests/tests-governance-test-proof-plugin-worker.md",
+    "tests/tests-governance-test-worker-thread-safety.md",
+    "tests/tests-native-test-cli-schemas.md",
+    "tests/tests-native-test-inventory-and-loops.md",
+    "tests/tests-native-test-pe-hybrid.md",
+    "tests/tests-native-test-slots-matching.md",
+    "tests/tests-native-test-staging-loop-runtime-windows.md",
+    "tests/tests-reconstruction-test-capsules-security-changesets.md",
+    "tests/tests-reconstruction-test-cli-schemas-retention.md",
+    "tests/tests-reconstruction-test-project-headers-builds.md",
+    "tests/tests-reconstruction-test-provenance-abi-tests.md",
+    "tests/tests-test-abi-disassembly.md",
+    "tests/tests-test-artifacts.md",
+    "tests/tests-test-coff-archive.md",
+    "tests/tests-test-coff.md",
+    "tests/tests-test-compiler.md",
+    "tests/tests-test-decompme-objdiff.md",
+    "tests/tests-test-diffing.md",
+    "tests/tests-test-documentation.md",
+    "tests/tests-test-dynamic-symbolic.md",
+    "tests/tests-test-dynamorio.md",
+    "tests/tests-test-evidence.md",
+    "tests/tests-test-ghidra.md",
+    "tests/tests-test-integration.md",
+    "tests/tests-test-linker-metadata-corpus.md",
+    "tests/tests-test-local-llm.md",
+    "tests/tests-test-mcp.md",
+    "tests/tests-test-memory.md",
+    "tests/tests-test-modes-and-db.md",
+    "tests/tests-test-pdb.md",
+    "tests/tests-test-pe32.md",
+    "tests/tests-test-pe64-patch-hybrid.md",
+    "tests/tests-test-production.md",
+    "tests/tests-test-project.md",
+    "tests/tests-test-release-contract.md",
+    "tests/tests-test-relink.md",
+    "tests/tests-test-test-bundle.md",
+    "tests/tests-test-workqueue.md"
+  ],
+  "edited": {
+    "getting-started.md": [
+      "removed original_path frontmatter",
+      "removed stray 'Section:' migration line"
+    ],
+    "integrations.md": [
+      "removed SHA-256 line"
+    ],
+    "schemas.md": [
+      "removed SHA-256 table column",
+      "removed link to deleted audit report",
+      "removed hash-audit phrasing"
+    ],
+    "workflows.md": [
+      "removed original_path frontmatter",
+      "removed stray 'Section:' migration line"
+    ],
+    "commands/abi-check.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/abi.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/angr-validate.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/artifact-import.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/artifact-verify.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/asm.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/asset.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/benchmark-run.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/boundary.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/build.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/campaign.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/candidate.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/capsule.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/changeset.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/claim-attach.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/claim-contradict.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/claim-create.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/claim-verify.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/class.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/coff-comdat-resolve.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/coff-extract.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/coff-inspect.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/coff-synthesize.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/commands.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/compile-worker.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/compile.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/compiler-lab.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/compiler-rules.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/consensus.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/content-put.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/content-verify.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/convergence-analyze.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/corpus-build.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/corpus-compare.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/corpus-create-manifest.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/corpus-generate.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/corpus-generated-verify.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/corpus-verify.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/counterexample.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/cpp-recover.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/crosscheck-ghidra.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/db-constraint-accept.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/db-constraint-add.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/db-constraint-conflicts.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/db-ingest.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/db-query.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/decompiler.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/decompme-pack.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/dependency-audit.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/diff-bytes.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/diff-function.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/diff.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/disassemble.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/drcov-parse.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/drcov-run.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/dynamic-validate.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/evidence-add.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/family.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/function.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/game-pattern.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/ghidra-export.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/ghidra-mcp.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/graph.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/harness-generate.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/headers.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/hybrid-generate.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/hybrid.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/hypothesis.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/image-match.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/image-profile.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/image-text.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/init.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/inspect-pe.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/integration-run.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/layout-reconstruct.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/lib-inspect.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/library.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/linker-plan.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/llm.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/loop.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/map-inspect.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/match.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/mcp-commit.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/mcp-propose.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/mcp-read.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/mcp-tools.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/memory-add.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/memory-render.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/memory-verify.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/metadata-scan.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/mod.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/module.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/objdiff-run.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/patch-image.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/pattern.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/pdb-inspect.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/pe.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/pipeline-cancel.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/pipeline-create.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/pipeline-recover.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/pipeline-retry.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/pipeline-run.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/pipeline-status.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/playability.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/plugin.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/progress.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/project-backup.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/project-check.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/project-from-target.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/project-gc.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/project-migrate.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/project-repair.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/project-restore.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/project.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/proof.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/provenance.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/regression.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/release-gate.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/release-manifest-verify.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/release-policy.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/relink.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/reloc.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/reproduce-create.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/reproduce-verify.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/review.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/runtime-analysis.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/runtime.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/sbom-generate.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/script-port.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/security-audit.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/security.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/serve.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/snapshot-tools.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/source-map.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/source-stage.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/source.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/staging.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/subsystem.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/symbolic-memory-validate.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/symbolic-validate.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/target-pack-infer.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/target-pack-verify.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/template-derive.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/template-materialize.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/test-bundle-create.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/test-bundle-inspect.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/tests.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/text-swap.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/toolchain-register.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/toolchain-verify.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/toolchain.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/triage.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/type.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/verify-project.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/vtable.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/windows.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/work-claim.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/work-create.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/work-next.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/work-propose.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/work-validate.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/worker-capabilities.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "simplified page description"
+    ],
+    "commands/worker.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/workflow-init.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/workflow-show.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/workflow-update.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "commands/x86decomp-test.md": [
+      "removed SHA-256 table column",
+      "removed 'Source basis' section",
+      "removed 'Verification boundary' section",
+      "removed parser-destination internals",
+      "removed 'No help text declared' noise",
+      "renamed table header to 'Details'",
+      "simplified page description"
+    ],
+    "features/index.md": [
+      "removed SHA-256 table column"
+    ],
+    "features/x86decomp---init--.md": [
+      "removed SHA-256 line"
+    ],
+    "features/x86decomp---main--.md": [
+      "removed SHA-256 line"
+    ],
+    "features/x86decomp-abi.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-analysis-db.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-angr-backend.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-artifacts.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-assembly---init--.md": [
+      "removed SHA-256 line"
+    ],
+    "features/x86decomp-assembly-annotation.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-assembly-cli.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-assembly-materialize.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-assembly-pipeline.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-assembly-relocations.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-assembly-store.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-benchmarks.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-canonical.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-cli.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-coff-archive.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-coff.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-compiler-lab.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-compiler-worker.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-compiler.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-content-store.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-contracts.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-convergence.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-cpp-recovery.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-decompme.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-diffing.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-disassembly.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-dynamic.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-dynamorio.md": [
+      "removed SHA-256 line"
+    ],
+    "features/x86decomp-errors.md": [
+      "removed SHA-256 line"
+    ],
+    "features/x86decomp-evidence.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-exe-diff.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-ghidra.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-governance---init--.md": [
+      "removed SHA-256 line"
+    ],
+    "features/x86decomp-governance-campaigns.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-governance-candidates.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-governance-changesets.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-governance-cli.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-governance-consensus.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-governance-counterexamples.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-governance-family.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-governance-hypotheses.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-governance-knowledge-graph.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-governance-plugins.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-governance-proofs.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-governance-reviews.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-governance-store.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-governance-workers.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-ground-truth.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-harness-generator.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-hybrid.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-image-match.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-integration.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-linker-layout.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-linker-reconstruction.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-local-llm---init--.md": [
+      "removed SHA-256 line"
+    ],
+    "features/x86decomp-local-llm-matching.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-local-llm-profiles.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-local-llm-prompts.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-local-llm-transport.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-mcp.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-memory.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-models.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-msvc-metadata.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-native---init--.md": [
+      "removed SHA-256 line"
+    ],
+    "features/x86decomp-native-cli.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-native-closed-loop.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-native-hybrid-composer.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-native-matching.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-native-pe-reconstruction.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-native-runtime.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-native-slots.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-native-staging.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-native-store.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-native-windows-tools.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-objdiff-adapter.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-orchestrator.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-patching.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-pdb.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-pe.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-pe32.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-project-state.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-project-template.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-project.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-reconstruction---init--.md": [
+      "removed SHA-256 line"
+    ],
+    "features/x86decomp-reconstruction-abi-contracts.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-reconstruction-acceleration.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-reconstruction-builds.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-reconstruction-capsules.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-reconstruction-cli.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-reconstruction-generated-tests.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-reconstruction-headers.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-reconstruction-libraries.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-reconstruction-project-layout.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-reconstruction-provenance.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-reconstruction-security.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-reconstruction-semantic-changesets.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-reconstruction-store.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-release-gate.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-relink.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-reproducibility.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-security-audit.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-service.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-symbolic.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-synthetic-corpus.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-target-pack.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-test-bundle.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-testkit---init--.md": [
+      "removed SHA-256 line"
+    ],
+    "features/x86decomp-testkit---main--.md": [
+      "removed SHA-256 line"
+    ],
+    "features/x86decomp-testkit-adapters---init--.md": [
+      "removed SHA-256 line"
+    ],
+    "features/x86decomp-testkit-adapters-capabilities.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-testkit-adapters-catalog.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-testkit-adapters-detection.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-testkit-adapters-download.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-testkit-adapters-installation.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-testkit-cli.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-testkit-config.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-testkit-coverage-audit.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-testkit-fixtures.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-testkit-inventory.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-testkit-junit.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-testkit-live-adapters.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-testkit-logging-utils.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-testkit-models.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-testkit-orchestrator.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-testkit-process.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-testkit-reports.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-testkit-self-tests---init--.md": [
+      "removed SHA-256 line"
+    ],
+    "features/x86decomp-testkit-self-tests-test-adapter-capabilities.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-testkit-self-tests-test-adapter-detection-resolution.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-testkit-self-tests-test-archive-security.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-testkit-self-tests-test-cli-and-installation.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-testkit-self-tests-test-config-models.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-testkit-self-tests-test-inventory-reports-process.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-testkit-suites.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-testkit-timeutil.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-testkit-toolkit-tests---init--.md": [
+      "removed SHA-256 line"
+    ],
+    "features/x86decomp-testkit-toolkit-tests-test-public-api-contract.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-toolchains.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-tools.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-util.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-work-queue.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-worker.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "features/x86decomp-workflow.md": [
+      "removed SHA-256 line",
+      "replaced 'no docstring declared' with em dash"
+    ],
+    "project-examples/abi-type-recovery.md": [
+      "removed original_path frontmatter",
+      "removed stray 'Section:' migration line",
+      "removed SHA-256 table column"
+    ],
+    "project-examples/benchmark-validation-corpus.md": [
+      "removed original_path frontmatter",
+      "removed stray 'Section:' migration line",
+      "removed SHA-256 table column"
+    ],
+    "project-examples/compiler-laboratory.md": [
+      "removed original_path frontmatter",
+      "removed stray 'Section:' migration line",
+      "removed SHA-256 table column"
+    ],
+    "project-examples/full-relink-convergence.md": [
+      "removed original_path frontmatter",
+      "removed stray 'Section:' migration line",
+      "removed SHA-256 table column"
+    ],
+    "project-examples/functional-project.md": [
+      "removed original_path frontmatter",
+      "removed stray 'Section:' migration line",
+      "removed SHA-256 table column"
+    ],
+    "project-examples/hybrid-project.md": [
+      "removed original_path frontmatter",
+      "removed stray 'Section:' migration line",
+      "removed SHA-256 table column"
+    ],
+    "project-examples/matching-project.md": [
+      "removed original_path frontmatter",
+      "removed stray 'Section:' migration line",
+      "removed SHA-256 table column"
+    ],
+    "project-examples/patch-image-integration.md": [
+      "removed original_path frontmatter",
+      "removed stray 'Section:' migration line",
+      "removed SHA-256 table column"
+    ],
+    "project-examples/project-operations-recovery.md": [
+      "removed original_path frontmatter",
+      "removed stray 'Section:' migration line",
+      "removed SHA-256 table column"
+    ],
+    "project-examples/static-analysis-evidence.md": [
+      "removed original_path frontmatter",
+      "removed stray 'Section:' migration line",
+      "removed SHA-256 table column"
+    ],
+    "project-examples/target-release-reproducibility.md": [
+      "removed original_path frontmatter",
+      "removed stray 'Section:' migration line",
+      "removed SHA-256 table column"
+    ],
+    "project-examples/text-swap-project.md": [
+      "removed SHA-256 table column"
+    ],
+    "schema-reference/index.md": [
+      "removed SHA-256 table column"
+    ],
+    "schema-reference/schemas-abi-contract.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/schemas-assembly-asm-function.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/schemas-assembly-asm-run.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/schemas-assembly-relocation-resolution.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/schemas-assembly-roundtrip-report.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/schemas-assembly-symbol-map.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "simplified page description"
+    ],
+    "schema-reference/schemas-benchmark-corpus.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/schemas-claim.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/schemas-coff-archive.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/schemas-comdat-resolution.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/schemas-compiler-ground-truth-comparison.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/schemas-compiler-ground-truth.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/schemas-compiler-lab.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/schemas-compiler-profile.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/schemas-convergence-report.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/schemas-cpp-recovery.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/schemas-decompme-packet.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/schemas-dependency-audit.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/schemas-drcov-trace.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/schemas-dynamic-report.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/schemas-evidence.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/schemas-exe-diff-report.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/schemas-execution-harness-generated.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/schemas-execution-harness.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/schemas-function-workflow.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/schemas-function.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/schemas-governance-campaign.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/schemas-governance-candidate.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/schemas-governance-changeset.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/schemas-governance-consensus.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/schemas-governance-counterexample.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/schemas-governance-family.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/schemas-governance-hypothesis.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/schemas-governance-knowledge-graph.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/schemas-governance-plugin.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/schemas-governance-proof-bundle.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/schemas-governance-review.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/schemas-governance-worker.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/schemas-hybrid-project.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/schemas-image-match-report.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/schemas-image-profile.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/schemas-integration-report.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/schemas-integration-scenarios.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/schemas-linker-layout.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/schemas-linker-reconstruction-plan.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/schemas-local-llm-candidate.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/schemas-local-llm-job.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/schemas-local-llm-profile.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/schemas-local-llm-report.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/schemas-mcp-mutation.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/schemas-memory-event.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/schemas-msvc-metadata.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/schemas-native-boundary-finding.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/schemas-native-candidate-manifest.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/schemas-native-function-match.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/schemas-native-function-slot.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/schemas-native-hybrid-composition.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/schemas-native-loop-run.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/schemas-native-match-run.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/schemas-native-patch-plan.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/schemas-native-runtime-validation.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/schemas-native-section-export.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/schemas-native-staging-symbol.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/schemas-native-windows-tool.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/schemas-objdiff-manifest.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/schemas-pdb.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/schemas-pipeline.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/schemas-project-template.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/schemas-project.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/schemas-reconstruction-abi-contract.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/schemas-reconstruction-build.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/schemas-reconstruction-capsule.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/schemas-reconstruction-compatibility-shim.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/schemas-reconstruction-generated-test.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/schemas-reconstruction-header.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/schemas-reconstruction-library-match.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/schemas-reconstruction-module.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/schemas-reconstruction-security-finding.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/schemas-reconstruction-semantic-changeset.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/schemas-reconstruction-source-provenance.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/schemas-reconstruction-translation-unit.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/schemas-release-gate.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/schemas-relink-manifest.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/schemas-reproduction.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/schemas-security-audit.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/schemas-symbolic-memory-harness.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/schemas-symbolic-memory-report.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/schemas-symbolic-report.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/schemas-synthetic-corpus.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/schemas-target-decisions.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/schemas-target-pack.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/schemas-test-bundle-report.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/schemas-test-bundle.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/schemas-type-constraint.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/schemas-verification.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/schemas-work-task.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/schemas-worker-report.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/test-suite-schemas-feature-catalog.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/test-suite-schemas-run-report.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "schema-reference/test-suite-schemas-test-config.schema.json.md": [
+      "removed SHA-256 field row",
+      "removed generation boilerplate",
+      "replaced 'Not declared' with em dash",
+      "simplified page description"
+    ],
+    "tests/index.md": [
+      "removed SHA-256 table column"
+    ],
+    "tests/test-suite-src-x86decomp_testkit-self_tests-test_adapter_capabilities.md": [
+      "removed SHA-256 line"
+    ],
+    "tests/test-suite-src-x86decomp_testkit-self_tests-test_adapter_detection_resolution.md": [
+      "removed SHA-256 line"
+    ],
+    "tests/test-suite-src-x86decomp_testkit-self_tests-test_archive_security.md": [
+      "removed SHA-256 line"
+    ],
+    "tests/test-suite-src-x86decomp_testkit-self_tests-test_cli_and_installation.md": [
+      "removed SHA-256 line"
+    ],
+    "tests/test-suite-src-x86decomp_testkit-self_tests-test_config_models.md": [
+      "removed SHA-256 line"
+    ],
+    "tests/test-suite-src-x86decomp_testkit-self_tests-test_inventory_reports_process.md": [
+      "removed SHA-256 line"
+    ],
+    "tests/test-suite-src-x86decomp_testkit-toolkit_tests-test_public_api_contract.md": [
+      "removed SHA-256 line"
+    ],
+    "tests/test-suite-tests-test_adapter_capabilities.md": [
+      "removed SHA-256 line"
+    ],
+    "tests/test-suite-tests-test_adapter_detection_resolution.md": [
+      "removed SHA-256 line"
+    ],
+    "tests/test-suite-tests-test_architecture_maps.md": [
+      "removed SHA-256 line"
+    ],
+    "tests/test-suite-tests-test_archive_security.md": [
+      "removed SHA-256 line"
+    ],
+    "tests/test-suite-tests-test_cli_and_installation.md": [
+      "removed SHA-256 line"
+    ],
+    "tests/test-suite-tests-test_config_models.md": [
+      "removed SHA-256 line"
+    ],
+    "tests/test-suite-tests-test_inventory_reports_process.md": [
+      "removed SHA-256 line"
+    ],
+    "tests/tests-assembly-test_annotation_materialize.md": [
+      "removed SHA-256 line"
+    ],
+    "tests/tests-assembly-test_helpers_and_relocations.md": [
+      "removed SHA-256 line"
+    ],
+    "tests/tests-assembly-test_pipeline_cli_schemas.md": [
+      "removed SHA-256 line"
+    ],
+    "tests/tests-governance-test_core.md": [
+      "removed SHA-256 line"
+    ],
+    "tests/tests-governance-test_governance_cli_schemas.md": [
+      "removed SHA-256 line"
+    ],
+    "tests/tests-governance-test_proof_plugin_worker.md": [
+      "removed SHA-256 line"
+    ],
+    "tests/tests-governance-test_worker_thread_safety.md": [
+      "removed SHA-256 line"
+    ],
+    "tests/tests-native-test_cli_schemas.md": [
+      "removed SHA-256 line"
+    ],
+    "tests/tests-native-test_inventory_and_loops.md": [
+      "removed SHA-256 line"
+    ],
+    "tests/tests-native-test_pe_hybrid.md": [
+      "removed SHA-256 line"
+    ],
+    "tests/tests-native-test_slots_matching.md": [
+      "removed SHA-256 line"
+    ],
+    "tests/tests-native-test_staging_loop_runtime_windows.md": [
+      "removed SHA-256 line"
+    ],
+    "tests/tests-reconstruction-test_capsules_security_changesets.md": [
+      "removed SHA-256 line"
+    ],
+    "tests/tests-reconstruction-test_cli_schemas_retention.md": [
+      "removed SHA-256 line"
+    ],
+    "tests/tests-reconstruction-test_decomp_acceleration.md": [
+      "removed SHA-256 line"
+    ],
+    "tests/tests-reconstruction-test_project_headers_builds.md": [
+      "removed SHA-256 line"
+    ],
+    "tests/tests-reconstruction-test_provenance_abi_tests.md": [
+      "removed SHA-256 line"
+    ],
+    "tests/tests-reconstruction-test_real_project_acceleration.md": [
+      "removed SHA-256 line"
+    ],
+    "tests/tests-test_abi_disassembly.md": [
+      "removed SHA-256 line"
+    ],
+    "tests/tests-test_artifacts.md": [
+      "removed SHA-256 line"
+    ],
+    "tests/tests-test_coff.md": [
+      "removed SHA-256 line"
+    ],
+    "tests/tests-test_coff_archive.md": [
+      "removed SHA-256 line"
+    ],
+    "tests/tests-test_compiler.md": [
+      "removed SHA-256 line"
+    ],
+    "tests/tests-test_decompme_objdiff.md": [
+      "removed SHA-256 line"
+    ],
+    "tests/tests-test_diffing.md": [
+      "removed SHA-256 line"
+    ],
+    "tests/tests-test_documentation.md": [
+      "removed SHA-256 line"
+    ],
+    "tests/tests-test_dynamic_symbolic.md": [
+      "removed SHA-256 line"
+    ],
+    "tests/tests-test_dynamorio.md": [
+      "removed SHA-256 line"
+    ],
+    "tests/tests-test_evidence.md": [
+      "removed SHA-256 line"
+    ],
+    "tests/tests-test_ghidra.md": [
+      "removed SHA-256 line"
+    ],
+    "tests/tests-test_integration.md": [
+      "removed SHA-256 line"
+    ],
+    "tests/tests-test_linker_metadata_corpus.md": [
+      "removed SHA-256 line"
+    ],
+    "tests/tests-test_local_llm.md": [
+      "removed SHA-256 line"
+    ],
+    "tests/tests-test_mcp.md": [
+      "removed SHA-256 line"
+    ],
+    "tests/tests-test_memory.md": [
+      "removed SHA-256 line"
+    ],
+    "tests/tests-test_modes_and_db.md": [
+      "removed SHA-256 line"
+    ],
+    "tests/tests-test_pdb.md": [
+      "removed SHA-256 line"
+    ],
+    "tests/tests-test_pe32.md": [
+      "removed SHA-256 line"
+    ],
+    "tests/tests-test_pe64_patch_hybrid.md": [
+      "removed SHA-256 line"
+    ],
+    "tests/tests-test_production.md": [
+      "removed SHA-256 line"
+    ],
+    "tests/tests-test_project.md": [
+      "removed SHA-256 line"
+    ],
+    "tests/tests-test_release_contract.md": [
+      "removed SHA-256 line"
+    ],
+    "tests/tests-test_relink.md": [
+      "removed SHA-256 line"
+    ],
+    "tests/tests-test_test_bundle.md": [
+      "removed SHA-256 line"
+    ],
+    "tests/tests-test_workqueue.md": [
+      "removed SHA-256 line"
+    ],
+    "index.md": [
+      "removed link to deleted verification page",
+      "removed release-evidence mention from intro"
+    ],
+    "commands/index.md": [
+      "removed audit-artifacts section (deleted pages)"
+    ]
+  },
+  "notes": [
+    "orphaned duplicates deleted: 60"
+  ]
+}

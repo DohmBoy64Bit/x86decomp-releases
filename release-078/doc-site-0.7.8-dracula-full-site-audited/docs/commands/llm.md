@@ -1,6 +1,6 @@
 ---
 title: x86decomp llm
-description: Exact v0.7.8 parser-derived reference for `x86decomp llm`.
+description: Command reference for `x86decomp llm`.
 ---
 
 
@@ -17,10 +17,10 @@ usage: x86decomp llm [-h] [--project PROJECT] [--actor ACTOR]
 
 ## Arguments
 
-| Argument | Exact parser declaration |
+| Argument | Details |
 | --- | --- |
-| `--project` | default: `'.'` · parser destination: `project`. project root used by the capability implementation (default: current directory) |
-| `--actor` | default: `'analyst'` · parser destination: `actor`. No help text declared. |
+| `--project` | default: `'.'`. project root used by the capability implementation (default: current directory) |
+| `--actor` | default: `'analyst'`. |
 
 ## Actions
 
@@ -50,15 +50,15 @@ usage: x86decomp llm batch-create [-h] --architecture {x86,x86_64}
                                   project_root output_directory
 ```
 
-| Argument | Exact parser declaration |
+| Argument | Details |
 | --- | --- |
-| `project_root` | required · parser destination: `project_root`. No help text declared. |
-| `output_directory` | required · parser destination: `output_directory`. No help text declared. |
-| `--architecture` | required · choices: `x86`, `x86_64` · parser destination: `architecture`. No help text declared. |
-| `--image-base` | type: `<lambda>` · default: `0` · parser destination: `image_base`. No help text declared. |
-| `--max-bytes` | type: `int` · default: `256` · parser destination: `max_bytes`. No help text declared. |
-| `--max-attempts` | type: `int` · default: `4` · parser destination: `max_attempts`. No help text declared. |
-| `--overwrite` | nargs: `0` · default: `False` · parser destination: `overwrite`. No help text declared. |
+| `project_root` | required. |
+| `output_directory` | required. |
+| `--architecture` | required · choices: `x86`, `x86_64`. |
+| `--image-base` | type: `custom` · default: `0`. |
+| `--max-bytes` | type: `int` · default: `256`. |
+| `--max-attempts` | type: `int` · default: `4`. |
+| `--overwrite` | nargs: `0` · default: `False`. |
 
 ### `x86decomp llm batch-match`
 
@@ -69,15 +69,15 @@ usage: x86decomp llm batch-match [-h] [--max-workers MAX_WORKERS]
                                  output_directory
 ```
 
-| Argument | Exact parser declaration |
+| Argument | Details |
 | --- | --- |
-| `profile` | required · parser destination: `profile`. No help text declared. |
-| `compiler_profile` | required · parser destination: `compiler_profile`. No help text declared. |
-| `jobs` | required · parser destination: `jobs`. No help text declared. |
-| `output_directory` | required · parser destination: `output_directory`. No help text declared. |
-| `--max-workers` | type: `int` · default: `1` · parser destination: `max_workers`. No help text declared. |
-| `--max-attempts` | type: `int` · parser destination: `max_attempts`. No help text declared. |
-| `--overwrite` | nargs: `0` · default: `False` · parser destination: `overwrite`. No help text declared. |
+| `profile` | required. |
+| `compiler_profile` | required. |
+| `jobs` | required. |
+| `output_directory` | required. |
+| `--max-workers` | type: `int` · default: `1`. |
+| `--max-attempts` | type: `int`. |
+| `--overwrite` | nargs: `0` · default: `False`. |
 
 ### `x86decomp llm cpp-generate`
 
@@ -87,14 +87,14 @@ usage: x86decomp llm cpp-generate [-h] [--class-context CLASS_CONTEXT]
                                   profile job output
 ```
 
-| Argument | Exact parser declaration |
+| Argument | Details |
 | --- | --- |
-| `profile` | required · parser destination: `profile`. No help text declared. |
-| `job` | required · parser destination: `job`. No help text declared. |
-| `output` | required · parser destination: `output`. No help text declared. |
-| `--class-context` | parser destination: `class_context`. No help text declared. |
-| `--report` | parser destination: `report`. No help text declared. |
-| `--overwrite` | nargs: `0` · default: `False` · parser destination: `overwrite`. No help text declared. |
+| `profile` | required. |
+| `job` | required. |
+| `output` | required. |
+| `--class-context` | — |
+| `--report` | — |
+| `--overwrite` | nargs: `0` · default: `False`. |
 
 ### `x86decomp llm generate`
 
@@ -103,13 +103,13 @@ usage: x86decomp llm generate [-h] [--report REPORT] [--overwrite]
                               profile job output
 ```
 
-| Argument | Exact parser declaration |
+| Argument | Details |
 | --- | --- |
-| `profile` | required · parser destination: `profile`. No help text declared. |
-| `job` | required · parser destination: `job`. No help text declared. |
-| `output` | required · parser destination: `output`. No help text declared. |
-| `--report` | parser destination: `report`. No help text declared. |
-| `--overwrite` | nargs: `0` · default: `False` · parser destination: `overwrite`. No help text declared. |
+| `profile` | required. |
+| `job` | required. |
+| `output` | required. |
+| `--report` | — |
+| `--overwrite` | nargs: `0` · default: `False`. |
 
 ### `x86decomp llm job-create`
 
@@ -123,17 +123,17 @@ usage: x86decomp llm job-create [-h] --architecture {x86,x86_64}
                                 function_packet output
 ```
 
-| Argument | Exact parser declaration |
+| Argument | Details |
 | --- | --- |
-| `function_packet` | required · parser destination: `function_packet`. No help text declared. |
-| `output` | required · parser destination: `output`. No help text declared. |
-| `--architecture` | required · choices: `x86`, `x86_64` · parser destination: `architecture`. No help text declared. |
-| `--image-base` | type: `<lambda>` · default: `0` · parser destination: `image_base`. No help text declared. |
-| `--function-name` | parser destination: `function_name`. No help text declared. |
-| `--symbol` | parser destination: `symbol`. No help text declared. |
-| `--max-attempts` | type: `int` · default: `4` · parser destination: `max_attempts`. No help text declared. |
-| `--inline` | nargs: `0` · default: `False` · parser destination: `inline`. No help text declared. |
-| `--overwrite` | nargs: `0` · default: `False` · parser destination: `overwrite`. No help text declared. |
+| `function_packet` | required. |
+| `output` | required. |
+| `--architecture` | required · choices: `x86`, `x86_64`. |
+| `--image-base` | type: `custom` · default: `0`. |
+| `--function-name` | — |
+| `--symbol` | — |
+| `--max-attempts` | type: `int` · default: `4`. |
+| `--inline` | nargs: `0` · default: `False`. |
+| `--overwrite` | nargs: `0` · default: `False`. |
 
 ### `x86decomp llm job-from-range`
 
@@ -149,19 +149,19 @@ usage: x86decomp llm job-from-range [-h] --rva RVA --size SIZE
                                     image output
 ```
 
-| Argument | Exact parser declaration |
+| Argument | Details |
 | --- | --- |
-| `image` | required · parser destination: `image`. No help text declared. |
-| `output` | required · parser destination: `output`. No help text declared. |
-| `--rva` | required · type: `<lambda>` · parser destination: `rva`. No help text declared. |
-| `--size` | required · type: `<lambda>` · parser destination: `size`. No help text declared. |
-| `--architecture` | required · choices: `x86`, `x86_64` · parser destination: `architecture`. No help text declared. |
-| `--function-name` | required · parser destination: `function_name`. No help text declared. |
-| `--symbol` | parser destination: `symbol`. No help text declared. |
-| `--image-base` | type: `<lambda>` · default: `0` · parser destination: `image_base`. No help text declared. |
-| `--mnemonics` | parser destination: `mnemonics`. No help text declared. |
-| `--max-attempts` | type: `int` · default: `4` · parser destination: `max_attempts`. No help text declared. |
-| `--overwrite` | nargs: `0` · default: `False` · parser destination: `overwrite`. No help text declared. |
+| `image` | required. |
+| `output` | required. |
+| `--rva` | required · type: `custom`. |
+| `--size` | required · type: `custom`. |
+| `--architecture` | required · choices: `x86`, `x86_64`. |
+| `--function-name` | required. |
+| `--symbol` | — |
+| `--image-base` | type: `custom` · default: `0`. |
+| `--mnemonics` | — |
+| `--max-attempts` | type: `int` · default: `4`. |
+| `--overwrite` | nargs: `0` · default: `False`. |
 
 ### `x86decomp llm match`
 
@@ -170,14 +170,14 @@ usage: x86decomp llm match [-h] [--max-attempts MAX_ATTEMPTS] [--overwrite]
                            profile compiler_profile job output_directory
 ```
 
-| Argument | Exact parser declaration |
+| Argument | Details |
 | --- | --- |
-| `profile` | required · parser destination: `profile`. No help text declared. |
-| `compiler_profile` | required · parser destination: `compiler_profile`. No help text declared. |
-| `job` | required · parser destination: `job`. No help text declared. |
-| `output_directory` | required · parser destination: `output_directory`. No help text declared. |
-| `--max-attempts` | type: `int` · parser destination: `max_attempts`. No help text declared. |
-| `--overwrite` | nargs: `0` · default: `False` · parser destination: `overwrite`. No help text declared. |
+| `profile` | required. |
+| `compiler_profile` | required. |
+| `job` | required. |
+| `output_directory` | required. |
+| `--max-attempts` | type: `int`. |
+| `--overwrite` | nargs: `0` · default: `False`. |
 
 ### `x86decomp llm probe`
 
@@ -185,9 +185,9 @@ usage: x86decomp llm match [-h] [--max-attempts MAX_ATTEMPTS] [--overwrite]
 usage: x86decomp llm probe [-h] profile
 ```
 
-| Argument | Exact parser declaration |
+| Argument | Details |
 | --- | --- |
-| `profile` | required · parser destination: `profile`. No help text declared. |
+| `profile` | required. |
 
 ### `x86decomp llm profile-create`
 
@@ -199,15 +199,15 @@ usage: x86decomp llm profile-create [-h] --model MODEL [--base-url BASE_URL]
                                     output
 ```
 
-| Argument | Exact parser declaration |
+| Argument | Details |
 | --- | --- |
-| `provider` | required · choices: `llama.cpp`, `lm-studio`, `localai`, `ollama`, `openai-compatible`, `vllm` · parser destination: `provider`. No help text declared. |
-| `output` | required · parser destination: `output`. No help text declared. |
-| `--model` | required · parser destination: `model`. No help text declared. |
-| `--base-url` | parser destination: `base_url`. No help text declared. |
-| `--id` | parser destination: `id`. No help text declared. |
-| `--api-key-env` | parser destination: `api_key_env`. No help text declared. |
-| `--allow-remote` | nargs: `0` · default: `False` · parser destination: `allow_remote`. No help text declared. |
+| `provider` | required · choices: `llama.cpp`, `lm-studio`, `localai`, `ollama`, `openai-compatible`, `vllm`. |
+| `output` | required. |
+| `--model` | required. |
+| `--base-url` | — |
+| `--id` | — |
+| `--api-key-env` | — |
+| `--allow-remote` | nargs: `0` · default: `False`. |
 
 ### `x86decomp llm profile-validate`
 
@@ -215,9 +215,9 @@ usage: x86decomp llm profile-create [-h] --model MODEL [--base-url BASE_URL]
 usage: x86decomp llm profile-validate [-h] profile
 ```
 
-| Argument | Exact parser declaration |
+| Argument | Details |
 | --- | --- |
-| `profile` | required · parser destination: `profile`. No help text declared. |
+| `profile` | required. |
 
 ### `x86decomp llm prompt`
 
@@ -225,10 +225,10 @@ usage: x86decomp llm profile-validate [-h] profile
 usage: x86decomp llm prompt [-h] job output
 ```
 
-| Argument | Exact parser declaration |
+| Argument | Details |
 | --- | --- |
-| `job` | required · parser destination: `job`. No help text declared. |
-| `output` | required · parser destination: `output`. No help text declared. |
+| `job` | required. |
+| `output` | required. |
 
 ### `x86decomp llm providers`
 
@@ -242,17 +242,8 @@ usage: x86decomp llm providers [-h]
 usage: x86decomp llm verify [-h] report
 ```
 
-| Argument | Exact parser declaration |
+| Argument | Details |
 | --- | --- |
-| `report` | required · parser destination: `report`. No help text declared. |
+| `report` | required. |
 
-## Source basis
 
-| Parser owner | Source file | SHA-256 |
-| --- | --- | --- |
-| canonical cli | `src/x86decomp/canonical.py` | `9dfc1a2d1ba31559b1a9cd31a0cda1ab1a1e88ffef0a47c4632995f649296166` |
-| reconstruction cli | `src/x86decomp/reconstruction/cli.py` | `dd5a6c7c987b3c49a3f7c1c635d60b34542e21f9346bd85f869013532c844cc4` |
-
-## Verification boundary
-
-This page is regenerated from the v0.7.8 parser surface. It documents syntax, parser-declared arguments, canonical owners, and source files; it does not claim that optional adapters, target binaries, compiler toolchains, or runtime inputs exist on the reader's machine.

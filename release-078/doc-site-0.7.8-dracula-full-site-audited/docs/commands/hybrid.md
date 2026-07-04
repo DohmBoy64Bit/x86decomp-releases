@@ -1,6 +1,6 @@
 ---
 title: x86decomp hybrid
-description: Exact v0.7.8 parser-derived reference for `x86decomp hybrid`.
+description: Command reference for `x86decomp hybrid`.
 ---
 
 
@@ -17,10 +17,10 @@ usage: x86decomp hybrid [-h] [--project PROJECT] [--actor ACTOR]
 
 ## Arguments
 
-| Argument | Exact parser declaration |
+| Argument | Details |
 | --- | --- |
-| `--project` | default: `'.'` · parser destination: `project`. project root used by the capability implementation (default: current directory) |
-| `--actor` | default: `'analyst'` · parser destination: `actor`. No help text declared. |
+| `--project` | default: `'.'`. project root used by the capability implementation (default: current directory) |
+| `--actor` | default: `'analyst'`. |
 
 ## Actions
 
@@ -36,10 +36,10 @@ usage: x86decomp hybrid [-h] [--project PROJECT] [--actor ACTOR]
 usage: x86decomp hybrid compose [-h] run_id output
 ```
 
-| Argument | Exact parser declaration |
+| Argument | Details |
 | --- | --- |
-| `run_id` | required · parser destination: `run_id`. No help text declared. |
-| `output` | required · parser destination: `output`. No help text declared. |
+| `run_id` | required. |
+| `output` | required. |
 
 ### `x86decomp hybrid generate`
 
@@ -52,16 +52,16 @@ usage: x86decomp hybrid generate [-h] [--architecture {x86,x86_64}]
                                  source_project output
 ```
 
-| Argument | Exact parser declaration |
+| Argument | Details |
 | --- | --- |
-| `source_project` | required · parser destination: `source_project`. No help text declared. |
-| `output` | required · parser destination: `output`. No help text declared. |
-| `--architecture` | choices: `x86`, `x86_64` · default: `'x86'` · parser destination: `architecture`. No help text declared. |
-| `--asm-format` | choices: `bytes`, `annotated`, `mnemonic` · default: `'bytes'` · parser destination: `asm_format`. No help text declared. |
-| `--image-base` | type: `_int` · default: `0` · parser destination: `image_base`. No help text declared. |
-| `--assembler-command-json` | parser destination: `assembler_command_json`. No help text declared. |
-| `--symbol-map` | parser destination: `symbol_map`. No help text declared. |
-| `--overwrite` | nargs: `0` · default: `False` · parser destination: `overwrite`. No help text declared. |
+| `source_project` | required. |
+| `output` | required. |
+| `--architecture` | choices: `x86`, `x86_64` · default: `'x86'`. |
+| `--asm-format` | choices: `bytes`, `annotated`, `mnemonic` · default: `'bytes'`. |
+| `--image-base` | type: `int` · default: `0`. |
+| `--assembler-command-json` | — |
+| `--symbol-map` | — |
+| `--overwrite` | nargs: `0` · default: `False`. |
 
 ### `x86decomp hybrid verify`
 
@@ -69,18 +69,8 @@ usage: x86decomp hybrid generate [-h] [--architecture {x86,x86_64}]
 usage: x86decomp hybrid verify [-h] composition_id
 ```
 
-| Argument | Exact parser declaration |
+| Argument | Details |
 | --- | --- |
-| `composition_id` | required · parser destination: `composition_id`. No help text declared. |
+| `composition_id` | required. |
 
-## Source basis
 
-| Parser owner | Source file | SHA-256 |
-| --- | --- | --- |
-| canonical cli | `src/x86decomp/canonical.py` | `9dfc1a2d1ba31559b1a9cd31a0cda1ab1a1e88ffef0a47c4632995f649296166` |
-| assembly cli | `src/x86decomp/assembly/cli.py` | `6c8a227f8c1a9c48a83e1f048f6160f8740e97552fa6967dea122f42fab45f88` |
-| native cli | `src/x86decomp/native/cli.py` | `13ff944cc50ff6ed433c32975a8edcd6318b4d4fd4c6c30580c27329a951dbf2` |
-
-## Verification boundary
-
-This page is regenerated from the v0.7.8 parser surface. It documents syntax, parser-declared arguments, canonical owners, and source files; it does not claim that optional adapters, target binaries, compiler toolchains, or runtime inputs exist on the reader's machine.

@@ -159,14 +159,6 @@
     </li>
                             
     <li class="drac-box-ternary">
-        <a href="../../release-artifacts/COMMAND_REFERENCE_STRICT_AUDIT/"
-            class="
-            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Command Audit
-        </a>
-    </li>
-                            
-    <li class="drac-box-ternary">
         <a href="../../schemas/"
             class="
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
@@ -212,35 +204,11 @@
                 <a href="../.."
                     class="
                     drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
-                    data-bs-toggle="collapse" data-bs-target="#release-evidence-collapse" aria-expanded="false">
-                    Release Evidence
+                    data-bs-toggle="collapse" data-bs-target="#project-collapse" aria-expanded="false">
+                    Project
                 </a>
-                <div class="collapse" id="release-evidence-collapse">
+                <div class="collapse" id="project-collapse">
                     <ul class="mb-5 drac-list drac-list-none">
-                            
-    <li class="drac-box-ternary">
-        <a href="../../release-evidence/"
-            class="
-            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Overview
-        </a>
-    </li>
-                            
-    <li class="drac-box-ternary">
-        <a href="../../verification/"
-            class="
-            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Verification
-        </a>
-    </li>
-                            
-    <li class="drac-box-ternary">
-        <a href="../../source-coverage/"
-            class="
-            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Source Coverage
-        </a>
-    </li>
                             
     <li class="drac-box-ternary">
         <a href="../../changelog/"
@@ -364,21 +332,21 @@
 <thead>
 <tr>
 <th>Argument</th>
-<th>Exact parser declaration</th>
+<th>Details</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>--config</code></td>
-<td>type: <code>_path</code> · default: <code>PosixPath('x86decomp-test.json')</code> · parser destination: <code>config</code>. No help text declared.</td>
+<td>type: <code>path</code> · default: <code>PosixPath('x86decomp-test.json')</code>.</td>
 </tr>
 <tr>
 <td><code>--resolve</code></td>
-<td>nargs: <code>0</code> · default: <code>False</code> · parser destination: <code>resolve</code>. No help text declared.</td>
+<td>nargs: <code>0</code> · default: <code>False</code>.</td>
 </tr>
 <tr>
 <td><code>--verbose</code></td>
-<td>nargs: <code>0</code> · default: <code>False</code> · parser destination: <code>verbose</code>. No help text declared.</td>
+<td>nargs: <code>0</code> · default: <code>False</code>.</td>
 </tr>
 </tbody>
 </table>
@@ -390,13 +358,13 @@
 <thead>
 <tr>
 <th>Argument</th>
-<th>Exact parser declaration</th>
+<th>Details</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>--config</code></td>
-<td>type: <code>_path</code> · default: <code>PosixPath('x86decomp-test.json')</code> · parser destination: <code>config</code>. No help text declared.</td>
+<td>type: <code>path</code> · default: <code>PosixPath('x86decomp-test.json')</code>.</td>
 </tr>
 </tbody>
 </table>
@@ -408,13 +376,13 @@
 <thead>
 <tr>
 <th>Argument</th>
-<th>Exact parser declaration</th>
+<th>Details</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>--print</code></td>
-<td>nargs: <code>0</code> · default: <code>False</code> · parser destination: <code>print_catalog</code>. No help text declared.</td>
+<td>nargs: <code>0</code> · default: <code>False</code>.</td>
 </tr>
 </tbody>
 </table>
@@ -431,41 +399,41 @@
 <thead>
 <tr>
 <th>Argument</th>
-<th>Exact parser declaration</th>
+<th>Details</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>--toolkit-root</code></td>
-<td>required · type: <code>_path</code> · parser destination: <code>toolkit_root</code>. No help text declared.</td>
+<td>required · type: <code>path</code>.</td>
 </tr>
 <tr>
 <td><code>--output-root</code></td>
-<td>type: <code>_path</code> · default: <code>PosixPath('test-results')</code> · parser destination: <code>output_root</code>. No help text declared.</td>
+<td>type: <code>path</code> · default: <code>PosixPath('test-results')</code>.</td>
 </tr>
 <tr>
 <td><code>--config</code></td>
-<td>type: <code>_path</code> · default: <code>PosixPath('x86decomp-test.json')</code> · parser destination: <code>config</code>. No help text declared.</td>
+<td>type: <code>path</code> · default: <code>PosixPath('x86decomp-test.json')</code>.</td>
 </tr>
 <tr>
 <td><code>--install-root</code></td>
-<td>type: <code>_path</code> · parser destination: <code>install_root</code>. No help text declared.</td>
+<td>type: <code>path</code>.</td>
 </tr>
 <tr>
 <td><code>--non-interactive</code></td>
-<td>nargs: <code>0</code> · default: <code>False</code> · parser destination: <code>non_interactive</code>. No help text declared.</td>
+<td>nargs: <code>0</code> · default: <code>False</code>.</td>
 </tr>
 <tr>
 <td><code>--allow-network</code></td>
-<td>nargs: <code>0</code> · default: <code>False</code> · parser destination: <code>allow_network</code>. No help text declared.</td>
+<td>nargs: <code>0</code> · default: <code>False</code>.</td>
 </tr>
 <tr>
 <td><code>--allow-install</code></td>
-<td>nargs: <code>0</code> · default: <code>False</code> · parser destination: <code>allow_install</code>. No help text declared.</td>
+<td>nargs: <code>0</code> · default: <code>False</code>.</td>
 </tr>
 <tr>
 <td><code>--non-strict</code></td>
-<td>nargs: <code>0</code> · default: <code>False</code> · parser destination: <code>non_strict</code>. No help text declared.</td>
+<td>nargs: <code>0</code> · default: <code>False</code>.</td>
 </tr>
 </tbody>
 </table>
@@ -477,17 +445,17 @@
 <thead>
 <tr>
 <th>Argument</th>
-<th>Exact parser declaration</th>
+<th>Details</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>--config</code></td>
-<td>type: <code>_path</code> · default: <code>PosixPath('x86decomp-test.json')</code> · parser destination: <code>config</code>. No help text declared.</td>
+<td>type: <code>path</code> · default: <code>PosixPath('x86decomp-test.json')</code>.</td>
 </tr>
 <tr>
 <td><code>--output</code></td>
-<td>type: <code>_path</code> · parser destination: <code>output</code>. No help text declared.</td>
+<td>type: <code>path</code>.</td>
 </tr>
 </tbody>
 </table>
@@ -499,39 +467,20 @@
 <thead>
 <tr>
 <th>Argument</th>
-<th>Exact parser declaration</th>
+<th>Details</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>--config</code></td>
-<td>type: <code>_path</code> · default: <code>PosixPath('x86decomp-test.json')</code> · parser destination: <code>config</code>. No help text declared.</td>
+<td>type: <code>path</code> · default: <code>PosixPath('x86decomp-test.json')</code>.</td>
 </tr>
 <tr>
 <td><code>--verbose</code></td>
-<td>nargs: <code>0</code> · default: <code>False</code> · parser destination: <code>verbose</code>. No help text declared.</td>
+<td>nargs: <code>0</code> · default: <code>False</code>.</td>
 </tr>
 </tbody>
-</table>
-<h2 id="source-basis">Source basis</h2>
-<table>
-<thead>
-<tr>
-<th>Parser owner</th>
-<th>Source file</th>
-<th>SHA-256</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>verification harness cli</td>
-<td><code>test-suite/src/x86decomp_testkit/cli.py</code></td>
-<td><code>c4be8f226c0b7067846b385618b2392017fbbb113082016b4d72855098b07c44</code></td>
-</tr>
-</tbody>
-</table>
-<h2 id="verification-boundary">Verification boundary</h2>
-<p>This page is regenerated from the v0.7.8 <code>x86decomp-test</code> parser surface. It documents parser-declared syntax; it does not claim that optional adapters or live local-model endpoints are installed.</p></p>
+</table></p>
     </article>
 </section>
             <!-- endblock -->

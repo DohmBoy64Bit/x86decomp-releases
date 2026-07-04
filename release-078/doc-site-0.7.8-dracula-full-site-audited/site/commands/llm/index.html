@@ -159,14 +159,6 @@
     </li>
                             
     <li class="drac-box-ternary">
-        <a href="../../release-artifacts/COMMAND_REFERENCE_STRICT_AUDIT/"
-            class="
-            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Command Audit
-        </a>
-    </li>
-                            
-    <li class="drac-box-ternary">
         <a href="../../schemas/"
             class="
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
@@ -212,35 +204,11 @@
                 <a href="../.."
                     class="
                     drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
-                    data-bs-toggle="collapse" data-bs-target="#release-evidence-collapse" aria-expanded="false">
-                    Release Evidence
+                    data-bs-toggle="collapse" data-bs-target="#project-collapse" aria-expanded="false">
+                    Project
                 </a>
-                <div class="collapse" id="release-evidence-collapse">
+                <div class="collapse" id="project-collapse">
                     <ul class="mb-5 drac-list drac-list-none">
-                            
-    <li class="drac-box-ternary">
-        <a href="../../release-evidence/"
-            class="
-            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Overview
-        </a>
-    </li>
-                            
-    <li class="drac-box-ternary">
-        <a href="../../verification/"
-            class="
-            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Verification
-        </a>
-    </li>
-                            
-    <li class="drac-box-ternary">
-        <a href="../../source-coverage/"
-            class="
-            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Source Coverage
-        </a>
-    </li>
                             
     <li class="drac-box-ternary">
         <a href="../../changelog/"
@@ -326,17 +294,17 @@
 <thead>
 <tr>
 <th>Argument</th>
-<th>Exact parser declaration</th>
+<th>Details</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>--project</code></td>
-<td>default: <code>'.'</code> · parser destination: <code>project</code>. project root used by the capability implementation (default: current directory)</td>
+<td>default: <code>'.'</code>. project root used by the capability implementation (default: current directory)</td>
 </tr>
 <tr>
 <td><code>--actor</code></td>
-<td>default: <code>'analyst'</code> · parser destination: <code>actor</code>. No help text declared.</td>
+<td>default: <code>'analyst'</code>.</td>
 </tr>
 </tbody>
 </table>
@@ -428,37 +396,37 @@
 <thead>
 <tr>
 <th>Argument</th>
-<th>Exact parser declaration</th>
+<th>Details</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>project_root</code></td>
-<td>required · parser destination: <code>project_root</code>. No help text declared.</td>
+<td>required.</td>
 </tr>
 <tr>
 <td><code>output_directory</code></td>
-<td>required · parser destination: <code>output_directory</code>. No help text declared.</td>
+<td>required.</td>
 </tr>
 <tr>
 <td><code>--architecture</code></td>
-<td>required · choices: <code>x86</code>, <code>x86_64</code> · parser destination: <code>architecture</code>. No help text declared.</td>
+<td>required · choices: <code>x86</code>, <code>x86_64</code>.</td>
 </tr>
 <tr>
 <td><code>--image-base</code></td>
-<td>type: <code>&lt;lambda&gt;</code> · default: <code>0</code> · parser destination: <code>image_base</code>. No help text declared.</td>
+<td>type: <code>custom</code> · default: <code>0</code>.</td>
 </tr>
 <tr>
 <td><code>--max-bytes</code></td>
-<td>type: <code>int</code> · default: <code>256</code> · parser destination: <code>max_bytes</code>. No help text declared.</td>
+<td>type: <code>int</code> · default: <code>256</code>.</td>
 </tr>
 <tr>
 <td><code>--max-attempts</code></td>
-<td>type: <code>int</code> · default: <code>4</code> · parser destination: <code>max_attempts</code>. No help text declared.</td>
+<td>type: <code>int</code> · default: <code>4</code>.</td>
 </tr>
 <tr>
 <td><code>--overwrite</code></td>
-<td>nargs: <code>0</code> · default: <code>False</code> · parser destination: <code>overwrite</code>. No help text declared.</td>
+<td>nargs: <code>0</code> · default: <code>False</code>.</td>
 </tr>
 </tbody>
 </table>
@@ -472,37 +440,37 @@
 <thead>
 <tr>
 <th>Argument</th>
-<th>Exact parser declaration</th>
+<th>Details</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>profile</code></td>
-<td>required · parser destination: <code>profile</code>. No help text declared.</td>
+<td>required.</td>
 </tr>
 <tr>
 <td><code>compiler_profile</code></td>
-<td>required · parser destination: <code>compiler_profile</code>. No help text declared.</td>
+<td>required.</td>
 </tr>
 <tr>
 <td><code>jobs</code></td>
-<td>required · parser destination: <code>jobs</code>. No help text declared.</td>
+<td>required.</td>
 </tr>
 <tr>
 <td><code>output_directory</code></td>
-<td>required · parser destination: <code>output_directory</code>. No help text declared.</td>
+<td>required.</td>
 </tr>
 <tr>
 <td><code>--max-workers</code></td>
-<td>type: <code>int</code> · default: <code>1</code> · parser destination: <code>max_workers</code>. No help text declared.</td>
+<td>type: <code>int</code> · default: <code>1</code>.</td>
 </tr>
 <tr>
 <td><code>--max-attempts</code></td>
-<td>type: <code>int</code> · parser destination: <code>max_attempts</code>. No help text declared.</td>
+<td>type: <code>int</code>.</td>
 </tr>
 <tr>
 <td><code>--overwrite</code></td>
-<td>nargs: <code>0</code> · default: <code>False</code> · parser destination: <code>overwrite</code>. No help text declared.</td>
+<td>nargs: <code>0</code> · default: <code>False</code>.</td>
 </tr>
 </tbody>
 </table>
@@ -515,33 +483,33 @@
 <thead>
 <tr>
 <th>Argument</th>
-<th>Exact parser declaration</th>
+<th>Details</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>profile</code></td>
-<td>required · parser destination: <code>profile</code>. No help text declared.</td>
+<td>required.</td>
 </tr>
 <tr>
 <td><code>job</code></td>
-<td>required · parser destination: <code>job</code>. No help text declared.</td>
+<td>required.</td>
 </tr>
 <tr>
 <td><code>output</code></td>
-<td>required · parser destination: <code>output</code>. No help text declared.</td>
+<td>required.</td>
 </tr>
 <tr>
 <td><code>--class-context</code></td>
-<td>parser destination: <code>class_context</code>. No help text declared.</td>
+<td>—</td>
 </tr>
 <tr>
 <td><code>--report</code></td>
-<td>parser destination: <code>report</code>. No help text declared.</td>
+<td>—</td>
 </tr>
 <tr>
 <td><code>--overwrite</code></td>
-<td>nargs: <code>0</code> · default: <code>False</code> · parser destination: <code>overwrite</code>. No help text declared.</td>
+<td>nargs: <code>0</code> · default: <code>False</code>.</td>
 </tr>
 </tbody>
 </table>
@@ -553,29 +521,29 @@
 <thead>
 <tr>
 <th>Argument</th>
-<th>Exact parser declaration</th>
+<th>Details</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>profile</code></td>
-<td>required · parser destination: <code>profile</code>. No help text declared.</td>
+<td>required.</td>
 </tr>
 <tr>
 <td><code>job</code></td>
-<td>required · parser destination: <code>job</code>. No help text declared.</td>
+<td>required.</td>
 </tr>
 <tr>
 <td><code>output</code></td>
-<td>required · parser destination: <code>output</code>. No help text declared.</td>
+<td>required.</td>
 </tr>
 <tr>
 <td><code>--report</code></td>
-<td>parser destination: <code>report</code>. No help text declared.</td>
+<td>—</td>
 </tr>
 <tr>
 <td><code>--overwrite</code></td>
-<td>nargs: <code>0</code> · default: <code>False</code> · parser destination: <code>overwrite</code>. No help text declared.</td>
+<td>nargs: <code>0</code> · default: <code>False</code>.</td>
 </tr>
 </tbody>
 </table>
@@ -592,45 +560,45 @@
 <thead>
 <tr>
 <th>Argument</th>
-<th>Exact parser declaration</th>
+<th>Details</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>function_packet</code></td>
-<td>required · parser destination: <code>function_packet</code>. No help text declared.</td>
+<td>required.</td>
 </tr>
 <tr>
 <td><code>output</code></td>
-<td>required · parser destination: <code>output</code>. No help text declared.</td>
+<td>required.</td>
 </tr>
 <tr>
 <td><code>--architecture</code></td>
-<td>required · choices: <code>x86</code>, <code>x86_64</code> · parser destination: <code>architecture</code>. No help text declared.</td>
+<td>required · choices: <code>x86</code>, <code>x86_64</code>.</td>
 </tr>
 <tr>
 <td><code>--image-base</code></td>
-<td>type: <code>&lt;lambda&gt;</code> · default: <code>0</code> · parser destination: <code>image_base</code>. No help text declared.</td>
+<td>type: <code>custom</code> · default: <code>0</code>.</td>
 </tr>
 <tr>
 <td><code>--function-name</code></td>
-<td>parser destination: <code>function_name</code>. No help text declared.</td>
+<td>—</td>
 </tr>
 <tr>
 <td><code>--symbol</code></td>
-<td>parser destination: <code>symbol</code>. No help text declared.</td>
+<td>—</td>
 </tr>
 <tr>
 <td><code>--max-attempts</code></td>
-<td>type: <code>int</code> · default: <code>4</code> · parser destination: <code>max_attempts</code>. No help text declared.</td>
+<td>type: <code>int</code> · default: <code>4</code>.</td>
 </tr>
 <tr>
 <td><code>--inline</code></td>
-<td>nargs: <code>0</code> · default: <code>False</code> · parser destination: <code>inline</code>. No help text declared.</td>
+<td>nargs: <code>0</code> · default: <code>False</code>.</td>
 </tr>
 <tr>
 <td><code>--overwrite</code></td>
-<td>nargs: <code>0</code> · default: <code>False</code> · parser destination: <code>overwrite</code>. No help text declared.</td>
+<td>nargs: <code>0</code> · default: <code>False</code>.</td>
 </tr>
 </tbody>
 </table>
@@ -649,53 +617,53 @@
 <thead>
 <tr>
 <th>Argument</th>
-<th>Exact parser declaration</th>
+<th>Details</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>image</code></td>
-<td>required · parser destination: <code>image</code>. No help text declared.</td>
+<td>required.</td>
 </tr>
 <tr>
 <td><code>output</code></td>
-<td>required · parser destination: <code>output</code>. No help text declared.</td>
+<td>required.</td>
 </tr>
 <tr>
 <td><code>--rva</code></td>
-<td>required · type: <code>&lt;lambda&gt;</code> · parser destination: <code>rva</code>. No help text declared.</td>
+<td>required · type: <code>custom</code>.</td>
 </tr>
 <tr>
 <td><code>--size</code></td>
-<td>required · type: <code>&lt;lambda&gt;</code> · parser destination: <code>size</code>. No help text declared.</td>
+<td>required · type: <code>custom</code>.</td>
 </tr>
 <tr>
 <td><code>--architecture</code></td>
-<td>required · choices: <code>x86</code>, <code>x86_64</code> · parser destination: <code>architecture</code>. No help text declared.</td>
+<td>required · choices: <code>x86</code>, <code>x86_64</code>.</td>
 </tr>
 <tr>
 <td><code>--function-name</code></td>
-<td>required · parser destination: <code>function_name</code>. No help text declared.</td>
+<td>required.</td>
 </tr>
 <tr>
 <td><code>--symbol</code></td>
-<td>parser destination: <code>symbol</code>. No help text declared.</td>
+<td>—</td>
 </tr>
 <tr>
 <td><code>--image-base</code></td>
-<td>type: <code>&lt;lambda&gt;</code> · default: <code>0</code> · parser destination: <code>image_base</code>. No help text declared.</td>
+<td>type: <code>custom</code> · default: <code>0</code>.</td>
 </tr>
 <tr>
 <td><code>--mnemonics</code></td>
-<td>parser destination: <code>mnemonics</code>. No help text declared.</td>
+<td>—</td>
 </tr>
 <tr>
 <td><code>--max-attempts</code></td>
-<td>type: <code>int</code> · default: <code>4</code> · parser destination: <code>max_attempts</code>. No help text declared.</td>
+<td>type: <code>int</code> · default: <code>4</code>.</td>
 </tr>
 <tr>
 <td><code>--overwrite</code></td>
-<td>nargs: <code>0</code> · default: <code>False</code> · parser destination: <code>overwrite</code>. No help text declared.</td>
+<td>nargs: <code>0</code> · default: <code>False</code>.</td>
 </tr>
 </tbody>
 </table>
@@ -707,33 +675,33 @@
 <thead>
 <tr>
 <th>Argument</th>
-<th>Exact parser declaration</th>
+<th>Details</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>profile</code></td>
-<td>required · parser destination: <code>profile</code>. No help text declared.</td>
+<td>required.</td>
 </tr>
 <tr>
 <td><code>compiler_profile</code></td>
-<td>required · parser destination: <code>compiler_profile</code>. No help text declared.</td>
+<td>required.</td>
 </tr>
 <tr>
 <td><code>job</code></td>
-<td>required · parser destination: <code>job</code>. No help text declared.</td>
+<td>required.</td>
 </tr>
 <tr>
 <td><code>output_directory</code></td>
-<td>required · parser destination: <code>output_directory</code>. No help text declared.</td>
+<td>required.</td>
 </tr>
 <tr>
 <td><code>--max-attempts</code></td>
-<td>type: <code>int</code> · parser destination: <code>max_attempts</code>. No help text declared.</td>
+<td>type: <code>int</code>.</td>
 </tr>
 <tr>
 <td><code>--overwrite</code></td>
-<td>nargs: <code>0</code> · default: <code>False</code> · parser destination: <code>overwrite</code>. No help text declared.</td>
+<td>nargs: <code>0</code> · default: <code>False</code>.</td>
 </tr>
 </tbody>
 </table>
@@ -744,13 +712,13 @@
 <thead>
 <tr>
 <th>Argument</th>
-<th>Exact parser declaration</th>
+<th>Details</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>profile</code></td>
-<td>required · parser destination: <code>profile</code>. No help text declared.</td>
+<td>required.</td>
 </tr>
 </tbody>
 </table>
@@ -765,37 +733,37 @@
 <thead>
 <tr>
 <th>Argument</th>
-<th>Exact parser declaration</th>
+<th>Details</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>provider</code></td>
-<td>required · choices: <code>llama.cpp</code>, <code>lm-studio</code>, <code>localai</code>, <code>ollama</code>, <code>openai-compatible</code>, <code>vllm</code> · parser destination: <code>provider</code>. No help text declared.</td>
+<td>required · choices: <code>llama.cpp</code>, <code>lm-studio</code>, <code>localai</code>, <code>ollama</code>, <code>openai-compatible</code>, <code>vllm</code>.</td>
 </tr>
 <tr>
 <td><code>output</code></td>
-<td>required · parser destination: <code>output</code>. No help text declared.</td>
+<td>required.</td>
 </tr>
 <tr>
 <td><code>--model</code></td>
-<td>required · parser destination: <code>model</code>. No help text declared.</td>
+<td>required.</td>
 </tr>
 <tr>
 <td><code>--base-url</code></td>
-<td>parser destination: <code>base_url</code>. No help text declared.</td>
+<td>—</td>
 </tr>
 <tr>
 <td><code>--id</code></td>
-<td>parser destination: <code>id</code>. No help text declared.</td>
+<td>—</td>
 </tr>
 <tr>
 <td><code>--api-key-env</code></td>
-<td>parser destination: <code>api_key_env</code>. No help text declared.</td>
+<td>—</td>
 </tr>
 <tr>
 <td><code>--allow-remote</code></td>
-<td>nargs: <code>0</code> · default: <code>False</code> · parser destination: <code>allow_remote</code>. No help text declared.</td>
+<td>nargs: <code>0</code> · default: <code>False</code>.</td>
 </tr>
 </tbody>
 </table>
@@ -806,13 +774,13 @@
 <thead>
 <tr>
 <th>Argument</th>
-<th>Exact parser declaration</th>
+<th>Details</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>profile</code></td>
-<td>required · parser destination: <code>profile</code>. No help text declared.</td>
+<td>required.</td>
 </tr>
 </tbody>
 </table>
@@ -823,17 +791,17 @@
 <thead>
 <tr>
 <th>Argument</th>
-<th>Exact parser declaration</th>
+<th>Details</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>job</code></td>
-<td>required · parser destination: <code>job</code>. No help text declared.</td>
+<td>required.</td>
 </tr>
 <tr>
 <td><code>output</code></td>
-<td>required · parser destination: <code>output</code>. No help text declared.</td>
+<td>required.</td>
 </tr>
 </tbody>
 </table>
@@ -847,40 +815,16 @@
 <thead>
 <tr>
 <th>Argument</th>
-<th>Exact parser declaration</th>
+<th>Details</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>report</code></td>
-<td>required · parser destination: <code>report</code>. No help text declared.</td>
+<td>required.</td>
 </tr>
 </tbody>
-</table>
-<h2 id="source-basis">Source basis</h2>
-<table>
-<thead>
-<tr>
-<th>Parser owner</th>
-<th>Source file</th>
-<th>SHA-256</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>canonical cli</td>
-<td><code>src/x86decomp/canonical.py</code></td>
-<td><code>9dfc1a2d1ba31559b1a9cd31a0cda1ab1a1e88ffef0a47c4632995f649296166</code></td>
-</tr>
-<tr>
-<td>reconstruction cli</td>
-<td><code>src/x86decomp/reconstruction/cli.py</code></td>
-<td><code>dd5a6c7c987b3c49a3f7c1c635d60b34542e21f9346bd85f869013532c844cc4</code></td>
-</tr>
-</tbody>
-</table>
-<h2 id="verification-boundary">Verification boundary</h2>
-<p>This page is regenerated from the v0.7.8 parser surface. It documents syntax, parser-declared arguments, canonical owners, and source files; it does not claim that optional adapters, target binaries, compiler toolchains, or runtime inputs exist on the reader's machine.</p></p>
+</table></p>
     </article>
 </section>
             <!-- endblock -->

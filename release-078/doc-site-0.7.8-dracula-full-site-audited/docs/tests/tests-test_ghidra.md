@@ -5,7 +5,6 @@ description: Test source reference for tests/test_ghidra.py.
 
 # `tests/test_ghidra.py`
 
-**SHA-256:** `1c9a934bad943761f8d9b6bc22509a054a8ead82747d2091d5f7e84c5682b88b`
 
 | Test symbol | Kind | Line | End line |
 | --- | --- | ---: | ---: |

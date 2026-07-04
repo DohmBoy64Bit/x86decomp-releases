@@ -6,7 +6,6 @@ description: Source module reference for x86decomp.assembly.__init__.
 # `x86decomp.assembly.__init__`
 
 **Source path:** `src/x86decomp/assembly/__init__.py`  
-**SHA-256:** `60dcbf406ebd10f56f155b70ea0657b0d40a2405ef65cf3caa32979fd90ca254`  
 **Documented symbols:** 0
 
 | Symbol | Kind | Line | End line | Docstring summary |

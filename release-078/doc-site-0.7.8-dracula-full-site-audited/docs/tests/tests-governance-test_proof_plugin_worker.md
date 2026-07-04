@@ -5,7 +5,6 @@ description: Test source reference for tests/governance/test_proof_plugin_worker
 
 # `tests/governance/test_proof_plugin_worker.py`
 
-**SHA-256:** `1cf8e1e2877783f7375ac2a2305fa708eafecc1591cc27e6b54d026bc6b03829`
 
 | Test symbol | Kind | Line | End line |
 | --- | --- | ---: | ---: |

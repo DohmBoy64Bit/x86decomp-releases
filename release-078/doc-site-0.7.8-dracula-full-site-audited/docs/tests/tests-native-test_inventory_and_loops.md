@@ -5,7 +5,6 @@ description: Test source reference for tests/native/test_inventory_and_loops.py.
 
 # `tests/native/test_inventory_and_loops.py`
 
-**SHA-256:** `92e89da6edbcda1a7371d809975b58c129e85ac8274365b05488d1ccd56d4960`
 
 | Test symbol | Kind | Line | End line |
 | --- | --- | ---: | ---: |

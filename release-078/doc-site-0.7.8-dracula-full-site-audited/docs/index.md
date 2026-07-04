@@ -5,14 +5,14 @@ description: Evidence-governed x86/x86-64 decompilation toolkit documentation.
 
 # x86decomp 0.7.8 Documentation
 
-Use this MkDocs site to install the toolkit, create projects, run matching and functional workflows, use bounded local-model C generation, and verify release evidence.
+Use this MkDocs site to install the toolkit, create projects, run matching and functional workflows, and use bounded local-model C generation.
 
 <div class="doc-stat-grid">
 <div><strong>166</strong><span>toolkit root commands</span></div>
 <div><strong>239</strong><span>canonical routes</span></div>
-<div><strong>114</strong><span>Python modules</span></div>
-<div><strong>97</strong><span>JSON Schemas</span></div>
-<div><strong>229</strong><span>test functions</span></div>
+<div><strong>145</strong><span>Python modules</span></div>
+<div><strong>100</strong><span>JSON Schemas</span></div>
+<div><strong>59</strong><span>test source files</span></div>
 <div><strong>36</strong><span>adapter declarations</span></div>
 </div>
 
@@ -23,7 +23,6 @@ Use this MkDocs site to install the toolkit, create projects, run matching and f
 - [Local LLM C generation](local-llm.md)
 - [Project Examples](project-examples.md)
 - [Complete command reference](commands/index.md)
-- [Release verification](verification.md)
 
 ## Scope
 

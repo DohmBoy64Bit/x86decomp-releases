@@ -5,7 +5,6 @@ description: Test source reference for tests/governance/test_core.py.
 
 # `tests/governance/test_core.py`
 
-**SHA-256:** `d2c62ade326140850549e48c1255cab3a45ec3f69d2374f4aff21380cd1ccc0d`
 
 | Test symbol | Kind | Line | End line |
 | --- | --- | ---: | ---: |

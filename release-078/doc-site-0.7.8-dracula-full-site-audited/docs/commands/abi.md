@@ -1,6 +1,6 @@
 ---
 title: x86decomp abi
-description: Exact v0.7.8 parser-derived reference for `x86decomp abi`.
+description: Command reference for `x86decomp abi`.
 ---
 
 
@@ -17,10 +17,10 @@ usage: x86decomp abi [-h] [--project PROJECT] [--actor ACTOR]
 
 ## Arguments
 
-| Argument | Exact parser declaration |
+| Argument | Details |
 | --- | --- |
-| `--project` | default: `'.'` · parser destination: `project`. project root used by the capability implementation (default: current directory) |
-| `--actor` | default: `'analyst'` · parser destination: `actor`. No help text declared. |
+| `--project` | default: `'.'`. project root used by the capability implementation (default: current directory) |
+| `--actor` | default: `'analyst'`. |
 
 ## Actions
 
@@ -39,10 +39,10 @@ usage: x86decomp abi [-h] [--project PROJECT] [--actor ACTOR]
 usage: x86decomp abi compare [-h] left_id right_id
 ```
 
-| Argument | Exact parser declaration |
+| Argument | Details |
 | --- | --- |
-| `left_id` | required · parser destination: `left_id`. No help text declared. |
-| `right_id` | required · parser destination: `right_id`. No help text declared. |
+| `left_id` | required. |
+| `right_id` | required. |
 
 ### `x86decomp abi export`
 
@@ -50,10 +50,10 @@ usage: x86decomp abi compare [-h] left_id right_id
 usage: x86decomp abi export [-h] contract_id output
 ```
 
-| Argument | Exact parser declaration |
+| Argument | Details |
 | --- | --- |
-| `contract_id` | required · parser destination: `contract_id`. No help text declared. |
-| `output` | required · parser destination: `output`. No help text declared. |
+| `contract_id` | required. |
+| `output` | required. |
 
 ### `x86decomp abi recover`
 
@@ -63,13 +63,13 @@ usage: x86decomp abi recover [-h] --evidence-json EVIDENCE_JSON
                              contract_json
 ```
 
-| Argument | Exact parser declaration |
+| Argument | Details |
 | --- | --- |
-| `subject_kind` | required · parser destination: `subject_kind`. No help text declared. |
-| `subject_id` | required · parser destination: `subject_id`. No help text declared. |
-| `architecture` | required · parser destination: `architecture`. No help text declared. |
-| `contract_json` | required · parser destination: `contract_json`. No help text declared. |
-| `--evidence-json` | required · parser destination: `evidence_json`. No help text declared. |
+| `subject_kind` | required. |
+| `subject_id` | required. |
+| `architecture` | required. |
+| `contract_json` | required. |
+| `--evidence-json` | required. |
 
 ### `x86decomp abi shim`
 
@@ -77,11 +77,11 @@ usage: x86decomp abi recover [-h] --evidence-json EVIDENCE_JSON
 usage: x86decomp abi shim [-h] [--kind KIND] contract_id source_path
 ```
 
-| Argument | Exact parser declaration |
+| Argument | Details |
 | --- | --- |
-| `contract_id` | required · parser destination: `contract_id`. No help text declared. |
-| `source_path` | required · parser destination: `source_path`. No help text declared. |
-| `--kind` | default: `'wrapped'` · parser destination: `kind`. No help text declared. |
+| `contract_id` | required. |
+| `source_path` | required. |
+| `--kind` | default: `'wrapped'`. |
 
 ### `x86decomp abi show`
 
@@ -89,9 +89,9 @@ usage: x86decomp abi shim [-h] [--kind KIND] contract_id source_path
 usage: x86decomp abi show [-h] contract_id
 ```
 
-| Argument | Exact parser declaration |
+| Argument | Details |
 | --- | --- |
-| `contract_id` | required · parser destination: `contract_id`. No help text declared. |
+| `contract_id` | required. |
 
 ### `x86decomp abi verify`
 
@@ -99,17 +99,8 @@ usage: x86decomp abi show [-h] contract_id
 usage: x86decomp abi verify [-h] contract_id
 ```
 
-| Argument | Exact parser declaration |
+| Argument | Details |
 | --- | --- |
-| `contract_id` | required · parser destination: `contract_id`. No help text declared. |
+| `contract_id` | required. |
 
-## Source basis
 
-| Parser owner | Source file | SHA-256 |
-| --- | --- | --- |
-| canonical cli | `src/x86decomp/canonical.py` | `9dfc1a2d1ba31559b1a9cd31a0cda1ab1a1e88ffef0a47c4632995f649296166` |
-| reconstruction cli | `src/x86decomp/reconstruction/cli.py` | `dd5a6c7c987b3c49a3f7c1c635d60b34542e21f9346bd85f869013532c844cc4` |
-
-## Verification boundary
-
-This page is regenerated from the v0.7.8 parser surface. It documents syntax, parser-declared arguments, canonical owners, and source files; it does not claim that optional adapters, target binaries, compiler toolchains, or runtime inputs exist on the reader's machine.

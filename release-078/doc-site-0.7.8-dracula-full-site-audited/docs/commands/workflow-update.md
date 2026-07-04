@@ -1,6 +1,6 @@
 ---
 title: x86decomp workflow-update
-description: Exact v0.7.8 parser-derived reference for `x86decomp workflow-update`.
+description: Command reference for `x86decomp workflow-update`.
 ---
 
 
@@ -23,26 +23,18 @@ usage: x86decomp workflow-update [-h]
 
 ## Arguments
 
-| Argument | Exact parser declaration |
+| Argument | Details |
 | --- | --- |
-| `project` | required · type: `_path` · parser destination: `project`. No help text declared. |
-| `function_id` | required · parser destination: `function_id`. No help text declared. |
-| `--source-stage` | choices: `original_bytes`, `generated_assembly`, `decompiler_candidate`, `human_candidate`, `accepted_source` · parser destination: `source_stage`. No help text declared. |
-| `--matching-status` | choices: `not_started`, `decompiled`, `compiles`, `abi_compatible`, `instruction_similar`, `byte_matched`, `image_integrated`, `full_relink_validated`, `blocked` · parser destination: `matching_status`. No help text declared. |
-| `--functional-status` | choices: `not_started`, `decompiled`, `compiles`, `abi_compatible`, `differentially_validated`, `symbolically_bounded`, `integration_validated`, `blocked` · parser destination: `functional_status`. No help text declared. |
-| `--candidate` | parser destination: `candidate`. No help text declared. |
-| `--compiler-profile` | parser destination: `compiler_profile`. No help text declared. |
-| `--report-kind` | parser destination: `report_kind`. No help text declared. |
-| `--report-path` | parser destination: `report_path`. No help text declared. |
-| `--blocker` | parser destination: `blocker`. No help text declared. |
-| `--allow-regression` | nargs: `0` · default: `False` · parser destination: `allow_regression`. No help text declared. |
+| `project` | required · type: `path`. |
+| `function_id` | required. |
+| `--source-stage` | choices: `original_bytes`, `generated_assembly`, `decompiler_candidate`, `human_candidate`, `accepted_source`. |
+| `--matching-status` | choices: `not_started`, `decompiled`, `compiles`, `abi_compatible`, `instruction_similar`, `byte_matched`, `image_integrated`, `full_relink_validated`, `blocked`. |
+| `--functional-status` | choices: `not_started`, `decompiled`, `compiles`, `abi_compatible`, `differentially_validated`, `symbolically_bounded`, `integration_validated`, `blocked`. |
+| `--candidate` | — |
+| `--compiler-profile` | — |
+| `--report-kind` | — |
+| `--report-path` | — |
+| `--blocker` | — |
+| `--allow-regression` | nargs: `0` · default: `False`. |
 
-## Source basis
 
-| Parser owner | Source file | SHA-256 |
-| --- | --- | --- |
-| root cli | `src/x86decomp/cli.py` | `21e0654ced2f5dd0588adcbedec328613fba524ff1e0a91ef07d63cbbf88288c` |
-
-## Verification boundary
-
-This page is regenerated from the v0.7.8 parser surface. It documents syntax, parser-declared arguments, canonical owners, and source files; it does not claim that optional adapters, target binaries, compiler toolchains, or runtime inputs exist on the reader's machine.

@@ -1,1 +1,0 @@
-{"schema_version":1,"version":"0.7.8","kind":"harness_summary","note":"Full optional adapter-aware harness was not rerun in this environment because optional native-analysis dependencies were unavailable. Targeted parser, source, docs, and acceleration tests passed."}

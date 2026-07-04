@@ -5,7 +5,6 @@ description: Test source reference for tests/test_release_contract.py.
 
 # `tests/test_release_contract.py`
 
-**SHA-256:** `4b417ccf07d85c46f613aa1873542dcd534a7caf69fbea19a162e7d9d767c857`
 
 | Test symbol | Kind | Line | End line |
 | --- | --- | ---: | ---: |

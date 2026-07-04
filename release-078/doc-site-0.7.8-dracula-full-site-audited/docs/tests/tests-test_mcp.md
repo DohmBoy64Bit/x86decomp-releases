@@ -5,7 +5,6 @@ description: Test source reference for tests/test_mcp.py.
 
 # `tests/test_mcp.py`
 
-**SHA-256:** `10922b81d1726dd38b453ed718a7da0ddaedd5db188a9befb7cf8bded8686f49`
 
 | Test symbol | Kind | Line | End line |
 | --- | --- | ---: | ---: |

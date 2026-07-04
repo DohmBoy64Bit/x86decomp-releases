@@ -5,7 +5,6 @@ description: Test source reference for tests/reconstruction/test_real_project_ac
 
 # `tests/reconstruction/test_real_project_acceleration.py`
 
-**SHA-256:** `449179fbd7c73f7f94d43957ee29a77d52c3473f35e0f8e43f370ea5dcd1c8d1`
 
 | Test symbol | Kind | Line | End line |
 | --- | --- | ---: | ---: |

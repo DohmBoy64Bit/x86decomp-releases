@@ -159,14 +159,6 @@
     </li>
                             
     <li class="drac-box-ternary">
-        <a href="../../release-artifacts/COMMAND_REFERENCE_STRICT_AUDIT/"
-            class="
-            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Command Audit
-        </a>
-    </li>
-                            
-    <li class="drac-box-ternary">
         <a href="../../schemas/"
             class="
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
@@ -212,35 +204,11 @@
                 <a href="../.."
                     class="
                     drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
-                    data-bs-toggle="collapse" data-bs-target="#release-evidence-collapse" aria-expanded="false">
-                    Release Evidence
+                    data-bs-toggle="collapse" data-bs-target="#project-collapse" aria-expanded="false">
+                    Project
                 </a>
-                <div class="collapse" id="release-evidence-collapse">
+                <div class="collapse" id="project-collapse">
                     <ul class="mb-5 drac-list drac-list-none">
-                            
-    <li class="drac-box-ternary">
-        <a href="../../release-evidence/"
-            class="
-            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Overview
-        </a>
-    </li>
-                            
-    <li class="drac-box-ternary">
-        <a href="../../verification/"
-            class="
-            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Verification
-        </a>
-    </li>
-                            
-    <li class="drac-box-ternary">
-        <a href="../../source-coverage/"
-            class="
-            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Source Coverage
-        </a>
-    </li>
                             
     <li class="drac-box-ternary">
         <a href="../../changelog/"
@@ -326,44 +294,20 @@
 <thead>
 <tr>
 <th>Argument</th>
-<th>Exact parser declaration</th>
+<th>Details</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>--group</code></td>
-<td>choices: <code>abi</code>, <code>asm</code>, <code>asset</code>, <code>boundary</code>, <code>build</code>, <code>campaign</code>, <code>candidate</code>, <code>capsule</code>, <code>changeset</code>, <code>class</code>, <code>compiler-rules</code>, <code>consensus</code>, <code>counterexample</code>, <code>decompiler</code>, <code>diff</code>, <code>family</code>, <code>function</code>, <code>game-pattern</code>, <code>ghidra-mcp</code>, <code>graph</code>, <code>headers</code>, <code>hybrid</code>, <code>hypothesis</code>, <code>image-text</code>, <code>library</code>, <code>llm</code>, <code>loop</code>, <code>match</code>, <code>mod</code>, <code>module</code>, <code>pattern</code>, <code>pe</code>, <code>playability</code>, <code>plugin</code>, <code>progress</code>, <code>project</code>, <code>proof</code>, <code>provenance</code>, <code>regression</code>, <code>release-policy</code>, <code>reloc</code>, <code>review</code>, <code>runtime</code>, <code>runtime-analysis</code>, <code>script-port</code>, <code>security</code>, <code>source</code>, <code>source-map</code>, <code>source-stage</code>, <code>staging</code>, <code>subsystem</code>, <code>tests</code>, <code>text-swap</code>, <code>toolchain</code>, <code>triage</code>, <code>type</code>, <code>vtable</code>, <code>windows</code>, <code>worker</code> · parser destination: <code>group</code>. No help text declared.</td>
+<td>choices: <code>abi</code>, <code>asm</code>, <code>asset</code>, <code>boundary</code>, <code>build</code>, <code>campaign</code>, <code>candidate</code>, <code>capsule</code>, <code>changeset</code>, <code>class</code>, <code>compiler-rules</code>, <code>consensus</code>, <code>counterexample</code>, <code>decompiler</code>, <code>diff</code>, <code>family</code>, <code>function</code>, <code>game-pattern</code>, <code>ghidra-mcp</code>, <code>graph</code>, <code>headers</code>, <code>hybrid</code>, <code>hypothesis</code>, <code>image-text</code>, <code>library</code>, <code>llm</code>, <code>loop</code>, <code>match</code>, <code>mod</code>, <code>module</code>, <code>pattern</code>, <code>pe</code>, <code>playability</code>, <code>plugin</code>, <code>progress</code>, <code>project</code>, <code>proof</code>, <code>provenance</code>, <code>regression</code>, <code>release-policy</code>, <code>reloc</code>, <code>review</code>, <code>runtime</code>, <code>runtime-analysis</code>, <code>script-port</code>, <code>security</code>, <code>source</code>, <code>source-map</code>, <code>source-stage</code>, <code>staging</code>, <code>subsystem</code>, <code>tests</code>, <code>text-swap</code>, <code>toolchain</code>, <code>triage</code>, <code>type</code>, <code>vtable</code>, <code>windows</code>, <code>worker</code>.</td>
 </tr>
 <tr>
 <td><code>--owner</code></td>
-<td>choices: <code>governance</code>, <code>reconstruction</code>, <code>native</code>, <code>assembly</code> · parser destination: <code>owner</code>. No help text declared.</td>
+<td>choices: <code>governance</code>, <code>reconstruction</code>, <code>native</code>, <code>assembly</code>.</td>
 </tr>
 </tbody>
-</table>
-<h2 id="source-basis">Source basis</h2>
-<table>
-<thead>
-<tr>
-<th>Parser owner</th>
-<th>Source file</th>
-<th>SHA-256</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>root cli</td>
-<td><code>src/x86decomp/cli.py</code></td>
-<td><code>21e0654ced2f5dd0588adcbedec328613fba524ff1e0a91ef07d63cbbf88288c</code></td>
-</tr>
-<tr>
-<td>canonical cli</td>
-<td><code>src/x86decomp/canonical.py</code></td>
-<td><code>9dfc1a2d1ba31559b1a9cd31a0cda1ab1a1e88ffef0a47c4632995f649296166</code></td>
-</tr>
-</tbody>
-</table>
-<h2 id="verification-boundary">Verification boundary</h2>
-<p>This page is regenerated from the v0.7.8 parser surface. It documents syntax, parser-declared arguments, canonical owners, and source files; it does not claim that optional adapters, target binaries, compiler toolchains, or runtime inputs exist on the reader's machine.</p></p>
+</table></p>
     </article>
 </section>
             <!-- endblock -->

@@ -5,7 +5,6 @@ description: Test source reference for tests/test_local_llm.py.
 
 # `tests/test_local_llm.py`
 
-**SHA-256:** `6e876be44e16786200b013fb530103cf7ad7e3c145af0582cee5cb00cbcd5b98`
 
 | Test symbol | Kind | Line | End line |
 | --- | --- | ---: | ---: |

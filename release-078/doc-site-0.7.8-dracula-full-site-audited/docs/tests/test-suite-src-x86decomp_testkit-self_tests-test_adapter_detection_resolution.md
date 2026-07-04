@@ -5,7 +5,6 @@ description: Test source reference for test-suite/src/x86decomp_testkit/self_tes
 
 # `test-suite/src/x86decomp_testkit/self_tests/test_adapter_detection_resolution.py`
 
-**SHA-256:** `d2b5626de04bac6ee52935b4db6e5437c56a6edf94ef300504008eccdf4d7812`
 
 | Test symbol | Kind | Line | End line |
 | --- | --- | ---: | ---: |

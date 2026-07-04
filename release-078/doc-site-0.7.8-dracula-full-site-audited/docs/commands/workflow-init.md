@@ -1,6 +1,6 @@
 ---
 title: x86decomp workflow-init
-description: Exact v0.7.8 parser-derived reference for `x86decomp workflow-init`.
+description: Command reference for `x86decomp workflow-init`.
 ---
 
 
@@ -15,18 +15,10 @@ usage: x86decomp workflow-init [-h] [--mode {matching,functional}]
 
 ## Arguments
 
-| Argument | Exact parser declaration |
+| Argument | Details |
 | --- | --- |
-| `project` | required · type: `_path` · parser destination: `project`. No help text declared. |
-| `function_id` | required · parser destination: `function_id`. No help text declared. |
-| `--mode` | choices: `matching`, `functional` · parser destination: `mode`. No help text declared. |
+| `project` | required · type: `path`. |
+| `function_id` | required. |
+| `--mode` | choices: `matching`, `functional`. |
 
-## Source basis
 
-| Parser owner | Source file | SHA-256 |
-| --- | --- | --- |
-| root cli | `src/x86decomp/cli.py` | `21e0654ced2f5dd0588adcbedec328613fba524ff1e0a91ef07d63cbbf88288c` |
-
-## Verification boundary
-
-This page is regenerated from the v0.7.8 parser surface. It documents syntax, parser-declared arguments, canonical owners, and source files; it does not claim that optional adapters, target binaries, compiler toolchains, or runtime inputs exist on the reader's machine.

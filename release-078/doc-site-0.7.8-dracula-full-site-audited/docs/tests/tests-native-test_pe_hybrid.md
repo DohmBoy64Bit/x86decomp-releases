@@ -5,7 +5,6 @@ description: Test source reference for tests/native/test_pe_hybrid.py.
 
 # `tests/native/test_pe_hybrid.py`
 
-**SHA-256:** `f348168b73353f4da20583dc0c5b4e2d1dfb9e052dc185f236098ff4898cfc1e`
 
 | Test symbol | Kind | Line | End line |
 | --- | --- | ---: | ---: |

@@ -5,7 +5,6 @@ description: Test source reference for tests/test_linker_metadata_corpus.py.
 
 # `tests/test_linker_metadata_corpus.py`
 
-**SHA-256:** `aa88771eecf6bbd2a6fcc6230848165884fea583b48688061d61c14756f9a1de`
 
 | Test symbol | Kind | Line | End line |
 | --- | --- | ---: | ---: |

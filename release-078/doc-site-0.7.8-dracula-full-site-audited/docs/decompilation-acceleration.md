@@ -29,7 +29,7 @@ The commands are bounded helpers. They do not claim original source recovery, se
 These helpers are designed to speed up project movement, not to weaken verification. Model output remains untrusted. Source promotion requires an accepted validation report. Module suggestions and class scaffolds are review aids and explicitly do not claim original source names or declarations.
 
 
-# v0.7.8 universal acceleration commands
+## v0.7.8 universal acceleration commands
 
 These commands turn lessons from real projects into reusable, project-neutral workflows. They are bounded helpers: they emit manifests, reports, source candidates, or safe derived files; they do not claim recovered original source or validation success unless a validator report proves it.
 

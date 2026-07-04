@@ -5,7 +5,6 @@ description: Test source reference for test-suite/tests/test_architecture_maps.p
 
 # `test-suite/tests/test_architecture_maps.py`
 
-**SHA-256:** `f34df02c1f5a4cd456d23fe743922acf3e11ff4df312de765e2384d272155d8d`
 
 | Test symbol | Kind | Line | End line |
 | --- | --- | ---: | ---: |

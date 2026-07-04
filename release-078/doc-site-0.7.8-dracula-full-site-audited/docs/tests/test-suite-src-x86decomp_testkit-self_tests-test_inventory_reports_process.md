@@ -5,7 +5,6 @@ description: Test source reference for test-suite/src/x86decomp_testkit/self_tes
 
 # `test-suite/src/x86decomp_testkit/self_tests/test_inventory_reports_process.py`
 
-**SHA-256:** `bb71bbcfe250bb2872fcd1da6c988f33dcc2721b6d217cdd441ca0ee4a24c5c0`
 
 | Test symbol | Kind | Line | End line |
 | --- | --- | ---: | ---: |

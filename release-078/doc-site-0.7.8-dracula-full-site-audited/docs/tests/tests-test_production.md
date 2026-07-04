@@ -5,7 +5,6 @@ description: Test source reference for tests/test_production.py.
 
 # `tests/test_production.py`
 
-**SHA-256:** `da0d4bd57f7f4bb68957fa8aa42a67f7eb34347f35137849e360dc95e796db89`
 
 | Test symbol | Kind | Line | End line |
 | --- | --- | ---: | ---: |

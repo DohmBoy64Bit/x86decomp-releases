@@ -49,7 +49,6 @@ The verification harness declares **36 adapters**. Unresolved adapters are `BLOC
 | `z3` | Z3 Python bindings | `python` | `symbolic`, `functional` | modules: `z3` | no |
 
 **Source:** `test-suite/src/x86decomp_testkit/adapters/catalog.py`  
-**SHA-256:** `48d74c2b917d045b5cc0fe50956d32e1f9717f245a77eb735bae0d9c5b4ca1b9`
 
 ## Local-model provider profiles
 
@@ -65,7 +64,6 @@ The `llm` capability implements **6 provider presets**. Provider support means t
 | `vllm` | `openai-chat` | `http://127.0.0.1:8000/v1` | `/models` | `/chat/completions` | `openai-json-schema` |
 
 **Source:** `src/x86decomp/local_llm/profiles.py`  
-**SHA-256:** `5bce6554b8d5dbccd0a18c965bae92e82cc8517f7c86997621d662f3bcff1ca2`
 
 Profiles are loopback-only by default. Remote endpoints require explicit opt-in, and secrets are referenced by environment-variable name rather than stored in profile JSON.
 

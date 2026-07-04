@@ -1,6 +1,6 @@
 ---
 title: x86decomp compiler-rules
-description: Exact v0.7.8 parser-derived reference for `x86decomp compiler-rules`.
+description: Command reference for `x86decomp compiler-rules`.
 ---
 
 
@@ -17,10 +17,10 @@ usage: x86decomp compiler-rules [-h] [--project PROJECT] [--actor ACTOR]
 
 ## Arguments
 
-| Argument | Exact parser declaration |
+| Argument | Details |
 | --- | --- |
-| `--project` | default: `'.'` · parser destination: `project`. project root used by the capability implementation (default: current directory) |
-| `--actor` | default: `'analyst'` · parser destination: `actor`. No help text declared. |
+| `--project` | default: `'.'`. project root used by the capability implementation (default: current directory) |
+| `--actor` | default: `'analyst'`. |
 
 ## Actions
 
@@ -37,10 +37,10 @@ usage: x86decomp compiler-rules compare-flags [-h] [--output OUTPUT]
                                               reports [reports ...]
 ```
 
-| Argument | Exact parser declaration |
+| Argument | Details |
 | --- | --- |
-| `reports` | required · nargs: `+` · parser destination: `reports`. No help text declared. |
-| `--output` | parser destination: `output`. No help text declared. |
+| `reports` | required · nargs: `+`. |
+| `--output` | — |
 
 ### `x86decomp compiler-rules learn-rule`
 
@@ -48,11 +48,11 @@ usage: x86decomp compiler-rules compare-flags [-h] [--output OUTPUT]
 usage: x86decomp compiler-rules learn-rule [-h] rule_id observations output
 ```
 
-| Argument | Exact parser declaration |
+| Argument | Details |
 | --- | --- |
-| `rule_id` | required · parser destination: `rule_id`. No help text declared. |
-| `observations` | required · parser destination: `observations`. No help text declared. |
-| `output` | required · parser destination: `output`. No help text declared. |
+| `rule_id` | required. |
+| `observations` | required. |
+| `output` | required. |
 
 ### `x86decomp compiler-rules rule-report`
 
@@ -61,18 +61,9 @@ usage: x86decomp compiler-rules rule-report [-h] [--output OUTPUT]
                                             rules [rules ...]
 ```
 
-| Argument | Exact parser declaration |
+| Argument | Details |
 | --- | --- |
-| `rules` | required · nargs: `+` · parser destination: `rules`. No help text declared. |
-| `--output` | parser destination: `output`. No help text declared. |
+| `rules` | required · nargs: `+`. |
+| `--output` | — |
 
-## Source basis
 
-| Parser owner | Source file | SHA-256 |
-| --- | --- | --- |
-| canonical cli | `src/x86decomp/canonical.py` | `9dfc1a2d1ba31559b1a9cd31a0cda1ab1a1e88ffef0a47c4632995f649296166` |
-| reconstruction cli | `src/x86decomp/reconstruction/cli.py` | `dd5a6c7c987b3c49a3f7c1c635d60b34542e21f9346bd85f869013532c844cc4` |
-
-## Verification boundary
-
-This page is regenerated from the v0.7.8 parser surface. It documents syntax, parser-declared arguments, canonical owners, and source files; it does not claim that optional adapters, target binaries, compiler toolchains, or runtime inputs exist on the reader's machine.

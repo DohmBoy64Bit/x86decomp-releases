@@ -1,6 +1,6 @@
 ---
 title: x86decomp provenance
-description: Exact v0.7.8 parser-derived reference for `x86decomp provenance`.
+description: Command reference for `x86decomp provenance`.
 ---
 
 
@@ -17,10 +17,10 @@ usage: x86decomp provenance [-h] [--project PROJECT] [--actor ACTOR]
 
 ## Arguments
 
-| Argument | Exact parser declaration |
+| Argument | Details |
 | --- | --- |
-| `--project` | default: `'.'` · parser destination: `project`. project root used by the capability implementation (default: current directory) |
-| `--actor` | default: `'analyst'` · parser destination: `actor`. No help text declared. |
+| `--project` | default: `'.'`. project root used by the capability implementation (default: current directory) |
+| `--actor` | default: `'analyst'`. |
 
 ## Actions
 
@@ -37,10 +37,10 @@ usage: x86decomp provenance [-h] [--project PROJECT] [--actor ACTOR]
 usage: x86decomp provenance binary [-h] [--address ADDRESS] binary_id
 ```
 
-| Argument | Exact parser declaration |
+| Argument | Details |
 | --- | --- |
-| `binary_id` | required · parser destination: `binary_id`. No help text declared. |
-| `--address` | parser destination: `address`. No help text declared. |
+| `binary_id` | required. |
+| `--address` | — |
 
 ### `x86decomp provenance export`
 
@@ -48,9 +48,9 @@ usage: x86decomp provenance binary [-h] [--address ADDRESS] binary_id
 usage: x86decomp provenance export [-h] output
 ```
 
-| Argument | Exact parser declaration |
+| Argument | Details |
 | --- | --- |
-| `output` | required · parser destination: `output`. No help text declared. |
+| `output` | required. |
 
 ### `x86decomp provenance record`
 
@@ -61,16 +61,16 @@ usage: x86decomp provenance record [-h] --evidence-json EVIDENCE_JSON
                                    address_start address_end
 ```
 
-| Argument | Exact parser declaration |
+| Argument | Details |
 | --- | --- |
-| `source_path` | required · parser destination: `source_path`. No help text declared. |
-| `line_start` | required · type: `int` · parser destination: `line_start`. No help text declared. |
-| `line_end` | required · type: `int` · parser destination: `line_end`. No help text declared. |
-| `binary_id` | required · parser destination: `binary_id`. No help text declared. |
-| `address_start` | required · parser destination: `address_start`. No help text declared. |
-| `address_end` | required · parser destination: `address_end`. No help text declared. |
-| `--evidence-json` | required · parser destination: `evidence_json`. No help text declared. |
-| `--confidence` | required · type: `float` · parser destination: `confidence`. No help text declared. |
+| `source_path` | required. |
+| `line_start` | required · type: `int`. |
+| `line_end` | required · type: `int`. |
+| `binary_id` | required. |
+| `address_start` | required. |
+| `address_end` | required. |
+| `--evidence-json` | required. |
+| `--confidence` | required · type: `float`. |
 
 ### `x86decomp provenance source`
 
@@ -78,18 +78,9 @@ usage: x86decomp provenance record [-h] --evidence-json EVIDENCE_JSON
 usage: x86decomp provenance source [-h] [--line LINE] source_path
 ```
 
-| Argument | Exact parser declaration |
+| Argument | Details |
 | --- | --- |
-| `source_path` | required · parser destination: `source_path`. No help text declared. |
-| `--line` | type: `int` · parser destination: `line`. No help text declared. |
+| `source_path` | required. |
+| `--line` | type: `int`. |
 
-## Source basis
 
-| Parser owner | Source file | SHA-256 |
-| --- | --- | --- |
-| canonical cli | `src/x86decomp/canonical.py` | `9dfc1a2d1ba31559b1a9cd31a0cda1ab1a1e88ffef0a47c4632995f649296166` |
-| reconstruction cli | `src/x86decomp/reconstruction/cli.py` | `dd5a6c7c987b3c49a3f7c1c635d60b34542e21f9346bd85f869013532c844cc4` |
-
-## Verification boundary
-
-This page is regenerated from the v0.7.8 parser surface. It documents syntax, parser-declared arguments, canonical owners, and source files; it does not claim that optional adapters, target binaries, compiler toolchains, or runtime inputs exist on the reader's machine.

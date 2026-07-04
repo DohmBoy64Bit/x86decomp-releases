@@ -1,6 +1,6 @@
 ---
 title: x86decomp pattern
-description: Exact v0.7.8 parser-derived reference for `x86decomp pattern`.
+description: Command reference for `x86decomp pattern`.
 ---
 
 
@@ -17,10 +17,10 @@ usage: x86decomp pattern [-h] [--project PROJECT] [--actor ACTOR]
 
 ## Arguments
 
-| Argument | Exact parser declaration |
+| Argument | Details |
 | --- | --- |
-| `--project` | default: `'.'` · parser destination: `project`. project root used by the capability implementation (default: current directory) |
-| `--actor` | default: `'analyst'` · parser destination: `actor`. No help text declared. |
+| `--project` | default: `'.'`. project root used by the capability implementation (default: current directory) |
+| `--actor` | default: `'analyst'`. |
 
 ## Actions
 
@@ -38,9 +38,9 @@ usage: x86decomp pattern [-h] [--project PROJECT] [--actor ACTOR]
 usage: x86decomp pattern catalog [-h] [--output OUTPUT]
 ```
 
-| Argument | Exact parser declaration |
+| Argument | Details |
 | --- | --- |
-| `--output` | parser destination: `output`. No help text declared. |
+| `--output` | — |
 
 ### `x86decomp pattern generate`
 
@@ -49,11 +49,11 @@ usage: x86decomp pattern generate [-h] [--symbol-prefix SYMBOL_PREFIX]
                                   scan_report output
 ```
 
-| Argument | Exact parser declaration |
+| Argument | Details |
 | --- | --- |
-| `scan_report` | required · parser destination: `scan_report`. No help text declared. |
-| `output` | required · parser destination: `output`. No help text declared. |
-| `--symbol-prefix` | default: `'sub'` · parser destination: `symbol_prefix`. No help text declared. |
+| `scan_report` | required. |
+| `output` | required. |
+| `--symbol-prefix` | default: `'sub'`. |
 
 ### `x86decomp pattern match`
 
@@ -61,10 +61,10 @@ usage: x86decomp pattern generate [-h] [--symbol-prefix SYMBOL_PREFIX]
 usage: x86decomp pattern match [-h] [--output OUTPUT] generation_report
 ```
 
-| Argument | Exact parser declaration |
+| Argument | Details |
 | --- | --- |
-| `generation_report` | required · parser destination: `generation_report`. No help text declared. |
-| `--output` | parser destination: `output`. No help text declared. |
+| `generation_report` | required. |
+| `--output` | — |
 
 ### `x86decomp pattern promote`
 
@@ -75,14 +75,14 @@ usage: x86decomp pattern promote [-h] --candidate CANDIDATE --report REPORT
                                  function_id
 ```
 
-| Argument | Exact parser declaration |
+| Argument | Details |
 | --- | --- |
-| `function_id` | required · parser destination: `function_id`. No help text declared. |
-| `--candidate` | required · parser destination: `candidate`. No help text declared. |
-| `--report` | required · parser destination: `report`. No help text declared. |
-| `--stage` | default: `'pattern'` · parser destination: `stage`. No help text declared. |
-| `--output` | parser destination: `output`. No help text declared. |
-| `--overwrite` | nargs: `0` · default: `False` · parser destination: `overwrite`. No help text declared. |
+| `function_id` | required. |
+| `--candidate` | required. |
+| `--report` | required. |
+| `--stage` | default: `'pattern'`. |
+| `--output` | — |
+| `--overwrite` | nargs: `0` · default: `False`. |
 
 ### `x86decomp pattern scan`
 
@@ -92,19 +92,10 @@ usage: x86decomp pattern scan [-h] [--architecture {x86,x86_64}]
                               root
 ```
 
-| Argument | Exact parser declaration |
+| Argument | Details |
 | --- | --- |
-| `root` | required · parser destination: `root`. No help text declared. |
-| `--architecture` | choices: `x86`, `x86_64` · parser destination: `architecture`. No help text declared. |
-| `--output` | parser destination: `output`. No help text declared. |
+| `root` | required. |
+| `--architecture` | choices: `x86`, `x86_64`. |
+| `--output` | — |
 
-## Source basis
 
-| Parser owner | Source file | SHA-256 |
-| --- | --- | --- |
-| canonical cli | `src/x86decomp/canonical.py` | `9dfc1a2d1ba31559b1a9cd31a0cda1ab1a1e88ffef0a47c4632995f649296166` |
-| reconstruction cli | `src/x86decomp/reconstruction/cli.py` | `dd5a6c7c987b3c49a3f7c1c635d60b34542e21f9346bd85f869013532c844cc4` |
-
-## Verification boundary
-
-This page is regenerated from the v0.7.8 parser surface. It documents syntax, parser-declared arguments, canonical owners, and source files; it does not claim that optional adapters, target binaries, compiler toolchains, or runtime inputs exist on the reader's machine.

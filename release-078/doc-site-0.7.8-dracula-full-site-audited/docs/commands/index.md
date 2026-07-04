@@ -183,8 +183,3 @@ This section is regenerated from the live v0.7.8 toolkit parser and the v0.7.8 v
 
 - [`x86decomp-test`](x86decomp-test.md)
 
-## Audit artifacts
-
-- [Command reference strict audit](../release-artifacts/COMMAND_REFERENCE_STRICT_AUDIT.md)
-
-- [Command reference hash manifest](../release-artifacts/COMMAND_REFERENCE_HASHES.json)

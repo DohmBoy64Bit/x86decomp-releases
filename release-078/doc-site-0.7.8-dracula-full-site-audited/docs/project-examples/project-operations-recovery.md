@@ -3,7 +3,6 @@ title: 'Example: project operations and recovery workflow'
 description: Maintain a long-lived project with checks, deterministic backups, safe
   restore, dry-run migration and repair, content-addressed garbage collection, durable
   pipelines, retries, cancellation, and stale-run recovery.
-original_path: project-examples/project-operations-recovery.html
 ---
 
 <a id="model"></a>
@@ -20,8 +19,6 @@ original_path: project-examples/project-operations-recovery.html
 <a id="restore"></a>
 <a id="limits"></a>
 <a id="source-basis"></a>
-
-Section: Project examples
 
 # Example: project operations and recovery workflow
 
@@ -152,22 +149,18 @@ Restore uses staging and archive safety bounds before committing the destination
 
 > **Verification model.** Command syntax is checked against the live parser. The source files below are hashed from the current release; implementation and test rows are retained as independent truth boundaries.
 
-| Evidence file | SHA-256 |
-| --- | --- |
-| `src/x86decomp/cli.py` | `21e0654ced2f5dd0588adcbedec328613fba524ff1e0a91ef07d63cbbf88288c` |
-| `src/x86decomp/project_state.py` | `e78c286125050d9b582e38acdefcf3c901f0634372af8b287942ca8b10aa9aee` |
-| `src/x86decomp/orchestrator.py` | `752a6e6b5d4f931007e93ee7898f6a0d2500b044266c7153a27be7e7eb49477e` |
-| `src/x86decomp/content_store.py` | `2348ce9593959da0a9f52b144435a70b30965443a06e701c0ff9cf7c86e7d1a4` |
-| `src/x86decomp/security_audit.py` | `0b7574a71e4c8677352766c9358f8022871e566f43a9277050b887648f4ab22c` |
-| `tests/test_project.py` | `04d73c197e4b7979731c140bef24e36ab323099e715d5462c95983a83d558c2b` |
+| Evidence file |
+| --- |
+| `src/x86decomp/cli.py` |
+| `src/x86decomp/project_state.py` |
+| `src/x86decomp/orchestrator.py` |
+| `src/x86decomp/content_store.py` |
+| `src/x86decomp/security_audit.py` |
+| `tests/test_project.py` |
 
 
 ## Related examples
 
-[Matching project
-
-Open the source-verified workflow.](matching-project.md)[Functional project
-
-Open the source-verified workflow.](functional-project.md)[Hybrid composition
-
-Open the source-verified workflow.](hybrid-project.md)
+- [Matching project](matching-project.md)
+- [Functional project](functional-project.md)
+- [Hybrid composition](hybrid-project.md)
