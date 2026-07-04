@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+        <title>tests/test_linker_metadata_corpus.py - x86decomp 0.7.5 Docs</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        
+        
+        
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="../../assets/css/darcula-highlight.min.css">
+
+        <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../assets/css/dracula-ui.min.css">
+        <link rel="stylesheet" href="../../assets/css/mkdocs.min.css">
+            <link href="../../assets/x86decomp-dracula-overrides.css" rel="stylesheet">
+
+        
+            <link  rel="icon" type="image/x-icon" href="../../assets/img/favicon.ico">
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+                <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+
+<body class="drac-bg-black-secondary drac-text-grey-ternary drac-text drac-scrollbar-purple">
+
+    <main class="d-flex">
+
+        <!-- block sidebar -->
+            <nav id="sidebar" class="sidebar drac-bg-black">
+    <div class="custom-menu">
+        <button type="button" id="sidebarCollapse" class="btn btn-primary">
+            <i class="fa fa-bars"></i>
+            <span class="sr-only">Menu</span>
+        </button>
+    </div>
+
+    <div class="p-4">
+        
+
+        <div class="drac-text-center">
+            
+                <span class="drac-text drac-line-height drac-text-white">x86decomp 0.7.5 Docs</span>
+            
+        </div>
+
+        <div class="drac-box flex-column">
+            <ul class="dot-ul">
+                <li><div class="dot-li drac-bg-cyan"></div></li>
+                <li><div class="dot-li drac-bg-green"></div></li>
+                <li><div class="dot-li drac-bg-orange"></div></li>
+                <li><div class="dot-li drac-bg-pink"></div></li>
+                <li><div class="dot-li drac-bg-purple"></div></li>
+                <li><div class="dot-li drac-bg-red"></div></li>
+                <li><div class="dot-li drac-bg-yellow"></div></li>
+            </ul>
+        </div>
+
+        <hr class="drac-divider" />
+
+        <!-- block menu -->
+        <ul class="mb-5 drac-list drac-list-none">
+            
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Home
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../../getting-started/"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Getting Started
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#workflows-collapse" aria-expanded="false">
+                    Workflows
+                </a>
+                <div class="collapse" id="workflows-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../workflows/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Workflow Guide
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../local-llm/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Local LLM C Generation
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../project-examples/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Project Examples
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#reference-collapse" aria-expanded="false">
+                    Reference
+                </a>
+                <div class="collapse" id="reference-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../reference/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../architecture/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Architecture
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../commands/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Commands
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../schemas/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Schemas
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../integrations/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Integrations
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../features/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Source Modules
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../functions/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Function Index
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Tests
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#release-evidence-collapse" aria-expanded="false">
+                    Release Evidence
+                </a>
+                <div class="collapse" id="release-evidence-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../release-evidence/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../verification/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Verification
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../source-coverage/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Source Coverage
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../changelog/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Changelog
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../about/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            About
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <!-- endblock -->
+    </div>
+</nav>
+        <!-- endblock -->
+
+        <nav class="divider drac-bg-purple-cyan"></nav>
+
+        <div class="content">
+            <!-- block header -->
+                <header>
+    <nav class="navbar navbar-expand-xl drac-bg-purple">
+        <div class="container-fluid">
+            
+            <button class="navbar-toggler w-100 text-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMenu"
+                aria-controls="navbarsMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse flex-column ml-auto" id="navbarsMenu">
+                <ul class="navbar-nav text-md-center">
+
+                    <!-- block preview -->
+                    <li class="nav-item">
+                            
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block search -->
+                    <li class="nav-item"><div role="search" class="search-box">
+	<form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+		<input type="text" name="q" class="drac-input drac-input-search drac-input-white drac-text-white drac-bg-black-secondary"
+		placeholder="Search docs" title="Type search term here" />
+	</form>
+</div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block source -->
+                    <li class="nav-item">
+                        
+                    </li>
+                    <!--  endblock -->
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+</header>
+            <!-- endblock -->
+
+            <!-- block content -->
+                <section class="p-md-5 section-content">
+    <article>
+        <p><h1 id="teststest_linker_metadata_corpuspy"><code>tests/test_linker_metadata_corpus.py</code></h1>
+<p><strong>Collected nodes:</strong> 10<br />
+<strong>Source SHA-256:</strong> <code>aa88771eecf6bbd2a6fcc6230848165884fea583b48688061d61c14756f9a1de</code></p>
+<blockquote>
+<p>Node identifiers, source lines, docstrings, and direct call names are extracted from pytest collection and the source AST. No behavior is inferred when a test has no docstring.</p>
+</blockquote>
+<h2 id="test_bigobj_and_comdat_resolution"><code>test_bigobj_and_comdat_resolution</code></h2>
+<p>No test docstring is declared.</p>
+<p><strong>Direct call names in source:</strong> <code>_minimal_bigobj</code>, <code>build_comdat_coff</code>, <code>parse_coff_bytes</code>, <code>resolve_comdats</code><br />
+<strong>Node ID:</strong> <code>tests/test_linker_metadata_corpus.py::test_bigobj_and_comdat_resolution</code><br />
+<strong>Area:</strong> Toolkit behavior<br />
+<strong>Source line:</strong> 58</p>
+<h2 id="test_map_parser_and_layout_reconstruction"><code>test_map_parser_and_layout_reconstruction</code></h2>
+<p>No test docstring is declared.</p>
+<p><strong>Direct call names in source:</strong> <code>build_minimal_pe32</code>, <code>map_path.write_text</code>, <code>parse_msvc_map_text</code>, <code>reconstruct_linker_layout</code><br />
+<strong>Node ID:</strong> <code>tests/test_linker_metadata_corpus.py::test_map_parser_and_layout_reconstruction</code><br />
+<strong>Area:</strong> Toolkit behavior<br />
+<strong>Source line:</strong> 82</p>
+<h2 id="test_target_specific_image_normalization"><code>test_target_specific_image_normalization</code></h2>
+<p>No test docstring is declared.</p>
+<p><strong>Direct call names in source:</strong> <code>build_minimal_pe32</code>, <code>bytearray</code>, <code>candidate.write_bytes</code>, <code>compare_whole_images</code>, <code>derive_layout_profile</code>, <code>reference.read_bytes</code>, <code>struct.pack_into</code>, <code>struct.unpack_from</code><br />
+<strong>Node ID:</strong> <code>tests/test_linker_metadata_corpus.py::test_target_specific_image_normalization</code><br />
+<strong>Area:</strong> Toolkit behavior<br />
+<strong>Source line:</strong> 109</p>
+<h2 id="test_msvc_rtti_unwind_and_static_initializer_recovery"><code>test_msvc_rtti_unwind_and_static_initializer_recovery</code></h2>
+<p>No test docstring is declared.</p>
+<p><strong>Direct call names in source:</strong> <code>analyze_msvc_metadata</code>, <code>any</code>, <code>item['section'].upper</code>, <code>item['section'].upper().startswith</code>, <code>len</code>, <code>pytest.mark.skipif</code>, <code>scan_static_initializers</code>, <code>shutil.which</code>, <code>source.write_text</code>, <code>str</code>, <code>subprocess.run</code><br />
+<strong>Node ID:</strong> <code>tests/test_linker_metadata_corpus.py::test_msvc_rtti_unwind_and_static_initializer_recovery</code><br />
+<strong>Area:</strong> Toolkit behavior<br />
+<strong>Source line:</strong> 126</p>
+<h2 id="test_compiler_ground_truth_corpus"><code>test_compiler_ground_truth_corpus</code></h2>
+<p>No test docstring is declared.</p>
+<p><strong>Direct call names in source:</strong> <code>all</code>, <code>build.get</code>, <code>build.get('coff', {}).get</code>, <code>build_ground_truth_corpus</code>, <code>json.dumps</code>, <code>manifest.write_text</code>, <code>pytest.mark.skipif</code>, <code>shutil.which</code>, <code>source.write_text</code>, <code>verify_ground_truth_corpus</code><br />
+<strong>Node ID:</strong> <code>tests/test_linker_metadata_corpus.py::test_compiler_ground_truth_corpus</code><br />
+<strong>Area:</strong> Toolkit behavior<br />
+<strong>Source line:</strong> 162</p>
+<h2 id="test_symbolic_memory_alias_model"><code>test_symbolic_memory_alias_model</code></h2>
+<p>No test docstring is declared.</p>
+<p><strong>Direct call names in source:</strong> <code>angr_memory_alias_compare</code>, <code>bytes.fromhex</code>, <code>pytest.importorskip</code>, <code>pytest.mark.skipif</code>, <code>shutil.which</code><br />
+<strong>Node ID:</strong> <code>tests/test_linker_metadata_corpus.py::test_symbolic_memory_alias_model</code><br />
+<strong>Area:</strong> Toolkit behavior<br />
+<strong>Source line:</strong> 185</p>
+<h2 id="test_real_clang_weak_external_and_tls_coff"><code>test_real_clang_weak_external_and_tls_coff</code></h2>
+<p>No test docstring is declared.</p>
+<p><strong>Direct call names in source:</strong> <code>__import__</code>, <code>__import__('x86decomp.coff', fromlist=['parse_coff']).parse_coff</code>, <code>any</code>, <code>item['section'].upper</code>, <code>item['section'].upper().startswith</code>, <code>next</code>, <code>pytest.mark.skipif</code>, <code>scan_coff_tls</code>, <code>shutil.which</code>, <code>str</code>, <code>subprocess.run</code>, <code>tls_source.write_text</code>, <code>weak_source.write_text</code>, <code>weak_symbol.weak_external.to_dict</code><br />
+<strong>Node ID:</strong> <code>tests/test_linker_metadata_corpus.py::test_real_clang_weak_external_and_tls_coff</code><br />
+<strong>Area:</strong> Toolkit behavior<br />
+<strong>Source line:</strong> 208</p>
+<h2 id="test_builtin_corpus_manifest_is_expanded_and_sources_compile"><code>test_builtin_corpus_manifest_is_expanded_and_sources_compile</code></h2>
+<p>No test docstring is declared.</p>
+<p><strong>Direct call names in source:</strong> <code>(manifest_path.parent / case['source']).resolve</code>, <code>(manifest_path.parent / case['source']).resolve().is_file</code>, <code>Path</code>, <code>Path(__file__).resolve</code>, <code>create_builtin_manifest</code>, <code>len</code>, <code>pytest.mark.skipif</code>, <code>set</code>, <code>shutil.which</code><br />
+<strong>Node ID:</strong> <code>tests/test_linker_metadata_corpus.py::test_builtin_corpus_manifest_is_expanded_and_sources_compile</code><br />
+<strong>Area:</strong> Toolkit behavior<br />
+<strong>Source line:</strong> 239</p>
+<h2 id="test_ground_truth_cross_report_comparison"><code>test_ground_truth_cross_report_comparison</code></h2>
+<p>No test docstring is declared.</p>
+<p><strong>Direct call names in source:</strong> <code>compare_ground_truth_corpora</code>, <code>enumerate</code>, <code>json.dumps</code>, <code>path.write_text</code>, <code>reports.append</code>, <code>str</code><br />
+<strong>Node ID:</strong> <code>tests/test_linker_metadata_corpus.py::test_ground_truth_cross_report_comparison</code><br />
+<strong>Area:</strong> Toolkit behavior<br />
+<strong>Source line:</strong> 251</p>
+<h2 id="test_image_profile_can_explicitly_normalize_debug_records"><code>test_image_profile_can_explicitly_normalize_debug_records</code></h2>
+<p>No test docstring is declared.</p>
+<p><strong>Direct call names in source:</strong> <code>any</code>, <code>bytearray</code>, <code>candidate.write_bytes</code>, <code>compare_whole_images</code>, <code>derive_layout_profile</code>, <code>item['reason'].startswith</code>, <code>json.dumps</code>, <code>parse_pe</code>, <code>profile_path.write_text</code>, <code>pytest.mark.skipif</code>, <code>reference.read_bytes</code>, <code>shutil.which</code>, <code>source.write_text</code>, <code>str</code>, <code>subprocess.run</code><br />
+<strong>Node ID:</strong> <code>tests/test_linker_metadata_corpus.py::test_image_profile_can_explicitly_normalize_debug_records</code><br />
+<strong>Area:</strong> Toolkit behavior<br />
+<strong>Source line:</strong> 278</p></p>
+    </article>
+</section>
+            <!-- endblock -->
+
+            <!-- block footer -->
+                <footer>
+    <div class="d-flex flex-sm-row justify-content-between py-2 border-top drac-text-black drac-bg-cyan-green">
+        <a href="https://github.com/dracula/mkdocs" target="_blank" style="padding-left: 1%;"
+            class="footer-text drac-anchor drac-text-black drac-text-purple--hover">
+            Made with Dracula Theme for MkDocs
+        </a>
+    </div>
+</footer>
+            <!-- endblock -->
+        </div>
+
+    </main>
+
+        <script>var base_url = '../..';</script>
+        <script src="../../assets/js/jquery-3.3.1.slim.min.js"></script>
+        <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+        <script src="../../assets/js/mkdocs.js"></script>
+			<script src="../../search/main.js" defer></script>
+
+</body>
+
+</html>

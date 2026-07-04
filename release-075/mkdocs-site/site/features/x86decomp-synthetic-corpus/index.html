@@ -1,0 +1,466 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+        <title>x86decomp.synthetic_corpus - x86decomp 0.7.5 Docs</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        
+        
+        
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="../../assets/css/darcula-highlight.min.css">
+
+        <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../assets/css/dracula-ui.min.css">
+        <link rel="stylesheet" href="../../assets/css/mkdocs.min.css">
+            <link href="../../assets/x86decomp-dracula-overrides.css" rel="stylesheet">
+
+        
+            <link  rel="icon" type="image/x-icon" href="../../assets/img/favicon.ico">
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+                <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+
+<body class="drac-bg-black-secondary drac-text-grey-ternary drac-text drac-scrollbar-purple">
+
+    <main class="d-flex">
+
+        <!-- block sidebar -->
+            <nav id="sidebar" class="sidebar drac-bg-black">
+    <div class="custom-menu">
+        <button type="button" id="sidebarCollapse" class="btn btn-primary">
+            <i class="fa fa-bars"></i>
+            <span class="sr-only">Menu</span>
+        </button>
+    </div>
+
+    <div class="p-4">
+        
+
+        <div class="drac-text-center">
+            
+                <span class="drac-text drac-line-height drac-text-white">x86decomp 0.7.5 Docs</span>
+            
+        </div>
+
+        <div class="drac-box flex-column">
+            <ul class="dot-ul">
+                <li><div class="dot-li drac-bg-cyan"></div></li>
+                <li><div class="dot-li drac-bg-green"></div></li>
+                <li><div class="dot-li drac-bg-orange"></div></li>
+                <li><div class="dot-li drac-bg-pink"></div></li>
+                <li><div class="dot-li drac-bg-purple"></div></li>
+                <li><div class="dot-li drac-bg-red"></div></li>
+                <li><div class="dot-li drac-bg-yellow"></div></li>
+            </ul>
+        </div>
+
+        <hr class="drac-divider" />
+
+        <!-- block menu -->
+        <ul class="mb-5 drac-list drac-list-none">
+            
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Home
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../../getting-started/"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Getting Started
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#workflows-collapse" aria-expanded="false">
+                    Workflows
+                </a>
+                <div class="collapse" id="workflows-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../workflows/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Workflow Guide
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../local-llm/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Local LLM C Generation
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../project-examples/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Project Examples
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#reference-collapse" aria-expanded="false">
+                    Reference
+                </a>
+                <div class="collapse" id="reference-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../reference/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../architecture/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Architecture
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../commands/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Commands
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../schemas/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Schemas
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../integrations/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Integrations
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Source Modules
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../functions/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Function Index
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../tests/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Tests
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#release-evidence-collapse" aria-expanded="false">
+                    Release Evidence
+                </a>
+                <div class="collapse" id="release-evidence-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../release-evidence/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../verification/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Verification
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../source-coverage/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Source Coverage
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../changelog/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Changelog
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../about/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            About
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <!-- endblock -->
+    </div>
+</nav>
+        <!-- endblock -->
+
+        <nav class="divider drac-bg-purple-cyan"></nav>
+
+        <div class="content">
+            <!-- block header -->
+                <header>
+    <nav class="navbar navbar-expand-xl drac-bg-purple">
+        <div class="container-fluid">
+            
+            <button class="navbar-toggler w-100 text-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMenu"
+                aria-controls="navbarsMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse flex-column ml-auto" id="navbarsMenu">
+                <ul class="navbar-nav text-md-center">
+
+                    <!-- block preview -->
+                    <li class="nav-item">
+                            
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block search -->
+                    <li class="nav-item"><div role="search" class="search-box">
+	<form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+		<input type="text" name="q" class="drac-input drac-input-search drac-input-white drac-text-white drac-bg-black-secondary"
+		placeholder="Search docs" title="Type search term here" />
+	</form>
+</div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block source -->
+                    <li class="nav-item">
+                        
+                    </li>
+                    <!--  endblock -->
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+</header>
+            <!-- endblock -->
+
+            <!-- block content -->
+                <section class="p-md-5 section-content">
+    <article>
+        <p><h1 id="x86decompsynthetic_corpus"><code>x86decomp.synthetic_corpus</code></h1>
+<p>Deterministic ground-truth source corpus generation.</p>
+<p>The generator expands a small, reviewed family of source templates into a
+configurable set of C and C++ translation units.  Every generated file is
+content-hashed and described by parameters in a manifest.  The output is
+source evidence only: generation does not claim that any compiler, optimization
+level, or resulting binary has been tested until <code>ground-truth-build</code> records
+a successful build.</p>
+<p><strong>Area:</strong> Toolkit<br />
+<strong>Source:</strong> <code>src/x86decomp/synthetic_corpus.py</code><br />
+<strong>SHA-256:</strong> <code>a0475235f70093de7171e32cbde918a9290569245efaa06f8549cd1ad480ece0</code><br />
+<strong>Functions/methods:</strong> 15</p>
+<blockquote>
+<p>Module names, signatures, line numbers, and docstrings are extracted directly from the source AST. No behavior is inferred when a docstring is absent.</p>
+</blockquote>
+<h2 id="functions-and-methods">Functions and methods</h2>
+<p><a id="function-symbol"></a></p>
+<h3 id="_symbol"><code>_symbol</code></h3>
+<p>No function or method docstring is declared in the 0.7.5 source.</p>
+<pre><code class="language-python">def _symbol(case_id: str) -&gt; str
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.synthetic_corpus:_symbol</code><br />
+<strong>Visibility:</strong> internal<br />
+<strong>Source line:</strong> 25</p>
+<p><a id="function-c-arithmetic"></a></p>
+<h3 id="_c_arithmetic"><code>_c_arithmetic</code></h3>
+<p>No function or method docstring is declared in the 0.7.5 source.</p>
+<pre><code class="language-python">def _c_arithmetic(case_id: str, rng: random.Random) -&gt; str
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.synthetic_corpus:_c_arithmetic</code><br />
+<strong>Visibility:</strong> internal<br />
+<strong>Source line:</strong> 34</p>
+<p><a id="function-c-branches"></a></p>
+<h3 id="_c_branches"><code>_c_branches</code></h3>
+<p>No function or method docstring is declared in the 0.7.5 source.</p>
+<pre><code class="language-python">def _c_branches(case_id: str, rng: random.Random) -&gt; str
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.synthetic_corpus:_c_branches</code><br />
+<strong>Visibility:</strong> internal<br />
+<strong>Source line:</strong> 47</p>
+<p><a id="function-c-loop"></a></p>
+<h3 id="_c_loop"><code>_c_loop</code></h3>
+<p>No function or method docstring is declared in the 0.7.5 source.</p>
+<pre><code class="language-python">def _c_loop(case_id: str, rng: random.Random) -&gt; str
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.synthetic_corpus:_c_loop</code><br />
+<strong>Visibility:</strong> internal<br />
+<strong>Source line:</strong> 63</p>
+<p><a id="function-c-switch"></a></p>
+<h3 id="_c_switch"><code>_c_switch</code></h3>
+<p>No function or method docstring is declared in the 0.7.5 source.</p>
+<pre><code class="language-python">def _c_switch(case_id: str, rng: random.Random) -&gt; str
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.synthetic_corpus:_c_switch</code><br />
+<strong>Visibility:</strong> internal<br />
+<strong>Source line:</strong> 80</p>
+<p><a id="function-c-struct-alias"></a></p>
+<h3 id="_c_struct_alias"><code>_c_struct_alias</code></h3>
+<p>No function or method docstring is declared in the 0.7.5 source.</p>
+<pre><code class="language-python">def _c_struct_alias(case_id: str, rng: random.Random) -&gt; str
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.synthetic_corpus:_c_struct_alias</code><br />
+<strong>Visibility:</strong> internal<br />
+<strong>Source line:</strong> 95</p>
+<p><a id="function-c-bitfield"></a></p>
+<h3 id="_c_bitfield"><code>_c_bitfield</code></h3>
+<p>No function or method docstring is declared in the 0.7.5 source.</p>
+<pre><code class="language-python">def _c_bitfield(case_id: str, rng: random.Random) -&gt; str
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.synthetic_corpus:_c_bitfield</code><br />
+<strong>Visibility:</strong> internal<br />
+<strong>Source line:</strong> 118</p>
+<p><a id="function-c-float"></a></p>
+<h3 id="_c_float"><code>_c_float</code></h3>
+<p>No function or method docstring is declared in the 0.7.5 source.</p>
+<pre><code class="language-python">def _c_float(case_id: str, rng: random.Random) -&gt; str
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.synthetic_corpus:_c_float</code><br />
+<strong>Visibility:</strong> internal<br />
+<strong>Source line:</strong> 137</p>
+<p><a id="function-c-indirect"></a></p>
+<h3 id="_c_indirect"><code>_c_indirect</code></h3>
+<p>No function or method docstring is declared in the 0.7.5 source.</p>
+<pre><code class="language-python">def _c_indirect(case_id: str, rng: random.Random) -&gt; str
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.synthetic_corpus:_c_indirect</code><br />
+<strong>Visibility:</strong> internal<br />
+<strong>Source line:</strong> 150</p>
+<p><a id="function-cpp-virtual"></a></p>
+<h3 id="_cpp_virtual"><code>_cpp_virtual</code></h3>
+<p>No function or method docstring is declared in the 0.7.5 source.</p>
+<pre><code class="language-python">def _cpp_virtual(case_id: str, rng: random.Random) -&gt; str
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.synthetic_corpus:_cpp_virtual</code><br />
+<strong>Visibility:</strong> internal<br />
+<strong>Source line:</strong> 161</p>
+<p><a id="function-cpp-multiple-inheritance"></a></p>
+<h3 id="_cpp_multiple_inheritance"><code>_cpp_multiple_inheritance</code></h3>
+<p>No function or method docstring is declared in the 0.7.5 source.</p>
+<pre><code class="language-python">def _cpp_multiple_inheritance(case_id: str, rng: random.Random) -&gt; str
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.synthetic_corpus:_cpp_multiple_inheritance</code><br />
+<strong>Visibility:</strong> internal<br />
+<strong>Source line:</strong> 184</p>
+<p><a id="function-cpp-exception"></a></p>
+<h3 id="_cpp_exception"><code>_cpp_exception</code></h3>
+<p>No function or method docstring is declared in the 0.7.5 source.</p>
+<pre><code class="language-python">def _cpp_exception(case_id: str, rng: random.Random) -&gt; str
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.synthetic_corpus:_cpp_exception</code><br />
+<strong>Visibility:</strong> internal<br />
+<strong>Source line:</strong> 200</p>
+<p><a id="function-cpp-template"></a></p>
+<h3 id="_cpp_template"><code>_cpp_template</code></h3>
+<p>No function or method docstring is declared in the 0.7.5 source.</p>
+<pre><code class="language-python">def _cpp_template(case_id: str, rng: random.Random) -&gt; str
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.synthetic_corpus:_cpp_template</code><br />
+<strong>Visibility:</strong> internal<br />
+<strong>Source line:</strong> 216</p>
+<p><a id="function-generate-synthetic-corpus"></a></p>
+<h3 id="generate_synthetic_corpus"><code>generate_synthetic_corpus</code></h3>
+<p>Generate deterministic source cases and a compiler-corpus input manifest.</p>
+<p>The operation refuses a non-empty output directory to prevent accidental
+mixing of source corpora with different parameters.</p>
+<pre><code class="language-python">def generate_synthetic_corpus(output_directory: Path, *, cases_per_family: int=8, seed: int=2262745310, include_c: bool=True, include_cpp: bool=True, report_path: Path | None=None) -&gt; dict[str, Any]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.synthetic_corpus:generate_synthetic_corpus</code><br />
+<strong>Visibility:</strong> public<br />
+<strong>Source line:</strong> 243</p>
+<p><a id="function-verify-synthetic-corpus"></a></p>
+<h3 id="verify_synthetic_corpus"><code>verify_synthetic_corpus</code></h3>
+<p>No function or method docstring is declared in the 0.7.5 source.</p>
+<pre><code class="language-python">def verify_synthetic_corpus(report_path: Path) -&gt; dict[str, Any]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.synthetic_corpus:verify_synthetic_corpus</code><br />
+<strong>Visibility:</strong> public<br />
+<strong>Source line:</strong> 331</p></p>
+    </article>
+</section>
+            <!-- endblock -->
+
+            <!-- block footer -->
+                <footer>
+    <div class="d-flex flex-sm-row justify-content-between py-2 border-top drac-text-black drac-bg-cyan-green">
+        <a href="https://github.com/dracula/mkdocs" target="_blank" style="padding-left: 1%;"
+            class="footer-text drac-anchor drac-text-black drac-text-purple--hover">
+            Made with Dracula Theme for MkDocs
+        </a>
+    </div>
+</footer>
+            <!-- endblock -->
+        </div>
+
+    </main>
+
+        <script>var base_url = '../..';</script>
+        <script src="../../assets/js/jquery-3.3.1.slim.min.js"></script>
+        <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+        <script src="../../assets/js/mkdocs.js"></script>
+			<script src="../../search/main.js" defer></script>
+
+</body>
+
+</html>

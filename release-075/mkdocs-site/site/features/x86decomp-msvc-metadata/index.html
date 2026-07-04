@@ -1,0 +1,621 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+        <title>x86decomp.msvc_metadata - x86decomp 0.7.5 Docs</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        
+        
+        
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="../../assets/css/darcula-highlight.min.css">
+
+        <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../assets/css/dracula-ui.min.css">
+        <link rel="stylesheet" href="../../assets/css/mkdocs.min.css">
+            <link href="../../assets/x86decomp-dracula-overrides.css" rel="stylesheet">
+
+        
+            <link  rel="icon" type="image/x-icon" href="../../assets/img/favicon.ico">
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+                <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+
+<body class="drac-bg-black-secondary drac-text-grey-ternary drac-text drac-scrollbar-purple">
+
+    <main class="d-flex">
+
+        <!-- block sidebar -->
+            <nav id="sidebar" class="sidebar drac-bg-black">
+    <div class="custom-menu">
+        <button type="button" id="sidebarCollapse" class="btn btn-primary">
+            <i class="fa fa-bars"></i>
+            <span class="sr-only">Menu</span>
+        </button>
+    </div>
+
+    <div class="p-4">
+        
+
+        <div class="drac-text-center">
+            
+                <span class="drac-text drac-line-height drac-text-white">x86decomp 0.7.5 Docs</span>
+            
+        </div>
+
+        <div class="drac-box flex-column">
+            <ul class="dot-ul">
+                <li><div class="dot-li drac-bg-cyan"></div></li>
+                <li><div class="dot-li drac-bg-green"></div></li>
+                <li><div class="dot-li drac-bg-orange"></div></li>
+                <li><div class="dot-li drac-bg-pink"></div></li>
+                <li><div class="dot-li drac-bg-purple"></div></li>
+                <li><div class="dot-li drac-bg-red"></div></li>
+                <li><div class="dot-li drac-bg-yellow"></div></li>
+            </ul>
+        </div>
+
+        <hr class="drac-divider" />
+
+        <!-- block menu -->
+        <ul class="mb-5 drac-list drac-list-none">
+            
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Home
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../../getting-started/"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Getting Started
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#workflows-collapse" aria-expanded="false">
+                    Workflows
+                </a>
+                <div class="collapse" id="workflows-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../workflows/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Workflow Guide
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../local-llm/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Local LLM C Generation
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../project-examples/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Project Examples
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#reference-collapse" aria-expanded="false">
+                    Reference
+                </a>
+                <div class="collapse" id="reference-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../reference/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../architecture/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Architecture
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../commands/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Commands
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../schemas/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Schemas
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../integrations/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Integrations
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Source Modules
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../functions/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Function Index
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../tests/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Tests
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#release-evidence-collapse" aria-expanded="false">
+                    Release Evidence
+                </a>
+                <div class="collapse" id="release-evidence-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../release-evidence/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../verification/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Verification
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../source-coverage/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Source Coverage
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../changelog/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Changelog
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../about/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            About
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <!-- endblock -->
+    </div>
+</nav>
+        <!-- endblock -->
+
+        <nav class="divider drac-bg-purple-cyan"></nav>
+
+        <div class="content">
+            <!-- block header -->
+                <header>
+    <nav class="navbar navbar-expand-xl drac-bg-purple">
+        <div class="container-fluid">
+            
+            <button class="navbar-toggler w-100 text-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMenu"
+                aria-controls="navbarsMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse flex-column ml-auto" id="navbarsMenu">
+                <ul class="navbar-nav text-md-center">
+
+                    <!-- block preview -->
+                    <li class="nav-item">
+                            
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block search -->
+                    <li class="nav-item"><div role="search" class="search-box">
+	<form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+		<input type="text" name="q" class="drac-input drac-input-search drac-input-white drac-text-white drac-bg-black-secondary"
+		placeholder="Search docs" title="Type search term here" />
+	</form>
+</div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block source -->
+                    <li class="nav-item">
+                        
+                    </li>
+                    <!--  endblock -->
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+</header>
+            <!-- endblock -->
+
+            <!-- block content -->
+                <section class="p-md-5 section-content">
+    <article>
+        <p><h1 id="x86decompmsvc_metadata"><code>x86decomp.msvc_metadata</code></h1>
+<p>Microsoft C++ metadata, unwind, TLS, and initializer recovery.</p>
+<p>The scanner is intentionally conservative.  A record is returned only after its
+internal pointers, counts, and section relationships pass structural checks.
+RTTI layouts are derived from the Microsoft C++ ABI as emitted by Clang/MSVC;
+these structures are not a promise that original source-level class names or
+layouts have been fully recovered.</p>
+<p><strong>Area:</strong> Toolkit<br />
+<strong>Source:</strong> <code>src/x86decomp/msvc_metadata.py</code><br />
+<strong>SHA-256:</strong> <code>a09e12dd6d748ba39648bf05d885656080c1c03be63d8dde592e26cb36b72951</code><br />
+<strong>Functions/methods:</strong> 34</p>
+<blockquote>
+<p>Module names, signatures, line numbers, and docstrings are extracted directly from the source AST. No behavior is inferred when a docstring is absent.</p>
+</blockquote>
+<h2 id="functions-and-methods">Functions and methods</h2>
+<p><a id="function-typedescriptorrecord-to-dict"></a></p>
+<h3 id="typedescriptorrecordto_dict"><code>TypeDescriptorRecord.to_dict</code></h3>
+<p>No function or method docstring is declared in the 0.7.5 source.</p>
+<pre><code class="language-python">def TypeDescriptorRecord.to_dict(self) -&gt; dict[str, Any]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.msvc_metadata:TypeDescriptorRecord.to_dict</code><br />
+<strong>Visibility:</strong> public<br />
+<strong>Source line:</strong> 35</p>
+<p><a id="function-baseclassrecord-to-dict"></a></p>
+<h3 id="baseclassrecordto_dict"><code>BaseClassRecord.to_dict</code></h3>
+<p>No function or method docstring is declared in the 0.7.5 source.</p>
+<pre><code class="language-python">def BaseClassRecord.to_dict(self) -&gt; dict[str, Any]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.msvc_metadata:BaseClassRecord.to_dict</code><br />
+<strong>Visibility:</strong> public<br />
+<strong>Source line:</strong> 58</p>
+<p><a id="function-completeobjectlocatorrecord-to-dict"></a></p>
+<h3 id="completeobjectlocatorrecordto_dict"><code>CompleteObjectLocatorRecord.to_dict</code></h3>
+<p>No function or method docstring is declared in the 0.7.5 source.</p>
+<pre><code class="language-python">def CompleteObjectLocatorRecord.to_dict(self) -&gt; dict[str, Any]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.msvc_metadata:CompleteObjectLocatorRecord.to_dict</code><br />
+<strong>Visibility:</strong> public<br />
+<strong>Source line:</strong> 87</p>
+<p><a id="function-vtablerecord-to-dict"></a></p>
+<h3 id="vtablerecordto_dict"><code>VTableRecord.to_dict</code></h3>
+<p>No function or method docstring is declared in the 0.7.5 source.</p>
+<pre><code class="language-python">def VTableRecord.to_dict(self) -&gt; dict[str, Any]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.msvc_metadata:VTableRecord.to_dict</code><br />
+<strong>Visibility:</strong> public<br />
+<strong>Source line:</strong> 109</p>
+<p><a id="function-unwindcoderecord-to-dict"></a></p>
+<h3 id="unwindcoderecordto_dict"><code>UnwindCodeRecord.to_dict</code></h3>
+<p>No function or method docstring is declared in the 0.7.5 source.</p>
+<pre><code class="language-python">def UnwindCodeRecord.to_dict(self) -&gt; dict[str, Any]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.msvc_metadata:UnwindCodeRecord.to_dict</code><br />
+<strong>Visibility:</strong> public<br />
+<strong>Source line:</strong> 127</p>
+<p><a id="function-unwindinforecord-to-dict"></a></p>
+<h3 id="unwindinforecordto_dict"><code>UnwindInfoRecord.to_dict</code></h3>
+<p>No function or method docstring is declared in the 0.7.5 source.</p>
+<pre><code class="language-python">def UnwindInfoRecord.to_dict(self) -&gt; dict[str, Any]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.msvc_metadata:UnwindInfoRecord.to_dict</code><br />
+<strong>Visibility:</strong> public<br />
+<strong>Source line:</strong> 154</p>
+<p><a id="function-peview-init"></a></p>
+<h3 id="peview__init__"><code>PEView.__init__</code></h3>
+<p>No function or method docstring is declared in the 0.7.5 source.</p>
+<pre><code class="language-python">def PEView.__init__(self, path: Path)
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.msvc_metadata:PEView.__init__</code><br />
+<strong>Visibility:</strong> internal<br />
+<strong>Source line:</strong> 173</p>
+<p><a id="function-peview-rva-to-offset"></a></p>
+<h3 id="peviewrva_to_offset"><code>PEView.rva_to_offset</code></h3>
+<p>No function or method docstring is declared in the 0.7.5 source.</p>
+<pre><code class="language-python">def PEView.rva_to_offset(self, rva: int) -&gt; int
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.msvc_metadata:PEView.rva_to_offset</code><br />
+<strong>Visibility:</strong> public<br />
+<strong>Source line:</strong> 180</p>
+<p><a id="function-peview-valid-rva"></a></p>
+<h3 id="peviewvalid_rva"><code>PEView.valid_rva</code></h3>
+<p>No function or method docstring is declared in the 0.7.5 source.</p>
+<pre><code class="language-python">def PEView.valid_rva(self, rva: int, size: int=1) -&gt; bool
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.msvc_metadata:PEView.valid_rva</code><br />
+<strong>Visibility:</strong> public<br />
+<strong>Source line:</strong> 183</p>
+<p><a id="function-peview-read"></a></p>
+<h3 id="peviewread"><code>PEView.read</code></h3>
+<p>No function or method docstring is declared in the 0.7.5 source.</p>
+<pre><code class="language-python">def PEView.read(self, rva: int, size: int) -&gt; bytes
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.msvc_metadata:PEView.read</code><br />
+<strong>Visibility:</strong> public<br />
+<strong>Source line:</strong> 190</p>
+<p><a id="function-peview-u16"></a></p>
+<h3 id="peviewu16"><code>PEView.u16</code></h3>
+<p>No function or method docstring is declared in the 0.7.5 source.</p>
+<pre><code class="language-python">def PEView.u16(self, rva: int) -&gt; int
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.msvc_metadata:PEView.u16</code><br />
+<strong>Visibility:</strong> public<br />
+<strong>Source line:</strong> 196</p>
+<p><a id="function-peview-u32"></a></p>
+<h3 id="peviewu32"><code>PEView.u32</code></h3>
+<p>No function or method docstring is declared in the 0.7.5 source.</p>
+<pre><code class="language-python">def PEView.u32(self, rva: int) -&gt; int
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.msvc_metadata:PEView.u32</code><br />
+<strong>Visibility:</strong> public<br />
+<strong>Source line:</strong> 199</p>
+<p><a id="function-peview-i32"></a></p>
+<h3 id="peviewi32"><code>PEView.i32</code></h3>
+<p>No function or method docstring is declared in the 0.7.5 source.</p>
+<pre><code class="language-python">def PEView.i32(self, rva: int) -&gt; int
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.msvc_metadata:PEView.i32</code><br />
+<strong>Visibility:</strong> public<br />
+<strong>Source line:</strong> 202</p>
+<p><a id="function-peview-u64"></a></p>
+<h3 id="peviewu64"><code>PEView.u64</code></h3>
+<p>No function or method docstring is declared in the 0.7.5 source.</p>
+<pre><code class="language-python">def PEView.u64(self, rva: int) -&gt; int
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.msvc_metadata:PEView.u64</code><br />
+<strong>Visibility:</strong> public<br />
+<strong>Source line:</strong> 205</p>
+<p><a id="function-peview-pointer"></a></p>
+<h3 id="peviewpointer"><code>PEView.pointer</code></h3>
+<p>No function or method docstring is declared in the 0.7.5 source.</p>
+<pre><code class="language-python">def PEView.pointer(self, rva: int) -&gt; int
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.msvc_metadata:PEView.pointer</code><br />
+<strong>Visibility:</strong> public<br />
+<strong>Source line:</strong> 208</p>
+<p><a id="function-peview-va-to-rva"></a></p>
+<h3 id="peviewva_to_rva"><code>PEView.va_to_rva</code></h3>
+<p>No function or method docstring is declared in the 0.7.5 source.</p>
+<pre><code class="language-python">def PEView.va_to_rva(self, value: int) -&gt; int | None
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.msvc_metadata:PEView.va_to_rva</code><br />
+<strong>Visibility:</strong> public<br />
+<strong>Source line:</strong> 211</p>
+<p><a id="function-peview-encoded-pointer-to-rva"></a></p>
+<h3 id="peviewencoded_pointer_to_rva"><code>PEView.encoded_pointer_to_rva</code></h3>
+<p>No function or method docstring is declared in the 0.7.5 source.</p>
+<pre><code class="language-python">def PEView.encoded_pointer_to_rva(self, value: int) -&gt; int | None
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.msvc_metadata:PEView.encoded_pointer_to_rva</code><br />
+<strong>Visibility:</strong> public<br />
+<strong>Source line:</strong> 217</p>
+<p><a id="function-peview-c-string"></a></p>
+<h3 id="peviewc_string"><code>PEView.c_string</code></h3>
+<p>No function or method docstring is declared in the 0.7.5 source.</p>
+<pre><code class="language-python">def PEView.c_string(self, rva: int, limit: int=4096) -&gt; str
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.msvc_metadata:PEView.c_string</code><br />
+<strong>Visibility:</strong> public<br />
+<strong>Source line:</strong> 222</p>
+<p><a id="function-peview-executable-rva"></a></p>
+<h3 id="peviewexecutable_rva"><code>PEView.executable_rva</code></h3>
+<p>No function or method docstring is declared in the 0.7.5 source.</p>
+<pre><code class="language-python">def PEView.executable_rva(self, rva: int) -&gt; bool
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.msvc_metadata:PEView.executable_rva</code><br />
+<strong>Visibility:</strong> public<br />
+<strong>Source line:</strong> 229</p>
+<p><a id="function-peview-readonly-data-sections"></a></p>
+<h3 id="peviewreadonly_data_sections"><code>PEView.readonly_data_sections</code></h3>
+<p>No function or method docstring is declared in the 0.7.5 source.</p>
+<pre><code class="language-python">def PEView.readonly_data_sections(self) -&gt; tuple[Section, ...]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.msvc_metadata:PEView.readonly_data_sections</code><br />
+<strong>Visibility:</strong> public<br />
+<strong>Source line:</strong> 236</p>
+<p><a id="function-display-type-name"></a></p>
+<h3 id="_display_type_name"><code>_display_type_name</code></h3>
+<p>No function or method docstring is declared in the 0.7.5 source.</p>
+<pre><code class="language-python">def _display_type_name(name: str) -&gt; str
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.msvc_metadata:_display_type_name</code><br />
+<strong>Visibility:</strong> internal<br />
+<strong>Source line:</strong> 246</p>
+<p><a id="function-scan-type-descriptors"></a></p>
+<h3 id="scan_type_descriptors"><code>scan_type_descriptors</code></h3>
+<p>No function or method docstring is declared in the 0.7.5 source.</p>
+<pre><code class="language-python">def scan_type_descriptors(view: PEView) -&gt; tuple[TypeDescriptorRecord, ...]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.msvc_metadata:scan_type_descriptors</code><br />
+<strong>Visibility:</strong> public<br />
+<strong>Source line:</strong> 255</p>
+<p><a id="function-parse-base-class"></a></p>
+<h3 id="_parse_base_class"><code>_parse_base_class</code></h3>
+<p>No function or method docstring is declared in the 0.7.5 source.</p>
+<pre><code class="language-python">def _parse_base_class(view: PEView, descriptor_rva: int, types: dict[int, TypeDescriptorRecord]) -&gt; BaseClassRecord | None
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.msvc_metadata:_parse_base_class</code><br />
+<strong>Visibility:</strong> internal<br />
+<strong>Source line:</strong> 288</p>
+<p><a id="function-parse-hierarchy"></a></p>
+<h3 id="_parse_hierarchy"><code>_parse_hierarchy</code></h3>
+<p>No function or method docstring is declared in the 0.7.5 source.</p>
+<pre><code class="language-python">def _parse_hierarchy(view: PEView, hierarchy_rva: int, types: dict[int, TypeDescriptorRecord]) -&gt; tuple[int, tuple[BaseClassRecord, ...]] | None
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.msvc_metadata:_parse_hierarchy</code><br />
+<strong>Visibility:</strong> internal<br />
+<strong>Source line:</strong> 323</p>
+<p><a id="function-scan-complete-object-locators"></a></p>
+<h3 id="scan_complete_object_locators"><code>scan_complete_object_locators</code></h3>
+<p>No function or method docstring is declared in the 0.7.5 source.</p>
+<pre><code class="language-python">def scan_complete_object_locators(view: PEView, type_descriptors: Iterable[TypeDescriptorRecord]) -&gt; tuple[CompleteObjectLocatorRecord, ...]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.msvc_metadata:scan_complete_object_locators</code><br />
+<strong>Visibility:</strong> public<br />
+<strong>Source line:</strong> 352</p>
+<p><a id="function-scan-vtables"></a></p>
+<h3 id="scan_vtables"><code>scan_vtables</code></h3>
+<p>No function or method docstring is declared in the 0.7.5 source.</p>
+<pre><code class="language-python">def scan_vtables(view: PEView, locators: Iterable[CompleteObjectLocatorRecord]) -&gt; tuple[VTableRecord, ...]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.msvc_metadata:scan_vtables</code><br />
+<strong>Visibility:</strong> public<br />
+<strong>Source line:</strong> 397</p>
+<p><a id="function-decode-unwind-codes"></a></p>
+<h3 id="_decode_unwind_codes"><code>_decode_unwind_codes</code></h3>
+<p>No function or method docstring is declared in the 0.7.5 source.</p>
+<pre><code class="language-python">def _decode_unwind_codes(view: PEView, rva: int, count: int) -&gt; tuple[UnwindCodeRecord, ...]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.msvc_metadata:_decode_unwind_codes</code><br />
+<strong>Visibility:</strong> internal<br />
+<strong>Source line:</strong> 450</p>
+<p><a id="function-parse-x64-unwind"></a></p>
+<h3 id="parse_x64_unwind"><code>parse_x64_unwind</code></h3>
+<p>No function or method docstring is declared in the 0.7.5 source.</p>
+<pre><code class="language-python">def parse_x64_unwind(view: PEView) -&gt; tuple[UnwindInfoRecord, ...]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.msvc_metadata:parse_x64_unwind</code><br />
+<strong>Visibility:</strong> public<br />
+<strong>Source line:</strong> 508</p>
+<p><a id="function-parse-safe-seh"></a></p>
+<h3 id="parse_safe_seh"><code>parse_safe_seh</code></h3>
+<p>No function or method docstring is declared in the 0.7.5 source.</p>
+<pre><code class="language-python">def parse_safe_seh(view: PEView) -&gt; tuple[int, ...]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.msvc_metadata:parse_safe_seh</code><br />
+<strong>Visibility:</strong> public<br />
+<strong>Source line:</strong> 564</p>
+<p><a id="function-tls-report"></a></p>
+<h3 id="tls_report"><code>tls_report</code></h3>
+<p>No function or method docstring is declared in the 0.7.5 source.</p>
+<pre><code class="language-python">def tls_report(view: PEView) -&gt; dict[str, Any] | None
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.msvc_metadata:tls_report</code><br />
+<strong>Visibility:</strong> public<br />
+<strong>Source line:</strong> 577</p>
+<p><a id="function-scan-exception-func-info"></a></p>
+<h3 id="scan_exception_func_info"><code>scan_exception_func_info</code></h3>
+<p>Find structurally plausible MSVC EH3 FuncInfo records.</p>
+<p>The records are reported as candidates because handler-specific data layouts
+vary by toolset and EH generation.  No source-level catch semantics are
+asserted from this scan alone.</p>
+<pre><code class="language-python">def scan_exception_func_info(view: PEView) -&gt; tuple[dict[str, Any], ...]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.msvc_metadata:scan_exception_func_info</code><br />
+<strong>Visibility:</strong> public<br />
+<strong>Source line:</strong> 602</p>
+<p><a id="function-scan-coff-tls"></a></p>
+<h3 id="scan_coff_tls"><code>scan_coff_tls</code></h3>
+<p>Inventory COFF TLS template and callback subsections.</p>
+<p>COFF subsection names and relocations are retained as linker evidence.  The
+result does not claim the linked TLS directory or callback order unless a
+linked image independently confirms it.</p>
+<pre><code class="language-python">def scan_coff_tls(*, object_paths: Iterable[Path]=()) -&gt; dict[str, Any]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.msvc_metadata:scan_coff_tls</code><br />
+<strong>Visibility:</strong> public<br />
+<strong>Source line:</strong> 656</p>
+<p><a id="function-scan-static-initializers"></a></p>
+<h3 id="scan_static_initializers"><code>scan_static_initializers</code></h3>
+<p>No function or method docstring is declared in the 0.7.5 source.</p>
+<pre><code class="language-python">def scan_static_initializers(*, object_paths: Iterable[Path]=(), map_path: Path | None=None) -&gt; dict[str, Any]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.msvc_metadata:scan_static_initializers</code><br />
+<strong>Visibility:</strong> public<br />
+<strong>Source line:</strong> 695</p>
+<p><a id="function-analyze-msvc-metadata"></a></p>
+<h3 id="analyze_msvc_metadata"><code>analyze_msvc_metadata</code></h3>
+<p>No function or method docstring is declared in the 0.7.5 source.</p>
+<pre><code class="language-python">def analyze_msvc_metadata(pe_path: Path, *, object_paths: Iterable[Path]=(), map_path: Path | None=None, report_path: Path | None=None) -&gt; dict[str, Any]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.msvc_metadata:analyze_msvc_metadata</code><br />
+<strong>Visibility:</strong> public<br />
+<strong>Source line:</strong> 748</p></p>
+    </article>
+</section>
+            <!-- endblock -->
+
+            <!-- block footer -->
+                <footer>
+    <div class="d-flex flex-sm-row justify-content-between py-2 border-top drac-text-black drac-bg-cyan-green">
+        <a href="https://github.com/dracula/mkdocs" target="_blank" style="padding-left: 1%;"
+            class="footer-text drac-anchor drac-text-black drac-text-purple--hover">
+            Made with Dracula Theme for MkDocs
+        </a>
+    </div>
+</footer>
+            <!-- endblock -->
+        </div>
+
+    </main>
+
+        <script>var base_url = '../..';</script>
+        <script src="../../assets/js/jquery-3.3.1.slim.min.js"></script>
+        <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+        <script src="../../assets/js/mkdocs.js"></script>
+			<script src="../../search/main.js" defer></script>
+
+</body>
+
+</html>

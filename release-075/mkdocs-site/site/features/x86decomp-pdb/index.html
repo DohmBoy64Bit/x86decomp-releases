@@ -1,0 +1,509 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+        <title>x86decomp.pdb - x86decomp 0.7.5 Docs</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        
+        
+        
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="../../assets/css/darcula-highlight.min.css">
+
+        <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../assets/css/dracula-ui.min.css">
+        <link rel="stylesheet" href="../../assets/css/mkdocs.min.css">
+            <link href="../../assets/x86decomp-dracula-overrides.css" rel="stylesheet">
+
+        
+            <link  rel="icon" type="image/x-icon" href="../../assets/img/favicon.ico">
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+                <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+
+<body class="drac-bg-black-secondary drac-text-grey-ternary drac-text drac-scrollbar-purple">
+
+    <main class="d-flex">
+
+        <!-- block sidebar -->
+            <nav id="sidebar" class="sidebar drac-bg-black">
+    <div class="custom-menu">
+        <button type="button" id="sidebarCollapse" class="btn btn-primary">
+            <i class="fa fa-bars"></i>
+            <span class="sr-only">Menu</span>
+        </button>
+    </div>
+
+    <div class="p-4">
+        
+
+        <div class="drac-text-center">
+            
+                <span class="drac-text drac-line-height drac-text-white">x86decomp 0.7.5 Docs</span>
+            
+        </div>
+
+        <div class="drac-box flex-column">
+            <ul class="dot-ul">
+                <li><div class="dot-li drac-bg-cyan"></div></li>
+                <li><div class="dot-li drac-bg-green"></div></li>
+                <li><div class="dot-li drac-bg-orange"></div></li>
+                <li><div class="dot-li drac-bg-pink"></div></li>
+                <li><div class="dot-li drac-bg-purple"></div></li>
+                <li><div class="dot-li drac-bg-red"></div></li>
+                <li><div class="dot-li drac-bg-yellow"></div></li>
+            </ul>
+        </div>
+
+        <hr class="drac-divider" />
+
+        <!-- block menu -->
+        <ul class="mb-5 drac-list drac-list-none">
+            
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Home
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../../getting-started/"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Getting Started
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#workflows-collapse" aria-expanded="false">
+                    Workflows
+                </a>
+                <div class="collapse" id="workflows-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../workflows/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Workflow Guide
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../local-llm/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Local LLM C Generation
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../project-examples/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Project Examples
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#reference-collapse" aria-expanded="false">
+                    Reference
+                </a>
+                <div class="collapse" id="reference-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../reference/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../architecture/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Architecture
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../commands/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Commands
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../schemas/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Schemas
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../integrations/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Integrations
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Source Modules
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../functions/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Function Index
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../tests/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Tests
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#release-evidence-collapse" aria-expanded="false">
+                    Release Evidence
+                </a>
+                <div class="collapse" id="release-evidence-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../release-evidence/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../verification/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Verification
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../source-coverage/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Source Coverage
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../changelog/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Changelog
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../about/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            About
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <!-- endblock -->
+    </div>
+</nav>
+        <!-- endblock -->
+
+        <nav class="divider drac-bg-purple-cyan"></nav>
+
+        <div class="content">
+            <!-- block header -->
+                <header>
+    <nav class="navbar navbar-expand-xl drac-bg-purple">
+        <div class="container-fluid">
+            
+            <button class="navbar-toggler w-100 text-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMenu"
+                aria-controls="navbarsMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse flex-column ml-auto" id="navbarsMenu">
+                <ul class="navbar-nav text-md-center">
+
+                    <!-- block preview -->
+                    <li class="nav-item">
+                            
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block search -->
+                    <li class="nav-item"><div role="search" class="search-box">
+	<form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+		<input type="text" name="q" class="drac-input drac-input-search drac-input-white drac-text-white drac-bg-black-secondary"
+		placeholder="Search docs" title="Type search term here" />
+	</form>
+</div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block source -->
+                    <li class="nav-item">
+                        
+                    </li>
+                    <!--  endblock -->
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+</header>
+            <!-- endblock -->
+
+            <!-- block content -->
+                <section class="p-md-5 section-content">
+    <article>
+        <p><h1 id="x86decomppdb"><code>x86decomp.pdb</code></h1>
+<p>Bounded MSF 7.0 / PDB inventory and PE identity correlation.</p>
+<p>This parser intentionally inventories stable container, PDB, TPI/IPI, and DBI metadata.
+It does not claim complete CodeView type/symbol reconstruction. Every read is bounds checked,
+stream blocks may be discontiguous, and unsupported variants fail explicitly.</p>
+<p><strong>Area:</strong> Toolkit<br />
+<strong>Source:</strong> <code>src/x86decomp/pdb.py</code><br />
+<strong>SHA-256:</strong> <code>0ad9c99f6a1b232ce33268d35097ea6b44343d65052339c701588bf4efa79690</code><br />
+<strong>Functions/methods:</strong> 21</p>
+<blockquote>
+<p>Module names, signatures, line numbers, and docstrings are extracted directly from the source AST. No behavior is inferred when a docstring is absent.</p>
+</blockquote>
+<h2 id="functions-and-methods">Functions and methods</h2>
+<p><a id="function-require"></a></p>
+<h3 id="_require"><code>_require</code></h3>
+<p>No function or method docstring is declared in the 0.7.5 source.</p>
+<pre><code class="language-python">def _require(data: bytes, offset: int, size: int, context: str) -&gt; None
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.pdb:_require</code><br />
+<strong>Visibility:</strong> internal<br />
+<strong>Source line:</strong> 29</p>
+<p><a id="function-u16"></a></p>
+<h3 id="_u16"><code>_u16</code></h3>
+<p>No function or method docstring is declared in the 0.7.5 source.</p>
+<pre><code class="language-python">def _u16(data: bytes, offset: int, context: str) -&gt; int
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.pdb:_u16</code><br />
+<strong>Visibility:</strong> internal<br />
+<strong>Source line:</strong> 34</p>
+<p><a id="function-u32"></a></p>
+<h3 id="_u32"><code>_u32</code></h3>
+<p>No function or method docstring is declared in the 0.7.5 source.</p>
+<pre><code class="language-python">def _u32(data: bytes, offset: int, context: str) -&gt; int
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.pdb:_u32</code><br />
+<strong>Visibility:</strong> internal<br />
+<strong>Source line:</strong> 39</p>
+<p><a id="function-cstring"></a></p>
+<h3 id="_cstring"><code>_cstring</code></h3>
+<p>No function or method docstring is declared in the 0.7.5 source.</p>
+<pre><code class="language-python">def _cstring(data: bytes, offset: int, limit: int, context: str) -&gt; tuple[str, int]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.pdb:_cstring</code><br />
+<strong>Visibility:</strong> internal<br />
+<strong>Source line:</strong> 44</p>
+<p><a id="function-align4"></a></p>
+<h3 id="_align4"><code>_align4</code></h3>
+<p>No function or method docstring is declared in the 0.7.5 source.</p>
+<pre><code class="language-python">def _align4(value: int) -&gt; int
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.pdb:_align4</code><br />
+<strong>Visibility:</strong> internal<br />
+<strong>Source line:</strong> 53</p>
+<p><a id="function-pdbstream-to-dict"></a></p>
+<h3 id="pdbstreamto_dict"><code>PDBStream.to_dict</code></h3>
+<p>No function or method docstring is declared in the 0.7.5 source.</p>
+<pre><code class="language-python">def PDBStream.to_dict(self) -&gt; dict[str, Any]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.pdb:PDBStream.to_dict</code><br />
+<strong>Visibility:</strong> public<br />
+<strong>Source line:</strong> 64</p>
+<p><a id="function-pdbfile-to-dict"></a></p>
+<h3 id="pdbfileto_dict"><code>PDBFile.to_dict</code></h3>
+<p>No function or method docstring is declared in the 0.7.5 source.</p>
+<pre><code class="language-python">def PDBFile.to_dict(self) -&gt; dict[str, Any]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.pdb:PDBFile.to_dict</code><br />
+<strong>Visibility:</strong> public<br />
+<strong>Source line:</strong> 89</p>
+<p><a id="function-msf-init"></a></p>
+<h3 id="_msf__init__"><code>_MSF.__init__</code></h3>
+<p>No function or method docstring is declared in the 0.7.5 source.</p>
+<pre><code class="language-python">def _MSF.__init__(self, data: bytes)
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.pdb:_MSF.__init__</code><br />
+<strong>Visibility:</strong> internal<br />
+<strong>Source line:</strong> 121</p>
+<p><a id="function-msf-block"></a></p>
+<h3 id="_msf_block"><code>_MSF._block</code></h3>
+<p>No function or method docstring is declared in the 0.7.5 source.</p>
+<pre><code class="language-python">def _MSF._block(self, index: int, context: str) -&gt; bytes
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.pdb:_MSF._block</code><br />
+<strong>Visibility:</strong> internal<br />
+<strong>Source line:</strong> 148</p>
+<p><a id="function-msf-parse-directory"></a></p>
+<h3 id="_msf_parse_directory"><code>_MSF._parse_directory</code></h3>
+<p>No function or method docstring is declared in the 0.7.5 source.</p>
+<pre><code class="language-python">def _MSF._parse_directory(self) -&gt; tuple[list[int | None], list[tuple[int, ...]]]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.pdb:_MSF._parse_directory</code><br />
+<strong>Visibility:</strong> internal<br />
+<strong>Source line:</strong> 154</p>
+<p><a id="function-msf-stream"></a></p>
+<h3 id="_msfstream"><code>_MSF.stream</code></h3>
+<p>No function or method docstring is declared in the 0.7.5 source.</p>
+<pre><code class="language-python">def _MSF.stream(self, index: int) -&gt; bytes | None
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.pdb:_MSF.stream</code><br />
+<strong>Visibility:</strong> public<br />
+<strong>Source line:</strong> 186</p>
+<p><a id="function-parse-info"></a></p>
+<h3 id="_parse_info"><code>_parse_info</code></h3>
+<p>No function or method docstring is declared in the 0.7.5 source.</p>
+<pre><code class="language-python">def _parse_info(data: bytes | None) -&gt; dict[str, Any] | None
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.pdb:_parse_info</code><br />
+<strong>Visibility:</strong> internal<br />
+<strong>Source line:</strong> 195</p>
+<p><a id="function-parse-tpi"></a></p>
+<h3 id="_parse_tpi"><code>_parse_tpi</code></h3>
+<p>No function or method docstring is declared in the 0.7.5 source.</p>
+<pre><code class="language-python">def _parse_tpi(data: bytes | None, name: str) -&gt; dict[str, Any] | None
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.pdb:_parse_tpi</code><br />
+<strong>Visibility:</strong> internal<br />
+<strong>Source line:</strong> 213</p>
+<p><a id="function-parse-modules"></a></p>
+<h3 id="_parse_modules"><code>_parse_modules</code></h3>
+<p>No function or method docstring is declared in the 0.7.5 source.</p>
+<pre><code class="language-python">def _parse_modules(data: bytes) -&gt; list[dict[str, Any]]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.pdb:_parse_modules</code><br />
+<strong>Visibility:</strong> internal<br />
+<strong>Source line:</strong> 260</p>
+<p><a id="function-parse-source-info"></a></p>
+<h3 id="_parse_source_info"><code>_parse_source_info</code></h3>
+<p>No function or method docstring is declared in the 0.7.5 source.</p>
+<pre><code class="language-python">def _parse_source_info(data: bytes) -&gt; dict[str, Any]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.pdb:_parse_source_info</code><br />
+<strong>Visibility:</strong> internal<br />
+<strong>Source line:</strong> 324</p>
+<p><a id="function-parse-section-contributions"></a></p>
+<h3 id="_parse_section_contributions"><code>_parse_section_contributions</code></h3>
+<p>No function or method docstring is declared in the 0.7.5 source.</p>
+<pre><code class="language-python">def _parse_section_contributions(data: bytes) -&gt; dict[str, Any]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.pdb:_parse_section_contributions</code><br />
+<strong>Visibility:</strong> internal<br />
+<strong>Source line:</strong> 372</p>
+<p><a id="function-parse-section-map"></a></p>
+<h3 id="_parse_section_map"><code>_parse_section_map</code></h3>
+<p>No function or method docstring is declared in the 0.7.5 source.</p>
+<pre><code class="language-python">def _parse_section_map(data: bytes) -&gt; dict[str, Any]
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.pdb:_parse_section_map</code><br />
+<strong>Visibility:</strong> internal<br />
+<strong>Source line:</strong> 402</p>
+<p><a id="function-parse-dbi"></a></p>
+<h3 id="_parse_dbi"><code>_parse_dbi</code></h3>
+<p>No function or method docstring is declared in the 0.7.5 source.</p>
+<pre><code class="language-python">def _parse_dbi(data: bytes | None) -&gt; dict[str, Any] | None
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.pdb:_parse_dbi</code><br />
+<strong>Visibility:</strong> internal<br />
+<strong>Source line:</strong> 433</p>
+<p><a id="function-correlate-pe"></a></p>
+<h3 id="_correlate_pe"><code>_correlate_pe</code></h3>
+<p>No function or method docstring is declared in the 0.7.5 source.</p>
+<pre><code class="language-python">def _correlate_pe(info: dict[str, Any] | None, pe_path: Path | None) -&gt; dict[str, Any] | None
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.pdb:_correlate_pe</code><br />
+<strong>Visibility:</strong> internal<br />
+<strong>Source line:</strong> 545</p>
+<p><a id="function-parse-pdb-bytes"></a></p>
+<h3 id="parse_pdb_bytes"><code>parse_pdb_bytes</code></h3>
+<p>No function or method docstring is declared in the 0.7.5 source.</p>
+<pre><code class="language-python">def parse_pdb_bytes(data: bytes, *, path: Path | None=None, pe_path: Path | None=None) -&gt; PDBFile
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.pdb:parse_pdb_bytes</code><br />
+<strong>Visibility:</strong> public<br />
+<strong>Source line:</strong> 576</p>
+<p><a id="function-parse-pdb"></a></p>
+<h3 id="parse_pdb"><code>parse_pdb</code></h3>
+<p>No function or method docstring is declared in the 0.7.5 source.</p>
+<pre><code class="language-python">def parse_pdb(path: Path, *, pe_path: Path | None=None) -&gt; PDBFile
+</code></pre>
+<p><strong>Catalog symbol:</strong> <code>x86decomp.pdb:parse_pdb</code><br />
+<strong>Visibility:</strong> public<br />
+<strong>Source line:</strong> 612</p></p>
+    </article>
+</section>
+            <!-- endblock -->
+
+            <!-- block footer -->
+                <footer>
+    <div class="d-flex flex-sm-row justify-content-between py-2 border-top drac-text-black drac-bg-cyan-green">
+        <a href="https://github.com/dracula/mkdocs" target="_blank" style="padding-left: 1%;"
+            class="footer-text drac-anchor drac-text-black drac-text-purple--hover">
+            Made with Dracula Theme for MkDocs
+        </a>
+    </div>
+</footer>
+            <!-- endblock -->
+        </div>
+
+    </main>
+
+        <script>var base_url = '../..';</script>
+        <script src="../../assets/js/jquery-3.3.1.slim.min.js"></script>
+        <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+        <script src="../../assets/js/mkdocs.js"></script>
+			<script src="../../search/main.js" defer></script>
+
+</body>
+
+</html>

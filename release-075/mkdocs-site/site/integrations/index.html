@@ -1,0 +1,718 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+        <title>Integrations - x86decomp 0.7.5 Docs</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        
+        
+        
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="../assets/css/darcula-highlight.min.css">
+
+        <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../assets/css/dracula-ui.min.css">
+        <link rel="stylesheet" href="../assets/css/mkdocs.min.css">
+            <link href="../assets/x86decomp-dracula-overrides.css" rel="stylesheet">
+
+        
+            <link  rel="icon" type="image/x-icon" href="../assets/img/favicon.ico">
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+                <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+
+<body class="drac-bg-black-secondary drac-text-grey-ternary drac-text drac-scrollbar-purple">
+
+    <main class="d-flex">
+
+        <!-- block sidebar -->
+            <nav id="sidebar" class="sidebar drac-bg-black">
+    <div class="custom-menu">
+        <button type="button" id="sidebarCollapse" class="btn btn-primary">
+            <i class="fa fa-bars"></i>
+            <span class="sr-only">Menu</span>
+        </button>
+    </div>
+
+    <div class="p-4">
+        
+
+        <div class="drac-text-center">
+            
+                <span class="drac-text drac-line-height drac-text-white">x86decomp 0.7.5 Docs</span>
+            
+        </div>
+
+        <div class="drac-box flex-column">
+            <ul class="dot-ul">
+                <li><div class="dot-li drac-bg-cyan"></div></li>
+                <li><div class="dot-li drac-bg-green"></div></li>
+                <li><div class="dot-li drac-bg-orange"></div></li>
+                <li><div class="dot-li drac-bg-pink"></div></li>
+                <li><div class="dot-li drac-bg-purple"></div></li>
+                <li><div class="dot-li drac-bg-red"></div></li>
+                <li><div class="dot-li drac-bg-yellow"></div></li>
+            </ul>
+        </div>
+
+        <hr class="drac-divider" />
+
+        <!-- block menu -->
+        <ul class="mb-5 drac-list drac-list-none">
+            
+            <li class="drac-box">
+                <a href=".."
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Home
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../getting-started/"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Getting Started
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href=".."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#workflows-collapse" aria-expanded="false">
+                    Workflows
+                </a>
+                <div class="collapse" id="workflows-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../workflows/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Workflow Guide
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../local-llm/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Local LLM C Generation
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../project-examples/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Project Examples
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href=".."
+                    class=" active 
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#reference-collapse" aria-expanded="false">
+                    Reference
+                </a>
+                <div class="collapse" id="reference-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../reference/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../architecture/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Architecture
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../commands/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Commands
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../schemas/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Schemas
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="./"
+            class=" active 
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Integrations
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../features/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Source Modules
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../functions/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Function Index
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../tests/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Tests
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href=".."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#release-evidence-collapse" aria-expanded="false">
+                    Release Evidence
+                </a>
+                <div class="collapse" id="release-evidence-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../release-evidence/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../verification/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Verification
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../source-coverage/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Source Coverage
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../changelog/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Changelog
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../about/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            About
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <!-- endblock -->
+    </div>
+</nav>
+        <!-- endblock -->
+
+        <nav class="divider drac-bg-purple-cyan"></nav>
+
+        <div class="content">
+            <!-- block header -->
+                <header>
+    <nav class="navbar navbar-expand-xl drac-bg-purple">
+        <div class="container-fluid">
+            
+            <button class="navbar-toggler w-100 text-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMenu"
+                aria-controls="navbarsMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse flex-column ml-auto" id="navbarsMenu">
+                <ul class="navbar-nav text-md-center">
+
+                    <!-- block preview -->
+                    <li class="nav-item">
+                            
+        <div class="container">
+            <div class="row row-preview">
+                <div class="col">
+                    <a href="../schemas/"
+                        class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover">
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="../features/"
+                        class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover" style="padding-left: 3%;">
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block search -->
+                    <li class="nav-item"><div role="search" class="search-box">
+	<form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+		<input type="text" name="q" class="drac-input drac-input-search drac-input-white drac-text-white drac-bg-black-secondary"
+		placeholder="Search docs" title="Type search term here" />
+	</form>
+</div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block source -->
+                    <li class="nav-item">
+                        
+                    </li>
+                    <!--  endblock -->
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+</header>
+            <!-- endblock -->
+
+            <!-- block content -->
+                <section class="p-md-5 section-content">
+    <article>
+        <p><h1 id="integrations">Integrations</h1>
+<p>The verification harness declares <strong>36 adapters</strong>. Unresolved adapters are <code>BLOCKED</code>; they are never passed or silently skipped.</p>
+<h2 id="adapter-catalog">Adapter catalog</h2>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Display name</th>
+<th>Kind</th>
+<th>Required for</th>
+<th>Discovery declarations</th>
+<th>Optional</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>angr</code></td>
+<td>angr</td>
+<td><code>python</code></td>
+<td><code>angr</code>, <code>symbolic-memory</code></td>
+<td>modules: <code>angr</code></td>
+<td>no</td>
+</tr>
+<tr>
+<td><code>build</code></td>
+<td>Python build</td>
+<td><code>python</code></td>
+<td><code>packaging</code></td>
+<td>modules: <code>build</code></td>
+<td>no</td>
+</tr>
+<tr>
+<td><code>capstone</code></td>
+<td>Capstone Python bindings</td>
+<td><code>python</code></td>
+<td><code>disassembly</code>, <code>matching</code>, <code>symbolic</code></td>
+<td>modules: <code>capstone</code></td>
+<td>no</td>
+</tr>
+<tr>
+<td><code>clang</code></td>
+<td>Clang C compiler</td>
+<td><code>executable</code></td>
+<td><code>compiler</code>, <code>corpus</code>, <code>coff</code></td>
+<td>commands: <code>clang</code>, <code>clang.exe</code>; environment: <code>CLANG</code></td>
+<td>no</td>
+</tr>
+<tr>
+<td><code>clangxx</code></td>
+<td>Clang C++ compiler</td>
+<td><code>executable</code></td>
+<td><code>compiler</code>, <code>corpus</code>, <code>cpp</code></td>
+<td>commands: <code>clang++</code>, <code>clang++.exe</code>; environment: <code>CLANGXX</code></td>
+<td>no</td>
+</tr>
+<tr>
+<td><code>cmake</code></td>
+<td>CMake</td>
+<td><code>executable</code></td>
+<td><code>native-build</code></td>
+<td>commands: <code>cmake</code>, <code>cmake.exe</code></td>
+<td>no</td>
+</tr>
+<tr>
+<td><code>container-runtime</code></td>
+<td>Docker or Podman container runtime</td>
+<td><code>executable</code></td>
+<td><code>isolated-workers</code>, <code>compiler-worker</code></td>
+<td>commands: <code>docker</code>, <code>podman</code>, <code>docker.exe</code>, <code>podman.exe</code></td>
+<td>no</td>
+</tr>
+<tr>
+<td><code>coverage</code></td>
+<td>coverage.py</td>
+<td><code>python</code></td>
+<td><code>coverage</code>, <code>public-api</code></td>
+<td>modules: <code>coverage</code></td>
+<td>no</td>
+</tr>
+<tr>
+<td><code>dynamorio</code></td>
+<td>DynamoRIO</td>
+<td><code>directory</code></td>
+<td><code>drcov-live</code>, <code>runtime-tracing</code></td>
+<td>commands: <code>drrun</code>, <code>drrun.exe</code>; environment: <code>DYNAMORIO_HOME</code></td>
+<td>no</td>
+</tr>
+<tr>
+<td><code>fastapi</code></td>
+<td>FastAPI</td>
+<td><code>python</code></td>
+<td><code>service</code></td>
+<td>modules: <code>fastapi</code></td>
+<td>no</td>
+</tr>
+<tr>
+<td><code>gcc</code></td>
+<td>GCC C compiler</td>
+<td><code>executable</code></td>
+<td><code>compiler-regression</code></td>
+<td>commands: <code>gcc</code>, <code>gcc.exe</code></td>
+<td>no</td>
+</tr>
+<tr>
+<td><code>ghidra</code></td>
+<td>Ghidra</td>
+<td><code>directory</code></td>
+<td><code>ghidra-live</code>, <code>pcode</code>, <code>decompiler</code></td>
+<td>commands: <code>analyzeHeadless</code>, <code>analyzeHeadless.bat</code>; environment: <code>GHIDRA_HOME</code></td>
+<td>no</td>
+</tr>
+<tr>
+<td><code>gxx</code></td>
+<td>GCC C++ compiler</td>
+<td><code>executable</code></td>
+<td><code>compiler-regression</code></td>
+<td>commands: <code>g++</code>, <code>g++.exe</code></td>
+<td>no</td>
+</tr>
+<tr>
+<td><code>java</code></td>
+<td>Java runtime</td>
+<td><code>executable</code></td>
+<td><code>ghidra</code></td>
+<td>commands: <code>java</code>; environment: <code>JAVA_HOME</code></td>
+<td>no</td>
+</tr>
+<tr>
+<td><code>javalang</code></td>
+<td>javalang</td>
+<td><code>python</code></td>
+<td><code>ghidra-static</code></td>
+<td>modules: <code>javalang</code></td>
+<td>no</td>
+</tr>
+<tr>
+<td><code>jsonschema</code></td>
+<td>jsonschema</td>
+<td><code>python</code></td>
+<td><code>contracts</code></td>
+<td>modules: <code>jsonschema</code></td>
+<td>no</td>
+</tr>
+<tr>
+<td><code>lief</code></td>
+<td>LIEF</td>
+<td><code>python</code></td>
+<td><code>independent-pe</code></td>
+<td>modules: <code>lief</code></td>
+<td>no</td>
+</tr>
+<tr>
+<td><code>llama-server</code></td>
+<td>llama.cpp server</td>
+<td><code>executable</code></td>
+<td><code>local-llm</code>, <code>llama.cpp</code></td>
+<td>commands: <code>llama-server</code>, <code>llama-server.exe</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>lld-link</code></td>
+<td>LLD COFF linker</td>
+<td><code>executable</code></td>
+<td><code>relink</code>, <code>whole-image</code></td>
+<td>commands: <code>lld-link</code>, <code>lld-link.exe</code>; environment: <code>LLD_LINK</code></td>
+<td>no</td>
+</tr>
+<tr>
+<td><code>llvm-lib</code></td>
+<td>LLVM librarian</td>
+<td><code>executable</code></td>
+<td><code>coff-archive</code></td>
+<td>commands: <code>llvm-lib</code>, <code>llvm-lib.exe</code>, <code>llvm-ar</code></td>
+<td>no</td>
+</tr>
+<tr>
+<td><code>llvm-objdump</code></td>
+<td>LLVM objdump</td>
+<td><code>executable</code></td>
+<td><code>independent-disassembly</code></td>
+<td>commands: <code>llvm-objdump</code>, <code>llvm-objdump.exe</code></td>
+<td>no</td>
+</tr>
+<tr>
+<td><code>llvm-readobj</code></td>
+<td>LLVM object inspector</td>
+<td><code>executable</code></td>
+<td><code>independent-coff</code></td>
+<td>commands: <code>llvm-readobj</code>, <code>llvm-readobj.exe</code></td>
+<td>no</td>
+</tr>
+<tr>
+<td><code>lm-studio</code></td>
+<td>LM Studio CLI</td>
+<td><code>executable</code></td>
+<td><code>local-llm</code>, <code>lm-studio</code></td>
+<td>commands: <code>lms</code>, <code>lms.exe</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>localai</code></td>
+<td>LocalAI server</td>
+<td><code>executable</code></td>
+<td><code>local-llm</code>, <code>localai</code></td>
+<td>commands: <code>local-ai</code>, <code>local-ai.exe</code>, <code>localai</code>, <code>localai.exe</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>msvc</code></td>
+<td>User-owned Microsoft C/C++ toolchain</td>
+<td><code>toolchain</code></td>
+<td><code>historical-msvc</code>, <code>matching</code></td>
+<td>commands: <code>cl.exe</code>, <code>link.exe</code>; environment: <code>VCINSTALLDIR</code>, <code>VSINSTALLDIR</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>ninja</code></td>
+<td>Ninja</td>
+<td><code>executable</code></td>
+<td><code>native-build</code></td>
+<td>commands: <code>ninja</code>, <code>ninja.exe</code></td>
+<td>no</td>
+</tr>
+<tr>
+<td><code>objdiff</code></td>
+<td>objdiff CLI</td>
+<td><code>executable</code></td>
+<td><code>objdiff</code>, <code>matching</code></td>
+<td>commands: <code>objdiff-cli</code>, <code>objdiff</code>; environment: <code>OBJDIFF</code></td>
+<td>no</td>
+</tr>
+<tr>
+<td><code>ollama</code></td>
+<td>Ollama</td>
+<td><code>executable</code></td>
+<td><code>local-llm</code>, <code>ollama</code></td>
+<td>commands: <code>ollama</code>, <code>ollama.exe</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>pip-audit</code></td>
+<td>pip-audit</td>
+<td><code>python</code></td>
+<td><code>dependency-security</code>, <code>release</code></td>
+<td>modules: <code>pip_audit</code></td>
+<td>no</td>
+</tr>
+<tr>
+<td><code>pytest</code></td>
+<td>pytest</td>
+<td><code>python</code></td>
+<td><code>unit</code>, <code>integration</code></td>
+<td>modules: <code>pytest</code></td>
+<td>no</td>
+</tr>
+<tr>
+<td><code>python</code></td>
+<td>Python 3.11+</td>
+<td><code>executable</code></td>
+<td><code>all</code></td>
+<td>commands: <code>python3</code>, <code>python</code></td>
+<td>no</td>
+</tr>
+<tr>
+<td><code>pyyaml</code></td>
+<td>PyYAML</td>
+<td><code>python</code></td>
+<td><code>skill-frontmatter</code></td>
+<td>modules: <code>yaml</code></td>
+<td>no</td>
+</tr>
+<tr>
+<td><code>unicorn</code></td>
+<td>Unicorn Python bindings</td>
+<td><code>python</code></td>
+<td><code>dynamic</code>, <code>functional</code></td>
+<td>modules: <code>unicorn</code></td>
+<td>no</td>
+</tr>
+<tr>
+<td><code>uvicorn</code></td>
+<td>Uvicorn</td>
+<td><code>python</code></td>
+<td><code>service</code></td>
+<td>modules: <code>uvicorn</code></td>
+<td>no</td>
+</tr>
+<tr>
+<td><code>vllm</code></td>
+<td>vLLM server</td>
+<td><code>executable</code></td>
+<td><code>local-llm</code>, <code>vllm</code></td>
+<td>commands: <code>vllm</code>, <code>vllm.exe</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>z3</code></td>
+<td>Z3 Python bindings</td>
+<td><code>python</code></td>
+<td><code>symbolic</code>, <code>functional</code></td>
+<td>modules: <code>z3</code></td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Source:</strong> <code>test-suite/src/x86decomp_testkit/adapters/catalog.py</code><br />
+<strong>SHA-256:</strong> <code>48d74c2b917d045b5cc0fe50956d32e1f9717f245a77eb735bae0d9c5b4ca1b9</code></p>
+<h2 id="local-model-provider-profiles">Local-model provider profiles</h2>
+<p>The <code>llm</code> capability implements <strong>6 provider presets</strong>. Provider support means the declared HTTP contract is implemented; it is not a claim that every served model can produce matching C.</p>
+<table>
+<thead>
+<tr>
+<th>Provider</th>
+<th>Protocol</th>
+<th>Default base URL</th>
+<th>Models path</th>
+<th>Chat path</th>
+<th>Structured output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>llama.cpp</code></td>
+<td><code>openai-chat</code></td>
+<td><code>http://127.0.0.1:8080/v1</code></td>
+<td><code>/models</code></td>
+<td><code>/chat/completions</code></td>
+<td><code>openai-json-schema</code></td>
+</tr>
+<tr>
+<td><code>lm-studio</code></td>
+<td><code>openai-chat</code></td>
+<td><code>http://127.0.0.1:1234/v1</code></td>
+<td><code>/models</code></td>
+<td><code>/chat/completions</code></td>
+<td><code>openai-json-schema</code></td>
+</tr>
+<tr>
+<td><code>localai</code></td>
+<td><code>openai-chat</code></td>
+<td><code>http://127.0.0.1:8080/v1</code></td>
+<td><code>/models</code></td>
+<td><code>/chat/completions</code></td>
+<td><code>openai-json-schema</code></td>
+</tr>
+<tr>
+<td><code>ollama</code></td>
+<td><code>ollama-chat</code></td>
+<td><code>http://127.0.0.1:11434</code></td>
+<td><code>/api/tags</code></td>
+<td><code>/api/chat</code></td>
+<td><code>ollama-json-schema</code></td>
+</tr>
+<tr>
+<td><code>openai-compatible</code></td>
+<td><code>openai-chat</code></td>
+<td><code>http://127.0.0.1:8000/v1</code></td>
+<td><code>/models</code></td>
+<td><code>/chat/completions</code></td>
+<td><code>openai-json-schema</code></td>
+</tr>
+<tr>
+<td><code>vllm</code></td>
+<td><code>openai-chat</code></td>
+<td><code>http://127.0.0.1:8000/v1</code></td>
+<td><code>/models</code></td>
+<td><code>/chat/completions</code></td>
+<td><code>openai-json-schema</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Source:</strong> <code>src/x86decomp/local_llm/profiles.py</code><br />
+<strong>SHA-256:</strong> <code>5bce6554b8d5dbccd0a18c965bae92e82cc8517f7c86997621d662f3bcff1ca2</code></p>
+<p>Profiles are loopback-only by default. Remote endpoints require explicit opt-in, and secrets are referenced by environment-variable name rather than stored in profile JSON.</p></p>
+    </article>
+</section>
+            <!-- endblock -->
+
+            <!-- block footer -->
+                <footer>
+    <div class="d-flex flex-sm-row justify-content-between py-2 border-top drac-text-black drac-bg-cyan-green">
+        <a href="https://github.com/dracula/mkdocs" target="_blank" style="padding-left: 1%;"
+            class="footer-text drac-anchor drac-text-black drac-text-purple--hover">
+            Made with Dracula Theme for MkDocs
+        </a>
+    </div>
+</footer>
+            <!-- endblock -->
+        </div>
+
+    </main>
+
+        <script>var base_url = '..';</script>
+        <script src="../assets/js/jquery-3.3.1.slim.min.js"></script>
+        <script src="../assets/js/bootstrap.bundle.min.js"></script>
+        <script src="../assets/js/mkdocs.js"></script>
+			<script src="../search/main.js" defer></script>
+
+</body>
+
+</html>
