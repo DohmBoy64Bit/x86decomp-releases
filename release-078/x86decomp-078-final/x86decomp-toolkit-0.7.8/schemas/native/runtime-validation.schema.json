@@ -1,0 +1,31 @@
+{
+  "$id": "https://x86decomp.invalid/schemas/native/runtime-validation.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "properties": {
+    "checks": {
+      "type": "object"
+    },
+    "image_path": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "passed",
+        "failed",
+        "blocked"
+      ]
+    },
+    "validation_kind": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "image_path",
+    "validation_kind",
+    "status",
+    "checks"
+  ],
+  "title": "x86decomp runtime-validation",
+  "type": "object"
+}

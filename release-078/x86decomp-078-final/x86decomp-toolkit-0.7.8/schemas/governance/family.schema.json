@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "correlations": {
+      "items": {
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "family_id": {
+      "type": "string"
+    },
+    "members": {
+      "items": {
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "name": {
+      "type": "string"
+    },
+    "non_claims": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "family_id",
+    "name",
+    "members",
+    "correlations",
+    "non_claims"
+  ],
+  "title": "binary family report",
+  "type": "object"
+}

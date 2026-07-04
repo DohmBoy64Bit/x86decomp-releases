@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:x86decomp:schema:image-match-report:1",
+  "title": "Target-specific whole-image match report",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["schema_version", "kind", "reference", "candidate", "profile", "raw_exact_match", "normalized_match", "sections", "classification", "universal_equivalence_claimed"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "kind": {"const": "target_specific_whole_image_match"},
+    "reference": {"type": "object"},
+    "candidate": {"type": "object"},
+    "profile": {"type": "object"},
+    "raw_exact_match": {"type": "boolean"},
+    "raw_mismatch_count": {"type": "integer", "minimum": 0},
+    "normalized_match": {"type": "boolean"},
+    "normalized_mismatch_count": {"type": "integer", "minimum": 0},
+    "sections": {"type": "array", "items": {"type": "object"}},
+    "classification": {"enum": ["byte_identical", "profile_normalized_match", "different"]},
+    "universal_equivalence_claimed": {"const": false}
+  }
+}

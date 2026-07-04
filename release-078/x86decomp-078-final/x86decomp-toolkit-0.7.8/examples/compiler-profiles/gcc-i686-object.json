@@ -1,0 +1,30 @@
+{
+  "schema_version": 2,
+  "id": "gcc-i686-c-object-o2",
+  "description": "Compile freestanding C into a 32-bit i386 ELF relocatable object without linking.",
+  "executable": "gcc",
+  "language": "c",
+  "output_kind": "relocatable_object",
+  "timeout_seconds": 60,
+  "arguments": [
+    "-m32",
+    "-std=c11",
+    "-O2",
+    "-fno-pic",
+    "-fno-pie",
+    "-fno-asynchronous-unwind-tables",
+    "-fno-stack-protector",
+    "-c",
+    "{source}",
+    "-o",
+    "{output}"
+  ],
+  "environment": {},
+  "family": "gcc",
+  "version": "user-installed",
+  "command_prefix": [],
+  "inherit_environment": true,
+  "version_arguments": [
+    "--version"
+  ]
+}

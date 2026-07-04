@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "name": "replace-with-authorized-target",
+  "description": "Manifest template for a static-only x86decomp regression bundle.",
+  "expected_architecture": "x86",
+  "authorization": {
+    "owner_or_authorized": true,
+    "statement": "I own these artifacts or have permission to analyze them."
+  },
+  "artifacts": [
+    {
+      "path": "files/target.exe",
+      "role": "primary_image",
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "description": "Replace the hash after adding the authorized native PE image."
+    }
+  ]
+}

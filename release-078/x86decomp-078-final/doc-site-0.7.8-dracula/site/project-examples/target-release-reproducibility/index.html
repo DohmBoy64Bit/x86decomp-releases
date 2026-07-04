@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+        <title>Example: target release and reproducibility project - x86decomp 0.7.8 Docs</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        
+        
+        
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="../../assets/css/darcula-highlight.min.css">
+
+        <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../assets/css/dracula-ui.min.css">
+        <link rel="stylesheet" href="../../assets/css/mkdocs.min.css">
+            <link href="../../assets/x86decomp-dracula-overrides.css" rel="stylesheet">
+
+        
+            <link  rel="icon" type="image/x-icon" href="../../assets/img/favicon.ico">
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+                <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+
+<body class="drac-bg-black-secondary drac-text-grey-ternary drac-text drac-scrollbar-purple">
+
+    <main class="d-flex">
+
+        <!-- block sidebar -->
+            <nav id="sidebar" class="sidebar drac-bg-black">
+    <div class="custom-menu">
+        <button type="button" id="sidebarCollapse" class="btn btn-primary">
+            <i class="fa fa-bars"></i>
+            <span class="sr-only">Menu</span>
+        </button>
+    </div>
+
+    <div class="p-4">
+        
+
+        <div class="drac-text-center">
+            
+                <span class="drac-text drac-line-height drac-text-white">x86decomp 0.7.8 Docs</span>
+            
+        </div>
+
+        <div class="drac-box flex-column">
+            <ul class="dot-ul">
+                <li><div class="dot-li drac-bg-cyan"></div></li>
+                <li><div class="dot-li drac-bg-green"></div></li>
+                <li><div class="dot-li drac-bg-orange"></div></li>
+                <li><div class="dot-li drac-bg-pink"></div></li>
+                <li><div class="dot-li drac-bg-purple"></div></li>
+                <li><div class="dot-li drac-bg-red"></div></li>
+                <li><div class="dot-li drac-bg-yellow"></div></li>
+            </ul>
+        </div>
+
+        <hr class="drac-divider" />
+
+        <!-- block menu -->
+        <ul class="mb-5 drac-list drac-list-none">
+            
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Home
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../../getting-started/"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Getting Started
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#workflows-collapse" aria-expanded="false">
+                    Workflows
+                </a>
+                <div class="collapse" id="workflows-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../workflows/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Workflow Guide
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../local-llm/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Local LLM C Generation
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../decompilation-acceleration/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Decompilation Acceleration
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Project Examples
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#reference-collapse" aria-expanded="false">
+                    Reference
+                </a>
+                <div class="collapse" id="reference-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../reference/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../architecture/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Architecture
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../commands/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Commands
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../schemas/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Schemas
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../integrations/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Integrations
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../features/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Source Modules
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../functions/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Function Index
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../tests/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Tests
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#release-evidence-collapse" aria-expanded="false">
+                    Release Evidence
+                </a>
+                <div class="collapse" id="release-evidence-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../release-evidence/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../verification/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Verification
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../source-coverage/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Source Coverage
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../changelog/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Changelog
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../about/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            About
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <!-- endblock -->
+    </div>
+</nav>
+        <!-- endblock -->
+
+        <nav class="divider drac-bg-purple-cyan"></nav>
+
+        <div class="content">
+            <!-- block header -->
+                <header>
+    <nav class="navbar navbar-expand-xl drac-bg-purple">
+        <div class="container-fluid">
+            
+            <button class="navbar-toggler w-100 text-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMenu"
+                aria-controls="navbarsMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse flex-column ml-auto" id="navbarsMenu">
+                <ul class="navbar-nav text-md-center">
+
+                    <!-- block preview -->
+                    <li class="nav-item">
+                            
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block search -->
+                    <li class="nav-item"><div role="search" class="search-box">
+	<form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+		<input type="text" name="q" class="drac-input drac-input-search drac-input-white drac-text-white drac-bg-black-secondary"
+		placeholder="Search docs" title="Type search term here" />
+	</form>
+</div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block source -->
+                    <li class="nav-item">
+                        
+                    </li>
+                    <!--  endblock -->
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+</header>
+            <!-- endblock -->
+
+            <!-- block content -->
+                <section class="p-md-5 section-content">
+    <article>
+        <p><p><a id="model"></a>
+<a id="target-release-reproducibility-flow-title"></a>
+<a id="target-release-reproducibility-flow-desc"></a>
+<a id="arrow-target-release-reproducibility"></a>
+<a id="target-release-reproducibility-flow-caption"></a>
+<a id="check"></a>
+<a id="reproduce"></a>
+<a id="security"></a>
+<a id="claims"></a>
+<a id="gate"></a>
+<a id="archive"></a>
+<a id="limits"></a>
+<a id="source-basis"></a></p>
+<p>Section: Project examples</p>
+<h1 id="example-target-release-and-reproducibility-project">Example: target release and reproducibility project</h1>
+<p>Hash the project and required tools, verify reproducibility inputs, audit source and dependencies, and evaluate an explicit target release contract without overclaiming correctness.</p>
+<blockquote>
+<p><strong>Example notation.</strong> Paths and function identifiers are representative local names. Commands and options are exact v0.7.8 parser forms; target-specific hashes, addresses, profiles, reports, and passing outcomes must come from the actual project.</p>
+<p><strong>Classification.</strong> This is a release-acceptance workflow. It evaluates declared project contracts; it is separate from the sealed toolkit release process.</p>
+</blockquote>
+<p><strong>On this page</strong></p>
+<ol>
+<li><a href="#model">Release model</a></li>
+<li><a href="#check">Check project state</a></li>
+<li><a href="#reproduce">Create reproducibility manifest</a></li>
+<li><a href="#security">Run audits</a></li>
+<li><a href="#claims">Verify claims and pipelines</a></li>
+<li><a href="#gate">Evaluate release gate</a></li>
+<li><a href="#archive">Archive evidence</a></li>
+<li><a href="#limits">Truth boundary</a></li>
+<li><a href="#source-basis">Source basis</a></li>
+</ol>
+<h2 id="release-model">Release model</h2>
+<p>The gate combines explicit inputs and reports; it does not infer success from missing evidence.Project check → Workflow records → Verified claims → Pipeline results → Reproduction → Security → Release gate</p>
+<p>Project checkWorkflow recordsVerified claimsPipeline resultsReproductionSecurityRelease gate</p>
+<p>The gate combines explicit inputs and reports; it does not infer success from missing evidence.</p>
+<pre><code class="language-ascii-fallback">Project check → Workflow records → Verified claims → Pipeline results → Reproduction → Security → Release gate
+</code></pre>
+<p>1</p>
+<h2 id="verify-project-integrity-and-current-workflows">Verify project integrity and current workflows</h2>
+<pre><code>x86decomp project-check project
+x86decomp memory-verify project
+x86decomp content-verify project/artifacts
+x86decomp workflow-show project pe-rva:00401230
+</code></pre>
+<p>Resolve corrupt state, unresolved required blockers, or missing referenced reports before evaluating a gate.</p>
+<p>2</p>
+<h2 id="create-and-verify-a-reproduction-manifest">Create and verify a reproduction manifest</h2>
+<pre><code>x86decomp reproduce-create project reports/reproducibility/manifest.json --required-tool gcc --required-tool lld-link
+x86decomp reproduce-verify project reports/reproducibility/manifest.json
+</code></pre>
+<p>The manifest records project inputs, selected configuration identities, and requested tool identities. Verification reports exact drift; it does not rebuild the target automatically.</p>
+<p>3</p>
+<h2 id="run-source-dependency-sbom-and-manifest-checks">Run source, dependency, SBOM, and manifest checks</h2>
+<pre><code>x86decomp security-audit project --report reports/security/source-audit.json
+x86decomp dependency-audit --executable pip-audit --timeout 300 --report reports/security/dependencies.json
+x86decomp sbom-generate reports/security/sbom.json
+x86decomp release-manifest-verify project --manifest MANIFEST.sha256
+</code></pre>
+<p>The source audit’s pass condition is the absence of critical/high findings under its implemented rules. Dependency audit preserves the installed adapter’s findings. Neither report certifies the target as safe or vulnerability-free.</p>
+<p>4</p>
+<h2 id="require-provenance-and-completed-orchestration-where-policy-demands-it">Require provenance and completed orchestration where policy demands it</h2>
+<pre><code>x86decomp claim-verify project claim-entry-00401230
+x86decomp pipeline-status project PIPELINE_ID
+</code></pre>
+<p>Every claim file present in the project is passed through the strict evidence verifier and a non-verified claim fails the gate. <code>--require-verified-claims</code> additionally requires at least one claim. Pipeline failures affect the release gate only when <code>--require-succeeded-pipelines</code> is supplied, and that flag also requires at least one durable pipeline.</p>
+<p>5</p>
+<h2 id="evaluate-the-explicit-target-release-gate">Evaluate the explicit target release gate</h2>
+<pre><code>x86decomp release-gate project --reproduction-manifest reports/reproducibility/manifest.json --security-report reports/security/source-audit.json --convergence-report reports/convergence/latest.json --require-workflows --require-verified-claims --require-succeeded-pipelines --report reports/release-gate.json
+</code></pre>
+<p>Inspect every gate check and the truth statement in the report. <strong>v0.7.8 workflow compatibility limit:</strong> the release gate reads a legacy per-function <code>modes</code> object, while the public <code>workflow-init</code>/<code>workflow-update</code> path writes schema-v2 fields named <code>selected_modes</code>, <code>matching_status</code>, and <code>functional_status</code>. Therefore <code>--require-workflows</code> can require that at least one workflow file exists, but this gate does not enforce the public schema-v2 status minima. Inspect those states separately with <code>workflow-show</code> and do not claim that v0.7.8 release-gate validated them. Subject to that limitation, a pass means the other recorded checks satisfied the supplied gate contract at that point in time.</p>
+<p>6</p>
+<h2 id="create-a-deterministic-project-backup">Create a deterministic project backup</h2>
+<pre><code>x86decomp project-backup project releases/project-release-backup.tar.gz
+</code></pre>
+<p>Store the backup together with the gate, reproduction, security, convergence, workflow, compiler, linker, and validation reports. The project backup rejects symlinks and is designed to be deterministic for the same project content.</p>
+<h2 id="required-release-wording">Required release wording</h2>
+<blockquote>
+<p><strong>Supported statement.</strong> “This target project passed the checks recorded in <code>reports/release-gate.json</code>; public schema-v2 workflow minima were reviewed separately because v0.7.8 release-gate does not consume those status fields.”</p>
+<p><strong>Unsupported statement.</strong> Do not translate that into “original source recovered,” “universally equivalent,” “safe,” or “historically identical” unless separate evidence actually establishes those claims.</p>
+</blockquote>
+<h2 id="v078-source-basis">v0.7.8 source basis</h2>
+<blockquote>
+<p><strong>Verification model.</strong> Command syntax is checked against the live parser. The source files below are hashed from the current release; implementation and test rows are retained as independent truth boundaries.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Evidence file</th>
+<th>SHA-256</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>src/x86decomp/cli.py</code></td>
+<td><code>21e0654ced2f5dd0588adcbedec328613fba524ff1e0a91ef07d63cbbf88288c</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/reproducibility.py</code></td>
+<td><code>bcc5e2a773d7eb7589f28df90c0fe898155788b8e695d15e363e6dbad249ae7b</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/security_audit.py</code></td>
+<td><code>6131424e2b3443bd0e6af244fdcf2418a36ea752afa838a124d5e98bedd913d5</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/release_gate.py</code></td>
+<td><code>8e79be8c5af67a90063af185b2239a5ce5a8ca828627ee05c14d897f891e02fd</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/project_state.py</code></td>
+<td><code>2c866a3ccaddff98f1d9342a1eb5397d3dc2bd6d77e4b95c7dd07a8d2e02610f</code></td>
+</tr>
+<tr>
+<td><code>tests/test_production.py</code></td>
+<td><code>da0d4bd57f7f4bb68957fa8aa42a67f7eb34347f35137849e360dc95e796db89</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="related-examples">Related examples</h2>
+<p>[Matching project</p>
+<p>Open the source-verified workflow.](matching-project.md)[Functional project</p>
+<p>Open the source-verified workflow.](functional-project.md)[Hybrid composition</p>
+<p>Open the source-verified workflow.](hybrid-project.md)</p></p>
+    </article>
+</section>
+            <!-- endblock -->
+
+            <!-- block footer -->
+                <footer>
+    <div class="d-flex flex-sm-row justify-content-between py-2 border-top drac-text-black drac-bg-cyan-green">
+        <a href="https://github.com/dracula/mkdocs" target="_blank" style="padding-left: 1%;"
+            class="footer-text drac-anchor drac-text-black drac-text-purple--hover">
+            Made with Dracula Theme for MkDocs
+        </a>
+    </div>
+</footer>
+            <!-- endblock -->
+        </div>
+
+    </main>
+
+        <script>var base_url = '../..';</script>
+        <script src="../../assets/js/jquery-3.3.1.slim.min.js"></script>
+        <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+        <script src="../../assets/js/mkdocs.js"></script>
+			<script src="../../search/main.js" defer></script>
+
+</body>
+
+</html>

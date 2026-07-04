@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "x86decomp-test-suite"
+version = "0.7.8"
+description = "Comprehensive no-silent-skip verification harness for x86decomp-toolkit 0.7.8"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "Apache-2.0"
+authors = [{name = "x86decomp-toolkit contributors"}]
+dependencies = []
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "Programming Language :: Python :: 3",
+  "Topic :: Software Development :: Testing",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8,<10",
+  "coverage>=7,<8",
+  "jsonschema>=4.23,<5",
+  "javalang>=0.13,<1",
+  "PyYAML>=6,<7",
+  "build>=1.2,<2",
+]
+
+[project.scripts]
+x86decomp-test = "x86decomp_testkit.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+x86decomp_testkit = ["data/*.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"

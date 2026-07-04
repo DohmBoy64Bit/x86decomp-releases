@@ -1,0 +1,121 @@
+{
+  "$id": "urn:x86decomp-test-suite:feature-catalog:1",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "x86decomp current-surface catalog",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "toolkit_version",
+    "entry_points",
+    "modules",
+    "all_function_symbols",
+    "cli_commands",
+    "canonical_groups",
+    "canonical_routes",
+    "schemas",
+    "ghidra_scripts",
+    "workflow_states",
+    "adapters",
+    "coverage_contract",
+    "maintenance_rule"
+  ],
+  "properties": {
+    "schema_version": {"const": 1},
+    "toolkit_version": {"const": "0.7.8"},
+    "entry_points": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["toolkit", "test_suite"],
+      "properties": {
+        "toolkit": {"const": "x86decomp"},
+        "test_suite": {"const": "x86decomp-test"}
+      }
+    },
+    "modules": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["area", "status"],
+        "properties": {
+          "area": {"type": "string", "minLength": 1},
+          "status": {"const": "current"}
+        },
+        "additionalProperties": false
+      }
+    },
+    "all_function_symbols": {
+      "type": "array",
+      "items": {"type": "string", "minLength": 1},
+      "uniqueItems": true
+    },
+    "cli_commands": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["interface", "status"],
+        "properties": {
+          "interface": {"const": "x86decomp"},
+          "status": {"const": "current"}
+        },
+        "additionalProperties": false
+      }
+    },
+    "canonical_groups": {
+      "type": "array",
+      "items": {"type": "string", "minLength": 1},
+      "uniqueItems": true
+    },
+    "canonical_routes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["group", "action", "owner"],
+        "properties": {
+          "group": {"type": "string", "minLength": 1},
+          "action": {"type": "string", "minLength": 1},
+          "owner": {"enum": ["governance", "reconstruction", "native", "assembly"]}
+        }
+      }
+    },
+    "schemas": {
+      "type": "array",
+      "items": {"type": "string", "minLength": 1},
+      "uniqueItems": true
+    },
+    "ghidra_scripts": {
+      "type": "array",
+      "items": {"type": "string", "minLength": 1},
+      "uniqueItems": true
+    },
+    "workflow_states": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["matching", "functional"],
+      "properties": {
+        "functional": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+        "matching": {"type": "array", "items": {"type": "string"}, "uniqueItems": true}
+      }
+    },
+    "adapters": {
+      "type": "array",
+      "items": {"type": "string", "minLength": 1},
+      "uniqueItems": true
+    },
+    "coverage_contract": {
+      "type": "object",
+      "required": ["all_current_function_and_method_bodies", "all_root_commands", "all_canonical_routes", "zero_skips", "line_floor_percent", "branch_floor_percent"],
+      "additionalProperties": false,
+      "properties": {
+        "all_current_function_and_method_bodies": {"const": true},
+        "all_root_commands": {"const": true},
+        "all_canonical_routes": {"const": true},
+        "zero_skips": {"const": true},
+        "line_floor_percent": {"type": "number", "minimum": 0},
+        "branch_floor_percent": {"type": "number", "minimum": 0}
+      }
+    },
+    "maintenance_rule": {"type": "string", "minLength": 1}
+  }
+}

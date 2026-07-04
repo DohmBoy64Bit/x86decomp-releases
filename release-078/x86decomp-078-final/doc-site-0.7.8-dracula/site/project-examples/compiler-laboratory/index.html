@@ -1,0 +1,519 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+        <title>Example: compiler identification and compiler laboratory - x86decomp 0.7.8 Docs</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        
+        
+        
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="../../assets/css/darcula-highlight.min.css">
+
+        <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../assets/css/dracula-ui.min.css">
+        <link rel="stylesheet" href="../../assets/css/mkdocs.min.css">
+            <link href="../../assets/x86decomp-dracula-overrides.css" rel="stylesheet">
+
+        
+            <link  rel="icon" type="image/x-icon" href="../../assets/img/favicon.ico">
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+                <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+
+<body class="drac-bg-black-secondary drac-text-grey-ternary drac-text drac-scrollbar-purple">
+
+    <main class="d-flex">
+
+        <!-- block sidebar -->
+            <nav id="sidebar" class="sidebar drac-bg-black">
+    <div class="custom-menu">
+        <button type="button" id="sidebarCollapse" class="btn btn-primary">
+            <i class="fa fa-bars"></i>
+            <span class="sr-only">Menu</span>
+        </button>
+    </div>
+
+    <div class="p-4">
+        
+
+        <div class="drac-text-center">
+            
+                <span class="drac-text drac-line-height drac-text-white">x86decomp 0.7.8 Docs</span>
+            
+        </div>
+
+        <div class="drac-box flex-column">
+            <ul class="dot-ul">
+                <li><div class="dot-li drac-bg-cyan"></div></li>
+                <li><div class="dot-li drac-bg-green"></div></li>
+                <li><div class="dot-li drac-bg-orange"></div></li>
+                <li><div class="dot-li drac-bg-pink"></div></li>
+                <li><div class="dot-li drac-bg-purple"></div></li>
+                <li><div class="dot-li drac-bg-red"></div></li>
+                <li><div class="dot-li drac-bg-yellow"></div></li>
+            </ul>
+        </div>
+
+        <hr class="drac-divider" />
+
+        <!-- block menu -->
+        <ul class="mb-5 drac-list drac-list-none">
+            
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Home
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../../getting-started/"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Getting Started
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#workflows-collapse" aria-expanded="false">
+                    Workflows
+                </a>
+                <div class="collapse" id="workflows-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../workflows/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Workflow Guide
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../local-llm/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Local LLM C Generation
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../decompilation-acceleration/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Decompilation Acceleration
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Project Examples
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#reference-collapse" aria-expanded="false">
+                    Reference
+                </a>
+                <div class="collapse" id="reference-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../reference/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../architecture/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Architecture
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../commands/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Commands
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../schemas/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Schemas
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../integrations/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Integrations
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../features/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Source Modules
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../functions/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Function Index
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../tests/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Tests
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#release-evidence-collapse" aria-expanded="false">
+                    Release Evidence
+                </a>
+                <div class="collapse" id="release-evidence-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../release-evidence/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../verification/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Verification
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../source-coverage/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Source Coverage
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../changelog/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Changelog
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../about/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            About
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <!-- endblock -->
+    </div>
+</nav>
+        <!-- endblock -->
+
+        <nav class="divider drac-bg-purple-cyan"></nav>
+
+        <div class="content">
+            <!-- block header -->
+                <header>
+    <nav class="navbar navbar-expand-xl drac-bg-purple">
+        <div class="container-fluid">
+            
+            <button class="navbar-toggler w-100 text-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMenu"
+                aria-controls="navbarsMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse flex-column ml-auto" id="navbarsMenu">
+                <ul class="navbar-nav text-md-center">
+
+                    <!-- block preview -->
+                    <li class="nav-item">
+                            
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block search -->
+                    <li class="nav-item"><div role="search" class="search-box">
+	<form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+		<input type="text" name="q" class="drac-input drac-input-search drac-input-white drac-text-white drac-bg-black-secondary"
+		placeholder="Search docs" title="Type search term here" />
+	</form>
+</div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block source -->
+                    <li class="nav-item">
+                        
+                    </li>
+                    <!--  endblock -->
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+</header>
+            <!-- endblock -->
+
+            <!-- block content -->
+                <section class="p-md-5 section-content">
+    <article>
+        <p><p><a id="model"></a>
+<a id="compiler-laboratory-flow-title"></a>
+<a id="compiler-laboratory-flow-desc"></a>
+<a id="arrow-compiler-laboratory"></a>
+<a id="compiler-laboratory-flow-caption"></a>
+<a id="register"></a>
+<a id="profile"></a>
+<a id="matrix"></a>
+<a id="score"></a>
+<a id="corpus"></a>
+<a id="worker"></a>
+<a id="limits"></a>
+<a id="source-basis"></a></p>
+<p>Section: Project examples</p>
+<h1 id="example-compiler-identification-and-compiler-laboratory">Example: compiler identification and compiler laboratory</h1>
+<p>Register real toolchains, compile a controlled matrix, preserve executable provenance, and rank candidate outputs without claiming the historical compiler from similarity alone.</p>
+<blockquote>
+<p><strong>Example notation.</strong> Paths and function identifiers are representative local names. Commands and options are exact v0.7.8 parser forms; target-specific hashes, addresses, profiles, reports, and passing outcomes must come from the actual project.</p>
+<p><strong>Classification.</strong> This is a supporting experiment workflow. It can inform matching, but ranking is evidence—not historical attribution.</p>
+</blockquote>
+<p><strong>On this page</strong></p>
+<ol>
+<li><a href="#model">Laboratory model</a></li>
+<li><a href="#register">Register toolchains</a></li>
+<li><a href="#profile">Verify profiles</a></li>
+<li><a href="#matrix">Run the matrix</a></li>
+<li><a href="#score">Interpret ranking</a></li>
+<li><a href="#corpus">Use ground truth</a></li>
+<li><a href="#worker">Bound execution</a></li>
+<li><a href="#limits">Truth boundary</a></li>
+<li><a href="#source-basis">Source basis</a></li>
+</ol>
+<h2 id="laboratory-model">Laboratory model</h2>
+<p>Every experiment preserves the executable and input identities used to produce a candidate output.Known source → Toolchain registry → Profile matrix → Bounded compile → Object comparison → Ranked evidence → Independent corroboration</p>
+<p>Known sourceToolchain registryProfile matrixBounded compileObject comparisonRanked evidenceIndependent corroboration</p>
+<p>Every experiment preserves the executable and input identities used to produce a candidate output.</p>
+<pre><code class="language-ascii-fallback">Known source → Toolchain registry → Profile matrix → Bounded compile → Object comparison → Ranked evidence → Independent corroboration
+</code></pre>
+<p>1</p>
+<h2 id="register-and-verify-the-actual-toolchain">Register and verify the actual toolchain</h2>
+<pre><code>x86decomp toolchain-register config/toolchains.json gcc-13-x86 gcc 13.2 --executable cc=C:\Toolchains\gcc\bin\gcc.exe
+x86decomp toolchain-verify config/toolchains.json gcc-13-x86
+</code></pre>
+<p>Registration hashes referenced executables and records their roles. Proprietary or external toolchain binaries are not copied into the project. Verification detects identity drift.</p>
+<p>2</p>
+<h2 id="use-a-complete-compiler-profile">Use a complete compiler profile</h2>
+<p>The bundled <code>examples/compiler-profiles/gcc-i686-object.json</code> demonstrates the schema with source/output placeholders, timeout, environment policy, family, version label, and version probe. It intentionally produces a 32-bit ELF relocatable object, so do not use it as a COFF matching profile without changing the actual compiler contract.</p>
+<pre><code>{
+  &quot;schema_version&quot;: 2,
+  &quot;id&quot;: &quot;gcc-i686-c-object-o2&quot;,
+  &quot;description&quot;: &quot;Compile freestanding C into a 32-bit i386 ELF relocatable object without linking.&quot;,
+  &quot;executable&quot;: &quot;gcc&quot;,
+  &quot;language&quot;: &quot;c&quot;,
+  &quot;output_kind&quot;: &quot;relocatable_object&quot;,
+  &quot;timeout_seconds&quot;: 60,
+  &quot;arguments&quot;: [
+    &quot;-m32&quot;,
+    &quot;-std=c11&quot;,
+    &quot;-O2&quot;,
+    &quot;-fno-pic&quot;,
+    &quot;-fno-pie&quot;,
+    &quot;-fno-asynchronous-unwind-tables&quot;,
+    &quot;-fno-stack-protector&quot;,
+    &quot;-c&quot;,
+    &quot;{source}&quot;,
+    &quot;-o&quot;,
+    &quot;{output}&quot;
+  ],
+  &quot;environment&quot;: {},
+  &quot;family&quot;: &quot;gcc&quot;,
+  &quot;version&quot;: &quot;user-installed&quot;,
+  &quot;command_prefix&quot;: [],
+  &quot;inherit_environment&quot;: true,
+  &quot;version_arguments&quot;: [
+    &quot;--version&quot;
+  ]
+}
+</code></pre>
+<p>For PE matching, provide a separately evidenced profile that emits the required COFF object and records the exact installed executable.</p>
+<p>3</p>
+<h2 id="run-a-bounded-optimization-matrix">Run a bounded optimization matrix</h2>
+<p>The bundled lab example varies <code>-O0</code> and <code>-O2</code>, caps experiments at four, and uses dedicated output/cache roots:</p>
+<pre><code>{
+  &quot;source&quot;: &quot;../sample_source/add.c&quot;,
+  &quot;profiles&quot;: [
+    &quot;../compiler-profiles/gcc-i686-object.json&quot;
+  ],
+  &quot;output_root&quot;: &quot;../../build/example-lab/output&quot;,
+  &quot;cache_root&quot;: &quot;../../build/example-lab/cache&quot;,
+  &quot;output_name&quot;: &quot;add.o&quot;,
+  &quot;max_experiments&quot;: 4,
+  &quot;matrix&quot;: {
+    &quot;axes&quot;: {
+      &quot;optimization&quot;: [
+        &quot;-O0&quot;,
+        &quot;-O2&quot;
+      ]
+    }
+  },
+  &quot;target&quot;: {}
+}
+</code></pre>
+<pre><code>x86decomp compiler-lab examples/labs/gcc-optimization-matrix.json --report reports/compiler-lab.json
+</code></pre>
+<p>The lab expands declared axes only, runs profiles through the compiler contract, uses cache identities, and records each experiment. A cap prevents accidental unbounded matrices.</p>
+<p>4</p>
+<h2 id="configure-comparison-and-inspect-the-exact-ranking">Configure comparison and inspect the exact ranking</h2>
+<p>The bundled lab has an empty <code>target</code> object, so it compiles experiments but does not compare them. For matching work, use an evidenced COFF-producing profile and declare one of the implemented target kinds, for example:</p>
+<pre><code>{
+  &quot;target&quot;: {
+    &quot;kind&quot;: &quot;pe_function&quot;,
+    &quot;pe&quot;: &quot;../../target.exe&quot;,
+    &quot;rva&quot;: 4198960,
+    &quot;size&quot;: 32,
+    &quot;symbol&quot;: &quot;sub_00401230&quot;
+  }
+}
+</code></pre>
+<pre><code>x86decomp compiler-lab config/coff-matching-lab.json --report reports/compiler-lab-coff.json
+$lab = Get-Content reports/compiler-lab-coff.json | ConvertFrom-Json
+$lab.best_experiment
+$lab.experiments | Select-Object id, score, selections, error
+</code></pre>
+<p>Experiment directories use the exact v0.7.8 IDs <code>p000-v0000</code>, <code>p000-v0001</code>, and so on. For a <code>pe_function</code> target the implementation calls the PE-versus-COFF comparator and scores its classification plus normalized instruction similarity. “Best” means best under that target and scoring policy; it is not proof that the compiler family, exact version, flags, or source were the originals.</p>
+<p>5</p>
+<h2 id="build-and-compare-controlled-ground-truth">Build and compare controlled ground truth</h2>
+<pre><code>x86decomp corpus-create-manifest . build/ground-truth-manifest.json
+x86decomp corpus-build build/ground-truth-manifest.json build/ground-truth --report reports/ground-truth.json
+x86decomp corpus-verify reports/ground-truth.json
+x86decomp corpus-compare reports/gcc-12.json reports/gcc-13.json --report reports/compiler-comparison.json
+</code></pre>
+<p>Ground-truth corpora bind known source, compiler/version profiles, and output hashes. Cross-report comparisons identify measured differences between known runs; they do not infer semantic equivalence or identify an unknown historical compiler by themselves.</p>
+<p>6</p>
+<h2 id="use-the-bounded-compiler-worker-when-isolation-policy-requires-it">Use the bounded compiler worker when isolation policy requires it</h2>
+<pre><code>x86decomp compile-worker profiles/target.json src/candidate.c build/candidate.obj --isolation local_bounded --cache build/compiler-cache --report reports/compiler-worker.json
+</code></pre>
+<p>The worker runs a real subprocess contract with bounded execution and output hashing. Container mode requires an explicit image and available container runtime; the command does not create an isolation platform by itself.</p>
+<h2 id="required-interpretation">Required interpretation</h2>
+<ul>
+<li>A successful compiler invocation proves that the declared command produced the recorded output in that environment.</li>
+<li>A cache hit is valid only for the profile, executable, source, and argument identity encoded by the implementation.</li>
+<li>A highest score is a ranking under the configured comparison, not compiler attribution.</li>
+<li>Unknown historical flags remain unknown unless separate evidence resolves them.</li>
+</ul>
+<h2 id="v078-source-basis">v0.7.8 source basis</h2>
+<blockquote>
+<p><strong>Verification model.</strong> Command syntax is checked against the live parser. The source files below are hashed from the current release; implementation and test rows are retained as independent truth boundaries.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Evidence file</th>
+<th>SHA-256</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>src/x86decomp/cli.py</code></td>
+<td><code>21e0654ced2f5dd0588adcbedec328613fba524ff1e0a91ef07d63cbbf88288c</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/compiler.py</code></td>
+<td><code>f21f38f6ed0804a959188e31f5c9fa498d7d0740536fbb82594a375b12353944</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/compiler_lab.py</code></td>
+<td><code>05a54baba63c926190c0e2fb45bff09c6eb338ed6a479e6e47be210a6b1de859</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/toolchains.py</code></td>
+<td><code>9dde5962b67d30fec64266313f5488a4e5501de9db26605d4719cbe276cde03f</code></td>
+</tr>
+<tr>
+<td><code>tests/test_compiler.py</code></td>
+<td><code>9645daed68779957cd14addad7626d32d99056f551c27d873e3f475cfe862f64</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="related-examples">Related examples</h2>
+<p>[Matching project</p>
+<p>Open the source-verified workflow.](matching-project.md)[Functional project</p>
+<p>Open the source-verified workflow.](functional-project.md)[Hybrid composition</p>
+<p>Open the source-verified workflow.](hybrid-project.md)</p></p>
+    </article>
+</section>
+            <!-- endblock -->
+
+            <!-- block footer -->
+                <footer>
+    <div class="d-flex flex-sm-row justify-content-between py-2 border-top drac-text-black drac-bg-cyan-green">
+        <a href="https://github.com/dracula/mkdocs" target="_blank" style="padding-left: 1%;"
+            class="footer-text drac-anchor drac-text-black drac-text-purple--hover">
+            Made with Dracula Theme for MkDocs
+        </a>
+    </div>
+</footer>
+            <!-- endblock -->
+        </div>
+
+    </main>
+
+        <script>var base_url = '../..';</script>
+        <script src="../../assets/js/jquery-3.3.1.slim.min.js"></script>
+        <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+        <script src="../../assets/js/mkdocs.js"></script>
+			<script src="../../search/main.js" defer></script>
+
+</body>
+
+</html>

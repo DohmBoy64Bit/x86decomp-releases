@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:x86decomp:schema:release-gate:1",
+  "type": "object",
+  "required": ["schema_version", "kind", "created_at", "project_root", "checks", "requirements", "failures", "passed", "truth_statement"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "kind": {"const": "target_release_gate"},
+    "created_at": {"type": "string"},
+    "project_root": {"type": "string"},
+    "checks": {"type": "object"},
+    "requirements": {"type": "object"},
+    "failures": {"type": "array", "items": {"type": "string"}},
+    "passed": {"type": "boolean"},
+    "truth_statement": {"type": "string"}
+  },
+  "additionalProperties": true
+}

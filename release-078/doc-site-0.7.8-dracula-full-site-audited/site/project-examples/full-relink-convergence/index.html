@@ -1,0 +1,498 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+        <title>Example: full-relink and whole-image convergence project - x86decomp 0.7.8 Docs</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        
+        
+        
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="../../assets/css/darcula-highlight.min.css">
+
+        <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../assets/css/dracula-ui.min.css">
+        <link rel="stylesheet" href="../../assets/css/mkdocs.min.css">
+            <link href="../../assets/x86decomp-dracula-overrides.css" rel="stylesheet">
+
+        
+            <link  rel="icon" type="image/x-icon" href="../../assets/img/favicon.ico">
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+                <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+
+<body class="drac-bg-black-secondary drac-text-grey-ternary drac-text drac-scrollbar-purple">
+
+    <main class="d-flex">
+
+        <!-- block sidebar -->
+            <nav id="sidebar" class="sidebar drac-bg-black">
+    <div class="custom-menu">
+        <button type="button" id="sidebarCollapse" class="btn btn-primary">
+            <i class="fa fa-bars"></i>
+            <span class="sr-only">Menu</span>
+        </button>
+    </div>
+
+    <div class="p-4">
+        
+
+        <div class="drac-text-center">
+            
+                <span class="drac-text drac-line-height drac-text-white">x86decomp 0.7.8 Docs</span>
+            
+        </div>
+
+        <div class="drac-box flex-column">
+            <ul class="dot-ul">
+                <li><div class="dot-li drac-bg-cyan"></div></li>
+                <li><div class="dot-li drac-bg-green"></div></li>
+                <li><div class="dot-li drac-bg-orange"></div></li>
+                <li><div class="dot-li drac-bg-pink"></div></li>
+                <li><div class="dot-li drac-bg-purple"></div></li>
+                <li><div class="dot-li drac-bg-red"></div></li>
+                <li><div class="dot-li drac-bg-yellow"></div></li>
+            </ul>
+        </div>
+
+        <hr class="drac-divider" />
+
+        <!-- block menu -->
+        <ul class="mb-5 drac-list drac-list-none">
+            
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Home
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../../getting-started/"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Getting Started
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#workflows-collapse" aria-expanded="false">
+                    Workflows
+                </a>
+                <div class="collapse" id="workflows-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../workflows/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Workflow Guide
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../local-llm/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Local LLM C Generation
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../decompilation-acceleration/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Decompilation Acceleration
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Project Examples
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#reference-collapse" aria-expanded="false">
+                    Reference
+                </a>
+                <div class="collapse" id="reference-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../reference/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../architecture/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Architecture
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../commands/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Commands
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../release-artifacts/COMMAND_REFERENCE_STRICT_AUDIT/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Command Audit
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../schemas/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Schemas
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../integrations/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Integrations
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../features/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Source Modules
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../functions/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Function Index
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../tests/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Tests
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#release-evidence-collapse" aria-expanded="false">
+                    Release Evidence
+                </a>
+                <div class="collapse" id="release-evidence-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../release-evidence/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../verification/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Verification
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../source-coverage/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Source Coverage
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../changelog/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Changelog
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../about/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            About
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <!-- endblock -->
+    </div>
+</nav>
+        <!-- endblock -->
+
+        <nav class="divider drac-bg-purple-cyan"></nav>
+
+        <div class="content">
+            <!-- block header -->
+                <header>
+    <nav class="navbar navbar-expand-xl drac-bg-purple">
+        <div class="container-fluid">
+            
+            <button class="navbar-toggler w-100 text-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMenu"
+                aria-controls="navbarsMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse flex-column ml-auto" id="navbarsMenu">
+                <ul class="navbar-nav text-md-center">
+
+                    <!-- block preview -->
+                    <li class="nav-item">
+                            
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block search -->
+                    <li class="nav-item"><div role="search" class="search-box">
+	<form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+		<input type="text" name="q" class="drac-input drac-input-search drac-input-white drac-text-white drac-bg-black-secondary"
+		placeholder="Search docs" title="Type search term here" />
+	</form>
+</div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block source -->
+                    <li class="nav-item">
+                        
+                    </li>
+                    <!--  endblock -->
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+</header>
+            <!-- endblock -->
+
+            <!-- block content -->
+                <section class="p-md-5 section-content">
+    <article>
+        <p><p><a id="model"></a>
+<a id="full-relink-convergence-flow-title"></a>
+<a id="full-relink-convergence-flow-desc"></a>
+<a id="arrow-full-relink-convergence"></a>
+<a id="full-relink-convergence-flow-caption"></a>
+<a id="inventory"></a>
+<a id="layout"></a>
+<a id="plan"></a>
+<a id="relink"></a>
+<a id="compare"></a>
+<a id="iterate"></a>
+<a id="state"></a>
+<a id="limits"></a>
+<a id="source-basis"></a></p>
+<p>Section: Project examples</p>
+<h1 id="example-full-relink-and-whole-image-convergence-project">Example: full-relink and whole-image convergence project</h1>
+<p>Correlate PE, MAP, COFF, and library evidence into an explicit linker plan, execute a manifest-driven relink, compare whole images, and iterate with durable convergence history.</p>
+<blockquote>
+<p><strong>Example notation.</strong> Paths and function identifiers are representative local names. Commands and options are exact v0.7.8 parser forms; target-specific hashes, addresses, profiles, reports, and passing outcomes must come from the actual project.</p>
+<p><strong>Classification.</strong> This is a supporting linker-reconstruction workflow. It can advance a matching project but remains evidence-limited.</p>
+</blockquote>
+<p><strong>On this page</strong></p>
+<ol>
+<li><a href="#model">Convergence model</a></li>
+<li><a href="#inventory">Inventory inputs</a></li>
+<li><a href="#layout">Reconstruct layout</a></li>
+<li><a href="#plan">Build a linker plan</a></li>
+<li><a href="#relink">Execute relink</a></li>
+<li><a href="#compare">Compare images</a></li>
+<li><a href="#iterate">Iterate</a></li>
+<li><a href="#state">Advance workflow</a></li>
+<li><a href="#limits">Truth boundary</a></li>
+<li><a href="#source-basis">Source basis</a></li>
+</ol>
+<h2 id="convergence-model">Convergence model</h2>
+<p>Each iteration preserves unresolved facts and measured image differences instead of guessing erased linker state.PE + MAP → COFF + libraries → Layout report → Linker plan → Relink manifest → Image match → Convergence history</p>
+<p>PE + MAPCOFF + librariesLayout reportLinker planRelink manifestImage matchConvergence history</p>
+<p>Each iteration preserves unresolved facts and measured image differences instead of guessing erased linker state.</p>
+<pre><code class="language-ascii-fallback">PE + MAP → COFF + libraries → Layout report → Linker plan → Relink manifest → Image match → Convergence history
+</code></pre>
+<p>1</p>
+<h2 id="verify-all-layout-evidence">Verify all layout evidence</h2>
+<pre><code>x86decomp inspect-pe target.exe
+x86decomp map-inspect target.map
+x86decomp coff-inspect build/entry.obj
+x86decomp lib-inspect runtime.lib
+x86decomp coff-comdat-resolve build/entry.obj build/sub_00401230.obj --report reports/comdat.json
+</code></pre>
+<p>Object order, contributions, COMDAT selection, libraries, machine type, and section properties all affect relinking. Use the real artifacts; a MAP alone cannot substantiate object contents.</p>
+<p>2</p>
+<h2 id="correlate-pe-sections-map-contributions-and-objects">Correlate PE sections, MAP contributions, and objects</h2>
+<pre><code>x86decomp layout-reconstruct target.exe target.map build/entry.obj build/sub_00401230.obj --report reports/layout.json
+</code></pre>
+<p>The layout report correlates the supplied evidence and exposes gaps. It does not manufacture missing objects or claim exact historical ordering where the inputs do not support it.</p>
+<p>3</p>
+<h2 id="build-an-evidence-limited-linker-plan">Build an evidence-limited linker plan</h2>
+<pre><code>x86decomp linker-plan target.exe target.map build/entry.obj build/sub_00401230.obj --library runtime.lib --linker lld-link --output-image build/reconstructed.exe --report reports/linker-plan.json --write-relink-manifest config/relink.json
+</code></pre>
+<p>Inspect <code>unresolved</code> and <code>ready_for_relink</code> in the plan. The generated manifest is an executable proposal built from known inputs, not a recovered original command line.</p>
+<p>4</p>
+<h2 id="execute-the-explicit-manifest">Execute the explicit manifest</h2>
+<p>The bundled x64 manifest illustrates the relink schema:</p>
+<pre><code>{
+  &quot;schema_version&quot;: 1,
+  &quot;linker&quot;: &quot;lld-link&quot;,
+  &quot;objects&quot;: [&quot;entry.obj&quot;],
+  &quot;output&quot;: &quot;linked.exe&quot;,
+  &quot;arguments&quot;: [
+    &quot;/nologo&quot;,
+    &quot;/machine:x64&quot;,
+    &quot;/entry:entry&quot;,
+    &quot;/subsystem:console&quot;,
+    &quot;/nodefaultlib&quot;,
+    &quot;/out:{output}&quot;,
+    &quot;{objects}&quot;
+  ],
+  &quot;environment&quot;: {},
+  &quot;inherit_environment&quot;: true,
+  &quot;timeout_seconds&quot;: 60
+}
+</code></pre>
+<pre><code>x86decomp relink config/relink.json --report reports/relink.json
+</code></pre>
+<p>The report captures the linker identity, command array, object identities, stdout/stderr, return code, and output hash. Success requires a zero return code and an output file; it does not imply image equality.</p>
+<p>5</p>
+<h2 id="derive-a-target-specific-profile-and-compare">Derive a target-specific profile and compare</h2>
+<pre><code>x86decomp image-profile target.exe config/image-profile.json
+x86decomp image-match target.exe build/reconstructed.exe --profile config/image-profile.json --report reports/image-match.json
+</code></pre>
+<p>The image matcher reports raw exact identity separately from profile-normalized identity. Normalization is explicit and target-specific; it must not be described as byte-identical.</p>
+<p>6</p>
+<h2 id="analyze-differences-and-append-history">Analyze differences and append history</h2>
+<pre><code>x86decomp convergence-analyze target.exe build/reconstructed.exe --profile config/image-profile.json --report reports/convergence-001.json --history reports/convergence-history.json
+x86decomp convergence-analyze target.exe build/reconstructed-002.exe --profile config/image-profile.json --previous reports/convergence-001.json --report reports/convergence-002.json --history reports/convergence-history.json
+</code></pre>
+<p>The analyzer groups section differences, compares with a previous report, emits next-step recommendations, and appends history. Its <code>complete</code> condition is raw exact match; recommendations are diagnostic, not proof of root cause.</p>
+<p>7</p>
+<h2 id="advance-matching-status-only-when-policy-passes">Advance matching status only when policy passes</h2>
+<pre><code>x86decomp workflow-update project pe-rva:00401230 --matching-status image_integrated --report-kind image-match --report-path reports/image-match.json
+x86decomp workflow-update project pe-rva:00401230 --matching-status full_relink_validated --report-kind convergence --report-path reports/convergence-002.json
+</code></pre>
+<blockquote>
+<p><strong>State recording is separate.</strong> Validators emit reports, but they do not automatically promote a function workflow. Inspect a passing report first, then use <code>workflow-update</code> to attach that report and record the justified status.</p>
+</blockquote>
+<h2 id="truth-boundary">Truth boundary</h2>
+<ul>
+<li>A successful linker invocation is not a matching image.</li>
+<li>A normalized match is not raw identity.</li>
+<li>A linker plan preserves unresolved fields and cannot recover erased flags without evidence.</li>
+<li>Whole-image equality does not authenticate original source or prove behavior for every runtime input.</li>
+</ul>
+<h2 id="v078-source-basis">v0.7.8 source basis</h2>
+<blockquote>
+<p><strong>Verification model.</strong> Command syntax is checked against the live parser. The source files below are hashed from the current release; implementation and test rows are retained as independent truth boundaries.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Evidence file</th>
+<th>SHA-256</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>src/x86decomp/cli.py</code></td>
+<td><code>21e0654ced2f5dd0588adcbedec328613fba524ff1e0a91ef07d63cbbf88288c</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/linker_reconstruction.py</code></td>
+<td><code>f67bc3077e7d54a9a32e542113cc28eadf00fa581c8e3d3c26e5c1b45a4e0900</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/relink.py</code></td>
+<td><code>d401db042d4cc8300ccd4babd28cea400dca824d187a7caf0a1f3ead407fb296</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/image_match.py</code></td>
+<td><code>a9c72f376532369da77440496a1ea07564da5071ef8e6108e29c58e33e96fcf4</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/convergence.py</code></td>
+<td><code>2b943e9c8c2399089e1b8c2815c0de4cb1bcf0468c09e64a647fef3508922f74</code></td>
+</tr>
+<tr>
+<td><code>tests/test_relink.py</code></td>
+<td><code>580ca742c9d4f1d53de889f6f6bc5800e04147a31d86f0424a6d7a7252cefbb1</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="related-examples">Related examples</h2>
+<p>[Matching project</p>
+<p>Open the source-verified workflow.](matching-project.md)[Functional project</p>
+<p>Open the source-verified workflow.](functional-project.md)[Hybrid composition</p>
+<p>Open the source-verified workflow.](hybrid-project.md)</p></p>
+    </article>
+</section>
+            <!-- endblock -->
+
+            <!-- block footer -->
+                <footer>
+    <div class="d-flex flex-sm-row justify-content-between py-2 border-top drac-text-black drac-bg-cyan-green">
+        <a href="https://github.com/dracula/mkdocs" target="_blank" style="padding-left: 1%;"
+            class="footer-text drac-anchor drac-text-black drac-text-purple--hover">
+            Made with Dracula Theme for MkDocs
+        </a>
+    </div>
+</footer>
+            <!-- endblock -->
+        </div>
+
+    </main>
+
+        <script>var base_url = '../..';</script>
+        <script src="../../assets/js/jquery-3.3.1.slim.min.js"></script>
+        <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+        <script src="../../assets/js/mkdocs.js"></script>
+			<script src="../../search/main.js" defer></script>
+
+</body>
+
+</html>

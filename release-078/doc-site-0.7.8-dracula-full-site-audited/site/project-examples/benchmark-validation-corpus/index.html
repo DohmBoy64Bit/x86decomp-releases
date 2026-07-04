@@ -1,0 +1,512 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+        <title>Example: benchmark and validation-corpus project - x86decomp 0.7.8 Docs</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        
+        
+        
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="../../assets/css/darcula-highlight.min.css">
+
+        <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../assets/css/dracula-ui.min.css">
+        <link rel="stylesheet" href="../../assets/css/mkdocs.min.css">
+            <link href="../../assets/x86decomp-dracula-overrides.css" rel="stylesheet">
+
+        
+            <link  rel="icon" type="image/x-icon" href="../../assets/img/favicon.ico">
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+                <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+
+<body class="drac-bg-black-secondary drac-text-grey-ternary drac-text drac-scrollbar-purple">
+
+    <main class="d-flex">
+
+        <!-- block sidebar -->
+            <nav id="sidebar" class="sidebar drac-bg-black">
+    <div class="custom-menu">
+        <button type="button" id="sidebarCollapse" class="btn btn-primary">
+            <i class="fa fa-bars"></i>
+            <span class="sr-only">Menu</span>
+        </button>
+    </div>
+
+    <div class="p-4">
+        
+
+        <div class="drac-text-center">
+            
+                <span class="drac-text drac-line-height drac-text-white">x86decomp 0.7.8 Docs</span>
+            
+        </div>
+
+        <div class="drac-box flex-column">
+            <ul class="dot-ul">
+                <li><div class="dot-li drac-bg-cyan"></div></li>
+                <li><div class="dot-li drac-bg-green"></div></li>
+                <li><div class="dot-li drac-bg-orange"></div></li>
+                <li><div class="dot-li drac-bg-pink"></div></li>
+                <li><div class="dot-li drac-bg-purple"></div></li>
+                <li><div class="dot-li drac-bg-red"></div></li>
+                <li><div class="dot-li drac-bg-yellow"></div></li>
+            </ul>
+        </div>
+
+        <hr class="drac-divider" />
+
+        <!-- block menu -->
+        <ul class="mb-5 drac-list drac-list-none">
+            
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Home
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../../getting-started/"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Getting Started
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#workflows-collapse" aria-expanded="false">
+                    Workflows
+                </a>
+                <div class="collapse" id="workflows-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../workflows/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Workflow Guide
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../local-llm/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Local LLM C Generation
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../decompilation-acceleration/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Decompilation Acceleration
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Project Examples
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#reference-collapse" aria-expanded="false">
+                    Reference
+                </a>
+                <div class="collapse" id="reference-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../reference/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../architecture/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Architecture
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../commands/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Commands
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../release-artifacts/COMMAND_REFERENCE_STRICT_AUDIT/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Command Audit
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../schemas/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Schemas
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../integrations/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Integrations
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../features/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Source Modules
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../functions/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Function Index
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../tests/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Tests
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#release-evidence-collapse" aria-expanded="false">
+                    Release Evidence
+                </a>
+                <div class="collapse" id="release-evidence-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../release-evidence/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../verification/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Verification
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../source-coverage/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Source Coverage
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../changelog/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Changelog
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../about/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            About
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <!-- endblock -->
+    </div>
+</nav>
+        <!-- endblock -->
+
+        <nav class="divider drac-bg-purple-cyan"></nav>
+
+        <div class="content">
+            <!-- block header -->
+                <header>
+    <nav class="navbar navbar-expand-xl drac-bg-purple">
+        <div class="container-fluid">
+            
+            <button class="navbar-toggler w-100 text-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMenu"
+                aria-controls="navbarsMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse flex-column ml-auto" id="navbarsMenu">
+                <ul class="navbar-nav text-md-center">
+
+                    <!-- block preview -->
+                    <li class="nav-item">
+                            
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block search -->
+                    <li class="nav-item"><div role="search" class="search-box">
+	<form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+		<input type="text" name="q" class="drac-input drac-input-search drac-input-white drac-text-white drac-bg-black-secondary"
+		placeholder="Search docs" title="Type search term here" />
+	</form>
+</div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block source -->
+                    <li class="nav-item">
+                        
+                    </li>
+                    <!--  endblock -->
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+</header>
+            <!-- endblock -->
+
+            <!-- block content -->
+                <section class="p-md-5 section-content">
+    <article>
+        <p><p><a id="model"></a>
+<a id="benchmark-validation-corpus-flow-title"></a>
+<a id="benchmark-validation-corpus-flow-desc"></a>
+<a id="arrow-benchmark-validation-corpus"></a>
+<a id="benchmark-validation-corpus-flow-caption"></a>
+<a id="synthetic"></a>
+<a id="ground"></a>
+<a id="manifest"></a>
+<a id="run"></a>
+<a id="compare"></a>
+<a id="bundle"></a>
+<a id="limits"></a>
+<a id="source-basis"></a></p>
+<p>Section: Project examples</p>
+<h1 id="example-benchmark-and-validation-corpus-project">Example: benchmark and validation-corpus project</h1>
+<p>Generate or build controlled corpora, run byte, dynamic, symbolic, integration, and analysis cases, preserve human-intervention counts, and compare reproducible reports.</p>
+<blockquote>
+<p><strong>Example notation.</strong> Paths and function identifiers are representative local names. Commands and options are exact v0.7.8 parser forms; target-specific hashes, addresses, profiles, reports, and passing outcomes must come from the actual project.</p>
+<p><strong>Classification.</strong> This is an evaluation workflow for the toolkit, validators, compilers, or methods—not an additional decompilation mode.</p>
+</blockquote>
+<p><strong>On this page</strong></p>
+<ol>
+<li><a href="#model">Benchmark model</a></li>
+<li><a href="#synthetic">Generate source corpus</a></li>
+<li><a href="#ground">Build ground truth</a></li>
+<li><a href="#manifest">Define cases</a></li>
+<li><a href="#run">Run benchmark</a></li>
+<li><a href="#compare">Compare reports</a></li>
+<li><a href="#bundle">Create authorized bundle</a></li>
+<li><a href="#limits">Truth boundary</a></li>
+<li><a href="#source-basis">Source basis</a></li>
+</ol>
+<h2 id="benchmark-model">Benchmark model</h2>
+<p>Each result remains tied to its case kind, bounds, inputs, and recorded human interventions.Known cases → Hash identities → Byte cases → Dynamic cases → Symbolic cases → Integration cases → Aggregate report</p>
+<p>Known casesHash identitiesByte casesDynamic casesSymbolic casesIntegration casesAggregate report</p>
+<p>Each result remains tied to its case kind, bounds, inputs, and recorded human interventions.</p>
+<pre><code class="language-ascii-fallback">Known cases → Hash identities → Byte cases → Dynamic cases → Symbolic cases → Integration cases → Aggregate report
+</code></pre>
+<p>1</p>
+<h2 id="generate-and-verify-deterministic-cc-sources">Generate and verify deterministic C/C++ sources</h2>
+<pre><code>x86decomp corpus-generate build/generated-corpus --cases-per-family 8 --seed 0x86DEC0DE --report reports/generated-corpus.json
+x86decomp corpus-generated-verify reports/generated-corpus.json
+</code></pre>
+<p>Generation is deterministic for the declared options and records source identities. It does not claim that any compiler built those files or that the generated sources correspond to an original program.</p>
+<p>2</p>
+<h2 id="build-compilerversion-ground-truth">Build compiler/version ground truth</h2>
+<pre><code>x86decomp corpus-create-manifest . build/ground-truth-manifest.json
+x86decomp corpus-build build/ground-truth-manifest.json build/ground-truth --report reports/ground-truth.json
+x86decomp corpus-verify reports/ground-truth.json
+</code></pre>
+<p>A ground-truth report binds known sources, profiles, tool identities, and output hashes. Use it to compare controlled compiler behavior, not to infer unknown historical provenance without independent evidence.</p>
+<p>3</p>
+<h2 id="define-heterogeneous-benchmark-cases">Define heterogeneous benchmark cases</h2>
+<p>The bundled benchmark manifest demonstrates exact bytes, one concrete Unicorn harness, one bounded symbolic case, and one process integration scenario:</p>
+<pre><code>{
+  &quot;schema_version&quot;: 1,
+  &quot;name&quot;: &quot;bounded-add-demo&quot;,
+  &quot;cases&quot;: [
+    {
+      &quot;id&quot;: &quot;exact-byte-pair&quot;,
+      &quot;kind&quot;: &quot;byte_pair&quot;,
+      &quot;target&quot;: &quot;../validators/add_stack_target.bin&quot;,
+      &quot;candidate&quot;: &quot;../validators/add_stack_candidate.bin&quot;,
+      &quot;human_interventions&quot;: 0
+    },
+    {
+      &quot;id&quot;: &quot;unicorn-one-input&quot;,
+      &quot;kind&quot;: &quot;dynamic&quot;,
+      &quot;target&quot;: &quot;../validators/add_stack_target.bin&quot;,
+      &quot;candidate&quot;: &quot;../validators/add_stack_candidate.bin&quot;,
+      &quot;harness&quot;: &quot;../validators/add_stack_harness.json&quot;,
+      &quot;human_interventions&quot;: 1
+    },
+    {
+      &quot;id&quot;: &quot;z3-bounded-all-inputs&quot;,
+      &quot;kind&quot;: &quot;symbolic&quot;,
+      &quot;target&quot;: &quot;../validators/add_stack_target.bin&quot;,
+      &quot;candidate&quot;: &quot;../validators/add_stack_candidate.bin&quot;,
+      &quot;architecture&quot;: &quot;x86&quot;,
+      &quot;stack_argument_words&quot;: 2,
+      &quot;output_registers&quot;: [
+        &quot;eax&quot;
+      ],
+      &quot;max_steps&quot;: 100,
+      &quot;max_paths&quot;: 8,
+      &quot;human_interventions&quot;: 1
+    },
+    {
+      &quot;id&quot;: &quot;process-integration-one-scenario&quot;,
+      &quot;kind&quot;: &quot;integration&quot;,
+      &quot;manifest&quot;: &quot;../integration/bounded-demo.json&quot;,
+      &quot;allow_host_execution&quot;: true,
+      &quot;human_interventions&quot;: 1
+    }
+  ]
+}
+</code></pre>
+<p>Every case can record <code>human_interventions</code>. Do not erase manual effort when comparing methods.</p>
+<p>4</p>
+<h2 id="run-and-preserve-the-aggregate-report">Run and preserve the aggregate report</h2>
+<pre><code>x86decomp benchmark-run examples/benchmarks/bounded-demo.json --report reports/benchmark-bounded-demo.json
+</code></pre>
+<p>The runner dispatches by case kind and aggregates outcomes. The bundled demo’s integration case sets <code>allow_host_execution</code> to true and its manifest uses <code>host_explicit</code>; it is a controlled Python demo, not a safe template for unknown native code. Use an <code>external_wrapper</code> boundary and leave host execution disabled for untrusted targets. Interpret each case using its underlying validator’s truth boundary; aggregate pass counts do not broaden those claims.</p>
+<p>5</p>
+<h2 id="compare-corpus-outputs-across-known-builds">Compare corpus outputs across known builds</h2>
+<pre><code>x86decomp corpus-compare reports/gcc-12-ground-truth.json reports/gcc-13-ground-truth.json --report reports/ground-truth-comparison.json
+</code></pre>
+<p>Cross-report comparison shows measured identity and output differences between the supplied known reports. It does not establish semantic equivalence.</p>
+<p>6</p>
+<h2 id="create-a-hash-sealed-authorized-static-test-bundle">Create a hash-sealed authorized static test bundle</h2>
+<pre><code>x86decomp test-bundle-create build/authorized-test-bundle.zip --artifact primary_image=authorized/target.exe --artifact pdb=authorized/target.pdb --authorization &quot;I own these artifacts or have permission to analyze them.&quot; --name regression-target --description &quot;Static regression corpus&quot; --expected-architecture x86
+x86decomp test-bundle-inspect build/authorized-test-bundle.zip --report reports/test-bundle-inspection.json
+</code></pre>
+<p>Creation records authorization and hashes. Inspection uses safe extraction, verifies hashes, and performs static inspection. A successful inspection is not malware clearance or semantic equivalence.</p>
+<h2 id="benchmark-truth-boundary">Benchmark truth boundary</h2>
+<ul>
+<li>Do not merge byte, dynamic, symbolic, and integration passes into a stronger universal claim.</li>
+<li>Report case counts, completed and failed counts, per-case errors, validator bounds, tool identities from the underlying reports, and human interventions. The benchmark aggregate does not define separate skip or blocked counters.</li>
+<li>Generated-source reproducibility is not compiler-output reproducibility until a build report exists.</li>
+<li>Static bundle inspection is not permission to execute the contained target.</li>
+</ul>
+<h2 id="v078-source-basis">v0.7.8 source basis</h2>
+<blockquote>
+<p><strong>Verification model.</strong> Command syntax is checked against the live parser. The source files below are hashed from the current release; implementation and test rows are retained as independent truth boundaries.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Evidence file</th>
+<th>SHA-256</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>src/x86decomp/cli.py</code></td>
+<td><code>21e0654ced2f5dd0588adcbedec328613fba524ff1e0a91ef07d63cbbf88288c</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/benchmarks.py</code></td>
+<td><code>b9b28fbcb2f38723b274e4150b1c3914ddcbceab1b49461fc5797a84f9e13fb3</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/ground_truth.py</code></td>
+<td><code>9684fbcda0fd5060b3c1f2d0efb83892900c69190d33e24fd7e49f91885181e2</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/dynamic.py</code></td>
+<td><code>a09cbba16f498158cf30191397884f0a70051c767b778cd520ac229b6e85e451</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/symbolic.py</code></td>
+<td><code>93d98f6e85a01a107881131821d5eb04875d310795c4f173448918c5a96fdcd3</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/integration.py</code></td>
+<td><code>cb8157c8210544e2ed4730e8bdb01f0a77dc9d05f683d43154cba1bf93c1e845</code></td>
+</tr>
+<tr>
+<td><code>tests/test_linker_metadata_corpus.py</code></td>
+<td><code>aa88771eecf6bbd2a6fcc6230848165884fea583b48688061d61c14756f9a1de</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="related-examples">Related examples</h2>
+<p>[Matching project</p>
+<p>Open the source-verified workflow.](matching-project.md)[Functional project</p>
+<p>Open the source-verified workflow.](functional-project.md)[Hybrid composition</p>
+<p>Open the source-verified workflow.](hybrid-project.md)</p></p>
+    </article>
+</section>
+            <!-- endblock -->
+
+            <!-- block footer -->
+                <footer>
+    <div class="d-flex flex-sm-row justify-content-between py-2 border-top drac-text-black drac-bg-cyan-green">
+        <a href="https://github.com/dracula/mkdocs" target="_blank" style="padding-left: 1%;"
+            class="footer-text drac-anchor drac-text-black drac-text-purple--hover">
+            Made with Dracula Theme for MkDocs
+        </a>
+    </div>
+</footer>
+            <!-- endblock -->
+        </div>
+
+    </main>
+
+        <script>var base_url = '../..';</script>
+        <script src="../../assets/js/jquery-3.3.1.slim.min.js"></script>
+        <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+        <script src="../../assets/js/mkdocs.js"></script>
+			<script src="../../search/main.js" defer></script>
+
+</body>
+
+</html>

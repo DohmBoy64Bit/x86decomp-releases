@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+        <title>test-suite/src/x86decomp_testkit/toolkit_tests/test_public_api_contract.py - x86decomp 0.7.8 Docs</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        
+        
+        
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="../../assets/css/darcula-highlight.min.css">
+
+        <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../assets/css/dracula-ui.min.css">
+        <link rel="stylesheet" href="../../assets/css/mkdocs.min.css">
+            <link href="../../assets/x86decomp-dracula-overrides.css" rel="stylesheet">
+
+        
+            <link  rel="icon" type="image/x-icon" href="../../assets/img/favicon.ico">
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+                <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+
+<body class="drac-bg-black-secondary drac-text-grey-ternary drac-text drac-scrollbar-purple">
+
+    <main class="d-flex">
+
+        <!-- block sidebar -->
+            <nav id="sidebar" class="sidebar drac-bg-black">
+    <div class="custom-menu">
+        <button type="button" id="sidebarCollapse" class="btn btn-primary">
+            <i class="fa fa-bars"></i>
+            <span class="sr-only">Menu</span>
+        </button>
+    </div>
+
+    <div class="p-4">
+        
+
+        <div class="drac-text-center">
+            
+                <span class="drac-text drac-line-height drac-text-white">x86decomp 0.7.8 Docs</span>
+            
+        </div>
+
+        <div class="drac-box flex-column">
+            <ul class="dot-ul">
+                <li><div class="dot-li drac-bg-cyan"></div></li>
+                <li><div class="dot-li drac-bg-green"></div></li>
+                <li><div class="dot-li drac-bg-orange"></div></li>
+                <li><div class="dot-li drac-bg-pink"></div></li>
+                <li><div class="dot-li drac-bg-purple"></div></li>
+                <li><div class="dot-li drac-bg-red"></div></li>
+                <li><div class="dot-li drac-bg-yellow"></div></li>
+            </ul>
+        </div>
+
+        <hr class="drac-divider" />
+
+        <!-- block menu -->
+        <ul class="mb-5 drac-list drac-list-none">
+            
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Home
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../../getting-started/"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Getting Started
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#workflows-collapse" aria-expanded="false">
+                    Workflows
+                </a>
+                <div class="collapse" id="workflows-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../workflows/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Workflow Guide
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../local-llm/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Local LLM C Generation
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../decompilation-acceleration/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Decompilation Acceleration
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../project-examples/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Project Examples
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#reference-collapse" aria-expanded="false">
+                    Reference
+                </a>
+                <div class="collapse" id="reference-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../reference/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../architecture/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Architecture
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../commands/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Commands
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../release-artifacts/COMMAND_REFERENCE_STRICT_AUDIT/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Command Audit
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../schemas/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Schemas
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../integrations/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Integrations
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../features/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Source Modules
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../functions/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Function Index
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Tests
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#release-evidence-collapse" aria-expanded="false">
+                    Release Evidence
+                </a>
+                <div class="collapse" id="release-evidence-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../release-evidence/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../verification/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Verification
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../source-coverage/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Source Coverage
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../changelog/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Changelog
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../about/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            About
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <!-- endblock -->
+    </div>
+</nav>
+        <!-- endblock -->
+
+        <nav class="divider drac-bg-purple-cyan"></nav>
+
+        <div class="content">
+            <!-- block header -->
+                <header>
+    <nav class="navbar navbar-expand-xl drac-bg-purple">
+        <div class="container-fluid">
+            
+            <button class="navbar-toggler w-100 text-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMenu"
+                aria-controls="navbarsMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse flex-column ml-auto" id="navbarsMenu">
+                <ul class="navbar-nav text-md-center">
+
+                    <!-- block preview -->
+                    <li class="nav-item">
+                            
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block search -->
+                    <li class="nav-item"><div role="search" class="search-box">
+	<form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+		<input type="text" name="q" class="drac-input drac-input-search drac-input-white drac-text-white drac-bg-black-secondary"
+		placeholder="Search docs" title="Type search term here" />
+	</form>
+</div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block source -->
+                    <li class="nav-item">
+                        
+                    </li>
+                    <!--  endblock -->
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+</header>
+            <!-- endblock -->
+
+            <!-- block content -->
+                <section class="p-md-5 section-content">
+    <article>
+        <p><h1 id="test-suitesrcx86decomp_testkittoolkit_teststest_public_api_contractpy"><code>test-suite/src/x86decomp_testkit/toolkit_tests/test_public_api_contract.py</code></h1>
+<p><strong>Collected nodes:</strong> 21<br />
+<strong>Source SHA-256:</strong> <code>7b6ccbb1f762b12ed3139d0188e36e5d29810248dd98d89b19a3e95fcf4ae27a</code></p>
+<blockquote>
+<p>Node identifiers, source lines, docstrings, and direct call names are extracted from pytest collection and the source AST. No behavior is inferred when a test has no docstring.</p>
+</blockquote>
+<h2 id="test_unified_canonical_entry_point"><code>test_unified_canonical_entry_point</code></h2>
+<p>No test docstring is declared.</p>
+<p><strong>Direct call names in source:</strong> <code>canonical.build_parser</code>, <code>canonical.main</code>, <code>capsys.readouterr</code>, <code>json.loads</code>, <code>parser.parse_args</code><br />
+<strong>Node ID:</strong> <code>src/x86decomp_testkit/toolkit_tests/test_public_api_contract.py::test_unified_canonical_entry_point</code><br />
+<strong>Area:</strong> Bundled public contract<br />
+<strong>Source line:</strong> 75</p>
+<h2 id="test_abi_contract_loading"><code>test_abi_contract_loading</code></h2>
+<p>No test docstring is declared.</p>
+<p><strong>Direct call names in source:</strong> <code>ABIContract.from_dict</code>, <code>load_abi_contract</code>, <code>write_json</code><br />
+<strong>Node ID:</strong> <code>src/x86decomp_testkit/toolkit_tests/test_public_api_contract.py::test_abi_contract_loading</code><br />
+<strong>Area:</strong> Bundled public contract<br />
+<strong>Source line:</strong> 88</p>
+<h2 id="test_analysis_database_complete_public_surface"><code>test_analysis_database_complete_public_surface</code></h2>
+<p>No test docstring is declared.</p>
+<p><strong>Direct call names in source:</strong> <code>(artifact / 'references.jsonl').write_text</code>, <code>AnalysisDatabase</code>, <code>any</code>, <code>artifact.mkdir</code>, <code>database.add_reference</code>, <code>database.ingest_function_artifact</code>, <code>database.query</code>, <code>database.upsert_entity</code>, <code>json.dumps</code>, <code>write_json</code><br />
+<strong>Node ID:</strong> <code>src/x86decomp_testkit/toolkit_tests/test_public_api_contract.py::test_analysis_database_complete_public_surface</code><br />
+<strong>Area:</strong> Bundled public contract<br />
+<strong>Source line:</strong> 107</p>
+<h2 id="test_angr_public_file_wrappers"><code>test_angr_public_file_wrappers</code></h2>
+<p>No test docstring is declared.</p>
+<p><strong>Direct call names in source:</strong> <code>angr_bounded_compare</code>, <code>angr_bounded_compare_files</code>, <code>angr_memory_alias_compare_files</code>, <code>candidate.read_bytes</code>, <code>candidate.write_bytes</code>, <code>target.read_bytes</code>, <code>target.write_bytes</code>, <code>write_json</code><br />
+<strong>Node ID:</strong> <code>src/x86decomp_testkit/toolkit_tests/test_public_api_contract.py::test_angr_public_file_wrappers</code><br />
+<strong>Area:</strong> Bundled public contract<br />
+<strong>Source line:</strong> 135</p>
+<h2 id="test_benchmark_metrics_and_runner"><code>test_benchmark_metrics_and_runner</code></h2>
+<p>No test docstring is declared.</p>
+<p><strong>Direct call names in source:</strong> <code>candidate.write_bytes</code>, <code>classification_metrics</code>, <code>run_benchmark_corpus</code>, <code>target.write_bytes</code>, <code>write_json</code><br />
+<strong>Node ID:</strong> <code>src/x86decomp_testkit/toolkit_tests/test_public_api_contract.py::test_benchmark_metrics_and_runner</code><br />
+<strong>Area:</strong> Bundled public contract<br />
+<strong>Source line:</strong> 157</p>
+<h2 id="test_coff_remaining_value_objects_and_writer"><code>test_coff_remaining_value_objects_and_writer</code></h2>
+<p>No test docstring is declared.</p>
+<p><strong>Direct call names in source:</strong> <code>FunctionDefinitionAux</code>, <code>FunctionDefinitionAux(1, 2, 3, 4).to_dict</code>, <code>RawAux</code>, <code>RawAux('00').to_dict</code>, <code>SyntheticSectionSpec</code>, <code>SyntheticSymbolSpec</code>, <code>build_synthetic_coff</code>, <code>extract_symbol</code>, <code>extracted.to_dict</code>, <code>obj.find_symbols</code>, <code>obj.symbol_by_index</code>, <code>parse_coff_bytes</code>, <code>synthetic_symbol_indices</code>, <code>write_synthetic_coff_object</code><br />
+<strong>Node ID:</strong> <code>src/x86decomp_testkit/toolkit_tests/test_public_api_contract.py::test_coff_remaining_value_objects_and_writer</code><br />
+<strong>Area:</strong> Bundled public contract<br />
+<strong>Source line:</strong> 172</p>
+<h2 id="test_compiler_lab_with_deterministic_fake_compiler"><code>test_compiler_lab_with_deterministic_fake_compiler</code></h2>
+<p>No test docstring is declared.</p>
+<p><strong>Direct call names in source:</strong> <code>compiler.write_text</code>, <code>run_compiler_lab</code>, <code>source.write_text</code>, <code>str</code>, <code>write_json</code><br />
+<strong>Node ID:</strong> <code>src/x86decomp_testkit/toolkit_tests/test_public_api_contract.py::test_compiler_lab_with_deterministic_fake_compiler</code><br />
+<strong>Area:</strong> Bundled public contract<br />
+<strong>Source line:</strong> 190</p>
+<h2 id="test_diff_disassembly_and_crosscheck"><code>test_diff_disassembly_and_crosscheck</code></h2>
+<p>No test docstring is declared.</p>
+<p><strong>Direct call names in source:</strong> <code>'\n'.join</code>, <code>compare_files</code>, <code>compare_instruction_streams</code>, <code>control_flow_edges</code>, <code>cross_check_ghidra_instructions</code>, <code>decode_instructions</code>, <code>ghidra.write_text</code>, <code>isinstance</code>, <code>json.dumps</code>, <code>left.write_bytes</code>, <code>len</code>, <code>records[0].to_dict</code>, <code>right.write_bytes</code><br />
+<strong>Node ID:</strong> <code>src/x86decomp_testkit/toolkit_tests/test_public_api_contract.py::test_diff_disassembly_and_crosscheck</code><br />
+<strong>Area:</strong> Bundled public contract<br />
+<strong>Source line:</strong> 225</p>
+<h2 id="test_dynamic_file_wrapper_and_spec_loader"><code>test_dynamic_file_wrapper_and_spec_loader</code></h2>
+<p>No test docstring is declared.</p>
+<p><strong>Direct call names in source:</strong> <code>3 .to_bytes</code>, <code>3 .to_bytes(4, 'little').hex</code>, <code>4 .to_bytes</code>, <code>4 .to_bytes(4, 'little').hex</code>, <code>candidate.write_bytes</code>, <code>differential_validate_files</code>, <code>load_execution_spec</code>, <code>target.write_bytes</code>, <code>write_json</code><br />
+<strong>Node ID:</strong> <code>src/x86decomp_testkit/toolkit_tests/test_public_api_contract.py::test_dynamic_file_wrapper_and_spec_loader</code><br />
+<strong>Area:</strong> Bundled public contract<br />
+<strong>Source line:</strong> 241</p>
+<h2 id="test_dynamorio_runner_with_fake_subprocess"><code>test_dynamorio_runner_with_fake_subprocess</code></h2>
+<p>No test docstring is declared.</p>
+<p><strong>Direct call names in source:</strong> <code>(logdir / 'trace.log').write_text</code>, <code>Path</code>, <code>SimpleNamespace</code>, <code>command.index</code>, <code>drrun.chmod</code>, <code>drrun.stat</code>, <code>drrun.write_bytes</code>, <code>executable.write_bytes</code>, <code>monkeypatch.setattr</code>, <code>run_drcov_trace</code><br />
+<strong>Node ID:</strong> <code>src/x86decomp_testkit/toolkit_tests/test_public_api_contract.py::test_dynamorio_runner_with_fake_subprocess</code><br />
+<strong>Area:</strong> Bundled public contract<br />
+<strong>Source line:</strong> 260</p>
+<h2 id="test_evidence_contradiction_require_verified_and_project_memory"><code>test_evidence_contradiction_require_verified_and_project_memory</code></h2>
+<p>No test docstring is declared.</p>
+<p><strong>Direct call names in source:</strong> <code>ProjectMemory</code>, <code>ProjectMemory(project).require_valid</code>, <code>_verified_store</code>, <code>build_minimal_pe32</code>, <code>initialize_project</code>, <code>require_valid_project</code>, <code>store.add_contradiction</code>, <code>store.add_evidence</code>, <code>store.require_verified</code><br />
+<strong>Node ID:</strong> <code>src/x86decomp_testkit/toolkit_tests/test_public_api_contract.py::test_evidence_contradiction_require_verified_and_project_memory</code><br />
+<strong>Area:</strong> Bundled public contract<br />
+<strong>Source line:</strong> 296</p>
+<h2 id="test_exe_diff_extract_and_compare"><code>test_exe_diff_extract_and_compare</code></h2>
+<p>No test docstring is declared.</p>
+<p><strong>Direct call names in source:</strong> <code>build_minimal_pe32</code>, <code>build_synthetic_coff</code>, <code>coff_path.write_bytes</code>, <code>compare_pe_function_to_coff_symbol</code>, <code>extract_pe_bytes</code>, <code>len</code><br />
+<strong>Node ID:</strong> <code>src/x86decomp_testkit/toolkit_tests/test_public_api_contract.py::test_exe_diff_extract_and_compare</code><br />
+<strong>Area:</strong> Bundled public contract<br />
+<strong>Source line:</strong> 307</p>
+<h2 id="test_ghidra_run_export_success"><code>test_ghidra_run_export_success</code></h2>
+<p>No test docstring is declared.</p>
+<p><strong>Direct call names in source:</strong> <code>SimpleNamespace</code>, <code>monkeypatch.setattr</code>, <code>run_export</code><br />
+<strong>Node ID:</strong> <code>src/x86decomp_testkit/toolkit_tests/test_public_api_contract.py::test_ghidra_run_export_success</code><br />
+<strong>Area:</strong> Bundled public contract<br />
+<strong>Source line:</strong> 318</p>
+<h2 id="test_remaining_value_objects_and_peview"><code>test_remaining_value_objects_and_peview</code></h2>
+<p>No test docstring is declared.</p>
+<p><strong>Direct call names in source:</strong> <code>DelayImportLibrary</code>, <code>DelayImportLibrary('x.dll', 1, 2, (symbol,)).to_dict</code>, <code>ExportSymbol</code>, <code>ExportSymbol('f', 1, 4096, None).to_dict</code>, <code>ImportLibrary</code>, <code>ImportLibrary('x.dll', (symbol,)).to_dict</code>, <code>ImportSymbol</code>, <code>LoadConfigInfo</code>, <code>MapContribution</code>, <code>MapContribution(1, 2, 3, 'a.obj').to_dict</code>, <code>PEView</code>, <code>ResourceLeaf</code>, <code>ResourceLeaf(('type', '1'), 8192, 3, 0, 'a' * 64).to_dict</code>, <code>TLS64Info</code>, <code>TLS64Info(1, 2, 3, 4, 0, 0, (5,)).to_dict</code>, <code>TLSInfo</code>, <code>TLSInfo(1, 2, 3, 4, 0, 0, (5,)).to_dict</code>, <code>build_minimal_pe32</code>, <code>load.to_dict</code>, <code>symbol.to_dict</code>, <code>view.u16</code><br />
+<strong>Node ID:</strong> <code>src/x86decomp_testkit/toolkit_tests/test_public_api_contract.py::test_remaining_value_objects_and_peview</code><br />
+<strong>Area:</strong> Bundled public contract<br />
+<strong>Source line:</strong> 326</p>
+<h2 id="test_service_create_and_run"><code>test_service_create_and_run</code></h2>
+<p>No test docstring is declared.</p>
+<p><strong>Direct call names in source:</strong> <code>any</code>, <code>build_minimal_pe32</code>, <code>calls.append</code>, <code>create_app</code>, <code>initialize_project</code>, <code>monkeypatch.setattr</code>, <code>run_service</code><br />
+<strong>Node ID:</strong> <code>src/x86decomp_testkit/toolkit_tests/test_public_api_contract.py::test_service_create_and_run</code><br />
+<strong>Area:</strong> Bundled public contract<br />
+<strong>Source line:</strong> 343</p>
+<h2 id="test_symbolic_clone_and_file_wrapper"><code>test_symbolic_clone_and_file_wrapper</code></h2>
+<p>No test docstring is declared.</p>
+<p><strong>Direct call names in source:</strong> <code>SymState</code>, <code>bounded_symbolic_compare_files</code>, <code>candidate.write_bytes</code>, <code>state.clone</code>, <code>target.write_bytes</code>, <code>z3.BitVecVal</code><br />
+<strong>Node ID:</strong> <code>src/x86decomp_testkit/toolkit_tests/test_public_api_contract.py::test_symbolic_clone_and_file_wrapper</code><br />
+<strong>Area:</strong> Bundled public contract<br />
+<strong>Source line:</strong> 354</p>
+<h2 id="test_toolchain_snapshot_util_contract_and_workqueue"><code>test_toolchain_snapshot_util_contract_and_workqueue</code></h2>
+<p>No test docstring is declared.</p>
+<p><strong>Direct call names in source:</strong> <code>Path</code>, <code>Path(sys.executable).read_bytes</code>, <code>WorkQueue</code>, <code>executable.chmod</code>, <code>executable.stat</code>, <code>executable.write_bytes</code>, <code>queue.close</code>, <code>queue.create</code>, <code>queue.next</code>, <code>register_toolchain</code>, <code>report_path.is_file</code>, <code>require_int</code>, <code>require_mapping</code>, <code>require_string</code>, <code>snapshot_tools</code>, <code>verify_toolchain</code><br />
+<strong>Node ID:</strong> <code>src/x86decomp_testkit/toolkit_tests/test_public_api_contract.py::test_toolchain_snapshot_util_contract_and_workqueue</code><br />
+<strong>Area:</strong> Bundled public contract<br />
+<strong>Source line:</strong> 369</p>
+<h2 id="test_cli_main_executes_public_entrypoint"><code>test_cli_main_executes_public_entrypoint</code></h2>
+<p>No test docstring is declared.</p>
+<p><strong>Direct call names in source:</strong> <code>capsys.readouterr</code>, <code>cli_main</code>, <code>left.write_bytes</code>, <code>right.write_bytes</code>, <code>str</code><br />
+<strong>Node ID:</strong> <code>src/x86decomp_testkit/toolkit_tests/test_public_api_contract.py::test_cli_main_executes_public_entrypoint</code><br />
+<strong>Area:</strong> Bundled public contract<br />
+<strong>Source line:</strong> 391</p>
+<h2 id="test_streamable_http_mcp_public_methods"><code>test_streamable_http_mcp_public_methods</code></h2>
+<p>No test docstring is declared.</p>
+<p><strong>Direct call names in source:</strong> <code>AssertionError</code>, <code>Headers</code>, <code>Response</code>, <code>StreamableHTTPMCPClient</code>, <code>client.call_tool</code>, <code>client.close</code>, <code>client.initialize</code>, <code>client.list_tools</code>, <code>json.dumps</code>, <code>json.dumps(self.payload).encode</code>, <code>json.loads</code>, <code>key.lower</code>, <code>monkeypatch.setattr</code>, <code>request.data.decode</code><br />
+<strong>Node ID:</strong> <code>src/x86decomp_testkit/toolkit_tests/test_public_api_contract.py::test_streamable_http_mcp_public_methods</code><br />
+<strong>Area:</strong> Bundled public contract<br />
+<strong>Source line:</strong> 400</p>
+<h2 id="test_private_function_surface_regression"><code>test_private_function_surface_regression</code></h2>
+<p>Exercise the remaining internal function bodies so no defined function is omitted.</p>
+<p><strong>Direct call names in source:</strong> <code>SimpleNamespace</code>, <code>_Reader</code>, <code>_Reader(b'hello\x00').c_string</code>, <code>closed.append</code>, <code>coff_archive._long_name</code>, <code>image_match._apply_rebase</code>, <code>isinstance</code>, <code>monkeypatch.setattr</code>, <code>object.__new__</code>, <code>pytest.raises</code>, <code>stdio.__enter__</code>, <code>stdio.__exit__</code>, <code>symbolic.SymState</code>, <code>symbolic._condition</code>, <code>symbolic._is_sat</code>, <code>symbolic._write_memory</code>, <code>toolkit_cli._int</code>, <code>toolkit_cli._json_object</code>, <code>toolkit_cli._mcp_client</code>, <code>z3.BitVecVal</code>, <code>z3.BoolVal</code>, <code>z3.is_false</code>, <code>z3.simplify</code>, <code>z3.simplify(state.memory[4096]).as_long</code><br />
+<strong>Node ID:</strong> <code>src/x86decomp_testkit/toolkit_tests/test_public_api_contract.py::test_private_function_surface_regression</code><br />
+<strong>Area:</strong> Bundled public contract<br />
+<strong>Source line:</strong> 446</p>
+<h2 id="test_remaining_current_function_surface"><code>test_remaining_current_function_surface</code></h2>
+<p>No test docstring is declared.</p>
+<p><strong>Direct call names in source:</strong> <code>PEView</code>, <code>ProjectStateDatabase</code>, <code>StoredArtifact</code>, <code>SupportingArtifact</code>, <code>WorkerLimits</code>, <code>WorkerRequest</code>, <code>_adjustor_thunk_candidate</code>, <code>_container_command</code>, <code>_deterministic_word</code>, <code>_function_prefix</code>, <code>_function_prefix(view, code_rva).startswith</code>, <code>artifact.to_dict</code>, <code>build_minimal_pe32</code>, <code>bytearray</code>, <code>bytes.fromhex</code>, <code>data.read_bytes</code>, <code>data.write_text</code>, <code>database.artifact_digests</code>, <code>database.upsert_artifact_reference</code>, <code>generate_execution_harness_from_files</code>, <code>hashlib.sha256</code>, <code>hashlib.sha256(data.read_bytes()).hexdigest</code>, <code>initial_view.rva_to_offset</code>, <code>manifest.write_text</code>, <code>pe.read_bytes</code>, <code>pe.write_bytes</code>, <code>support.to_dict</code>, <code>verify_release_manifest</code>, <code>write_json</code><br />
+<strong>Node ID:</strong> <code>src/x86decomp_testkit/toolkit_tests/test_public_api_contract.py::test_remaining_current_function_surface</code><br />
+<strong>Area:</strong> Bundled public contract<br />
+<strong>Source line:</strong> 485</p></p>
+    </article>
+</section>
+            <!-- endblock -->
+
+            <!-- block footer -->
+                <footer>
+    <div class="d-flex flex-sm-row justify-content-between py-2 border-top drac-text-black drac-bg-cyan-green">
+        <a href="https://github.com/dracula/mkdocs" target="_blank" style="padding-left: 1%;"
+            class="footer-text drac-anchor drac-text-black drac-text-purple--hover">
+            Made with Dracula Theme for MkDocs
+        </a>
+    </div>
+</footer>
+            <!-- endblock -->
+        </div>
+
+    </main>
+
+        <script>var base_url = '../..';</script>
+        <script src="../../assets/js/jquery-3.3.1.slim.min.js"></script>
+        <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+        <script src="../../assets/js/mkdocs.js"></script>
+			<script src="../../search/main.js" defer></script>
+
+</body>
+
+</html>

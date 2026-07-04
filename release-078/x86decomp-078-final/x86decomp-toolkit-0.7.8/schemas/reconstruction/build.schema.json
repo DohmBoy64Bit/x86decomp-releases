@@ -1,0 +1,40 @@
+{
+  "$id": "https://x86decomp.dev/schemas/reconstruction/build.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "build_id": {
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$",
+      "type": "string"
+    },
+    "generator": {
+      "enum": [
+        "cmake",
+        "make",
+        "ninja",
+        "msvc-project",
+        "response-file"
+      ]
+    },
+    "mode": {
+      "enum": [
+        "historical",
+        "portable"
+      ]
+    },
+    "targets": {
+      "items": {
+        "type": "object"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "build_id",
+    "mode",
+    "generator",
+    "targets"
+  ],
+  "title": "Build reconstruction contract",
+  "type": "object"
+}

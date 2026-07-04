@@ -1,0 +1,2854 @@
+{
+  "copied_original_files": [
+    "FULL_DOCSITE_AUDIT.json",
+    "FULL_DOCSITE_AUDIT.md",
+    "PROJECT_EXAMPLES_SOURCE_AUDIT.json",
+    "PROJECT_EXAMPLES_VERIFICATION.json",
+    "PROJECT_EXAMPLES_VERIFICATION.md",
+    "README.md",
+    "SHA256SUMS.txt",
+    "SITE_VERIFICATION.json",
+    "SOURCE_BUNDLE_SHA256.txt",
+    "assets/app.js",
+    "assets/project-examples.css",
+    "assets/search-index.js",
+    "assets/styles.css",
+    "coverage-manifest.json",
+    "serve.py",
+    "verify_site.py"
+  ],
+  "pages": {
+    "about.html": {
+      "markdown": "docs/about.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "About x86decomp and this site"
+    },
+    "changelog.html": {
+      "markdown": "docs/changelog.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "Changelog"
+    },
+    "commands/abi-check.html": {
+      "markdown": "docs/commands/abi-check.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp abi-check"
+    },
+    "commands/abi.html": {
+      "markdown": "docs/commands/abi.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp abi"
+    },
+    "commands/angr-validate.html": {
+      "markdown": "docs/commands/angr-validate.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp angr-validate"
+    },
+    "commands/artifact-import.html": {
+      "markdown": "docs/commands/artifact-import.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp artifact-import"
+    },
+    "commands/artifact-verify.html": {
+      "markdown": "docs/commands/artifact-verify.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp artifact-verify"
+    },
+    "commands/asm.html": {
+      "markdown": "docs/commands/asm.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp asm"
+    },
+    "commands/benchmark-run.html": {
+      "markdown": "docs/commands/benchmark-run.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp benchmark-run"
+    },
+    "commands/boundary.html": {
+      "markdown": "docs/commands/boundary.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp boundary"
+    },
+    "commands/build.html": {
+      "markdown": "docs/commands/build.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp build"
+    },
+    "commands/campaign.html": {
+      "markdown": "docs/commands/campaign.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp campaign"
+    },
+    "commands/candidate.html": {
+      "markdown": "docs/commands/candidate.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp candidate"
+    },
+    "commands/capsule.html": {
+      "markdown": "docs/commands/capsule.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp capsule"
+    },
+    "commands/changeset.html": {
+      "markdown": "docs/commands/changeset.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp changeset"
+    },
+    "commands/claim-attach.html": {
+      "markdown": "docs/commands/claim-attach.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp claim-attach"
+    },
+    "commands/claim-contradict.html": {
+      "markdown": "docs/commands/claim-contradict.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp claim-contradict"
+    },
+    "commands/claim-create.html": {
+      "markdown": "docs/commands/claim-create.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp claim-create"
+    },
+    "commands/claim-verify.html": {
+      "markdown": "docs/commands/claim-verify.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp claim-verify"
+    },
+    "commands/coff-comdat-resolve.html": {
+      "markdown": "docs/commands/coff-comdat-resolve.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp coff-comdat-resolve"
+    },
+    "commands/coff-extract.html": {
+      "markdown": "docs/commands/coff-extract.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp coff-extract"
+    },
+    "commands/coff-inspect.html": {
+      "markdown": "docs/commands/coff-inspect.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp coff-inspect"
+    },
+    "commands/coff-synthesize.html": {
+      "markdown": "docs/commands/coff-synthesize.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp coff-synthesize"
+    },
+    "commands/commands.html": {
+      "markdown": "docs/commands/commands.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp commands"
+    },
+    "commands/compile-worker.html": {
+      "markdown": "docs/commands/compile-worker.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp compile-worker"
+    },
+    "commands/compile.html": {
+      "markdown": "docs/commands/compile.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp compile"
+    },
+    "commands/compiler-lab.html": {
+      "markdown": "docs/commands/compiler-lab.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp compiler-lab"
+    },
+    "commands/consensus.html": {
+      "markdown": "docs/commands/consensus.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp consensus"
+    },
+    "commands/content-put.html": {
+      "markdown": "docs/commands/content-put.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp content-put"
+    },
+    "commands/content-verify.html": {
+      "markdown": "docs/commands/content-verify.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp content-verify"
+    },
+    "commands/convergence-analyze.html": {
+      "markdown": "docs/commands/convergence-analyze.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp convergence-analyze"
+    },
+    "commands/corpus-build.html": {
+      "markdown": "docs/commands/corpus-build.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp corpus-build"
+    },
+    "commands/corpus-compare.html": {
+      "markdown": "docs/commands/corpus-compare.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp corpus-compare"
+    },
+    "commands/corpus-create-manifest.html": {
+      "markdown": "docs/commands/corpus-create-manifest.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp corpus-create-manifest"
+    },
+    "commands/corpus-generate.html": {
+      "markdown": "docs/commands/corpus-generate.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp corpus-generate"
+    },
+    "commands/corpus-generated-verify.html": {
+      "markdown": "docs/commands/corpus-generated-verify.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp corpus-generated-verify"
+    },
+    "commands/corpus-verify.html": {
+      "markdown": "docs/commands/corpus-verify.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp corpus-verify"
+    },
+    "commands/counterexample.html": {
+      "markdown": "docs/commands/counterexample.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp counterexample"
+    },
+    "commands/cpp-recover.html": {
+      "markdown": "docs/commands/cpp-recover.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp cpp-recover"
+    },
+    "commands/crosscheck-ghidra.html": {
+      "markdown": "docs/commands/crosscheck-ghidra.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp crosscheck-ghidra"
+    },
+    "commands/db-constraint-accept.html": {
+      "markdown": "docs/commands/db-constraint-accept.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp db-constraint-accept"
+    },
+    "commands/db-constraint-add.html": {
+      "markdown": "docs/commands/db-constraint-add.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp db-constraint-add"
+    },
+    "commands/db-constraint-conflicts.html": {
+      "markdown": "docs/commands/db-constraint-conflicts.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp db-constraint-conflicts"
+    },
+    "commands/db-ingest.html": {
+      "markdown": "docs/commands/db-ingest.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp db-ingest"
+    },
+    "commands/db-query.html": {
+      "markdown": "docs/commands/db-query.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp db-query"
+    },
+    "commands/decompme-pack.html": {
+      "markdown": "docs/commands/decompme-pack.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp decompme-pack"
+    },
+    "commands/dependency-audit.html": {
+      "markdown": "docs/commands/dependency-audit.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp dependency-audit"
+    },
+    "commands/diff-bytes.html": {
+      "markdown": "docs/commands/diff-bytes.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp diff-bytes"
+    },
+    "commands/diff-function.html": {
+      "markdown": "docs/commands/diff-function.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp diff-function"
+    },
+    "commands/disassemble.html": {
+      "markdown": "docs/commands/disassemble.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp disassemble"
+    },
+    "commands/drcov-parse.html": {
+      "markdown": "docs/commands/drcov-parse.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp drcov-parse"
+    },
+    "commands/drcov-run.html": {
+      "markdown": "docs/commands/drcov-run.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp drcov-run"
+    },
+    "commands/dynamic-validate.html": {
+      "markdown": "docs/commands/dynamic-validate.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp dynamic-validate"
+    },
+    "commands/evidence-add.html": {
+      "markdown": "docs/commands/evidence-add.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp evidence-add"
+    },
+    "commands/family.html": {
+      "markdown": "docs/commands/family.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp family"
+    },
+    "commands/ghidra-export.html": {
+      "markdown": "docs/commands/ghidra-export.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp ghidra-export"
+    },
+    "commands/graph.html": {
+      "markdown": "docs/commands/graph.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp graph"
+    },
+    "commands/harness-generate.html": {
+      "markdown": "docs/commands/harness-generate.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp harness-generate"
+    },
+    "commands/headers.html": {
+      "markdown": "docs/commands/headers.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp headers"
+    },
+    "commands/hybrid-generate.html": {
+      "markdown": "docs/commands/hybrid-generate.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp hybrid-generate"
+    },
+    "commands/hybrid.html": {
+      "markdown": "docs/commands/hybrid.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp hybrid"
+    },
+    "commands/hypothesis.html": {
+      "markdown": "docs/commands/hypothesis.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp hypothesis"
+    },
+    "commands/image-match.html": {
+      "markdown": "docs/commands/image-match.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp image-match"
+    },
+    "commands/image-profile.html": {
+      "markdown": "docs/commands/image-profile.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp image-profile"
+    },
+    "commands/index.html": {
+      "markdown": "docs/commands/index.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "Commands"
+    },
+    "commands/init.html": {
+      "markdown": "docs/commands/init.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp init"
+    },
+    "commands/inspect-pe.html": {
+      "markdown": "docs/commands/inspect-pe.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp inspect-pe"
+    },
+    "commands/integration-run.html": {
+      "markdown": "docs/commands/integration-run.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp integration-run"
+    },
+    "commands/layout-reconstruct.html": {
+      "markdown": "docs/commands/layout-reconstruct.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp layout-reconstruct"
+    },
+    "commands/lib-inspect.html": {
+      "markdown": "docs/commands/lib-inspect.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp lib-inspect"
+    },
+    "commands/library.html": {
+      "markdown": "docs/commands/library.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp library"
+    },
+    "commands/linker-plan.html": {
+      "markdown": "docs/commands/linker-plan.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp linker-plan"
+    },
+    "commands/loop.html": {
+      "markdown": "docs/commands/loop.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp loop"
+    },
+    "commands/map-inspect.html": {
+      "markdown": "docs/commands/map-inspect.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp map-inspect"
+    },
+    "commands/match.html": {
+      "markdown": "docs/commands/match.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp match"
+    },
+    "commands/mcp-commit.html": {
+      "markdown": "docs/commands/mcp-commit.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp mcp-commit"
+    },
+    "commands/mcp-propose.html": {
+      "markdown": "docs/commands/mcp-propose.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp mcp-propose"
+    },
+    "commands/mcp-read.html": {
+      "markdown": "docs/commands/mcp-read.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp mcp-read"
+    },
+    "commands/mcp-tools.html": {
+      "markdown": "docs/commands/mcp-tools.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp mcp-tools"
+    },
+    "commands/memory-add.html": {
+      "markdown": "docs/commands/memory-add.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp memory-add"
+    },
+    "commands/memory-render.html": {
+      "markdown": "docs/commands/memory-render.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp memory-render"
+    },
+    "commands/memory-verify.html": {
+      "markdown": "docs/commands/memory-verify.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp memory-verify"
+    },
+    "commands/metadata-scan.html": {
+      "markdown": "docs/commands/metadata-scan.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp metadata-scan"
+    },
+    "commands/module.html": {
+      "markdown": "docs/commands/module.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp module"
+    },
+    "commands/objdiff-run.html": {
+      "markdown": "docs/commands/objdiff-run.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp objdiff-run"
+    },
+    "commands/patch-image.html": {
+      "markdown": "docs/commands/patch-image.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp patch-image"
+    },
+    "commands/pdb-inspect.html": {
+      "markdown": "docs/commands/pdb-inspect.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp pdb-inspect"
+    },
+    "commands/pe.html": {
+      "markdown": "docs/commands/pe.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp pe"
+    },
+    "commands/pipeline-cancel.html": {
+      "markdown": "docs/commands/pipeline-cancel.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp pipeline-cancel"
+    },
+    "commands/pipeline-create.html": {
+      "markdown": "docs/commands/pipeline-create.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp pipeline-create"
+    },
+    "commands/pipeline-recover.html": {
+      "markdown": "docs/commands/pipeline-recover.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp pipeline-recover"
+    },
+    "commands/pipeline-retry.html": {
+      "markdown": "docs/commands/pipeline-retry.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp pipeline-retry"
+    },
+    "commands/pipeline-run.html": {
+      "markdown": "docs/commands/pipeline-run.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp pipeline-run"
+    },
+    "commands/pipeline-status.html": {
+      "markdown": "docs/commands/pipeline-status.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp pipeline-status"
+    },
+    "commands/plugin.html": {
+      "markdown": "docs/commands/plugin.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp plugin"
+    },
+    "commands/project-backup.html": {
+      "markdown": "docs/commands/project-backup.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp project-backup"
+    },
+    "commands/project-check.html": {
+      "markdown": "docs/commands/project-check.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp project-check"
+    },
+    "commands/project-from-target.html": {
+      "markdown": "docs/commands/project-from-target.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp project-from-target"
+    },
+    "commands/project-gc.html": {
+      "markdown": "docs/commands/project-gc.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp project-gc"
+    },
+    "commands/project-migrate.html": {
+      "markdown": "docs/commands/project-migrate.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp project-migrate"
+    },
+    "commands/project-repair.html": {
+      "markdown": "docs/commands/project-repair.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp project-repair"
+    },
+    "commands/project-restore.html": {
+      "markdown": "docs/commands/project-restore.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp project-restore"
+    },
+    "commands/project.html": {
+      "markdown": "docs/commands/project.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp project"
+    },
+    "commands/proof.html": {
+      "markdown": "docs/commands/proof.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp proof"
+    },
+    "commands/provenance.html": {
+      "markdown": "docs/commands/provenance.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp provenance"
+    },
+    "commands/release-gate.html": {
+      "markdown": "docs/commands/release-gate.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp release-gate"
+    },
+    "commands/release-manifest-verify.html": {
+      "markdown": "docs/commands/release-manifest-verify.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp release-manifest-verify"
+    },
+    "commands/relink.html": {
+      "markdown": "docs/commands/relink.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp relink"
+    },
+    "commands/reloc.html": {
+      "markdown": "docs/commands/reloc.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp reloc"
+    },
+    "commands/reproduce-create.html": {
+      "markdown": "docs/commands/reproduce-create.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp reproduce-create"
+    },
+    "commands/reproduce-verify.html": {
+      "markdown": "docs/commands/reproduce-verify.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp reproduce-verify"
+    },
+    "commands/review.html": {
+      "markdown": "docs/commands/review.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp review"
+    },
+    "commands/runtime.html": {
+      "markdown": "docs/commands/runtime.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp runtime"
+    },
+    "commands/sbom-generate.html": {
+      "markdown": "docs/commands/sbom-generate.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp sbom-generate"
+    },
+    "commands/security-audit.html": {
+      "markdown": "docs/commands/security-audit.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp security-audit"
+    },
+    "commands/security.html": {
+      "markdown": "docs/commands/security.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp security"
+    },
+    "commands/serve.html": {
+      "markdown": "docs/commands/serve.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp serve"
+    },
+    "commands/snapshot-tools.html": {
+      "markdown": "docs/commands/snapshot-tools.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp snapshot-tools"
+    },
+    "commands/source.html": {
+      "markdown": "docs/commands/source.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp source"
+    },
+    "commands/staging.html": {
+      "markdown": "docs/commands/staging.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp staging"
+    },
+    "commands/symbolic-memory-validate.html": {
+      "markdown": "docs/commands/symbolic-memory-validate.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp symbolic-memory-validate"
+    },
+    "commands/symbolic-validate.html": {
+      "markdown": "docs/commands/symbolic-validate.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp symbolic-validate"
+    },
+    "commands/target-pack-infer.html": {
+      "markdown": "docs/commands/target-pack-infer.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp target-pack-infer"
+    },
+    "commands/target-pack-verify.html": {
+      "markdown": "docs/commands/target-pack-verify.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp target-pack-verify"
+    },
+    "commands/template-derive.html": {
+      "markdown": "docs/commands/template-derive.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp template-derive"
+    },
+    "commands/template-materialize.html": {
+      "markdown": "docs/commands/template-materialize.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp template-materialize"
+    },
+    "commands/test-bundle-create.html": {
+      "markdown": "docs/commands/test-bundle-create.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp test-bundle-create"
+    },
+    "commands/test-bundle-inspect.html": {
+      "markdown": "docs/commands/test-bundle-inspect.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp test-bundle-inspect"
+    },
+    "commands/tests.html": {
+      "markdown": "docs/commands/tests.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp tests"
+    },
+    "commands/toolchain-register.html": {
+      "markdown": "docs/commands/toolchain-register.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp toolchain-register"
+    },
+    "commands/toolchain-verify.html": {
+      "markdown": "docs/commands/toolchain-verify.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp toolchain-verify"
+    },
+    "commands/verify-project.html": {
+      "markdown": "docs/commands/verify-project.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp verify-project"
+    },
+    "commands/windows.html": {
+      "markdown": "docs/commands/windows.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp windows"
+    },
+    "commands/work-claim.html": {
+      "markdown": "docs/commands/work-claim.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp work-claim"
+    },
+    "commands/work-create.html": {
+      "markdown": "docs/commands/work-create.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp work-create"
+    },
+    "commands/work-next.html": {
+      "markdown": "docs/commands/work-next.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp work-next"
+    },
+    "commands/work-propose.html": {
+      "markdown": "docs/commands/work-propose.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp work-propose"
+    },
+    "commands/work-validate.html": {
+      "markdown": "docs/commands/work-validate.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp work-validate"
+    },
+    "commands/worker-capabilities.html": {
+      "markdown": "docs/commands/worker-capabilities.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp worker-capabilities"
+    },
+    "commands/worker.html": {
+      "markdown": "docs/commands/worker.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp worker"
+    },
+    "commands/workflow-init.html": {
+      "markdown": "docs/commands/workflow-init.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp workflow-init"
+    },
+    "commands/workflow-show.html": {
+      "markdown": "docs/commands/workflow-show.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp workflow-show"
+    },
+    "commands/workflow-update.html": {
+      "markdown": "docs/commands/workflow-update.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp workflow-update"
+    },
+    "commands/x86decomp-test.html": {
+      "markdown": "docs/commands/x86decomp-test.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp-test"
+    },
+    "features/index.html": {
+      "markdown": "docs/features/index.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "Features and functions"
+    },
+    "features/x86decomp-abi.html": {
+      "markdown": "docs/features/x86decomp-abi.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.abi"
+    },
+    "features/x86decomp-analysis-db.html": {
+      "markdown": "docs/features/x86decomp-analysis-db.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.analysis_db"
+    },
+    "features/x86decomp-angr-backend.html": {
+      "markdown": "docs/features/x86decomp-angr-backend.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.angr_backend"
+    },
+    "features/x86decomp-artifacts.html": {
+      "markdown": "docs/features/x86decomp-artifacts.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.artifacts"
+    },
+    "features/x86decomp-assembly-annotation.html": {
+      "markdown": "docs/features/x86decomp-assembly-annotation.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.assembly.annotation"
+    },
+    "features/x86decomp-assembly-cli.html": {
+      "markdown": "docs/features/x86decomp-assembly-cli.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.assembly.cli"
+    },
+    "features/x86decomp-assembly-materialize.html": {
+      "markdown": "docs/features/x86decomp-assembly-materialize.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.assembly.materialize"
+    },
+    "features/x86decomp-assembly-pipeline.html": {
+      "markdown": "docs/features/x86decomp-assembly-pipeline.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.assembly.pipeline"
+    },
+    "features/x86decomp-assembly-relocations.html": {
+      "markdown": "docs/features/x86decomp-assembly-relocations.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.assembly.relocations"
+    },
+    "features/x86decomp-assembly-store.html": {
+      "markdown": "docs/features/x86decomp-assembly-store.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.assembly.store"
+    },
+    "features/x86decomp-assembly.html": {
+      "markdown": "docs/features/x86decomp-assembly.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.assembly"
+    },
+    "features/x86decomp-benchmarks.html": {
+      "markdown": "docs/features/x86decomp-benchmarks.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.benchmarks"
+    },
+    "features/x86decomp-canonical.html": {
+      "markdown": "docs/features/x86decomp-canonical.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.canonical"
+    },
+    "features/x86decomp-cli.html": {
+      "markdown": "docs/features/x86decomp-cli.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.cli"
+    },
+    "features/x86decomp-coff-archive.html": {
+      "markdown": "docs/features/x86decomp-coff-archive.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.coff_archive"
+    },
+    "features/x86decomp-coff.html": {
+      "markdown": "docs/features/x86decomp-coff.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.coff"
+    },
+    "features/x86decomp-compiler-lab.html": {
+      "markdown": "docs/features/x86decomp-compiler-lab.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.compiler_lab"
+    },
+    "features/x86decomp-compiler-worker.html": {
+      "markdown": "docs/features/x86decomp-compiler-worker.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.compiler_worker"
+    },
+    "features/x86decomp-compiler.html": {
+      "markdown": "docs/features/x86decomp-compiler.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.compiler"
+    },
+    "features/x86decomp-content-store.html": {
+      "markdown": "docs/features/x86decomp-content-store.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.content_store"
+    },
+    "features/x86decomp-contracts.html": {
+      "markdown": "docs/features/x86decomp-contracts.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.contracts"
+    },
+    "features/x86decomp-convergence.html": {
+      "markdown": "docs/features/x86decomp-convergence.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.convergence"
+    },
+    "features/x86decomp-cpp-recovery.html": {
+      "markdown": "docs/features/x86decomp-cpp-recovery.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.cpp_recovery"
+    },
+    "features/x86decomp-decompme.html": {
+      "markdown": "docs/features/x86decomp-decompme.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.decompme"
+    },
+    "features/x86decomp-diffing.html": {
+      "markdown": "docs/features/x86decomp-diffing.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.diffing"
+    },
+    "features/x86decomp-disassembly.html": {
+      "markdown": "docs/features/x86decomp-disassembly.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.disassembly"
+    },
+    "features/x86decomp-dynamic.html": {
+      "markdown": "docs/features/x86decomp-dynamic.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.dynamic"
+    },
+    "features/x86decomp-dynamorio.html": {
+      "markdown": "docs/features/x86decomp-dynamorio.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.dynamorio"
+    },
+    "features/x86decomp-errors.html": {
+      "markdown": "docs/features/x86decomp-errors.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.errors"
+    },
+    "features/x86decomp-evidence.html": {
+      "markdown": "docs/features/x86decomp-evidence.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.evidence"
+    },
+    "features/x86decomp-exe-diff.html": {
+      "markdown": "docs/features/x86decomp-exe-diff.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.exe_diff"
+    },
+    "features/x86decomp-ghidra.html": {
+      "markdown": "docs/features/x86decomp-ghidra.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.ghidra"
+    },
+    "features/x86decomp-governance-campaigns.html": {
+      "markdown": "docs/features/x86decomp-governance-campaigns.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.governance.campaigns"
+    },
+    "features/x86decomp-governance-candidates.html": {
+      "markdown": "docs/features/x86decomp-governance-candidates.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.governance.candidates"
+    },
+    "features/x86decomp-governance-changesets.html": {
+      "markdown": "docs/features/x86decomp-governance-changesets.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.governance.changesets"
+    },
+    "features/x86decomp-governance-cli.html": {
+      "markdown": "docs/features/x86decomp-governance-cli.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.governance.cli"
+    },
+    "features/x86decomp-governance-consensus.html": {
+      "markdown": "docs/features/x86decomp-governance-consensus.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.governance.consensus"
+    },
+    "features/x86decomp-governance-counterexamples.html": {
+      "markdown": "docs/features/x86decomp-governance-counterexamples.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.governance.counterexamples"
+    },
+    "features/x86decomp-governance-family.html": {
+      "markdown": "docs/features/x86decomp-governance-family.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.governance.family"
+    },
+    "features/x86decomp-governance-hypotheses.html": {
+      "markdown": "docs/features/x86decomp-governance-hypotheses.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.governance.hypotheses"
+    },
+    "features/x86decomp-governance-knowledge-graph.html": {
+      "markdown": "docs/features/x86decomp-governance-knowledge-graph.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.governance.knowledge_graph"
+    },
+    "features/x86decomp-governance-plugins.html": {
+      "markdown": "docs/features/x86decomp-governance-plugins.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.governance.plugins"
+    },
+    "features/x86decomp-governance-proofs.html": {
+      "markdown": "docs/features/x86decomp-governance-proofs.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.governance.proofs"
+    },
+    "features/x86decomp-governance-reviews.html": {
+      "markdown": "docs/features/x86decomp-governance-reviews.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.governance.reviews"
+    },
+    "features/x86decomp-governance-store.html": {
+      "markdown": "docs/features/x86decomp-governance-store.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.governance.store"
+    },
+    "features/x86decomp-governance-workers.html": {
+      "markdown": "docs/features/x86decomp-governance-workers.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.governance.workers"
+    },
+    "features/x86decomp-governance.html": {
+      "markdown": "docs/features/x86decomp-governance.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.governance"
+    },
+    "features/x86decomp-ground-truth.html": {
+      "markdown": "docs/features/x86decomp-ground-truth.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.ground_truth"
+    },
+    "features/x86decomp-harness-generator.html": {
+      "markdown": "docs/features/x86decomp-harness-generator.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.harness_generator"
+    },
+    "features/x86decomp-hybrid.html": {
+      "markdown": "docs/features/x86decomp-hybrid.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.hybrid"
+    },
+    "features/x86decomp-image-match.html": {
+      "markdown": "docs/features/x86decomp-image-match.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.image_match"
+    },
+    "features/x86decomp-integration.html": {
+      "markdown": "docs/features/x86decomp-integration.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.integration"
+    },
+    "features/x86decomp-linker-layout.html": {
+      "markdown": "docs/features/x86decomp-linker-layout.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.linker_layout"
+    },
+    "features/x86decomp-linker-reconstruction.html": {
+      "markdown": "docs/features/x86decomp-linker-reconstruction.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.linker_reconstruction"
+    },
+    "features/x86decomp-main.html": {
+      "markdown": "docs/features/x86decomp-main.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.__main__"
+    },
+    "features/x86decomp-mcp.html": {
+      "markdown": "docs/features/x86decomp-mcp.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.mcp"
+    },
+    "features/x86decomp-memory.html": {
+      "markdown": "docs/features/x86decomp-memory.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.memory"
+    },
+    "features/x86decomp-models.html": {
+      "markdown": "docs/features/x86decomp-models.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.models"
+    },
+    "features/x86decomp-msvc-metadata.html": {
+      "markdown": "docs/features/x86decomp-msvc-metadata.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.msvc_metadata"
+    },
+    "features/x86decomp-native-cli.html": {
+      "markdown": "docs/features/x86decomp-native-cli.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.native.cli"
+    },
+    "features/x86decomp-native-closed-loop.html": {
+      "markdown": "docs/features/x86decomp-native-closed-loop.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.native.closed_loop"
+    },
+    "features/x86decomp-native-hybrid-composer.html": {
+      "markdown": "docs/features/x86decomp-native-hybrid-composer.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.native.hybrid_composer"
+    },
+    "features/x86decomp-native-matching.html": {
+      "markdown": "docs/features/x86decomp-native-matching.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.native.matching"
+    },
+    "features/x86decomp-native-pe-reconstruction.html": {
+      "markdown": "docs/features/x86decomp-native-pe-reconstruction.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.native.pe_reconstruction"
+    },
+    "features/x86decomp-native-runtime.html": {
+      "markdown": "docs/features/x86decomp-native-runtime.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.native.runtime"
+    },
+    "features/x86decomp-native-slots.html": {
+      "markdown": "docs/features/x86decomp-native-slots.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.native.slots"
+    },
+    "features/x86decomp-native-staging.html": {
+      "markdown": "docs/features/x86decomp-native-staging.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.native.staging"
+    },
+    "features/x86decomp-native-store.html": {
+      "markdown": "docs/features/x86decomp-native-store.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.native.store"
+    },
+    "features/x86decomp-native-windows-tools.html": {
+      "markdown": "docs/features/x86decomp-native-windows-tools.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.native.windows_tools"
+    },
+    "features/x86decomp-native.html": {
+      "markdown": "docs/features/x86decomp-native.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.native"
+    },
+    "features/x86decomp-objdiff-adapter.html": {
+      "markdown": "docs/features/x86decomp-objdiff-adapter.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.objdiff_adapter"
+    },
+    "features/x86decomp-orchestrator.html": {
+      "markdown": "docs/features/x86decomp-orchestrator.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.orchestrator"
+    },
+    "features/x86decomp-patching.html": {
+      "markdown": "docs/features/x86decomp-patching.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.patching"
+    },
+    "features/x86decomp-pdb.html": {
+      "markdown": "docs/features/x86decomp-pdb.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.pdb"
+    },
+    "features/x86decomp-pe.html": {
+      "markdown": "docs/features/x86decomp-pe.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.pe"
+    },
+    "features/x86decomp-pe32.html": {
+      "markdown": "docs/features/x86decomp-pe32.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.pe32"
+    },
+    "features/x86decomp-project-state.html": {
+      "markdown": "docs/features/x86decomp-project-state.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.project_state"
+    },
+    "features/x86decomp-project-template.html": {
+      "markdown": "docs/features/x86decomp-project-template.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.project_template"
+    },
+    "features/x86decomp-project.html": {
+      "markdown": "docs/features/x86decomp-project.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.project"
+    },
+    "features/x86decomp-reconstruction-abi-contracts.html": {
+      "markdown": "docs/features/x86decomp-reconstruction-abi-contracts.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.reconstruction.abi_contracts"
+    },
+    "features/x86decomp-reconstruction-builds.html": {
+      "markdown": "docs/features/x86decomp-reconstruction-builds.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.reconstruction.builds"
+    },
+    "features/x86decomp-reconstruction-capsules.html": {
+      "markdown": "docs/features/x86decomp-reconstruction-capsules.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.reconstruction.capsules"
+    },
+    "features/x86decomp-reconstruction-cli.html": {
+      "markdown": "docs/features/x86decomp-reconstruction-cli.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.reconstruction.cli"
+    },
+    "features/x86decomp-reconstruction-generated-tests.html": {
+      "markdown": "docs/features/x86decomp-reconstruction-generated-tests.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.reconstruction.generated_tests"
+    },
+    "features/x86decomp-reconstruction-headers.html": {
+      "markdown": "docs/features/x86decomp-reconstruction-headers.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.reconstruction.headers"
+    },
+    "features/x86decomp-reconstruction-libraries.html": {
+      "markdown": "docs/features/x86decomp-reconstruction-libraries.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.reconstruction.libraries"
+    },
+    "features/x86decomp-reconstruction-project-layout.html": {
+      "markdown": "docs/features/x86decomp-reconstruction-project-layout.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.reconstruction.project_layout"
+    },
+    "features/x86decomp-reconstruction-provenance.html": {
+      "markdown": "docs/features/x86decomp-reconstruction-provenance.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.reconstruction.provenance"
+    },
+    "features/x86decomp-reconstruction-security.html": {
+      "markdown": "docs/features/x86decomp-reconstruction-security.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.reconstruction.security"
+    },
+    "features/x86decomp-reconstruction-semantic-changesets.html": {
+      "markdown": "docs/features/x86decomp-reconstruction-semantic-changesets.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.reconstruction.semantic_changesets"
+    },
+    "features/x86decomp-reconstruction-store.html": {
+      "markdown": "docs/features/x86decomp-reconstruction-store.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.reconstruction.store"
+    },
+    "features/x86decomp-reconstruction.html": {
+      "markdown": "docs/features/x86decomp-reconstruction.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.reconstruction"
+    },
+    "features/x86decomp-release-gate.html": {
+      "markdown": "docs/features/x86decomp-release-gate.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.release_gate"
+    },
+    "features/x86decomp-relink.html": {
+      "markdown": "docs/features/x86decomp-relink.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.relink"
+    },
+    "features/x86decomp-reproducibility.html": {
+      "markdown": "docs/features/x86decomp-reproducibility.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.reproducibility"
+    },
+    "features/x86decomp-security-audit.html": {
+      "markdown": "docs/features/x86decomp-security-audit.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.security_audit"
+    },
+    "features/x86decomp-service.html": {
+      "markdown": "docs/features/x86decomp-service.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.service"
+    },
+    "features/x86decomp-symbolic.html": {
+      "markdown": "docs/features/x86decomp-symbolic.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.symbolic"
+    },
+    "features/x86decomp-synthetic-corpus.html": {
+      "markdown": "docs/features/x86decomp-synthetic-corpus.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.synthetic_corpus"
+    },
+    "features/x86decomp-target-pack.html": {
+      "markdown": "docs/features/x86decomp-target-pack.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.target_pack"
+    },
+    "features/x86decomp-test-bundle.html": {
+      "markdown": "docs/features/x86decomp-test-bundle.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.test_bundle"
+    },
+    "features/x86decomp-testkit-adapters-catalog.html": {
+      "markdown": "docs/features/x86decomp-testkit-adapters-catalog.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp_testkit.adapters.catalog"
+    },
+    "features/x86decomp-testkit-adapters-detection.html": {
+      "markdown": "docs/features/x86decomp-testkit-adapters-detection.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp_testkit.adapters.detection"
+    },
+    "features/x86decomp-testkit-adapters-download.html": {
+      "markdown": "docs/features/x86decomp-testkit-adapters-download.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp_testkit.adapters.download"
+    },
+    "features/x86decomp-testkit-adapters-installation.html": {
+      "markdown": "docs/features/x86decomp-testkit-adapters-installation.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp_testkit.adapters.installation"
+    },
+    "features/x86decomp-testkit-adapters.html": {
+      "markdown": "docs/features/x86decomp-testkit-adapters.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp_testkit.adapters"
+    },
+    "features/x86decomp-testkit-cli.html": {
+      "markdown": "docs/features/x86decomp-testkit-cli.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp_testkit.cli"
+    },
+    "features/x86decomp-testkit-config.html": {
+      "markdown": "docs/features/x86decomp-testkit-config.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp_testkit.config"
+    },
+    "features/x86decomp-testkit-coverage-audit.html": {
+      "markdown": "docs/features/x86decomp-testkit-coverage-audit.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp_testkit.coverage_audit"
+    },
+    "features/x86decomp-testkit-fixtures.html": {
+      "markdown": "docs/features/x86decomp-testkit-fixtures.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp_testkit.fixtures"
+    },
+    "features/x86decomp-testkit-inventory.html": {
+      "markdown": "docs/features/x86decomp-testkit-inventory.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp_testkit.inventory"
+    },
+    "features/x86decomp-testkit-junit.html": {
+      "markdown": "docs/features/x86decomp-testkit-junit.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp_testkit.junit"
+    },
+    "features/x86decomp-testkit-live-adapters.html": {
+      "markdown": "docs/features/x86decomp-testkit-live-adapters.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp_testkit.live_adapters"
+    },
+    "features/x86decomp-testkit-logging-utils.html": {
+      "markdown": "docs/features/x86decomp-testkit-logging-utils.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp_testkit.logging_utils"
+    },
+    "features/x86decomp-testkit-main.html": {
+      "markdown": "docs/features/x86decomp-testkit-main.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp_testkit.__main__"
+    },
+    "features/x86decomp-testkit-models.html": {
+      "markdown": "docs/features/x86decomp-testkit-models.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp_testkit.models"
+    },
+    "features/x86decomp-testkit-orchestrator.html": {
+      "markdown": "docs/features/x86decomp-testkit-orchestrator.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp_testkit.orchestrator"
+    },
+    "features/x86decomp-testkit-process.html": {
+      "markdown": "docs/features/x86decomp-testkit-process.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp_testkit.process"
+    },
+    "features/x86decomp-testkit-reports.html": {
+      "markdown": "docs/features/x86decomp-testkit-reports.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp_testkit.reports"
+    },
+    "features/x86decomp-testkit-self-tests-test-adapter-detection-resolution.html": {
+      "markdown": "docs/features/x86decomp-testkit-self-tests-test-adapter-detection-resolution.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp_testkit.self_tests.test_adapter_detection_resolution"
+    },
+    "features/x86decomp-testkit-self-tests-test-archive-security.html": {
+      "markdown": "docs/features/x86decomp-testkit-self-tests-test-archive-security.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp_testkit.self_tests.test_archive_security"
+    },
+    "features/x86decomp-testkit-self-tests-test-cli-and-installation.html": {
+      "markdown": "docs/features/x86decomp-testkit-self-tests-test-cli-and-installation.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp_testkit.self_tests.test_cli_and_installation"
+    },
+    "features/x86decomp-testkit-self-tests-test-config-models.html": {
+      "markdown": "docs/features/x86decomp-testkit-self-tests-test-config-models.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp_testkit.self_tests.test_config_models"
+    },
+    "features/x86decomp-testkit-self-tests-test-inventory-reports-process.html": {
+      "markdown": "docs/features/x86decomp-testkit-self-tests-test-inventory-reports-process.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp_testkit.self_tests.test_inventory_reports_process"
+    },
+    "features/x86decomp-testkit-self-tests.html": {
+      "markdown": "docs/features/x86decomp-testkit-self-tests.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp_testkit.self_tests"
+    },
+    "features/x86decomp-testkit-suites.html": {
+      "markdown": "docs/features/x86decomp-testkit-suites.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp_testkit.suites"
+    },
+    "features/x86decomp-testkit-timeutil.html": {
+      "markdown": "docs/features/x86decomp-testkit-timeutil.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp_testkit.timeutil"
+    },
+    "features/x86decomp-testkit-toolkit-tests-test-public-api-contract.html": {
+      "markdown": "docs/features/x86decomp-testkit-toolkit-tests-test-public-api-contract.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp_testkit.toolkit_tests.test_public_api_contract"
+    },
+    "features/x86decomp-testkit-toolkit-tests.html": {
+      "markdown": "docs/features/x86decomp-testkit-toolkit-tests.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp_testkit.toolkit_tests"
+    },
+    "features/x86decomp-testkit.html": {
+      "markdown": "docs/features/x86decomp-testkit.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp_testkit"
+    },
+    "features/x86decomp-toolchains.html": {
+      "markdown": "docs/features/x86decomp-toolchains.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.toolchains"
+    },
+    "features/x86decomp-tools.html": {
+      "markdown": "docs/features/x86decomp-tools.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.tools"
+    },
+    "features/x86decomp-util.html": {
+      "markdown": "docs/features/x86decomp-util.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.util"
+    },
+    "features/x86decomp-work-queue.html": {
+      "markdown": "docs/features/x86decomp-work-queue.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.work_queue"
+    },
+    "features/x86decomp-worker.html": {
+      "markdown": "docs/features/x86decomp-worker.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.worker"
+    },
+    "features/x86decomp-workflow.html": {
+      "markdown": "docs/features/x86decomp-workflow.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp.workflow"
+    },
+    "features/x86decomp.html": {
+      "markdown": "docs/features/x86decomp.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "x86decomp"
+    },
+    "functions/index.html": {
+      "markdown": "docs/functions/index.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "All functions and methods"
+    },
+    "getting-started.html": {
+      "markdown": "docs/getting-started.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "From installation to a verified project"
+    },
+    "index.html": {
+      "markdown": "docs/index.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "Understand, run, and verify x86decomp."
+    },
+    "integrations.html": {
+      "markdown": "docs/integrations.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "Integrations and adapters"
+    },
+    "project-examples.html": {
+      "markdown": "docs/project-examples.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "Project examples"
+    },
+    "project-examples/abi-type-recovery.html": {
+      "markdown": "docs/project-examples/abi-type-recovery.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "Example: ABI and type-recovery project"
+    },
+    "project-examples/benchmark-validation-corpus.html": {
+      "markdown": "docs/project-examples/benchmark-validation-corpus.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "Example: benchmark and validation-corpus project"
+    },
+    "project-examples/compiler-laboratory.html": {
+      "markdown": "docs/project-examples/compiler-laboratory.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "Example: compiler identification and compiler laboratory"
+    },
+    "project-examples/full-relink-convergence.html": {
+      "markdown": "docs/project-examples/full-relink-convergence.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "Example: full-relink and whole-image convergence project"
+    },
+    "project-examples/functional-project.html": {
+      "markdown": "docs/project-examples/functional-project.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "Example: end-to-end functional project"
+    },
+    "project-examples/hybrid-project.html": {
+      "markdown": "docs/project-examples/hybrid-project.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "Example: end-to-end hybrid composition"
+    },
+    "project-examples/matching-project.html": {
+      "markdown": "docs/project-examples/matching-project.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "Example: end-to-end matching project"
+    },
+    "project-examples/patch-image-integration.html": {
+      "markdown": "docs/project-examples/patch-image-integration.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "Example: patch-image integration project"
+    },
+    "project-examples/project-operations-recovery.html": {
+      "markdown": "docs/project-examples/project-operations-recovery.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "Example: project operations and recovery workflow"
+    },
+    "project-examples/source-audit.html": {
+      "markdown": "docs/project-examples/source-audit.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "v0.7.4 project-examples source audit"
+    },
+    "project-examples/static-analysis-evidence.html": {
+      "markdown": "docs/project-examples/static-analysis-evidence.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "Example: static analysis and evidence project"
+    },
+    "project-examples/target-release-reproducibility.html": {
+      "markdown": "docs/project-examples/target-release-reproducibility.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "Example: target release and reproducibility project"
+    },
+    "schemas.html": {
+      "markdown": "docs/schemas.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "All 93 JSON Schemas"
+    },
+    "search.html": {
+      "markdown": "docs/search.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "Search the complete documentation"
+    },
+    "source-coverage.html": {
+      "markdown": "docs/source-coverage.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "Complete packaged-source coverage"
+    },
+    "tests/index.html": {
+      "markdown": "docs/tests/index.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "Every current test node"
+    },
+    "tests/test-suite-src-x86decomp-testkit-toolkit-tests-test-public-api-contract.html": {
+      "markdown": "docs/tests/test-suite-src-x86decomp-testkit-toolkit-tests-test-public-api-contract.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "test-suite/src/x86decomp_testkit/toolkit_tests/test_public_api_contract.py"
+    },
+    "tests/test-suite-tests-test-adapter-detection-resolution.html": {
+      "markdown": "docs/tests/test-suite-tests-test-adapter-detection-resolution.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "test-suite/tests/test_adapter_detection_resolution.py"
+    },
+    "tests/test-suite-tests-test-architecture-maps.html": {
+      "markdown": "docs/tests/test-suite-tests-test-architecture-maps.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "test-suite/tests/test_architecture_maps.py"
+    },
+    "tests/test-suite-tests-test-archive-security.html": {
+      "markdown": "docs/tests/test-suite-tests-test-archive-security.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "test-suite/tests/test_archive_security.py"
+    },
+    "tests/test-suite-tests-test-cli-and-installation.html": {
+      "markdown": "docs/tests/test-suite-tests-test-cli-and-installation.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "test-suite/tests/test_cli_and_installation.py"
+    },
+    "tests/test-suite-tests-test-config-models.html": {
+      "markdown": "docs/tests/test-suite-tests-test-config-models.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "test-suite/tests/test_config_models.py"
+    },
+    "tests/test-suite-tests-test-inventory-reports-process.html": {
+      "markdown": "docs/tests/test-suite-tests-test-inventory-reports-process.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "test-suite/tests/test_inventory_reports_process.py"
+    },
+    "tests/tests-assembly-test-annotation-materialize.html": {
+      "markdown": "docs/tests/tests-assembly-test-annotation-materialize.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "tests/assembly/test_annotation_materialize.py"
+    },
+    "tests/tests-assembly-test-helpers-and-relocations.html": {
+      "markdown": "docs/tests/tests-assembly-test-helpers-and-relocations.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "tests/assembly/test_helpers_and_relocations.py"
+    },
+    "tests/tests-assembly-test-pipeline-cli-schemas.html": {
+      "markdown": "docs/tests/tests-assembly-test-pipeline-cli-schemas.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "tests/assembly/test_pipeline_cli_schemas.py"
+    },
+    "tests/tests-governance-test-core.html": {
+      "markdown": "docs/tests/tests-governance-test-core.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "tests/governance/test_core.py"
+    },
+    "tests/tests-governance-test-governance-cli-schemas.html": {
+      "markdown": "docs/tests/tests-governance-test-governance-cli-schemas.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "tests/governance/test_governance_cli_schemas.py"
+    },
+    "tests/tests-governance-test-proof-plugin-worker.html": {
+      "markdown": "docs/tests/tests-governance-test-proof-plugin-worker.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "tests/governance/test_proof_plugin_worker.py"
+    },
+    "tests/tests-governance-test-worker-thread-safety.html": {
+      "markdown": "docs/tests/tests-governance-test-worker-thread-safety.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "tests/governance/test_worker_thread_safety.py"
+    },
+    "tests/tests-native-test-cli-schemas.html": {
+      "markdown": "docs/tests/tests-native-test-cli-schemas.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "tests/native/test_cli_schemas.py"
+    },
+    "tests/tests-native-test-inventory-and-loops.html": {
+      "markdown": "docs/tests/tests-native-test-inventory-and-loops.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "tests/native/test_inventory_and_loops.py"
+    },
+    "tests/tests-native-test-pe-hybrid.html": {
+      "markdown": "docs/tests/tests-native-test-pe-hybrid.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "tests/native/test_pe_hybrid.py"
+    },
+    "tests/tests-native-test-slots-matching.html": {
+      "markdown": "docs/tests/tests-native-test-slots-matching.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "tests/native/test_slots_matching.py"
+    },
+    "tests/tests-native-test-staging-loop-runtime-windows.html": {
+      "markdown": "docs/tests/tests-native-test-staging-loop-runtime-windows.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "tests/native/test_staging_loop_runtime_windows.py"
+    },
+    "tests/tests-reconstruction-test-capsules-security-changesets.html": {
+      "markdown": "docs/tests/tests-reconstruction-test-capsules-security-changesets.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "tests/reconstruction/test_capsules_security_changesets.py"
+    },
+    "tests/tests-reconstruction-test-cli-schemas-retention.html": {
+      "markdown": "docs/tests/tests-reconstruction-test-cli-schemas-retention.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "tests/reconstruction/test_cli_schemas_retention.py"
+    },
+    "tests/tests-reconstruction-test-project-headers-builds.html": {
+      "markdown": "docs/tests/tests-reconstruction-test-project-headers-builds.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "tests/reconstruction/test_project_headers_builds.py"
+    },
+    "tests/tests-reconstruction-test-provenance-abi-tests.html": {
+      "markdown": "docs/tests/tests-reconstruction-test-provenance-abi-tests.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "tests/reconstruction/test_provenance_abi_tests.py"
+    },
+    "tests/tests-test-abi-disassembly.html": {
+      "markdown": "docs/tests/tests-test-abi-disassembly.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "tests/test_abi_disassembly.py"
+    },
+    "tests/tests-test-artifacts.html": {
+      "markdown": "docs/tests/tests-test-artifacts.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "tests/test_artifacts.py"
+    },
+    "tests/tests-test-coff-archive.html": {
+      "markdown": "docs/tests/tests-test-coff-archive.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "tests/test_coff_archive.py"
+    },
+    "tests/tests-test-coff.html": {
+      "markdown": "docs/tests/tests-test-coff.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "tests/test_coff.py"
+    },
+    "tests/tests-test-compiler.html": {
+      "markdown": "docs/tests/tests-test-compiler.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "tests/test_compiler.py"
+    },
+    "tests/tests-test-decompme-objdiff.html": {
+      "markdown": "docs/tests/tests-test-decompme-objdiff.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "tests/test_decompme_objdiff.py"
+    },
+    "tests/tests-test-diffing.html": {
+      "markdown": "docs/tests/tests-test-diffing.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "tests/test_diffing.py"
+    },
+    "tests/tests-test-documentation.html": {
+      "markdown": "docs/tests/tests-test-documentation.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "tests/test_documentation.py"
+    },
+    "tests/tests-test-dynamic-symbolic.html": {
+      "markdown": "docs/tests/tests-test-dynamic-symbolic.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "tests/test_dynamic_symbolic.py"
+    },
+    "tests/tests-test-dynamorio.html": {
+      "markdown": "docs/tests/tests-test-dynamorio.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "tests/test_dynamorio.py"
+    },
+    "tests/tests-test-evidence.html": {
+      "markdown": "docs/tests/tests-test-evidence.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "tests/test_evidence.py"
+    },
+    "tests/tests-test-ghidra.html": {
+      "markdown": "docs/tests/tests-test-ghidra.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "tests/test_ghidra.py"
+    },
+    "tests/tests-test-integration.html": {
+      "markdown": "docs/tests/tests-test-integration.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "tests/test_integration.py"
+    },
+    "tests/tests-test-linker-metadata-corpus.html": {
+      "markdown": "docs/tests/tests-test-linker-metadata-corpus.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "tests/test_linker_metadata_corpus.py"
+    },
+    "tests/tests-test-mcp.html": {
+      "markdown": "docs/tests/tests-test-mcp.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "tests/test_mcp.py"
+    },
+    "tests/tests-test-memory.html": {
+      "markdown": "docs/tests/tests-test-memory.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "tests/test_memory.py"
+    },
+    "tests/tests-test-modes-and-db.html": {
+      "markdown": "docs/tests/tests-test-modes-and-db.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "tests/test_modes_and_db.py"
+    },
+    "tests/tests-test-pdb.html": {
+      "markdown": "docs/tests/tests-test-pdb.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "tests/test_pdb.py"
+    },
+    "tests/tests-test-pe32.html": {
+      "markdown": "docs/tests/tests-test-pe32.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "tests/test_pe32.py"
+    },
+    "tests/tests-test-pe64-patch-hybrid.html": {
+      "markdown": "docs/tests/tests-test-pe64-patch-hybrid.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "tests/test_pe64_patch_hybrid.py"
+    },
+    "tests/tests-test-production.html": {
+      "markdown": "docs/tests/tests-test-production.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "tests/test_production.py"
+    },
+    "tests/tests-test-project.html": {
+      "markdown": "docs/tests/tests-test-project.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "tests/test_project.py"
+    },
+    "tests/tests-test-release-contract.html": {
+      "markdown": "docs/tests/tests-test-release-contract.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "tests/test_release_contract.py"
+    },
+    "tests/tests-test-relink.html": {
+      "markdown": "docs/tests/tests-test-relink.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "tests/test_relink.py"
+    },
+    "tests/tests-test-test-bundle.html": {
+      "markdown": "docs/tests/tests-test-test-bundle.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "tests/test_test_bundle.py"
+    },
+    "tests/tests-test-workqueue.html": {
+      "markdown": "docs/tests/tests-test-workqueue.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "tests/test_workqueue.py"
+    },
+    "verification.html": {
+      "markdown": "docs/verification.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "Verification"
+    },
+    "workflows.html": {
+      "markdown": "docs/workflows.md",
+      "structural_changes": [
+        "Removed generated breadcrumb chrome; MkDocs provides navigation context.",
+        "Removed generated page footer; MkDocs owns page footer rendering."
+      ],
+      "title": "Practical paths through the toolkit"
+    }
+  }
+}

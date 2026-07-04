@@ -1,0 +1,2084 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+        <title>Source Coverage - x86decomp 0.7.8 Docs</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        
+        
+        
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="../assets/css/darcula-highlight.min.css">
+
+        <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../assets/css/dracula-ui.min.css">
+        <link rel="stylesheet" href="../assets/css/mkdocs.min.css">
+            <link href="../assets/x86decomp-dracula-overrides.css" rel="stylesheet">
+
+        
+            <link  rel="icon" type="image/x-icon" href="../assets/img/favicon.ico">
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+                <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+
+<body class="drac-bg-black-secondary drac-text-grey-ternary drac-text drac-scrollbar-purple">
+
+    <main class="d-flex">
+
+        <!-- block sidebar -->
+            <nav id="sidebar" class="sidebar drac-bg-black">
+    <div class="custom-menu">
+        <button type="button" id="sidebarCollapse" class="btn btn-primary">
+            <i class="fa fa-bars"></i>
+            <span class="sr-only">Menu</span>
+        </button>
+    </div>
+
+    <div class="p-4">
+        
+
+        <div class="drac-text-center">
+            
+                <span class="drac-text drac-line-height drac-text-white">x86decomp 0.7.8 Docs</span>
+            
+        </div>
+
+        <div class="drac-box flex-column">
+            <ul class="dot-ul">
+                <li><div class="dot-li drac-bg-cyan"></div></li>
+                <li><div class="dot-li drac-bg-green"></div></li>
+                <li><div class="dot-li drac-bg-orange"></div></li>
+                <li><div class="dot-li drac-bg-pink"></div></li>
+                <li><div class="dot-li drac-bg-purple"></div></li>
+                <li><div class="dot-li drac-bg-red"></div></li>
+                <li><div class="dot-li drac-bg-yellow"></div></li>
+            </ul>
+        </div>
+
+        <hr class="drac-divider" />
+
+        <!-- block menu -->
+        <ul class="mb-5 drac-list drac-list-none">
+            
+            <li class="drac-box">
+                <a href=".."
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Home
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../getting-started/"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Getting Started
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href=".."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#workflows-collapse" aria-expanded="false">
+                    Workflows
+                </a>
+                <div class="collapse" id="workflows-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../workflows/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Workflow Guide
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../local-llm/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Local LLM C Generation
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../decompilation-acceleration/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Decompilation Acceleration
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../project-examples/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Project Examples
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href=".."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#reference-collapse" aria-expanded="false">
+                    Reference
+                </a>
+                <div class="collapse" id="reference-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../reference/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../architecture/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Architecture
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../commands/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Commands
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../schemas/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Schemas
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../integrations/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Integrations
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../features/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Source Modules
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../functions/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Function Index
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../tests/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Tests
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href=".."
+                    class=" active 
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#release-evidence-collapse" aria-expanded="false">
+                    Release Evidence
+                </a>
+                <div class="collapse" id="release-evidence-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../release-evidence/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../verification/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Verification
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="./"
+            class=" active 
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Source Coverage
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../changelog/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Changelog
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../about/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            About
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <!-- endblock -->
+    </div>
+</nav>
+        <!-- endblock -->
+
+        <nav class="divider drac-bg-purple-cyan"></nav>
+
+        <div class="content">
+            <!-- block header -->
+                <header>
+    <nav class="navbar navbar-expand-xl drac-bg-purple">
+        <div class="container-fluid">
+            
+            <button class="navbar-toggler w-100 text-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMenu"
+                aria-controls="navbarsMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse flex-column ml-auto" id="navbarsMenu">
+                <ul class="navbar-nav text-md-center">
+
+                    <!-- block preview -->
+                    <li class="nav-item">
+                            
+        <div class="container">
+            <div class="row row-preview">
+                <div class="col">
+                    <a href="../verification/"
+                        class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover">
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="../changelog/"
+                        class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover" style="padding-left: 3%;">
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block search -->
+                    <li class="nav-item"><div role="search" class="search-box">
+	<form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+		<input type="text" name="q" class="drac-input drac-input-search drac-input-white drac-text-white drac-bg-black-secondary"
+		placeholder="Search docs" title="Type search term here" />
+	</form>
+</div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block source -->
+                    <li class="nav-item">
+                        
+                    </li>
+                    <!--  endblock -->
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+</header>
+            <!-- endblock -->
+
+            <!-- block content -->
+                <section class="p-md-5 section-content">
+    <article>
+        <p><h1 id="source-coverage">Source coverage</h1>
+<p>This page was refreshed for v0.7.8 from the toolkit <code>MANIFEST.sha256</code> generated after the universal acceleration update.</p>
+<table>
+<thead>
+<tr>
+<th>Path</th>
+<th>SHA-256</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.github/workflows/ci.yml</code></td>
+<td><code>99a936711b46f589c3af298cb9f8be9a258646b0f56fd5aa530049c7338d6bb6</code></td>
+</tr>
+<tr>
+<td><code>.gitignore</code></td>
+<td><code>eb154655b2dbbff2977bbd627126c84338f553da429720d464adf7e99dc52c26</code></td>
+</tr>
+<tr>
+<td><code>AGENTS.md</code></td>
+<td><code>2b50e104fdcbdd2e58e00596d1883d241b100ff15d72e3bcd0a927482eba8f0c</code></td>
+</tr>
+<tr>
+<td><code>CHANGELOG.md</code></td>
+<td><code>db7077fd4e516828f676c55bc33ccc3324d546f0b7614b125332c028cc8dfe87</code></td>
+</tr>
+<tr>
+<td><code>FEATURE_PARITY.md</code></td>
+<td><code>96cb49ff7fee9fd09eb63805277dd074d2151d65745762c899e711091d0cc33a</code></td>
+</tr>
+<tr>
+<td><code>LICENSE</code></td>
+<td><code>ac2e979d38c247879e05243433cf891e77f87f71cb39bc24f6efe81ac3e38df3</code></td>
+</tr>
+<tr>
+<td><code>MANIFEST.in</code></td>
+<td><code>69db866c1421555409f490a901506cf31957aa7944eb920565f0602653783f22</code></td>
+</tr>
+<tr>
+<td><code>Makefile</code></td>
+<td><code>d034035386a8ab7bea1c7e4348d3608367b3ab890c0711a488d2bdbdb48806f7</code></td>
+</tr>
+<tr>
+<td><code>PROJECT_MEMORY.md</code></td>
+<td><code>d6992784d73461c0391f806921b80d1caf31801d68038974c052eb0dcac255f9</code></td>
+</tr>
+<tr>
+<td><code>README.md</code></td>
+<td><code>962e8a5a36efbe350689511732faf9130cbeac08602c357d7d8de2331a8dcfd3</code></td>
+</tr>
+<tr>
+<td><code>SECURITY.md</code></td>
+<td><code>cc06cbe8826ba72cbb5591b1ab9c58b76667caf71449d09e5f29da5871298cd0</code></td>
+</tr>
+<tr>
+<td><code>VERIFICATION.md</code></td>
+<td><code>0680361cba1260fc3fa71140a05de2766be3ecfb45778587775a9459258c076d</code></td>
+</tr>
+<tr>
+<td><code>corpus/ground_truth_sources/aliasing.c</code></td>
+<td><code>09a93c1038059384920be8ed617f196950b3b935fa4e7ecdcccd4b38215f222c</code></td>
+</tr>
+<tr>
+<td><code>corpus/ground_truth_sources/arithmetic.c</code></td>
+<td><code>1a39b20e36efc0d23c5570152a1db30922527835bfc82ddf4b629980c916326e</code></td>
+</tr>
+<tr>
+<td><code>corpus/ground_truth_sources/bitfields.c</code></td>
+<td><code>44c9a66d27e87a270af05fdb87d82d87512b70fe72600df0bc89f4e091b5a7dd</code></td>
+</tr>
+<tr>
+<td><code>corpus/ground_truth_sources/branches.c</code></td>
+<td><code>0dcc84cf6d38aa0a3e90a66bd349f349d504cd2dc0160db16933466c56aa99bb</code></td>
+</tr>
+<tr>
+<td><code>corpus/ground_truth_sources/calling_conventions.c</code></td>
+<td><code>cfb331698f9ccdb113849a7c535a500ee6631a46a716be1d3791e49f9c1e69b3</code></td>
+</tr>
+<tr>
+<td><code>corpus/ground_truth_sources/classes.cpp</code></td>
+<td><code>d04c86180d9424ea91914dc7b73d93b4b3da432d7a26d8d801ff9d5718701521</code></td>
+</tr>
+<tr>
+<td><code>corpus/ground_truth_sources/eh_multiple.cpp</code></td>
+<td><code>7b3cc0e687132f70957e55dbbaa5c479d6a4864fde0e11cb49df0c600d6f2665</code></td>
+</tr>
+<tr>
+<td><code>corpus/ground_truth_sources/exceptions.cpp</code></td>
+<td><code>fd15c6bd23f39262a9aa02f94f02210dacab53a2a5d358aae415bba2c329394e</code></td>
+</tr>
+<tr>
+<td><code>corpus/ground_truth_sources/floating_point.c</code></td>
+<td><code>ff00c63ae76817932bdd0b4a5b0a0c8bc661e03314889d1eef404e580279bb89</code></td>
+</tr>
+<tr>
+<td><code>corpus/ground_truth_sources/globals.c</code></td>
+<td><code>e4fbe6bc2a51161e651a23264f5de4e90d052b2e9efcbcea1c1ff76a748528c4</code></td>
+</tr>
+<tr>
+<td><code>corpus/ground_truth_sources/indirect_calls.c</code></td>
+<td><code>b9b6dc58d6912bf8a54c46868a5a61b321447c9826660dfb29f76f741b21b92e</code></td>
+</tr>
+<tr>
+<td><code>corpus/ground_truth_sources/loops.c</code></td>
+<td><code>d929c2eb356d9e45d27aa9a9e9929d1ce3fad324d8843d7e53e4dbe7dabe9262</code></td>
+</tr>
+<tr>
+<td><code>corpus/ground_truth_sources/member_pointers.cpp</code></td>
+<td><code>8e84a7254ebeda7ec4db40335350606cf26227868e20be7db4f4382cdd3e9f69</code></td>
+</tr>
+<tr>
+<td><code>corpus/ground_truth_sources/multiple_inheritance.cpp</code></td>
+<td><code>2fc99918de8375a035774b6cff12866defb77d2095bf1a6005b6419c4afc4410</code></td>
+</tr>
+<tr>
+<td><code>corpus/ground_truth_sources/static_initializers.cpp</code></td>
+<td><code>5566d58941846d63fafa6e6047f5f0a70dd19ff484aea58f1eac88cfa1c3156c</code></td>
+</tr>
+<tr>
+<td><code>corpus/ground_truth_sources/structs.c</code></td>
+<td><code>0b29f69d01886989d3d34fb430acb259ca55c604b8b59c968e5d341972102280</code></td>
+</tr>
+<tr>
+<td><code>corpus/ground_truth_sources/switch_dense.c</code></td>
+<td><code>2a696a875c034a89e16a9b28359f6603942c536954321bc7403a9b780d24546f</code></td>
+</tr>
+<tr>
+<td><code>corpus/ground_truth_sources/tail_calls.c</code></td>
+<td><code>874edb70e2470cafdd6bed6a7a05519da95c926d1b0777622d1fba726194ddb3</code></td>
+</tr>
+<tr>
+<td><code>corpus/ground_truth_sources/templates.cpp</code></td>
+<td><code>cd18fc097a4bbbacacff6685edb8c5e6a0dfe7d8e27a68eb0b0febad6508194b</code></td>
+</tr>
+<tr>
+<td><code>corpus/ground_truth_sources/tls.c</code></td>
+<td><code>9f917229ae42021f4045f2f56af5ac3116987dc442e304c1b9b6b441200ba54b</code></td>
+</tr>
+<tr>
+<td><code>corpus/ground_truth_sources/unions.c</code></td>
+<td><code>2906ac1f944da7f6020756df9f20451048f8e2ed81ed5ac6ea06554afe1c7f60</code></td>
+</tr>
+<tr>
+<td><code>corpus/ground_truth_sources/varargs.c</code></td>
+<td><code>3326edfa00e59cd41f5409c8ef01d1d5b96c0e1a13471972a2a107725032cdbb</code></td>
+</tr>
+<tr>
+<td><code>corpus/ground_truth_sources/vectorizable.c</code></td>
+<td><code>4e71d283a0479bd5264da8f235bdb4f434a1b841289d9eac335c8b997be10f43</code></td>
+</tr>
+<tr>
+<td><code>corpus/ground_truth_sources/virtual_inheritance.cpp</code></td>
+<td><code>c8e83579cd4d6159e716c23270110d997349e3b1a609bf1d50c0b93a2e64d1d2</code></td>
+</tr>
+<tr>
+<td><code>docs/ARCHITECTURE_MAP.md</code></td>
+<td><code>5fac4c9a25f93d4832e1efa1d6772ddaa4e04b2e1a6ae25192ed832863294c5d</code></td>
+</tr>
+<tr>
+<td><code>docs/ARCHITECTURE_MAP_ASCII.txt</code></td>
+<td><code>0de8691677c5e9c38ce1799b0d66298d5aef63771061652d0c5a43e2fc21960f</code></td>
+</tr>
+<tr>
+<td><code>docs/architecture.md</code></td>
+<td><code>1ad46432e6b4a47cd0fa1547c9def45e5e032ba8a89f3e4340e4a4e899fccae4</code></td>
+</tr>
+<tr>
+<td><code>docs/build-and-verification.md</code></td>
+<td><code>a1ad6ceda64168ebec571131c59007e5702d4650770ff47bf9f0d92e1242eb0f</code></td>
+</tr>
+<tr>
+<td><code>docs/contracts.md</code></td>
+<td><code>ca03911160dff537c0320208dc20b8dff7d8b44617d2344f40cedd72f28707cd</code></td>
+</tr>
+<tr>
+<td><code>docs/evidence-and-claims.md</code></td>
+<td><code>a573ac934a840cec2976052600e8631ce736442ac86650cce2116d0011a28f16</code></td>
+</tr>
+<tr>
+<td><code>docs/ghidra-integration.md</code></td>
+<td><code>c60e3ad7b722d1063d4a11e59e5225ddc5e1468781917992db958aba7387006a</code></td>
+</tr>
+<tr>
+<td><code>docs/guardrails.md</code></td>
+<td><code>c900c3cf8ad5d8631d14f8325e4c130d75c4c16a73fb53b6ce6ae0dc5d09134f</code></td>
+</tr>
+<tr>
+<td><code>docs/local-llm.md</code></td>
+<td><code>79c619e958fbe8f39680672792e6b3e7608be57b291c228534038b2b140b0973</code></td>
+</tr>
+<tr>
+<td><code>docs/operations-and-recovery.md</code></td>
+<td><code>7430e41f4663a97f752ccc7a8686c1a39693605ea71ad88725c9fa33fe755238</code></td>
+</tr>
+<tr>
+<td><code>docs/project-memory.md</code></td>
+<td><code>9053e590e5f0394ff3d07534b017e51b593f5d71d225d2b6e71d70dfd51284ea</code></td>
+</tr>
+<tr>
+<td><code>docs/roadmap.md</code></td>
+<td><code>910ad2690ff63134b2e0a0f6de75d2eb480dfda333aadd61d7ff880c078c27a5</code></td>
+</tr>
+<tr>
+<td><code>docs/source-basis.md</code></td>
+<td><code>b0950b1b47308b283028c141a84c8cbf41f377d68b269d418c239edd7e8e9ee4</code></td>
+</tr>
+<tr>
+<td><code>docs/supported-scope.md</code></td>
+<td><code>6c20f159fb55c7a1e3a4bf32bfab16e50cfe992077d980a2435c0fac91269960</code></td>
+</tr>
+<tr>
+<td><code>docs/target-packs-and-templates.md</code></td>
+<td><code>7e65033dff4a1d532861775161d621e8f73ec238363b43fce2b7101a3ba6a2d0</code></td>
+</tr>
+<tr>
+<td><code>docs/test-bundle.md</code></td>
+<td><code>a46690243ada69526ce92db7b4f667a8aea677db98a286c5a56ff7b18af9f113</code></td>
+</tr>
+<tr>
+<td><code>examples/abi/stdcall-two-ints.json</code></td>
+<td><code>f2c7a723de83de7169612e1cdc305a4bd8779e9ad82c7ff3a2ce90d400ac3ace</code></td>
+</tr>
+<tr>
+<td><code>examples/benchmarks/bounded-demo.json</code></td>
+<td><code>980ad9dc8352019f4dca1f06e25a8654ec87248befc178c35490ecc3d129a51a</code></td>
+</tr>
+<tr>
+<td><code>examples/compiler-profiles/gcc-i686-object.json</code></td>
+<td><code>dc5dee89f0aff786350b51e24e7b77067de8d2a0a332fc6e880041a330729572</code></td>
+</tr>
+<tr>
+<td><code>examples/contracts/command-surface.json</code></td>
+<td><code>febc07cc84c92535bdd10f4c6de6bbbb850fb97db9a4024310d12e9132d79059</code></td>
+</tr>
+<tr>
+<td><code>examples/contracts/public-surface.json</code></td>
+<td><code>959a8fecaa6cc83b39567b99b9d8880dafdf10a80a6c2e22b9ebab8110d3fef8</code></td>
+</tr>
+<tr>
+<td><code>examples/integration/bounded-demo.json</code></td>
+<td><code>e1b589e23a5fa0a7c1310c69760ef7729fa912c2a5584985a7cbb487f57eab26</code></td>
+</tr>
+<tr>
+<td><code>examples/integration/candidate.py</code></td>
+<td><code>fdec1c8156f57d6ba8a11f898a846634783644a8c8aaaabaa98854aa5adb1bd4</code></td>
+</tr>
+<tr>
+<td><code>examples/integration/target.py</code></td>
+<td><code>fdec1c8156f57d6ba8a11f898a846634783644a8c8aaaabaa98854aa5adb1bd4</code></td>
+</tr>
+<tr>
+<td><code>examples/labs/gcc-optimization-matrix.json</code></td>
+<td><code>f4f19ea47da16374312c4eff46d2914e3d0c425a229f92a95b2fe99221acbd78</code></td>
+</tr>
+<tr>
+<td><code>examples/local-llm/add-two-ints-job.json</code></td>
+<td><code>aac7785ac0e8ccc9e408fe583c7a96ca8a4bb01abd51eb17c1553f127a8a86b5</code></td>
+</tr>
+<tr>
+<td><code>examples/local-llm/lm-studio-profile.json</code></td>
+<td><code>f8135459f4354bf16ab4797924efb4a02f44b494ac36ee4873464609307c202e</code></td>
+</tr>
+<tr>
+<td><code>examples/local-llm/ollama-profile.json</code></td>
+<td><code>f10e53e8646689be08c75c7e06fa238ddf78159aa672da8e35aa3c3df415e5bb</code></td>
+</tr>
+<tr>
+<td><code>examples/release/release-gate-policy.json</code></td>
+<td><code>7ad41612264a71c3bd1d1ea44b5ad0f9145710ef926492975796dd9264948026</code></td>
+</tr>
+<tr>
+<td><code>examples/release/target-decisions.json</code></td>
+<td><code>91b5bfcd613ac3d76fc020e5bb415d0ae11594886c6cac4317cc06e7ea5df1cb</code></td>
+</tr>
+<tr>
+<td><code>examples/relink/lld-link-x64.json</code></td>
+<td><code>6addc382de2d64d223f4e24e47207b5741d2583d1717f4aec04107123a6013ef</code></td>
+</tr>
+<tr>
+<td><code>examples/sample_source/add.c</code></td>
+<td><code>860aaedc4520b18df5ce99de71a36487eb333dcdb09f65fce222677c8fe8cd97</code></td>
+</tr>
+<tr>
+<td><code>examples/symbolic/symbolic-alias-harness.json</code></td>
+<td><code>e5bbc6d9470e269f41051e95a444a9218f9919140bc74070dd223caf4eb7c130</code></td>
+</tr>
+<tr>
+<td><code>examples/test-bundle/x86decomp-test-bundle.json</code></td>
+<td><code>6d88af2c016e6e88a5ba66fab7c88c9d7b56f70c1f5e71d2cb494aab69da6a68</code></td>
+</tr>
+<tr>
+<td><code>examples/validators/add_stack_candidate.bin</code></td>
+<td><code>6d1e1d30f2068501de61e0022c4352fda2a7650f29eb96f01ad04fa160305e21</code></td>
+</tr>
+<tr>
+<td><code>examples/validators/add_stack_harness.json</code></td>
+<td><code>beeaeeecbe1136402ef0b3c1c3f799256a2613f87bb9457f97b71fe605ec0d0f</code></td>
+</tr>
+<tr>
+<td><code>examples/validators/add_stack_target.bin</code></td>
+<td><code>6d1e1d30f2068501de61e0022c4352fda2a7650f29eb96f01ad04fa160305e21</code></td>
+</tr>
+<tr>
+<td><code>examples/validators/sub_stack_candidate.bin</code></td>
+<td><code>fe10777e0899cf9cabd2bc8dc3367d711f6af675bdda9c5e28144539792f922f</code></td>
+</tr>
+<tr>
+<td><code>ghidra_scripts/ExportFunctionArtifacts.java</code></td>
+<td><code>2c1a21482d49c2bdd2fcf86e6df9d3c401fc4e5e4c4a36ea358aa9e2ddf6ca49</code></td>
+</tr>
+<tr>
+<td><code>ghidra_scripts/ExportProjectManifest.java</code></td>
+<td><code>136d6c725b1dcf122e4cc650f2a008c2dbbaf5322c3e943657074cb3c73d2653</code></td>
+</tr>
+<tr>
+<td><code>ghidra_scripts/QueryAnalysis.java</code></td>
+<td><code>5f6b639103a6d104f63db3c1d6cf070d486a461d3a2be9db83f09bcd5d4a6150</code></td>
+</tr>
+<tr>
+<td><code>pyproject.toml</code></td>
+<td><code>e6a6ad5e915c0e1cb27c5f2b975f1ba384a150ef0185dcba1b61b0b6070d7b19</code></td>
+</tr>
+<tr>
+<td><code>schemas/abi-contract.schema.json</code></td>
+<td><code>536e89f5ab760329f3799138b17c8a321170fc1fc729528d97b7f75d4af96c76</code></td>
+</tr>
+<tr>
+<td><code>schemas/assembly/asm-function.schema.json</code></td>
+<td><code>195bea275d17b7750ee8dcf07083616a91f24ff84defeb639dec89e27d614c90</code></td>
+</tr>
+<tr>
+<td><code>schemas/assembly/asm-run.schema.json</code></td>
+<td><code>c86431fa7a7eaf372dad48ef886e159e933e40c81ddd14ac9998403ca74a5a69</code></td>
+</tr>
+<tr>
+<td><code>schemas/assembly/relocation-resolution.schema.json</code></td>
+<td><code>c142e5e732051f69c674e98ff6e648b26d3f7bc7a54470294fc6e32677259682</code></td>
+</tr>
+<tr>
+<td><code>schemas/assembly/roundtrip-report.schema.json</code></td>
+<td><code>d5be5d23add817e75c3000bc9329b62478848c78a2f235d5fcfc473e8ce2e292</code></td>
+</tr>
+<tr>
+<td><code>schemas/assembly/symbol-map.schema.json</code></td>
+<td><code>78b1b335af213c379e1b080c33220d27472ee4bc66b35c96f3b19c63da2886f1</code></td>
+</tr>
+<tr>
+<td><code>schemas/benchmark-corpus.schema.json</code></td>
+<td><code>0081dd4d038287641f14ccd228dd0e824bff8bd3745f8251aaa0a94c1c61e36c</code></td>
+</tr>
+<tr>
+<td><code>schemas/claim.schema.json</code></td>
+<td><code>362341adcb81640a7839c77d37d7203b911e7e79655be6c0ab4115f460609532</code></td>
+</tr>
+<tr>
+<td><code>schemas/coff-archive.schema.json</code></td>
+<td><code>5f5a43f1ce6ae1221df24107f7b9db057156731736ff4aad5c81c93a73abaab3</code></td>
+</tr>
+<tr>
+<td><code>schemas/comdat-resolution.schema.json</code></td>
+<td><code>01fd177dfa983202ca8770e7985aa623e166fd22c20fdecc1d3d37f9cbfe0aae</code></td>
+</tr>
+<tr>
+<td><code>schemas/compiler-ground-truth-comparison.schema.json</code></td>
+<td><code>1ea55d940c62d4e60487f74ac4d9756e4ff4c7cb2c39c9dd629b1d4150646dfb</code></td>
+</tr>
+<tr>
+<td><code>schemas/compiler-ground-truth.schema.json</code></td>
+<td><code>1f8d15358ce71168a0f7c4d61ba7ad9db1ef12b534b27444bdda1f77f96392a2</code></td>
+</tr>
+<tr>
+<td><code>schemas/compiler-lab.schema.json</code></td>
+<td><code>37bc55f945daffc31844a78c2b4788191f501589303826a6cee207c5c4717506</code></td>
+</tr>
+<tr>
+<td><code>schemas/compiler-profile.schema.json</code></td>
+<td><code>6903f160acf5cfb8329567efbdd2da82b9f171705971e9842afcae21a4a4f844</code></td>
+</tr>
+<tr>
+<td><code>schemas/convergence-report.schema.json</code></td>
+<td><code>ace195921a16f72366e2920e6e2ce4e464b51f665d4d12ff5117dbea49119185</code></td>
+</tr>
+<tr>
+<td><code>schemas/cpp-recovery.schema.json</code></td>
+<td><code>9eda5eb04cdd6404ed82077dab0b1f2668f3682b33f864fec3c7348439515d8a</code></td>
+</tr>
+<tr>
+<td><code>schemas/decompme-packet.schema.json</code></td>
+<td><code>65cd0a5d3197e6de85ec46c8eb372a387102192d9341ee252a7f40ca83b91704</code></td>
+</tr>
+<tr>
+<td><code>schemas/dependency-audit.schema.json</code></td>
+<td><code>2eef4097789050d846536b406ccd7b9e8e639467bdf1ca530045fcc6050c8ee2</code></td>
+</tr>
+<tr>
+<td><code>schemas/drcov-trace.schema.json</code></td>
+<td><code>aedc8ab92612b4b325552d3de98da9d04e2e4c3aa2bb2ab319e20f85616cfe7f</code></td>
+</tr>
+<tr>
+<td><code>schemas/dynamic-report.schema.json</code></td>
+<td><code>1af7c179c9d4fedbf542c098eab126d556fc8345a464176d211640f391effce0</code></td>
+</tr>
+<tr>
+<td><code>schemas/evidence.schema.json</code></td>
+<td><code>5c5199ae9f480dbbb28eb3ebd889a53a46c08535cabf346d3a0bf04f4a4aa7bd</code></td>
+</tr>
+<tr>
+<td><code>schemas/exe-diff-report.schema.json</code></td>
+<td><code>3bfb70b7158750523074f638ff5955cc519097a37543f9f097909f4576373b50</code></td>
+</tr>
+<tr>
+<td><code>schemas/execution-harness-generated.schema.json</code></td>
+<td><code>7ba43bfcb6b5b8736d784112af5531e1a890630e379eb2c345f15442c18a2c6d</code></td>
+</tr>
+<tr>
+<td><code>schemas/execution-harness.schema.json</code></td>
+<td><code>2ec27dc202dcf7ab923c646c71e30769b0c18527aaf2e6ba44e70536574e4f68</code></td>
+</tr>
+<tr>
+<td><code>schemas/function-workflow.schema.json</code></td>
+<td><code>972f7c4fef555a4653a57cad04f1dedb186cc70a6c59de7e674645b30c240351</code></td>
+</tr>
+<tr>
+<td><code>schemas/function.schema.json</code></td>
+<td><code>00c65be77cc237df28a9112019c07019f88f38072ceb329907adc88bcfc34704</code></td>
+</tr>
+<tr>
+<td><code>schemas/governance/campaign.schema.json</code></td>
+<td><code>df027ea63ef0017b5a9ecae133a21ab7fa13f68e00545529e8606b5f39d1f854</code></td>
+</tr>
+<tr>
+<td><code>schemas/governance/candidate.schema.json</code></td>
+<td><code>db23f94af8b37ebdfff2798c271a0ef02ea9d77aae83fa8c8ebdab3d2f55ad67</code></td>
+</tr>
+<tr>
+<td><code>schemas/governance/changeset.schema.json</code></td>
+<td><code>6788b90056dbf46cdaaaab292bdc6c3102e20ff47c790f131b47c15d08f5cbd3</code></td>
+</tr>
+<tr>
+<td><code>schemas/governance/consensus.schema.json</code></td>
+<td><code>f3edcf4a5962701cde7a0f4f483a19d49e9f5beea5e6a4dc3c643c9970ee9c43</code></td>
+</tr>
+<tr>
+<td><code>schemas/governance/counterexample.schema.json</code></td>
+<td><code>0e2b706ed1bf89e6c07a483dd171dbb23fbac4f67c87ef1df16be6c2fe50d19c</code></td>
+</tr>
+<tr>
+<td><code>schemas/governance/family.schema.json</code></td>
+<td><code>cd02347eefe68396b21d7ec5af6ef9c1554dd4715e962e302ece657cb0b851ed</code></td>
+</tr>
+<tr>
+<td><code>schemas/governance/hypothesis.schema.json</code></td>
+<td><code>1013bee5c093d4cf0e619dbcdc52a2b2ff79c0b768da9c699ad0483bfc283a83</code></td>
+</tr>
+<tr>
+<td><code>schemas/governance/knowledge-graph.schema.json</code></td>
+<td><code>d1bc76932c0264e763eb4cdb47d46397ddf00bb57e1c240371ef42049631db28</code></td>
+</tr>
+<tr>
+<td><code>schemas/governance/plugin.schema.json</code></td>
+<td><code>1fb5e12f5c8eb5408dea6372c5442273b1694559dc9c09784bbca4309dbf5fd2</code></td>
+</tr>
+<tr>
+<td><code>schemas/governance/proof-bundle.schema.json</code></td>
+<td><code>96254cbaecca7f0561328f51ee7d4ed36d0dffa21c9ea09d5ec40328fbc0a5de</code></td>
+</tr>
+<tr>
+<td><code>schemas/governance/review.schema.json</code></td>
+<td><code>280cfe7963adcdcbbb3a1fde01b921cad82751d2240a4fcdaa9b9543db071bc2</code></td>
+</tr>
+<tr>
+<td><code>schemas/governance/worker.schema.json</code></td>
+<td><code>ca8f6768a4c7dfe89e80f2107c4bb43badde4d01d3ec6947ff001c9b207b403c</code></td>
+</tr>
+<tr>
+<td><code>schemas/hybrid-project.schema.json</code></td>
+<td><code>c72692b4469f7ba92b2945968974d495371e2c0f03ad438c970418c3ce31d9b0</code></td>
+</tr>
+<tr>
+<td><code>schemas/image-match-report.schema.json</code></td>
+<td><code>f81f81c2581b2941b9a3850aa2d296957e1d14de2ad3d8ee92839b34ccfadc23</code></td>
+</tr>
+<tr>
+<td><code>schemas/image-profile.schema.json</code></td>
+<td><code>5916e3589fb77876a26861ccfea7dfbfbf4b9c55e92243ed66dae4270dad70d7</code></td>
+</tr>
+<tr>
+<td><code>schemas/integration-report.schema.json</code></td>
+<td><code>4732a3a8f4038739f46c7b7b74b20999c68d9f637bac783a53b03eee91e91d1a</code></td>
+</tr>
+<tr>
+<td><code>schemas/integration-scenarios.schema.json</code></td>
+<td><code>60799068b8df90e7d457415f6e08fa236a0620630ddab2641dec2ff8bac6e43e</code></td>
+</tr>
+<tr>
+<td><code>schemas/linker-layout.schema.json</code></td>
+<td><code>a8faf6022c8b70e04c3375d47a480b9a811e72edd55ea7e0ec4e80a77a8ca934</code></td>
+</tr>
+<tr>
+<td><code>schemas/linker-reconstruction-plan.schema.json</code></td>
+<td><code>1d6fadf9737abed4d02cc90d3859898785edf62d3909c39fe893c8841c57f504</code></td>
+</tr>
+<tr>
+<td><code>schemas/local-llm/candidate.schema.json</code></td>
+<td><code>cadff624248794b1841a55fd49f2f980658a442d046530c183ec0c89d44d99ab</code></td>
+</tr>
+<tr>
+<td><code>schemas/local-llm/job.schema.json</code></td>
+<td><code>6ac68b5f4f22855154f8ec09e599c7caa3ce12d117fb125a0bae8e4dce0197a8</code></td>
+</tr>
+<tr>
+<td><code>schemas/local-llm/profile.schema.json</code></td>
+<td><code>dc3ed501bada8be1896567c329fd550ad843059786ed07bbae6ef3063fdfe3ee</code></td>
+</tr>
+<tr>
+<td><code>schemas/local-llm/report.schema.json</code></td>
+<td><code>d61c0308354431848f281d3c62cd32b39c9d61277492bee480a02276e5ad6ac0</code></td>
+</tr>
+<tr>
+<td><code>schemas/mcp-mutation.schema.json</code></td>
+<td><code>64335798160269133e880d823f14de7f0cb4f2dafbf0c47526e24fb9fb16ea29</code></td>
+</tr>
+<tr>
+<td><code>schemas/memory-event.schema.json</code></td>
+<td><code>d2f38971ac7dda92dda0564bb77bb4858160b5a342476d36fe52238eb5289e74</code></td>
+</tr>
+<tr>
+<td><code>schemas/msvc-metadata.schema.json</code></td>
+<td><code>84d0b6bc880ab47954f951a4eed4db317c14ee33ed5cdbe0ee098ce61c1d6273</code></td>
+</tr>
+<tr>
+<td><code>schemas/native/boundary-finding.schema.json</code></td>
+<td><code>58d723eee6c5c374f78dcac68a23be5d0b60c6f002c3e8285d307eef496e74fc</code></td>
+</tr>
+<tr>
+<td><code>schemas/native/candidate-manifest.schema.json</code></td>
+<td><code>d3bad2e693b4b7d6e1c230d9e03ff775298273523c8b562d3b78400c13313029</code></td>
+</tr>
+<tr>
+<td><code>schemas/native/function-match.schema.json</code></td>
+<td><code>e598ca859f33c96b62fe8dac7fcf78ec77b53e4b8f178b9f19e1f288e2725cd1</code></td>
+</tr>
+<tr>
+<td><code>schemas/native/function-slot.schema.json</code></td>
+<td><code>61bb10550455068b1c58073dfb30939aea8095cefbd775abab4d044efe9a2914</code></td>
+</tr>
+<tr>
+<td><code>schemas/native/hybrid-composition.schema.json</code></td>
+<td><code>feb6682c1aa1ed0a3bc3c06230ce27f006641d96238050151ad22584eb02cb9d</code></td>
+</tr>
+<tr>
+<td><code>schemas/native/loop-run.schema.json</code></td>
+<td><code>de5d1a277444c3ea53ae0c4860d1a7978b478893fb893cf4c1ba1fca4a11b038</code></td>
+</tr>
+<tr>
+<td><code>schemas/native/match-run.schema.json</code></td>
+<td><code>7afbfb42c5995ff375a050c93bb119ce50f2a761220c610f2c1622f082c23fb5</code></td>
+</tr>
+<tr>
+<td><code>schemas/native/patch-plan.schema.json</code></td>
+<td><code>90a1f06eaa3f6a3d6b235cc0439c57fec0187006ccc4c01b8fbb76571bb31958</code></td>
+</tr>
+<tr>
+<td><code>schemas/native/runtime-validation.schema.json</code></td>
+<td><code>f314d1ae2b72314a6ebf6c6d2905a8eb2f314498f256f567e01ae08622da90f3</code></td>
+</tr>
+<tr>
+<td><code>schemas/native/section-export.schema.json</code></td>
+<td><code>121ed87fe1b51a248b230acafd9780b96e74e01c72e9cba7fcd20fbb466eb317</code></td>
+</tr>
+<tr>
+<td><code>schemas/native/staging-symbol.schema.json</code></td>
+<td><code>44b3ce02db0758435f6a230a9ad37bd00c3a6308bf71761836050e5c90c6c4d0</code></td>
+</tr>
+<tr>
+<td><code>schemas/native/windows-tool.schema.json</code></td>
+<td><code>22af6f0e3266250f1c741e95e231c4ee3d62fd3944e0000e6ab6e652089906e0</code></td>
+</tr>
+<tr>
+<td><code>schemas/objdiff-manifest.schema.json</code></td>
+<td><code>2fe8f65399749687b2890cc643f474c0b8de221e90f6ae5013ce0d8b46590360</code></td>
+</tr>
+<tr>
+<td><code>schemas/pdb.schema.json</code></td>
+<td><code>850bbf885fa040ac4601dc4d93c2fb4b3afda1dd86612a0d8866a34bacf07008</code></td>
+</tr>
+<tr>
+<td><code>schemas/pipeline.schema.json</code></td>
+<td><code>a9b7b790fb6c877370a4c61ecbdf0f92eac13d9aba389cc0ab8d8723aee92ca6</code></td>
+</tr>
+<tr>
+<td><code>schemas/project-template.schema.json</code></td>
+<td><code>1bf881ea328d3a6c00d727c0cbe1e47763726e70362a085354178add994458ce</code></td>
+</tr>
+<tr>
+<td><code>schemas/project.schema.json</code></td>
+<td><code>4ab19d9064e8d249fdd545d1fa183920902d6afbe647d004ddd571a208295b0b</code></td>
+</tr>
+<tr>
+<td><code>schemas/reconstruction/abi-contract.schema.json</code></td>
+<td><code>d2286943caed629e873a4107fcceb21f18b0759cfebd17b71f761af14e68e016</code></td>
+</tr>
+<tr>
+<td><code>schemas/reconstruction/build.schema.json</code></td>
+<td><code>647d938812825abaa84206de119ebc4a18d8fad70a4f50121f990a4af2571dd0</code></td>
+</tr>
+<tr>
+<td><code>schemas/reconstruction/capsule.schema.json</code></td>
+<td><code>ea5c29231bf80991be1f1b79195a86650aac2fb19af94cb83502175d63b582c7</code></td>
+</tr>
+<tr>
+<td><code>schemas/reconstruction/compatibility-shim.schema.json</code></td>
+<td><code>714bcc499ffc2db676e163a5886ce9ca4fca7df0b2382a94488c6dfc5a782926</code></td>
+</tr>
+<tr>
+<td><code>schemas/reconstruction/generated-test.schema.json</code></td>
+<td><code>8e99342ae82922d0c5c17c41e857074a5a2cec9b1269e23572aea09b5715a7b5</code></td>
+</tr>
+<tr>
+<td><code>schemas/reconstruction/header.schema.json</code></td>
+<td><code>c878f851e64b11db9e0dad34785d5ef3ba3baa753e380af72f554fe44529a850</code></td>
+</tr>
+<tr>
+<td><code>schemas/reconstruction/library-match.schema.json</code></td>
+<td><code>cdf8967118c99e0f1d224829f1e3067a2b9db50f31ca945db68a3cec61b0f36e</code></td>
+</tr>
+<tr>
+<td><code>schemas/reconstruction/module.schema.json</code></td>
+<td><code>4aa87665cf31d30d9395bff7fb9388c9bd55257718808572669a874922436a4f</code></td>
+</tr>
+<tr>
+<td><code>schemas/reconstruction/security-finding.schema.json</code></td>
+<td><code>9a4f8a220e2e2d1d7dbc8116968bf2752d57a5725e18673faf59a192ace1826e</code></td>
+</tr>
+<tr>
+<td><code>schemas/reconstruction/semantic-changeset.schema.json</code></td>
+<td><code>2cc66c0075ba39a54d86a20ca3705d4656ce90e922ce5a8c0b9357db1bc27b28</code></td>
+</tr>
+<tr>
+<td><code>schemas/reconstruction/source-provenance.schema.json</code></td>
+<td><code>d80a00434549c01f14f1afa7c43cb65b9eb653808b42fb5fa10f25b1d7ac1b0c</code></td>
+</tr>
+<tr>
+<td><code>schemas/reconstruction/translation-unit.schema.json</code></td>
+<td><code>ea17fb7bfec69c8e9e3eb5d14179194acece94ba90d5e0ad76c5f3e653dca642</code></td>
+</tr>
+<tr>
+<td><code>schemas/release-gate.schema.json</code></td>
+<td><code>50e1f5a6cb46b67f833c881a7f025be5c7c047c1f23c3607608488afe17256cd</code></td>
+</tr>
+<tr>
+<td><code>schemas/relink-manifest.schema.json</code></td>
+<td><code>ca2b77b7be6b562589e841753a9afa8c6baf1fc7cf8c703409c90fc56507e890</code></td>
+</tr>
+<tr>
+<td><code>schemas/reproduction.schema.json</code></td>
+<td><code>aea350be271c7795406a2dd55096775e9d0b531215e05f43b75a9c6b5bd98281</code></td>
+</tr>
+<tr>
+<td><code>schemas/security-audit.schema.json</code></td>
+<td><code>d62a14bd5c6d796dd52aee929ccfdf8e1265f825167070c8ffd680321a00b637</code></td>
+</tr>
+<tr>
+<td><code>schemas/symbolic-memory-harness.schema.json</code></td>
+<td><code>e7ce53b843c172758fc086503e040cd1c60a3836f528b2c8396a7e77ab7c200a</code></td>
+</tr>
+<tr>
+<td><code>schemas/symbolic-memory-report.schema.json</code></td>
+<td><code>5e17dedb1bedf6581662f4cced118e40b8075957a161daea2abfab778d0298ba</code></td>
+</tr>
+<tr>
+<td><code>schemas/symbolic-report.schema.json</code></td>
+<td><code>cc596ec7c42bc74e7810dbf52bf50cba2d17375e9438f0a3fcbb3dae67a88e29</code></td>
+</tr>
+<tr>
+<td><code>schemas/synthetic-corpus.schema.json</code></td>
+<td><code>3c05d2c0a766021805afdd306d6a08068af6a24cdb0adb82fb3eca4d0f1d7c7d</code></td>
+</tr>
+<tr>
+<td><code>schemas/target-decisions.schema.json</code></td>
+<td><code>647192549c5e079a02e597648a0d3d2ade5078866f869b7e0da34324b5976ed6</code></td>
+</tr>
+<tr>
+<td><code>schemas/target-pack.schema.json</code></td>
+<td><code>867b89f3738ff1310340d078c5ae530f0087277e96cd00106fa1275cd0bcc954</code></td>
+</tr>
+<tr>
+<td><code>schemas/test-bundle-report.schema.json</code></td>
+<td><code>482f5b618cd46eb5e815392f2655bb9fe4f3683e1f5122b8f7ab0ea69f8a2820</code></td>
+</tr>
+<tr>
+<td><code>schemas/test-bundle.schema.json</code></td>
+<td><code>398d162a3ccc9e3bd1e984af67efbfaf12a840f4013b406c0cf8d150f490deab</code></td>
+</tr>
+<tr>
+<td><code>schemas/type-constraint.schema.json</code></td>
+<td><code>f98328b457deccc685ea8be764507320d5ff94deddb366e47c5018a678baa59d</code></td>
+</tr>
+<tr>
+<td><code>schemas/verification.schema.json</code></td>
+<td><code>a70e3422e6b0bec967695257c7b66d44f17a0cfe3f15d99799eb1c038ccb7fa0</code></td>
+</tr>
+<tr>
+<td><code>schemas/work-task.schema.json</code></td>
+<td><code>36794b2e24e785918a28d8bd7f5fedd100c090ed64030c71eefa0a8c933b92c9</code></td>
+</tr>
+<tr>
+<td><code>schemas/worker-report.schema.json</code></td>
+<td><code>f4fee8d629c5e963519a4f5ab25c4bb0856592421ee218fe7d047b5ebe089b3c</code></td>
+</tr>
+<tr>
+<td><code>scripts/run-pytest-partitions.py</code></td>
+<td><code>3854181436f04652a6cc59ead85b08729f9e65e29723c316ac33910e44d3d4c4</code></td>
+</tr>
+<tr>
+<td><code>scripts/source_hashes.py</code></td>
+<td><code>6a9ed5603d441dd17731364bf711bc1bdc99e901b90b655460b5b96a9e886308</code></td>
+</tr>
+<tr>
+<td><code>scripts/sync-release-contracts.py</code></td>
+<td><code>a8ad580c7a5dd2d4773d4c1522aa2e03e2043548013a2140137121ff74a453a8</code></td>
+</tr>
+<tr>
+<td><code>scripts/validate-contracts.py</code></td>
+<td><code>cfba0bf39dc9deb12787bff9a876bef0fe41394c3f7f50ea32e5dc3cced290dd</code></td>
+</tr>
+<tr>
+<td><code>scripts/verify-ghidra.sh</code></td>
+<td><code>254ae110f3a9b12b33ca77c698d7185792c180139fcef31017e400523440e111</code></td>
+</tr>
+<tr>
+<td><code>scripts/verify.sh</code></td>
+<td><code>324346ded8358e7fe227f69035deefa0365843e3735dbef904a7ce7387b5e853</code></td>
+</tr>
+<tr>
+<td><code>setup.cfg</code></td>
+<td><code>1c473cbaee8da5fc46e7f0158794af5cea4414c34a3cf3f180c2001f5e38bd3e</code></td>
+</tr>
+<tr>
+<td><code>skills/x86decomp/SKILL.md</code></td>
+<td><code>9b905ffbef377ff77ddea3a790284153744e7311c13b45ac295263cbca4bcc10</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/__init__.py</code></td>
+<td><code>f2ad83fbddd4c865b8c25c8f6d172ef01bec8f275d7ed74f2ceb955f93738a62</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/__main__.py</code></td>
+<td><code>935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/abi.py</code></td>
+<td><code>e69b8d4ba247b2e3dbd3553cd207ee8fbe24fe244878c4dabb4afffbebb33903</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/analysis_db.py</code></td>
+<td><code>409e503d6c264dba48a00e1d1afc475ce735cf25f1ec4aab7ac41b07ed5b9bad</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/angr_backend.py</code></td>
+<td><code>b3f95fbeec7f4d726ba52f50df9d4d7986cfad9ed5c789ab0a3932c0dea8b7a3</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/artifacts.py</code></td>
+<td><code>171833c573e11e5d40d7791f8fea523536905a8486145a1aa1b96ea2761e6e6b</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/assembly/__init__.py</code></td>
+<td><code>60dcbf406ebd10f56f155b70ea0657b0d40a2405ef65cf3caa32979fd90ca254</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/assembly/annotation.py</code></td>
+<td><code>193333b07dc91fcfa6add9200b9f9e170c6d3705e169ac7d76056657759a59ef</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/assembly/cli.py</code></td>
+<td><code>0e5f473759457e9e8b02df0e20b175ce1b16c951b96ff7b4a14d394b6910f492</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/assembly/materialize.py</code></td>
+<td><code>bd19d35efc03ca7bc501fe4b87a028a9c36131d3eeee4a7f98c6aad5bdab2324</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/assembly/pipeline.py</code></td>
+<td><code>f6ffb8a8282636b4f07854e6665bbe250b7bb405ceba0587e872d72d91dae04c</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/assembly/relocations.py</code></td>
+<td><code>d9c90ac5d66b3a36560ef8d9539bbef0d2e184574912609d27c7848d4f40666d</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/assembly/store.py</code></td>
+<td><code>94dc1bae146dbae7fa1780ed4cf5c045b013c651d68b7f380918169ac8c8d011</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/benchmarks.py</code></td>
+<td><code>b9b28fbcb2f38723b274e4150b1c3914ddcbceab1b49461fc5797a84f9e13fb3</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/canonical.py</code></td>
+<td><code>7ae6ffa52dde00f50923ad0ec3d333f7e171da486258673f0d762265ec62b408</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/cli.py</code></td>
+<td><code>21e0654ced2f5dd0588adcbedec328613fba524ff1e0a91ef07d63cbbf88288c</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/coff.py</code></td>
+<td><code>f6900af73b991d2ed380250c78d4a228ff6b10f45bd4bcf04fb449c45f13d28e</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/coff_archive.py</code></td>
+<td><code>51cdfa71d8876054203d3f487c37ee12ece57e831abc8bca35e57112d4089584</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/compiler.py</code></td>
+<td><code>f21f38f6ed0804a959188e31f5c9fa498d7d0740536fbb82594a375b12353944</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/compiler_lab.py</code></td>
+<td><code>05a54baba63c926190c0e2fb45bff09c6eb338ed6a479e6e47be210a6b1de859</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/compiler_worker.py</code></td>
+<td><code>d13aa472af6cfb824c896d7a32c9c99ff7a4fcf07019dbba5aa42beba7f82045</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/content_store.py</code></td>
+<td><code>2348ce9593959da0a9f52b144435a70b30965443a06e701c0ff9cf7c86e7d1a4</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/contracts.py</code></td>
+<td><code>59ed708757edb48209337ba38008c4522cd03106686c9b47b08da0b2a32e98ed</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/convergence.py</code></td>
+<td><code>2b943e9c8c2399089e1b8c2815c0de4cb1bcf0468c09e64a647fef3508922f74</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/corpus/ground_truth_sources/aliasing.c</code></td>
+<td><code>09a93c1038059384920be8ed617f196950b3b935fa4e7ecdcccd4b38215f222c</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/corpus/ground_truth_sources/arithmetic.c</code></td>
+<td><code>1a39b20e36efc0d23c5570152a1db30922527835bfc82ddf4b629980c916326e</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/corpus/ground_truth_sources/bitfields.c</code></td>
+<td><code>44c9a66d27e87a270af05fdb87d82d87512b70fe72600df0bc89f4e091b5a7dd</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/corpus/ground_truth_sources/branches.c</code></td>
+<td><code>0dcc84cf6d38aa0a3e90a66bd349f349d504cd2dc0160db16933466c56aa99bb</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/corpus/ground_truth_sources/calling_conventions.c</code></td>
+<td><code>cfb331698f9ccdb113849a7c535a500ee6631a46a716be1d3791e49f9c1e69b3</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/corpus/ground_truth_sources/classes.cpp</code></td>
+<td><code>d04c86180d9424ea91914dc7b73d93b4b3da432d7a26d8d801ff9d5718701521</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/corpus/ground_truth_sources/eh_multiple.cpp</code></td>
+<td><code>7b3cc0e687132f70957e55dbbaa5c479d6a4864fde0e11cb49df0c600d6f2665</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/corpus/ground_truth_sources/exceptions.cpp</code></td>
+<td><code>fd15c6bd23f39262a9aa02f94f02210dacab53a2a5d358aae415bba2c329394e</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/corpus/ground_truth_sources/floating_point.c</code></td>
+<td><code>ff00c63ae76817932bdd0b4a5b0a0c8bc661e03314889d1eef404e580279bb89</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/corpus/ground_truth_sources/globals.c</code></td>
+<td><code>e4fbe6bc2a51161e651a23264f5de4e90d052b2e9efcbcea1c1ff76a748528c4</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/corpus/ground_truth_sources/indirect_calls.c</code></td>
+<td><code>b9b6dc58d6912bf8a54c46868a5a61b321447c9826660dfb29f76f741b21b92e</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/corpus/ground_truth_sources/loops.c</code></td>
+<td><code>d929c2eb356d9e45d27aa9a9e9929d1ce3fad324d8843d7e53e4dbe7dabe9262</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/corpus/ground_truth_sources/member_pointers.cpp</code></td>
+<td><code>8e84a7254ebeda7ec4db40335350606cf26227868e20be7db4f4382cdd3e9f69</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/corpus/ground_truth_sources/multiple_inheritance.cpp</code></td>
+<td><code>2fc99918de8375a035774b6cff12866defb77d2095bf1a6005b6419c4afc4410</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/corpus/ground_truth_sources/static_initializers.cpp</code></td>
+<td><code>5566d58941846d63fafa6e6047f5f0a70dd19ff484aea58f1eac88cfa1c3156c</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/corpus/ground_truth_sources/structs.c</code></td>
+<td><code>0b29f69d01886989d3d34fb430acb259ca55c604b8b59c968e5d341972102280</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/corpus/ground_truth_sources/switch_dense.c</code></td>
+<td><code>2a696a875c034a89e16a9b28359f6603942c536954321bc7403a9b780d24546f</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/corpus/ground_truth_sources/tail_calls.c</code></td>
+<td><code>874edb70e2470cafdd6bed6a7a05519da95c926d1b0777622d1fba726194ddb3</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/corpus/ground_truth_sources/templates.cpp</code></td>
+<td><code>cd18fc097a4bbbacacff6685edb8c5e6a0dfe7d8e27a68eb0b0febad6508194b</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/corpus/ground_truth_sources/tls.c</code></td>
+<td><code>9f917229ae42021f4045f2f56af5ac3116987dc442e304c1b9b6b441200ba54b</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/corpus/ground_truth_sources/unions.c</code></td>
+<td><code>2906ac1f944da7f6020756df9f20451048f8e2ed81ed5ac6ea06554afe1c7f60</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/corpus/ground_truth_sources/varargs.c</code></td>
+<td><code>3326edfa00e59cd41f5409c8ef01d1d5b96c0e1a13471972a2a107725032cdbb</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/corpus/ground_truth_sources/vectorizable.c</code></td>
+<td><code>4e71d283a0479bd5264da8f235bdb4f434a1b841289d9eac335c8b997be10f43</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/corpus/ground_truth_sources/virtual_inheritance.cpp</code></td>
+<td><code>c8e83579cd4d6159e716c23270110d997349e3b1a609bf1d50c0b93a2e64d1d2</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/cpp_recovery.py</code></td>
+<td><code>c1f07b15f8649be4235cb56bb2e8f953ed31211b98311633d6beccde38dce8fa</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/decompme.py</code></td>
+<td><code>440f011b1a60d6a9549cd558927a158ce34f1377f699a58b922c696619172fe2</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/diffing.py</code></td>
+<td><code>e981a093051ff6a0be9462256f6ea50c2784693c15b32df5144a1ca0374814e3</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/disassembly.py</code></td>
+<td><code>cc86a46f8c8674a6e14304158bd1d2467fb09ccbb00778c116204b0a639638b3</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/dynamic.py</code></td>
+<td><code>a09cbba16f498158cf30191397884f0a70051c767b778cd520ac229b6e85e451</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/dynamorio.py</code></td>
+<td><code>8568a98326d91a775f2feec1847e8d3230c58253e1b015c3ee75dcb9b0d8b30d</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/errors.py</code></td>
+<td><code>5bb50a4d169960abdc486866d2e68c894d8c13da401361931d86991ff9f8030d</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/evidence.py</code></td>
+<td><code>de8befd97c8e7f0529f7c3c2750836f8f38fab52e26987cf390d725faad3ee1e</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/exe_diff.py</code></td>
+<td><code>997ffacbd833a3bb4c0545d1fb1981469e1d575680f4b39b7e6f34a4796abdf0</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/ghidra.py</code></td>
+<td><code>98657d48a9d3ebb79eaf951aa8676ffd7ca696c2ba2f07fe8a5c4f0ad622c2b3</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/governance/__init__.py</code></td>
+<td><code>a0483ba8e8314f9c9ba3a8387147195d183c6c7a47b067e2f6a92354f6612c00</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/governance/campaigns.py</code></td>
+<td><code>0c43e0289c80013abf35c01f68f0214d968d3be681395621632a24e5d09dfd2a</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/governance/candidates.py</code></td>
+<td><code>45b278d396b79ffecc4cfdd61e42af7e2cd5776f0b76f4f3a6b856283be0f1df</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/governance/changesets.py</code></td>
+<td><code>b5fc108cbaa2b14f325deff21e849d49841c49550300221beefd8d489ac9fcee</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/governance/cli.py</code></td>
+<td><code>9b93e641a542ef15b7a0ab869d9283738f9d701016cdbc17df5855d136f27eb2</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/governance/consensus.py</code></td>
+<td><code>41c250face5e2cb3dd5a56c6e741d5cbebdc25e6e9f1531a25181d9d944a5eb3</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/governance/counterexamples.py</code></td>
+<td><code>2223bd0eec9a09b58739850670b5d3434dfce554a3578cbe2ab870e43e698096</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/governance/family.py</code></td>
+<td><code>be9c27b2174ab2e046fae2d9937d7df2b73353d738f794db9f923bc11c9ede7c</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/governance/hypotheses.py</code></td>
+<td><code>9b9601b00d885856a2311c6cf10fe62137eef992310ffd400cc0c84f7beff966</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/governance/knowledge_graph.py</code></td>
+<td><code>8ab4ed3fe2315a0a44f7ac646a7759127283a436807ed80bc01e865c6eb0cc33</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/governance/plugins.py</code></td>
+<td><code>1e339929f3ac6981f3338305eab797bc72ebcb5cf0b8717bbe3aef8a2df76ef7</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/governance/proofs.py</code></td>
+<td><code>fde26584cd374b5fa28ccacae15e0e234f9ea4d0a07f3813243860a2a36302ee</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/governance/reviews.py</code></td>
+<td><code>ba9d5d2757485bdcfdb2ed1255287013fe710def654fcbc2cf8a6801fe25312f</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/governance/store.py</code></td>
+<td><code>09912c22aede1cc21f42259b90a36927b5e8dd172b0a91c7dd1e6e24f6f5ef73</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/governance/workers.py</code></td>
+<td><code>4538ea72a7fe80900916a18a6bbba5ac7a3617d1765b1b981691ebad10f4e656</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/ground_truth.py</code></td>
+<td><code>9684fbcda0fd5060b3c1f2d0efb83892900c69190d33e24fd7e49f91885181e2</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/harness_generator.py</code></td>
+<td><code>75ab6f14bcef35574409e280dad90a705f71bc5763d507258f705ad8f4c431f2</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/hybrid.py</code></td>
+<td><code>721221b69c86bd2e7152ea2f322c9b48d89a01891feb6906038509a1f4592e2f</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/image_match.py</code></td>
+<td><code>a9c72f376532369da77440496a1ea07564da5071ef8e6108e29c58e33e96fcf4</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/integration.py</code></td>
+<td><code>cb8157c8210544e2ed4730e8bdb01f0a77dc9d05f683d43154cba1bf93c1e845</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/linker_layout.py</code></td>
+<td><code>e212e73f09b9559f17e0251eba8260a50b52931091a4972a2deabc462cd68682</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/linker_reconstruction.py</code></td>
+<td><code>f67bc3077e7d54a9a32e542113cc28eadf00fa581c8e3d3c26e5c1b45a4e0900</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/local_llm/__init__.py</code></td>
+<td><code>471640b8f53e194e4f5f246699cfdabbfc5ba1ff818bed6d060e8348eaf09d25</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/local_llm/matching.py</code></td>
+<td><code>349c75f943aaf119368d8eef401330917b1f0abb7fd9f3bc114ccd12ec3c26b5</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/local_llm/profiles.py</code></td>
+<td><code>5bce6554b8d5dbccd0a18c965bae92e82cc8517f7c86997621d662f3bcff1ca2</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/local_llm/prompts.py</code></td>
+<td><code>b1a06cda047e95e59b0b415753e88bca82d111e6898c056880d972ac89e270e7</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/local_llm/transport.py</code></td>
+<td><code>65526331d46e71ae5625569b23e3312d9126d860ef1bd244135f21a47af25a3f</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/mcp.py</code></td>
+<td><code>72627e41c628c756443bc5d57e38b583b1744923902735b55a3d6c9e29f6cca9</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/memory.py</code></td>
+<td><code>4fd6948418a67ffdd502b92649a5b18af16376b55272018305b59d5cddcad813</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/models.py</code></td>
+<td><code>2afe3f05650301116d1f789854dd5406ea2af88b0bebb19df7a2f1667bf1bd0f</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/msvc_metadata.py</code></td>
+<td><code>a09e12dd6d748ba39648bf05d885656080c1c03be63d8dde592e26cb36b72951</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/native/__init__.py</code></td>
+<td><code>c06bf6b79e240a8ec82b7084a6f50358b49e0c28084ed2cece59bd0f803dfb0d</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/native/cli.py</code></td>
+<td><code>d820c5ef81684fa37b3608106c02871c985a42b3295734b2c0afecb0fa4e29f5</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/native/closed_loop.py</code></td>
+<td><code>2928f6d9ecd646ec05c4cc204048ef0c303865b68e8ae45862aa81cfed3c758b</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/native/hybrid_composer.py</code></td>
+<td><code>e2cd31ef794c1910a4deb0a7260d88de3bb090bf153c7f77f740024f86a4cea0</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/native/matching.py</code></td>
+<td><code>3d2d67bc09fd863ffb366310883c6869b10c04545e48edc75089b7317927478a</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/native/pe_reconstruction.py</code></td>
+<td><code>32c4ba5082d59f88439efe2af68c26f8820aaa82d6f551d506a0d7c63b517558</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/native/runtime.py</code></td>
+<td><code>42a582f61d69ef1bc07096d003f19db4c0598d7386be494c124cf4272b1aa854</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/native/slots.py</code></td>
+<td><code>e0f7164fa040306cab458e4dfe811590375a3a49023de7a33736e07b44032d2c</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/native/staging.py</code></td>
+<td><code>0038cab527aaac36dc4ba8ea02eb526b2683f5329a03c4002673091f622239a1</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/native/store.py</code></td>
+<td><code>3d679debb3115592664885234b47c000a1ef96ab489b0f77a99dc9485d9329fb</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/native/windows_tools.py</code></td>
+<td><code>0de581d6f2316540f99e7daf3d64fbd925e1998f786b3099488d766ed71bb2c0</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/objdiff_adapter.py</code></td>
+<td><code>d312150b8b06b0e9b1656df7dab0a10e0e4a4db6047a4e83663875387b3851c1</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/orchestrator.py</code></td>
+<td><code>752a6e6b5d4f931007e93ee7898f6a0d2500b044266c7153a27be7e7eb49477e</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/patching.py</code></td>
+<td><code>61b9d802fc2c9c89f06877876f72efb7fc16d3a1fb283dddfd561dfd4fe61741</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/pdb.py</code></td>
+<td><code>0ad9c99f6a1b232ce33268d35097ea6b44343d65052339c701588bf4efa79690</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/pe.py</code></td>
+<td><code>39a5dd1b26da8d0ef84e8ff247183068eb4943ab38211df3c56c43ca9a6911c0</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/pe32.py</code></td>
+<td><code>746651d78b0b8401565dd22e99f73c8c902b13400fd80094d4675ab52c8c4be5</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/project.py</code></td>
+<td><code>ec9666173586c39ddc7a35cb4bf4810c3519c5a42b205782358efbe58f19a782</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/project_state.py</code></td>
+<td><code>b1122888162accf9322be7bed62461803e74aa279cde47c92065c0411a909ca8</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/project_template.py</code></td>
+<td><code>2a70050138d13bf73d963a6cb49d404b39c2d12dbc00298e7e1a79999d076f8f</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/reconstruction/__init__.py</code></td>
+<td><code>52313d0bee948e0909b7dbad630958a9631187f643927aa9b604acf3184599c8</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/reconstruction/abi_contracts.py</code></td>
+<td><code>3a604b7e2a1519a524942ec0aa4cc06fa2281bea86cba2b2a29136ba04ab5bf0</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/reconstruction/acceleration.py</code></td>
+<td><code>f2fe9746b4f151ca102cfa255c1e5f9828cbfbdbe001b14da2e4ce1c1715874d</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/reconstruction/builds.py</code></td>
+<td><code>741a0218b7293033c89b3fa85497727a3c77e6183c1c2ab5be8b30ca291db84a</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/reconstruction/capsules.py</code></td>
+<td><code>c4b268922cc6f2d091489eef03888d35c0e847250a394ffb3983466ee69d3607</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/reconstruction/cli.py</code></td>
+<td><code>b27cbc8484b6a6adce3374161f61f33fbc456536b9d16e789b2b18aa4292c428</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/reconstruction/generated_tests.py</code></td>
+<td><code>6822bf7dc5d508d8ee684f2a6c1f5eb0e141ef86dbb2c580c320561d2b760aaf</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/reconstruction/headers.py</code></td>
+<td><code>438c0233df3581b7634dd878b01f5b32f6918d7dac836115ad7bc1c0c50fdacc</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/reconstruction/libraries.py</code></td>
+<td><code>4892d5e00011085e4befce6cff5a24c9d065c6647933acd4dcb4618a3f514152</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/reconstruction/project_layout.py</code></td>
+<td><code>c56585dbc14339e024cf8fa5d4e4f31f06d7bce0a238b67212a3278a9282f4e7</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/reconstruction/provenance.py</code></td>
+<td><code>03790dbcf2863491fa3c28e4cb96013dc73be03b87a038fcc367a6f27933f9e3</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/reconstruction/security.py</code></td>
+<td><code>0959bd8e9edb807a04058a9b81857c096e9c91ffb6f8591a885d56ae048760ba</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/reconstruction/semantic_changesets.py</code></td>
+<td><code>4342cc6206f76716dcc2007d36fd18ed0aff99cd7ebb562ef544adeeb8a537f3</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/reconstruction/store.py</code></td>
+<td><code>860db90023e7b3d6481375a73a9f23623bb6a82a765522dd35aff33c5a322716</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/release_gate.py</code></td>
+<td><code>8e79be8c5af67a90063af185b2239a5ce5a8ca828627ee05c14d897f891e02fd</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/relink.py</code></td>
+<td><code>d401db042d4cc8300ccd4babd28cea400dca824d187a7caf0a1f3ead407fb296</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/reproducibility.py</code></td>
+<td><code>bcc5e2a773d7eb7589f28df90c0fe898155788b8e695d15e363e6dbad249ae7b</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/security_audit.py</code></td>
+<td><code>8bea284ef8caf3bbc8ff542f73dfa05f1a939a7218000f013f8ea20861ad2ce5</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/service.py</code></td>
+<td><code>ef74988c5b19f8d2925ea07fb75a6cb3bea4304348bc9419e82f9ffddbd19584</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/symbolic.py</code></td>
+<td><code>93d98f6e85a01a107881131821d5eb04875d310795c4f173448918c5a96fdcd3</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/synthetic_corpus.py</code></td>
+<td><code>a0475235f70093de7171e32cbde918a9290569245efaa06f8549cd1ad480ece0</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/target_pack.py</code></td>
+<td><code>18b4fa2ef39b61edd4c9ecc47d543ed6107395e841d81f9191d447dcaa5edb1d</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/test_bundle.py</code></td>
+<td><code>7b65953eff2b3ba85cc543e11a8ab007f85565e85fe29e73e12db9eb099efc31</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/toolchains.py</code></td>
+<td><code>9dde5962b67d30fec64266313f5488a4e5501de9db26605d4719cbe276cde03f</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/tools.py</code></td>
+<td><code>8e068c2ef41fb99fd53f45b28808fd2bf3366978bffc6ba22e46207497f08f34</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/util.py</code></td>
+<td><code>f38c92cec5d269f8597282a84f5cfb76dd9e952cedb3606be592e8f5f89d8fe1</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/work_queue.py</code></td>
+<td><code>b1392399ca7536f6f1c1a78b16b62b61f7b70a744d2a529860e03d3371377c6e</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/worker.py</code></td>
+<td><code>811287668595febda7c8a186d83e1683ad7c58fcc44259efe7271bf5d7b8249c</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/workflow.py</code></td>
+<td><code>cae8a093f08f66f9412393e59867c4d32ca7caf88533a175d22eebe1f325c0a5</code></td>
+</tr>
+<tr>
+<td><code>test-suite/.gitignore</code></td>
+<td><code>a436e3b7faa06acfab37ac4d6870f732d0eee90f2d8d5095d25af8fa4af2d2db</code></td>
+</tr>
+<tr>
+<td><code>test-suite/CHANGELOG.md</code></td>
+<td><code>a4fed3c9adc9d5ac1caf90be2256d15c2bddb9cafe12784d53aaade2bd18d20e</code></td>
+</tr>
+<tr>
+<td><code>test-suite/INTEGRATION.md</code></td>
+<td><code>8f9536aedf152202bb9a2700f14203bd7591e26603e16eb1832f1ce2484e4359</code></td>
+</tr>
+<tr>
+<td><code>test-suite/LICENSE</code></td>
+<td><code>469b8fd4bf8c3ead57817703e5a8ea98c7759304f0da851b57810e410decffc5</code></td>
+</tr>
+<tr>
+<td><code>test-suite/MAINTENANCE.md</code></td>
+<td><code>dea46c85552987fab9fdcf3068416916738298f9ced911093b8c4f282dae8035</code></td>
+</tr>
+<tr>
+<td><code>test-suite/MANIFEST.in</code></td>
+<td><code>576d360c349d1ac066a139b866a474d5bfcfc8be7db53b924a3cd671d7ae6778</code></td>
+</tr>
+<tr>
+<td><code>test-suite/README.md</code></td>
+<td><code>4b5197f7e7d627023d55e44f1388fcef71655704d88ee6954658550edeecd0a5</code></td>
+</tr>
+<tr>
+<td><code>test-suite/SECURITY.md</code></td>
+<td><code>381e41b3f5bf6ba84f6295ce9935c09b8994d62a78f17b9b04ef32a3d287b044</code></td>
+</tr>
+<tr>
+<td><code>test-suite/VERIFICATION.md</code></td>
+<td><code>4d0105a8a7aa349e5bcba144b8a381209fe79c695ec8b4173f50b3276bbc3975</code></td>
+</tr>
+<tr>
+<td><code>test-suite/docs/ADAPTERS.md</code></td>
+<td><code>178a85f70130a7ca825bc425b543e5551033059057fa220acba77703d2b04bc6</code></td>
+</tr>
+<tr>
+<td><code>test-suite/docs/ARCHITECTURE.md</code></td>
+<td><code>43f423a31ce3e4de6e19e50419ffc384c03c0bf930b02fb73772a9233120ac6d</code></td>
+</tr>
+<tr>
+<td><code>test-suite/docs/ARCHITECTURE_MAP.md</code></td>
+<td><code>3bf4c55e131f0e826a3d1d775486960672bdcacc439f62bd26eb0d525371d98d</code></td>
+</tr>
+<tr>
+<td><code>test-suite/docs/ARCHITECTURE_MAP_ASCII.txt</code></td>
+<td><code>1f62a0d82e2eb9b0df5763a917336a0120288203c76ec20576ebe07ad567a963</code></td>
+</tr>
+<tr>
+<td><code>test-suite/docs/COVERAGE_CONTRACT.md</code></td>
+<td><code>ec9f63965b35fe1a00d5d5f94d77eab6dad6cc10a7c0fc794672dfcaeb58679e</code></td>
+</tr>
+<tr>
+<td><code>test-suite/docs/LOGGING.md</code></td>
+<td><code>31af8d0e78e49394856bb90e1c5ef04c9294d2e07bad0ace4f60f5c77013af84</code></td>
+</tr>
+<tr>
+<td><code>test-suite/docs/TEST_PLAN.md</code></td>
+<td><code>616846152ca75ffbf0a0eff25bea11d53d4ced9856d71edb7a1b50b2018a4e95</code></td>
+</tr>
+<tr>
+<td><code>test-suite/examples/x86decomp-test.json</code></td>
+<td><code>5cd31838533f866853e0730aa63ed36958b4d1dc92f8cfb3d5825da9c9d4204d</code></td>
+</tr>
+<tr>
+<td><code>test-suite/pyproject.toml</code></td>
+<td><code>7da7075c076f2660e44451c2a4c9241bfd6b4d1e83219b4c805b17bc1f4319e0</code></td>
+</tr>
+<tr>
+<td><code>test-suite/schemas/feature-catalog.schema.json</code></td>
+<td><code>dc561c22a3815522d7e93b218c3649e2445ce30fb9f400c6d0a93c070308d6a3</code></td>
+</tr>
+<tr>
+<td><code>test-suite/schemas/run-report.schema.json</code></td>
+<td><code>9d2b3fcab807e52866a5b8e7bac9f7813e6d7e003d4de9f2f80d05e8798e93c6</code></td>
+</tr>
+<tr>
+<td><code>test-suite/schemas/test-config.schema.json</code></td>
+<td><code>c33b8ab58a509c7f688ff159d0cef5726a4909801d40fd4899c81c4626eda90d</code></td>
+</tr>
+<tr>
+<td><code>test-suite/scripts/run-all.ps1</code></td>
+<td><code>29211e8199239685346d666b03824714984db61c73526a8ebc8fb1bd461273cf</code></td>
+</tr>
+<tr>
+<td><code>test-suite/scripts/run-all.sh</code></td>
+<td><code>b2ed622ebf3f48fd4735088604e027152df7d446d4283fc63235d81b5c0caef2</code></td>
+</tr>
+<tr>
+<td><code>test-suite/setup.cfg</code></td>
+<td><code>1c473cbaee8da5fc46e7f0158794af5cea4414c34a3cf3f180c2001f5e38bd3e</code></td>
+</tr>
+<tr>
+<td><code>test-suite/src/x86decomp_testkit/__init__.py</code></td>
+<td><code>abba024e1c317e50e0b3450dcc6a53323f05846093ead434dc85ae88cec643e6</code></td>
+</tr>
+<tr>
+<td><code>test-suite/src/x86decomp_testkit/__main__.py</code></td>
+<td><code>935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d</code></td>
+</tr>
+<tr>
+<td><code>test-suite/src/x86decomp_testkit/adapters/__init__.py</code></td>
+<td><code>f827da6e3cd2ae844d65e34b74490f244c092f2c14dc2849af4c839a7270bf13</code></td>
+</tr>
+<tr>
+<td><code>test-suite/src/x86decomp_testkit/adapters/catalog.py</code></td>
+<td><code>48d74c2b917d045b5cc0fe50956d32e1f9717f245a77eb735bae0d9c5b4ca1b9</code></td>
+</tr>
+<tr>
+<td><code>test-suite/src/x86decomp_testkit/adapters/detection.py</code></td>
+<td><code>442ec5437067e4ccb91fdc56f7a3dcf9d5d8c09327e98897bd9858cfacd6715a</code></td>
+</tr>
+<tr>
+<td><code>test-suite/src/x86decomp_testkit/adapters/download.py</code></td>
+<td><code>041f03cdfacbd0c5dd96db3fef080b2463c14d74861411c28c233b9f064f930d</code></td>
+</tr>
+<tr>
+<td><code>test-suite/src/x86decomp_testkit/adapters/installation.py</code></td>
+<td><code>543de6cae816ebe32be9762b84e33676f143fd497f3d57aea34c6b24223f0cb7</code></td>
+</tr>
+<tr>
+<td><code>test-suite/src/x86decomp_testkit/cli.py</code></td>
+<td><code>fc69ddd59b29350727a5762fe78f440d3538bee7c83d5342478d18ee3a0dcd67</code></td>
+</tr>
+<tr>
+<td><code>test-suite/src/x86decomp_testkit/config.py</code></td>
+<td><code>766a7f68f96c2658782d99f806ea342fb09bfa734fd22de5fb890a60b0004427</code></td>
+</tr>
+<tr>
+<td><code>test-suite/src/x86decomp_testkit/coverage_audit.py</code></td>
+<td><code>8d7312862dc245a37131f5a53b5094684882082f46401920f8623af039f67809</code></td>
+</tr>
+<tr>
+<td><code>test-suite/src/x86decomp_testkit/data/feature_catalog.json</code></td>
+<td><code>b9153d0bc6a2c986f6ad19f55e51ccee0fb9681b833d73af9b325e0f6eb43457</code></td>
+</tr>
+<tr>
+<td><code>test-suite/src/x86decomp_testkit/fixtures.py</code></td>
+<td><code>503faabe75a6906a9feda50866fc275f80a0596d8605b6b9125c36330a7ef6ed</code></td>
+</tr>
+<tr>
+<td><code>test-suite/src/x86decomp_testkit/inventory.py</code></td>
+<td><code>d7c60ef575fc20122b84c635d9cdd8875dd629cabaa9a6f7810aaa1b306242a4</code></td>
+</tr>
+<tr>
+<td><code>test-suite/src/x86decomp_testkit/junit.py</code></td>
+<td><code>3651cdaf2fb723366239d6a2cc32f4b0a8af336509784c4c8bf1bf957c317d14</code></td>
+</tr>
+<tr>
+<td><code>test-suite/src/x86decomp_testkit/live_adapters.py</code></td>
+<td><code>fc5d0245f96eb7e22836fbb54a324921e023eb32a59a75936127e583bf16dc52</code></td>
+</tr>
+<tr>
+<td><code>test-suite/src/x86decomp_testkit/logging_utils.py</code></td>
+<td><code>973448e1f8708f80d4efebeec3246c51f90f35e6e1088a620d363b9767af0e8c</code></td>
+</tr>
+<tr>
+<td><code>test-suite/src/x86decomp_testkit/models.py</code></td>
+<td><code>8acaf5ce95d26ae135796a0b97eb0165e3fc1c392036e90fa866dd86c22e0e84</code></td>
+</tr>
+<tr>
+<td><code>test-suite/src/x86decomp_testkit/orchestrator.py</code></td>
+<td><code>a475cf9d9e71158d3c15641b1222bdcb5f18dbe3d408553cf664ab9f8688a487</code></td>
+</tr>
+<tr>
+<td><code>test-suite/src/x86decomp_testkit/process.py</code></td>
+<td><code>1968fbfaad57ef05e06e85613d6efa7fedf1f2c57aab895bcf1e90cd2854dbf9</code></td>
+</tr>
+<tr>
+<td><code>test-suite/src/x86decomp_testkit/reports.py</code></td>
+<td><code>e339aec1110820fbd64b47be2ff03da04507a055ea0f63eff7cd1e407cc90a1f</code></td>
+</tr>
+<tr>
+<td><code>test-suite/src/x86decomp_testkit/self_tests/__init__.py</code></td>
+<td><code>e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855</code></td>
+</tr>
+<tr>
+<td><code>test-suite/src/x86decomp_testkit/self_tests/test_adapter_detection_resolution.py</code></td>
+<td><code>d2b5626de04bac6ee52935b4db6e5437c56a6edf94ef300504008eccdf4d7812</code></td>
+</tr>
+<tr>
+<td><code>test-suite/src/x86decomp_testkit/self_tests/test_archive_security.py</code></td>
+<td><code>e731b4d36cbf94828e09245b2118b858bfd6c284e1d8a4be43c7f72b36412792</code></td>
+</tr>
+<tr>
+<td><code>test-suite/src/x86decomp_testkit/self_tests/test_cli_and_installation.py</code></td>
+<td><code>b2d0c38e67585e901fc45d1a82839da0989a70d099ab9625d092b1d9c38dde4b</code></td>
+</tr>
+<tr>
+<td><code>test-suite/src/x86decomp_testkit/self_tests/test_config_models.py</code></td>
+<td><code>1720714230e28811c1bef9e525b9e972075a3d65aab4c8117af23611c97445c4</code></td>
+</tr>
+<tr>
+<td><code>test-suite/src/x86decomp_testkit/self_tests/test_inventory_reports_process.py</code></td>
+<td><code>a651010b4abf3584aa44431f07c641c89d2a8c29675f9e0b504cfce3bfd0928b</code></td>
+</tr>
+<tr>
+<td><code>test-suite/src/x86decomp_testkit/suites.py</code></td>
+<td><code>54f93a39c0fb752a58b31348949dcde6e7037ac905c6c1c5ce9e029700a19a35</code></td>
+</tr>
+<tr>
+<td><code>test-suite/src/x86decomp_testkit/timeutil.py</code></td>
+<td><code>09f390dc5c11065df3bb8370bc2bbff2dd4f13bab9778fa8209f4c1d4d9c2b66</code></td>
+</tr>
+<tr>
+<td><code>test-suite/src/x86decomp_testkit/toolkit_tests/__init__.py</code></td>
+<td><code>e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855</code></td>
+</tr>
+<tr>
+<td><code>test-suite/src/x86decomp_testkit/toolkit_tests/test_public_api_contract.py</code></td>
+<td><code>7da1da151bab4c1f17b3b2bf1de0b2711905b15dd6f65c68e9568130ee1b1260</code></td>
+</tr>
+<tr>
+<td><code>test-suite/tests/test_adapter_detection_resolution.py</code></td>
+<td><code>bb43b876b5eaaa74b2628c333716d035dcea15ae5231560b06bce4813abfb560</code></td>
+</tr>
+<tr>
+<td><code>test-suite/tests/test_architecture_maps.py</code></td>
+<td><code>7faf57283f4e66a2e1f72c853f5a5192c9d3232caeff596a31d1f0f1e84ea03f</code></td>
+</tr>
+<tr>
+<td><code>test-suite/tests/test_archive_security.py</code></td>
+<td><code>e731b4d36cbf94828e09245b2118b858bfd6c284e1d8a4be43c7f72b36412792</code></td>
+</tr>
+<tr>
+<td><code>test-suite/tests/test_cli_and_installation.py</code></td>
+<td><code>b2d0c38e67585e901fc45d1a82839da0989a70d099ab9625d092b1d9c38dde4b</code></td>
+</tr>
+<tr>
+<td><code>test-suite/tests/test_config_models.py</code></td>
+<td><code>1720714230e28811c1bef9e525b9e972075a3d65aab4c8117af23611c97445c4</code></td>
+</tr>
+<tr>
+<td><code>test-suite/tests/test_inventory_reports_process.py</code></td>
+<td><code>a651010b4abf3584aa44431f07c641c89d2a8c29675f9e0b504cfce3bfd0928b</code></td>
+</tr>
+<tr>
+<td><code>tests/assembly/conftest.py</code></td>
+<td><code>89dd996765210f429269ca0c7c8218e3ff2d5ed956f9d502df9eb492a1964146</code></td>
+</tr>
+<tr>
+<td><code>tests/assembly/test_annotation_materialize.py</code></td>
+<td><code>46aeb940a0ccb02b0312ef413ce123c3c647c0224a1f8b1f571d128ab733574f</code></td>
+</tr>
+<tr>
+<td><code>tests/assembly/test_helpers_and_relocations.py</code></td>
+<td><code>d103e5e3199aa32ceb99dd5867f3454cca6676d33956bd2aca3b035176bd4860</code></td>
+</tr>
+<tr>
+<td><code>tests/assembly/test_pipeline_cli_schemas.py</code></td>
+<td><code>0b4c66442ac73afcb123d78b69ca3ff46896fec6a01a5ce57a831bc719b23eee</code></td>
+</tr>
+<tr>
+<td><code>tests/governance/test_core.py</code></td>
+<td><code>d2c62ade326140850549e48c1255cab3a45ec3f69d2374f4aff21380cd1ccc0d</code></td>
+</tr>
+<tr>
+<td><code>tests/governance/test_governance_cli_schemas.py</code></td>
+<td><code>dc1c807a185938728d8c9483e2cacd38ded6634c167fce3f5374759bc5917345</code></td>
+</tr>
+<tr>
+<td><code>tests/governance/test_proof_plugin_worker.py</code></td>
+<td><code>1cf8e1e2877783f7375ac2a2305fa708eafecc1591cc27e6b54d026bc6b03829</code></td>
+</tr>
+<tr>
+<td><code>tests/governance/test_worker_thread_safety.py</code></td>
+<td><code>053888fd3453b44860f529fec44c6d6f14824c09c1a381f66976bcc8fdd6f969</code></td>
+</tr>
+<tr>
+<td><code>tests/native/conftest.py</code></td>
+<td><code>2d42379dee188c7576a7309dee52e132f82bf7e0343ba699247c65267cbcc314</code></td>
+</tr>
+<tr>
+<td><code>tests/native/test_cli_schemas.py</code></td>
+<td><code>34a1351847b2ea5018d4bb9870fb06d5676999f287e5d4d2516e5397cc0b1601</code></td>
+</tr>
+<tr>
+<td><code>tests/native/test_inventory_and_loops.py</code></td>
+<td><code>92e89da6edbcda1a7371d809975b58c129e85ac8274365b05488d1ccd56d4960</code></td>
+</tr>
+<tr>
+<td><code>tests/native/test_pe_hybrid.py</code></td>
+<td><code>f348168b73353f4da20583dc0c5b4e2d1dfb9e052dc185f236098ff4898cfc1e</code></td>
+</tr>
+<tr>
+<td><code>tests/native/test_slots_matching.py</code></td>
+<td><code>1a028f9a8c827f3caa937c142c2f11b5234f46ddcb0315e9b1908be2bf5b967e</code></td>
+</tr>
+<tr>
+<td><code>tests/native/test_staging_loop_runtime_windows.py</code></td>
+<td><code>da1cf374737a7615578374f772b1d100e2756affcf6abf90c4e56941f4c82fe8</code></td>
+</tr>
+<tr>
+<td><code>tests/pe_fixture.py</code></td>
+<td><code>cc94413b8549a52a9374403e0f704d57520c6793b6e11f8c26a2d6d8f0eb04d1</code></td>
+</tr>
+<tr>
+<td><code>tests/reconstruction/test_capsules_security_changesets.py</code></td>
+<td><code>0f2899060822f55a9648233e30c6f861f107c9a664319cb03fa15880aaabfc2d</code></td>
+</tr>
+<tr>
+<td><code>tests/reconstruction/test_cli_schemas_retention.py</code></td>
+<td><code>ee16356938eac4f32961c1b0867e5743c6414da0f272f803f6377b0ad4bb0346</code></td>
+</tr>
+<tr>
+<td><code>tests/reconstruction/test_decomp_acceleration.py</code></td>
+<td><code>cc0816f6c15029a45408e6f0f57d4c9c5221fd8f7bfcee70f855097831e5a686</code></td>
+</tr>
+<tr>
+<td><code>tests/reconstruction/test_project_headers_builds.py</code></td>
+<td><code>48264c55d224edf9ad5026b86eb4ef1ba7c900fe0e1ebe341c12c16aaec57d95</code></td>
+</tr>
+<tr>
+<td><code>tests/reconstruction/test_provenance_abi_tests.py</code></td>
+<td><code>df4e2725330a4cfc5e4d6f5817d062bbcc6c9db120d0e5435a665d453910557d</code></td>
+</tr>
+<tr>
+<td><code>tests/reconstruction/test_real_project_acceleration.py</code></td>
+<td><code>449179fbd7c73f7f94d43957ee29a77d52c3473f35e0f8e43f370ea5dcd1c8d1</code></td>
+</tr>
+<tr>
+<td><code>tests/test_abi_disassembly.py</code></td>
+<td><code>7707cba729a70b66986595aea747f5c1e782023e2b58134d2786680b52840a64</code></td>
+</tr>
+<tr>
+<td><code>tests/test_artifacts.py</code></td>
+<td><code>bcf7a774d955c365b701f002a37884e35babacc396f6a78188c6e2ada40bca67</code></td>
+</tr>
+<tr>
+<td><code>tests/test_coff.py</code></td>
+<td><code>57797f4ad3e7871224434918b93fa79fc4046042cf54aa4f2c1fc1ddca99a8df</code></td>
+</tr>
+<tr>
+<td><code>tests/test_coff_archive.py</code></td>
+<td><code>171e74d6a9f9f1c6d02ddfd6094cd8af2c1250a1689854738abe3baf3f7eeea3</code></td>
+</tr>
+<tr>
+<td><code>tests/test_compiler.py</code></td>
+<td><code>9645daed68779957cd14addad7626d32d99056f551c27d873e3f475cfe862f64</code></td>
+</tr>
+<tr>
+<td><code>tests/test_decompme_objdiff.py</code></td>
+<td><code>5b9c426c8062799b1dd013a426638767e12d93e03e9425e6f21987abecfdcb60</code></td>
+</tr>
+<tr>
+<td><code>tests/test_diffing.py</code></td>
+<td><code>b5fc82c4cba524724ae00431d81a9dc7fc976a5cd7d54053668e153fb51707a5</code></td>
+</tr>
+<tr>
+<td><code>tests/test_documentation.py</code></td>
+<td><code>657b1444b56b2830a5ce6907aa4e34e78602d25cc3712638e9d79f4de0b7cf7a</code></td>
+</tr>
+<tr>
+<td><code>tests/test_dynamic_symbolic.py</code></td>
+<td><code>0b21be2ee69be29d2dde6951f147195bd8042462690dea72fac0b6509deb3402</code></td>
+</tr>
+<tr>
+<td><code>tests/test_dynamorio.py</code></td>
+<td><code>0d182c7c06f6ab60b970935bef97e7327fd18744bdb5d29918a7193d330bde2e</code></td>
+</tr>
+<tr>
+<td><code>tests/test_evidence.py</code></td>
+<td><code>4e8b73d7ad07cbce395ffe1267c272aeabdb861c0d198b6b8fcf5b448341b669</code></td>
+</tr>
+<tr>
+<td><code>tests/test_ghidra.py</code></td>
+<td><code>1c9a934bad943761f8d9b6bc22509a054a8ead82747d2091d5f7e84c5682b88b</code></td>
+</tr>
+<tr>
+<td><code>tests/test_integration.py</code></td>
+<td><code>0175ece91623baf3dd4092ddab3ba03bd47308082bccc85de135ce2b80b47ed0</code></td>
+</tr>
+<tr>
+<td><code>tests/test_linker_metadata_corpus.py</code></td>
+<td><code>aa88771eecf6bbd2a6fcc6230848165884fea583b48688061d61c14756f9a1de</code></td>
+</tr>
+<tr>
+<td><code>tests/test_local_llm.py</code></td>
+<td><code>6e876be44e16786200b013fb530103cf7ad7e3c145af0582cee5cb00cbcd5b98</code></td>
+</tr>
+<tr>
+<td><code>tests/test_mcp.py</code></td>
+<td><code>10922b81d1726dd38b453ed718a7da0ddaedd5db188a9befb7cf8bded8686f49</code></td>
+</tr>
+<tr>
+<td><code>tests/test_memory.py</code></td>
+<td><code>dd3384d0fa0c87ed61bde90498b97a3dc2d642d24b57fc9e00f95e52f47ca0b1</code></td>
+</tr>
+<tr>
+<td><code>tests/test_modes_and_db.py</code></td>
+<td><code>7b3e58d0cbef709f782c724956d752cd24fab83ec169cf6eb49562b883b4b174</code></td>
+</tr>
+<tr>
+<td><code>tests/test_pdb.py</code></td>
+<td><code>a0966c606b191d2f1c18cc13e839f50919a8b55f937ac07694a324650200e9db</code></td>
+</tr>
+<tr>
+<td><code>tests/test_pe32.py</code></td>
+<td><code>4952257965fe3a61bc43d6a099b190264e924ecc85fdc8ba4e42e4a32bdc79c4</code></td>
+</tr>
+<tr>
+<td><code>tests/test_pe64_patch_hybrid.py</code></td>
+<td><code>6894dd0e5abce06a30df7ce445f6cf7faa87bcc16dac9f314f187e938697a62f</code></td>
+</tr>
+<tr>
+<td><code>tests/test_production.py</code></td>
+<td><code>da0d4bd57f7f4bb68957fa8aa42a67f7eb34347f35137849e360dc95e796db89</code></td>
+</tr>
+<tr>
+<td><code>tests/test_project.py</code></td>
+<td><code>04d73c197e4b7979731c140bef24e36ab323099e715d5462c95983a83d558c2b</code></td>
+</tr>
+<tr>
+<td><code>tests/test_release_contract.py</code></td>
+<td><code>b12d3290d701de1b6184e86272a5e071d553977c76c972c449236621f8b51a07</code></td>
+</tr>
+<tr>
+<td><code>tests/test_relink.py</code></td>
+<td><code>580ca742c9d4f1d53de889f6f6bc5800e04147a31d86f0424a6d7a7252cefbb1</code></td>
+</tr>
+<tr>
+<td><code>tests/test_test_bundle.py</code></td>
+<td><code>e07c08f3155c6ab4b45329aa9076a42632affa7d2c12daa2d70f8657e77e9af6</code></td>
+</tr>
+<tr>
+<td><code>tests/test_workqueue.py</code></td>
+<td><code>97e33711360e2dec914664fbef25f0ece3ba7d6895e7c9331489d8e6fa46a8ed</code></td>
+</tr>
+<tr>
+<td><code>x86decomp-test.json</code></td>
+<td><code>6d9617b6b7c091aaabac6f2b24c2f7e73b5376618301bd0fd154f7a187b39c81</code></td>
+</tr>
+</tbody>
+</table></p>
+    </article>
+</section>
+            <!-- endblock -->
+
+            <!-- block footer -->
+                <footer>
+    <div class="d-flex flex-sm-row justify-content-between py-2 border-top drac-text-black drac-bg-cyan-green">
+        <a href="https://github.com/dracula/mkdocs" target="_blank" style="padding-left: 1%;"
+            class="footer-text drac-anchor drac-text-black drac-text-purple--hover">
+            Made with Dracula Theme for MkDocs
+        </a>
+    </div>
+</footer>
+            <!-- endblock -->
+        </div>
+
+    </main>
+
+        <script>var base_url = '..';</script>
+        <script src="../assets/js/jquery-3.3.1.slim.min.js"></script>
+        <script src="../assets/js/bootstrap.bundle.min.js"></script>
+        <script src="../assets/js/mkdocs.js"></script>
+			<script src="../search/main.js" defer></script>
+
+</body>
+
+</html>

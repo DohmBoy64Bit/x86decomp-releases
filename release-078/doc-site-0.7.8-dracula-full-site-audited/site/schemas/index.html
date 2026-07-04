@@ -1,0 +1,1300 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+        <title>Schemas - x86decomp 0.7.8 Docs</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        
+        
+        
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="../assets/css/darcula-highlight.min.css">
+
+        <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../assets/css/dracula-ui.min.css">
+        <link rel="stylesheet" href="../assets/css/mkdocs.min.css">
+            <link href="../assets/x86decomp-dracula-overrides.css" rel="stylesheet">
+
+        
+            <link  rel="icon" type="image/x-icon" href="../assets/img/favicon.ico">
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+                <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+
+<body class="drac-bg-black-secondary drac-text-grey-ternary drac-text drac-scrollbar-purple">
+
+    <main class="d-flex">
+
+        <!-- block sidebar -->
+            <nav id="sidebar" class="sidebar drac-bg-black">
+    <div class="custom-menu">
+        <button type="button" id="sidebarCollapse" class="btn btn-primary">
+            <i class="fa fa-bars"></i>
+            <span class="sr-only">Menu</span>
+        </button>
+    </div>
+
+    <div class="p-4">
+        
+
+        <div class="drac-text-center">
+            
+                <span class="drac-text drac-line-height drac-text-white">x86decomp 0.7.8 Docs</span>
+            
+        </div>
+
+        <div class="drac-box flex-column">
+            <ul class="dot-ul">
+                <li><div class="dot-li drac-bg-cyan"></div></li>
+                <li><div class="dot-li drac-bg-green"></div></li>
+                <li><div class="dot-li drac-bg-orange"></div></li>
+                <li><div class="dot-li drac-bg-pink"></div></li>
+                <li><div class="dot-li drac-bg-purple"></div></li>
+                <li><div class="dot-li drac-bg-red"></div></li>
+                <li><div class="dot-li drac-bg-yellow"></div></li>
+            </ul>
+        </div>
+
+        <hr class="drac-divider" />
+
+        <!-- block menu -->
+        <ul class="mb-5 drac-list drac-list-none">
+            
+            <li class="drac-box">
+                <a href=".."
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Home
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../getting-started/"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Getting Started
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href=".."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#workflows-collapse" aria-expanded="false">
+                    Workflows
+                </a>
+                <div class="collapse" id="workflows-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../workflows/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Workflow Guide
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../local-llm/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Local LLM C Generation
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../decompilation-acceleration/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Decompilation Acceleration
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../project-examples/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Project Examples
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href=".."
+                    class=" active 
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#reference-collapse" aria-expanded="false">
+                    Reference
+                </a>
+                <div class="collapse" id="reference-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../reference/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../architecture/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Architecture
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../commands/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Commands
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../release-artifacts/COMMAND_REFERENCE_STRICT_AUDIT/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Command Audit
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="./"
+            class=" active 
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Schemas
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../integrations/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Integrations
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../features/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Source Modules
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../functions/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Function Index
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../tests/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Tests
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href=".."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#release-evidence-collapse" aria-expanded="false">
+                    Release Evidence
+                </a>
+                <div class="collapse" id="release-evidence-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../release-evidence/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../verification/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Verification
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../source-coverage/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Source Coverage
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../changelog/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Changelog
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../about/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            About
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <!-- endblock -->
+    </div>
+</nav>
+        <!-- endblock -->
+
+        <nav class="divider drac-bg-purple-cyan"></nav>
+
+        <div class="content">
+            <!-- block header -->
+                <header>
+    <nav class="navbar navbar-expand-xl drac-bg-purple">
+        <div class="container-fluid">
+            
+            <button class="navbar-toggler w-100 text-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMenu"
+                aria-controls="navbarsMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse flex-column ml-auto" id="navbarsMenu">
+                <ul class="navbar-nav text-md-center">
+
+                    <!-- block preview -->
+                    <li class="nav-item">
+                            
+        <div class="container">
+            <div class="row row-preview">
+                <div class="col">
+                    <a href="../release-artifacts/COMMAND_REFERENCE_STRICT_AUDIT/"
+                        class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover">
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="../integrations/"
+                        class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover" style="padding-left: 3%;">
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block search -->
+                    <li class="nav-item"><div role="search" class="search-box">
+	<form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+		<input type="text" name="q" class="drac-input drac-input-search drac-input-white drac-text-white drac-bg-black-secondary"
+		placeholder="Search docs" title="Type search term here" />
+	</form>
+</div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block source -->
+                    <li class="nav-item">
+                        
+                    </li>
+                    <!--  endblock -->
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+</header>
+            <!-- endblock -->
+
+            <!-- block content -->
+                <section class="p-md-5 section-content">
+    <article>
+        <p><h1 id="json-schema-reference">JSON Schema Reference</h1>
+<p>This page is regenerated from the current v0.7.8 source tree. The release surface has <strong>97 toolkit schema files</strong>; the bundled test-suite contributes <strong>3 additional schema files</strong>. All 100 files are documented and hash-checked by the schema audit.</p>
+<ul>
+<li><a href="../schema-reference/">Open the per-schema reference index</a></li>
+<li><a href="../release-artifacts/SCHEMA_STRICT_AUDIT/">Open the schema strict audit report</a></li>
+</ul>
+<h2 id="toolkit-schemas">Toolkit schemas</h2>
+<p>This section covers <strong>97</strong> <code>toolkit</code> schema files.</p>
+<table>
+<thead>
+<tr>
+<th>Source path</th>
+<th>Title</th>
+<th>Type</th>
+<th style="text-align: right;">Properties</th>
+<th style="text-align: right;">Required</th>
+<th>SHA-256</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>schemas/abi-contract.schema.json</code></td>
+<td>x86decomp ABI contract</td>
+<td><code>object</code></td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">2</td>
+<td><code>536e89f5ab760329f3799138b17c8a321170fc1fc729528d97b7f75d4af96c76</code></td>
+<td><a href="../schema-reference/schemas-abi-contract.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>schemas/assembly/asm-function.schema.json</code></td>
+<td>v0.7.8 function assembly result</td>
+<td><code>object</code></td>
+<td style="text-align: right;">14</td>
+<td style="text-align: right;">8</td>
+<td><code>db7f1658e6121216219cbe02f674ad829a1dc71fd1e38ff60be82909aeff852f</code></td>
+<td><a href="../schema-reference/schemas-assembly-asm-function.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>schemas/assembly/asm-run.schema.json</code></td>
+<td>v0.7.8 assembly run</td>
+<td><code>object</code></td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">5</td>
+<td><code>a0d7cfbc8e8c5c9b01ed78c6942892a141c4f4be96f60e6ce774906b1ccc19ab</code></td>
+<td><a href="../schema-reference/schemas-assembly-asm-run.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>schemas/assembly/relocation-resolution.schema.json</code></td>
+<td>v0.7.8 COFF relocation resolution</td>
+<td><code>object</code></td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">8</td>
+<td><code>12f0d874e789ea1fb40eed10321b5b24d6e9231630c0b24bb2c39fe843e192cf</code></td>
+<td><a href="../schema-reference/schemas-assembly-relocation-resolution.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>schemas/assembly/roundtrip-report.schema.json</code></td>
+<td>v0.7.8 mnemonic round-trip report</td>
+<td><code>object</code></td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">9</td>
+<td><code>00ecc65165836a423b5f53482d5367d4a70b88891dda997f0da0b6bd854ac1ac</code></td>
+<td><a href="../schema-reference/schemas-assembly-roundtrip-report.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>schemas/assembly/symbol-map.schema.json</code></td>
+<td>v0.7.8 original-RVA symbol map</td>
+<td><code>object</code></td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td><code>3f208d4dd418fbfed4999ef6a6f9b8290227644c4d07d09beb265792ff1a7e5e</code></td>
+<td><a href="../schema-reference/schemas-assembly-symbol-map.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>schemas/benchmark-corpus.schema.json</code></td>
+<td>Ground-truth benchmark corpus</td>
+<td><code>object</code></td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">3</td>
+<td><code>0081dd4d038287641f14ccd228dd0e824bff8bd3745f8251aaa0a94c1c61e36c</code></td>
+<td><a href="../schema-reference/schemas-benchmark-corpus.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>schemas/claim.schema.json</code></td>
+<td>x86decomp claim</td>
+<td><code>object</code></td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">10</td>
+<td><code>362341adcb81640a7839c77d37d7203b911e7e79655be6c0ab4115f460609532</code></td>
+<td><a href="../schema-reference/schemas-claim.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>schemas/coff-archive.schema.json</code></td>
+<td>x86decomp COFF Archive Inspection</td>
+<td><code>object</code></td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">7</td>
+<td><code>5f5a43f1ce6ae1221df24107f7b9db057156731736ff4aad5c81c93a73abaab3</code></td>
+<td><a href="../schema-reference/schemas-coff-archive.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>schemas/comdat-resolution.schema.json</code></td>
+<td>COFF COMDAT resolution report</td>
+<td><code>object</code></td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">5</td>
+<td><code>01fd177dfa983202ca8770e7985aa623e166fd22c20fdecc1d3d37f9cbfe0aae</code></td>
+<td><a href="../schema-reference/schemas-comdat-resolution.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>schemas/compiler-ground-truth-comparison.schema.json</code></td>
+<td>Compiler/version ground-truth corpus comparison</td>
+<td><code>object</code></td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">6</td>
+<td><code>1ea55d940c62d4e60487f74ac4d9756e4ff4c7cb2c39c9dd629b1d4150646dfb</code></td>
+<td><a href="../schema-reference/schemas-compiler-ground-truth-comparison.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>schemas/compiler-ground-truth.schema.json</code></td>
+<td>Compiler ground-truth corpus manifest</td>
+<td><code>object</code></td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">3</td>
+<td><code>1f8d15358ce71168a0f7c4d61ba7ad9db1ef12b534b27444bdda1f77f96392a2</code></td>
+<td><a href="../schema-reference/schemas-compiler-ground-truth.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>schemas/compiler-lab.schema.json</code></td>
+<td>Compiler experiment matrix</td>
+<td><code>object</code></td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">2</td>
+<td><code>37bc55f945daffc31844a78c2b4788191f501589303826a6cee207c5c4717506</code></td>
+<td><a href="../schema-reference/schemas-compiler-lab.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>schemas/compiler-profile.schema.json</code></td>
+<td>x86decomp compiler profile</td>
+<td><code>object</code></td>
+<td style="text-align: right;">14</td>
+<td style="text-align: right;">9</td>
+<td><code>6903f160acf5cfb8329567efbdd2da82b9f171705971e9842afcae21a4a4f844</code></td>
+<td><a href="../schema-reference/schemas-compiler-profile.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>schemas/convergence-report.schema.json</code></td>
+<td>Not declared</td>
+<td><code>object</code></td>
+<td style="text-align: right;">14</td>
+<td style="text-align: right;">10</td>
+<td><code>ace195921a16f72366e2920e6e2ce4e464b51f665d4d12ff5117dbea49119185</code></td>
+<td><a href="../schema-reference/schemas-convergence-report.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>schemas/cpp-recovery.schema.json</code></td>
+<td>Not declared</td>
+<td><code>object</code></td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">8</td>
+<td><code>9eda5eb04cdd6404ed82077dab0b1f2668f3682b33f864fec3c7348439515d8a</code></td>
+<td><a href="../schema-reference/schemas-cpp-recovery.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>schemas/decompme-packet.schema.json</code></td>
+<td>Local decomp.me-style function packet</td>
+<td><code>object</code></td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">9</td>
+<td><code>65cd0a5d3197e6de85ec46c8eb372a387102192d9341ee252a7f40ca83b91704</code></td>
+<td><a href="../schema-reference/schemas-decompme-packet.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>schemas/dependency-audit.schema.json</code></td>
+<td>x86decomp dependency vulnerability audit</td>
+<td><code>object</code></td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">11</td>
+<td><code>2eef4097789050d846536b406ccd7b9e8e639467bdf1ca530045fcc6050c8ee2</code></td>
+<td><a href="../schema-reference/schemas-dependency-audit.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>schemas/drcov-trace.schema.json</code></td>
+<td>Normalized DynamoRIO drcov text trace</td>
+<td><code>object</code></td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">8</td>
+<td><code>aedc8ab92612b4b325552d3de98da9d04e2e4c3aa2bb2ab319e20f85616cfe7f</code></td>
+<td><a href="../schema-reference/schemas-drcov-trace.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>schemas/dynamic-report.schema.json</code></td>
+<td>Bounded Unicorn differential report</td>
+<td><code>object</code></td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">5</td>
+<td><code>1af7c179c9d4fedbf542c098eab126d556fc8345a464176d211640f391effce0</code></td>
+<td><a href="../schema-reference/schemas-dynamic-report.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>schemas/evidence.schema.json</code></td>
+<td>x86decomp evidence item</td>
+<td><code>object</code></td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">9</td>
+<td><code>5c5199ae9f480dbbb28eb3ebd889a53a46c08535cabf346d3a0bf04f4a4aa7bd</code></td>
+<td><a href="../schema-reference/schemas-evidence.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>schemas/exe-diff-report.schema.json</code></td>
+<td>PE function to COFF symbol comparison</td>
+<td><code>object</code></td>
+<td style="text-align: right;">14</td>
+<td style="text-align: right;">8</td>
+<td><code>3bfb70b7158750523074f638ff5955cc519097a37543f9f097909f4576373b50</code></td>
+<td><a href="../schema-reference/schemas-exe-diff-report.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>schemas/execution-harness-generated.schema.json</code></td>
+<td>Not declared</td>
+<td><code>object</code></td>
+<td style="text-align: right;">17</td>
+<td style="text-align: right;">16</td>
+<td><code>7ba43bfcb6b5b8736d784112af5531e1a890630e379eb2c345f15442c18a2c6d</code></td>
+<td><a href="../schema-reference/schemas-execution-harness-generated.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>schemas/execution-harness.schema.json</code></td>
+<td>Bounded Unicorn execution harness</td>
+<td><code>object</code></td>
+<td style="text-align: right;">13</td>
+<td style="text-align: right;">1</td>
+<td><code>2ec27dc202dcf7ab923c646c71e30769b0c18527aaf2e6ba44e70536574e4f68</code></td>
+<td><a href="../schema-reference/schemas-execution-harness.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>schemas/function-workflow.schema.json</code></td>
+<td>x86decomp per-function workflow</td>
+<td><code>object</code></td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">9</td>
+<td><code>972f7c4fef555a4653a57cad04f1dedb186cc70a6c59de7e674645b30c240351</code></td>
+<td><a href="../schema-reference/schemas-function-workflow.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>schemas/function.schema.json</code></td>
+<td>x86decomp Ghidra function artifact (schema versions 1 and 2)</td>
+<td><code>object</code></td>
+<td style="text-align: right;">19</td>
+<td style="text-align: right;">11</td>
+<td><code>00c65be77cc237df28a9112019c07019f88f38072ceb329907adc88bcfc34704</code></td>
+<td><a href="../schema-reference/schemas-function.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>schemas/governance/campaign.schema.json</code></td>
+<td>campaign</td>
+<td><code>object</code></td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">4</td>
+<td><code>df027ea63ef0017b5a9ecae133a21ab7fa13f68e00545529e8606b5f39d1f854</code></td>
+<td><a href="../schema-reference/schemas-governance-campaign.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>schemas/governance/candidate.schema.json</code></td>
+<td>candidate</td>
+<td><code>object</code></td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">3</td>
+<td><code>db23f94af8b37ebdfff2798c271a0ef02ea9d77aae83fa8c8ebdab3d2f55ad67</code></td>
+<td><a href="../schema-reference/schemas-governance-candidate.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>schemas/governance/changeset.schema.json</code></td>
+<td>changeset manifest</td>
+<td><code>object</code></td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">5</td>
+<td><code>6788b90056dbf46cdaaaab292bdc6c3102e20ff47c790f131b47c15d08f5cbd3</code></td>
+<td><a href="../schema-reference/schemas-governance-changeset.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>schemas/governance/consensus.schema.json</code></td>
+<td>consensus observation</td>
+<td><code>object</code></td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">9</td>
+<td><code>f3edcf4a5962701cde7a0f4f483a19d49e9f5beea5e6a4dc3c643c9970ee9c43</code></td>
+<td><a href="../schema-reference/schemas-governance-consensus.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>schemas/governance/counterexample.schema.json</code></td>
+<td>counterexample</td>
+<td><code>object</code></td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">6</td>
+<td><code>0e2b706ed1bf89e6c07a483dd171dbb23fbac4f67c87ef1df16be6c2fe50d19c</code></td>
+<td><a href="../schema-reference/schemas-governance-counterexample.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>schemas/governance/family.schema.json</code></td>
+<td>binary family report</td>
+<td><code>object</code></td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">5</td>
+<td><code>cd02347eefe68396b21d7ec5af6ef9c1554dd4715e962e302ece657cb0b851ed</code></td>
+<td><a href="../schema-reference/schemas-governance-family.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>schemas/governance/hypothesis.schema.json</code></td>
+<td>hypothesis</td>
+<td><code>object</code></td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">6</td>
+<td><code>1013bee5c093d4cf0e619dbcdc52a2b2ff79c0b768da9c699ad0483bfc283a83</code></td>
+<td><a href="../schema-reference/schemas-governance-hypothesis.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>schemas/governance/knowledge-graph.schema.json</code></td>
+<td>knowledge graph impact</td>
+<td><code>object</code></td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">5</td>
+<td><code>d1bc76932c0264e763eb4cdb47d46397ddf00bb57e1c240371ef42049631db28</code></td>
+<td><a href="../schema-reference/schemas-governance-knowledge-graph.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>schemas/governance/plugin.schema.json</code></td>
+<td>plugin manifest</td>
+<td><code>object</code></td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">5</td>
+<td><code>1fb5e12f5c8eb5408dea6372c5442273b1694559dc9c09784bbca4309dbf5fd2</code></td>
+<td><a href="../schema-reference/schemas-governance-plugin.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>schemas/governance/proof-bundle.schema.json</code></td>
+<td>proof bundle manifest</td>
+<td><code>object</code></td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">3</td>
+<td><code>b2619861c68f06f1ea0149a8649c5c215d0485472cad1317a463fe8eac5adf41</code></td>
+<td><a href="../schema-reference/schemas-governance-proof-bundle.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>schemas/governance/review.schema.json</code></td>
+<td>review item</td>
+<td><code>object</code></td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">5</td>
+<td><code>280cfe7963adcdcbbb3a1fde01b921cad82751d2240a4fcdaa9b9543db071bc2</code></td>
+<td><a href="../schema-reference/schemas-governance-review.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>schemas/governance/worker.schema.json</code></td>
+<td>worker profile</td>
+<td><code>object</code></td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">3</td>
+<td><code>ca8f6768a4c7dfe89e80f2107c4bb43badde4d01d3ec6947ff001c9b207b403c</code></td>
+<td><a href="../schema-reference/schemas-governance-worker.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>schemas/hybrid-project.schema.json</code></td>
+<td>Continuously buildable hybrid project</td>
+<td><code>object</code></td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">6</td>
+<td><code>c72692b4469f7ba92b2945968974d495371e2c0f03ad438c970418c3ce31d9b0</code></td>
+<td><a href="../schema-reference/schemas-hybrid-project.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>schemas/image-match-report.schema.json</code></td>
+<td>Target-specific whole-image match report</td>
+<td><code>object</code></td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">10</td>
+<td><code>f81f81c2581b2941b9a3850aa2d296957e1d14de2ad3d8ee92839b34ccfadc23</code></td>
+<td><a href="../schema-reference/schemas-image-match-report.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>schemas/image-profile.schema.json</code></td>
+<td>Target-specific PE image layout profile</td>
+<td><code>object</code></td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">6</td>
+<td><code>5916e3589fb77876a26861ccfea7dfbfbf4b9c55e92243ed66dae4270dad70d7</code></td>
+<td><a href="../schema-reference/schemas-image-profile.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>schemas/integration-report.schema.json</code></td>
+<td>Bounded integration comparison report</td>
+<td><code>object</code></td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">10</td>
+<td><code>4732a3a8f4038739f46c7b7b74b20999c68d9f637bac783a53b03eee91e91d1a</code></td>
+<td><a href="../schema-reference/schemas-integration-report.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>schemas/integration-scenarios.schema.json</code></td>
+<td>Integration scenario manifest</td>
+<td><code>object</code></td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">4</td>
+<td><code>60799068b8df90e7d457415f6e08fa236a0620630ddab2641dec2ff8bac6e43e</code></td>
+<td><a href="../schema-reference/schemas-integration-scenarios.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>schemas/linker-layout.schema.json</code></td>
+<td>Linker layout reconstruction report</td>
+<td><code>object</code></td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">6</td>
+<td><code>a8faf6022c8b70e04c3375d47a480b9a811e72edd55ea7e0ec4e80a77a8ca934</code></td>
+<td><a href="../schema-reference/schemas-linker-layout.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>schemas/linker-reconstruction-plan.schema.json</code></td>
+<td>Not declared</td>
+<td><code>object</code></td>
+<td style="text-align: right;">17</td>
+<td style="text-align: right;">11</td>
+<td><code>1d6fadf9737abed4d02cc90d3859898785edf62d3909c39fe893c8841c57f504</code></td>
+<td><a href="../schema-reference/schemas-linker-reconstruction-plan.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>schemas/local-llm/candidate.schema.json</code></td>
+<td>Local LLM C proposal response</td>
+<td><code>object</code></td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">4</td>
+<td><code>cadff624248794b1841a55fd49f2f980658a442d046530c183ec0c89d44d99ab</code></td>
+<td><a href="../schema-reference/schemas-local-llm-candidate.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>schemas/local-llm/job.schema.json</code></td>
+<td>Local LLM C generation and byte-match job</td>
+<td><code>object</code></td>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">4</td>
+<td><code>6ac68b5f4f22855154f8ec09e599c7caa3ce12d117fb125a0bae8e4dce0197a8</code></td>
+<td><a href="../schema-reference/schemas-local-llm-job.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>schemas/local-llm/profile.schema.json</code></td>
+<td>Local LLM provider profile</td>
+<td><code>object</code></td>
+<td style="text-align: right;">17</td>
+<td style="text-align: right;">17</td>
+<td><code>dc3ed501bada8be1896567c329fd550ad843059786ed07bbae6ef3063fdfe3ee</code></td>
+<td><a href="../schema-reference/schemas-local-llm-profile.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>schemas/local-llm/report.schema.json</code></td>
+<td>Local LLM exact byte-match report</td>
+<td><code>object</code></td>
+<td style="text-align: right;">13</td>
+<td style="text-align: right;">13</td>
+<td><code>d61c0308354431848f281d3c62cd32b39c9d61277492bee480a02276e5ad6ac0</code></td>
+<td><a href="../schema-reference/schemas-local-llm-report.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>schemas/mcp-mutation.schema.json</code></td>
+<td>Evidence-gated MCP mutation</td>
+<td><code>object</code></td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">8</td>
+<td><code>64335798160269133e880d823f14de7f0cb4f2dafbf0c47526e24fb9fb16ea29</code></td>
+<td><a href="../schema-reference/schemas-mcp-mutation.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>schemas/memory-event.schema.json</code></td>
+<td>x86decomp project memory event</td>
+<td><code>object</code></td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">11</td>
+<td><code>d2f38971ac7dda92dda0564bb77bb4858160b5a342476d36fe52238eb5289e74</code></td>
+<td><a href="../schema-reference/schemas-memory-event.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>schemas/msvc-metadata.schema.json</code></td>
+<td>Bounded MSVC metadata analysis report</td>
+<td><code>object</code></td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">8</td>
+<td><code>84d0b6bc880ab47954f951a4eed4db317c14ee33ed5cdbe0ee098ce61c1d6273</code></td>
+<td><a href="../schema-reference/schemas-msvc-metadata.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>schemas/native/boundary-finding.schema.json</code></td>
+<td>x86decomp boundary-finding</td>
+<td><code>object</code></td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">3</td>
+<td><code>58d723eee6c5c374f78dcac68a23be5d0b60c6f002c3e8285d307eef496e74fc</code></td>
+<td><a href="../schema-reference/schemas-native-boundary-finding.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>schemas/native/candidate-manifest.schema.json</code></td>
+<td>x86decomp candidate-manifest</td>
+<td><code>object</code></td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">4</td>
+<td><code>d3bad2e693b4b7d6e1c230d9e03ff775298273523c8b562d3b78400c13313029</code></td>
+<td><a href="../schema-reference/schemas-native-candidate-manifest.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>schemas/native/function-match.schema.json</code></td>
+<td>x86decomp function-match</td>
+<td><code>object</code></td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">5</td>
+<td><code>e598ca859f33c96b62fe8dac7fcf78ec77b53e4b8f178b9f19e1f288e2725cd1</code></td>
+<td><a href="../schema-reference/schemas-native-function-match.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>schemas/native/function-slot.schema.json</code></td>
+<td>x86decomp function-slot</td>
+<td><code>object</code></td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">5</td>
+<td><code>61bb10550455068b1c58073dfb30939aea8095cefbd775abab4d044efe9a2914</code></td>
+<td><a href="../schema-reference/schemas-native-function-slot.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>schemas/native/hybrid-composition.schema.json</code></td>
+<td>x86decomp hybrid-composition</td>
+<td><code>object</code></td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">4</td>
+<td><code>feb6682c1aa1ed0a3bc3c06230ce27f006641d96238050151ad22584eb02cb9d</code></td>
+<td><a href="../schema-reference/schemas-native-hybrid-composition.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>schemas/native/loop-run.schema.json</code></td>
+<td>x86decomp loop-run</td>
+<td><code>object</code></td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">4</td>
+<td><code>de5d1a277444c3ea53ae0c4860d1a7978b478893fb893cf4c1ba1fca4a11b038</code></td>
+<td><a href="../schema-reference/schemas-native-loop-run.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>schemas/native/match-run.schema.json</code></td>
+<td>x86decomp match-run</td>
+<td><code>object</code></td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+<td><code>7afbfb42c5995ff375a050c93bb119ce50f2a761220c610f2c1622f082c23fb5</code></td>
+<td><a href="../schema-reference/schemas-native-match-run.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>schemas/native/patch-plan.schema.json</code></td>
+<td>x86decomp patch-plan</td>
+<td><code>object</code></td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">3</td>
+<td><code>90a1f06eaa3f6a3d6b235cc0439c57fec0187006ccc4c01b8fbb76571bb31958</code></td>
+<td><a href="../schema-reference/schemas-native-patch-plan.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>schemas/native/runtime-validation.schema.json</code></td>
+<td>x86decomp runtime-validation</td>
+<td><code>object</code></td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">4</td>
+<td><code>f314d1ae2b72314a6ebf6c6d2905a8eb2f314498f256f567e01ae08622da90f3</code></td>
+<td><a href="../schema-reference/schemas-native-runtime-validation.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>schemas/native/section-export.schema.json</code></td>
+<td>x86decomp section-export</td>
+<td><code>object</code></td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+<td><code>121ed87fe1b51a248b230acafd9780b96e74e01c72e9cba7fcd20fbb466eb317</code></td>
+<td><a href="../schema-reference/schemas-native-section-export.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>schemas/native/staging-symbol.schema.json</code></td>
+<td>x86decomp staging-symbol</td>
+<td><code>object</code></td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">4</td>
+<td><code>44b3ce02db0758435f6a230a9ad37bd00c3a6308bf71761836050e5c90c6c4d0</code></td>
+<td><a href="../schema-reference/schemas-native-staging-symbol.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>schemas/native/windows-tool.schema.json</code></td>
+<td>x86decomp windows-tool</td>
+<td><code>object</code></td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">2</td>
+<td><code>22af6f0e3266250f1c741e95e231c4ee3d62fd3944e0000e6ab6e652089906e0</code></td>
+<td><a href="../schema-reference/schemas-native-windows-tool.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>schemas/objdiff-manifest.schema.json</code></td>
+<td>objdiff external invocation manifest</td>
+<td><code>object</code></td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">4</td>
+<td><code>2fe8f65399749687b2890cc643f474c0b8de221e90f6ae5013ce0d8b46590360</code></td>
+<td><a href="../schema-reference/schemas-objdiff-manifest.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>schemas/pdb.schema.json</code></td>
+<td>x86decomp bounded PDB/MSF inventory</td>
+<td><code>object</code></td>
+<td style="text-align: right;">13</td>
+<td style="text-align: right;">13</td>
+<td><code>850bbf885fa040ac4601dc4d93c2fb4b3afda1dd86612a0d8866a34bacf07008</code></td>
+<td><a href="../schema-reference/schemas-pdb.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>schemas/pipeline.schema.json</code></td>
+<td>Not declared</td>
+<td><code>object</code></td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">4</td>
+<td><code>a9b7b790fb6c877370a4c61ecbdf0f92eac13d9aba389cc0ab8d8723aee92ca6</code></td>
+<td><a href="../schema-reference/schemas-pipeline.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>schemas/project-template.schema.json</code></td>
+<td>Grounded x86decomp project-template contract</td>
+<td><code>object</code></td>
+<td style="text-align: right;">13</td>
+<td style="text-align: right;">11</td>
+<td><code>1bf881ea328d3a6c00d727c0cbe1e47763726e70362a085354178add994458ce</code></td>
+<td><a href="../schema-reference/schemas-project-template.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>schemas/project.schema.json</code></td>
+<td>x86decomp project (schema versions 1, 2, and 3)</td>
+<td><code>object</code></td>
+<td style="text-align: right;">21</td>
+<td style="text-align: right;">10</td>
+<td><code>4ab19d9064e8d249fdd545d1fa183920902d6afbe647d004ddd571a208295b0b</code></td>
+<td><a href="../schema-reference/schemas-project.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>schemas/reconstruction/abi-contract.schema.json</code></td>
+<td>ABI contract</td>
+<td><code>object</code></td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">6</td>
+<td><code>d2286943caed629e873a4107fcceb21f18b0759cfebd17b71f761af14e68e016</code></td>
+<td><a href="../schema-reference/schemas-reconstruction-abi-contract.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>schemas/reconstruction/build.schema.json</code></td>
+<td>Build reconstruction contract</td>
+<td><code>object</code></td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">4</td>
+<td><code>647d938812825abaa84206de119ebc4a18d8fad70a4f50121f990a4af2571dd0</code></td>
+<td><a href="../schema-reference/schemas-reconstruction-build.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>schemas/reconstruction/capsule.schema.json</code></td>
+<td>Reconstruction capsule manifest</td>
+<td><code>object</code></td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">4</td>
+<td><code>78eac1212fd7e2b41fc2bd180515f95d2d60fe26046a4fdb3ea51f810704ffb9</code></td>
+<td><a href="../schema-reference/schemas-reconstruction-capsule.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>schemas/reconstruction/compatibility-shim.schema.json</code></td>
+<td>Explicit compatibility shim</td>
+<td><code>object</code></td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">6</td>
+<td><code>714bcc499ffc2db676e163a5886ce9ca4fca7df0b2382a94488c6dfc5a782926</code></td>
+<td><a href="../schema-reference/schemas-reconstruction-compatibility-shim.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>schemas/reconstruction/generated-test.schema.json</code></td>
+<td>Generated regression test</td>
+<td><code>object</code></td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">7</td>
+<td><code>8e99342ae82922d0c5c17c41e857074a5a2cec9b1269e23572aea09b5715a7b5</code></td>
+<td><a href="../schema-reference/schemas-reconstruction-generated-test.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>schemas/reconstruction/header.schema.json</code></td>
+<td>Recovered header contract</td>
+<td><code>object</code></td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">4</td>
+<td><code>c878f851e64b11db9e0dad34785d5ef3ba3baa753e380af72f554fe44529a850</code></td>
+<td><a href="../schema-reference/schemas-reconstruction-header.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>schemas/reconstruction/library-match.schema.json</code></td>
+<td>Static library recognition candidate</td>
+<td><code>object</code></td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">6</td>
+<td><code>cdf8967118c99e0f1d224829f1e3067a2b9db50f31ca945db68a3cec61b0f36e</code></td>
+<td><a href="../schema-reference/schemas-reconstruction-library-match.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>schemas/reconstruction/module.schema.json</code></td>
+<td>Recovered module hypothesis</td>
+<td><code>object</code></td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">5</td>
+<td><code>4aa87665cf31d30d9395bff7fb9388c9bd55257718808572669a874922436a4f</code></td>
+<td><a href="../schema-reference/schemas-reconstruction-module.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>schemas/reconstruction/security-finding.schema.json</code></td>
+<td>Security finding</td>
+<td><code>object</code></td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">7</td>
+<td><code>9a4f8a220e2e2d1d7dbc8116968bf2752d57a5725e18673faf59a192ace1826e</code></td>
+<td><a href="../schema-reference/schemas-reconstruction-security-finding.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>schemas/reconstruction/semantic-changeset.schema.json</code></td>
+<td>Semantic changeset</td>
+<td><code>object</code></td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">4</td>
+<td><code>2cc66c0075ba39a54d86a20ca3705d4656ce90e922ce5a8c0b9357db1bc27b28</code></td>
+<td><a href="../schema-reference/schemas-reconstruction-semantic-changeset.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>schemas/reconstruction/source-provenance.schema.json</code></td>
+<td>Source provenance record</td>
+<td><code>object</code></td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">9</td>
+<td><code>d80a00434549c01f14f1afa7c43cb65b9eb653808b42fb5fa10f25b1d7ac1b0c</code></td>
+<td><a href="../schema-reference/schemas-reconstruction-source-provenance.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>schemas/reconstruction/translation-unit.schema.json</code></td>
+<td>Translation unit hypothesis</td>
+<td><code>object</code></td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">5</td>
+<td><code>ea17fb7bfec69c8e9e3eb5d14179194acece94ba90d5e0ad76c5f3e653dca642</code></td>
+<td><a href="../schema-reference/schemas-reconstruction-translation-unit.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>schemas/release-gate.schema.json</code></td>
+<td>Not declared</td>
+<td><code>object</code></td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">9</td>
+<td><code>50e1f5a6cb46b67f833c881a7f025be5c7c047c1f23c3607608488afe17256cd</code></td>
+<td><a href="../schema-reference/schemas-release-gate.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>schemas/relink-manifest.schema.json</code></td>
+<td>Manifest-driven full relink</td>
+<td><code>object</code></td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">7</td>
+<td><code>ca2b77b7be6b562589e841753a9afa8c6baf1fc7cf8c703409c90fc56507e890</code></td>
+<td><a href="../schema-reference/schemas-relink-manifest.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>schemas/reproduction.schema.json</code></td>
+<td>Not declared</td>
+<td><code>object</code></td>
+<td style="text-align: right;">13</td>
+<td style="text-align: right;">6</td>
+<td><code>aea350be271c7795406a2dd55096775e9d0b531215e05f43b75a9c6b5bd98281</code></td>
+<td><a href="../schema-reference/schemas-reproduction.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>schemas/security-audit.schema.json</code></td>
+<td>Not declared</td>
+<td><code>object</code></td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">8</td>
+<td><code>d62a14bd5c6d796dd52aee929ccfdf8e1265f825167070c8ffd680321a00b637</code></td>
+<td><a href="../schema-reference/schemas-security-audit.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>schemas/symbolic-memory-harness.schema.json</code></td>
+<td>Bounded symbolic memory and alias harness</td>
+<td><code>object</code></td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">2</td>
+<td><code>e7ce53b843c172758fc086503e040cd1c60a3836f528b2c8396a7e77ab7c200a</code></td>
+<td><a href="../schema-reference/schemas-symbolic-memory-harness.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>schemas/symbolic-memory-report.schema.json</code></td>
+<td>Bounded angr symbolic memory-alias comparison</td>
+<td><code>object</code></td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">9</td>
+<td><code>5e17dedb1bedf6581662f4cced118e40b8075957a161daea2abfab778d0298ba</code></td>
+<td><a href="../schema-reference/schemas-symbolic-memory-report.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>schemas/symbolic-report.schema.json</code></td>
+<td>Bounded symbolic comparison report</td>
+<td><code>object</code></td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">3</td>
+<td><code>cc596ec7c42bc74e7810dbf52bf50cba2d17375e9438f0a3fcbb3dae67a88e29</code></td>
+<td><a href="../schema-reference/schemas-symbolic-report.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>schemas/synthetic-corpus.schema.json</code></td>
+<td>Deterministic synthetic source corpus</td>
+<td><code>object</code></td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">9</td>
+<td><code>3c05d2c0a766021805afdd306d6a08068af6a24cdb0adb82fb3eca4d0f1d7c7d</code></td>
+<td><a href="../schema-reference/schemas-synthetic-corpus.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>schemas/target-decisions.schema.json</code></td>
+<td>Operator-confirmed target decisions</td>
+<td><code>object</code></td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">7</td>
+<td><code>647192549c5e079a02e597648a0d3d2ade5078866f869b7e0da34324b5976ed6</code></td>
+<td><a href="../schema-reference/schemas-target-decisions.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>schemas/target-pack.schema.json</code></td>
+<td>Not declared</td>
+<td><code>object</code></td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">12</td>
+<td><code>867b89f3738ff1310340d078c5ae530f0087277e96cd00106fa1275cd0bcc954</code></td>
+<td><a href="../schema-reference/schemas-target-pack.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>schemas/test-bundle-report.schema.json</code></td>
+<td>x86decomp Static Test Bundle Report</td>
+<td><code>object</code></td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">10</td>
+<td><code>482f5b618cd46eb5e815392f2655bb9fe4f3683e1f5122b8f7ab0ea69f8a2820</code></td>
+<td><a href="../schema-reference/schemas-test-bundle-report.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>schemas/test-bundle.schema.json</code></td>
+<td>x86decomp Authorized Static Test Bundle</td>
+<td><code>object</code></td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">3</td>
+<td><code>398d162a3ccc9e3bd1e984af67efbfaf12a840f4013b406c0cf8d150f490deab</code></td>
+<td><a href="../schema-reference/schemas-test-bundle.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>schemas/type-constraint.schema.json</code></td>
+<td>Type/ABI constraint record</td>
+<td><code>object</code></td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">5</td>
+<td><code>f98328b457deccc685ea8be764507320d5ff94deddb366e47c5018a678baa59d</code></td>
+<td><a href="../schema-reference/schemas-type-constraint.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>schemas/verification.schema.json</code></td>
+<td>x86decomp byte verification report</td>
+<td><code>object</code></td>
+<td style="text-align: right;">13</td>
+<td style="text-align: right;">13</td>
+<td><code>a70e3422e6b0bec967695257c7b66d44f17a0cfe3f15d99799eb1c038ccb7fa0</code></td>
+<td><a href="../schema-reference/schemas-verification.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>schemas/work-task.schema.json</code></td>
+<td>Validator-gated work item</td>
+<td><code>object</code></td>
+<td style="text-align: right;">14</td>
+<td style="text-align: right;">12</td>
+<td><code>36794b2e24e785918a28d8bd7f5fedd100c090ed64030c71eefa0a8c933b92c9</code></td>
+<td><a href="../schema-reference/schemas-work-task.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>schemas/worker-report.schema.json</code></td>
+<td>Not declared</td>
+<td><code>object</code></td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">7</td>
+<td><code>f4fee8d629c5e963519a4f5ab25c4bb0856592421ee218fe7d047b5ebe089b3c</code></td>
+<td><a href="../schema-reference/schemas-worker-report.schema.json/">details</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="bundled-test-suite-schemas">Bundled test-suite schemas</h2>
+<p>This section covers <strong>3</strong> <code>test-suite</code> schema files.</p>
+<table>
+<thead>
+<tr>
+<th>Source path</th>
+<th>Title</th>
+<th>Type</th>
+<th style="text-align: right;">Properties</th>
+<th style="text-align: right;">Required</th>
+<th>SHA-256</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>test-suite/schemas/feature-catalog.schema.json</code></td>
+<td>x86decomp current-surface catalog</td>
+<td><code>object</code></td>
+<td style="text-align: right;">14</td>
+<td style="text-align: right;">14</td>
+<td><code>554a6d8ef19025ff91c877be73c541678bebf2b13026d91bf7eba28ddef5a278</code></td>
+<td><a href="../schema-reference/test-suite-schemas-feature-catalog.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>test-suite/schemas/run-report.schema.json</code></td>
+<td>x86decomp comprehensive test run report</td>
+<td><code>object</code></td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">13</td>
+<td><code>9d2b3fcab807e52866a5b8e7bac9f7813e6d7e003d4de9f2f80d05e8798e93c6</code></td>
+<td><a href="../schema-reference/test-suite-schemas-run-report.schema.json/">details</a></td>
+</tr>
+<tr>
+<td><code>test-suite/schemas/test-config.schema.json</code></td>
+<td>x86decomp test configuration</td>
+<td><code>object</code></td>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">15</td>
+<td><code>c33b8ab58a509c7f688ff159d0cef5726a4909801d40fd4899c81c4626eda90d</code></td>
+<td><a href="../schema-reference/test-suite-schemas-test-config.schema.json/">details</a></td>
+</tr>
+</tbody>
+</table></p>
+    </article>
+</section>
+            <!-- endblock -->
+
+            <!-- block footer -->
+                <footer>
+    <div class="d-flex flex-sm-row justify-content-between py-2 border-top drac-text-black drac-bg-cyan-green">
+        <a href="https://github.com/dracula/mkdocs" target="_blank" style="padding-left: 1%;"
+            class="footer-text drac-anchor drac-text-black drac-text-purple--hover">
+            Made with Dracula Theme for MkDocs
+        </a>
+    </div>
+</footer>
+            <!-- endblock -->
+        </div>
+
+    </main>
+
+        <script>var base_url = '..';</script>
+        <script src="../assets/js/jquery-3.3.1.slim.min.js"></script>
+        <script src="../assets/js/bootstrap.bundle.min.js"></script>
+        <script src="../assets/js/mkdocs.js"></script>
+			<script src="../search/main.js" defer></script>
+
+</body>
+
+</html>

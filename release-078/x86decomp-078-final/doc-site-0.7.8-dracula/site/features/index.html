@@ -1,0 +1,1050 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+        <title>Source Modules - x86decomp 0.7.8 Docs</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        
+        
+        
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="../assets/css/darcula-highlight.min.css">
+
+        <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../assets/css/dracula-ui.min.css">
+        <link rel="stylesheet" href="../assets/css/mkdocs.min.css">
+            <link href="../assets/x86decomp-dracula-overrides.css" rel="stylesheet">
+
+        
+            <link  rel="icon" type="image/x-icon" href="../assets/img/favicon.ico">
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+                <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+
+<body class="drac-bg-black-secondary drac-text-grey-ternary drac-text drac-scrollbar-purple">
+
+    <main class="d-flex">
+
+        <!-- block sidebar -->
+            <nav id="sidebar" class="sidebar drac-bg-black">
+    <div class="custom-menu">
+        <button type="button" id="sidebarCollapse" class="btn btn-primary">
+            <i class="fa fa-bars"></i>
+            <span class="sr-only">Menu</span>
+        </button>
+    </div>
+
+    <div class="p-4">
+        
+
+        <div class="drac-text-center">
+            
+                <span class="drac-text drac-line-height drac-text-white">x86decomp 0.7.8 Docs</span>
+            
+        </div>
+
+        <div class="drac-box flex-column">
+            <ul class="dot-ul">
+                <li><div class="dot-li drac-bg-cyan"></div></li>
+                <li><div class="dot-li drac-bg-green"></div></li>
+                <li><div class="dot-li drac-bg-orange"></div></li>
+                <li><div class="dot-li drac-bg-pink"></div></li>
+                <li><div class="dot-li drac-bg-purple"></div></li>
+                <li><div class="dot-li drac-bg-red"></div></li>
+                <li><div class="dot-li drac-bg-yellow"></div></li>
+            </ul>
+        </div>
+
+        <hr class="drac-divider" />
+
+        <!-- block menu -->
+        <ul class="mb-5 drac-list drac-list-none">
+            
+            <li class="drac-box">
+                <a href=".."
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Home
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../getting-started/"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Getting Started
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href=".."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#workflows-collapse" aria-expanded="false">
+                    Workflows
+                </a>
+                <div class="collapse" id="workflows-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../workflows/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Workflow Guide
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../local-llm/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Local LLM C Generation
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../decompilation-acceleration/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Decompilation Acceleration
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../project-examples/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Project Examples
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href=".."
+                    class=" active 
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#reference-collapse" aria-expanded="false">
+                    Reference
+                </a>
+                <div class="collapse" id="reference-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../reference/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../architecture/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Architecture
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../commands/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Commands
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../schemas/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Schemas
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../integrations/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Integrations
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="./"
+            class=" active 
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Source Modules
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../functions/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Function Index
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../tests/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Tests
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href=".."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#release-evidence-collapse" aria-expanded="false">
+                    Release Evidence
+                </a>
+                <div class="collapse" id="release-evidence-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../release-evidence/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../verification/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Verification
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../source-coverage/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Source Coverage
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../changelog/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Changelog
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../about/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            About
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <!-- endblock -->
+    </div>
+</nav>
+        <!-- endblock -->
+
+        <nav class="divider drac-bg-purple-cyan"></nav>
+
+        <div class="content">
+            <!-- block header -->
+                <header>
+    <nav class="navbar navbar-expand-xl drac-bg-purple">
+        <div class="container-fluid">
+            
+            <button class="navbar-toggler w-100 text-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMenu"
+                aria-controls="navbarsMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse flex-column ml-auto" id="navbarsMenu">
+                <ul class="navbar-nav text-md-center">
+
+                    <!-- block preview -->
+                    <li class="nav-item">
+                            
+        <div class="container">
+            <div class="row row-preview">
+                <div class="col">
+                    <a href="../integrations/"
+                        class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover">
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="../functions/"
+                        class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover" style="padding-left: 3%;">
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block search -->
+                    <li class="nav-item"><div role="search" class="search-box">
+	<form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+		<input type="text" name="q" class="drac-input drac-input-search drac-input-white drac-text-white drac-bg-black-secondary"
+		placeholder="Search docs" title="Type search term here" />
+	</form>
+</div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block source -->
+                    <li class="nav-item">
+                        
+                    </li>
+                    <!--  endblock -->
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+</header>
+            <!-- endblock -->
+
+            <!-- block content -->
+                <section class="p-md-5 section-content">
+    <article>
+        <p><h1 id="source-modules">Source modules</h1>
+<p>This inventory is generated from the 0.7.8 toolkit source tree and contains <strong>114 modules</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Module</th>
+<th>Area</th>
+<th style="text-align: right;">Functions/methods</th>
+<th>SHA-256</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="x86decomp/"><code>x86decomp</code></a></td>
+<td>toolkit</td>
+<td style="text-align: right;">0</td>
+<td><code>30f1f40ae635da648a9e788393961109cf27d969f90c95c3e890732a5ae4a0ae</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp---main--/"><code>x86decomp.__main__</code></a></td>
+<td>toolkit</td>
+<td style="text-align: right;">0</td>
+<td><code>935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-abi/"><code>x86decomp.abi</code></a></td>
+<td>toolkit</td>
+<td style="text-align: right;">4</td>
+<td><code>e69b8d4ba247b2e3dbd3553cd207ee8fbe24fe244878c4dabb4afffbebb33903</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-analysis-db/"><code>x86decomp.analysis_db</code></a></td>
+<td>toolkit</td>
+<td style="text-align: right;">11</td>
+<td><code>409e503d6c264dba48a00e1d1afc475ce735cf25f1ec4aab7ac41b07ed5b9bad</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-angr-backend/"><code>x86decomp.angr_backend</code></a></td>
+<td>toolkit</td>
+<td style="text-align: right;">11</td>
+<td><code>b3f95fbeec7f4d726ba52f50df9d4d7986cfad9ed5c789ab0a3932c0dea8b7a3</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-artifacts/"><code>x86decomp.artifacts</code></a></td>
+<td>toolkit</td>
+<td style="text-align: right;">4</td>
+<td><code>171833c573e11e5d40d7791f8fea523536905a8486145a1aa1b96ea2761e6e6b</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-assembly/"><code>x86decomp.assembly</code></a></td>
+<td>toolkit</td>
+<td style="text-align: right;">0</td>
+<td><code>60dcbf406ebd10f56f155b70ea0657b0d40a2405ef65cf3caa32979fd90ca254</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-assembly-annotation/"><code>x86decomp.assembly.annotation</code></a></td>
+<td>toolkit</td>
+<td style="text-align: right;">7</td>
+<td><code>193333b07dc91fcfa6add9200b9f9e170c6d3705e169ac7d76056657759a59ef</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-assembly-cli/"><code>x86decomp.assembly.cli</code></a></td>
+<td>toolkit</td>
+<td style="text-align: right;">7</td>
+<td><code>8d5e66946d715b2e2dc0e279e8cb78473829ecb9f628735424034dd0a315a946</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-assembly-materialize/"><code>x86decomp.assembly.materialize</code></a></td>
+<td>toolkit</td>
+<td style="text-align: right;">14</td>
+<td><code>bd19d35efc03ca7bc501fe4b87a028a9c36131d3eeee4a7f98c6aad5bdab2324</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-assembly-pipeline/"><code>x86decomp.assembly.pipeline</code></a></td>
+<td>toolkit</td>
+<td style="text-align: right;">8</td>
+<td><code>f6ffb8a8282636b4f07854e6665bbe250b7bb405ceba0587e872d72d91dae04c</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-assembly-relocations/"><code>x86decomp.assembly.relocations</code></a></td>
+<td>toolkit</td>
+<td style="text-align: right;">11</td>
+<td><code>d9c90ac5d66b3a36560ef8d9539bbef0d2e184574912609d27c7848d4f40666d</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-assembly-store/"><code>x86decomp.assembly.store</code></a></td>
+<td>toolkit</td>
+<td style="text-align: right;">3</td>
+<td><code>96cb5192fc4771babc1e194365c7e96c3f190eba2ebb1df844d385516175dcd3</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-benchmarks/"><code>x86decomp.benchmarks</code></a></td>
+<td>toolkit</td>
+<td style="text-align: right;">3</td>
+<td><code>b9b28fbcb2f38723b274e4150b1c3914ddcbceab1b49461fc5797a84f9e13fb3</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-canonical/"><code>x86decomp.canonical</code></a></td>
+<td>toolkit</td>
+<td style="text-align: right;">12</td>
+<td><code>b1332f464a179f2ac39698ea38b6cd7b0867d26bcccd3552e4f456c7d72bb9cb</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-cli/"><code>x86decomp.cli</code></a></td>
+<td>toolkit</td>
+<td style="text-align: right;">8</td>
+<td><code>21e0654ced2f5dd0588adcbedec328613fba524ff1e0a91ef07d63cbbf88288c</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-coff/"><code>x86decomp.coff</code></a></td>
+<td>toolkit</td>
+<td style="text-align: right;">53</td>
+<td><code>f6900af73b991d2ed380250c78d4a228ff6b10f45bd4bcf04fb449c45f13d28e</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-coff-archive/"><code>x86decomp.coff_archive</code></a></td>
+<td>toolkit</td>
+<td style="text-align: right;">11</td>
+<td><code>51cdfa71d8876054203d3f487c37ee12ece57e831abc8bca35e57112d4089584</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-compiler/"><code>x86decomp.compiler</code></a></td>
+<td>toolkit</td>
+<td style="text-align: right;">5</td>
+<td><code>f21f38f6ed0804a959188e31f5c9fa498d7d0740536fbb82594a375b12353944</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-compiler-lab/"><code>x86decomp.compiler_lab</code></a></td>
+<td>toolkit</td>
+<td style="text-align: right;">2</td>
+<td><code>05a54baba63c926190c0e2fb45bff09c6eb338ed6a479e6e47be210a6b1de859</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-compiler-worker/"><code>x86decomp.compiler_worker</code></a></td>
+<td>toolkit</td>
+<td style="text-align: right;">1</td>
+<td><code>d13aa472af6cfb824c896d7a32c9c99ff7a4fcf07019dbba5aa42beba7f82045</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-content-store/"><code>x86decomp.content_store</code></a></td>
+<td>toolkit</td>
+<td style="text-align: right;">15</td>
+<td><code>2348ce9593959da0a9f52b144435a70b30965443a06e701c0ff9cf7c86e7d1a4</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-contracts/"><code>x86decomp.contracts</code></a></td>
+<td>toolkit</td>
+<td style="text-align: right;">12</td>
+<td><code>59ed708757edb48209337ba38008c4522cd03106686c9b47b08da0b2a32e98ed</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-convergence/"><code>x86decomp.convergence</code></a></td>
+<td>toolkit</td>
+<td style="text-align: right;">3</td>
+<td><code>2b943e9c8c2399089e1b8c2815c0de4cb1bcf0468c09e64a647fef3508922f74</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-cpp-recovery/"><code>x86decomp.cpp_recovery</code></a></td>
+<td>toolkit</td>
+<td style="text-align: right;">3</td>
+<td><code>c1f07b15f8649be4235cb56bb2e8f953ed31211b98311633d6beccde38dce8fa</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-decompme/"><code>x86decomp.decompme</code></a></td>
+<td>toolkit</td>
+<td style="text-align: right;">2</td>
+<td><code>440f011b1a60d6a9549cd558927a158ce34f1377f699a58b922c696619172fe2</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-diffing/"><code>x86decomp.diffing</code></a></td>
+<td>toolkit</td>
+<td style="text-align: right;">2</td>
+<td><code>e981a093051ff6a0be9462256f6ea50c2784693c15b32df5144a1ca0374814e3</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-disassembly/"><code>x86decomp.disassembly</code></a></td>
+<td>toolkit</td>
+<td style="text-align: right;">7</td>
+<td><code>cc86a46f8c8674a6e14304158bd1d2467fb09ccbb00778c116204b0a639638b3</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-dynamic/"><code>x86decomp.dynamic</code></a></td>
+<td>toolkit</td>
+<td style="text-align: right;">9</td>
+<td><code>a09cbba16f498158cf30191397884f0a70051c767b778cd520ac229b6e85e451</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-dynamorio/"><code>x86decomp.dynamorio</code></a></td>
+<td>toolkit</td>
+<td style="text-align: right;">2</td>
+<td><code>8568a98326d91a775f2feec1847e8d3230c58253e1b015c3ee75dcb9b0d8b30d</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-errors/"><code>x86decomp.errors</code></a></td>
+<td>toolkit</td>
+<td style="text-align: right;">0</td>
+<td><code>5bb50a4d169960abdc486866d2e68c894d8c13da401361931d86991ff9f8030d</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-evidence/"><code>x86decomp.evidence</code></a></td>
+<td>toolkit</td>
+<td style="text-align: right;">12</td>
+<td><code>de8befd97c8e7f0529f7c3c2750836f8f38fab52e26987cf390d725faad3ee1e</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-exe-diff/"><code>x86decomp.exe_diff</code></a></td>
+<td>toolkit</td>
+<td style="text-align: right;">6</td>
+<td><code>997ffacbd833a3bb4c0545d1fb1981469e1d575680f4b39b7e6f34a4796abdf0</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-ghidra/"><code>x86decomp.ghidra</code></a></td>
+<td>toolkit</td>
+<td style="text-align: right;">2</td>
+<td><code>98657d48a9d3ebb79eaf951aa8676ffd7ca696c2ba2f07fe8a5c4f0ad622c2b3</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-governance/"><code>x86decomp.governance</code></a></td>
+<td>governance</td>
+<td style="text-align: right;">0</td>
+<td><code>a0483ba8e8314f9c9ba3a8387147195d183c6c7a47b067e2f6a92354f6612c00</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-governance-campaigns/"><code>x86decomp.governance.campaigns</code></a></td>
+<td>governance</td>
+<td style="text-align: right;">16</td>
+<td><code>0c43e0289c80013abf35c01f68f0214d968d3be681395621632a24e5d09dfd2a</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-governance-candidates/"><code>x86decomp.governance.candidates</code></a></td>
+<td>governance</td>
+<td style="text-align: right;">9</td>
+<td><code>45b278d396b79ffecc4cfdd61e42af7e2cd5776f0b76f4f3a6b856283be0f1df</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-governance-changesets/"><code>x86decomp.governance.changesets</code></a></td>
+<td>governance</td>
+<td style="text-align: right;">3</td>
+<td><code>b5fc108cbaa2b14f325deff21e849d49841c49550300221beefd8d489ac9fcee</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-governance-cli/"><code>x86decomp.governance.cli</code></a></td>
+<td>governance</td>
+<td style="text-align: right;">6</td>
+<td><code>51f9701c1bf5f614a77e752be88717713a52d067ed24cc87b063c0deab786a22</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-governance-consensus/"><code>x86decomp.governance.consensus</code></a></td>
+<td>governance</td>
+<td style="text-align: right;">6</td>
+<td><code>41c250face5e2cb3dd5a56c6e741d5cbebdc25e6e9f1531a25181d9d944a5eb3</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-governance-counterexamples/"><code>x86decomp.governance.counterexamples</code></a></td>
+<td>governance</td>
+<td style="text-align: right;">7</td>
+<td><code>2223bd0eec9a09b58739850670b5d3434dfce554a3578cbe2ab870e43e698096</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-governance-family/"><code>x86decomp.governance.family</code></a></td>
+<td>governance</td>
+<td style="text-align: right;">9</td>
+<td><code>be9c27b2174ab2e046fae2d9937d7df2b73353d738f794db9f923bc11c9ede7c</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-governance-hypotheses/"><code>x86decomp.governance.hypotheses</code></a></td>
+<td>governance</td>
+<td style="text-align: right;">12</td>
+<td><code>9b9601b00d885856a2311c6cf10fe62137eef992310ffd400cc0c84f7beff966</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-governance-knowledge-graph/"><code>x86decomp.governance.knowledge_graph</code></a></td>
+<td>governance</td>
+<td style="text-align: right;">5</td>
+<td><code>8ab4ed3fe2315a0a44f7ac646a7759127283a436807ed80bc01e865c6eb0cc33</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-governance-plugins/"><code>x86decomp.governance.plugins</code></a></td>
+<td>governance</td>
+<td style="text-align: right;">7</td>
+<td><code>1e339929f3ac6981f3338305eab797bc72ebcb5cf0b8717bbe3aef8a2df76ef7</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-governance-proofs/"><code>x86decomp.governance.proofs</code></a></td>
+<td>governance</td>
+<td style="text-align: right;">11</td>
+<td><code>653448b91bf2840cd8870699375bcecd252d9c0dc2901bf7bdac1f57aea95e09</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-governance-reviews/"><code>x86decomp.governance.reviews</code></a></td>
+<td>governance</td>
+<td style="text-align: right;">7</td>
+<td><code>ba9d5d2757485bdcfdb2ed1255287013fe710def654fcbc2cf8a6801fe25312f</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-governance-store/"><code>x86decomp.governance.store</code></a></td>
+<td>governance</td>
+<td style="text-align: right;">7</td>
+<td><code>b1a61e533f5983f7835f5cc033f6f37c03388bcf4f13fcce3bf0a8499ad62095</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-governance-workers/"><code>x86decomp.governance.workers</code></a></td>
+<td>governance</td>
+<td style="text-align: right;">7</td>
+<td><code>4538ea72a7fe80900916a18a6bbba5ac7a3617d1765b1b981691ebad10f4e656</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-ground-truth/"><code>x86decomp.ground_truth</code></a></td>
+<td>toolkit</td>
+<td style="text-align: right;">7</td>
+<td><code>9684fbcda0fd5060b3c1f2d0efb83892900c69190d33e24fd7e49f91885181e2</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-harness-generator/"><code>x86decomp.harness_generator</code></a></td>
+<td>toolkit</td>
+<td style="text-align: right;">3</td>
+<td><code>75ab6f14bcef35574409e280dad90a705f71bc5763d507258f705ad8f4c431f2</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-hybrid/"><code>x86decomp.hybrid</code></a></td>
+<td>toolkit</td>
+<td style="text-align: right;">2</td>
+<td><code>721221b69c86bd2e7152ea2f322c9b48d89a01891feb6906038509a1f4592e2f</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-image-match/"><code>x86decomp.image_match</code></a></td>
+<td>toolkit</td>
+<td style="text-align: right;">9</td>
+<td><code>a9c72f376532369da77440496a1ea07564da5071ef8e6108e29c58e33e96fcf4</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-integration/"><code>x86decomp.integration</code></a></td>
+<td>toolkit</td>
+<td style="text-align: right;">10</td>
+<td><code>cb8157c8210544e2ed4730e8bdb01f0a77dc9d05f683d43154cba1bf93c1e845</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-linker-layout/"><code>x86decomp.linker_layout</code></a></td>
+<td>toolkit</td>
+<td style="text-align: right;">8</td>
+<td><code>e212e73f09b9559f17e0251eba8260a50b52931091a4972a2deabc462cd68682</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-linker-reconstruction/"><code>x86decomp.linker_reconstruction</code></a></td>
+<td>toolkit</td>
+<td style="text-align: right;">2</td>
+<td><code>f67bc3077e7d54a9a32e542113cc28eadf00fa581c8e3d3c26e5c1b45a4e0900</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-local-llm/"><code>x86decomp.local_llm</code></a></td>
+<td>local-llm</td>
+<td style="text-align: right;">0</td>
+<td><code>471640b8f53e194e4f5f246699cfdabbfc5ba1ff818bed6d060e8348eaf09d25</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-local-llm-matching/"><code>x86decomp.local_llm.matching</code></a></td>
+<td>local-llm</td>
+<td style="text-align: right;">7</td>
+<td><code>349c75f943aaf119368d8eef401330917b1f0abb7fd9f3bc114ccd12ec3c26b5</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-local-llm-profiles/"><code>x86decomp.local_llm.profiles</code></a></td>
+<td>local-llm</td>
+<td style="text-align: right;">8</td>
+<td><code>5bce6554b8d5dbccd0a18c965bae92e82cc8517f7c86997621d662f3bcff1ca2</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-local-llm-prompts/"><code>x86decomp.local_llm.prompts</code></a></td>
+<td>local-llm</td>
+<td style="text-align: right;">7</td>
+<td><code>b1a06cda047e95e59b0b415753e88bca82d111e6898c056880d972ac89e270e7</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-local-llm-transport/"><code>x86decomp.local_llm.transport</code></a></td>
+<td>local-llm</td>
+<td style="text-align: right;">14</td>
+<td><code>65526331d46e71ae5625569b23e3312d9126d860ef1bd244135f21a47af25a3f</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-mcp/"><code>x86decomp.mcp</code></a></td>
+<td>toolkit</td>
+<td style="text-align: right;">23</td>
+<td><code>72627e41c628c756443bc5d57e38b583b1744923902735b55a3d6c9e29f6cca9</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-memory/"><code>x86decomp.memory</code></a></td>
+<td>toolkit</td>
+<td style="text-align: right;">6</td>
+<td><code>4fd6948418a67ffdd502b92649a5b18af16376b55272018305b59d5cddcad813</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-models/"><code>x86decomp.models</code></a></td>
+<td>toolkit</td>
+<td style="text-align: right;">2</td>
+<td><code>2afe3f05650301116d1f789854dd5406ea2af88b0bebb19df7a2f1667bf1bd0f</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-msvc-metadata/"><code>x86decomp.msvc_metadata</code></a></td>
+<td>toolkit</td>
+<td style="text-align: right;">34</td>
+<td><code>a09e12dd6d748ba39648bf05d885656080c1c03be63d8dde592e26cb36b72951</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-native/"><code>x86decomp.native</code></a></td>
+<td>native</td>
+<td style="text-align: right;">0</td>
+<td><code>c06bf6b79e240a8ec82b7084a6f50358b49e0c28084ed2cece59bd0f803dfb0d</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-native-cli/"><code>x86decomp.native.cli</code></a></td>
+<td>native</td>
+<td style="text-align: right;">6</td>
+<td><code>a639122052541c52dbafc2f3ae8e91e0b71d2b075f1b095220f404cb22a02fdd</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-native-closed-loop/"><code>x86decomp.native.closed_loop</code></a></td>
+<td>native</td>
+<td style="text-align: right;">4</td>
+<td><code>2928f6d9ecd646ec05c4cc204048ef0c303865b68e8ae45862aa81cfed3c758b</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-native-hybrid-composer/"><code>x86decomp.native.hybrid_composer</code></a></td>
+<td>native</td>
+<td style="text-align: right;">3</td>
+<td><code>e2cd31ef794c1910a4deb0a7260d88de3bb090bf153c7f77f740024f86a4cea0</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-native-matching/"><code>x86decomp.native.matching</code></a></td>
+<td>native</td>
+<td style="text-align: right;">7</td>
+<td><code>3d2d67bc09fd863ffb366310883c6869b10c04545e48edc75089b7317927478a</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-native-pe-reconstruction/"><code>x86decomp.native.pe_reconstruction</code></a></td>
+<td>native</td>
+<td style="text-align: right;">10</td>
+<td><code>32c4ba5082d59f88439efe2af68c26f8820aaa82d6f551d506a0d7c63b517558</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-native-runtime/"><code>x86decomp.native.runtime</code></a></td>
+<td>native</td>
+<td style="text-align: right;">5</td>
+<td><code>42a582f61d69ef1bc07096d003f19db4c0598d7386be494c124cf4272b1aa854</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-native-slots/"><code>x86decomp.native.slots</code></a></td>
+<td>native</td>
+<td style="text-align: right;">8</td>
+<td><code>e0f7164fa040306cab458e4dfe811590375a3a49023de7a33736e07b44032d2c</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-native-staging/"><code>x86decomp.native.staging</code></a></td>
+<td>native</td>
+<td style="text-align: right;">6</td>
+<td><code>0038cab527aaac36dc4ba8ea02eb526b2683f5329a03c4002673091f622239a1</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-native-store/"><code>x86decomp.native.store</code></a></td>
+<td>native</td>
+<td style="text-align: right;">3</td>
+<td><code>671c60ac24b3e13df3e82405778f32f50ec4b9ef48a77a47d7e2fdd5c70c7045</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-native-windows-tools/"><code>x86decomp.native.windows_tools</code></a></td>
+<td>native</td>
+<td style="text-align: right;">4</td>
+<td><code>0de581d6f2316540f99e7daf3d64fbd925e1998f786b3099488d766ed71bb2c0</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-objdiff-adapter/"><code>x86decomp.objdiff_adapter</code></a></td>
+<td>toolkit</td>
+<td style="text-align: right;">2</td>
+<td><code>d312150b8b06b0e9b1656df7dab0a10e0e4a4db6047a4e83663875387b3851c1</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-orchestrator/"><code>x86decomp.orchestrator</code></a></td>
+<td>toolkit</td>
+<td style="text-align: right;">22</td>
+<td><code>752a6e6b5d4f931007e93ee7898f6a0d2500b044266c7153a27be7e7eb49477e</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-patching/"><code>x86decomp.patching</code></a></td>
+<td>toolkit</td>
+<td style="text-align: right;">3</td>
+<td><code>61b9d802fc2c9c89f06877876f72efb7fc16d3a1fb283dddfd561dfd4fe61741</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-pdb/"><code>x86decomp.pdb</code></a></td>
+<td>toolkit</td>
+<td style="text-align: right;">21</td>
+<td><code>0ad9c99f6a1b232ce33268d35097ea6b44343d65052339c701588bf4efa79690</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-pe/"><code>x86decomp.pe</code></a></td>
+<td>toolkit</td>
+<td style="text-align: right;">12</td>
+<td><code>39a5dd1b26da8d0ef84e8ff247183068eb4943ab38211df3c56c43ca9a6911c0</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-pe32/"><code>x86decomp.pe32</code></a></td>
+<td>toolkit</td>
+<td style="text-align: right;">32</td>
+<td><code>746651d78b0b8401565dd22e99f73c8c902b13400fd80094d4675ab52c8c4be5</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-project/"><code>x86decomp.project</code></a></td>
+<td>toolkit</td>
+<td style="text-align: right;">4</td>
+<td><code>d8438bae734b4ecba8d0b7e8675a2e470fad4ca114815e2925a492a9a5f9f3a7</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-project-state/"><code>x86decomp.project_state</code></a></td>
+<td>toolkit</td>
+<td style="text-align: right;">19</td>
+<td><code>703c7418398cb445f9d235035fa8b3d6760fa3297064df3efc2032be2ce907a5</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-project-template/"><code>x86decomp.project_template</code></a></td>
+<td>toolkit</td>
+<td style="text-align: right;">4</td>
+<td><code>2a70050138d13bf73d963a6cb49d404b39c2d12dbc00298e7e1a79999d076f8f</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-reconstruction/"><code>x86decomp.reconstruction</code></a></td>
+<td>reconstruction</td>
+<td style="text-align: right;">0</td>
+<td><code>52313d0bee948e0909b7dbad630958a9631187f643927aa9b604acf3184599c8</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-reconstruction-abi-contracts/"><code>x86decomp.reconstruction.abi_contracts</code></a></td>
+<td>reconstruction</td>
+<td style="text-align: right;">7</td>
+<td><code>3a604b7e2a1519a524942ec0aa4cc06fa2281bea86cba2b2a29136ba04ab5bf0</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-reconstruction-acceleration/"><code>x86decomp.reconstruction.acceleration</code></a></td>
+<td>reconstruction</td>
+<td style="text-align: right;">26</td>
+<td><code>70c326f9345cc492ce22bdea42b68fd76b9646eb4705361d6c2fcefb59fa93d4</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-reconstruction-builds/"><code>x86decomp.reconstruction.builds</code></a></td>
+<td>reconstruction</td>
+<td style="text-align: right;">11</td>
+<td><code>cc0c119f77dc35f44d4db13cde294dc38220b817f3df84e42f34bf792b181df5</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-reconstruction-capsules/"><code>x86decomp.reconstruction.capsules</code></a></td>
+<td>reconstruction</td>
+<td style="text-align: right;">5</td>
+<td><code>90149444f28c2caad63d49446b4dbf2bffb06a36457672385d03a7775e5c9403</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-reconstruction-cli/"><code>x86decomp.reconstruction.cli</code></a></td>
+<td>reconstruction</td>
+<td style="text-align: right;">6</td>
+<td><code>144b02d5104fbbc12140cab2e8e0d6d2f2b46dcc1815b4425c71c3da3262c23c</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-reconstruction-generated-tests/"><code>x86decomp.reconstruction.generated_tests</code></a></td>
+<td>reconstruction</td>
+<td style="text-align: right;">7</td>
+<td><code>6822bf7dc5d508d8ee684f2a6c1f5eb0e141ef86dbb2c580c320561d2b760aaf</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-reconstruction-headers/"><code>x86decomp.reconstruction.headers</code></a></td>
+<td>reconstruction</td>
+<td style="text-align: right;">8</td>
+<td><code>438c0233df3581b7634dd878b01f5b32f6918d7dac836115ad7bc1c0c50fdacc</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-reconstruction-libraries/"><code>x86decomp.reconstruction.libraries</code></a></td>
+<td>reconstruction</td>
+<td style="text-align: right;">5</td>
+<td><code>4892d5e00011085e4befce6cff5a24c9d065c6647933acd4dcb4618a3f514152</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-reconstruction-project-layout/"><code>x86decomp.reconstruction.project_layout</code></a></td>
+<td>reconstruction</td>
+<td style="text-align: right;">11</td>
+<td><code>c56585dbc14339e024cf8fa5d4e4f31f06d7bce0a238b67212a3278a9282f4e7</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-reconstruction-provenance/"><code>x86decomp.reconstruction.provenance</code></a></td>
+<td>reconstruction</td>
+<td style="text-align: right;">10</td>
+<td><code>03790dbcf2863491fa3c28e4cb96013dc73be03b87a038fcc367a6f27933f9e3</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-reconstruction-security/"><code>x86decomp.reconstruction.security</code></a></td>
+<td>reconstruction</td>
+<td style="text-align: right;">6</td>
+<td><code>0959bd8e9edb807a04058a9b81857c096e9c91ffb6f8591a885d56ae048760ba</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-reconstruction-semantic-changesets/"><code>x86decomp.reconstruction.semantic_changesets</code></a></td>
+<td>reconstruction</td>
+<td style="text-align: right;">8</td>
+<td><code>4342cc6206f76716dcc2007d36fd18ed0aff99cd7ebb562ef544adeeb8a537f3</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-reconstruction-store/"><code>x86decomp.reconstruction.store</code></a></td>
+<td>reconstruction</td>
+<td style="text-align: right;">3</td>
+<td><code>b752b685a6cefaa8a84e0bbd30d7af1c0534d99fda8e75e9d159c67a64013f3c</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-release-gate/"><code>x86decomp.release_gate</code></a></td>
+<td>toolkit</td>
+<td style="text-align: right;">4</td>
+<td><code>8e79be8c5af67a90063af185b2239a5ce5a8ca828627ee05c14d897f891e02fd</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-relink/"><code>x86decomp.relink</code></a></td>
+<td>toolkit</td>
+<td style="text-align: right;">1</td>
+<td><code>d401db042d4cc8300ccd4babd28cea400dca824d187a7caf0a1f3ead407fb296</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-reproducibility/"><code>x86decomp.reproducibility</code></a></td>
+<td>toolkit</td>
+<td style="text-align: right;">3</td>
+<td><code>bcc5e2a773d7eb7589f28df90c0fe898155788b8e695d15e363e6dbad249ae7b</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-security-audit/"><code>x86decomp.security_audit</code></a></td>
+<td>toolkit</td>
+<td style="text-align: right;">5</td>
+<td><code>18e0b9817529502f41c381e217190e21438f7bb57b6679d5635267bde0d98b1f</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-service/"><code>x86decomp.service</code></a></td>
+<td>toolkit</td>
+<td style="text-align: right;">4</td>
+<td><code>ef74988c5b19f8d2925ea07fb75a6cb3bea4304348bc9419e82f9ffddbd19584</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-symbolic/"><code>x86decomp.symbolic</code></a></td>
+<td>toolkit</td>
+<td style="text-align: right;">24</td>
+<td><code>93d98f6e85a01a107881131821d5eb04875d310795c4f173448918c5a96fdcd3</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-synthetic-corpus/"><code>x86decomp.synthetic_corpus</code></a></td>
+<td>toolkit</td>
+<td style="text-align: right;">15</td>
+<td><code>a0475235f70093de7171e32cbde918a9290569245efaa06f8549cd1ad480ece0</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-target-pack/"><code>x86decomp.target_pack</code></a></td>
+<td>toolkit</td>
+<td style="text-align: right;">8</td>
+<td><code>18b4fa2ef39b61edd4c9ecc47d543ed6107395e841d81f9191d447dcaa5edb1d</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-test-bundle/"><code>x86decomp.test_bundle</code></a></td>
+<td>toolkit</td>
+<td style="text-align: right;">8</td>
+<td><code>7b65953eff2b3ba85cc543e11a8ab007f85565e85fe29e73e12db9eb099efc31</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-toolchains/"><code>x86decomp.toolchains</code></a></td>
+<td>toolkit</td>
+<td style="text-align: right;">2</td>
+<td><code>9dde5962b67d30fec64266313f5488a4e5501de9db26605d4719cbe276cde03f</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-tools/"><code>x86decomp.tools</code></a></td>
+<td>toolkit</td>
+<td style="text-align: right;">3</td>
+<td><code>8e068c2ef41fb99fd53f45b28808fd2bf3366978bffc6ba22e46207497f08f34</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-util/"><code>x86decomp.util</code></a></td>
+<td>toolkit</td>
+<td style="text-align: right;">13</td>
+<td><code>f38c92cec5d269f8597282a84f5cfb76dd9e952cedb3606be592e8f5f89d8fe1</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-work-queue/"><code>x86decomp.work_queue</code></a></td>
+<td>toolkit</td>
+<td style="text-align: right;">8</td>
+<td><code>b1392399ca7536f6f1c1a78b16b62b61f7b70a744d2a529860e03d3371377c6e</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-worker/"><code>x86decomp.worker</code></a></td>
+<td>toolkit</td>
+<td style="text-align: right;">8</td>
+<td><code>811287668595febda7c8a186d83e1683ad7c58fcc44259efe7271bf5d7b8249c</code></td>
+</tr>
+<tr>
+<td><a href="x86decomp-workflow/"><code>x86decomp.workflow</code></a></td>
+<td>toolkit</td>
+<td style="text-align: right;">7</td>
+<td><code>cae8a093f08f66f9412393e59867c4d32ca7caf88533a175d22eebe1f325c0a5</code></td>
+</tr>
+</tbody>
+</table></p>
+    </article>
+</section>
+            <!-- endblock -->
+
+            <!-- block footer -->
+                <footer>
+    <div class="d-flex flex-sm-row justify-content-between py-2 border-top drac-text-black drac-bg-cyan-green">
+        <a href="https://github.com/dracula/mkdocs" target="_blank" style="padding-left: 1%;"
+            class="footer-text drac-anchor drac-text-black drac-text-purple--hover">
+            Made with Dracula Theme for MkDocs
+        </a>
+    </div>
+</footer>
+            <!-- endblock -->
+        </div>
+
+    </main>
+
+        <script>var base_url = '..';</script>
+        <script src="../assets/js/jquery-3.3.1.slim.min.js"></script>
+        <script src="../assets/js/bootstrap.bundle.min.js"></script>
+        <script src="../assets/js/mkdocs.js"></script>
+			<script src="../search/main.js" defer></script>
+
+</body>
+
+</html>

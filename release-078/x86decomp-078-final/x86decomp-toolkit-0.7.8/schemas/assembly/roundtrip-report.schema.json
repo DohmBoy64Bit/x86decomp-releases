@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://x86decomp.local/schemas/assembly/roundtrip-report.schema.json",
+  "title": "v0.7.8 mnemonic round-trip report",
+  "type": "object",
+  "required": ["source", "object", "symbol", "rva", "architecture", "input_sha256", "resolved_sha256", "exact_match", "classification"],
+  "properties": {
+    "source": {"type": "string", "minLength": 1},
+    "object": {"type": "string", "minLength": 1},
+    "symbol": {"type": "string", "minLength": 1},
+    "rva": {"type": "integer", "minimum": 0},
+    "architecture": {"enum": ["x86", "x86_64"]},
+    "input_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "resolved_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "exact_match": {"type": "boolean"},
+    "classification": {"enum": ["exact", "mismatch"]},
+    "semantic_equivalence_claimed": {"const": false}
+  },
+  "additionalProperties": true
+}

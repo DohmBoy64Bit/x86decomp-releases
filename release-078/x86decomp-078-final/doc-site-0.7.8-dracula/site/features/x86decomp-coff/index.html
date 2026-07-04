@@ -1,0 +1,669 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+        <title>x86decomp.coff - x86decomp 0.7.8 Docs</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        
+        
+        
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="../../assets/css/darcula-highlight.min.css">
+
+        <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../assets/css/dracula-ui.min.css">
+        <link rel="stylesheet" href="../../assets/css/mkdocs.min.css">
+            <link href="../../assets/x86decomp-dracula-overrides.css" rel="stylesheet">
+
+        
+            <link  rel="icon" type="image/x-icon" href="../../assets/img/favicon.ico">
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+                <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+
+<body class="drac-bg-black-secondary drac-text-grey-ternary drac-text drac-scrollbar-purple">
+
+    <main class="d-flex">
+
+        <!-- block sidebar -->
+            <nav id="sidebar" class="sidebar drac-bg-black">
+    <div class="custom-menu">
+        <button type="button" id="sidebarCollapse" class="btn btn-primary">
+            <i class="fa fa-bars"></i>
+            <span class="sr-only">Menu</span>
+        </button>
+    </div>
+
+    <div class="p-4">
+        
+
+        <div class="drac-text-center">
+            
+                <span class="drac-text drac-line-height drac-text-white">x86decomp 0.7.8 Docs</span>
+            
+        </div>
+
+        <div class="drac-box flex-column">
+            <ul class="dot-ul">
+                <li><div class="dot-li drac-bg-cyan"></div></li>
+                <li><div class="dot-li drac-bg-green"></div></li>
+                <li><div class="dot-li drac-bg-orange"></div></li>
+                <li><div class="dot-li drac-bg-pink"></div></li>
+                <li><div class="dot-li drac-bg-purple"></div></li>
+                <li><div class="dot-li drac-bg-red"></div></li>
+                <li><div class="dot-li drac-bg-yellow"></div></li>
+            </ul>
+        </div>
+
+        <hr class="drac-divider" />
+
+        <!-- block menu -->
+        <ul class="mb-5 drac-list drac-list-none">
+            
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Home
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../../getting-started/"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Getting Started
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#workflows-collapse" aria-expanded="false">
+                    Workflows
+                </a>
+                <div class="collapse" id="workflows-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../workflows/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Workflow Guide
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../local-llm/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Local LLM C Generation
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../decompilation-acceleration/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Decompilation Acceleration
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../project-examples/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Project Examples
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#reference-collapse" aria-expanded="false">
+                    Reference
+                </a>
+                <div class="collapse" id="reference-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../reference/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../architecture/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Architecture
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../commands/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Commands
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../schemas/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Schemas
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../integrations/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Integrations
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Source Modules
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../functions/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Function Index
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../tests/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Tests
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#release-evidence-collapse" aria-expanded="false">
+                    Release Evidence
+                </a>
+                <div class="collapse" id="release-evidence-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../release-evidence/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../verification/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Verification
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../source-coverage/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Source Coverage
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../changelog/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Changelog
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../about/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            About
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <!-- endblock -->
+    </div>
+</nav>
+        <!-- endblock -->
+
+        <nav class="divider drac-bg-purple-cyan"></nav>
+
+        <div class="content">
+            <!-- block header -->
+                <header>
+    <nav class="navbar navbar-expand-xl drac-bg-purple">
+        <div class="container-fluid">
+            
+            <button class="navbar-toggler w-100 text-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMenu"
+                aria-controls="navbarsMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse flex-column ml-auto" id="navbarsMenu">
+                <ul class="navbar-nav text-md-center">
+
+                    <!-- block preview -->
+                    <li class="nav-item">
+                            
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block search -->
+                    <li class="nav-item"><div role="search" class="search-box">
+	<form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+		<input type="text" name="q" class="drac-input drac-input-search drac-input-white drac-text-white drac-bg-black-secondary"
+		placeholder="Search docs" title="Type search term here" />
+	</form>
+</div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block source -->
+                    <li class="nav-item">
+                        
+                    </li>
+                    <!--  endblock -->
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+</header>
+            <!-- endblock -->
+
+            <!-- block content -->
+                <section class="p-md-5 section-content">
+    <article>
+        <p><h1 id="x86decompcoff"><code>x86decomp.coff</code></h1>
+<p><strong>Source path:</strong> <code>src/x86decomp/coff.py</code><br />
+<strong>SHA-256:</strong> <code>f6900af73b991d2ed380250c78d4a228ff6b10f45bd4bcf04fb449c45f13d28e</code></p>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Kind</th>
+<th style="text-align: right;">Line</th>
+<th>Body lines</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>relocation_name</code></td>
+<td>function</td>
+<td style="text-align: right;">127</td>
+<td>128, 129</td>
+</tr>
+<tr>
+<td><code>relocation_width</code></td>
+<td>function</td>
+<td style="text-align: right;">132</td>
+<td>133, 134</td>
+</tr>
+<tr>
+<td><code>relocation_is_pc_relative</code></td>
+<td>function</td>
+<td style="text-align: right;">137</td>
+<td>138, 140</td>
+</tr>
+<tr>
+<td><code>CoffRelocation.width</code></td>
+<td>method</td>
+<td style="text-align: right;">151</td>
+<td>152</td>
+</tr>
+<tr>
+<td><code>CoffRelocation.to_dict</code></td>
+<td>method</td>
+<td style="text-align: right;">154</td>
+<td>155</td>
+</tr>
+<tr>
+<td><code>SectionDefinitionAux.selection_name</code></td>
+<td>method</td>
+<td style="text-align: right;">178</td>
+<td>179</td>
+</tr>
+<tr>
+<td><code>SectionDefinitionAux.to_dict</code></td>
+<td>method</td>
+<td style="text-align: right;">181</td>
+<td>182</td>
+</tr>
+<tr>
+<td><code>FunctionDefinitionAux.to_dict</code></td>
+<td>method</td>
+<td style="text-align: right;">202</td>
+<td>203</td>
+</tr>
+<tr>
+<td><code>WeakExternalAux.to_dict</code></td>
+<td>method</td>
+<td style="text-align: right;">217</td>
+<td>218, 219</td>
+</tr>
+<tr>
+<td><code>FileAux.to_dict</code></td>
+<td>method</td>
+<td style="text-align: right;">231</td>
+<td>232</td>
+</tr>
+<tr>
+<td><code>RawAux.to_dict</code></td>
+<td>method</td>
+<td style="text-align: right;">239</td>
+<td>240</td>
+</tr>
+<tr>
+<td><code>CoffSection.is_comdat</code></td>
+<td>method</td>
+<td style="text-align: right;">263</td>
+<td>264</td>
+</tr>
+<tr>
+<td><code>CoffSection.comdat_selection_name</code></td>
+<td>method</td>
+<td style="text-align: right;">267</td>
+<td>268</td>
+</tr>
+<tr>
+<td><code>CoffSection.alignment_power</code></td>
+<td>method</td>
+<td style="text-align: right;">271</td>
+<td>272, 273, 275, 277</td>
+</tr>
+<tr>
+<td><code>CoffSection.alignment</code></td>
+<td>method</td>
+<td style="text-align: right;">280</td>
+<td>281, 282</td>
+</tr>
+<tr>
+<td><code>CoffSection.to_dict</code></td>
+<td>method</td>
+<td style="text-align: right;">284</td>
+<td>285</td>
+</tr>
+<tr>
+<td><code>CoffSymbol.is_function</code></td>
+<td>method</td>
+<td style="text-align: right;">320</td>
+<td>321</td>
+</tr>
+<tr>
+<td><code>CoffSymbol.section_definition</code></td>
+<td>method</td>
+<td style="text-align: right;">326</td>
+<td>327</td>
+</tr>
+<tr>
+<td><code>CoffSymbol.function_definition</code></td>
+<td>method</td>
+<td style="text-align: right;">333</td>
+<td>334</td>
+</tr>
+<tr>
+<td><code>CoffSymbol.weak_external</code></td>
+<td>method</td>
+<td style="text-align: right;">340</td>
+<td>341</td>
+</tr>
+<tr>
+<td><code>CoffSymbol.to_dict</code></td>
+<td>method</td>
+<td style="text-align: right;">346</td>
+<td>347</td>
+</tr>
+<tr>
+<td><code>CoffObject.architecture</code></td>
+<td>method</td>
+<td style="text-align: right;">373</td>
+<td>374, 376, 378</td>
+</tr>
+<tr>
+<td><code>CoffObject.section</code></td>
+<td>method</td>
+<td style="text-align: right;">380</td>
+<td>381, 383</td>
+</tr>
+<tr>
+<td><code>CoffObject.find_symbols</code></td>
+<td>method</td>
+<td style="text-align: right;">385</td>
+<td>386, 387, 389</td>
+</tr>
+<tr>
+<td><code>CoffObject.symbol_by_index</code></td>
+<td>method</td>
+<td style="text-align: right;">391</td>
+<td>392</td>
+</tr>
+<tr>
+<td><code>CoffObject.to_dict</code></td>
+<td>method</td>
+<td style="text-align: right;">394</td>
+<td>395</td>
+</tr>
+<tr>
+<td><code>ExtractedSymbol.to_dict</code></td>
+<td>method</td>
+<td style="text-align: right;">420</td>
+<td>421</td>
+</tr>
+<tr>
+<td><code>ComdatCandidate.to_dict</code></td>
+<td>method</td>
+<td style="text-align: right;">443</td>
+<td>444</td>
+</tr>
+<tr>
+<td><code>ComdatResolution.valid</code></td>
+<td>method</td>
+<td style="text-align: right;">465</td>
+<td>466</td>
+</tr>
+<tr>
+<td><code>ComdatResolution.to_dict</code></td>
+<td>method</td>
+<td style="text-align: right;">468</td>
+<td>469</td>
+</tr>
+<tr>
+<td><code>_Reader.__init__</code></td>
+<td>method</td>
+<td style="text-align: right;">501</td>
+<td>502</td>
+</tr>
+<tr>
+<td><code>_Reader.require</code></td>
+<td>method</td>
+<td style="text-align: right;">504</td>
+<td>505</td>
+</tr>
+<tr>
+<td><code>_Reader.unpack</code></td>
+<td>method</td>
+<td style="text-align: right;">510</td>
+<td>511, 512, 513</td>
+</tr>
+<tr>
+<td><code>_read_string_table</code></td>
+<td>function</td>
+<td style="text-align: right;">516</td>
+<td>519, 520, 522, 523, 524, 526, 527</td>
+</tr>
+<tr>
+<td><code>_string_at</code></td>
+<td>function</td>
+<td style="text-align: right;">530</td>
+<td>531, 533, 534, 536</td>
+</tr>
+<tr>
+<td><code>_decode_symbol_name</code></td>
+<td>function</td>
+<td style="text-align: right;">539</td>
+<td>540, 543</td>
+</tr>
+<tr>
+<td><code>_decode_section_name</code></td>
+<td>function</td>
+<td style="text-align: right;">546</td>
+<td>547, 548, 550</td>
+</tr>
+<tr>
+<td><code>_parse_header</code></td>
+<td>function</td>
+<td style="text-align: right;">553</td>
+<td>557, 558, 559, 589, 592, 594</td>
+</tr>
+<tr>
+<td><code>_parse_auxiliary_records</code></td>
+<td>function</td>
+<td style="text-align: right;">607</td>
+<td>616, 618, 621, 622, 645, 651, 662</td>
+</tr>
+<tr>
+<td><code>_read_addend</code></td>
+<td>function</td>
+<td style="text-align: right;">665</td>
+<td>666, 668</td>
+</tr>
+<tr>
+<td><code>parse_coff_bytes</code></td>
+<td>function</td>
+<td style="text-align: right;">671</td>
+<td>672, 673, 684, 686, 688, 689, 691, 697, 698, 748, 749, 750…</td>
+</tr>
+<tr>
+<td><code>parse_coff</code></td>
+<td>function</td>
+<td style="text-align: right;">869</td>
+<td>870, 871, 873</td>
+</tr>
+<tr>
+<td><code>extract_symbol</code></td>
+<td>function</td>
+<td style="text-align: right;">876</td>
+<td>877, 878, 881, 889, 890, 891, 893, 908, 910, 921</td>
+</tr>
+<tr>
+<td><code>collect_comdat_candidates</code></td>
+<td>function</td>
+<td style="text-align: right;">931</td>
+<td>932, 933, 955</td>
+</tr>
+<tr>
+<td><code>resolve_comdats</code></td>
+<td>function</td>
+<td style="text-align: right;">958</td>
+<td>965, 966, 967, 968, 973, 974, 975, 976, 978, 1045, 1052</td>
+</tr>
+<tr>
+<td><code>_encode_name</code></td>
+<td>function</td>
+<td style="text-align: right;">1059</td>
+<td>1060, 1061, 1063, 1064, 1065</td>
+</tr>
+<tr>
+<td><code>_section_aux_bytes</code></td>
+<td>function</td>
+<td style="text-align: right;">1068</td>
+<td>1071</td>
+</tr>
+<tr>
+<td><code>build_synthetic_coff_object</code></td>
+<td>function</td>
+<td style="text-align: right;">1084</td>
+<td>1097, 1099, 1101, 1103, 1114, 1124, 1125, 1126, 1128, 1129, 1130, 1131…</td>
+</tr>
+<tr>
+<td><code>synthetic_symbol_indices</code></td>
+<td>function</td>
+<td style="text-align: right;">1201</td>
+<td>1202, 1203, 1204, 1209</td>
+</tr>
+<tr>
+<td><code>build_synthetic_coff</code></td>
+<td>function</td>
+<td style="text-align: right;">1212</td>
+<td>1221, 1223, 1225, 1226, 1229</td>
+</tr>
+<tr>
+<td><code>build_comdat_coff</code></td>
+<td>function</td>
+<td style="text-align: right;">1252</td>
+<td>1264, 1266, 1267, 1275, 1285</td>
+</tr>
+<tr>
+<td><code>write_synthetic_coff</code></td>
+<td>function</td>
+<td style="text-align: right;">1317</td>
+<td>1325, 1328, 1329, 1330, 1331</td>
+</tr>
+<tr>
+<td><code>write_synthetic_coff_object</code></td>
+<td>function</td>
+<td style="text-align: right;">1334</td>
+<td>1342, 1345, 1346, 1347</td>
+</tr>
+</tbody>
+</table></p>
+    </article>
+</section>
+            <!-- endblock -->
+
+            <!-- block footer -->
+                <footer>
+    <div class="d-flex flex-sm-row justify-content-between py-2 border-top drac-text-black drac-bg-cyan-green">
+        <a href="https://github.com/dracula/mkdocs" target="_blank" style="padding-left: 1%;"
+            class="footer-text drac-anchor drac-text-black drac-text-purple--hover">
+            Made with Dracula Theme for MkDocs
+        </a>
+    </div>
+</footer>
+            <!-- endblock -->
+        </div>
+
+    </main>
+
+        <script>var base_url = '../..';</script>
+        <script src="../../assets/js/jquery-3.3.1.slim.min.js"></script>
+        <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+        <script src="../../assets/js/mkdocs.js"></script>
+			<script src="../../search/main.js" defer></script>
+
+</body>
+
+</html>

@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "require_workflows": true,
+  "require_verified_claims": true,
+  "require_succeeded_pipelines": true,
+  "require_reproduction_manifest": true,
+  "require_security_report": true,
+  "require_whole_image_convergence": false,
+  "truth_scope": "Passing this policy demonstrates only the declared bounded release contracts; it does not prove original-source recovery or universal semantic equivalence."
+}
