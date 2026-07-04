@@ -99,9 +99,9 @@ This ledger is regenerated from the 0.7.8 source tree. Each listed digest is a f
 | --- | --- |
 | `src/x86decomp/cli.py` | `21e0654ced2f5dd0588adcbedec328613fba524ff1e0a91ef07d63cbbf88288c` |
 | `src/x86decomp/reproducibility.py` | `bcc5e2a773d7eb7589f28df90c0fe898155788b8e695d15e363e6dbad249ae7b` |
-| `src/x86decomp/security_audit.py` | `6131424e2b3443bd0e6af244fdcf2418a36ea752afa838a124d5e98bedd913d5` |
+| `src/x86decomp/security_audit.py` | `0b7574a71e4c8677352766c9358f8022871e566f43a9277050b887648f4ab22c` |
 | `src/x86decomp/release_gate.py` | `8e79be8c5af67a90063af185b2239a5ce5a8ca828627ee05c14d897f891e02fd` |
-| `src/x86decomp/project_state.py` | `2c866a3ccaddff98f1d9342a1eb5397d3dc2bd6d77e4b95c7dd07a8d2e02610f` |
+| `src/x86decomp/project_state.py` | `e78c286125050d9b582e38acdefcf3c901f0634372af8b287942ca8b10aa9aee` |
 | `tests/test_production.py` | `da0d4bd57f7f4bb68957fa8aa42a67f7eb34347f35137849e360dc95e796db89` |
 
 ## `benchmark-validation-corpus.md`
@@ -121,8 +121,17 @@ This ledger is regenerated from the 0.7.8 source tree. Each listed digest is a f
 | Source | SHA-256 |
 | --- | --- |
 | `src/x86decomp/cli.py` | `21e0654ced2f5dd0588adcbedec328613fba524ff1e0a91ef07d63cbbf88288c` |
-| `src/x86decomp/project_state.py` | `2c866a3ccaddff98f1d9342a1eb5397d3dc2bd6d77e4b95c7dd07a8d2e02610f` |
+| `src/x86decomp/project_state.py` | `e78c286125050d9b582e38acdefcf3c901f0634372af8b287942ca8b10aa9aee` |
 | `src/x86decomp/orchestrator.py` | `752a6e6b5d4f931007e93ee7898f6a0d2500b044266c7153a27be7e7eb49477e` |
 | `src/x86decomp/content_store.py` | `2348ce9593959da0a9f52b144435a70b30965443a06e701c0ff9cf7c86e7d1a4` |
-| `src/x86decomp/security_audit.py` | `6131424e2b3443bd0e6af244fdcf2418a36ea752afa838a124d5e98bedd913d5` |
+| `src/x86decomp/security_audit.py` | `0b7574a71e4c8677352766c9358f8022871e566f43a9277050b887648f4ab22c` |
 | `tests/test_project.py` | `04d73c197e4b7979731c140bef24e36ab323099e715d5462c95983a83d558c2b` |
+
+## `text-swap-project.md`
+
+| Source | SHA-256 |
+| --- | --- |
+| `src/x86decomp/cli.py` | `21e0654ced2f5dd0588adcbedec328613fba524ff1e0a91ef07d63cbbf88288c` |
+| `src/x86decomp/reconstruction/cli.py` | `dd5a6c7c987b3c49a3f7c1c635d60b34542e21f9346bd85f869013532c844cc4` |
+| `src/x86decomp/reconstruction/acceleration.py` | `acada93918527df17da324b8697e7e5f6f6259238790526d8b6daecaa26ae396` |
+| `tests/reconstruction/test_real_project_acceleration.py` | `449179fbd7c73f7f94d43957ee29a77d52c3473f35e0f8e43f370ea5dcd1c8d1` |

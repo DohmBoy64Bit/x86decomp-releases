@@ -353,7 +353,7 @@ x86decomp toolchain-verify config/toolchains.json gcc-13-x86
 <p>Registration hashes referenced executables and records their roles. Proprietary or external toolchain binaries are not copied into the project. Verification detects identity drift.</p>
 <p>2</p>
 <h2 id="use-a-complete-compiler-profile">Use a complete compiler profile</h2>
-<p>The bundled <code>examples/compiler-profiles/gcc-i686-object.json</code> demonstrates the schema with source/output placeholders, timeout, environment policy, family, version label, and version probe. It intentionally produces a 32-bit ELF relocatable object, so do not use it as a COFF matching profile without changing the actual compiler contract.</p>
+<p>The bundled <code>examples/compiler-profiles/gcc-i686-object.json</code> demonstrates the schema with source/output substitution tokens, timeout, environment policy, family, version label, and version probe. It intentionally produces a 32-bit ELF relocatable object, so do not use it as a COFF matching profile without changing the actual compiler contract.</p>
 <pre><code>{
   &quot;schema_version&quot;: 2,
   &quot;id&quot;: &quot;gcc-i686-c-object-o2&quot;,

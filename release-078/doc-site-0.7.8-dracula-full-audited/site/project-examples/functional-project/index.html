@@ -386,7 +386,7 @@ x86decomp abi-check build/sub_00401230.bin contracts/sub_00401230-abi.json --bas
 <p>Compilation and ABI compatibility are prerequisites for meaningful behavior comparisons. They do not establish equivalent outputs, memory effects, calls, or failure behavior.</p>
 <p>3</p>
 <h2 id="run-bounded-concrete-differential-execution">Run bounded concrete differential execution</h2>
-<pre><code>x86decomp dynamic-validate target/sub_00401230.bin build/sub_00401230.bin harnesses/sub_00401230.json --target-base $targetBase --candidate-base 0 --report reports/dynamic/sub_00401230.json
+<pre><code>x86decomp dynamic-validate target/sub_00401230.bin build/sub_00401230.bin harnesses/sub_00401230.json --target-base 0x401230 --candidate-base 0 --report reports/dynamic/sub_00401230.json
 </code></pre>
 <p>The Unicorn-backed validator compares the observations declared by the harness under its initial register, stack, memory, stub, timeout, and instruction bounds. The key report claim is equivalence for that harness—not semantic equivalence for every input or a complete Windows process model.</p>
 <p>4</p>

@@ -389,6 +389,8 @@ x86decomp memory-add project --actor analyst --category integration --summary &q
 <li>A valid PE checksum is not a code-signature replacement and does not establish trust.</li>
 <li>A passing integration scenario is bounded to its declared observations.</li>
 </ul>
+<h2 id="bounded-claims">Bounded claims</h2>
+<p>A successful patch-image workflow can claim only that a copied PE was modified at the declared RVA by exactly the candidate byte length after the provided input hashes were checked, and that the resulting reports passed their stated bounded validations. It cannot claim full relink validation, all-function matching, source recovery, or complete program behavior.</p>
 <h2 id="v078-source-basis">v0.7.8 source basis</h2>
 <blockquote>
 <p><strong>Verification model.</strong> Command syntax is checked against the live parser. The source files below are hashed from the current release; implementation and test rows are retained as independent truth boundaries.</p>

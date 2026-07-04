@@ -126,6 +126,10 @@ Keep the patch report, image hash, input hashes, validator reports, and authoriz
 - A valid PE checksum is not a code-signature replacement and does not establish trust.
 - A passing integration scenario is bounded to its declared observations.
 
+## Bounded claims
+
+A successful patch-image workflow can claim only that a copied PE was modified at the declared RVA by exactly the candidate byte length after the provided input hashes were checked, and that the resulting reports passed their stated bounded validations. It cannot claim full relink validation, all-function matching, source recovery, or complete program behavior.
+
 ## v0.7.8 source basis
 
 > **Verification model.** Command syntax is checked against the live parser. The source files below are hashed from the current release; implementation and test rows are retained as independent truth boundaries.

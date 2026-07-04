@@ -1,0 +1,1764 @@
+{
+  "commands": [
+    {
+      "command": "x86decomp metadata-scan target.exe --object original/foo.obj --map target.map --report reports/metadata.json",
+      "line": 62,
+      "page": "abi-type-recovery.md"
+    },
+    {
+      "command": "x86decomp disassemble target/sub_00401230.bin --base 0x401230 --architecture x86 --report reports/disassembly/sub_00401230.json",
+      "line": 63,
+      "page": "abi-type-recovery.md"
+    },
+    {
+      "command": "x86decomp crosscheck-ghidra project/functions/pe-rva_00401230/instructions.jsonl target/sub_00401230.bin --base 0x401230 --architecture x86 --report reports/crosscheck/sub_00401230.json",
+      "line": 64,
+      "page": "abi-type-recovery.md"
+    },
+    {
+      "command": "x86decomp abi-check target/sub_00401230.bin examples/abi/stdcall-two-ints.json --base 0x401230 --report reports/abi/target.json",
+      "line": 91,
+      "page": "abi-type-recovery.md"
+    },
+    {
+      "command": "x86decomp abi-check build/sub_00401230.bin examples/abi/stdcall-two-ints.json --base 0 --report reports/abi/candidate.json",
+      "line": 92,
+      "page": "abi-type-recovery.md"
+    },
+    {
+      "command": "x86decomp cpp-recover target.exe --metadata-report reports/metadata.json --object original/foo.obj --map target.map --report reports/cpp-recovery.json",
+      "line": 102,
+      "page": "abi-type-recovery.md"
+    },
+    {
+      "command": "x86decomp db-constraint-add project/analysis.sqlite pe-rva:00401230 calling_convention stdcall disassembly-crosscheck --evidence-id ev-callsite-1 --confidence 0.85",
+      "line": 112,
+      "page": "abi-type-recovery.md"
+    },
+    {
+      "command": "x86decomp db-constraint-add project/analysis.sqlite pe-rva:00401230 return_register eax abi-report --evidence-id ev-abi-1 --confidence 0.95",
+      "line": 113,
+      "page": "abi-type-recovery.md"
+    },
+    {
+      "command": "x86decomp db-constraint-conflicts project/analysis.sqlite pe-rva:00401230 calling_convention",
+      "line": 114,
+      "page": "abi-type-recovery.md"
+    },
+    {
+      "command": "x86decomp db-query project/analysis.sqlite \"SELECT id, subject_entity, relation, object_value, provenance, status FROM type_constraints WHERE subject_entity = ?\" --parameters-json '[\"pe-rva:00401230\"]'",
+      "line": 124,
+      "page": "abi-type-recovery.md"
+    },
+    {
+      "command": "x86decomp db-constraint-accept project/analysis.sqlite 42",
+      "line": 125,
+      "page": "abi-type-recovery.md"
+    },
+    {
+      "command": "x86decomp harness-generate contracts/sub_00401230-abi.json harnesses/sub_00401230.json --pointer-parameters contracts/sub_00401230-pointers.json --max-instructions 100000 --timeout-ms 1000",
+      "line": 135,
+      "page": "abi-type-recovery.md"
+    },
+    {
+      "command": "x86decomp corpus-generate build/generated-corpus --cases-per-family 8 --seed 0x86DEC0DE --report reports/generated-corpus.json",
+      "line": 62,
+      "page": "benchmark-validation-corpus.md"
+    },
+    {
+      "command": "x86decomp corpus-generated-verify reports/generated-corpus.json",
+      "line": 63,
+      "page": "benchmark-validation-corpus.md"
+    },
+    {
+      "command": "x86decomp corpus-create-manifest . build/ground-truth-manifest.json",
+      "line": 73,
+      "page": "benchmark-validation-corpus.md"
+    },
+    {
+      "command": "x86decomp corpus-build build/ground-truth-manifest.json build/ground-truth --report reports/ground-truth.json",
+      "line": 74,
+      "page": "benchmark-validation-corpus.md"
+    },
+    {
+      "command": "x86decomp corpus-verify reports/ground-truth.json",
+      "line": 75,
+      "page": "benchmark-validation-corpus.md"
+    },
+    {
+      "command": "x86decomp benchmark-run examples/benchmarks/bounded-demo.json --report reports/benchmark-bounded-demo.json",
+      "line": 138,
+      "page": "benchmark-validation-corpus.md"
+    },
+    {
+      "command": "x86decomp corpus-compare reports/gcc-12-ground-truth.json reports/gcc-13-ground-truth.json --report reports/ground-truth-comparison.json",
+      "line": 148,
+      "page": "benchmark-validation-corpus.md"
+    },
+    {
+      "command": "x86decomp test-bundle-create build/authorized-test-bundle.zip --artifact primary_image=authorized/target.exe --artifact pdb=authorized/target.pdb --authorization \"I own these artifacts or have permission to analyze them.\" --name regression-target --description \"Static regression corpus\" --expected-architecture x86",
+      "line": 158,
+      "page": "benchmark-validation-corpus.md"
+    },
+    {
+      "command": "x86decomp test-bundle-inspect build/authorized-test-bundle.zip --report reports/test-bundle-inspection.json",
+      "line": 159,
+      "page": "benchmark-validation-corpus.md"
+    },
+    {
+      "command": "x86decomp toolchain-register config/toolchains.json gcc-13-x86 gcc 13.2 --executable cc=C:\\Toolchains\\gcc\\bin\\gcc.exe",
+      "line": 62,
+      "page": "compiler-laboratory.md"
+    },
+    {
+      "command": "x86decomp toolchain-verify config/toolchains.json gcc-13-x86",
+      "line": 63,
+      "page": "compiler-laboratory.md"
+    },
+    {
+      "command": "x86decomp compiler-lab examples/labs/gcc-optimization-matrix.json --report reports/compiler-lab.json",
+      "line": 138,
+      "page": "compiler-laboratory.md"
+    },
+    {
+      "command": "x86decomp compiler-lab config/coff-matching-lab.json --report reports/compiler-lab-coff.json",
+      "line": 162,
+      "page": "compiler-laboratory.md"
+    },
+    {
+      "command": "x86decomp corpus-create-manifest . build/ground-truth-manifest.json",
+      "line": 175,
+      "page": "compiler-laboratory.md"
+    },
+    {
+      "command": "x86decomp corpus-build build/ground-truth-manifest.json build/ground-truth --report reports/ground-truth.json",
+      "line": 176,
+      "page": "compiler-laboratory.md"
+    },
+    {
+      "command": "x86decomp corpus-verify reports/ground-truth.json",
+      "line": 177,
+      "page": "compiler-laboratory.md"
+    },
+    {
+      "command": "x86decomp corpus-compare reports/gcc-12.json reports/gcc-13.json --report reports/compiler-comparison.json",
+      "line": 178,
+      "page": "compiler-laboratory.md"
+    },
+    {
+      "command": "x86decomp compile-worker profiles/target.json src/candidate.c build/candidate.obj --isolation local_bounded --cache build/compiler-cache --report reports/compiler-worker.json",
+      "line": 188,
+      "page": "compiler-laboratory.md"
+    },
+    {
+      "command": "x86decomp inspect-pe target.exe",
+      "line": 64,
+      "page": "full-relink-convergence.md"
+    },
+    {
+      "command": "x86decomp map-inspect target.map",
+      "line": 65,
+      "page": "full-relink-convergence.md"
+    },
+    {
+      "command": "x86decomp coff-inspect build/entry.obj",
+      "line": 66,
+      "page": "full-relink-convergence.md"
+    },
+    {
+      "command": "x86decomp lib-inspect runtime.lib",
+      "line": 67,
+      "page": "full-relink-convergence.md"
+    },
+    {
+      "command": "x86decomp coff-comdat-resolve build/entry.obj build/sub_00401230.obj --report reports/comdat.json",
+      "line": 68,
+      "page": "full-relink-convergence.md"
+    },
+    {
+      "command": "x86decomp layout-reconstruct target.exe target.map build/entry.obj build/sub_00401230.obj --report reports/layout.json",
+      "line": 78,
+      "page": "full-relink-convergence.md"
+    },
+    {
+      "command": "x86decomp linker-plan target.exe target.map build/entry.obj build/sub_00401230.obj --library runtime.lib --linker lld-link --output-image build/reconstructed.exe --report reports/linker-plan.json --write-relink-manifest config/relink.json",
+      "line": 88,
+      "page": "full-relink-convergence.md"
+    },
+    {
+      "command": "x86decomp relink config/relink.json --report reports/relink.json",
+      "line": 121,
+      "page": "full-relink-convergence.md"
+    },
+    {
+      "command": "x86decomp image-profile target.exe config/image-profile.json",
+      "line": 131,
+      "page": "full-relink-convergence.md"
+    },
+    {
+      "command": "x86decomp image-match target.exe build/reconstructed.exe --profile config/image-profile.json --report reports/image-match.json",
+      "line": 132,
+      "page": "full-relink-convergence.md"
+    },
+    {
+      "command": "x86decomp convergence-analyze target.exe build/reconstructed.exe --profile config/image-profile.json --report reports/convergence-001.json --history reports/convergence-history.json",
+      "line": 142,
+      "page": "full-relink-convergence.md"
+    },
+    {
+      "command": "x86decomp convergence-analyze target.exe build/reconstructed-002.exe --profile config/image-profile.json --previous reports/convergence-001.json --report reports/convergence-002.json --history reports/convergence-history.json",
+      "line": 143,
+      "page": "full-relink-convergence.md"
+    },
+    {
+      "command": "x86decomp workflow-update project pe-rva:00401230 --matching-status image_integrated --report-kind image-match --report-path reports/image-match.json",
+      "line": 153,
+      "page": "full-relink-convergence.md"
+    },
+    {
+      "command": "x86decomp workflow-update project pe-rva:00401230 --matching-status full_relink_validated --report-kind convergence --report-path reports/convergence-002.json",
+      "line": 154,
+      "page": "full-relink-convergence.md"
+    },
+    {
+      "command": "x86decomp target-pack-infer target.exe target-pack --decisions decisions-functional.json",
+      "line": 64,
+      "page": "functional-project.md"
+    },
+    {
+      "command": "x86decomp target-pack-verify target-pack",
+      "line": 65,
+      "page": "functional-project.md"
+    },
+    {
+      "command": "x86decomp project-from-target target-pack project",
+      "line": 66,
+      "page": "functional-project.md"
+    },
+    {
+      "command": "x86decomp workflow-init project pe-rva:00401230 --mode functional",
+      "line": 67,
+      "page": "functional-project.md"
+    },
+    {
+      "command": "x86decomp ghidra-export target.exe ghidra-projects TargetProject exports/ghidra --selector all --report reports/ghidra-export.json",
+      "line": 85,
+      "page": "functional-project.md"
+    },
+    {
+      "command": "x86decomp artifact-import project exports/ghidra/functions/pe-rva_00401230",
+      "line": 86,
+      "page": "functional-project.md"
+    },
+    {
+      "command": "x86decomp artifact-verify project/functions/pe-rva_00401230",
+      "line": 87,
+      "page": "functional-project.md"
+    },
+    {
+      "command": "x86decomp harness-generate contracts/sub_00401230-abi.json harnesses/sub_00401230.json --no-observe-pointers --max-instructions 100000 --timeout-ms 1000",
+      "line": 95,
+      "page": "functional-project.md"
+    },
+    {
+      "command": "x86decomp compile profiles/functional-x86.json src/sub_00401230.c build/sub_00401230.obj --report reports/compile/sub_00401230.json",
+      "line": 105,
+      "page": "functional-project.md"
+    },
+    {
+      "command": "x86decomp coff-extract build/sub_00401230.obj sub_00401230 build/sub_00401230.bin",
+      "line": 106,
+      "page": "functional-project.md"
+    },
+    {
+      "command": "x86decomp abi-check build/sub_00401230.bin contracts/sub_00401230-abi.json --base 0 --report reports/abi/sub_00401230.json",
+      "line": 107,
+      "page": "functional-project.md"
+    },
+    {
+      "command": "x86decomp dynamic-validate target/sub_00401230.bin build/sub_00401230.bin harnesses/sub_00401230.json --target-base 0x401230 --candidate-base 0 --report reports/dynamic/sub_00401230.json",
+      "line": 117,
+      "page": "functional-project.md"
+    },
+    {
+      "command": "x86decomp symbolic-validate target/sub_00401230.bin build/sub_00401230.bin --architecture x86 --stack-argument-words 2 --output-register eax --max-steps 64 --max-paths 16 --report reports/symbolic/sub_00401230.json",
+      "line": 127,
+      "page": "functional-project.md"
+    },
+    {
+      "command": "x86decomp symbolic-memory-validate target/sub_00401230.bin build/sub_00401230.bin harnesses/sub_00401230-memory.json --report reports/symbolic-memory/sub_00401230.json",
+      "line": 128,
+      "page": "functional-project.md"
+    },
+    {
+      "command": "x86decomp integration-run integration/sub_00401230.json --report reports/integration/sub_00401230.json",
+      "line": 138,
+      "page": "functional-project.md"
+    },
+    {
+      "command": "x86decomp integration-run integration/sub_00401230-host.json --allow-host-execution --report reports/integration/sub_00401230-host.json",
+      "line": 144,
+      "page": "functional-project.md"
+    },
+    {
+      "command": "x86decomp workflow-update project pe-rva:00401230 --source-stage human_candidate --functional-status integration_validated --candidate src/sub_00401230.c --report-kind integration --report-path reports/integration/sub_00401230.json",
+      "line": 154,
+      "page": "functional-project.md"
+    },
+    {
+      "command": "x86decomp workflow-show project pe-rva:00401230",
+      "line": 155,
+      "page": "functional-project.md"
+    },
+    {
+      "command": "x86decomp target-pack-infer target.exe target-pack --pdb target.pdb --map target.map --decisions examples/release/target-decisions.json",
+      "line": 65,
+      "page": "hybrid-project.md"
+    },
+    {
+      "command": "x86decomp target-pack-verify target-pack",
+      "line": 66,
+      "page": "hybrid-project.md"
+    },
+    {
+      "command": "x86decomp project-from-target target-pack project",
+      "line": 67,
+      "page": "hybrid-project.md"
+    },
+    {
+      "command": "x86decomp project-check project",
+      "line": 68,
+      "page": "hybrid-project.md"
+    },
+    {
+      "command": "x86decomp ghidra-export target.exe ghidra-projects TargetProject exports/ghidra --selector all --report reports/ghidra-export.json",
+      "line": 78,
+      "page": "hybrid-project.md"
+    },
+    {
+      "command": "x86decomp artifact-import project exports/ghidra/functions/pe-rva_00401230",
+      "line": 79,
+      "page": "hybrid-project.md"
+    },
+    {
+      "command": "x86decomp artifact-verify project/functions/pe-rva_00401230",
+      "line": 80,
+      "page": "hybrid-project.md"
+    },
+    {
+      "command": "x86decomp hybrid-generate project hybrid-output --architecture x86 --asm-format bytes --image-base 0x400000",
+      "line": 90,
+      "page": "hybrid-project.md"
+    },
+    {
+      "command": "x86decomp compile profiles/target-coff.json hybrid-output/src/staging/sub_00401230.c build/sub_00401230.obj --report reports/compile/sub_00401230.json",
+      "line": 115,
+      "page": "hybrid-project.md"
+    },
+    {
+      "command": "x86decomp workflow-update project pe-rva:00401230 --source-stage human_candidate --candidate hybrid-output/src/staging/sub_00401230.c --compiler-profile profiles/target-coff.json",
+      "line": 116,
+      "page": "hybrid-project.md"
+    },
+    {
+      "command": "x86decomp coff-extract build/sub_00401230.obj sub_00401230 build/sub_00401230.bin --size 0x20",
+      "line": 126,
+      "page": "hybrid-project.md"
+    },
+    {
+      "command": "x86decomp diff-function target.exe 0x401230 0x20 build/sub_00401230.obj sub_00401230 --report reports/diff/sub_00401230.json",
+      "line": 127,
+      "page": "hybrid-project.md"
+    },
+    {
+      "command": "x86decomp dynamic-validate hybrid-output/config/original/sub_00401230.bin build/sub_00401230.bin harnesses/sub_00401230.json --target-base 0x401230 --candidate-base 0 --report reports/dynamic/sub_00401230.json",
+      "line": 128,
+      "page": "hybrid-project.md"
+    },
+    {
+      "command": "x86decomp symbolic-validate hybrid-output/config/original/sub_00401230.bin build/sub_00401230.bin --architecture x86 --stack-argument-words 2 --output-register eax --max-steps 64 --max-paths 16 --report reports/symbolic/sub_00401230.json",
+      "line": 129,
+      "page": "hybrid-project.md"
+    },
+    {
+      "command": "x86decomp workflow-update project pe-rva:00401230 --matching-status byte_matched --report-kind function-diff --report-path reports/diff/sub_00401230.json",
+      "line": 143,
+      "page": "hybrid-project.md"
+    },
+    {
+      "command": "x86decomp workflow-update project pe-rva:00401230 --functional-status symbolically_bounded --report-kind symbolic --report-path reports/symbolic/sub_00401230.json",
+      "line": 144,
+      "page": "hybrid-project.md"
+    },
+    {
+      "command": "x86decomp workflow-show project pe-rva:00401230",
+      "line": 145,
+      "page": "hybrid-project.md"
+    },
+    {
+      "command": "x86decomp target-pack-infer target.exe target-pack --pdb target.pdb --map target.map --decisions decisions-matching.json",
+      "line": 65,
+      "page": "matching-project.md"
+    },
+    {
+      "command": "x86decomp target-pack-verify target-pack",
+      "line": 66,
+      "page": "matching-project.md"
+    },
+    {
+      "command": "x86decomp project-from-target target-pack project",
+      "line": 67,
+      "page": "matching-project.md"
+    },
+    {
+      "command": "x86decomp project-check project",
+      "line": 68,
+      "page": "matching-project.md"
+    },
+    {
+      "command": "x86decomp ghidra-export target.exe ghidra-projects TargetProject exports/ghidra --selector all --report reports/ghidra-export.json",
+      "line": 90,
+      "page": "matching-project.md"
+    },
+    {
+      "command": "x86decomp artifact-import project exports/ghidra/functions/pe-rva_00401230",
+      "line": 91,
+      "page": "matching-project.md"
+    },
+    {
+      "command": "x86decomp artifact-verify project/functions/pe-rva_00401230",
+      "line": 92,
+      "page": "matching-project.md"
+    },
+    {
+      "command": "x86decomp workflow-init project pe-rva:00401230 --mode matching",
+      "line": 93,
+      "page": "matching-project.md"
+    },
+    {
+      "command": "x86decomp compile profiles/target-coff.json src/sub_00401230.c build/sub_00401230.obj --cache build/compiler-cache --report reports/compile/sub_00401230.json",
+      "line": 103,
+      "page": "matching-project.md"
+    },
+    {
+      "command": "x86decomp coff-extract build/sub_00401230.obj sub_00401230 build/sub_00401230.bin --size 0x20",
+      "line": 113,
+      "page": "matching-project.md"
+    },
+    {
+      "command": "x86decomp abi-check build/sub_00401230.bin contracts/sub_00401230-abi.json --base 0 --report reports/abi/sub_00401230.json",
+      "line": 114,
+      "page": "matching-project.md"
+    },
+    {
+      "command": "x86decomp diff-function target.exe 0x401230 0x20 build/sub_00401230.obj sub_00401230 --report reports/diff/sub_00401230.json",
+      "line": 124,
+      "page": "matching-project.md"
+    },
+    {
+      "command": "x86decomp linker-plan target.exe target.map build/entry.obj build/sub_00401230.obj --library runtime.lib --report reports/linker-plan.json --write-relink-manifest config/relink.json",
+      "line": 136,
+      "page": "matching-project.md"
+    },
+    {
+      "command": "x86decomp relink config/relink.json --report reports/relink.json",
+      "line": 137,
+      "page": "matching-project.md"
+    },
+    {
+      "command": "x86decomp image-profile target.exe config/image-profile.json",
+      "line": 138,
+      "page": "matching-project.md"
+    },
+    {
+      "command": "x86decomp image-match target.exe build/reconstructed.exe --profile config/image-profile.json --report reports/image-match.json",
+      "line": 139,
+      "page": "matching-project.md"
+    },
+    {
+      "command": "x86decomp convergence-analyze target.exe build/reconstructed.exe --profile config/image-profile.json --report reports/convergence.json --history reports/convergence-history.json",
+      "line": 140,
+      "page": "matching-project.md"
+    },
+    {
+      "command": "x86decomp workflow-update project pe-rva:00401230 --source-stage human_candidate --matching-status byte_matched --candidate src/sub_00401230.c --compiler-profile profiles/target-coff.json --report-kind function-diff --report-path reports/diff/sub_00401230.json",
+      "line": 150,
+      "page": "matching-project.md"
+    },
+    {
+      "command": "x86decomp workflow-show project pe-rva:00401230",
+      "line": 151,
+      "page": "matching-project.md"
+    },
+    {
+      "command": "x86decomp inspect-pe target.exe",
+      "line": 62,
+      "page": "patch-image-integration.md"
+    },
+    {
+      "command": "x86decomp diff-bytes target/sub_00401230.bin candidate/sub_00401230.bin --report reports/prepatch-byte-diff.json",
+      "line": 63,
+      "page": "patch-image-integration.md"
+    },
+    {
+      "command": "x86decomp compile profiles/target-coff.json src/sub_00401230.c build/sub_00401230.obj --report reports/compile/sub_00401230.json",
+      "line": 73,
+      "page": "patch-image-integration.md"
+    },
+    {
+      "command": "x86decomp coff-extract build/sub_00401230.obj sub_00401230 build/sub_00401230.bin --size 0x20",
+      "line": 74,
+      "page": "patch-image-integration.md"
+    },
+    {
+      "command": "x86decomp patch-image target.exe build/sub_00401230.bin build/target-patched.exe --rva 0x401230 --expected-original-sha256 ORIGINAL_SHA256 --expected-function-sha256 FUNCTION_SHA256 --report reports/patch/sub_00401230.json",
+      "line": 84,
+      "page": "patch-image-integration.md"
+    },
+    {
+      "command": "x86decomp inspect-pe build/target-patched.exe",
+      "line": 94,
+      "page": "patch-image-integration.md"
+    },
+    {
+      "command": "x86decomp image-profile target.exe config/patch-image-profile.json",
+      "line": 95,
+      "page": "patch-image-integration.md"
+    },
+    {
+      "command": "x86decomp image-match target.exe build/target-patched.exe --profile config/patch-image-profile.json --report reports/patch/image-match.json",
+      "line": 96,
+      "page": "patch-image-integration.md"
+    },
+    {
+      "command": "x86decomp integration-run integration/patched-image.json --report reports/integration/patched-image.json",
+      "line": 106,
+      "page": "patch-image-integration.md"
+    },
+    {
+      "command": "x86decomp evidence-add project --kind human_review --source analyst --locator pe-rva:00401230 --assertion \"Analyst reviewed the same-size patch report and derived image\" --independent-group patch-review --file reports/patch/sub_00401230.json --id ev-patch-00401230",
+      "line": 116,
+      "page": "patch-image-integration.md"
+    },
+    {
+      "command": "x86decomp memory-add project --actor analyst --category integration --summary \"Created and tested derived patch image\" --details-json '{\"rva\":\"0x401230\",\"output\":\"build/target-patched.exe\"}' --evidence ev-patch-00401230",
+      "line": 117,
+      "page": "patch-image-integration.md"
+    },
+    {
+      "command": "x86decomp project-check project",
+      "line": 64,
+      "page": "project-operations-recovery.md"
+    },
+    {
+      "command": "x86decomp project-backup project backups/project-before-change.tar.gz",
+      "line": 65,
+      "page": "project-operations-recovery.md"
+    },
+    {
+      "command": "x86decomp project-migrate project --dry-run",
+      "line": 75,
+      "page": "project-operations-recovery.md"
+    },
+    {
+      "command": "x86decomp project-repair project",
+      "line": 76,
+      "page": "project-operations-recovery.md"
+    },
+    {
+      "command": "x86decomp project-migrate project --backup backups/project-migration.tar.gz",
+      "line": 82,
+      "page": "project-operations-recovery.md"
+    },
+    {
+      "command": "x86decomp project-repair project --apply",
+      "line": 83,
+      "page": "project-operations-recovery.md"
+    },
+    {
+      "command": "x86decomp content-verify project/artifacts",
+      "line": 91,
+      "page": "project-operations-recovery.md"
+    },
+    {
+      "command": "x86decomp project-gc project",
+      "line": 92,
+      "page": "project-operations-recovery.md"
+    },
+    {
+      "command": "x86decomp project-gc project --apply",
+      "line": 93,
+      "page": "project-operations-recovery.md"
+    },
+    {
+      "command": "x86decomp pipeline-create project project/orchestration/pipelines/default.json",
+      "line": 103,
+      "page": "project-operations-recovery.md"
+    },
+    {
+      "command": "x86decomp pipeline-run project project/orchestration/pipelines/default.json",
+      "line": 104,
+      "page": "project-operations-recovery.md"
+    },
+    {
+      "command": "x86decomp pipeline-status project PIPELINE_ID",
+      "line": 114,
+      "page": "project-operations-recovery.md"
+    },
+    {
+      "command": "x86decomp pipeline-retry project PIPELINE_ID STAGE_ID --cascade",
+      "line": 115,
+      "page": "project-operations-recovery.md"
+    },
+    {
+      "command": "x86decomp pipeline-cancel project PIPELINE_ID --stage-id STAGE_ID",
+      "line": 116,
+      "page": "project-operations-recovery.md"
+    },
+    {
+      "command": "x86decomp pipeline-recover project --pipeline-id PIPELINE_ID --stale-seconds 600",
+      "line": 126,
+      "page": "project-operations-recovery.md"
+    },
+    {
+      "command": "x86decomp project-restore backups/project-before-change.tar.gz restored-project",
+      "line": 136,
+      "page": "project-operations-recovery.md"
+    },
+    {
+      "command": "x86decomp project-check restored-project",
+      "line": 137,
+      "page": "project-operations-recovery.md"
+    },
+    {
+      "command": "x86decomp content-verify restored-project/artifacts",
+      "line": 138,
+      "page": "project-operations-recovery.md"
+    },
+    {
+      "command": "x86decomp target-pack-infer target.exe target-pack --pdb target.pdb --map target.map --object original/foo.obj --library original/runtime.lib --decisions decisions.json",
+      "line": 63,
+      "page": "static-analysis-evidence.md"
+    },
+    {
+      "command": "x86decomp target-pack-verify target-pack",
+      "line": 64,
+      "page": "static-analysis-evidence.md"
+    },
+    {
+      "command": "x86decomp inspect-pe target.exe",
+      "line": 74,
+      "page": "static-analysis-evidence.md"
+    },
+    {
+      "command": "x86decomp pdb-inspect target.pdb --pe target.exe",
+      "line": 75,
+      "page": "static-analysis-evidence.md"
+    },
+    {
+      "command": "x86decomp map-inspect target.map",
+      "line": 76,
+      "page": "static-analysis-evidence.md"
+    },
+    {
+      "command": "x86decomp coff-inspect original/foo.obj",
+      "line": 77,
+      "page": "static-analysis-evidence.md"
+    },
+    {
+      "command": "x86decomp lib-inspect original/runtime.lib",
+      "line": 78,
+      "page": "static-analysis-evidence.md"
+    },
+    {
+      "command": "x86decomp metadata-scan target.exe --object original/foo.obj --map target.map --report reports/metadata.json",
+      "line": 79,
+      "page": "static-analysis-evidence.md"
+    },
+    {
+      "command": "x86decomp ghidra-export target.exe ghidra-projects TargetProject exports/ghidra --selector all --report reports/ghidra-export.json",
+      "line": 89,
+      "page": "static-analysis-evidence.md"
+    },
+    {
+      "command": "x86decomp artifact-import project exports/ghidra/functions/pe-rva_00401230",
+      "line": 90,
+      "page": "static-analysis-evidence.md"
+    },
+    {
+      "command": "x86decomp artifact-verify project/functions/pe-rva_00401230",
+      "line": 91,
+      "page": "static-analysis-evidence.md"
+    },
+    {
+      "command": "x86decomp disassemble $rangePath --base 0x401230 --architecture x86 --report reports/disassembly/sub_00401230.json",
+      "line": 104,
+      "page": "static-analysis-evidence.md"
+    },
+    {
+      "command": "x86decomp crosscheck-ghidra \"$functionDir/instructions.jsonl\" $rangePath --base 0x401230 --architecture x86 --report reports/crosscheck/sub_00401230.json",
+      "line": 105,
+      "page": "static-analysis-evidence.md"
+    },
+    {
+      "command": "x86decomp evidence-add project --kind static_analysis --source ghidra --locator pe-rva:00401230 --assertion \"Ghidra exported a function beginning at RVA 0x401230\" --independent-group ghidra-export --file project/functions/pe-rva_00401230/function.json --id ev-ghidra-00401230",
+      "line": 115,
+      "page": "static-analysis-evidence.md"
+    },
+    {
+      "command": "x86decomp evidence-add project --kind static_analysis --source independent-disassembler --locator pe-rva:00401230 --assertion \"Independent disassembly starts at RVA 0x401230\" --independent-group independent-disassembly --file reports/crosscheck/sub_00401230.json --id ev-crosscheck-00401230",
+      "line": 116,
+      "page": "static-analysis-evidence.md"
+    },
+    {
+      "command": "x86decomp evidence-add project --kind human_review --source analyst --locator pe-rva:00401230 --assertion \"Analyst reviewed the exported manifest and independent cross-check\" --independent-group analyst-review --id ev-review-00401230",
+      "line": 117,
+      "page": "static-analysis-evidence.md"
+    },
+    {
+      "command": "x86decomp claim-create project --subject pe-rva:00401230 --predicate has-entry-rva --object 0x401230 --evidence ev-ghidra-00401230 --evidence ev-crosscheck-00401230 --evidence ev-review-00401230 --id claim-entry-00401230",
+      "line": 118,
+      "page": "static-analysis-evidence.md"
+    },
+    {
+      "command": "x86decomp claim-verify project claim-entry-00401230",
+      "line": 119,
+      "page": "static-analysis-evidence.md"
+    },
+    {
+      "command": "x86decomp db-ingest project/analysis.sqlite project/functions/pe-rva_00401230 --image-base 0x400000",
+      "line": 129,
+      "page": "static-analysis-evidence.md"
+    },
+    {
+      "command": "x86decomp db-query project/analysis.sqlite \"SELECT id, address_rva, name FROM entities WHERE kind = 'function' ORDER BY address_rva\"",
+      "line": 130,
+      "page": "static-analysis-evidence.md"
+    },
+    {
+      "command": "x86decomp db-constraint-add project/analysis.sqlite pe-rva:00401230 calling_convention stdcall analyst-note --evidence-id ev-abi-1 --confidence 0.8",
+      "line": 131,
+      "page": "static-analysis-evidence.md"
+    },
+    {
+      "command": "x86decomp db-constraint-conflicts project/analysis.sqlite pe-rva:00401230 calling_convention",
+      "line": 132,
+      "page": "static-analysis-evidence.md"
+    },
+    {
+      "command": "x86decomp project-check project",
+      "line": 62,
+      "page": "target-release-reproducibility.md"
+    },
+    {
+      "command": "x86decomp memory-verify project",
+      "line": 63,
+      "page": "target-release-reproducibility.md"
+    },
+    {
+      "command": "x86decomp content-verify project/artifacts",
+      "line": 64,
+      "page": "target-release-reproducibility.md"
+    },
+    {
+      "command": "x86decomp workflow-show project pe-rva:00401230",
+      "line": 65,
+      "page": "target-release-reproducibility.md"
+    },
+    {
+      "command": "x86decomp reproduce-create project reports/reproducibility/manifest.json --required-tool gcc --required-tool lld-link",
+      "line": 75,
+      "page": "target-release-reproducibility.md"
+    },
+    {
+      "command": "x86decomp reproduce-verify project reports/reproducibility/manifest.json",
+      "line": 76,
+      "page": "target-release-reproducibility.md"
+    },
+    {
+      "command": "x86decomp security-audit project --report reports/security/source-audit.json",
+      "line": 86,
+      "page": "target-release-reproducibility.md"
+    },
+    {
+      "command": "x86decomp dependency-audit --executable pip-audit --timeout 300 --report reports/security/dependencies.json",
+      "line": 87,
+      "page": "target-release-reproducibility.md"
+    },
+    {
+      "command": "x86decomp sbom-generate reports/security/sbom.json",
+      "line": 88,
+      "page": "target-release-reproducibility.md"
+    },
+    {
+      "command": "x86decomp release-manifest-verify project --manifest MANIFEST.sha256",
+      "line": 89,
+      "page": "target-release-reproducibility.md"
+    },
+    {
+      "command": "x86decomp claim-verify project claim-entry-00401230",
+      "line": 99,
+      "page": "target-release-reproducibility.md"
+    },
+    {
+      "command": "x86decomp pipeline-status project PIPELINE_ID",
+      "line": 100,
+      "page": "target-release-reproducibility.md"
+    },
+    {
+      "command": "x86decomp release-gate project --reproduction-manifest reports/reproducibility/manifest.json --security-report reports/security/source-audit.json --convergence-report reports/convergence/latest.json --require-workflows --require-verified-claims --require-succeeded-pipelines --report reports/release-gate.json",
+      "line": 110,
+      "page": "target-release-reproducibility.md"
+    },
+    {
+      "command": "x86decomp project-backup project releases/project-release-backup.tar.gz",
+      "line": 120,
+      "page": "target-release-reproducibility.md"
+    },
+    {
+      "command": "x86decomp target-pack-infer target.exe target-pack --decisions target-decisions.json",
+      "line": 33,
+      "page": "text-swap-project.md"
+    },
+    {
+      "command": "x86decomp target-pack-verify target-pack",
+      "line": 34,
+      "page": "text-swap-project.md"
+    },
+    {
+      "command": "x86decomp project-from-target target-pack project",
+      "line": 35,
+      "page": "text-swap-project.md"
+    },
+    {
+      "command": "x86decomp project-check project",
+      "line": 36,
+      "page": "text-swap-project.md"
+    },
+    {
+      "command": "x86decomp function discover target.exe --profile prologue --architecture x86 --output reports\\functions\\discover.json",
+      "line": 42,
+      "page": "text-swap-project.md"
+    },
+    {
+      "command": "x86decomp function reconcile reports\\functions\\discover.json --output reports\\functions\\reconciled.json",
+      "line": 43,
+      "page": "text-swap-project.md"
+    },
+    {
+      "command": "x86decomp function sort reports\\functions\\reconciled.json --key rva --output reports\\functions\\sorted.json",
+      "line": 44,
+      "page": "text-swap-project.md"
+    },
+    {
+      "command": "x86decomp function classify reports\\functions\\sorted.json --output reports\\functions\\classified.json",
+      "line": 45,
+      "page": "text-swap-project.md"
+    },
+    {
+      "command": "x86decomp image-text --project project compose build\\replacement-text.bin --function-list reports\\functions\\sorted.json",
+      "line": 55,
+      "page": "text-swap-project.md"
+    },
+    {
+      "command": "x86decomp text-swap plan target.exe build\\replacement-text.bin reports\\text-swap\\plan.json --section-name .text",
+      "line": 73,
+      "page": "text-swap-project.md"
+    },
+    {
+      "command": "x86decomp text-swap inject reports\\text-swap\\plan.json --output build\\target-text-swap.exe",
+      "line": 94,
+      "page": "text-swap-project.md"
+    },
+    {
+      "command": "x86decomp text-swap verify reports\\text-swap\\plan.json build\\target-text-swap.exe --output reports\\text-swap\\verify.json",
+      "line": 106,
+      "page": "text-swap-project.md"
+    },
+    {
+      "command": "x86decomp integration-run integration\\launch-smoke.json --report reports\\integration\\launch-smoke.json",
+      "line": 116,
+      "page": "text-swap-project.md"
+    },
+    {
+      "command": "x86decomp progress --project project reconcile --output reports\\progress\\reconcile.json",
+      "line": 126,
+      "page": "text-swap-project.md"
+    },
+    {
+      "command": "x86decomp source-stage --project project classify --output reports\\progress\\source-stage.json",
+      "line": 127,
+      "page": "text-swap-project.md"
+    },
+    {
+      "command": "x86decomp project --project project health --output reports\\progress\\health.json",
+      "line": 128,
+      "page": "text-swap-project.md"
+    },
+    {
+      "command": "x86decomp linker-plan target.exe target.map build\\entry.obj --report reports\\linker-plan.json --write-relink-manifest config\\relink.json",
+      "line": 138,
+      "page": "text-swap-project.md"
+    },
+    {
+      "command": "x86decomp relink config\\relink.json --report reports\\relink.json",
+      "line": 139,
+      "page": "text-swap-project.md"
+    },
+    {
+      "command": "x86decomp image-profile target.exe config\\image-profile.json",
+      "line": 140,
+      "page": "text-swap-project.md"
+    },
+    {
+      "command": "x86decomp image-match target.exe build\\reconstructed.exe --profile config\\image-profile.json --report reports\\image-match.json",
+      "line": 141,
+      "page": "text-swap-project.md"
+    }
+  ],
+  "counts": {
+    "canonical_routes_available": 239,
+    "commands_checked": 183,
+    "expected_project_example_pages": 12,
+    "project_example_pages": 12,
+    "source_hash_rows_checked": 138
+  },
+  "error_count": 0,
+  "errors": [],
+  "generated_at": "2026-07-04T06:51:20.471188+00:00",
+  "kind": "project_examples_strict_audit",
+  "release": "0.7.8",
+  "schema_version": 1,
+  "source_hash_rows": [
+    {
+      "page": "abi-type-recovery.md",
+      "sha256": "21e0654ced2f5dd0588adcbedec328613fba524ff1e0a91ef07d63cbbf88288c",
+      "source": "src/x86decomp/cli.py",
+      "verified": true
+    },
+    {
+      "page": "abi-type-recovery.md",
+      "sha256": "e69b8d4ba247b2e3dbd3553cd207ee8fbe24fe244878c4dabb4afffbebb33903",
+      "source": "src/x86decomp/abi.py",
+      "verified": true
+    },
+    {
+      "page": "abi-type-recovery.md",
+      "sha256": "c1f07b15f8649be4235cb56bb2e8f953ed31211b98311633d6beccde38dce8fa",
+      "source": "src/x86decomp/cpp_recovery.py",
+      "verified": true
+    },
+    {
+      "page": "abi-type-recovery.md",
+      "sha256": "75ab6f14bcef35574409e280dad90a705f71bc5763d507258f705ad8f4c431f2",
+      "source": "src/x86decomp/harness_generator.py",
+      "verified": true
+    },
+    {
+      "page": "abi-type-recovery.md",
+      "sha256": "409e503d6c264dba48a00e1d1afc475ce735cf25f1ec4aab7ac41b07ed5b9bad",
+      "source": "src/x86decomp/analysis_db.py",
+      "verified": true
+    },
+    {
+      "page": "abi-type-recovery.md",
+      "sha256": "7707cba729a70b66986595aea747f5c1e782023e2b58134d2786680b52840a64",
+      "source": "tests/test_abi_disassembly.py",
+      "verified": true
+    },
+    {
+      "page": "benchmark-validation-corpus.md",
+      "sha256": "21e0654ced2f5dd0588adcbedec328613fba524ff1e0a91ef07d63cbbf88288c",
+      "source": "src/x86decomp/cli.py",
+      "verified": true
+    },
+    {
+      "page": "benchmark-validation-corpus.md",
+      "sha256": "b9b28fbcb2f38723b274e4150b1c3914ddcbceab1b49461fc5797a84f9e13fb3",
+      "source": "src/x86decomp/benchmarks.py",
+      "verified": true
+    },
+    {
+      "page": "benchmark-validation-corpus.md",
+      "sha256": "9684fbcda0fd5060b3c1f2d0efb83892900c69190d33e24fd7e49f91885181e2",
+      "source": "src/x86decomp/ground_truth.py",
+      "verified": true
+    },
+    {
+      "page": "benchmark-validation-corpus.md",
+      "sha256": "a09cbba16f498158cf30191397884f0a70051c767b778cd520ac229b6e85e451",
+      "source": "src/x86decomp/dynamic.py",
+      "verified": true
+    },
+    {
+      "page": "benchmark-validation-corpus.md",
+      "sha256": "93d98f6e85a01a107881131821d5eb04875d310795c4f173448918c5a96fdcd3",
+      "source": "src/x86decomp/symbolic.py",
+      "verified": true
+    },
+    {
+      "page": "benchmark-validation-corpus.md",
+      "sha256": "cb8157c8210544e2ed4730e8bdb01f0a77dc9d05f683d43154cba1bf93c1e845",
+      "source": "src/x86decomp/integration.py",
+      "verified": true
+    },
+    {
+      "page": "benchmark-validation-corpus.md",
+      "sha256": "aa88771eecf6bbd2a6fcc6230848165884fea583b48688061d61c14756f9a1de",
+      "source": "tests/test_linker_metadata_corpus.py",
+      "verified": true
+    },
+    {
+      "page": "compiler-laboratory.md",
+      "sha256": "21e0654ced2f5dd0588adcbedec328613fba524ff1e0a91ef07d63cbbf88288c",
+      "source": "src/x86decomp/cli.py",
+      "verified": true
+    },
+    {
+      "page": "compiler-laboratory.md",
+      "sha256": "f21f38f6ed0804a959188e31f5c9fa498d7d0740536fbb82594a375b12353944",
+      "source": "src/x86decomp/compiler.py",
+      "verified": true
+    },
+    {
+      "page": "compiler-laboratory.md",
+      "sha256": "05a54baba63c926190c0e2fb45bff09c6eb338ed6a479e6e47be210a6b1de859",
+      "source": "src/x86decomp/compiler_lab.py",
+      "verified": true
+    },
+    {
+      "page": "compiler-laboratory.md",
+      "sha256": "9dde5962b67d30fec64266313f5488a4e5501de9db26605d4719cbe276cde03f",
+      "source": "src/x86decomp/toolchains.py",
+      "verified": true
+    },
+    {
+      "page": "compiler-laboratory.md",
+      "sha256": "9645daed68779957cd14addad7626d32d99056f551c27d873e3f475cfe862f64",
+      "source": "tests/test_compiler.py",
+      "verified": true
+    },
+    {
+      "page": "full-relink-convergence.md",
+      "sha256": "21e0654ced2f5dd0588adcbedec328613fba524ff1e0a91ef07d63cbbf88288c",
+      "source": "src/x86decomp/cli.py",
+      "verified": true
+    },
+    {
+      "page": "full-relink-convergence.md",
+      "sha256": "f67bc3077e7d54a9a32e542113cc28eadf00fa581c8e3d3c26e5c1b45a4e0900",
+      "source": "src/x86decomp/linker_reconstruction.py",
+      "verified": true
+    },
+    {
+      "page": "full-relink-convergence.md",
+      "sha256": "d401db042d4cc8300ccd4babd28cea400dca824d187a7caf0a1f3ead407fb296",
+      "source": "src/x86decomp/relink.py",
+      "verified": true
+    },
+    {
+      "page": "full-relink-convergence.md",
+      "sha256": "a9c72f376532369da77440496a1ea07564da5071ef8e6108e29c58e33e96fcf4",
+      "source": "src/x86decomp/image_match.py",
+      "verified": true
+    },
+    {
+      "page": "full-relink-convergence.md",
+      "sha256": "2b943e9c8c2399089e1b8c2815c0de4cb1bcf0468c09e64a647fef3508922f74",
+      "source": "src/x86decomp/convergence.py",
+      "verified": true
+    },
+    {
+      "page": "full-relink-convergence.md",
+      "sha256": "580ca742c9d4f1d53de889f6f6bc5800e04147a31d86f0424a6d7a7252cefbb1",
+      "source": "tests/test_relink.py",
+      "verified": true
+    },
+    {
+      "page": "functional-project.md",
+      "sha256": "21e0654ced2f5dd0588adcbedec328613fba524ff1e0a91ef07d63cbbf88288c",
+      "source": "src/x86decomp/cli.py",
+      "verified": true
+    },
+    {
+      "page": "functional-project.md",
+      "sha256": "a09cbba16f498158cf30191397884f0a70051c767b778cd520ac229b6e85e451",
+      "source": "src/x86decomp/dynamic.py",
+      "verified": true
+    },
+    {
+      "page": "functional-project.md",
+      "sha256": "93d98f6e85a01a107881131821d5eb04875d310795c4f173448918c5a96fdcd3",
+      "source": "src/x86decomp/symbolic.py",
+      "verified": true
+    },
+    {
+      "page": "functional-project.md",
+      "sha256": "cb8157c8210544e2ed4730e8bdb01f0a77dc9d05f683d43154cba1bf93c1e845",
+      "source": "src/x86decomp/integration.py",
+      "verified": true
+    },
+    {
+      "page": "functional-project.md",
+      "sha256": "cae8a093f08f66f9412393e59867c4d32ca7caf88533a175d22eebe1f325c0a5",
+      "source": "src/x86decomp/workflow.py",
+      "verified": true
+    },
+    {
+      "page": "functional-project.md",
+      "sha256": "0b21be2ee69be29d2dde6951f147195bd8042462690dea72fac0b6509deb3402",
+      "source": "tests/test_dynamic_symbolic.py",
+      "verified": true
+    },
+    {
+      "page": "hybrid-project.md",
+      "sha256": "21e0654ced2f5dd0588adcbedec328613fba524ff1e0a91ef07d63cbbf88288c",
+      "source": "src/x86decomp/cli.py",
+      "verified": true
+    },
+    {
+      "page": "hybrid-project.md",
+      "sha256": "721221b69c86bd2e7152ea2f322c9b48d89a01891feb6906038509a1f4592e2f",
+      "source": "src/x86decomp/hybrid.py",
+      "verified": true
+    },
+    {
+      "page": "hybrid-project.md",
+      "sha256": "cae8a093f08f66f9412393e59867c4d32ca7caf88533a175d22eebe1f325c0a5",
+      "source": "src/x86decomp/workflow.py",
+      "verified": true
+    },
+    {
+      "page": "hybrid-project.md",
+      "sha256": "a09cbba16f498158cf30191397884f0a70051c767b778cd520ac229b6e85e451",
+      "source": "src/x86decomp/dynamic.py",
+      "verified": true
+    },
+    {
+      "page": "hybrid-project.md",
+      "sha256": "93d98f6e85a01a107881131821d5eb04875d310795c4f173448918c5a96fdcd3",
+      "source": "src/x86decomp/symbolic.py",
+      "verified": true
+    },
+    {
+      "page": "hybrid-project.md",
+      "sha256": "6894dd0e5abce06a30df7ce445f6cf7faa87bcc16dac9f314f187e938697a62f",
+      "source": "tests/test_pe64_patch_hybrid.py",
+      "verified": true
+    },
+    {
+      "page": "matching-project.md",
+      "sha256": "21e0654ced2f5dd0588adcbedec328613fba524ff1e0a91ef07d63cbbf88288c",
+      "source": "src/x86decomp/cli.py",
+      "verified": true
+    },
+    {
+      "page": "matching-project.md",
+      "sha256": "f21f38f6ed0804a959188e31f5c9fa498d7d0740536fbb82594a375b12353944",
+      "source": "src/x86decomp/compiler.py",
+      "verified": true
+    },
+    {
+      "page": "matching-project.md",
+      "sha256": "997ffacbd833a3bb4c0545d1fb1981469e1d575680f4b39b7e6f34a4796abdf0",
+      "source": "src/x86decomp/exe_diff.py",
+      "verified": true
+    },
+    {
+      "page": "matching-project.md",
+      "sha256": "a9c72f376532369da77440496a1ea07564da5071ef8e6108e29c58e33e96fcf4",
+      "source": "src/x86decomp/image_match.py",
+      "verified": true
+    },
+    {
+      "page": "matching-project.md",
+      "sha256": "cae8a093f08f66f9412393e59867c4d32ca7caf88533a175d22eebe1f325c0a5",
+      "source": "src/x86decomp/workflow.py",
+      "verified": true
+    },
+    {
+      "page": "matching-project.md",
+      "sha256": "7b3e58d0cbef709f782c724956d752cd24fab83ec169cf6eb49562b883b4b174",
+      "source": "tests/test_modes_and_db.py",
+      "verified": true
+    },
+    {
+      "page": "patch-image-integration.md",
+      "sha256": "21e0654ced2f5dd0588adcbedec328613fba524ff1e0a91ef07d63cbbf88288c",
+      "source": "src/x86decomp/cli.py",
+      "verified": true
+    },
+    {
+      "page": "patch-image-integration.md",
+      "sha256": "61b9d802fc2c9c89f06877876f72efb7fc16d3a1fb283dddfd561dfd4fe61741",
+      "source": "src/x86decomp/patching.py",
+      "verified": true
+    },
+    {
+      "page": "patch-image-integration.md",
+      "sha256": "746651d78b0b8401565dd22e99f73c8c902b13400fd80094d4675ab52c8c4be5",
+      "source": "src/x86decomp/pe32.py",
+      "verified": true
+    },
+    {
+      "page": "patch-image-integration.md",
+      "sha256": "6894dd0e5abce06a30df7ce445f6cf7faa87bcc16dac9f314f187e938697a62f",
+      "source": "tests/test_pe64_patch_hybrid.py",
+      "verified": true
+    },
+    {
+      "page": "project-operations-recovery.md",
+      "sha256": "21e0654ced2f5dd0588adcbedec328613fba524ff1e0a91ef07d63cbbf88288c",
+      "source": "src/x86decomp/cli.py",
+      "verified": true
+    },
+    {
+      "page": "project-operations-recovery.md",
+      "sha256": "e78c286125050d9b582e38acdefcf3c901f0634372af8b287942ca8b10aa9aee",
+      "source": "src/x86decomp/project_state.py",
+      "verified": true
+    },
+    {
+      "page": "project-operations-recovery.md",
+      "sha256": "752a6e6b5d4f931007e93ee7898f6a0d2500b044266c7153a27be7e7eb49477e",
+      "source": "src/x86decomp/orchestrator.py",
+      "verified": true
+    },
+    {
+      "page": "project-operations-recovery.md",
+      "sha256": "2348ce9593959da0a9f52b144435a70b30965443a06e701c0ff9cf7c86e7d1a4",
+      "source": "src/x86decomp/content_store.py",
+      "verified": true
+    },
+    {
+      "page": "project-operations-recovery.md",
+      "sha256": "0b7574a71e4c8677352766c9358f8022871e566f43a9277050b887648f4ab22c",
+      "source": "src/x86decomp/security_audit.py",
+      "verified": true
+    },
+    {
+      "page": "project-operations-recovery.md",
+      "sha256": "04d73c197e4b7979731c140bef24e36ab323099e715d5462c95983a83d558c2b",
+      "source": "tests/test_project.py",
+      "verified": true
+    },
+    {
+      "page": "source-audit.md",
+      "sha256": "21e0654ced2f5dd0588adcbedec328613fba524ff1e0a91ef07d63cbbf88288c",
+      "source": "src/x86decomp/cli.py",
+      "verified": true
+    },
+    {
+      "page": "source-audit.md",
+      "sha256": "f21f38f6ed0804a959188e31f5c9fa498d7d0740536fbb82594a375b12353944",
+      "source": "src/x86decomp/compiler.py",
+      "verified": true
+    },
+    {
+      "page": "source-audit.md",
+      "sha256": "997ffacbd833a3bb4c0545d1fb1981469e1d575680f4b39b7e6f34a4796abdf0",
+      "source": "src/x86decomp/exe_diff.py",
+      "verified": true
+    },
+    {
+      "page": "source-audit.md",
+      "sha256": "a9c72f376532369da77440496a1ea07564da5071ef8e6108e29c58e33e96fcf4",
+      "source": "src/x86decomp/image_match.py",
+      "verified": true
+    },
+    {
+      "page": "source-audit.md",
+      "sha256": "cae8a093f08f66f9412393e59867c4d32ca7caf88533a175d22eebe1f325c0a5",
+      "source": "src/x86decomp/workflow.py",
+      "verified": true
+    },
+    {
+      "page": "source-audit.md",
+      "sha256": "7b3e58d0cbef709f782c724956d752cd24fab83ec169cf6eb49562b883b4b174",
+      "source": "tests/test_modes_and_db.py",
+      "verified": true
+    },
+    {
+      "page": "source-audit.md",
+      "sha256": "21e0654ced2f5dd0588adcbedec328613fba524ff1e0a91ef07d63cbbf88288c",
+      "source": "src/x86decomp/cli.py",
+      "verified": true
+    },
+    {
+      "page": "source-audit.md",
+      "sha256": "a09cbba16f498158cf30191397884f0a70051c767b778cd520ac229b6e85e451",
+      "source": "src/x86decomp/dynamic.py",
+      "verified": true
+    },
+    {
+      "page": "source-audit.md",
+      "sha256": "93d98f6e85a01a107881131821d5eb04875d310795c4f173448918c5a96fdcd3",
+      "source": "src/x86decomp/symbolic.py",
+      "verified": true
+    },
+    {
+      "page": "source-audit.md",
+      "sha256": "cb8157c8210544e2ed4730e8bdb01f0a77dc9d05f683d43154cba1bf93c1e845",
+      "source": "src/x86decomp/integration.py",
+      "verified": true
+    },
+    {
+      "page": "source-audit.md",
+      "sha256": "cae8a093f08f66f9412393e59867c4d32ca7caf88533a175d22eebe1f325c0a5",
+      "source": "src/x86decomp/workflow.py",
+      "verified": true
+    },
+    {
+      "page": "source-audit.md",
+      "sha256": "0b21be2ee69be29d2dde6951f147195bd8042462690dea72fac0b6509deb3402",
+      "source": "tests/test_dynamic_symbolic.py",
+      "verified": true
+    },
+    {
+      "page": "source-audit.md",
+      "sha256": "21e0654ced2f5dd0588adcbedec328613fba524ff1e0a91ef07d63cbbf88288c",
+      "source": "src/x86decomp/cli.py",
+      "verified": true
+    },
+    {
+      "page": "source-audit.md",
+      "sha256": "721221b69c86bd2e7152ea2f322c9b48d89a01891feb6906038509a1f4592e2f",
+      "source": "src/x86decomp/hybrid.py",
+      "verified": true
+    },
+    {
+      "page": "source-audit.md",
+      "sha256": "cae8a093f08f66f9412393e59867c4d32ca7caf88533a175d22eebe1f325c0a5",
+      "source": "src/x86decomp/workflow.py",
+      "verified": true
+    },
+    {
+      "page": "source-audit.md",
+      "sha256": "a09cbba16f498158cf30191397884f0a70051c767b778cd520ac229b6e85e451",
+      "source": "src/x86decomp/dynamic.py",
+      "verified": true
+    },
+    {
+      "page": "source-audit.md",
+      "sha256": "93d98f6e85a01a107881131821d5eb04875d310795c4f173448918c5a96fdcd3",
+      "source": "src/x86decomp/symbolic.py",
+      "verified": true
+    },
+    {
+      "page": "source-audit.md",
+      "sha256": "6894dd0e5abce06a30df7ce445f6cf7faa87bcc16dac9f314f187e938697a62f",
+      "source": "tests/test_pe64_patch_hybrid.py",
+      "verified": true
+    },
+    {
+      "page": "source-audit.md",
+      "sha256": "21e0654ced2f5dd0588adcbedec328613fba524ff1e0a91ef07d63cbbf88288c",
+      "source": "src/x86decomp/cli.py",
+      "verified": true
+    },
+    {
+      "page": "source-audit.md",
+      "sha256": "39a5dd1b26da8d0ef84e8ff247183068eb4943ab38211df3c56c43ca9a6911c0",
+      "source": "src/x86decomp/pe.py",
+      "verified": true
+    },
+    {
+      "page": "source-audit.md",
+      "sha256": "98657d48a9d3ebb79eaf951aa8676ffd7ca696c2ba2f07fe8a5c4f0ad622c2b3",
+      "source": "src/x86decomp/ghidra.py",
+      "verified": true
+    },
+    {
+      "page": "source-audit.md",
+      "sha256": "cc86a46f8c8674a6e14304158bd1d2467fb09ccbb00778c116204b0a639638b3",
+      "source": "src/x86decomp/disassembly.py",
+      "verified": true
+    },
+    {
+      "page": "source-audit.md",
+      "sha256": "de8befd97c8e7f0529f7c3c2750836f8f38fab52e26987cf390d725faad3ee1e",
+      "source": "src/x86decomp/evidence.py",
+      "verified": true
+    },
+    {
+      "page": "source-audit.md",
+      "sha256": "409e503d6c264dba48a00e1d1afc475ce735cf25f1ec4aab7ac41b07ed5b9bad",
+      "source": "src/x86decomp/analysis_db.py",
+      "verified": true
+    },
+    {
+      "page": "source-audit.md",
+      "sha256": "1c9a934bad943761f8d9b6bc22509a054a8ead82747d2091d5f7e84c5682b88b",
+      "source": "tests/test_ghidra.py",
+      "verified": true
+    },
+    {
+      "page": "source-audit.md",
+      "sha256": "21e0654ced2f5dd0588adcbedec328613fba524ff1e0a91ef07d63cbbf88288c",
+      "source": "src/x86decomp/cli.py",
+      "verified": true
+    },
+    {
+      "page": "source-audit.md",
+      "sha256": "f21f38f6ed0804a959188e31f5c9fa498d7d0740536fbb82594a375b12353944",
+      "source": "src/x86decomp/compiler.py",
+      "verified": true
+    },
+    {
+      "page": "source-audit.md",
+      "sha256": "05a54baba63c926190c0e2fb45bff09c6eb338ed6a479e6e47be210a6b1de859",
+      "source": "src/x86decomp/compiler_lab.py",
+      "verified": true
+    },
+    {
+      "page": "source-audit.md",
+      "sha256": "9dde5962b67d30fec64266313f5488a4e5501de9db26605d4719cbe276cde03f",
+      "source": "src/x86decomp/toolchains.py",
+      "verified": true
+    },
+    {
+      "page": "source-audit.md",
+      "sha256": "9645daed68779957cd14addad7626d32d99056f551c27d873e3f475cfe862f64",
+      "source": "tests/test_compiler.py",
+      "verified": true
+    },
+    {
+      "page": "source-audit.md",
+      "sha256": "21e0654ced2f5dd0588adcbedec328613fba524ff1e0a91ef07d63cbbf88288c",
+      "source": "src/x86decomp/cli.py",
+      "verified": true
+    },
+    {
+      "page": "source-audit.md",
+      "sha256": "61b9d802fc2c9c89f06877876f72efb7fc16d3a1fb283dddfd561dfd4fe61741",
+      "source": "src/x86decomp/patching.py",
+      "verified": true
+    },
+    {
+      "page": "source-audit.md",
+      "sha256": "746651d78b0b8401565dd22e99f73c8c902b13400fd80094d4675ab52c8c4be5",
+      "source": "src/x86decomp/pe32.py",
+      "verified": true
+    },
+    {
+      "page": "source-audit.md",
+      "sha256": "6894dd0e5abce06a30df7ce445f6cf7faa87bcc16dac9f314f187e938697a62f",
+      "source": "tests/test_pe64_patch_hybrid.py",
+      "verified": true
+    },
+    {
+      "page": "source-audit.md",
+      "sha256": "21e0654ced2f5dd0588adcbedec328613fba524ff1e0a91ef07d63cbbf88288c",
+      "source": "src/x86decomp/cli.py",
+      "verified": true
+    },
+    {
+      "page": "source-audit.md",
+      "sha256": "f67bc3077e7d54a9a32e542113cc28eadf00fa581c8e3d3c26e5c1b45a4e0900",
+      "source": "src/x86decomp/linker_reconstruction.py",
+      "verified": true
+    },
+    {
+      "page": "source-audit.md",
+      "sha256": "d401db042d4cc8300ccd4babd28cea400dca824d187a7caf0a1f3ead407fb296",
+      "source": "src/x86decomp/relink.py",
+      "verified": true
+    },
+    {
+      "page": "source-audit.md",
+      "sha256": "a9c72f376532369da77440496a1ea07564da5071ef8e6108e29c58e33e96fcf4",
+      "source": "src/x86decomp/image_match.py",
+      "verified": true
+    },
+    {
+      "page": "source-audit.md",
+      "sha256": "2b943e9c8c2399089e1b8c2815c0de4cb1bcf0468c09e64a647fef3508922f74",
+      "source": "src/x86decomp/convergence.py",
+      "verified": true
+    },
+    {
+      "page": "source-audit.md",
+      "sha256": "580ca742c9d4f1d53de889f6f6bc5800e04147a31d86f0424a6d7a7252cefbb1",
+      "source": "tests/test_relink.py",
+      "verified": true
+    },
+    {
+      "page": "source-audit.md",
+      "sha256": "21e0654ced2f5dd0588adcbedec328613fba524ff1e0a91ef07d63cbbf88288c",
+      "source": "src/x86decomp/cli.py",
+      "verified": true
+    },
+    {
+      "page": "source-audit.md",
+      "sha256": "e69b8d4ba247b2e3dbd3553cd207ee8fbe24fe244878c4dabb4afffbebb33903",
+      "source": "src/x86decomp/abi.py",
+      "verified": true
+    },
+    {
+      "page": "source-audit.md",
+      "sha256": "c1f07b15f8649be4235cb56bb2e8f953ed31211b98311633d6beccde38dce8fa",
+      "source": "src/x86decomp/cpp_recovery.py",
+      "verified": true
+    },
+    {
+      "page": "source-audit.md",
+      "sha256": "75ab6f14bcef35574409e280dad90a705f71bc5763d507258f705ad8f4c431f2",
+      "source": "src/x86decomp/harness_generator.py",
+      "verified": true
+    },
+    {
+      "page": "source-audit.md",
+      "sha256": "409e503d6c264dba48a00e1d1afc475ce735cf25f1ec4aab7ac41b07ed5b9bad",
+      "source": "src/x86decomp/analysis_db.py",
+      "verified": true
+    },
+    {
+      "page": "source-audit.md",
+      "sha256": "7707cba729a70b66986595aea747f5c1e782023e2b58134d2786680b52840a64",
+      "source": "tests/test_abi_disassembly.py",
+      "verified": true
+    },
+    {
+      "page": "source-audit.md",
+      "sha256": "21e0654ced2f5dd0588adcbedec328613fba524ff1e0a91ef07d63cbbf88288c",
+      "source": "src/x86decomp/cli.py",
+      "verified": true
+    },
+    {
+      "page": "source-audit.md",
+      "sha256": "bcc5e2a773d7eb7589f28df90c0fe898155788b8e695d15e363e6dbad249ae7b",
+      "source": "src/x86decomp/reproducibility.py",
+      "verified": true
+    },
+    {
+      "page": "source-audit.md",
+      "sha256": "0b7574a71e4c8677352766c9358f8022871e566f43a9277050b887648f4ab22c",
+      "source": "src/x86decomp/security_audit.py",
+      "verified": true
+    },
+    {
+      "page": "source-audit.md",
+      "sha256": "8e79be8c5af67a90063af185b2239a5ce5a8ca828627ee05c14d897f891e02fd",
+      "source": "src/x86decomp/release_gate.py",
+      "verified": true
+    },
+    {
+      "page": "source-audit.md",
+      "sha256": "e78c286125050d9b582e38acdefcf3c901f0634372af8b287942ca8b10aa9aee",
+      "source": "src/x86decomp/project_state.py",
+      "verified": true
+    },
+    {
+      "page": "source-audit.md",
+      "sha256": "da0d4bd57f7f4bb68957fa8aa42a67f7eb34347f35137849e360dc95e796db89",
+      "source": "tests/test_production.py",
+      "verified": true
+    },
+    {
+      "page": "source-audit.md",
+      "sha256": "21e0654ced2f5dd0588adcbedec328613fba524ff1e0a91ef07d63cbbf88288c",
+      "source": "src/x86decomp/cli.py",
+      "verified": true
+    },
+    {
+      "page": "source-audit.md",
+      "sha256": "b9b28fbcb2f38723b274e4150b1c3914ddcbceab1b49461fc5797a84f9e13fb3",
+      "source": "src/x86decomp/benchmarks.py",
+      "verified": true
+    },
+    {
+      "page": "source-audit.md",
+      "sha256": "9684fbcda0fd5060b3c1f2d0efb83892900c69190d33e24fd7e49f91885181e2",
+      "source": "src/x86decomp/ground_truth.py",
+      "verified": true
+    },
+    {
+      "page": "source-audit.md",
+      "sha256": "a09cbba16f498158cf30191397884f0a70051c767b778cd520ac229b6e85e451",
+      "source": "src/x86decomp/dynamic.py",
+      "verified": true
+    },
+    {
+      "page": "source-audit.md",
+      "sha256": "93d98f6e85a01a107881131821d5eb04875d310795c4f173448918c5a96fdcd3",
+      "source": "src/x86decomp/symbolic.py",
+      "verified": true
+    },
+    {
+      "page": "source-audit.md",
+      "sha256": "cb8157c8210544e2ed4730e8bdb01f0a77dc9d05f683d43154cba1bf93c1e845",
+      "source": "src/x86decomp/integration.py",
+      "verified": true
+    },
+    {
+      "page": "source-audit.md",
+      "sha256": "aa88771eecf6bbd2a6fcc6230848165884fea583b48688061d61c14756f9a1de",
+      "source": "tests/test_linker_metadata_corpus.py",
+      "verified": true
+    },
+    {
+      "page": "source-audit.md",
+      "sha256": "21e0654ced2f5dd0588adcbedec328613fba524ff1e0a91ef07d63cbbf88288c",
+      "source": "src/x86decomp/cli.py",
+      "verified": true
+    },
+    {
+      "page": "source-audit.md",
+      "sha256": "e78c286125050d9b582e38acdefcf3c901f0634372af8b287942ca8b10aa9aee",
+      "source": "src/x86decomp/project_state.py",
+      "verified": true
+    },
+    {
+      "page": "source-audit.md",
+      "sha256": "752a6e6b5d4f931007e93ee7898f6a0d2500b044266c7153a27be7e7eb49477e",
+      "source": "src/x86decomp/orchestrator.py",
+      "verified": true
+    },
+    {
+      "page": "source-audit.md",
+      "sha256": "2348ce9593959da0a9f52b144435a70b30965443a06e701c0ff9cf7c86e7d1a4",
+      "source": "src/x86decomp/content_store.py",
+      "verified": true
+    },
+    {
+      "page": "source-audit.md",
+      "sha256": "0b7574a71e4c8677352766c9358f8022871e566f43a9277050b887648f4ab22c",
+      "source": "src/x86decomp/security_audit.py",
+      "verified": true
+    },
+    {
+      "page": "source-audit.md",
+      "sha256": "04d73c197e4b7979731c140bef24e36ab323099e715d5462c95983a83d558c2b",
+      "source": "tests/test_project.py",
+      "verified": true
+    },
+    {
+      "page": "source-audit.md",
+      "sha256": "21e0654ced2f5dd0588adcbedec328613fba524ff1e0a91ef07d63cbbf88288c",
+      "source": "src/x86decomp/cli.py",
+      "verified": true
+    },
+    {
+      "page": "source-audit.md",
+      "sha256": "dd5a6c7c987b3c49a3f7c1c635d60b34542e21f9346bd85f869013532c844cc4",
+      "source": "src/x86decomp/reconstruction/cli.py",
+      "verified": true
+    },
+    {
+      "page": "source-audit.md",
+      "sha256": "acada93918527df17da324b8697e7e5f6f6259238790526d8b6daecaa26ae396",
+      "source": "src/x86decomp/reconstruction/acceleration.py",
+      "verified": true
+    },
+    {
+      "page": "source-audit.md",
+      "sha256": "449179fbd7c73f7f94d43957ee29a77d52c3473f35e0f8e43f370ea5dcd1c8d1",
+      "source": "tests/reconstruction/test_real_project_acceleration.py",
+      "verified": true
+    },
+    {
+      "page": "static-analysis-evidence.md",
+      "sha256": "21e0654ced2f5dd0588adcbedec328613fba524ff1e0a91ef07d63cbbf88288c",
+      "source": "src/x86decomp/cli.py",
+      "verified": true
+    },
+    {
+      "page": "static-analysis-evidence.md",
+      "sha256": "39a5dd1b26da8d0ef84e8ff247183068eb4943ab38211df3c56c43ca9a6911c0",
+      "source": "src/x86decomp/pe.py",
+      "verified": true
+    },
+    {
+      "page": "static-analysis-evidence.md",
+      "sha256": "98657d48a9d3ebb79eaf951aa8676ffd7ca696c2ba2f07fe8a5c4f0ad622c2b3",
+      "source": "src/x86decomp/ghidra.py",
+      "verified": true
+    },
+    {
+      "page": "static-analysis-evidence.md",
+      "sha256": "cc86a46f8c8674a6e14304158bd1d2467fb09ccbb00778c116204b0a639638b3",
+      "source": "src/x86decomp/disassembly.py",
+      "verified": true
+    },
+    {
+      "page": "static-analysis-evidence.md",
+      "sha256": "de8befd97c8e7f0529f7c3c2750836f8f38fab52e26987cf390d725faad3ee1e",
+      "source": "src/x86decomp/evidence.py",
+      "verified": true
+    },
+    {
+      "page": "static-analysis-evidence.md",
+      "sha256": "409e503d6c264dba48a00e1d1afc475ce735cf25f1ec4aab7ac41b07ed5b9bad",
+      "source": "src/x86decomp/analysis_db.py",
+      "verified": true
+    },
+    {
+      "page": "static-analysis-evidence.md",
+      "sha256": "1c9a934bad943761f8d9b6bc22509a054a8ead82747d2091d5f7e84c5682b88b",
+      "source": "tests/test_ghidra.py",
+      "verified": true
+    },
+    {
+      "page": "target-release-reproducibility.md",
+      "sha256": "21e0654ced2f5dd0588adcbedec328613fba524ff1e0a91ef07d63cbbf88288c",
+      "source": "src/x86decomp/cli.py",
+      "verified": true
+    },
+    {
+      "page": "target-release-reproducibility.md",
+      "sha256": "bcc5e2a773d7eb7589f28df90c0fe898155788b8e695d15e363e6dbad249ae7b",
+      "source": "src/x86decomp/reproducibility.py",
+      "verified": true
+    },
+    {
+      "page": "target-release-reproducibility.md",
+      "sha256": "0b7574a71e4c8677352766c9358f8022871e566f43a9277050b887648f4ab22c",
+      "source": "src/x86decomp/security_audit.py",
+      "verified": true
+    },
+    {
+      "page": "target-release-reproducibility.md",
+      "sha256": "8e79be8c5af67a90063af185b2239a5ce5a8ca828627ee05c14d897f891e02fd",
+      "source": "src/x86decomp/release_gate.py",
+      "verified": true
+    },
+    {
+      "page": "target-release-reproducibility.md",
+      "sha256": "e78c286125050d9b582e38acdefcf3c901f0634372af8b287942ca8b10aa9aee",
+      "source": "src/x86decomp/project_state.py",
+      "verified": true
+    },
+    {
+      "page": "target-release-reproducibility.md",
+      "sha256": "da0d4bd57f7f4bb68957fa8aa42a67f7eb34347f35137849e360dc95e796db89",
+      "source": "tests/test_production.py",
+      "verified": true
+    },
+    {
+      "page": "text-swap-project.md",
+      "sha256": "21e0654ced2f5dd0588adcbedec328613fba524ff1e0a91ef07d63cbbf88288c",
+      "source": "src/x86decomp/cli.py",
+      "verified": true
+    },
+    {
+      "page": "text-swap-project.md",
+      "sha256": "dd5a6c7c987b3c49a3f7c1c635d60b34542e21f9346bd85f869013532c844cc4",
+      "source": "src/x86decomp/reconstruction/cli.py",
+      "verified": true
+    },
+    {
+      "page": "text-swap-project.md",
+      "sha256": "acada93918527df17da324b8697e7e5f6f6259238790526d8b6daecaa26ae396",
+      "source": "src/x86decomp/reconstruction/acceleration.py",
+      "verified": true
+    },
+    {
+      "page": "text-swap-project.md",
+      "sha256": "449179fbd7c73f7f94d43957ee29a77d52c3473f35e0f8e43f370ea5dcd1c8d1",
+      "source": "tests/reconstruction/test_real_project_acceleration.py",
+      "verified": true
+    }
+  ],
+  "status": "pass",
+  "warnings": []
+}

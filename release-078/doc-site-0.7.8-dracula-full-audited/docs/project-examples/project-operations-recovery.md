@@ -155,10 +155,10 @@ Restore uses staging and archive safety bounds before committing the destination
 | Evidence file | SHA-256 |
 | --- | --- |
 | `src/x86decomp/cli.py` | `21e0654ced2f5dd0588adcbedec328613fba524ff1e0a91ef07d63cbbf88288c` |
-| `src/x86decomp/project_state.py` | `2c866a3ccaddff98f1d9342a1eb5397d3dc2bd6d77e4b95c7dd07a8d2e02610f` |
+| `src/x86decomp/project_state.py` | `e78c286125050d9b582e38acdefcf3c901f0634372af8b287942ca8b10aa9aee` |
 | `src/x86decomp/orchestrator.py` | `752a6e6b5d4f931007e93ee7898f6a0d2500b044266c7153a27be7e7eb49477e` |
 | `src/x86decomp/content_store.py` | `2348ce9593959da0a9f52b144435a70b30965443a06e701c0ff9cf7c86e7d1a4` |
-| `src/x86decomp/security_audit.py` | `6131424e2b3443bd0e6af244fdcf2418a36ea752afa838a124d5e98bedd913d5` |
+| `src/x86decomp/security_audit.py` | `0b7574a71e4c8677352766c9358f8022871e566f43a9277050b887648f4ab22c` |
 | `tests/test_project.py` | `04d73c197e4b7979731c140bef24e36ab323099e715d5462c95983a83d558c2b` |
 
 

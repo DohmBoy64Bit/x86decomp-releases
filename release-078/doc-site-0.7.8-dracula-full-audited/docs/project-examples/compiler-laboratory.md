@@ -69,7 +69,7 @@ Registration hashes referenced executables and records their roles. Proprietary 
 
 ## Use a complete compiler profile
 
-The bundled `examples/compiler-profiles/gcc-i686-object.json` demonstrates the schema with source/output placeholders, timeout, environment policy, family, version label, and version probe. It intentionally produces a 32-bit ELF relocatable object, so do not use it as a COFF matching profile without changing the actual compiler contract.
+The bundled `examples/compiler-profiles/gcc-i686-object.json` demonstrates the schema with source/output substitution tokens, timeout, environment policy, family, version label, and version probe. It intentionally produces a 32-bit ELF relocatable object, so do not use it as a COFF matching profile without changing the actual compiler contract.
 
 ```
 {

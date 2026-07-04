@@ -136,9 +136,9 @@ Store the backup together with the gate, reproduction, security, convergence, wo
 | --- | --- |
 | `src/x86decomp/cli.py` | `21e0654ced2f5dd0588adcbedec328613fba524ff1e0a91ef07d63cbbf88288c` |
 | `src/x86decomp/reproducibility.py` | `bcc5e2a773d7eb7589f28df90c0fe898155788b8e695d15e363e6dbad249ae7b` |
-| `src/x86decomp/security_audit.py` | `6131424e2b3443bd0e6af244fdcf2418a36ea752afa838a124d5e98bedd913d5` |
+| `src/x86decomp/security_audit.py` | `0b7574a71e4c8677352766c9358f8022871e566f43a9277050b887648f4ab22c` |
 | `src/x86decomp/release_gate.py` | `8e79be8c5af67a90063af185b2239a5ce5a8ca828627ee05c14d897f891e02fd` |
-| `src/x86decomp/project_state.py` | `2c866a3ccaddff98f1d9342a1eb5397d3dc2bd6d77e4b95c7dd07a8d2e02610f` |
+| `src/x86decomp/project_state.py` | `e78c286125050d9b582e38acdefcf3c901f0634372af8b287942ca8b10aa9aee` |
 | `tests/test_production.py` | `da0d4bd57f7f4bb68957fa8aa42a67f7eb34347f35137849e360dc95e796db89` |
 
 

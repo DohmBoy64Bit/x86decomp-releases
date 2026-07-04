@@ -339,7 +339,7 @@ x86decomp function classify reports\functions\sorted.json --output reports\funct
 <p>The <code>prologue</code> profile is a heuristic profile name. It is not an MSVC-only or game-specific promise. The report remains triage evidence until it is reconciled with project function packets, exact bytes, and later validation reports.</p>
 <h2 id="2-produce-or-compose-replacement-text-bytes">2. Produce or compose replacement <code>.text</code> bytes</h2>
 <p>The text-swap workflow requires a replacement byte stream. The current <code>image-text compose</code> command can compose bytes from project function records or from a supplied function list:</p>
-<pre><code class="language-powershell">x86decomp image-text compose build\replacement-text.bin --project project --function-list reports\functions\sorted.json
+<pre><code class="language-powershell">x86decomp image-text --project project compose build\replacement-text.bin --function-list reports\functions\sorted.json
 </code></pre>
 <p>If project function records contain artifact ranges, the composed report records those bytes as <code>artifact_range</code>. Missing ranges are filled with the configured fallback byte. That fallback is useful for detecting gaps, but it should not be misread as decompiled source.</p>
 <p>The command writes a companion report next to the output byte stream:</p>
@@ -377,9 +377,9 @@ planned output path
 <p>Unknown native programs should run behind an explicit isolation boundary such as a disposable VM or an external wrapper. A launch smoke test does not prove that the whole game works.</p>
 <h2 id="7-reconcile-progress-and-source-stages">7. Reconcile progress and source stages</h2>
 <p>After the derived image is produced, reconcile project accounting:</p>
-<pre><code class="language-powershell">x86decomp progress reconcile --project project --output reports\progress\reconcile.json
-x86decomp source-stage classify --project project --output reports\progress\source-stage.json
-x86decomp project health --project project --output reports\progress\health.json
+<pre><code class="language-powershell">x86decomp progress --project project reconcile --output reports\progress\reconcile.json
+x86decomp source-stage --project project classify --output reports\progress\source-stage.json
+x86decomp project --project project health --output reports\progress\health.json
 </code></pre>
 <p>This separates byte-form fallbacks, generated wrappers, pattern-generated source, LLM-generated source, and human-reviewed source. For a moddable project, byte-preserving wrappers and raw assembly fallbacks should not be counted as human-readable decompilation.</p>
 <h2 id="8-move-toward-full-relink-later">8. Move toward full relink later</h2>
@@ -401,7 +401,42 @@ all functions matched
 whole game behavior proven
 mod-ready human-readable source achieved
 </code></pre>
-<p>Those claims require separate matching, functional, source-stage, relink, integration, and release-gate evidence.</p></p>
+<p>Those claims require separate matching, functional, source-stage, relink, integration, and release-gate evidence.</p>
+<h2 id="v078-source-basis">v0.7.8 source basis</h2>
+<blockquote>
+<p><strong>Verification model.</strong> Command syntax is checked against the live parser. The source files below are hashed from the current release; implementation and test rows are retained as independent truth boundaries.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Evidence file</th>
+<th>SHA-256</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>src/x86decomp/cli.py</code></td>
+<td><code>21e0654ced2f5dd0588adcbedec328613fba524ff1e0a91ef07d63cbbf88288c</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/reconstruction/cli.py</code></td>
+<td><code>dd5a6c7c987b3c49a3f7c1c635d60b34542e21f9346bd85f869013532c844cc4</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/reconstruction/acceleration.py</code></td>
+<td><code>acada93918527df17da324b8697e7e5f6f6259238790526d8b6daecaa26ae396</code></td>
+</tr>
+<tr>
+<td><code>tests/reconstruction/test_real_project_acceleration.py</code></td>
+<td><code>449179fbd7c73f7f94d43957ee29a77d52c3473f35e0f8e43f370ea5dcd1c8d1</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="related-examples">Related examples</h2>
+<p>[Full relink convergence</p>
+<p>Open the source-verified workflow.](full-relink-convergence.md)[Patch-image integration</p>
+<p>Open the source-verified workflow.](patch-image-integration.md)[Project operations and recovery</p>
+<p>Open the source-verified workflow.](project-operations-recovery.md)</p></p>
     </article>
 </section>
             <!-- endblock -->

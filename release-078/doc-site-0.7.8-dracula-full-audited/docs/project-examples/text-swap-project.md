@@ -52,7 +52,7 @@ The `prologue` profile is a heuristic profile name. It is not an MSVC-only or ga
 The text-swap workflow requires a replacement byte stream. The current `image-text compose` command can compose bytes from project function records or from a supplied function list:
 
 ```powershell
-x86decomp image-text compose build\replacement-text.bin --project project --function-list reports\functions\sorted.json
+x86decomp image-text --project project compose build\replacement-text.bin --function-list reports\functions\sorted.json
 ```
 
 If project function records contain artifact ranges, the composed report records those bytes as `artifact_range`. Missing ranges are filled with the configured fallback byte. That fallback is useful for detecting gaps, but it should not be misread as decompiled source.
@@ -123,9 +123,9 @@ Unknown native programs should run behind an explicit isolation boundary such as
 After the derived image is produced, reconcile project accounting:
 
 ```powershell
-x86decomp progress reconcile --project project --output reports\progress\reconcile.json
-x86decomp source-stage classify --project project --output reports\progress\source-stage.json
-x86decomp project health --project project --output reports\progress\health.json
+x86decomp progress --project project reconcile --output reports\progress\reconcile.json
+x86decomp source-stage --project project classify --output reports\progress\source-stage.json
+x86decomp project --project project health --output reports\progress\health.json
 ```
 
 This separates byte-form fallbacks, generated wrappers, pattern-generated source, LLM-generated source, and human-reviewed source. For a moddable project, byte-preserving wrappers and raw assembly fallbacks should not be counted as human-readable decompilation.
@@ -162,3 +162,24 @@ mod-ready human-readable source achieved
 ```
 
 Those claims require separate matching, functional, source-stage, relink, integration, and release-gate evidence.
+
+## v0.7.8 source basis
+
+> **Verification model.** Command syntax is checked against the live parser. The source files below are hashed from the current release; implementation and test rows are retained as independent truth boundaries.
+
+| Evidence file | SHA-256 |
+| --- | --- |
+| `src/x86decomp/cli.py` | `21e0654ced2f5dd0588adcbedec328613fba524ff1e0a91ef07d63cbbf88288c` |
+| `src/x86decomp/reconstruction/cli.py` | `dd5a6c7c987b3c49a3f7c1c635d60b34542e21f9346bd85f869013532c844cc4` |
+| `src/x86decomp/reconstruction/acceleration.py` | `acada93918527df17da324b8697e7e5f6f6259238790526d8b6daecaa26ae396` |
+| `tests/reconstruction/test_real_project_acceleration.py` | `449179fbd7c73f7f94d43957ee29a77d52c3473f35e0f8e43f370ea5dcd1c8d1` |
+
+## Related examples
+
+[Full relink convergence
+
+Open the source-verified workflow.](full-relink-convergence.md)[Patch-image integration
+
+Open the source-verified workflow.](patch-image-integration.md)[Project operations and recovery
+
+Open the source-verified workflow.](project-operations-recovery.md)

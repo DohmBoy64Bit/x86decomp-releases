@@ -1,5 +1,5 @@
 {
-  "docsite": "x86decomp 0.7.8 Dracula MkDocs",
+  "file_count": 466,
   "files": [
     {
       "path": "docs/about.md",
@@ -1678,8 +1678,8 @@
     },
     {
       "path": "docs/project-examples/compiler-laboratory.md",
-      "sha256": "be5f0703ff2e2471ae9c2cd9c9e7dd461dd4c57a589bcd3ed73d97fe9ba1cf0e",
-      "size": 8408
+      "sha256": "095b1c9fe817a9723e3feefaf2ee5ffd76ba031e33b91c60b3470fc75a56fe4a",
+      "size": 8415
     },
     {
       "path": "docs/project-examples/full-relink-convergence.md",
@@ -1688,8 +1688,8 @@
     },
     {
       "path": "docs/project-examples/functional-project.md",
-      "sha256": "ddfedca4e830c7b3019f832060aacff46b9ec70f377d745b21a21964c2945c86",
-      "size": 9312
+      "sha256": "0dfad858912741f2f82d54466658da8a4a79475ced2dbc2f7b1e9909ec39c794",
+      "size": 9309
     },
     {
       "path": "docs/project-examples/hybrid-project.md",
@@ -1703,18 +1703,18 @@
     },
     {
       "path": "docs/project-examples/patch-image-integration.md",
-      "sha256": "9ebdb7827f7decd428e0e46635f3f4e1c428456fb00721fa602017ea74f3cc93",
-      "size": 7123
+      "sha256": "f7b66fbea3a7658f9febbeb088bb4a2c3aaf962e303066efe615c2fe30364ec1",
+      "size": 7507
     },
     {
       "path": "docs/project-examples/project-operations-recovery.md",
-      "sha256": "0ecc788d16977a904c24793a6b31b0ca2f540d8f08f24fc411a490bb88255748",
+      "sha256": "9afd057e852ed62e99ca7aa6d3c95db98dacd22fdde222eec1c167fb4b1e3f36",
       "size": 6725
     },
     {
       "path": "docs/project-examples/source-audit.md",
-      "sha256": "8f7e511ffc0463c33a5ab85e3f0a0b3d12c17be2b2fd671a82ecc8f02b8612b7",
-      "size": 7630
+      "sha256": "7f8f6d6365b174cef7cf298a59904c2568364c90d1c97ab942fdcd7fe868475d",
+      "size": 8150
     },
     {
       "path": "docs/project-examples/static-analysis-evidence.md",
@@ -1723,13 +1723,13 @@
     },
     {
       "path": "docs/project-examples/target-release-reproducibility.md",
-      "sha256": "9b0c4f954141ca190cf8a5d4af72aa0e138a32b6d7efbd9e936c25faca15e3b5",
+      "sha256": "33c6dee4e0a6abe475c0822ae29c112208632f1ca2bbc195850edf90125919e7",
       "size": 7299
     },
     {
       "path": "docs/project-examples/text-swap-project.md",
-      "sha256": "831f9ce5ba468a20491c4c15f66ff92caf590e91a6ce0ea3d6e78cc03e919b23",
-      "size": 7167
+      "sha256": "6240abf6e3ccde0994fd2c83f7a52be5ce2c058dcdf844bdcd9751a309b4c8c3",
+      "size": 8206
     },
     {
       "path": "docs/project-examples.md",
@@ -1750,6 +1750,11 @@
       "path": "docs/release-artifacts/FULL_DOCSITE_HASH_PARITY_AUDIT.md",
       "sha256": "fa6568e5df5456f9a4cf5f830fdb5f74376da1b429fb77d8039b8b25d01702e8",
       "size": 2337
+    },
+    {
+      "path": "docs/release-artifacts/PROJECT_EXAMPLES_STRICT_AUDIT.md",
+      "sha256": "9e0fdda831a9a422bcb85dff23a20109e252f911c89362683bced61a30b6f0fb",
+      "size": 707
     },
     {
       "path": "docs/release-evidence.md",
@@ -2327,7 +2332,8 @@
       "size": 3708
     }
   ],
-  "generated_at": "2026-07-04T06:21:45.775435+00:00",
-  "markdown_file_count": 465,
+  "generated_at": "2026-07-04T06:51:35.024929+00:00",
+  "kind": "docsite_markdown_hash_manifest",
+  "release": "0.7.8",
   "schema_version": 1
 }

@@ -114,7 +114,7 @@ Compilation and ABI compatibility are prerequisites for meaningful behavior comp
 ## Run bounded concrete differential execution
 
 ```
-x86decomp dynamic-validate target/sub_00401230.bin build/sub_00401230.bin harnesses/sub_00401230.json --target-base $targetBase --candidate-base 0 --report reports/dynamic/sub_00401230.json
+x86decomp dynamic-validate target/sub_00401230.bin build/sub_00401230.bin harnesses/sub_00401230.json --target-base 0x401230 --candidate-base 0 --report reports/dynamic/sub_00401230.json
 ```
 
 The Unicorn-backed validator compares the observations declared by the harness under its initial register, stack, memory, stub, timeout, and instruction bounds. The key report claim is equivalence for that harness—not semantic equivalence for every input or a complete Windows process model.
