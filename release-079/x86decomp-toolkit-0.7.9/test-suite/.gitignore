@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+build/
+dist/
+.coverage
+coverage.json
+coverage.xml
+coverage-html/
+htmlcov/
+test-results/
+.x86decomp-test-tools/
+tools/
+x86decomp-test.json

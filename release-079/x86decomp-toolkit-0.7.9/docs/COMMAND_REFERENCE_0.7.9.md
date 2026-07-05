@@ -1,0 +1,416 @@
+# Command reference — 0.7.9
+
+- Root commands: 166
+- Canonical groups: 59
+- Canonical routes: 239
+
+## Root commands
+
+- `abi` — Canonical abi commands implemented by the current capability subsystem.
+- `abi-check` — Command registered by the current command-line parser.
+- `angr-validate` — Command registered by the current command-line parser.
+- `artifact-import` — Command registered by the current command-line parser.
+- `artifact-verify` — Command registered by the current command-line parser.
+- `asm` — Canonical asm commands implemented by the current capability subsystem.
+- `asset` — Canonical asset commands implemented by the current capability subsystem.
+- `benchmark-run` — Command registered by the current command-line parser.
+- `boundary` — Canonical boundary commands implemented by the current capability subsystem.
+- `build` — Canonical build commands implemented by the current capability subsystem.
+- `campaign` — Canonical campaign commands implemented by the current capability subsystem.
+- `candidate` — Canonical candidate commands implemented by the current capability subsystem.
+- `capsule` — Canonical capsule commands implemented by the current capability subsystem.
+- `changeset` — Canonical changeset commands implemented by the current capability subsystem.
+- `claim-attach` — Command registered by the current command-line parser.
+- `claim-contradict` — Command registered by the current command-line parser.
+- `claim-create` — Command registered by the current command-line parser.
+- `claim-verify` — Command registered by the current command-line parser.
+- `class` — Canonical class commands implemented by the current capability subsystem.
+- `coff-comdat-resolve` — Command registered by the current command-line parser.
+- `coff-extract` — Command registered by the current command-line parser.
+- `coff-inspect` — Command registered by the current command-line parser.
+- `coff-synthesize` — Command registered by the current command-line parser.
+- `commands` — Command registered by the current command-line parser.
+- `compile` — Command registered by the current command-line parser.
+- `compile-worker` — Command registered by the current command-line parser.
+- `compiler-lab` — Command registered by the current command-line parser.
+- `compiler-rules` — Canonical compiler-rules commands implemented by the current capability subsystem.
+- `consensus` — Canonical consensus commands implemented by the current capability subsystem.
+- `content-put` — Command registered by the current command-line parser.
+- `content-verify` — Command registered by the current command-line parser.
+- `convergence-analyze` — Command registered by the current command-line parser.
+- `corpus-build` — Command registered by the current command-line parser.
+- `corpus-compare` — Command registered by the current command-line parser.
+- `corpus-create-manifest` — Command registered by the current command-line parser.
+- `corpus-generate` — Command registered by the current command-line parser.
+- `corpus-generated-verify` — Command registered by the current command-line parser.
+- `corpus-verify` — Command registered by the current command-line parser.
+- `counterexample` — Canonical counterexample commands implemented by the current capability subsystem.
+- `cpp-recover` — Command registered by the current command-line parser.
+- `crosscheck-ghidra` — Command registered by the current command-line parser.
+- `db-constraint-accept` — Command registered by the current command-line parser.
+- `db-constraint-add` — Command registered by the current command-line parser.
+- `db-constraint-conflicts` — Command registered by the current command-line parser.
+- `db-ingest` — Command registered by the current command-line parser.
+- `db-query` — Command registered by the current command-line parser.
+- `decompiler` — Canonical decompiler commands implemented by the current capability subsystem.
+- `decompme-pack` — Command registered by the current command-line parser.
+- `dependency-audit` — Command registered by the current command-line parser.
+- `diff` — Canonical diff commands implemented by the current capability subsystem.
+- `diff-bytes` — Command registered by the current command-line parser.
+- `diff-function` — Command registered by the current command-line parser.
+- `disassemble` — Command registered by the current command-line parser.
+- `drcov-parse` — Command registered by the current command-line parser.
+- `drcov-run` — Command registered by the current command-line parser.
+- `dynamic-validate` — Command registered by the current command-line parser.
+- `evidence-add` — Command registered by the current command-line parser.
+- `family` — Canonical family commands implemented by the current capability subsystem.
+- `function` — Canonical function commands implemented by the current capability subsystem.
+- `game-pattern` — Canonical game-pattern commands implemented by the current capability subsystem.
+- `ghidra-export` — Command registered by the current command-line parser.
+- `ghidra-mcp` — Canonical ghidra-mcp commands implemented by the current capability subsystem.
+- `graph` — Canonical graph commands implemented by the current capability subsystem.
+- `harness-generate` — Command registered by the current command-line parser.
+- `headers` — Canonical headers commands implemented by the current capability subsystem.
+- `hybrid` — Canonical hybrid commands implemented by the current capability subsystem.
+- `hybrid-generate` — Command registered by the current command-line parser.
+- `hypothesis` — Canonical hypothesis commands implemented by the current capability subsystem.
+- `image-match` — Command registered by the current command-line parser.
+- `image-profile` — Command registered by the current command-line parser.
+- `image-text` — Canonical image-text commands implemented by the current capability subsystem.
+- `init` — Command registered by the current command-line parser.
+- `inspect-pe` — Command registered by the current command-line parser.
+- `integration-run` — Command registered by the current command-line parser.
+- `layout-reconstruct` — Command registered by the current command-line parser.
+- `lib-inspect` — Command registered by the current command-line parser.
+- `library` — Canonical library commands implemented by the current capability subsystem.
+- `linker-plan` — Command registered by the current command-line parser.
+- `llm` — Canonical llm commands implemented by the current capability subsystem.
+- `loop` — Canonical loop commands implemented by the current capability subsystem.
+- `map-inspect` — Command registered by the current command-line parser.
+- `match` — Canonical match commands implemented by the current capability subsystem.
+- `mcp-commit` — Command registered by the current command-line parser.
+- `mcp-propose` — Command registered by the current command-line parser.
+- `mcp-read` — Command registered by the current command-line parser.
+- `mcp-tools` — Command registered by the current command-line parser.
+- `memory-add` — Command registered by the current command-line parser.
+- `memory-render` — Command registered by the current command-line parser.
+- `memory-verify` — Command registered by the current command-line parser.
+- `metadata-scan` — Command registered by the current command-line parser.
+- `mod` — Canonical mod commands implemented by the current capability subsystem.
+- `module` — Canonical module commands implemented by the current capability subsystem.
+- `objdiff-run` — Command registered by the current command-line parser.
+- `patch-image` — Command registered by the current command-line parser.
+- `pattern` — Canonical pattern commands implemented by the current capability subsystem.
+- `pdb-inspect` — Command registered by the current command-line parser.
+- `pe` — Canonical pe commands implemented by the current capability subsystem.
+- `pipeline-cancel` — Command registered by the current command-line parser.
+- `pipeline-create` — Command registered by the current command-line parser.
+- `pipeline-recover` — Command registered by the current command-line parser.
+- `pipeline-retry` — Command registered by the current command-line parser.
+- `pipeline-run` — Command registered by the current command-line parser.
+- `pipeline-status` — Command registered by the current command-line parser.
+- `playability` — Canonical playability commands implemented by the current capability subsystem.
+- `plugin` — Canonical plugin commands implemented by the current capability subsystem.
+- `progress` — Canonical progress commands implemented by the current capability subsystem.
+- `project` — Canonical project commands implemented by the current capability subsystem.
+- `project-backup` — Command registered by the current command-line parser.
+- `project-check` — Command registered by the current command-line parser.
+- `project-from-target` — Command registered by the current command-line parser.
+- `project-gc` — Command registered by the current command-line parser.
+- `project-migrate` — Command registered by the current command-line parser.
+- `project-repair` — Command registered by the current command-line parser.
+- `project-restore` — Command registered by the current command-line parser.
+- `proof` — Canonical proof commands implemented by the current capability subsystem.
+- `provenance` — Canonical provenance commands implemented by the current capability subsystem.
+- `regression` — Canonical regression commands implemented by the current capability subsystem.
+- `release-gate` — Command registered by the current command-line parser.
+- `release-manifest-verify` — Command registered by the current command-line parser.
+- `release-policy` — Canonical release-policy commands implemented by the current capability subsystem.
+- `relink` — Command registered by the current command-line parser.
+- `reloc` — Canonical reloc commands implemented by the current capability subsystem.
+- `reproduce-create` — Command registered by the current command-line parser.
+- `reproduce-verify` — Command registered by the current command-line parser.
+- `review` — Canonical review commands implemented by the current capability subsystem.
+- `runtime` — Canonical runtime commands implemented by the current capability subsystem.
+- `runtime-analysis` — Canonical runtime-analysis commands implemented by the current capability subsystem.
+- `sbom-generate` — Command registered by the current command-line parser.
+- `script-port` — Canonical script-port commands implemented by the current capability subsystem.
+- `security` — Canonical security commands implemented by the current capability subsystem.
+- `security-audit` — Command registered by the current command-line parser.
+- `serve` — Command registered by the current command-line parser.
+- `snapshot-tools` — Command registered by the current command-line parser.
+- `source` — Canonical source commands implemented by the current capability subsystem.
+- `source-map` — Canonical source-map commands implemented by the current capability subsystem.
+- `source-stage` — Canonical source-stage commands implemented by the current capability subsystem.
+- `staging` — Canonical staging commands implemented by the current capability subsystem.
+- `subsystem` — Canonical subsystem commands implemented by the current capability subsystem.
+- `symbolic-memory-validate` — Command registered by the current command-line parser.
+- `symbolic-validate` — Command registered by the current command-line parser.
+- `target-pack-infer` — Command registered by the current command-line parser.
+- `target-pack-verify` — Command registered by the current command-line parser.
+- `template-derive` — Command registered by the current command-line parser.
+- `template-materialize` — Command registered by the current command-line parser.
+- `test-bundle-create` — Command registered by the current command-line parser.
+- `test-bundle-inspect` — Command registered by the current command-line parser.
+- `tests` — Canonical tests commands implemented by the current capability subsystem.
+- `text-swap` — Canonical text-swap commands implemented by the current capability subsystem.
+- `toolchain` — Canonical toolchain commands implemented by the current capability subsystem.
+- `toolchain-register` — Command registered by the current command-line parser.
+- `toolchain-verify` — Command registered by the current command-line parser.
+- `triage` — Canonical triage commands implemented by the current capability subsystem.
+- `type` — Canonical type commands implemented by the current capability subsystem.
+- `verify-project` — Command registered by the current command-line parser.
+- `vtable` — Canonical vtable commands implemented by the current capability subsystem.
+- `windows` — Canonical windows commands implemented by the current capability subsystem.
+- `work-claim` — Command registered by the current command-line parser.
+- `work-create` — Command registered by the current command-line parser.
+- `work-next` — Command registered by the current command-line parser.
+- `work-propose` — Command registered by the current command-line parser.
+- `work-validate` — Command registered by the current command-line parser.
+- `worker` — Canonical worker commands implemented by the current capability subsystem.
+- `worker-capabilities` — Command registered by the current command-line parser.
+- `workflow-init` — Command registered by the current command-line parser.
+- `workflow-show` — Command registered by the current command-line parser.
+- `workflow-update` — Command registered by the current command-line parser.
+
+## Canonical routes
+
+- `x86decomp abi compare` — implemented by `reconstruction`
+- `x86decomp abi export` — implemented by `reconstruction`
+- `x86decomp abi recover` — implemented by `reconstruction`
+- `x86decomp abi shim` — implemented by `reconstruction`
+- `x86decomp abi show` — implemented by `reconstruction`
+- `x86decomp abi verify` — implemented by `reconstruction`
+- `x86decomp asm annotate` — implemented by `assembly`
+- `x86decomp asm batch` — implemented by `assembly`
+- `x86decomp asm list` — implemented by `assembly`
+- `x86decomp asm materialize` — implemented by `assembly`
+- `x86decomp asm report` — implemented by `assembly`
+- `x86decomp asm verify-roundtrip` — implemented by `assembly`
+- `x86decomp asset inventory` — implemented by `reconstruction`
+- `x86decomp boundary audit` — implemented by `native`
+- `x86decomp boundary audit-project` — implemented by `native`
+- `x86decomp boundary export-ghidra-fixes` — implemented by `native`
+- `x86decomp boundary list` — implemented by `native`
+- `x86decomp boundary show` — implemented by `native`
+- `x86decomp build add-target` — implemented by `reconstruction`
+- `x86decomp build add-variant` — implemented by `reconstruction`
+- `x86decomp build compare-modes` — implemented by `reconstruction`
+- `x86decomp build create` — implemented by `reconstruction`
+- `x86decomp build generate` — implemented by `reconstruction`
+- `x86decomp build matrix` — implemented by `reconstruction`
+- `x86decomp build show` — implemented by `reconstruction`
+- `x86decomp build validate` — implemented by `reconstruction`
+- `x86decomp campaign branch` — implemented by `governance`
+- `x86decomp campaign create` — implemented by `governance`
+- `x86decomp campaign list` — implemented by `governance`
+- `x86decomp campaign pause` — implemented by `governance`
+- `x86decomp campaign plan` — implemented by `governance`
+- `x86decomp campaign resume` — implemented by `governance`
+- `x86decomp campaign snapshot` — implemented by `governance`
+- `x86decomp campaign start` — implemented by `governance`
+- `x86decomp campaign status` — implemented by `governance`
+- `x86decomp campaign stop` — implemented by `governance`
+- `x86decomp candidate add-file` — implemented by `governance`
+- `x86decomp candidate compare` — implemented by `governance`
+- `x86decomp candidate create` — implemented by `governance`
+- `x86decomp candidate evaluate` — implemented by `governance`
+- `x86decomp candidate list` — implemented by `governance`
+- `x86decomp candidate promote` — implemented by `reconstruction`
+- `x86decomp candidate search` — implemented by `reconstruction`
+- `x86decomp candidate show` — implemented by `governance`
+- `x86decomp candidate transition` — implemented by `governance`
+- `x86decomp capsule create` — implemented by `reconstruction`
+- `x86decomp capsule inspect` — implemented by `reconstruction`
+- `x86decomp capsule reproduce` — implemented by `reconstruction`
+- `x86decomp capsule verify` — implemented by `reconstruction`
+- `x86decomp changeset add-operation` — implemented by `reconstruction`
+- `x86decomp changeset apply` — implemented by `governance`
+- `x86decomp changeset conflicts` — implemented by `reconstruction`
+- `x86decomp changeset create` — implemented by `reconstruction`
+- `x86decomp changeset export` — implemented by `governance`
+- `x86decomp changeset inspect` — implemented by `governance`
+- `x86decomp changeset merge` — implemented by `reconstruction`
+- `x86decomp changeset rebase` — implemented by `reconstruction`
+- `x86decomp changeset show` — implemented by `reconstruction`
+- `x86decomp changeset verify` — implemented by `reconstruction`
+- `x86decomp class scaffold` — implemented by `reconstruction`
+- `x86decomp compiler-rules compare-flags` — implemented by `reconstruction`
+- `x86decomp compiler-rules learn-rule` — implemented by `reconstruction`
+- `x86decomp compiler-rules rule-report` — implemented by `reconstruction`
+- `x86decomp consensus conflicts` — implemented by `governance`
+- `x86decomp consensus explain` — implemented by `governance`
+- `x86decomp consensus record` — implemented by `governance`
+- `x86decomp consensus resolve` — implemented by `governance`
+- `x86decomp consensus scan` — implemented by `governance`
+- `x86decomp counterexample add` — implemented by `governance`
+- `x86decomp counterexample list` — implemented by `governance`
+- `x86decomp counterexample promote` — implemented by `governance`
+- `x86decomp counterexample show` — implemented by `governance`
+- `x86decomp decompiler cleanup` — implemented by `reconstruction`
+- `x86decomp diff explain` — implemented by `reconstruction`
+- `x86decomp family add` — implemented by `governance`
+- `x86decomp family correlate` — implemented by `governance`
+- `x86decomp family create` — implemented by `governance`
+- `x86decomp family report` — implemented by `governance`
+- `x86decomp function classify` — implemented by `reconstruction`
+- `x86decomp function discover` — implemented by `reconstruction`
+- `x86decomp function reconcile` — implemented by `reconstruction`
+- `x86decomp function sort` — implemented by `reconstruction`
+- `x86decomp game-pattern state-machine` — implemented by `reconstruction`
+- `x86decomp ghidra-mcp batch-decompile` — implemented by `reconstruction`
+- `x86decomp ghidra-mcp decompile` — implemented by `reconstruction`
+- `x86decomp ghidra-mcp functions` — implemented by `reconstruction`
+- `x86decomp ghidra-mcp probe` — implemented by `reconstruction`
+- `x86decomp ghidra-mcp sync-names` — implemented by `reconstruction`
+- `x86decomp graph edge` — implemented by `governance`
+- `x86decomp graph impact` — implemented by `governance`
+- `x86decomp graph node` — implemented by `governance`
+- `x86decomp headers create` — implemented by `reconstruction`
+- `x86decomp headers cycles` — implemented by `reconstruction`
+- `x86decomp headers declare` — implemented by `reconstruction`
+- `x86decomp headers explain` — implemented by `reconstruction`
+- `x86decomp headers include` — implemented by `reconstruction`
+- `x86decomp headers synthesize` — implemented by `reconstruction`
+- `x86decomp headers synthesize-project` — implemented by `reconstruction`
+- `x86decomp headers validate` — implemented by `reconstruction`
+- `x86decomp hybrid compose` — implemented by `native`
+- `x86decomp hybrid generate` — implemented by `assembly`
+- `x86decomp hybrid verify` — implemented by `native`
+- `x86decomp hypothesis create` — implemented by `governance`
+- `x86decomp hypothesis dependency` — implemented by `governance`
+- `x86decomp hypothesis evidence` — implemented by `governance`
+- `x86decomp hypothesis gate` — implemented by `governance`
+- `x86decomp hypothesis list` — implemented by `governance`
+- `x86decomp hypothesis show` — implemented by `governance`
+- `x86decomp hypothesis transition` — implemented by `governance`
+- `x86decomp image-text compose` — implemented by `reconstruction`
+- `x86decomp library accept` — implemented by `reconstruction`
+- `x86decomp library candidates` — implemented by `reconstruction`
+- `x86decomp library externalize` — implemented by `reconstruction`
+- `x86decomp library identify` — implemented by `reconstruction`
+- `x86decomp library reconstruct` — implemented by `reconstruction`
+- `x86decomp library reject` — implemented by `reconstruction`
+- `x86decomp llm batch-create` — implemented by `reconstruction`
+- `x86decomp llm batch-match` — implemented by `reconstruction`
+- `x86decomp llm cpp-generate` — implemented by `reconstruction`
+- `x86decomp llm generate` — implemented by `reconstruction`
+- `x86decomp llm job-create` — implemented by `reconstruction`
+- `x86decomp llm job-from-range` — implemented by `reconstruction`
+- `x86decomp llm match` — implemented by `reconstruction`
+- `x86decomp llm probe` — implemented by `reconstruction`
+- `x86decomp llm profile-create` — implemented by `reconstruction`
+- `x86decomp llm profile-validate` — implemented by `reconstruction`
+- `x86decomp llm prompt` — implemented by `reconstruction`
+- `x86decomp llm providers` — implemented by `reconstruction`
+- `x86decomp llm verify` — implemented by `reconstruction`
+- `x86decomp loop list` — implemented by `native`
+- `x86decomp loop run` — implemented by `native`
+- `x86decomp loop show` — implemented by `native`
+- `x86decomp match batch` — implemented by `native`
+- `x86decomp match compare` — implemented by `native`
+- `x86decomp match mismatches` — implemented by `native`
+- `x86decomp match report` — implemented by `native`
+- `x86decomp mod branch-init` — implemented by `reconstruction`
+- `x86decomp module add-member` — implemented by `reconstruction`
+- `x86decomp module add-unit-member` — implemented by `reconstruction`
+- `x86decomp module assign` — implemented by `reconstruction`
+- `x86decomp module create` — implemented by `reconstruction`
+- `x86decomp module create-unit` — implemented by `reconstruction`
+- `x86decomp module list` — implemented by `reconstruction`
+- `x86decomp module show` — implemented by `reconstruction`
+- `x86decomp module show-unit` — implemented by `reconstruction`
+- `x86decomp module suggest` — implemented by `reconstruction`
+- `x86decomp pattern catalog` — implemented by `reconstruction`
+- `x86decomp pattern generate` — implemented by `reconstruction`
+- `x86decomp pattern match` — implemented by `reconstruction`
+- `x86decomp pattern promote` — implemented by `reconstruction`
+- `x86decomp pattern scan` — implemented by `reconstruction`
+- `x86decomp pe export-coff` — implemented by `native`
+- `x86decomp pe export-sections` — implemented by `native`
+- `x86decomp pe inventory` — implemented by `native`
+- `x86decomp pe patch-apply` — implemented by `native`
+- `x86decomp pe patch-plan` — implemented by `native`
+- `x86decomp pe text-swap` — implemented by `native`
+- `x86decomp playability smoke-plan` — implemented by `reconstruction`
+- `x86decomp plugin doctor` — implemented by `governance`
+- `x86decomp plugin install` — implemented by `governance`
+- `x86decomp plugin invoke` — implemented by `governance`
+- `x86decomp plugin list` — implemented by `governance`
+- `x86decomp plugin validate` — implemented by `governance`
+- `x86decomp progress reconcile` — implemented by `reconstruction`
+- `x86decomp project check` — implemented by `assembly`
+- `x86decomp project doctor-paths` — implemented by `reconstruction`
+- `x86decomp project explain-boundaries` — implemented by `reconstruction`
+- `x86decomp project export` — implemented by `reconstruction`
+- `x86decomp project health` — implemented by `reconstruction`
+- `x86decomp project init` — implemented by `assembly`
+- `x86decomp project synthesize-layout` — implemented by `reconstruction`
+- `x86decomp proof evaluate` — implemented by `governance`
+- `x86decomp proof export` — implemented by `governance`
+- `x86decomp proof inspect` — implemented by `governance`
+- `x86decomp proof obligation` — implemented by `governance`
+- `x86decomp proof result` — implemented by `governance`
+- `x86decomp proof verify` — implemented by `governance`
+- `x86decomp provenance binary` — implemented by `reconstruction`
+- `x86decomp provenance export` — implemented by `reconstruction`
+- `x86decomp provenance record` — implemented by `reconstruction`
+- `x86decomp provenance source` — implemented by `reconstruction`
+- `x86decomp regression compare` — implemented by `reconstruction`
+- `x86decomp release-policy moddable-source` — implemented by `reconstruction`
+- `x86decomp reloc inspect` — implemented by `assembly`
+- `x86decomp reloc resolve` — implemented by `assembly`
+- `x86decomp reloc supported` — implemented by `assembly`
+- `x86decomp review assign` — implemented by `governance`
+- `x86decomp review create` — implemented by `governance`
+- `x86decomp review decide` — implemented by `governance`
+- `x86decomp review list` — implemented by `governance`
+- `x86decomp review lock` — implemented by `governance`
+- `x86decomp review show` — implemented by `governance`
+- `x86decomp runtime launch` — implemented by `native`
+- `x86decomp runtime map-crash` — implemented by `native`
+- `x86decomp runtime validate-image` — implemented by `native`
+- `x86decomp runtime-analysis identify` — implemented by `reconstruction`
+- `x86decomp runtime-analysis match-library` — implemented by `reconstruction`
+- `x86decomp runtime-analysis quarantine` — implemented by `reconstruction`
+- `x86decomp script-port audit` — implemented by `reconstruction`
+- `x86decomp security finding` — implemented by `reconstruction`
+- `x86decomp security policy` — implemented by `reconstruction`
+- `x86decomp security report` — implemented by `reconstruction`
+- `x86decomp security scan` — implemented by `reconstruction`
+- `x86decomp source impact` — implemented by `reconstruction`
+- `x86decomp source lock` — implemented by `reconstruction`
+- `x86decomp source reconcile` — implemented by `reconstruction`
+- `x86decomp source unlock` — implemented by `reconstruction`
+- `x86decomp source-map annotate` — implemented by `reconstruction`
+- `x86decomp source-map verify` — implemented by `reconstruction`
+- `x86decomp source-stage classify` — implemented by `reconstruction`
+- `x86decomp staging compile-check` — implemented by `native`
+- `x86decomp staging generate-context` — implemented by `native`
+- `x86decomp staging resolve` — implemented by `native`
+- `x86decomp staging scan` — implemented by `native`
+- `x86decomp staging unresolved` — implemented by `native`
+- `x86decomp subsystem detect` — implemented by `reconstruction`
+- `x86decomp tests add` — implemented by `reconstruction`
+- `x86decomp tests explain` — implemented by `reconstruction`
+- `x86decomp tests list` — implemented by `reconstruction`
+- `x86decomp tests promote-counterexample` — implemented by `reconstruction`
+- `x86decomp tests synthesize` — implemented by `reconstruction`
+- `x86decomp text-swap build` — implemented by `reconstruction`
+- `x86decomp text-swap inject` — implemented by `reconstruction`
+- `x86decomp text-swap plan` — implemented by `reconstruction`
+- `x86decomp text-swap verify` — implemented by `reconstruction`
+- `x86decomp toolchain hash-tree` — implemented by `reconstruction`
+- `x86decomp toolchain redact-package` — implemented by `reconstruction`
+- `x86decomp toolchain verify-local` — implemented by `reconstruction`
+- `x86decomp triage next` — implemented by `reconstruction`
+- `x86decomp type propagate` — implemented by `reconstruction`
+- `x86decomp vtable recover` — implemented by `reconstruction`
+- `x86decomp windows discover-ghidra` — implemented by `native`
+- `x86decomp windows doctor` — implemented by `native`
+- `x86decomp windows response-file` — implemented by `native`
+- `x86decomp worker doctor` — implemented by `governance`
+- `x86decomp worker list` — implemented by `governance`
+- `x86decomp worker register` — implemented by `governance`
+- `x86decomp worker select` — implemented by `governance`
+- `x86decomp worker status` — implemented by `governance`

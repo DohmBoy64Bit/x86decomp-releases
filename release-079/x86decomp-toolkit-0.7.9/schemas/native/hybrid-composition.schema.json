@@ -1,0 +1,29 @@
+{
+  "$id": "https://x86decomp.invalid/schemas/native/hybrid-composition.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "properties": {
+    "fallback_count": {
+      "minimum": 0,
+      "type": "integer"
+    },
+    "output": {
+      "type": "string"
+    },
+    "promoted_count": {
+      "minimum": 0,
+      "type": "integer"
+    },
+    "run_id": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "run_id",
+    "output",
+    "promoted_count",
+    "fallback_count"
+  ],
+  "title": "x86decomp hybrid-composition",
+  "type": "object"
+}

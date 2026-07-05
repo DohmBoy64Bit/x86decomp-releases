@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://x86decomp.local/schemas/local-llm/candidate.schema.json",
+  "title": "Local LLM C proposal response",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["status", "c_source", "assumptions", "rationale"],
+  "properties": {
+    "status": {"enum": ["proposed", "blocked"]},
+    "c_source": {"type": "string"},
+    "assumptions": {"type": "array", "items": {"type": "string"}},
+    "rationale": {"type": "string", "minLength": 1}
+  }
+}

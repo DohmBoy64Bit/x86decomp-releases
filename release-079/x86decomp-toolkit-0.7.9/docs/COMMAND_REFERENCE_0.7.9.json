@@ -1,0 +1,2035 @@
+{
+  "canonical_group_count": 59,
+  "canonical_route_count": 239,
+  "canonical_routes": [
+    {
+      "action": "compare",
+      "group": "abi",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "export",
+      "group": "abi",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "recover",
+      "group": "abi",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "shim",
+      "group": "abi",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "show",
+      "group": "abi",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "verify",
+      "group": "abi",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "annotate",
+      "group": "asm",
+      "owner": "assembly"
+    },
+    {
+      "action": "batch",
+      "group": "asm",
+      "owner": "assembly"
+    },
+    {
+      "action": "list",
+      "group": "asm",
+      "owner": "assembly"
+    },
+    {
+      "action": "materialize",
+      "group": "asm",
+      "owner": "assembly"
+    },
+    {
+      "action": "report",
+      "group": "asm",
+      "owner": "assembly"
+    },
+    {
+      "action": "verify-roundtrip",
+      "group": "asm",
+      "owner": "assembly"
+    },
+    {
+      "action": "inventory",
+      "group": "asset",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "audit",
+      "group": "boundary",
+      "owner": "native"
+    },
+    {
+      "action": "audit-project",
+      "group": "boundary",
+      "owner": "native"
+    },
+    {
+      "action": "export-ghidra-fixes",
+      "group": "boundary",
+      "owner": "native"
+    },
+    {
+      "action": "list",
+      "group": "boundary",
+      "owner": "native"
+    },
+    {
+      "action": "show",
+      "group": "boundary",
+      "owner": "native"
+    },
+    {
+      "action": "add-target",
+      "group": "build",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "add-variant",
+      "group": "build",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "compare-modes",
+      "group": "build",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "create",
+      "group": "build",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "generate",
+      "group": "build",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "matrix",
+      "group": "build",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "show",
+      "group": "build",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "validate",
+      "group": "build",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "branch",
+      "group": "campaign",
+      "owner": "governance"
+    },
+    {
+      "action": "create",
+      "group": "campaign",
+      "owner": "governance"
+    },
+    {
+      "action": "list",
+      "group": "campaign",
+      "owner": "governance"
+    },
+    {
+      "action": "pause",
+      "group": "campaign",
+      "owner": "governance"
+    },
+    {
+      "action": "plan",
+      "group": "campaign",
+      "owner": "governance"
+    },
+    {
+      "action": "resume",
+      "group": "campaign",
+      "owner": "governance"
+    },
+    {
+      "action": "snapshot",
+      "group": "campaign",
+      "owner": "governance"
+    },
+    {
+      "action": "start",
+      "group": "campaign",
+      "owner": "governance"
+    },
+    {
+      "action": "status",
+      "group": "campaign",
+      "owner": "governance"
+    },
+    {
+      "action": "stop",
+      "group": "campaign",
+      "owner": "governance"
+    },
+    {
+      "action": "add-file",
+      "group": "candidate",
+      "owner": "governance"
+    },
+    {
+      "action": "compare",
+      "group": "candidate",
+      "owner": "governance"
+    },
+    {
+      "action": "create",
+      "group": "candidate",
+      "owner": "governance"
+    },
+    {
+      "action": "evaluate",
+      "group": "candidate",
+      "owner": "governance"
+    },
+    {
+      "action": "list",
+      "group": "candidate",
+      "owner": "governance"
+    },
+    {
+      "action": "promote",
+      "group": "candidate",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "search",
+      "group": "candidate",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "show",
+      "group": "candidate",
+      "owner": "governance"
+    },
+    {
+      "action": "transition",
+      "group": "candidate",
+      "owner": "governance"
+    },
+    {
+      "action": "create",
+      "group": "capsule",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "inspect",
+      "group": "capsule",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "reproduce",
+      "group": "capsule",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "verify",
+      "group": "capsule",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "add-operation",
+      "group": "changeset",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "apply",
+      "group": "changeset",
+      "owner": "governance"
+    },
+    {
+      "action": "conflicts",
+      "group": "changeset",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "create",
+      "group": "changeset",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "export",
+      "group": "changeset",
+      "owner": "governance"
+    },
+    {
+      "action": "inspect",
+      "group": "changeset",
+      "owner": "governance"
+    },
+    {
+      "action": "merge",
+      "group": "changeset",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "rebase",
+      "group": "changeset",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "show",
+      "group": "changeset",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "verify",
+      "group": "changeset",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "scaffold",
+      "group": "class",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "compare-flags",
+      "group": "compiler-rules",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "learn-rule",
+      "group": "compiler-rules",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "rule-report",
+      "group": "compiler-rules",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "conflicts",
+      "group": "consensus",
+      "owner": "governance"
+    },
+    {
+      "action": "explain",
+      "group": "consensus",
+      "owner": "governance"
+    },
+    {
+      "action": "record",
+      "group": "consensus",
+      "owner": "governance"
+    },
+    {
+      "action": "resolve",
+      "group": "consensus",
+      "owner": "governance"
+    },
+    {
+      "action": "scan",
+      "group": "consensus",
+      "owner": "governance"
+    },
+    {
+      "action": "add",
+      "group": "counterexample",
+      "owner": "governance"
+    },
+    {
+      "action": "list",
+      "group": "counterexample",
+      "owner": "governance"
+    },
+    {
+      "action": "promote",
+      "group": "counterexample",
+      "owner": "governance"
+    },
+    {
+      "action": "show",
+      "group": "counterexample",
+      "owner": "governance"
+    },
+    {
+      "action": "cleanup",
+      "group": "decompiler",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "explain",
+      "group": "diff",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "add",
+      "group": "family",
+      "owner": "governance"
+    },
+    {
+      "action": "correlate",
+      "group": "family",
+      "owner": "governance"
+    },
+    {
+      "action": "create",
+      "group": "family",
+      "owner": "governance"
+    },
+    {
+      "action": "report",
+      "group": "family",
+      "owner": "governance"
+    },
+    {
+      "action": "classify",
+      "group": "function",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "discover",
+      "group": "function",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "reconcile",
+      "group": "function",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "sort",
+      "group": "function",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "state-machine",
+      "group": "game-pattern",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "batch-decompile",
+      "group": "ghidra-mcp",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "decompile",
+      "group": "ghidra-mcp",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "functions",
+      "group": "ghidra-mcp",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "probe",
+      "group": "ghidra-mcp",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "sync-names",
+      "group": "ghidra-mcp",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "edge",
+      "group": "graph",
+      "owner": "governance"
+    },
+    {
+      "action": "impact",
+      "group": "graph",
+      "owner": "governance"
+    },
+    {
+      "action": "node",
+      "group": "graph",
+      "owner": "governance"
+    },
+    {
+      "action": "create",
+      "group": "headers",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "cycles",
+      "group": "headers",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "declare",
+      "group": "headers",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "explain",
+      "group": "headers",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "include",
+      "group": "headers",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "synthesize",
+      "group": "headers",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "synthesize-project",
+      "group": "headers",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "validate",
+      "group": "headers",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "compose",
+      "group": "hybrid",
+      "owner": "native"
+    },
+    {
+      "action": "generate",
+      "group": "hybrid",
+      "owner": "assembly"
+    },
+    {
+      "action": "verify",
+      "group": "hybrid",
+      "owner": "native"
+    },
+    {
+      "action": "create",
+      "group": "hypothesis",
+      "owner": "governance"
+    },
+    {
+      "action": "dependency",
+      "group": "hypothesis",
+      "owner": "governance"
+    },
+    {
+      "action": "evidence",
+      "group": "hypothesis",
+      "owner": "governance"
+    },
+    {
+      "action": "gate",
+      "group": "hypothesis",
+      "owner": "governance"
+    },
+    {
+      "action": "list",
+      "group": "hypothesis",
+      "owner": "governance"
+    },
+    {
+      "action": "show",
+      "group": "hypothesis",
+      "owner": "governance"
+    },
+    {
+      "action": "transition",
+      "group": "hypothesis",
+      "owner": "governance"
+    },
+    {
+      "action": "compose",
+      "group": "image-text",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "accept",
+      "group": "library",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "candidates",
+      "group": "library",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "externalize",
+      "group": "library",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "identify",
+      "group": "library",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "reconstruct",
+      "group": "library",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "reject",
+      "group": "library",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "batch-create",
+      "group": "llm",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "batch-match",
+      "group": "llm",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "cpp-generate",
+      "group": "llm",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "generate",
+      "group": "llm",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "job-create",
+      "group": "llm",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "job-from-range",
+      "group": "llm",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "match",
+      "group": "llm",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "probe",
+      "group": "llm",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "profile-create",
+      "group": "llm",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "profile-validate",
+      "group": "llm",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "prompt",
+      "group": "llm",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "providers",
+      "group": "llm",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "verify",
+      "group": "llm",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "list",
+      "group": "loop",
+      "owner": "native"
+    },
+    {
+      "action": "run",
+      "group": "loop",
+      "owner": "native"
+    },
+    {
+      "action": "show",
+      "group": "loop",
+      "owner": "native"
+    },
+    {
+      "action": "batch",
+      "group": "match",
+      "owner": "native"
+    },
+    {
+      "action": "compare",
+      "group": "match",
+      "owner": "native"
+    },
+    {
+      "action": "mismatches",
+      "group": "match",
+      "owner": "native"
+    },
+    {
+      "action": "report",
+      "group": "match",
+      "owner": "native"
+    },
+    {
+      "action": "branch-init",
+      "group": "mod",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "add-member",
+      "group": "module",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "add-unit-member",
+      "group": "module",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "assign",
+      "group": "module",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "create",
+      "group": "module",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "create-unit",
+      "group": "module",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "list",
+      "group": "module",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "show",
+      "group": "module",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "show-unit",
+      "group": "module",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "suggest",
+      "group": "module",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "catalog",
+      "group": "pattern",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "generate",
+      "group": "pattern",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "match",
+      "group": "pattern",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "promote",
+      "group": "pattern",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "scan",
+      "group": "pattern",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "export-coff",
+      "group": "pe",
+      "owner": "native"
+    },
+    {
+      "action": "export-sections",
+      "group": "pe",
+      "owner": "native"
+    },
+    {
+      "action": "inventory",
+      "group": "pe",
+      "owner": "native"
+    },
+    {
+      "action": "patch-apply",
+      "group": "pe",
+      "owner": "native"
+    },
+    {
+      "action": "patch-plan",
+      "group": "pe",
+      "owner": "native"
+    },
+    {
+      "action": "text-swap",
+      "group": "pe",
+      "owner": "native"
+    },
+    {
+      "action": "smoke-plan",
+      "group": "playability",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "doctor",
+      "group": "plugin",
+      "owner": "governance"
+    },
+    {
+      "action": "install",
+      "group": "plugin",
+      "owner": "governance"
+    },
+    {
+      "action": "invoke",
+      "group": "plugin",
+      "owner": "governance"
+    },
+    {
+      "action": "list",
+      "group": "plugin",
+      "owner": "governance"
+    },
+    {
+      "action": "validate",
+      "group": "plugin",
+      "owner": "governance"
+    },
+    {
+      "action": "reconcile",
+      "group": "progress",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "check",
+      "group": "project",
+      "owner": "assembly"
+    },
+    {
+      "action": "doctor-paths",
+      "group": "project",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "explain-boundaries",
+      "group": "project",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "export",
+      "group": "project",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "health",
+      "group": "project",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "init",
+      "group": "project",
+      "owner": "assembly"
+    },
+    {
+      "action": "synthesize-layout",
+      "group": "project",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "evaluate",
+      "group": "proof",
+      "owner": "governance"
+    },
+    {
+      "action": "export",
+      "group": "proof",
+      "owner": "governance"
+    },
+    {
+      "action": "inspect",
+      "group": "proof",
+      "owner": "governance"
+    },
+    {
+      "action": "obligation",
+      "group": "proof",
+      "owner": "governance"
+    },
+    {
+      "action": "result",
+      "group": "proof",
+      "owner": "governance"
+    },
+    {
+      "action": "verify",
+      "group": "proof",
+      "owner": "governance"
+    },
+    {
+      "action": "binary",
+      "group": "provenance",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "export",
+      "group": "provenance",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "record",
+      "group": "provenance",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "source",
+      "group": "provenance",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "compare",
+      "group": "regression",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "moddable-source",
+      "group": "release-policy",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "inspect",
+      "group": "reloc",
+      "owner": "assembly"
+    },
+    {
+      "action": "resolve",
+      "group": "reloc",
+      "owner": "assembly"
+    },
+    {
+      "action": "supported",
+      "group": "reloc",
+      "owner": "assembly"
+    },
+    {
+      "action": "assign",
+      "group": "review",
+      "owner": "governance"
+    },
+    {
+      "action": "create",
+      "group": "review",
+      "owner": "governance"
+    },
+    {
+      "action": "decide",
+      "group": "review",
+      "owner": "governance"
+    },
+    {
+      "action": "list",
+      "group": "review",
+      "owner": "governance"
+    },
+    {
+      "action": "lock",
+      "group": "review",
+      "owner": "governance"
+    },
+    {
+      "action": "show",
+      "group": "review",
+      "owner": "governance"
+    },
+    {
+      "action": "launch",
+      "group": "runtime",
+      "owner": "native"
+    },
+    {
+      "action": "map-crash",
+      "group": "runtime",
+      "owner": "native"
+    },
+    {
+      "action": "validate-image",
+      "group": "runtime",
+      "owner": "native"
+    },
+    {
+      "action": "identify",
+      "group": "runtime-analysis",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "match-library",
+      "group": "runtime-analysis",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "quarantine",
+      "group": "runtime-analysis",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "audit",
+      "group": "script-port",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "finding",
+      "group": "security",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "policy",
+      "group": "security",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "report",
+      "group": "security",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "scan",
+      "group": "security",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "impact",
+      "group": "source",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "lock",
+      "group": "source",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "reconcile",
+      "group": "source",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "unlock",
+      "group": "source",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "annotate",
+      "group": "source-map",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "verify",
+      "group": "source-map",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "classify",
+      "group": "source-stage",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "compile-check",
+      "group": "staging",
+      "owner": "native"
+    },
+    {
+      "action": "generate-context",
+      "group": "staging",
+      "owner": "native"
+    },
+    {
+      "action": "resolve",
+      "group": "staging",
+      "owner": "native"
+    },
+    {
+      "action": "scan",
+      "group": "staging",
+      "owner": "native"
+    },
+    {
+      "action": "unresolved",
+      "group": "staging",
+      "owner": "native"
+    },
+    {
+      "action": "detect",
+      "group": "subsystem",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "add",
+      "group": "tests",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "explain",
+      "group": "tests",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "list",
+      "group": "tests",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "promote-counterexample",
+      "group": "tests",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "synthesize",
+      "group": "tests",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "build",
+      "group": "text-swap",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "inject",
+      "group": "text-swap",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "plan",
+      "group": "text-swap",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "verify",
+      "group": "text-swap",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "hash-tree",
+      "group": "toolchain",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "redact-package",
+      "group": "toolchain",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "verify-local",
+      "group": "toolchain",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "next",
+      "group": "triage",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "propagate",
+      "group": "type",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "recover",
+      "group": "vtable",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "discover-ghidra",
+      "group": "windows",
+      "owner": "native"
+    },
+    {
+      "action": "doctor",
+      "group": "windows",
+      "owner": "native"
+    },
+    {
+      "action": "response-file",
+      "group": "windows",
+      "owner": "native"
+    },
+    {
+      "action": "doctor",
+      "group": "worker",
+      "owner": "governance"
+    },
+    {
+      "action": "list",
+      "group": "worker",
+      "owner": "governance"
+    },
+    {
+      "action": "register",
+      "group": "worker",
+      "owner": "governance"
+    },
+    {
+      "action": "select",
+      "group": "worker",
+      "owner": "governance"
+    },
+    {
+      "action": "status",
+      "group": "worker",
+      "owner": "governance"
+    }
+  ],
+  "release": "0.7.9",
+  "root_command_count": 166,
+  "root_commands": [
+    {
+      "command": "abi",
+      "help": "Canonical abi commands implemented by the current capability subsystem.",
+      "usage": "usage: x86decomp abi [-h] [--project PROJECT] [--actor ACTOR]\n                     {compare,export,recover,shim,show,verify} ..."
+    },
+    {
+      "command": "abi-check",
+      "help": "",
+      "usage": "usage: x86decomp abi-check [-h] [--base BASE] [--report REPORT] code contract"
+    },
+    {
+      "command": "angr-validate",
+      "help": "",
+      "usage": "usage: x86decomp angr-validate [-h] [--architecture {x86,x86_64}]\n                               [--input-register INPUT_REGISTER]\n                               [--stack-argument-words STACK_ARGUMENT_WORDS]\n                               [--output-register OUTPUT_REGISTER]\n                               [--max-steps MAX_STEPS] [--max-paths MAX_PATHS]\n                               [--report REPORT]\n                               target candidate"
+    },
+    {
+      "command": "artifact-import",
+      "help": "",
+      "usage": "usage: x86decomp artifact-import [-h] project exported_dir"
+    },
+    {
+      "command": "artifact-verify",
+      "help": "",
+      "usage": "usage: x86decomp artifact-verify [-h] artifact_dir"
+    },
+    {
+      "command": "asm",
+      "help": "Canonical asm commands implemented by the current capability subsystem.",
+      "usage": "usage: x86decomp asm [-h] [--project PROJECT] [--actor ACTOR]\n                     {annotate,batch,list,materialize,report,verify-roundtrip} ..."
+    },
+    {
+      "command": "asset",
+      "help": "Canonical asset commands implemented by the current capability subsystem.",
+      "usage": "usage: x86decomp asset [-h] [--project PROJECT] [--actor ACTOR]\n                       {inventory} ..."
+    },
+    {
+      "command": "benchmark-run",
+      "help": "",
+      "usage": "usage: x86decomp benchmark-run [-h] [--report REPORT] manifest"
+    },
+    {
+      "command": "boundary",
+      "help": "Canonical boundary commands implemented by the current capability subsystem.",
+      "usage": "usage: x86decomp boundary [-h] [--project PROJECT] [--actor ACTOR]\n                          {audit,audit-project,export-ghidra-fixes,list,show} ..."
+    },
+    {
+      "command": "build",
+      "help": "Canonical build commands implemented by the current capability subsystem.",
+      "usage": "usage: x86decomp build [-h] [--project PROJECT] [--actor ACTOR]\n                       {add-target,add-variant,compare-modes,create,generate,matrix,show,validate} ..."
+    },
+    {
+      "command": "campaign",
+      "help": "Canonical campaign commands implemented by the current capability subsystem.",
+      "usage": "usage: x86decomp campaign [-h] [--project PROJECT] [--actor ACTOR]\n                          {branch,create,list,pause,plan,resume,snapshot,start,status,stop} ..."
+    },
+    {
+      "command": "candidate",
+      "help": "Canonical candidate commands implemented by the current capability subsystem.",
+      "usage": "usage: x86decomp candidate [-h] [--project PROJECT] [--actor ACTOR]\n                           {add-file,compare,create,evaluate,list,promote,search,show,transition} ..."
+    },
+    {
+      "command": "capsule",
+      "help": "Canonical capsule commands implemented by the current capability subsystem.",
+      "usage": "usage: x86decomp capsule [-h] [--project PROJECT] [--actor ACTOR]\n                         {create,inspect,reproduce,verify} ..."
+    },
+    {
+      "command": "changeset",
+      "help": "Canonical changeset commands implemented by the current capability subsystem.",
+      "usage": "usage: x86decomp changeset [-h] [--project PROJECT] [--actor ACTOR]\n                           {add-operation,apply,conflicts,create,export,inspect,merge,rebase,show,verify} ..."
+    },
+    {
+      "command": "claim-attach",
+      "help": "",
+      "usage": "usage: x86decomp claim-attach [-h] project claim_id evidence_id"
+    },
+    {
+      "command": "claim-contradict",
+      "help": "",
+      "usage": "usage: x86decomp claim-contradict [-h] project claim_id evidence_id"
+    },
+    {
+      "command": "claim-create",
+      "help": "",
+      "usage": "usage: x86decomp claim-create [-h] --subject SUBJECT --predicate PREDICATE\n                              --object OBJECT_VALUE [--evidence EVIDENCE]\n                              [--id ID]\n                              project"
+    },
+    {
+      "command": "claim-verify",
+      "help": "",
+      "usage": "usage: x86decomp claim-verify [-h] project claim_id"
+    },
+    {
+      "command": "class",
+      "help": "Canonical class commands implemented by the current capability subsystem.",
+      "usage": "usage: x86decomp class [-h] [--project PROJECT] [--actor ACTOR] {scaffold} ..."
+    },
+    {
+      "command": "coff-comdat-resolve",
+      "help": "",
+      "usage": "usage: x86decomp coff-comdat-resolve [-h] [--report REPORT]\n                                     objects [objects ...]"
+    },
+    {
+      "command": "coff-extract",
+      "help": "",
+      "usage": "usage: x86decomp coff-extract [-h] [--size SIZE] object symbol output"
+    },
+    {
+      "command": "coff-inspect",
+      "help": "",
+      "usage": "usage: x86decomp coff-inspect [-h] object"
+    },
+    {
+      "command": "coff-synthesize",
+      "help": "",
+      "usage": "usage: x86decomp coff-synthesize [-h] [--architecture {x86,x86_64}]\n                                 [--relocations RELOCATIONS]\n                                 code symbol output"
+    },
+    {
+      "command": "commands",
+      "help": "",
+      "usage": "usage: x86decomp commands [-h]\n                          [--group {abi,asm,asset,boundary,build,campaign,candidate,capsule,changeset,class,compiler-rules,consensus,counterexample,decompiler,diff,family,function,game-pattern,ghidra-mcp,graph,headers,hybrid,hypothesis,image-text,library,llm,loop,match,mod,module,pattern,pe,playability,plugin,progress,project,proof,provenance,regression,release-policy,reloc,review,runtime,runtime-analysis,script-port,security,source,source-map,source-stage,staging,subsystem,tests,text-swap,toolchain,triage,type,vtable,windows,worker}]\n                          [--owner {governance,reconstruction,native,assembly}]"
+    },
+    {
+      "command": "compile",
+      "help": "",
+      "usage": "usage: x86decomp compile [-h] [--report REPORT] [--extra-arg EXTRA_ARG]\n                         [--cache CACHE]\n                         profile source output"
+    },
+    {
+      "command": "compile-worker",
+      "help": "",
+      "usage": "usage: x86decomp compile-worker [-h] [--isolation {local_bounded,container}]\n                                [--container-image CONTAINER_IMAGE]\n                                [--cache CACHE] [--report REPORT]\n                                profile source output"
+    },
+    {
+      "command": "compiler-lab",
+      "help": "",
+      "usage": "usage: x86decomp compiler-lab [-h] [--report REPORT] lab"
+    },
+    {
+      "command": "compiler-rules",
+      "help": "Canonical compiler-rules commands implemented by the current capability subsystem.",
+      "usage": "usage: x86decomp compiler-rules [-h] [--project PROJECT] [--actor ACTOR]\n                                {compare-flags,learn-rule,rule-report} ..."
+    },
+    {
+      "command": "consensus",
+      "help": "Canonical consensus commands implemented by the current capability subsystem.",
+      "usage": "usage: x86decomp consensus [-h] [--project PROJECT] [--actor ACTOR]\n                           {conflicts,explain,record,resolve,scan} ..."
+    },
+    {
+      "command": "content-put",
+      "help": "",
+      "usage": "usage: x86decomp content-put [-h] [--media-type MEDIA_TYPE]\n                             [--reference REFERENCE] [--kind KIND]\n                             [--owner OWNER]\n                             store file"
+    },
+    {
+      "command": "content-verify",
+      "help": "",
+      "usage": "usage: x86decomp content-verify [-h] store"
+    },
+    {
+      "command": "convergence-analyze",
+      "help": "",
+      "usage": "usage: x86decomp convergence-analyze [-h] [--profile PROFILE]\n                                     [--previous PREVIOUS] [--report REPORT]\n                                     [--history HISTORY]\n                                     reference candidate"
+    },
+    {
+      "command": "corpus-build",
+      "help": "",
+      "usage": "usage: x86decomp corpus-build [-h] [--report REPORT] manifest output_directory"
+    },
+    {
+      "command": "corpus-compare",
+      "help": "",
+      "usage": "usage: x86decomp corpus-compare [-h] [--report REPORT] reports [reports ...]"
+    },
+    {
+      "command": "corpus-create-manifest",
+      "help": "",
+      "usage": "usage: x86decomp corpus-create-manifest [-h] repository output"
+    },
+    {
+      "command": "corpus-generate",
+      "help": "",
+      "usage": "usage: x86decomp corpus-generate [-h] [--cases-per-family CASES_PER_FAMILY]\n                                 [--seed SEED] [--c-only] [--cpp-only]\n                                 [--report REPORT]\n                                 output_directory"
+    },
+    {
+      "command": "corpus-generated-verify",
+      "help": "",
+      "usage": "usage: x86decomp corpus-generated-verify [-h] report"
+    },
+    {
+      "command": "corpus-verify",
+      "help": "",
+      "usage": "usage: x86decomp corpus-verify [-h] report"
+    },
+    {
+      "command": "counterexample",
+      "help": "Canonical counterexample commands implemented by the current capability subsystem.",
+      "usage": "usage: x86decomp counterexample [-h] [--project PROJECT] [--actor ACTOR]\n                                {add,list,promote,show} ..."
+    },
+    {
+      "command": "cpp-recover",
+      "help": "",
+      "usage": "usage: x86decomp cpp-recover [-h] [--metadata-report METADATA_REPORT]\n                             [--object OBJECT] [--map MAP] [--report REPORT]\n                             pe"
+    },
+    {
+      "command": "crosscheck-ghidra",
+      "help": "",
+      "usage": "usage: x86decomp crosscheck-ghidra [-h] --base BASE\n                                   [--architecture {x86,x86_64}]\n                                   [--report REPORT]\n                                   instructions_jsonl code"
+    },
+    {
+      "command": "db-constraint-accept",
+      "help": "",
+      "usage": "usage: x86decomp db-constraint-accept [-h] database constraint_id"
+    },
+    {
+      "command": "db-constraint-add",
+      "help": "",
+      "usage": "usage: x86decomp db-constraint-add [-h] [--evidence-id EVIDENCE_ID]\n                                   [--confidence CONFIDENCE]\n                                   database subject relation object_value\n                                   provenance"
+    },
+    {
+      "command": "db-constraint-conflicts",
+      "help": "",
+      "usage": "usage: x86decomp db-constraint-conflicts [-h] database subject relation"
+    },
+    {
+      "command": "db-ingest",
+      "help": "",
+      "usage": "usage: x86decomp db-ingest [-h] [--image-base IMAGE_BASE] database artifact"
+    },
+    {
+      "command": "db-query",
+      "help": "",
+      "usage": "usage: x86decomp db-query [-h] [--parameters-json PARAMETERS_JSON]\n                          database sql"
+    },
+    {
+      "command": "decompiler",
+      "help": "Canonical decompiler commands implemented by the current capability subsystem.",
+      "usage": "usage: x86decomp decompiler [-h] [--project PROJECT] [--actor ACTOR]\n                            {cleanup} ..."
+    },
+    {
+      "command": "decompme-pack",
+      "help": "",
+      "usage": "usage: x86decomp decompme-pack [-h] [--overwrite] artifact_dir output_dir"
+    },
+    {
+      "command": "dependency-audit",
+      "help": "",
+      "usage": "usage: x86decomp dependency-audit [-h] [--executable EXECUTABLE]\n                                  [--timeout TIMEOUT] [--report REPORT]"
+    },
+    {
+      "command": "diff",
+      "help": "Canonical diff commands implemented by the current capability subsystem.",
+      "usage": "usage: x86decomp diff [-h] [--project PROJECT] [--actor ACTOR] {explain} ..."
+    },
+    {
+      "command": "diff-bytes",
+      "help": "",
+      "usage": "usage: x86decomp diff-bytes [-h] [--report REPORT]\n                            [--max-mismatches MAX_MISMATCHES]\n                            target candidate"
+    },
+    {
+      "command": "diff-function",
+      "help": "",
+      "usage": "usage: x86decomp diff-function [-h] [--report REPORT] pe rva size coff symbol"
+    },
+    {
+      "command": "disassemble",
+      "help": "",
+      "usage": "usage: x86decomp disassemble [-h] [--base BASE] [--architecture {x86,x86_64}]\n                             [--report REPORT]\n                             code"
+    },
+    {
+      "command": "drcov-parse",
+      "help": "",
+      "usage": "usage: x86decomp drcov-parse [-h] log"
+    },
+    {
+      "command": "drcov-run",
+      "help": "",
+      "usage": "usage: x86decomp drcov-run [-h] [--drrun DRRUN] [--program-arg PROGRAM_ARG]\n                           [--timeout TIMEOUT] [--report REPORT]\n                           executable output_directory"
+    },
+    {
+      "command": "dynamic-validate",
+      "help": "",
+      "usage": "usage: x86decomp dynamic-validate [-h] [--target-base TARGET_BASE]\n                                  [--candidate-base CANDIDATE_BASE]\n                                  [--report REPORT]\n                                  target candidate harness"
+    },
+    {
+      "command": "evidence-add",
+      "help": "",
+      "usage": "usage: x86decomp evidence-add [-h]\n                              --kind {binary_bytes,static_analysis,dynamic_trace,compiler_output,debug_symbol,external_document,human_review}\n                              --source SOURCE --locator LOCATOR\n                              --assertion ASSERTION\n                              --independent-group INDEPENDENT_GROUP\n                              [--file FILE] [--id ID]\n                              project"
+    },
+    {
+      "command": "family",
+      "help": "Canonical family commands implemented by the current capability subsystem.",
+      "usage": "usage: x86decomp family [-h] [--project PROJECT] [--actor ACTOR]\n                        {add,correlate,create,report} ..."
+    },
+    {
+      "command": "function",
+      "help": "Canonical function commands implemented by the current capability subsystem.",
+      "usage": "usage: x86decomp function [-h] [--project PROJECT] [--actor ACTOR]\n                          {classify,discover,reconcile,sort} ..."
+    },
+    {
+      "command": "game-pattern",
+      "help": "Canonical game-pattern commands implemented by the current capability subsystem.",
+      "usage": "usage: x86decomp game-pattern [-h] [--project PROJECT] [--actor ACTOR]\n                              {state-machine} ..."
+    },
+    {
+      "command": "ghidra-export",
+      "help": "",
+      "usage": "usage: x86decomp ghidra-export [-h] [--scripts-dir SCRIPTS_DIR]\n                               [--ghidra-home GHIDRA_HOME] [--overwrite]\n                               [--selector SELECTOR] [--timeout TIMEOUT]\n                               [--report REPORT] [--print-command]\n                               binary ghidra_project_dir ghidra_project_name\n                               output_dir"
+    },
+    {
+      "command": "ghidra-mcp",
+      "help": "Canonical ghidra-mcp commands implemented by the current capability subsystem.",
+      "usage": "usage: x86decomp ghidra-mcp [-h] [--project PROJECT] [--actor ACTOR]\n                            {batch-decompile,decompile,functions,probe,sync-names} ..."
+    },
+    {
+      "command": "graph",
+      "help": "Canonical graph commands implemented by the current capability subsystem.",
+      "usage": "usage: x86decomp graph [-h] [--project PROJECT] [--actor ACTOR]\n                       {edge,impact,node} ..."
+    },
+    {
+      "command": "harness-generate",
+      "help": "",
+      "usage": "usage: x86decomp harness-generate [-h]\n                                  [--pointer-parameters POINTER_PARAMETERS]\n                                  [--no-observe-pointers]\n                                  [--max-instructions MAX_INSTRUCTIONS]\n                                  [--timeout-ms TIMEOUT_MS]\n                                  abi_contract output"
+    },
+    {
+      "command": "headers",
+      "help": "Canonical headers commands implemented by the current capability subsystem.",
+      "usage": "usage: x86decomp headers [-h] [--project PROJECT] [--actor ACTOR]\n                         {create,cycles,declare,explain,include,synthesize,synthesize-project,validate} ..."
+    },
+    {
+      "command": "hybrid",
+      "help": "Canonical hybrid commands implemented by the current capability subsystem.",
+      "usage": "usage: x86decomp hybrid [-h] [--project PROJECT] [--actor ACTOR]\n                        {compose,generate,verify} ..."
+    },
+    {
+      "command": "hybrid-generate",
+      "help": "",
+      "usage": "usage: x86decomp hybrid-generate [-h] [--architecture {x86,x86_64}]\n                                 [--asm-format {bytes,annotated,mnemonic}]\n                                 [--image-base IMAGE_BASE]\n                                 [--assembler-command-json ASSEMBLER_COMMAND_JSON]\n                                 [--symbol-map SYMBOL_MAP] [--overwrite]\n                                 project output"
+    },
+    {
+      "command": "hypothesis",
+      "help": "Canonical hypothesis commands implemented by the current capability subsystem.",
+      "usage": "usage: x86decomp hypothesis [-h] [--project PROJECT] [--actor ACTOR]\n                            {create,dependency,evidence,gate,list,show,transition} ..."
+    },
+    {
+      "command": "image-match",
+      "help": "",
+      "usage": "usage: x86decomp image-match [-h] [--profile PROFILE] [--report REPORT]\n                             reference candidate"
+    },
+    {
+      "command": "image-profile",
+      "help": "",
+      "usage": "usage: x86decomp image-profile [-h] reference output"
+    },
+    {
+      "command": "image-text",
+      "help": "Canonical image-text commands implemented by the current capability subsystem.",
+      "usage": "usage: x86decomp image-text [-h] [--project PROJECT] [--actor ACTOR]\n                            {compose} ..."
+    },
+    {
+      "command": "init",
+      "help": "",
+      "usage": "usage: x86decomp init [-h] [--reference-binary] binary project"
+    },
+    {
+      "command": "inspect-pe",
+      "help": "",
+      "usage": "usage: x86decomp inspect-pe [-h] binary"
+    },
+    {
+      "command": "integration-run",
+      "help": "",
+      "usage": "usage: x86decomp integration-run [-h] [--allow-host-execution]\n                                 [--report REPORT]\n                                 manifest"
+    },
+    {
+      "command": "layout-reconstruct",
+      "help": "",
+      "usage": "usage: x86decomp layout-reconstruct [-h] [--report REPORT]\n                                    pe map [objects ...]"
+    },
+    {
+      "command": "lib-inspect",
+      "help": "",
+      "usage": "usage: x86decomp lib-inspect [-h] library"
+    },
+    {
+      "command": "library",
+      "help": "Canonical library commands implemented by the current capability subsystem.",
+      "usage": "usage: x86decomp library [-h] [--project PROJECT] [--actor ACTOR]\n                         {accept,candidates,externalize,identify,reconstruct,reject} ..."
+    },
+    {
+      "command": "linker-plan",
+      "help": "",
+      "usage": "usage: x86decomp linker-plan [-h] [--library LIBRARY] [--linker LINKER]\n                             [--output-image OUTPUT_IMAGE] [--report REPORT]\n                             [--write-relink-manifest WRITE_RELINK_MANIFEST]\n                             pe map objects [objects ...]"
+    },
+    {
+      "command": "llm",
+      "help": "Canonical llm commands implemented by the current capability subsystem.",
+      "usage": "usage: x86decomp llm [-h] [--project PROJECT] [--actor ACTOR]\n                     {batch-create,batch-match,cpp-generate,generate,job-create,job-from-range,match,probe,profile-create,profile-validate,prompt,providers,verify} ..."
+    },
+    {
+      "command": "loop",
+      "help": "Canonical loop commands implemented by the current capability subsystem.",
+      "usage": "usage: x86decomp loop [-h] [--project PROJECT] [--actor ACTOR]\n                      {list,run,show} ..."
+    },
+    {
+      "command": "map-inspect",
+      "help": "",
+      "usage": "usage: x86decomp map-inspect [-h] map"
+    },
+    {
+      "command": "match",
+      "help": "Canonical match commands implemented by the current capability subsystem.",
+      "usage": "usage: x86decomp match [-h] [--project PROJECT] [--actor ACTOR]\n                       {batch,compare,mismatches,report} ..."
+    },
+    {
+      "command": "mcp-commit",
+      "help": "",
+      "usage": "usage: x86decomp mcp-commit [-h] [--url URL] [--command-json COMMAND_JSON]\n                            --allow-tool ALLOW_TOOL\n                            project approval_hash"
+    },
+    {
+      "command": "mcp-propose",
+      "help": "",
+      "usage": "usage: x86decomp mcp-propose [-h] [--url URL] [--command-json COMMAND_JSON]\n                             --allow-tool ALLOW_TOOL --rationale RATIONALE\n                             --evidence EVIDENCE\n                             project tool arguments"
+    },
+    {
+      "command": "mcp-read",
+      "help": "",
+      "usage": "usage: x86decomp mcp-read [-h] [--url URL] [--command-json COMMAND_JSON]\n                          project tool arguments"
+    },
+    {
+      "command": "mcp-tools",
+      "help": "",
+      "usage": "usage: x86decomp mcp-tools [-h] [--url URL] [--command-json COMMAND_JSON]"
+    },
+    {
+      "command": "memory-add",
+      "help": "",
+      "usage": "usage: x86decomp memory-add [-h] --actor ACTOR --category CATEGORY\n                            --summary SUMMARY [--details-json DETAILS_JSON]\n                            [--evidence EVIDENCE]\n                            project"
+    },
+    {
+      "command": "memory-render",
+      "help": "",
+      "usage": "usage: x86decomp memory-render [-h] project"
+    },
+    {
+      "command": "memory-verify",
+      "help": "",
+      "usage": "usage: x86decomp memory-verify [-h] project"
+    },
+    {
+      "command": "metadata-scan",
+      "help": "",
+      "usage": "usage: x86decomp metadata-scan [-h] [--object OBJECT] [--map MAP]\n                               [--report REPORT]\n                               pe"
+    },
+    {
+      "command": "mod",
+      "help": "Canonical mod commands implemented by the current capability subsystem.",
+      "usage": "usage: x86decomp mod [-h] [--project PROJECT] [--actor ACTOR]\n                     {branch-init} ..."
+    },
+    {
+      "command": "module",
+      "help": "Canonical module commands implemented by the current capability subsystem.",
+      "usage": "usage: x86decomp module [-h] [--project PROJECT] [--actor ACTOR]\n                        {add-member,add-unit-member,assign,create,create-unit,list,show,show-unit,suggest} ..."
+    },
+    {
+      "command": "objdiff-run",
+      "help": "",
+      "usage": "usage: x86decomp objdiff-run [-h] [--report REPORT] manifest"
+    },
+    {
+      "command": "patch-image",
+      "help": "",
+      "usage": "usage: x86decomp patch-image [-h] --rva RVA\n                             [--expected-original-sha256 EXPECTED_ORIGINAL_SHA256]\n                             [--expected-function-sha256 EXPECTED_FUNCTION_SHA256]\n                             [--report REPORT]\n                             original candidate output"
+    },
+    {
+      "command": "pattern",
+      "help": "Canonical pattern commands implemented by the current capability subsystem.",
+      "usage": "usage: x86decomp pattern [-h] [--project PROJECT] [--actor ACTOR]\n                         {catalog,generate,match,promote,scan} ..."
+    },
+    {
+      "command": "pdb-inspect",
+      "help": "",
+      "usage": "usage: x86decomp pdb-inspect [-h] [--pe PE] pdb"
+    },
+    {
+      "command": "pe",
+      "help": "Canonical pe commands implemented by the current capability subsystem.",
+      "usage": "usage: x86decomp pe [-h] [--project PROJECT] [--actor ACTOR]\n                    {export-coff,export-sections,inventory,patch-apply,patch-plan,text-swap} ..."
+    },
+    {
+      "command": "pipeline-cancel",
+      "help": "",
+      "usage": "usage: x86decomp pipeline-cancel [-h] [--stage-id STAGE_ID]\n                                 project pipeline_id"
+    },
+    {
+      "command": "pipeline-create",
+      "help": "",
+      "usage": "usage: x86decomp pipeline-create [-h] [--without-ghidra] project output"
+    },
+    {
+      "command": "pipeline-recover",
+      "help": "",
+      "usage": "usage: x86decomp pipeline-recover [-h] [--pipeline-id PIPELINE_ID]\n                                  [--stale-seconds STALE_SECONDS]\n                                  project"
+    },
+    {
+      "command": "pipeline-retry",
+      "help": "",
+      "usage": "usage: x86decomp pipeline-retry [-h] [--cascade] project pipeline_id stage_id"
+    },
+    {
+      "command": "pipeline-run",
+      "help": "",
+      "usage": "usage: x86decomp pipeline-run [-h] [--continue-on-failure] project manifest"
+    },
+    {
+      "command": "pipeline-status",
+      "help": "",
+      "usage": "usage: x86decomp pipeline-status [-h] project pipeline_id"
+    },
+    {
+      "command": "playability",
+      "help": "Canonical playability commands implemented by the current capability subsystem.",
+      "usage": "usage: x86decomp playability [-h] [--project PROJECT] [--actor ACTOR]\n                             {smoke-plan} ..."
+    },
+    {
+      "command": "plugin",
+      "help": "Canonical plugin commands implemented by the current capability subsystem.",
+      "usage": "usage: x86decomp plugin [-h] [--project PROJECT] [--actor ACTOR]\n                        {doctor,install,invoke,list,validate} ..."
+    },
+    {
+      "command": "progress",
+      "help": "Canonical progress commands implemented by the current capability subsystem.",
+      "usage": "usage: x86decomp progress [-h] [--project PROJECT] [--actor ACTOR]\n                          {reconcile} ..."
+    },
+    {
+      "command": "project",
+      "help": "Canonical project commands implemented by the current capability subsystem.",
+      "usage": "usage: x86decomp project [-h] [--project PROJECT] [--actor ACTOR]\n                         {check,doctor-paths,explain-boundaries,export,health,init,synthesize-layout} ..."
+    },
+    {
+      "command": "project-backup",
+      "help": "",
+      "usage": "usage: x86decomp project-backup [-h] project output"
+    },
+    {
+      "command": "project-check",
+      "help": "",
+      "usage": "usage: x86decomp project-check [-h] project"
+    },
+    {
+      "command": "project-from-target",
+      "help": "",
+      "usage": "usage: x86decomp project-from-target [-h] [--reference-binary]\n                                     target_pack project"
+    },
+    {
+      "command": "project-gc",
+      "help": "",
+      "usage": "usage: x86decomp project-gc [-h] [--apply] project"
+    },
+    {
+      "command": "project-migrate",
+      "help": "",
+      "usage": "usage: x86decomp project-migrate [-h] [--dry-run] [--backup BACKUP] project"
+    },
+    {
+      "command": "project-repair",
+      "help": "",
+      "usage": "usage: x86decomp project-repair [-h] [--apply] project"
+    },
+    {
+      "command": "project-restore",
+      "help": "",
+      "usage": "usage: x86decomp project-restore [-h] archive destination"
+    },
+    {
+      "command": "proof",
+      "help": "Canonical proof commands implemented by the current capability subsystem.",
+      "usage": "usage: x86decomp proof [-h] [--project PROJECT] [--actor ACTOR]\n                       {evaluate,export,inspect,obligation,result,verify} ..."
+    },
+    {
+      "command": "provenance",
+      "help": "Canonical provenance commands implemented by the current capability subsystem.",
+      "usage": "usage: x86decomp provenance [-h] [--project PROJECT] [--actor ACTOR]\n                            {binary,export,record,source} ..."
+    },
+    {
+      "command": "regression",
+      "help": "Canonical regression commands implemented by the current capability subsystem.",
+      "usage": "usage: x86decomp regression [-h] [--project PROJECT] [--actor ACTOR]\n                            {compare} ..."
+    },
+    {
+      "command": "release-gate",
+      "help": "",
+      "usage": "usage: x86decomp release-gate [-h]\n                              [--reproduction-manifest REPRODUCTION_MANIFEST]\n                              [--security-report SECURITY_REPORT]\n                              [--convergence-report CONVERGENCE_REPORT]\n                              [--require-workflows]\n                              [--require-verified-claims]\n                              [--require-succeeded-pipelines]\n                              [--report REPORT]\n                              project"
+    },
+    {
+      "command": "release-manifest-verify",
+      "help": "",
+      "usage": "usage: x86decomp release-manifest-verify [-h] [--manifest MANIFEST] root"
+    },
+    {
+      "command": "release-policy",
+      "help": "Canonical release-policy commands implemented by the current capability subsystem.",
+      "usage": "usage: x86decomp release-policy [-h] [--project PROJECT] [--actor ACTOR]\n                                {moddable-source} ..."
+    },
+    {
+      "command": "relink",
+      "help": "",
+      "usage": "usage: x86decomp relink [-h] [--report REPORT] manifest"
+    },
+    {
+      "command": "reloc",
+      "help": "Canonical reloc commands implemented by the current capability subsystem.",
+      "usage": "usage: x86decomp reloc [-h] [--project PROJECT] [--actor ACTOR]\n                       {inspect,resolve,supported} ..."
+    },
+    {
+      "command": "reproduce-create",
+      "help": "",
+      "usage": "usage: x86decomp reproduce-create [-h] [--required-tool REQUIRED_TOOL]\n                                  project output"
+    },
+    {
+      "command": "reproduce-verify",
+      "help": "",
+      "usage": "usage: x86decomp reproduce-verify [-h] project manifest"
+    },
+    {
+      "command": "review",
+      "help": "Canonical review commands implemented by the current capability subsystem.",
+      "usage": "usage: x86decomp review [-h] [--project PROJECT] [--actor ACTOR]\n                        {assign,create,decide,list,lock,show} ..."
+    },
+    {
+      "command": "runtime",
+      "help": "Canonical runtime commands implemented by the current capability subsystem.",
+      "usage": "usage: x86decomp runtime [-h] [--project PROJECT] [--actor ACTOR]\n                         {launch,map-crash,validate-image} ..."
+    },
+    {
+      "command": "runtime-analysis",
+      "help": "Canonical runtime-analysis commands implemented by the current capability subsystem.",
+      "usage": "usage: x86decomp runtime-analysis [-h] [--project PROJECT] [--actor ACTOR]\n                                  {identify,match-library,quarantine} ..."
+    },
+    {
+      "command": "sbom-generate",
+      "help": "",
+      "usage": "usage: x86decomp sbom-generate [-h] output"
+    },
+    {
+      "command": "script-port",
+      "help": "Canonical script-port commands implemented by the current capability subsystem.",
+      "usage": "usage: x86decomp script-port [-h] [--project PROJECT] [--actor ACTOR]\n                             {audit} ..."
+    },
+    {
+      "command": "security",
+      "help": "Canonical security commands implemented by the current capability subsystem.",
+      "usage": "usage: x86decomp security [-h] [--project PROJECT] [--actor ACTOR]\n                          {finding,policy,report,scan} ..."
+    },
+    {
+      "command": "security-audit",
+      "help": "",
+      "usage": "usage: x86decomp security-audit [-h] [--report REPORT] root"
+    },
+    {
+      "command": "serve",
+      "help": "",
+      "usage": "usage: x86decomp serve [-h] [--host HOST] [--port PORT] project"
+    },
+    {
+      "command": "snapshot-tools",
+      "help": "",
+      "usage": "usage: x86decomp snapshot-tools [-h] [--output OUTPUT]\n                                [--ghidra-home GHIDRA_HOME]"
+    },
+    {
+      "command": "source",
+      "help": "Canonical source commands implemented by the current capability subsystem.",
+      "usage": "usage: x86decomp source [-h] [--project PROJECT] [--actor ACTOR]\n                        {impact,lock,reconcile,unlock} ..."
+    },
+    {
+      "command": "source-map",
+      "help": "Canonical source-map commands implemented by the current capability subsystem.",
+      "usage": "usage: x86decomp source-map [-h] [--project PROJECT] [--actor ACTOR]\n                            {annotate,verify} ..."
+    },
+    {
+      "command": "source-stage",
+      "help": "Canonical source-stage commands implemented by the current capability subsystem.",
+      "usage": "usage: x86decomp source-stage [-h] [--project PROJECT] [--actor ACTOR]\n                              {classify} ..."
+    },
+    {
+      "command": "staging",
+      "help": "Canonical staging commands implemented by the current capability subsystem.",
+      "usage": "usage: x86decomp staging [-h] [--project PROJECT] [--actor ACTOR]\n                         {compile-check,generate-context,resolve,scan,unresolved} ..."
+    },
+    {
+      "command": "subsystem",
+      "help": "Canonical subsystem commands implemented by the current capability subsystem.",
+      "usage": "usage: x86decomp subsystem [-h] [--project PROJECT] [--actor ACTOR]\n                           {detect} ..."
+    },
+    {
+      "command": "symbolic-memory-validate",
+      "help": "",
+      "usage": "usage: x86decomp symbolic-memory-validate [-h] [--report REPORT]\n                                          target candidate harness"
+    },
+    {
+      "command": "symbolic-validate",
+      "help": "",
+      "usage": "usage: x86decomp symbolic-validate [-h] [--architecture {x86,x86_64}]\n                                   [--input-register INPUT_REGISTER]\n                                   [--stack-argument-words STACK_ARGUMENT_WORDS]\n                                   [--output-register OUTPUT_REGISTER]\n                                   [--max-steps MAX_STEPS]\n                                   [--max-paths MAX_PATHS] [--report REPORT]\n                                   target candidate"
+    },
+    {
+      "command": "target-pack-infer",
+      "help": "",
+      "usage": "usage: x86decomp target-pack-infer [-h] [--name NAME] [--pdb PDB] [--map MAP]\n                                   [--object OBJECT] [--library LIBRARY]\n                                   [--rebuilt-image REBUILT_IMAGE]\n                                   [--decisions DECISIONS]\n                                   [--reference-artifacts]\n                                   primary_image output_directory"
+    },
+    {
+      "command": "target-pack-verify",
+      "help": "",
+      "usage": "usage: x86decomp target-pack-verify [-h] target_pack"
+    },
+    {
+      "command": "template-derive",
+      "help": "",
+      "usage": "usage: x86decomp template-derive [-h] target_pack"
+    },
+    {
+      "command": "template-materialize",
+      "help": "",
+      "usage": "usage: x86decomp template-materialize [-h] project"
+    },
+    {
+      "command": "test-bundle-create",
+      "help": "",
+      "usage": "usage: x86decomp test-bundle-create [-h] --artifact ARTIFACT\n                                    --authorization AUTHORIZATION\n                                    [--name NAME] [--description DESCRIPTION]\n                                    [--expected-architecture {x86,x86_64}]\n                                    output"
+    },
+    {
+      "command": "test-bundle-inspect",
+      "help": "",
+      "usage": "usage: x86decomp test-bundle-inspect [-h] [--report REPORT] bundle"
+    },
+    {
+      "command": "tests",
+      "help": "Canonical tests commands implemented by the current capability subsystem.",
+      "usage": "usage: x86decomp tests [-h] [--project PROJECT] [--actor ACTOR]\n                       {add,explain,list,promote-counterexample,synthesize} ..."
+    },
+    {
+      "command": "text-swap",
+      "help": "Canonical text-swap commands implemented by the current capability subsystem.",
+      "usage": "usage: x86decomp text-swap [-h] [--project PROJECT] [--actor ACTOR]\n                           {build,inject,plan,verify} ..."
+    },
+    {
+      "command": "toolchain",
+      "help": "Canonical toolchain commands implemented by the current capability subsystem.",
+      "usage": "usage: x86decomp toolchain [-h] [--project PROJECT] [--actor ACTOR]\n                           {hash-tree,redact-package,verify-local} ..."
+    },
+    {
+      "command": "toolchain-register",
+      "help": "",
+      "usage": "usage: x86decomp toolchain-register [-h] --executable EXECUTABLE\n                                    registry toolchain_id family version"
+    },
+    {
+      "command": "toolchain-verify",
+      "help": "",
+      "usage": "usage: x86decomp toolchain-verify [-h] registry toolchain_id"
+    },
+    {
+      "command": "triage",
+      "help": "Canonical triage commands implemented by the current capability subsystem.",
+      "usage": "usage: x86decomp triage [-h] [--project PROJECT] [--actor ACTOR] {next} ..."
+    },
+    {
+      "command": "type",
+      "help": "Canonical type commands implemented by the current capability subsystem.",
+      "usage": "usage: x86decomp type [-h] [--project PROJECT] [--actor ACTOR] {propagate} ..."
+    },
+    {
+      "command": "verify-project",
+      "help": "",
+      "usage": "usage: x86decomp verify-project [-h] project"
+    },
+    {
+      "command": "vtable",
+      "help": "Canonical vtable commands implemented by the current capability subsystem.",
+      "usage": "usage: x86decomp vtable [-h] [--project PROJECT] [--actor ACTOR] {recover} ..."
+    },
+    {
+      "command": "windows",
+      "help": "Canonical windows commands implemented by the current capability subsystem.",
+      "usage": "usage: x86decomp windows [-h] [--project PROJECT] [--actor ACTOR]\n                         {discover-ghidra,doctor,response-file} ..."
+    },
+    {
+      "command": "work-claim",
+      "help": "",
+      "usage": "usage: x86decomp work-claim [-h] database task_id assignee"
+    },
+    {
+      "command": "work-create",
+      "help": "",
+      "usage": "usage: x86decomp work-create [-h] --validator VALIDATOR [--priority PRIORITY]\n                             database function_id {matching,functional} kind\n                             instructions"
+    },
+    {
+      "command": "work-next",
+      "help": "",
+      "usage": "usage: x86decomp work-next [-h] [--mode {matching,functional}] database"
+    },
+    {
+      "command": "work-propose",
+      "help": "",
+      "usage": "usage: x86decomp work-propose [-h] --evidence EVIDENCE\n                              database task_id proposal"
+    },
+    {
+      "command": "work-validate",
+      "help": "",
+      "usage": "usage: x86decomp work-validate [-h] [--passed]\n                               database task_id validator report_path"
+    },
+    {
+      "command": "worker",
+      "help": "Canonical worker commands implemented by the current capability subsystem.",
+      "usage": "usage: x86decomp worker [-h] [--project PROJECT] [--actor ACTOR]\n                        {doctor,list,register,select,status} ..."
+    },
+    {
+      "command": "worker-capabilities",
+      "help": "",
+      "usage": "usage: x86decomp worker-capabilities [-h]"
+    },
+    {
+      "command": "workflow-init",
+      "help": "",
+      "usage": "usage: x86decomp workflow-init [-h] [--mode {matching,functional}]\n                               project function_id"
+    },
+    {
+      "command": "workflow-show",
+      "help": "",
+      "usage": "usage: x86decomp workflow-show [-h] project function_id"
+    },
+    {
+      "command": "workflow-update",
+      "help": "",
+      "usage": "usage: x86decomp workflow-update [-h]\n                                 [--source-stage {original_bytes,generated_assembly,decompiler_candidate,human_candidate,accepted_source}]\n                                 [--matching-status {not_started,decompiled,compiles,abi_compatible,instruction_similar,byte_matched,image_integrated,full_relink_validated,blocked}]\n                                 [--functional-status {not_started,decompiled,compiles,abi_compatible,differentially_validated,symbolically_bounded,integration_validated,blocked}]\n                                 [--candidate CANDIDATE]\n                                 [--compiler-profile COMPILER_PROFILE]\n                                 [--report-kind REPORT_KIND]\n                                 [--report-path REPORT_PATH]\n                                 [--blocker BLOCKER] [--allow-regression]\n                                 project function_id"
+    }
+  ]
+}

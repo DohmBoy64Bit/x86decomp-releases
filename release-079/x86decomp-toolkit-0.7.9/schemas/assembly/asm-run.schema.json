@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://x86decomp.local/schemas/assembly/asm-run.schema.json",
+  "title": "v0.7.9 assembly run",
+  "type": "object",
+  "required": ["run_id", "asm_format", "architecture", "status", "summary"],
+  "properties": {
+    "run_id": {"type": "string", "minLength": 1},
+    "asm_format": {"enum": ["bytes", "annotated", "mnemonic"]},
+    "architecture": {"enum": ["x86", "x86_64"]},
+    "status": {"enum": ["running", "completed", "failed"]},
+    "summary": {"type": "object"}
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,91 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:x86decomp:schema:function:2",
+  "title": "x86decomp Ghidra function artifact (schema versions 1 and 2)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "id", "entry", "entry_rva", "name", "name_source", "calling_convention", "signature", "return_type", "body_ranges", "parameters"],
+  "properties": {
+    "schema_version": {"enum": [1, 2]},
+    "selected_modes": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {"enum": ["matching", "functional"]}
+    },
+    "matching_status": {
+      "enum": ["not_started", "decompiled", "compiles", "abi_compatible", "instruction_similar", "byte_matched", "image_integrated", "full_relink_validated", "blocked"]
+    },
+    "functional_status": {
+      "enum": ["not_started", "decompiled", "compiles", "abi_compatible", "differentially_validated", "symbolically_bounded", "integration_validated", "blocked"]
+    },
+    "id": {"type": "string", "pattern": "^pe-rva:[0-9a-f]{8}$"},
+    "entry": {"type": "string", "minLength": 1},
+    "entry_rva": {"type": "integer", "minimum": 0, "maximum": 4294967295},
+    "name": {"type": "string", "minLength": 1},
+    "qualified_name": {"type": "string"},
+    "name_source": {"type": "string", "minLength": 1},
+    "calling_convention": {"type": ["string", "null"]},
+    "signature": {"type": "string"},
+    "return_type": {"type": "string"},
+    "is_thunk": {"type": "boolean"},
+    "decompile_completed": {"type": "boolean"},
+    "decompile_error": {"type": ["string", "null"]},
+    "artifacts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["decompiler_c", "decompiler_tree", "high_pcode", "raw_pcode", "instructions", "references"],
+      "properties": {
+        "decompiler_c": {"type": "string", "minLength": 1},
+        "decompiler_tree": {"type": "string", "minLength": 1},
+        "high_pcode": {"type": "string", "minLength": 1},
+        "raw_pcode": {"type": "string", "minLength": 1},
+        "instructions": {"type": "string", "minLength": 1},
+        "references": {"type": "string", "minLength": 1}
+      }
+    },
+    "body_ranges": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["start", "end_inclusive", "start_rva", "end_rva", "size", "file"],
+        "properties": {
+          "start": {"type": "string"},
+          "end_inclusive": {"type": "string"},
+          "start_rva": {"type": "integer", "minimum": 0},
+          "end_rva": {"type": "integer", "minimum": 1},
+          "size": {"type": "integer", "minimum": 1},
+          "file": {"type": "string", "pattern": "^ranges/[^/]+\\.bin$"}
+        }
+      }
+    },
+    "parameters": {"type": "array"}
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"schema_version": {"const": 2}}, "required": ["schema_version"]},
+      "then": {
+        "required": ["selected_modes", "matching_status", "functional_status", "is_thunk", "decompile_completed", "decompile_error", "artifacts"],
+        "properties": {
+          "body_ranges": {
+            "items": {"additionalProperties": false}
+          },
+          "parameters": {
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["ordinal", "name", "type", "storage"],
+              "properties": {
+                "ordinal": {"type": "integer"},
+                "name": {"type": "string"},
+                "type": {"type": "string"},
+                "storage": {"type": "string"}
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

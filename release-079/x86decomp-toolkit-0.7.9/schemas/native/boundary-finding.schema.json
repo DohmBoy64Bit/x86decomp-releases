@@ -1,0 +1,27 @@
+{
+  "$id": "https://x86decomp.invalid/schemas/native/boundary-finding.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "properties": {
+    "finding_kind": {
+      "type": "string"
+    },
+    "function_id": {
+      "type": "string"
+    },
+    "severity": {
+      "enum": [
+        "info",
+        "warning",
+        "error"
+      ]
+    }
+  },
+  "required": [
+    "function_id",
+    "finding_kind",
+    "severity"
+  ],
+  "title": "x86decomp boundary-finding",
+  "type": "object"
+}

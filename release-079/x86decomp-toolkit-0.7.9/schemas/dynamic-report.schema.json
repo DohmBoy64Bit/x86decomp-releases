@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:x86decomp:schema:dynamic-report:1",
+  "title": "Bounded Unicorn differential report",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "equivalent_for_harness",
+    "target",
+    "candidate",
+    "scope_statement"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "equivalent_for_harness": {
+      "type": "boolean"
+    },
+    "target": {
+      "type": "object"
+    },
+    "candidate": {
+      "type": "object"
+    },
+    "scope_statement": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "additionalProperties": true
+}

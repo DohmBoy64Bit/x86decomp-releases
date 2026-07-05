@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "capabilities": {
+      "minProperties": 1,
+      "type": "object"
+    },
+    "endpoint": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "environment_sha256": {
+      "pattern": "^[a-f0-9]{64}$",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "name": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "active",
+        "draining",
+        "offline",
+        "unhealthy"
+      ]
+    }
+  },
+  "required": [
+    "name",
+    "status",
+    "capabilities"
+  ],
+  "title": "worker profile",
+  "type": "object"
+}

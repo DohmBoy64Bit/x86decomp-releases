@@ -1,0 +1,15 @@
+include MANIFEST.sha256
+include setup.cfg
+include .gitignore README.md LICENSE CHANGELOG.md MAINTENANCE.md SECURITY.md INTEGRATION.md VERIFICATION.md
+recursive-include docs *.md *.txt
+recursive-include examples *.json
+recursive-include schemas *.json
+recursive-include scripts *.sh *.ps1
+recursive-include tests *.py
+recursive-include src/x86decomp_testkit/data *.json
+recursive-include src/x86decomp_testkit/self_tests *.py
+recursive-include src/x86decomp_testkit/toolkit_tests *.py
+prune .pytest_cache
+prune build
+prune dist
+global-exclude __pycache__ *.py[cod] *.egg-info .pytest_cache .coverage
