@@ -1,0 +1,13 @@
+{
+  "architecture": "x86",
+  "regions": [
+    {"name": "left", "pointer_register": "ecx", "size": 4, "alignment": 4, "initial": "symbolic"},
+    {"name": "right", "pointer_register": "edx", "size": 4, "alignment": 4, "initial": "symbolic"}
+  ],
+  "alias_constraints": [{"left": "left", "right": "right", "relation": "may_alias"}],
+  "observe_memory": [{"region": "left", "offset": 0, "size": 4}, {"region": "right", "offset": 0, "size": 4}],
+  "output_registers": ["eax"],
+  "alias_slots": 2,
+  "max_steps": 32,
+  "max_paths": 16
+}

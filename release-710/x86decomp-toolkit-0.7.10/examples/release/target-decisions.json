@@ -1,0 +1,9 @@
+{
+  "preferred_mode": "both",
+  "compiler_family": "unknown",
+  "compiler_version": "unknown",
+  "linker_family": "unknown",
+  "source_language": "unknown",
+  "allow_host_execution": false,
+  "target_description": "Authorized native Windows target. Unknown compiler, linker, and source-language facts remain unresolved until supported by evidence."
+}

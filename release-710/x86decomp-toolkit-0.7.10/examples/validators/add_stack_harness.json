@@ -1,0 +1,15 @@
+{
+  "architecture": "x86",
+  "code_base": 16777216,
+  "stack_base": 1879048192,
+  "stack_size": 131072,
+  "sentinel_address": 268369920,
+  "max_instructions": 1000,
+  "timeout_ms": 1000,
+  "registers": {},
+  "stack_arguments_hex": "0500000007000000",
+  "memory": [],
+  "observe_registers": ["eax", "esp"],
+  "observe_memory": [],
+  "stubs": {}
+}

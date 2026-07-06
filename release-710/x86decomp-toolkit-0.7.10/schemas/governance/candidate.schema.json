@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "branch_name": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "evaluations": {
+      "items": {
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "files": {
+      "items": {
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "objective": {
+      "type": "object"
+    },
+    "state": {
+      "enum": [
+        "active",
+        "evaluating",
+        "supported",
+        "promoted",
+        "discarded",
+        "blocked"
+      ]
+    }
+  },
+  "required": [
+    "branch_name",
+    "state",
+    "objective"
+  ],
+  "title": "candidate",
+  "type": "object"
+}

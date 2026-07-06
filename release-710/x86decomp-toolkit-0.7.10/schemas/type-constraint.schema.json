@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:x86decomp:schema:type-constraint:1",
+  "title": "Type/ABI constraint record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "subject_entity",
+    "relation",
+    "object_value",
+    "provenance",
+    "status"
+  ],
+  "properties": {
+    "constraint_id": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "subject_entity": {
+      "type": "string",
+      "minLength": 1
+    },
+    "relation": {
+      "type": "string",
+      "minLength": 1
+    },
+    "object_value": {
+      "type": "string",
+      "minLength": 1
+    },
+    "provenance": {
+      "type": "string",
+      "minLength": 1
+    },
+    "evidence_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "confidence": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0,
+      "maximum": 1
+    },
+    "status": {
+      "enum": [
+        "candidate",
+        "accepted",
+        "rejected"
+      ]
+    }
+  }
+}

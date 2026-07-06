@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://x86decomp.local/schemas/assembly/asm-function.schema.json",
+  "title": "v0.7.10 function assembly result",
+  "type": "object",
+  "required": ["function_id", "symbol", "rva", "format", "classification", "exact_match", "input_sha256", "source_sha256"],
+  "properties": {
+    "function_id": {"type": "string", "minLength": 1},
+    "symbol": {"type": "string", "minLength": 1},
+    "rva": {"type": "integer", "minimum": 0},
+    "format": {"enum": ["bytes", "annotated", "mnemonic"]},
+    "classification": {"enum": ["byte-form", "annotated-byte-form", "fully-mnemonic", "mixed-mnemonic-byte", "byte-form-fallback"]},
+    "exact_match": {"type": "boolean"},
+    "instruction_count": {"type": "integer", "minimum": 0},
+    "mnemonic_count": {"type": "integer", "minimum": 0},
+    "byte_escape_count": {"type": "integer", "minimum": 0},
+    "relocation_count": {"type": "integer", "minimum": 0},
+    "resolved_relocation_count": {"type": "integer", "minimum": 0},
+    "unresolved_relocation_count": {"type": "integer", "minimum": 0},
+    "input_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "source_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:x86decomp:schema:function-workflow:2",
+  "title": "x86decomp per-function workflow",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "function_id", "selected_modes", "source_stage", "matching_status", "functional_status", "reports", "blockers", "updated_at"],
+  "properties": {
+    "schema_version": {"const": 2},
+    "function_id": {"type": "string", "pattern": "^pe-rva:[0-9a-f]{8}$"},
+    "selected_modes": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"enum": ["matching", "functional"]}},
+    "source_stage": {"enum": ["original_bytes", "generated_assembly", "decompiler_candidate", "human_candidate", "accepted_source"]},
+    "matching_status": {"enum": ["not_started", "decompiled", "compiles", "abi_compatible", "instruction_similar", "byte_matched", "image_integrated", "full_relink_validated", "blocked"]},
+    "functional_status": {"enum": ["not_started", "decompiled", "compiles", "abi_compatible", "differentially_validated", "symbolically_bounded", "integration_validated", "blocked"]},
+    "active_candidate": {"type": ["string", "null"]},
+    "compiler_profile": {"type": ["string", "null"]},
+    "reports": {"type": "object", "additionalProperties": {"type": "string"}},
+    "blockers": {"type": "array", "items": {"type": "string"}},
+    "updated_at": {"type": "string", "format": "date-time"}
+  }
+}

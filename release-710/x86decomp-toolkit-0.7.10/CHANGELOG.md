@@ -1,0 +1,11 @@
+# Changelog
+
+## 0.7.10 — Complete docstring coverage and audit evidence
+
+- Added professional docstrings to every audited Python module, class, function, and method across toolkit source, tests, test-suite source, test-suite tests, scripts, and Ghidra helper scripts.
+- Added `DOCSTRING_AUDIT_0.7.10.json` and `DOCSTRING_AUDIT_0.7.10.md` with per-file SHA-256 coverage, per-definition docstring records, parser command-registration records, and three verification passes.
+- Added `docs/COMMAND_REFERENCE_0.7.10.json` and `docs/COMMAND_REFERENCE_0.7.10.md` to bind command documentation to the live root and canonical command surfaces.
+- Added regression coverage in `tests/test_docstring_audit.py` so missing docstrings or command-reference drift fail the test suite.
+- Updated synchronized release, contract, skill, and architecture metadata to the 0.7.10 current-release baseline while preserving the adapter-capability surface from the previous baseline.
+
+Earlier release history is retained in source-control tags and published release archives, not in the active 0.7.10 source tree.

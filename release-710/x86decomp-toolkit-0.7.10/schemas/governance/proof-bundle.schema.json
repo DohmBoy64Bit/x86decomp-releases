@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "audit_tip": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "files": {
+      "additionalProperties": {
+        "additionalProperties": false,
+        "properties": {
+          "sha256": {
+            "pattern": "^[a-f0-9]{64}$",
+            "type": "string"
+          },
+          "size": {
+            "minimum": 0,
+            "type": "integer"
+          }
+        },
+        "required": [
+          "sha256",
+          "size"
+        ],
+        "type": "object"
+      },
+      "type": "object"
+    },
+    "format": {
+      "const": "x86decomp-proof-bundle-v1"
+    },
+    "release": {
+      "const": "0.7.10"
+    }
+  },
+  "required": [
+    "format",
+    "release",
+    "files"
+  ],
+  "title": "proof bundle manifest",
+  "type": "object"
+}
