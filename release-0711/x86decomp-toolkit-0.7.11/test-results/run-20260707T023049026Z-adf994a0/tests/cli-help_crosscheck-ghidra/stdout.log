@@ -1,0 +1,14 @@
+usage: x86decomp crosscheck-ghidra [-h] --base BASE
+                                   [--architecture {x86,x86_64}]
+                                   [--report REPORT]
+                                   instructions_jsonl code
+
+positional arguments:
+  instructions_jsonl
+  code
+
+options:
+  -h, --help            show this help message and exit
+  --base BASE
+  --architecture {x86,x86_64}
+  --report REPORT

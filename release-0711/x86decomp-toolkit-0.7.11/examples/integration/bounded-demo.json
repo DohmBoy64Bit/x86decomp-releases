@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "name": "bounded stdout and file equivalence demo",
+  "captured_output_limit": 65536,
+  "execution": {
+    "mode": "host_explicit",
+    "acknowledge_untrusted_code_risk": true
+  },
+  "scenarios": [
+    {
+      "id": "uppercase-hello",
+      "timeout_seconds": 10,
+      "stdin": {"text": "hello"},
+      "target": {
+        "artifact": "target.py",
+        "command": ["python3", "{artifact}"],
+        "inherit_environment": true,
+        "environment": {}
+      },
+      "candidate": {
+        "artifact": "candidate.py",
+        "command": ["python3", "{artifact}"],
+        "inherit_environment": true,
+        "environment": {}
+      },
+      "observations": {
+        "exit_code": true,
+        "stdout": "exact",
+        "stderr": "exact",
+        "files": [
+          {"path": "result.txt", "mode": "text", "optional": false}
+        ]
+      }
+    }
+  ]
+}

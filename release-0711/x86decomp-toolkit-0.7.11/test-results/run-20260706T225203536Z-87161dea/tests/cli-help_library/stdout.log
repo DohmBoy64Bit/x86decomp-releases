@@ -1,0 +1,19 @@
+usage: x86decomp library [-h] [--project PROJECT] [--actor ACTOR]
+                         {accept,candidates,externalize,identify,reconstruct,reject} ...
+
+Canonical library commands implemented by the current capability subsystem.
+
+positional arguments:
+  {accept,candidates,externalize,identify,reconstruct,reject}
+    accept              accept command
+    candidates          candidates command
+    externalize         externalize command
+    identify            identify command
+    reconstruct         reconstruct command
+    reject              reject command
+
+options:
+  -h, --help            show this help message and exit
+  --project PROJECT     project root used by the capability implementation
+                        (default: current directory)
+  --actor ACTOR

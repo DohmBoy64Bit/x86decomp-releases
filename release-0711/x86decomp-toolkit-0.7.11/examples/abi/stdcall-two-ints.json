@@ -1,0 +1,12 @@
+{
+  "architecture": "x86",
+  "convention": "stdcall",
+  "stack_argument_bytes": 8,
+  "callee_stack_cleanup": 8,
+  "variadic": false,
+  "this_register": null,
+  "register_arguments": [],
+  "return_registers": ["eax"],
+  "structure_return": false,
+  "floating_point": "none"
+}

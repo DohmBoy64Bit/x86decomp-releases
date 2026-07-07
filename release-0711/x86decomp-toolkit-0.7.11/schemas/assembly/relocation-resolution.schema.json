@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://x86decomp.local/schemas/assembly/relocation-resolution.schema.json",
+  "title": "v0.7.11 COFF relocation resolution",
+  "type": "object",
+  "required": ["object", "symbol", "architecture", "base_rva", "resolved_count", "unresolved_count", "relocations", "exact_match"],
+  "properties": {
+    "object": {"type": "string", "minLength": 1},
+    "symbol": {"type": "string", "minLength": 1},
+    "architecture": {"enum": ["x86", "x86_64"]},
+    "base_rva": {"type": "integer", "minimum": 0},
+    "resolved_count": {"type": "integer", "minimum": 0},
+    "unresolved_count": {"type": "integer", "minimum": 0},
+    "exact_match": {"type": "boolean"},
+    "relocations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["offset", "type", "status"],
+        "properties": {
+          "offset": {"type": "integer", "minimum": 0},
+          "type": {"type": "string"},
+          "status": {"enum": ["resolved", "unresolved"]}
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": true
+}

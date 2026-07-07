@@ -1,0 +1,8 @@
+usage: x86decomp artifact-import [-h] project exported_dir
+
+positional arguments:
+  project
+  exported_dir
+
+options:
+  -h, --help    show this help message and exit

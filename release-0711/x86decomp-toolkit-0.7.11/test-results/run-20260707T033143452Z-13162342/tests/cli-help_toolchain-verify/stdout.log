@@ -1,0 +1,8 @@
+usage: x86decomp toolchain-verify [-h] registry toolchain_id
+
+positional arguments:
+  registry
+  toolchain_id
+
+options:
+  -h, --help    show this help message and exit

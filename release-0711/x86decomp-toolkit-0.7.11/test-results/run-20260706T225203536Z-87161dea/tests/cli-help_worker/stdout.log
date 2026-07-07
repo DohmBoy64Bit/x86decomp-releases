@@ -1,0 +1,18 @@
+usage: x86decomp worker [-h] [--project PROJECT] [--actor ACTOR]
+                        {doctor,list,register,select,status} ...
+
+Canonical worker commands implemented by the current capability subsystem.
+
+positional arguments:
+  {doctor,list,register,select,status}
+    doctor              doctor command
+    list                list command
+    register            register command
+    select              select command
+    status              status command
+
+options:
+  -h, --help            show this help message and exit
+  --project PROJECT     project root used by the capability implementation
+                        (default: current directory)
+  --actor ACTOR

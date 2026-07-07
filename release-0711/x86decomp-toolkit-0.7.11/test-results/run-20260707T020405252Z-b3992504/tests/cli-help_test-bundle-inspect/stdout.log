@@ -1,0 +1,8 @@
+usage: x86decomp test-bundle-inspect [-h] [--report REPORT] bundle
+
+positional arguments:
+  bundle
+
+options:
+  -h, --help       show this help message and exit
+  --report REPORT

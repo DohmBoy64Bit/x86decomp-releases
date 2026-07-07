@@ -1,0 +1,22 @@
+usage: x86decomp module [-h] [--project PROJECT] [--actor ACTOR]
+                        {add-member,add-unit-member,assign,create,create-unit,list,show,show-unit,suggest} ...
+
+Canonical module commands implemented by the current capability subsystem.
+
+positional arguments:
+  {add-member,add-unit-member,assign,create,create-unit,list,show,show-unit,suggest}
+    add-member          add-member command
+    add-unit-member     add-unit-member command
+    assign              assign command
+    create              create command
+    create-unit         create-unit command
+    list                list command
+    show                show command
+    show-unit           show-unit command
+    suggest             suggest command
+
+options:
+  -h, --help            show this help message and exit
+  --project PROJECT     project root used by the capability implementation
+                        (default: current directory)
+  --actor ACTOR

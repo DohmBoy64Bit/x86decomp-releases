@@ -1,0 +1,7 @@
+usage: x86decomp drcov-parse [-h] log
+
+positional arguments:
+  log
+
+options:
+  -h, --help  show this help message and exit

@@ -1,0 +1,7 @@
+usage: x86decomp corpus-generated-verify [-h] report
+
+positional arguments:
+  report
+
+options:
+  -h, --help  show this help message and exit

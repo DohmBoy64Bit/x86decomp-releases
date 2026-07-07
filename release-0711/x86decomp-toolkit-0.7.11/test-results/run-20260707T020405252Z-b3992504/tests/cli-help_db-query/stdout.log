@@ -1,0 +1,10 @@
+usage: x86decomp db-query [-h] [--parameters-json PARAMETERS_JSON]
+                          database sql
+
+positional arguments:
+  database
+  sql
+
+options:
+  -h, --help            show this help message and exit
+  --parameters-json PARAMETERS_JSON

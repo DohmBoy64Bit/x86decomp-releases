@@ -1,0 +1,8 @@
+usage: x86decomp corpus-compare [-h] [--report REPORT] reports [reports ...]
+
+positional arguments:
+  reports
+
+options:
+  -h, --help       show this help message and exit
+  --report REPORT

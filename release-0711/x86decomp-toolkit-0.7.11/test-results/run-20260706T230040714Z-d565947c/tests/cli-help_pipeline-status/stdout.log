@@ -1,0 +1,8 @@
+usage: x86decomp pipeline-status [-h] project pipeline_id
+
+positional arguments:
+  project
+  pipeline_id
+
+options:
+  -h, --help   show this help message and exit

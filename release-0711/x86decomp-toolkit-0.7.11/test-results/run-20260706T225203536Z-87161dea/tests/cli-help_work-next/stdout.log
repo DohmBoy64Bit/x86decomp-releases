@@ -1,0 +1,8 @@
+usage: x86decomp work-next [-h] [--mode {matching,functional}] database
+
+positional arguments:
+  database
+
+options:
+  -h, --help            show this help message and exit
+  --mode {matching,functional}

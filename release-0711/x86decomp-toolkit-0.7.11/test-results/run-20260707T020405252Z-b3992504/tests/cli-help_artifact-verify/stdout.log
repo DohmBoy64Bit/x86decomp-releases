@@ -1,0 +1,7 @@
+usage: x86decomp artifact-verify [-h] artifact_dir
+
+positional arguments:
+  artifact_dir
+
+options:
+  -h, --help    show this help message and exit

@@ -1,0 +1,7 @@
+usage: x86decomp snapshot-tools [-h] [--output OUTPUT]
+                                [--ghidra-home GHIDRA_HOME]
+
+options:
+  -h, --help            show this help message and exit
+  --output OUTPUT
+  --ghidra-home GHIDRA_HOME

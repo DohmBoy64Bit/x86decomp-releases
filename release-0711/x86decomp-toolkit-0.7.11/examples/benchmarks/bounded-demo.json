@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "name": "bounded-add-demo",
+  "cases": [
+    {
+      "id": "exact-byte-pair",
+      "kind": "byte_pair",
+      "target": "../validators/add_stack_target.bin",
+      "candidate": "../validators/add_stack_candidate.bin",
+      "human_interventions": 0
+    },
+    {
+      "id": "unicorn-one-input",
+      "kind": "dynamic",
+      "target": "../validators/add_stack_target.bin",
+      "candidate": "../validators/add_stack_candidate.bin",
+      "harness": "../validators/add_stack_harness.json",
+      "human_interventions": 1
+    },
+    {
+      "id": "z3-bounded-all-inputs",
+      "kind": "symbolic",
+      "target": "../validators/add_stack_target.bin",
+      "candidate": "../validators/add_stack_candidate.bin",
+      "architecture": "x86",
+      "stack_argument_words": 2,
+      "output_registers": [
+        "eax"
+      ],
+      "max_steps": 100,
+      "max_paths": 8,
+      "human_interventions": 1
+    },
+    {
+      "id": "process-integration-one-scenario",
+      "kind": "integration",
+      "manifest": "../integration/bounded-demo.json",
+      "allow_host_execution": true,
+      "human_interventions": 1
+    }
+  ]
+}

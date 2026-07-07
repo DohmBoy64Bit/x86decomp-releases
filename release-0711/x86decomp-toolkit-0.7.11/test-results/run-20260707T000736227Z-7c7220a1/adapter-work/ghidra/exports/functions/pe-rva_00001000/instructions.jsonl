@@ -1,0 +1,5 @@
+{"address":"00401000","rva":4096,"bytes_hex":"55","mnemonic":"PUSH","text":"PUSH EBP","flow_type":"FALL_THROUGH","fallthrough":"00401001","flows":[],"operands":["EBP"]}
+{"address":"00401001","rva":4097,"bytes_hex":"8BEC","mnemonic":"MOV","text":"MOV EBP,ESP","flow_type":"FALL_THROUGH","fallthrough":"00401003","flows":[],"operands":["EBP","ESP"]}
+{"address":"00401003","rva":4099,"bytes_hex":"31C0","mnemonic":"XOR","text":"XOR EAX,EAX","flow_type":"FALL_THROUGH","fallthrough":"00401005","flows":[],"operands":["EAX","EAX"]}
+{"address":"00401005","rva":4101,"bytes_hex":"5D","mnemonic":"POP","text":"POP EBP","flow_type":"FALL_THROUGH","fallthrough":"00401006","flows":[],"operands":["EBP"]}
+{"address":"00401006","rva":4102,"bytes_hex":"C3","mnemonic":"RET","text":"RET","flow_type":"TERMINATOR","fallthrough":null,"flows":[],"operands":[]}

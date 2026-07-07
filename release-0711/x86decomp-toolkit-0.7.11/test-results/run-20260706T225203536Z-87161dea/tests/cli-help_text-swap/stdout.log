@@ -1,0 +1,17 @@
+usage: x86decomp text-swap [-h] [--project PROJECT] [--actor ACTOR]
+                           {build,inject,plan,verify} ...
+
+Canonical text-swap commands implemented by the current capability subsystem.
+
+positional arguments:
+  {build,inject,plan,verify}
+    build               build command
+    inject              inject command
+    plan                plan command
+    verify              verify command
+
+options:
+  -h, --help            show this help message and exit
+  --project PROJECT     project root used by the capability implementation
+                        (default: current directory)
+  --actor ACTOR

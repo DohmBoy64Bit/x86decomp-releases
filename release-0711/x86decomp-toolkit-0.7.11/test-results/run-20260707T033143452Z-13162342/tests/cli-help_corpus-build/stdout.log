@@ -1,0 +1,9 @@
+usage: x86decomp corpus-build [-h] [--report REPORT] manifest output_directory
+
+positional arguments:
+  manifest
+  output_directory
+
+options:
+  -h, --help        show this help message and exit
+  --report REPORT

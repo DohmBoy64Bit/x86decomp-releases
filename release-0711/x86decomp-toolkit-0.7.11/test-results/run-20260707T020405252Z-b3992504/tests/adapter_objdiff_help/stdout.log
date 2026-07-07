@@ -1,0 +1,18 @@
+Usage: objdiff.exe [-C <chdir>] [-L <log-level>] [-V] [--no-color] <command>
+                   [<args>]
+
+A local diffing tool for decompilation projects.
+
+Options:
+  -C, --chdir <chdir>          Change working directory.
+  -L, --log-level <log_level>  Minimum logging level. (Default: info) Possible
+                               values: error, warn, info, debug, trace
+  -V, --version                Print version information and exit.
+      --no-color               Disable color output. (env: NO_COLOR)
+  -h, --help                   Show this help message and exit.
+
+Commands:
+  diff                         Diff two object files. (Interactive or one-shot
+                               mode)
+  report                       Generate a progress report for a project.
+

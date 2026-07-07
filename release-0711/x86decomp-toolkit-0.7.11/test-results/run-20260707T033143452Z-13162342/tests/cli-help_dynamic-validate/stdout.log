@@ -1,0 +1,15 @@
+usage: x86decomp dynamic-validate [-h] [--target-base TARGET_BASE]
+                                  [--candidate-base CANDIDATE_BASE]
+                                  [--report REPORT]
+                                  target candidate harness
+
+positional arguments:
+  target
+  candidate
+  harness
+
+options:
+  -h, --help            show this help message and exit
+  --target-base TARGET_BASE
+  --candidate-base CANDIDATE_BASE
+  --report REPORT

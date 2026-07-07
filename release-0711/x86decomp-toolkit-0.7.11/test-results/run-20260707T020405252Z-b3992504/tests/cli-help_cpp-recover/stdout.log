@@ -1,0 +1,13 @@
+usage: x86decomp cpp-recover [-h] [--metadata-report METADATA_REPORT]
+                             [--object OBJECT] [--map MAP] [--report REPORT]
+                             pe
+
+positional arguments:
+  pe
+
+options:
+  -h, --help            show this help message and exit
+  --metadata-report METADATA_REPORT
+  --object OBJECT
+  --map MAP
+  --report REPORT

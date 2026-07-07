@@ -1,0 +1,8 @@
+usage: x86decomp reproduce-verify [-h] project manifest
+
+positional arguments:
+  project
+  manifest
+
+options:
+  -h, --help  show this help message and exit

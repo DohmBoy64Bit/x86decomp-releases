@@ -1,0 +1,10 @@
+usage: x86decomp workflow-init [-h] [--mode {matching,functional}]
+                               project function_id
+
+positional arguments:
+  project
+  function_id
+
+options:
+  -h, --help            show this help message and exit
+  --mode {matching,functional}

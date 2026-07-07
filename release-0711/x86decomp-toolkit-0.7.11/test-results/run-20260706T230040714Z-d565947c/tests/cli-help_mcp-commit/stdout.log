@@ -1,0 +1,13 @@
+usage: x86decomp mcp-commit [-h] [--url URL] [--command-json COMMAND_JSON]
+                            --allow-tool ALLOW_TOOL
+                            project approval_hash
+
+positional arguments:
+  project
+  approval_hash
+
+options:
+  -h, --help            show this help message and exit
+  --url URL
+  --command-json COMMAND_JSON
+  --allow-tool ALLOW_TOOL

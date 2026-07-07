@@ -1,0 +1,15 @@
+usage: x86decomp release-policy [-h] [--project PROJECT] [--actor ACTOR]
+                                {moddable-source} ...
+
+Canonical release-policy commands implemented by the current capability
+subsystem.
+
+positional arguments:
+  {moddable-source}
+    moddable-source  moddable-source command
+
+options:
+  -h, --help         show this help message and exit
+  --project PROJECT  project root used by the capability implementation
+                     (default: current directory)
+  --actor ACTOR

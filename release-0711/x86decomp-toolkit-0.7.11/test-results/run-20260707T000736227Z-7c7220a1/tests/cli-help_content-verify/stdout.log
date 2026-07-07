@@ -1,0 +1,7 @@
+usage: x86decomp content-verify [-h] store
+
+positional arguments:
+  store
+
+options:
+  -h, --help  show this help message and exit

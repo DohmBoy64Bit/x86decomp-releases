@@ -1,0 +1,14 @@
+usage: x86decomp decompiler [-h] [--project PROJECT] [--actor ACTOR]
+                            {cleanup} ...
+
+Canonical decompiler commands implemented by the current capability subsystem.
+
+positional arguments:
+  {cleanup}
+    cleanup          cleanup command
+
+options:
+  -h, --help         show this help message and exit
+  --project PROJECT  project root used by the capability implementation
+                     (default: current directory)
+  --actor ACTOR

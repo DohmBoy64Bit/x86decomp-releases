@@ -1,0 +1,2 @@
+(register, 0x0, 4) COPY (const, 0x0, 4)
+ ---  RETURN (const, 0x0, 4) , (register, 0x0, 4)

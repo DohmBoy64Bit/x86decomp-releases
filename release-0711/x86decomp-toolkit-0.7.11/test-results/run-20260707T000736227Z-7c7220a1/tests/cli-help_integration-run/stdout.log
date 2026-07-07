@@ -1,0 +1,11 @@
+usage: x86decomp integration-run [-h] [--allow-host-execution]
+                                 [--report REPORT]
+                                 manifest
+
+positional arguments:
+  manifest
+
+options:
+  -h, --help            show this help message and exit
+  --allow-host-execution
+  --report REPORT

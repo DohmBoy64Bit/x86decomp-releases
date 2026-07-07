@@ -1,0 +1,7 @@
+usage: x86decomp map-inspect [-h] map
+
+positional arguments:
+  map
+
+options:
+  -h, --help  show this help message and exit

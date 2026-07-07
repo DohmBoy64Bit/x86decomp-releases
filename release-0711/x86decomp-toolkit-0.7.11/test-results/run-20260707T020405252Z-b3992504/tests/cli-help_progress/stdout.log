@@ -1,0 +1,14 @@
+usage: x86decomp progress [-h] [--project PROJECT] [--actor ACTOR]
+                          {reconcile} ...
+
+Canonical progress commands implemented by the current capability subsystem.
+
+positional arguments:
+  {reconcile}
+    reconcile        reconcile command
+
+options:
+  -h, --help         show this help message and exit
+  --project PROJECT  project root used by the capability implementation
+                     (default: current directory)
+  --actor ACTOR

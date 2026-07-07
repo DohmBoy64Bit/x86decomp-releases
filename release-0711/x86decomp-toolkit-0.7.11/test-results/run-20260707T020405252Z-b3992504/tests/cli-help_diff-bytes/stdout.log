@@ -1,0 +1,12 @@
+usage: x86decomp diff-bytes [-h] [--report REPORT]
+                            [--max-mismatches MAX_MISMATCHES]
+                            target candidate
+
+positional arguments:
+  target
+  candidate
+
+options:
+  -h, --help            show this help message and exit
+  --report REPORT
+  --max-mismatches MAX_MISMATCHES

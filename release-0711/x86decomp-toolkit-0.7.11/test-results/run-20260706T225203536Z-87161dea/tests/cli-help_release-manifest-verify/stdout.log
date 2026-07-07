@@ -1,0 +1,8 @@
+usage: x86decomp release-manifest-verify [-h] [--manifest MANIFEST] root
+
+positional arguments:
+  root
+
+options:
+  -h, --help           show this help message and exit
+  --manifest MANIFEST

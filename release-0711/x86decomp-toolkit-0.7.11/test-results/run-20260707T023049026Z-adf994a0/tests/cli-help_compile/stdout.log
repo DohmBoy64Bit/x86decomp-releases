@@ -1,0 +1,14 @@
+usage: x86decomp compile [-h] [--report REPORT] [--extra-arg EXTRA_ARG]
+                         [--cache CACHE]
+                         profile source output
+
+positional arguments:
+  profile
+  source
+  output
+
+options:
+  -h, --help            show this help message and exit
+  --report REPORT
+  --extra-arg EXTRA_ARG
+  --cache CACHE

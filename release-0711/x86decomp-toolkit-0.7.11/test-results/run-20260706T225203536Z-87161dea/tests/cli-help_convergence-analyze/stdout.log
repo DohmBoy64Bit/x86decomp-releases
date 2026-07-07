@@ -1,0 +1,15 @@
+usage: x86decomp convergence-analyze [-h] [--profile PROFILE]
+                                     [--previous PREVIOUS] [--report REPORT]
+                                     [--history HISTORY]
+                                     reference candidate
+
+positional arguments:
+  reference
+  candidate
+
+options:
+  -h, --help           show this help message and exit
+  --profile PROFILE
+  --previous PREVIOUS
+  --report REPORT
+  --history HISTORY

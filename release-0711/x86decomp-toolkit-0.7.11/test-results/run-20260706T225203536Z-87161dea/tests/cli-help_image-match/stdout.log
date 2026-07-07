@@ -1,0 +1,11 @@
+usage: x86decomp image-match [-h] [--profile PROFILE] [--report REPORT]
+                             reference candidate
+
+positional arguments:
+  reference
+  candidate
+
+options:
+  -h, --help         show this help message and exit
+  --profile PROFILE
+  --report REPORT

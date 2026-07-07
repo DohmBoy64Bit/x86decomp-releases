@@ -1,0 +1,3525 @@
+{
+  "adapters": [
+    "angr",
+    "build",
+    "capstone",
+    "clang",
+    "clangxx",
+    "cmake",
+    "container-runtime",
+    "coverage",
+    "dynamorio",
+    "fastapi",
+    "gcc",
+    "ghidra",
+    "gxx",
+    "java",
+    "javalang",
+    "jsonschema",
+    "lief",
+    "llama-server",
+    "lld-link",
+    "llvm-lib",
+    "llvm-objdump",
+    "llvm-readobj",
+    "lm-studio",
+    "lm-studio-http",
+    "localai",
+    "msvc",
+    "ninja",
+    "objdiff",
+    "ollama",
+    "pip-audit",
+    "pytest",
+    "python",
+    "pyyaml",
+    "unicorn",
+    "uvicorn",
+    "vllm",
+    "z3"
+  ],
+  "all_function_symbols": [
+    "x86decomp.abi:ABIContract.from_dict",
+    "x86decomp.abi:analyze_abi",
+    "x86decomp.abi:load_abi_contract",
+    "x86decomp.abi:validate_abi",
+    "x86decomp.analysis_db:AnalysisDatabase.__enter__",
+    "x86decomp.analysis_db:AnalysisDatabase.__exit__",
+    "x86decomp.analysis_db:AnalysisDatabase.__init__",
+    "x86decomp.analysis_db:AnalysisDatabase.accept_constraint",
+    "x86decomp.analysis_db:AnalysisDatabase.add_reference",
+    "x86decomp.analysis_db:AnalysisDatabase.add_type_constraint",
+    "x86decomp.analysis_db:AnalysisDatabase.close",
+    "x86decomp.analysis_db:AnalysisDatabase.detect_constraint_conflicts",
+    "x86decomp.analysis_db:AnalysisDatabase.ingest_function_artifact",
+    "x86decomp.analysis_db:AnalysisDatabase.query",
+    "x86decomp.analysis_db:AnalysisDatabase.upsert_entity",
+    "x86decomp.angr_backend:_arch_name",
+    "x86decomp.angr_backend:_counterexample",
+    "x86decomp.angr_backend:_load_angr",
+    "x86decomp.angr_backend:_load_memory_harness",
+    "x86decomp.angr_backend:_memory_counterexample",
+    "x86decomp.angr_backend:_memory_summaries",
+    "x86decomp.angr_backend:_summaries",
+    "x86decomp.angr_backend:angr_bounded_compare",
+    "x86decomp.angr_backend:angr_bounded_compare_files",
+    "x86decomp.angr_backend:angr_memory_alias_compare",
+    "x86decomp.angr_backend:angr_memory_alias_compare_files",
+    "x86decomp.artifacts:function_id_from_rva",
+    "x86decomp.artifacts:import_function_artifact",
+    "x86decomp.artifacts:validate_function_manifest",
+    "x86decomp.artifacts:verify_function_artifact",
+    "x86decomp.assembly.annotation:_chunk_comments",
+    "x86decomp.assembly.annotation:annotate_source",
+    "x86decomp.assembly.annotation:byte_directive_lines",
+    "x86decomp.assembly.annotation:parse_byte_directives",
+    "x86decomp.assembly.annotation:render_annotated_assembly",
+    "x86decomp.assembly.annotation:render_byte_assembly",
+    "x86decomp.assembly.annotation:validate_symbol",
+    "x86decomp.assembly.cli:_emit",
+    "x86decomp.assembly.cli:_int",
+    "x86decomp.assembly.cli:_json_array",
+    "x86decomp.assembly.cli:_json_file",
+    "x86decomp.assembly.cli:build_parser",
+    "x86decomp.assembly.cli:dispatch",
+    "x86decomp.assembly.cli:main",
+    "x86decomp.assembly.materialize:AssemblerError.__init__",
+    "x86decomp.assembly.materialize:InstructionCandidate.end",
+    "x86decomp.assembly.materialize:_capstone",
+    "x86decomp.assembly.materialize:_instruction_candidates",
+    "x86decomp.assembly.materialize:_preferred_addresses",
+    "x86decomp.assembly.materialize:_render_source",
+    "x86decomp.assembly.materialize:_render_source_with_line_map",
+    "x86decomp.assembly.materialize:_replace_address_token",
+    "x86decomp.assembly.materialize:_safe_symbol",
+    "x86decomp.assembly.materialize:_unit_for_offset",
+    "x86decomp.assembly.materialize:assemble_coff",
+    "x86decomp.assembly.materialize:discover_assembler",
+    "x86decomp.assembly.materialize:materialize_function",
+    "x86decomp.assembly.materialize:verify_existing_source",
+    "x86decomp.assembly.pipeline:AssemblyPipeline.__init__",
+    "x86decomp.assembly.pipeline:AssemblyPipeline.batch",
+    "x86decomp.assembly.pipeline:AssemblyPipeline.list_runs",
+    "x86decomp.assembly.pipeline:AssemblyPipeline.report",
+    "x86decomp.assembly.pipeline:_function_bytes",
+    "x86decomp.assembly.pipeline:_load_json",
+    "x86decomp.assembly.pipeline:_resolve_path",
+    "x86decomp.assembly.pipeline:_symbol_map",
+    "x86decomp.assembly.relocations:RelocationResolver.inspect",
+    "x86decomp.assembly.relocations:RelocationResolver.resolve",
+    "x86decomp.assembly.relocations:SymbolAddress.safe_name",
+    "x86decomp.assembly.relocations:SymbolAddress.to_dict",
+    "x86decomp.assembly.relocations:_compute_value",
+    "x86decomp.assembly.relocations:_object_symbol_target",
+    "x86decomp.assembly.relocations:_read_addend",
+    "x86decomp.assembly.relocations:_resolve_target",
+    "x86decomp.assembly.relocations:_write_value",
+    "x86decomp.assembly.relocations:normalize_symbol_map",
+    "x86decomp.assembly.relocations:supported_relocations",
+    "x86decomp.assembly.store:AssemblyStore.check",
+    "x86decomp.assembly.store:AssemblyStore.decode",
+    "x86decomp.assembly.store:AssemblyStore.initialize",
+    "x86decomp.benchmarks:_resolve",
+    "x86decomp.benchmarks:classification_metrics",
+    "x86decomp.benchmarks:run_benchmark_corpus",
+    "x86decomp.binary_reader:BinaryReader.__init__",
+    "x86decomp.binary_reader:BinaryReader.c_string",
+    "x86decomp.binary_reader:BinaryReader.optional_u16",
+    "x86decomp.binary_reader:BinaryReader.optional_u32",
+    "x86decomp.binary_reader:BinaryReader.optional_u64",
+    "x86decomp.binary_reader:BinaryReader.require",
+    "x86decomp.binary_reader:BinaryReader.u16",
+    "x86decomp.binary_reader:BinaryReader.u32",
+    "x86decomp.binary_reader:BinaryReader.u64",
+    "x86decomp.binary_reader:BinaryReader.unpack",
+    "x86decomp.canonical:_group_parsers",
+    "x86decomp.canonical:_leaf_parsers",
+    "x86decomp.canonical:_route_owner",
+    "x86decomp.canonical:_source_parsers",
+    "x86decomp.canonical:_subparsers",
+    "x86decomp.canonical:build_parser",
+    "x86decomp.canonical:canonical_groups",
+    "x86decomp.canonical:canonical_routes",
+    "x86decomp.canonical:command_catalog",
+    "x86decomp.canonical:dispatch",
+    "x86decomp.canonical:main",
+    "x86decomp.canonical:register_canonical_commands",
+    "x86decomp.cli:_build_parser",
+    "x86decomp.cli:_int",
+    "x86decomp.cli:_json_object",
+    "x86decomp.cli:_mcp_client",
+    "x86decomp.cli:_path",
+    "x86decomp.cli:_print",
+    "x86decomp.cli:_run",
+    "x86decomp.cli:main",
+    "x86decomp.cli_utils:emit_json",
+    "x86decomp.cli_utils:parse_json_arg",
+    "x86decomp.cli_utils:run_cli",
+    "x86decomp.coff:CoffObject.architecture",
+    "x86decomp.coff:CoffObject.find_symbols",
+    "x86decomp.coff:CoffObject.section",
+    "x86decomp.coff:CoffObject.symbol_by_index",
+    "x86decomp.coff:CoffObject.to_dict",
+    "x86decomp.coff:CoffRelocation.to_dict",
+    "x86decomp.coff:CoffRelocation.width",
+    "x86decomp.coff:CoffSection.alignment",
+    "x86decomp.coff:CoffSection.alignment_power",
+    "x86decomp.coff:CoffSection.comdat_selection_name",
+    "x86decomp.coff:CoffSection.is_comdat",
+    "x86decomp.coff:CoffSection.to_dict",
+    "x86decomp.coff:CoffSymbol.function_definition",
+    "x86decomp.coff:CoffSymbol.is_function",
+    "x86decomp.coff:CoffSymbol.section_definition",
+    "x86decomp.coff:CoffSymbol.to_dict",
+    "x86decomp.coff:CoffSymbol.weak_external",
+    "x86decomp.coff:ComdatCandidate.to_dict",
+    "x86decomp.coff:ComdatResolution.to_dict",
+    "x86decomp.coff:ComdatResolution.valid",
+    "x86decomp.coff:ExtractedSymbol.to_dict",
+    "x86decomp.coff:FileAux.to_dict",
+    "x86decomp.coff:FunctionDefinitionAux.to_dict",
+    "x86decomp.coff:RawAux.to_dict",
+    "x86decomp.coff:SectionDefinitionAux.selection_name",
+    "x86decomp.coff:SectionDefinitionAux.to_dict",
+    "x86decomp.coff:WeakExternalAux.to_dict",
+    "x86decomp.coff:_decode_section_name",
+    "x86decomp.coff:_decode_symbol_name",
+    "x86decomp.coff:_encode_name",
+    "x86decomp.coff:_parse_auxiliary_records",
+    "x86decomp.coff:_parse_header",
+    "x86decomp.coff:_read_addend",
+    "x86decomp.coff:_read_string_table",
+    "x86decomp.coff:_section_aux_bytes",
+    "x86decomp.coff:_string_at",
+    "x86decomp.coff:build_comdat_coff",
+    "x86decomp.coff:build_synthetic_coff",
+    "x86decomp.coff:build_synthetic_coff_object",
+    "x86decomp.coff:collect_comdat_candidates",
+    "x86decomp.coff:extract_symbol",
+    "x86decomp.coff:parse_coff",
+    "x86decomp.coff:parse_coff_bytes",
+    "x86decomp.coff:relocation_is_pc_relative",
+    "x86decomp.coff:relocation_name",
+    "x86decomp.coff:relocation_width",
+    "x86decomp.coff:resolve_comdats",
+    "x86decomp.coff:synthetic_symbol_indices",
+    "x86decomp.coff:write_synthetic_coff",
+    "x86decomp.coff:write_synthetic_coff_object",
+    "x86decomp.coff_archive:ArchiveMember.to_dict",
+    "x86decomp.coff_archive:CoffArchive.to_dict",
+    "x86decomp.coff_archive:_cstring_sequence",
+    "x86decomp.coff_archive:_decimal",
+    "x86decomp.coff_archive:_first_linker_symbols",
+    "x86decomp.coff_archive:_long_name",
+    "x86decomp.coff_archive:_octal",
+    "x86decomp.coff_archive:_parse_import_object",
+    "x86decomp.coff_archive:_second_linker_symbols",
+    "x86decomp.coff_archive:parse_coff_archive",
+    "x86decomp.coff_archive:parse_coff_archive_bytes",
+    "x86decomp.compiler:_resolve_executable",
+    "x86decomp.compiler:_tool_version",
+    "x86decomp.compiler:compiler_cache_key",
+    "x86decomp.compiler:load_profile",
+    "x86decomp.compiler:run_compiler_profile",
+    "x86decomp.compiler_lab:_variant_arguments",
+    "x86decomp.compiler_lab:run_compiler_lab",
+    "x86decomp.compiler_worker:run_compiler_worker",
+    "x86decomp.content_store:ContentStore.__init__",
+    "x86decomp.content_store:ContentStore._locked",
+    "x86decomp.content_store:ContentStore._paths",
+    "x86decomp.content_store:ContentStore._validate_digest",
+    "x86decomp.content_store:ContentStore.add_reference",
+    "x86decomp.content_store:ContentStore.export_index",
+    "x86decomp.content_store:ContentStore.garbage_collect",
+    "x86decomp.content_store:ContentStore.get",
+    "x86decomp.content_store:ContentStore.put_bytes",
+    "x86decomp.content_store:ContentStore.put_file",
+    "x86decomp.content_store:ContentStore.read_bytes",
+    "x86decomp.content_store:ContentStore.referenced_digests",
+    "x86decomp.content_store:ContentStore.remove_reference",
+    "x86decomp.content_store:ContentStore.verify",
+    "x86decomp.content_store:StoredArtifact.to_dict",
+    "x86decomp.contracts:atomic_write_bytes",
+    "x86decomp.contracts:atomic_write_json",
+    "x86decomp.contracts:canonical_json",
+    "x86decomp.contracts:dedupe_preserve",
+    "x86decomp.contracts:ensure_relative_path",
+    "x86decomp.contracts:random_id",
+    "x86decomp.contracts:read_json",
+    "x86decomp.contracts:sha256_bytes",
+    "x86decomp.contracts:sha256_file",
+    "x86decomp.contracts:stable_id",
+    "x86decomp.contracts:utc_now",
+    "x86decomp.contracts:validate_id",
+    "x86decomp.convergence:_section_kind",
+    "x86decomp.convergence:analyze_image_convergence",
+    "x86decomp.convergence:append_convergence_history",
+    "x86decomp.cpp_recovery:_adjustor_thunk_candidate",
+    "x86decomp.cpp_recovery:_function_prefix",
+    "x86decomp.cpp_recovery:recover_cpp_model",
+    "x86decomp.decompme:_copy_required",
+    "x86decomp.decompme:create_decompme_packet",
+    "x86decomp.diffing:compare_bytes",
+    "x86decomp.diffing:compare_files",
+    "x86decomp.disassembly:InstructionRecord.to_dict",
+    "x86decomp.disassembly:_capstone",
+    "x86decomp.disassembly:_is_known_address",
+    "x86decomp.disassembly:compare_instruction_streams",
+    "x86decomp.disassembly:control_flow_edges",
+    "x86decomp.disassembly:cross_check_ghidra_instructions",
+    "x86decomp.disassembly:decode_instructions",
+    "x86decomp.dynamic:_align_down",
+    "x86decomp.dynamic:_align_up",
+    "x86decomp.dynamic:_map_region",
+    "x86decomp.dynamic:_register_map",
+    "x86decomp.dynamic:_unicorn",
+    "x86decomp.dynamic:differential_validate",
+    "x86decomp.dynamic:differential_validate_files",
+    "x86decomp.dynamic:execute_code",
+    "x86decomp.dynamic:load_execution_spec",
+    "x86decomp.dynamorio:parse_drcov_text",
+    "x86decomp.dynamorio:run_drcov_trace",
+    "x86decomp.evidence:EvidenceStore.__init__",
+    "x86decomp.evidence:EvidenceStore.add_contradiction",
+    "x86decomp.evidence:EvidenceStore.add_evidence",
+    "x86decomp.evidence:EvidenceStore.attach_evidence",
+    "x86decomp.evidence:EvidenceStore.audit_evidence_integrity",
+    "x86decomp.evidence:EvidenceStore.create_claim",
+    "x86decomp.evidence:EvidenceStore.get_claim",
+    "x86decomp.evidence:EvidenceStore.get_evidence",
+    "x86decomp.evidence:EvidenceStore.require_verified",
+    "x86decomp.evidence:EvidenceStore.save_claim",
+    "x86decomp.evidence:EvidenceStore.verify_claim",
+    "x86decomp.evidence:_validate_id",
+    "x86decomp.exe_diff:_candidate_relocation_masks",
+    "x86decomp.exe_diff:_masked_copy",
+    "x86decomp.exe_diff:_pe_base_relocation_masks",
+    "x86decomp.exe_diff:compare_pe_function_to_coff_symbol",
+    "x86decomp.exe_diff:extract_pe_bytes",
+    "x86decomp.exe_diff:rva_to_file_offset",
+    "x86decomp.ghidra:build_export_command",
+    "x86decomp.ghidra:run_export",
+    "x86decomp.governance.campaigns:CampaignEngine.__init__",
+    "x86decomp.governance.campaigns:CampaignEngine._decision",
+    "x86decomp.governance.campaigns:CampaignEngine._validate_budget",
+    "x86decomp.governance.campaigns:CampaignEngine.branch",
+    "x86decomp.governance.campaigns:CampaignEngine.consume_budget",
+    "x86decomp.governance.campaigns:CampaignEngine.create",
+    "x86decomp.governance.campaigns:CampaignEngine.get",
+    "x86decomp.governance.campaigns:CampaignEngine.get_branch",
+    "x86decomp.governance.campaigns:CampaignEngine.list",
+    "x86decomp.governance.campaigns:CampaignEngine.pause",
+    "x86decomp.governance.campaigns:CampaignEngine.plan_next",
+    "x86decomp.governance.campaigns:CampaignEngine.resume",
+    "x86decomp.governance.campaigns:CampaignEngine.snapshot",
+    "x86decomp.governance.campaigns:CampaignEngine.start",
+    "x86decomp.governance.campaigns:CampaignEngine.stop",
+    "x86decomp.governance.campaigns:CampaignEngine.transition",
+    "x86decomp.governance.candidates:CandidateStore.__init__",
+    "x86decomp.governance.candidates:CandidateStore._clone_files",
+    "x86decomp.governance.candidates:CandidateStore.add_file",
+    "x86decomp.governance.candidates:CandidateStore.compare",
+    "x86decomp.governance.candidates:CandidateStore.create",
+    "x86decomp.governance.candidates:CandidateStore.get",
+    "x86decomp.governance.candidates:CandidateStore.list",
+    "x86decomp.governance.candidates:CandidateStore.record_evaluation",
+    "x86decomp.governance.candidates:CandidateStore.transition",
+    "x86decomp.governance.changesets:ChangeSet.apply",
+    "x86decomp.governance.changesets:ChangeSet.export",
+    "x86decomp.governance.changesets:ChangeSet.inspect",
+    "x86decomp.governance.cli:_store",
+    "x86decomp.governance.cli:build_parser",
+    "x86decomp.governance.cli:dispatch",
+    "x86decomp.governance.cli:main",
+    "x86decomp.governance.consensus:ConsensusEngine.__init__",
+    "x86decomp.governance.consensus:ConsensusEngine.conflicts",
+    "x86decomp.governance.consensus:ConsensusEngine.explain",
+    "x86decomp.governance.consensus:ConsensusEngine.record",
+    "x86decomp.governance.consensus:ConsensusEngine.resolve",
+    "x86decomp.governance.consensus:ConsensusEngine.scan",
+    "x86decomp.governance.counterexamples:CounterexampleStore.__init__",
+    "x86decomp.governance.counterexamples:CounterexampleStore.add",
+    "x86decomp.governance.counterexamples:CounterexampleStore.get",
+    "x86decomp.governance.counterexamples:CounterexampleStore.list",
+    "x86decomp.governance.counterexamples:CounterexampleStore.minimize",
+    "x86decomp.governance.counterexamples:CounterexampleStore.promote_to_regression",
+    "x86decomp.governance.counterexamples:ddmin_bytes",
+    "x86decomp.governance.family:BinaryFamilyStore.__init__",
+    "x86decomp.governance.family:BinaryFamilyStore._block_fingerprints",
+    "x86decomp.governance.family:BinaryFamilyStore.add",
+    "x86decomp.governance.family:BinaryFamilyStore.correlate",
+    "x86decomp.governance.family:BinaryFamilyStore.correlation",
+    "x86decomp.governance.family:BinaryFamilyStore.create",
+    "x86decomp.governance.family:BinaryFamilyStore.get",
+    "x86decomp.governance.family:BinaryFamilyStore.member",
+    "x86decomp.governance.family:BinaryFamilyStore.report",
+    "x86decomp.governance.hypotheses:HypothesisLedger.__init__",
+    "x86decomp.governance.hypotheses:HypothesisLedger._has_dependency_cycle",
+    "x86decomp.governance.hypotheses:HypothesisLedger._recalculate_confidence",
+    "x86decomp.governance.hypotheses:HypothesisLedger.acceptance_gate",
+    "x86decomp.governance.hypotheses:HypothesisLedger.add_dependency",
+    "x86decomp.governance.hypotheses:HypothesisLedger.attach_evidence",
+    "x86decomp.governance.hypotheses:HypothesisLedger.create",
+    "x86decomp.governance.hypotheses:HypothesisLedger.describe",
+    "x86decomp.governance.hypotheses:HypothesisLedger.get",
+    "x86decomp.governance.hypotheses:HypothesisLedger.list",
+    "x86decomp.governance.hypotheses:HypothesisLedger.transition",
+    "x86decomp.governance.hypotheses:_row_to_hypothesis",
+    "x86decomp.governance.knowledge_graph:KnowledgeGraph.__init__",
+    "x86decomp.governance.knowledge_graph:KnowledgeGraph.add_edge",
+    "x86decomp.governance.knowledge_graph:KnowledgeGraph.get_node",
+    "x86decomp.governance.knowledge_graph:KnowledgeGraph.impact",
+    "x86decomp.governance.knowledge_graph:KnowledgeGraph.upsert_node",
+    "x86decomp.governance.plugins:PluginRegistry.__init__",
+    "x86decomp.governance.plugins:PluginRegistry.doctor",
+    "x86decomp.governance.plugins:PluginRegistry.get",
+    "x86decomp.governance.plugins:PluginRegistry.install",
+    "x86decomp.governance.plugins:PluginRegistry.invoke",
+    "x86decomp.governance.plugins:PluginRegistry.list",
+    "x86decomp.governance.plugins:PluginRegistry.validate_manifest",
+    "x86decomp.governance.proofs:ProofBundle._validate_member",
+    "x86decomp.governance.proofs:ProofBundle._zip_info",
+    "x86decomp.governance.proofs:ProofBundle.export",
+    "x86decomp.governance.proofs:ProofBundle.inspect",
+    "x86decomp.governance.proofs:ProofBundle.verify",
+    "x86decomp.governance.proofs:ProofLedger.__init__",
+    "x86decomp.governance.proofs:ProofLedger.add_result",
+    "x86decomp.governance.proofs:ProofLedger.create_obligation",
+    "x86decomp.governance.proofs:ProofLedger.evaluate",
+    "x86decomp.governance.proofs:ProofLedger.obligation",
+    "x86decomp.governance.proofs:ProofLedger.result",
+    "x86decomp.governance.reviews:ReviewQueue.__init__",
+    "x86decomp.governance.reviews:ReviewQueue.assign",
+    "x86decomp.governance.reviews:ReviewQueue.create",
+    "x86decomp.governance.reviews:ReviewQueue.decide",
+    "x86decomp.governance.reviews:ReviewQueue.get",
+    "x86decomp.governance.reviews:ReviewQueue.list",
+    "x86decomp.governance.reviews:ReviewQueue.lock",
+    "x86decomp.governance.store:GovernanceStore.__init__",
+    "x86decomp.governance.store:GovernanceStore.audit",
+    "x86decomp.governance.store:GovernanceStore.check",
+    "x86decomp.governance.store:GovernanceStore.connect",
+    "x86decomp.governance.store:GovernanceStore.initialize",
+    "x86decomp.governance.store:GovernanceStore.transaction",
+    "x86decomp.governance.store:GovernanceStore.verify_audit_chain",
+    "x86decomp.governance.workers:WorkerRegistry.__init__",
+    "x86decomp.governance.workers:WorkerRegistry.doctor",
+    "x86decomp.governance.workers:WorkerRegistry.get",
+    "x86decomp.governance.workers:WorkerRegistry.list",
+    "x86decomp.governance.workers:WorkerRegistry.register",
+    "x86decomp.governance.workers:WorkerRegistry.select",
+    "x86decomp.governance.workers:WorkerRegistry.set_status",
+    "x86decomp.ground_truth:_expand_flag_matrix",
+    "x86decomp.ground_truth:_resolve_executable",
+    "x86decomp.ground_truth:_version",
+    "x86decomp.ground_truth:build_ground_truth_corpus",
+    "x86decomp.ground_truth:compare_ground_truth_corpora",
+    "x86decomp.ground_truth:create_builtin_manifest",
+    "x86decomp.ground_truth:verify_ground_truth_corpus",
+    "x86decomp.harness_generator:_deterministic_word",
+    "x86decomp.harness_generator:generate_execution_harness",
+    "x86decomp.harness_generator:generate_execution_harness_from_files",
+    "x86decomp.hybrid:_assembly_bytes",
+    "x86decomp.hybrid:generate_hybrid_project",
+    "x86decomp.image_match:ByteRange.to_dict",
+    "x86decomp.image_match:_apply_rebase",
+    "x86decomp.image_match:_mask_ranges",
+    "x86decomp.image_match:_mismatches",
+    "x86decomp.image_match:_pe_offsets",
+    "x86decomp.image_match:_profile_ranges",
+    "x86decomp.image_match:_rva_to_file_offset",
+    "x86decomp.image_match:compare_whole_images",
+    "x86decomp.image_match:derive_layout_profile",
+    "x86decomp.integration:_bounded_output",
+    "x86decomp.integration:_compare_stream",
+    "x86decomp.integration:_copy_fixtures",
+    "x86decomp.integration:_observe_file",
+    "x86decomp.integration:_parse_stdin",
+    "x86decomp.integration:_require_string_list",
+    "x86decomp.integration:_resolve_existing",
+    "x86decomp.integration:_run_side",
+    "x86decomp.integration:_substitute_command",
+    "x86decomp.integration:run_integration_scenarios",
+    "x86decomp.linker_layout:LinkerMap.to_dict",
+    "x86decomp.linker_layout:MapContribution.to_dict",
+    "x86decomp.linker_layout:MapPublic.to_dict",
+    "x86decomp.linker_layout:MapSegment.to_dict",
+    "x86decomp.linker_layout:_normalize_object_key",
+    "x86decomp.linker_layout:parse_msvc_map",
+    "x86decomp.linker_layout:parse_msvc_map_text",
+    "x86decomp.linker_layout:reconstruct_linker_layout",
+    "x86decomp.linker_reconstruction:build_linker_reconstruction_plan",
+    "x86decomp.linker_reconstruction:write_relink_manifest_from_plan",
+    "x86decomp.local_llm.matching:_feedback_from_compile",
+    "x86decomp.local_llm.matching:_feedback_from_diff",
+    "x86decomp.local_llm.matching:_parse_candidate",
+    "x86decomp.local_llm.matching:_prepare_output",
+    "x86decomp.local_llm.matching:generate_candidate",
+    "x86decomp.local_llm.matching:run_match_loop",
+    "x86decomp.local_llm.matching:verify_match_report",
+    "x86decomp.local_llm.profiles:_normalized_base_url",
+    "x86decomp.local_llm.profiles:create_profile",
+    "x86decomp.local_llm.profiles:is_loopback_host",
+    "x86decomp.local_llm.profiles:load_profile",
+    "x86decomp.local_llm.profiles:provider_catalog",
+    "x86decomp.local_llm.profiles:public_profile",
+    "x86decomp.local_llm.profiles:resolved_addresses_are_loopback",
+    "x86decomp.local_llm.profiles:validate_profile",
+    "x86decomp.local_llm.prompts:_evidence_block",
+    "x86decomp.local_llm.prompts:_integer",
+    "x86decomp.local_llm.prompts:_resolve_job_path",
+    "x86decomp.local_llm.prompts:_text",
+    "x86decomp.local_llm.prompts:build_messages",
+    "x86decomp.local_llm.prompts:load_job",
+    "x86decomp.local_llm.prompts:prompt_record",
+    "x86decomp.local_llm.transport:_SameOriginRedirectHandler.redirect_request",
+    "x86decomp.local_llm.transport:_candidate_schema",
+    "x86decomp.local_llm.transport:_endpoint",
+    "x86decomp.local_llm.transport:_extract_content",
+    "x86decomp.local_llm.transport:_headers",
+    "x86decomp.local_llm.transport:_model_ids",
+    "x86decomp.local_llm.transport:_ollama_body",
+    "x86decomp.local_llm.transport:_ollama_model_matches",
+    "x86decomp.local_llm.transport:_openai_body",
+    "x86decomp.local_llm.transport:_opener",
+    "x86decomp.local_llm.transport:_read_json_response",
+    "x86decomp.local_llm.transport:_request_json",
+    "x86decomp.local_llm.transport:chat",
+    "x86decomp.local_llm.transport:probe_profile",
+    "x86decomp.mcp:GhidraMCPGateway.__init__",
+    "x86decomp.mcp:GhidraMCPGateway.commit_mutation",
+    "x86decomp.mcp:GhidraMCPGateway.propose_mutation",
+    "x86decomp.mcp:GhidraMCPGateway.read",
+    "x86decomp.mcp:StdioMCPClient.__enter__",
+    "x86decomp.mcp:StdioMCPClient.__exit__",
+    "x86decomp.mcp:StdioMCPClient.__init__",
+    "x86decomp.mcp:StdioMCPClient._ensure_initialized",
+    "x86decomp.mcp:StdioMCPClient._request",
+    "x86decomp.mcp:StdioMCPClient._send",
+    "x86decomp.mcp:StdioMCPClient.call_tool",
+    "x86decomp.mcp:StdioMCPClient.close",
+    "x86decomp.mcp:StdioMCPClient.initialize",
+    "x86decomp.mcp:StdioMCPClient.list_tools",
+    "x86decomp.mcp:StreamableHTTPMCPClient.__init__",
+    "x86decomp.mcp:StreamableHTTPMCPClient._ensure_initialized",
+    "x86decomp.mcp:StreamableHTTPMCPClient._notify",
+    "x86decomp.mcp:StreamableHTTPMCPClient._request",
+    "x86decomp.mcp:StreamableHTTPMCPClient.call_tool",
+    "x86decomp.mcp:StreamableHTTPMCPClient.close",
+    "x86decomp.mcp:StreamableHTTPMCPClient.initialize",
+    "x86decomp.mcp:StreamableHTTPMCPClient.list_tools",
+    "x86decomp.mcp:is_probable_mutation",
+    "x86decomp.memory:ProjectMemory.__init__",
+    "x86decomp.memory:ProjectMemory.append",
+    "x86decomp.memory:ProjectMemory.read_events",
+    "x86decomp.memory:ProjectMemory.render",
+    "x86decomp.memory:ProjectMemory.require_valid",
+    "x86decomp.memory:ProjectMemory.verify",
+    "x86decomp.models:Claim.to_dict",
+    "x86decomp.models:EvidenceItem.to_dict",
+    "x86decomp.msvc_metadata:BaseClassRecord.to_dict",
+    "x86decomp.msvc_metadata:CompleteObjectLocatorRecord.to_dict",
+    "x86decomp.msvc_metadata:PEView.__init__",
+    "x86decomp.msvc_metadata:PEView.c_string",
+    "x86decomp.msvc_metadata:PEView.encoded_pointer_to_rva",
+    "x86decomp.msvc_metadata:PEView.executable_rva",
+    "x86decomp.msvc_metadata:PEView.i32",
+    "x86decomp.msvc_metadata:PEView.pointer",
+    "x86decomp.msvc_metadata:PEView.read",
+    "x86decomp.msvc_metadata:PEView.readonly_data_sections",
+    "x86decomp.msvc_metadata:PEView.rva_to_offset",
+    "x86decomp.msvc_metadata:PEView.u16",
+    "x86decomp.msvc_metadata:PEView.u32",
+    "x86decomp.msvc_metadata:PEView.u64",
+    "x86decomp.msvc_metadata:PEView.va_to_rva",
+    "x86decomp.msvc_metadata:PEView.valid_rva",
+    "x86decomp.msvc_metadata:TypeDescriptorRecord.to_dict",
+    "x86decomp.msvc_metadata:UnwindCodeRecord.to_dict",
+    "x86decomp.msvc_metadata:UnwindInfoRecord.to_dict",
+    "x86decomp.msvc_metadata:VTableRecord.to_dict",
+    "x86decomp.msvc_metadata:_decode_unwind_codes",
+    "x86decomp.msvc_metadata:_display_type_name",
+    "x86decomp.msvc_metadata:_parse_base_class",
+    "x86decomp.msvc_metadata:_parse_hierarchy",
+    "x86decomp.msvc_metadata:analyze_msvc_metadata",
+    "x86decomp.msvc_metadata:parse_safe_seh",
+    "x86decomp.msvc_metadata:parse_x64_unwind",
+    "x86decomp.msvc_metadata:scan_coff_tls",
+    "x86decomp.msvc_metadata:scan_complete_object_locators",
+    "x86decomp.msvc_metadata:scan_exception_func_info",
+    "x86decomp.msvc_metadata:scan_static_initializers",
+    "x86decomp.msvc_metadata:scan_type_descriptors",
+    "x86decomp.msvc_metadata:scan_vtables",
+    "x86decomp.msvc_metadata:tls_report",
+    "x86decomp.native.cli:_json_file",
+    "x86decomp.native.cli:build_parser",
+    "x86decomp.native.cli:dispatch",
+    "x86decomp.native.cli:main",
+    "x86decomp.native.closed_loop:ClosedLoop.__init__",
+    "x86decomp.native.closed_loop:ClosedLoop.list",
+    "x86decomp.native.closed_loop:ClosedLoop.run",
+    "x86decomp.native.closed_loop:ClosedLoop.show",
+    "x86decomp.native.hybrid_composer:HybridComposer.__init__",
+    "x86decomp.native.hybrid_composer:HybridComposer.compose",
+    "x86decomp.native.hybrid_composer:HybridComposer.verify",
+    "x86decomp.native.matching:FunctionMatching.__init__",
+    "x86decomp.native.matching:FunctionMatching.batch",
+    "x86decomp.native.matching:FunctionMatching.mismatches",
+    "x86decomp.native.matching:FunctionMatching.report",
+    "x86decomp.native.matching:compare_function_bytes",
+    "x86decomp.native.matching:extract_candidate",
+    "x86decomp.native.matching:rva_to_file_offset",
+    "x86decomp.native.pe_reconstruction:PEReconstruction.__init__",
+    "x86decomp.native.pe_reconstruction:PEReconstruction.apply_plan",
+    "x86decomp.native.pe_reconstruction:PEReconstruction.create_plan",
+    "x86decomp.native.pe_reconstruction:PEReconstruction.export_coff",
+    "x86decomp.native.pe_reconstruction:PEReconstruction.export_sections",
+    "x86decomp.native.pe_reconstruction:PEReconstruction.inventory",
+    "x86decomp.native.pe_reconstruction:PEReconstruction.text_swap",
+    "x86decomp.native.pe_reconstruction:_section_header_records",
+    "x86decomp.native.pe_reconstruction:apply_operations",
+    "x86decomp.native.pe_reconstruction:plan_patch",
+    "x86decomp.native.runtime:RuntimeValidation.__init__",
+    "x86decomp.native.runtime:RuntimeValidation._record",
+    "x86decomp.native.runtime:RuntimeValidation.launch",
+    "x86decomp.native.runtime:RuntimeValidation.map_crash",
+    "x86decomp.native.runtime:RuntimeValidation.validate_image",
+    "x86decomp.native.slots:FunctionSlots.__init__",
+    "x86decomp.native.slots:FunctionSlots.audit",
+    "x86decomp.native.slots:FunctionSlots.audit_project",
+    "x86decomp.native.slots:FunctionSlots.export_fixes",
+    "x86decomp.native.slots:FunctionSlots.list",
+    "x86decomp.native.slots:FunctionSlots.show",
+    "x86decomp.native.slots:_int",
+    "x86decomp.native.slots:inventory_from_project",
+    "x86decomp.native.staging:StagingBridge.__init__",
+    "x86decomp.native.staging:StagingBridge.compile_check",
+    "x86decomp.native.staging:StagingBridge.generate_context",
+    "x86decomp.native.staging:StagingBridge.resolve",
+    "x86decomp.native.staging:StagingBridge.scan",
+    "x86decomp.native.staging:StagingBridge.unresolved",
+    "x86decomp.native.store:NativeStore.check",
+    "x86decomp.native.store:NativeStore.decode",
+    "x86decomp.native.store:NativeStore.initialize",
+    "x86decomp.native.windows_tools:WindowsTools.__init__",
+    "x86decomp.native.windows_tools:WindowsTools.doctor",
+    "x86decomp.native.windows_tools:discover_ghidra_launcher",
+    "x86decomp.native.windows_tools:write_response_file",
+    "x86decomp.objdiff_adapter:_resolve_executable",
+    "x86decomp.objdiff_adapter:run_objdiff_manifest",
+    "x86decomp.orchestrator:Orchestrator.__enter__",
+    "x86decomp.orchestrator:Orchestrator.__exit__",
+    "x86decomp.orchestrator:Orchestrator.__init__",
+    "x86decomp.orchestrator:Orchestrator._completed_result_is_intact",
+    "x86decomp.orchestrator:Orchestrator._dependency_states",
+    "x86decomp.orchestrator:Orchestrator._event",
+    "x86decomp.orchestrator:Orchestrator._idempotency_key",
+    "x86decomp.orchestrator:Orchestrator._materialize_outputs",
+    "x86decomp.orchestrator:Orchestrator._run_stage",
+    "x86decomp.orchestrator:Orchestrator._set_state",
+    "x86decomp.orchestrator:Orchestrator._transaction",
+    "x86decomp.orchestrator:Orchestrator._update_pipeline_status",
+    "x86decomp.orchestrator:Orchestrator.cancel",
+    "x86decomp.orchestrator:Orchestrator.close",
+    "x86decomp.orchestrator:Orchestrator.recover_stale_jobs",
+    "x86decomp.orchestrator:Orchestrator.register",
+    "x86decomp.orchestrator:Orchestrator.retry",
+    "x86decomp.orchestrator:Orchestrator.run",
+    "x86decomp.orchestrator:Orchestrator.status",
+    "x86decomp.orchestrator:PipelineManifest.load",
+    "x86decomp.orchestrator:PipelineStage.from_dict",
+    "x86decomp.orchestrator:create_default_pipeline",
+    "x86decomp.patching:_checksum_offset",
+    "x86decomp.patching:calculate_pe_checksum",
+    "x86decomp.patching:patch_pe_function",
+    "x86decomp.pdb:PDBFile.to_dict",
+    "x86decomp.pdb:PDBStream.to_dict",
+    "x86decomp.pdb:_MSF.__init__",
+    "x86decomp.pdb:_MSF._block",
+    "x86decomp.pdb:_MSF._parse_directory",
+    "x86decomp.pdb:_MSF.stream",
+    "x86decomp.pdb:_align4",
+    "x86decomp.pdb:_correlate_pe",
+    "x86decomp.pdb:_cstring",
+    "x86decomp.pdb:_parse_dbi",
+    "x86decomp.pdb:_parse_info",
+    "x86decomp.pdb:_parse_modules",
+    "x86decomp.pdb:_parse_section_contributions",
+    "x86decomp.pdb:_parse_section_map",
+    "x86decomp.pdb:_parse_source_info",
+    "x86decomp.pdb:_parse_tpi",
+    "x86decomp.pdb:_require",
+    "x86decomp.pdb:_u16",
+    "x86decomp.pdb:_u32",
+    "x86decomp.pdb:parse_pdb",
+    "x86decomp.pdb:parse_pdb_bytes",
+    "x86decomp.pe32:BaseRelocation.to_dict",
+    "x86decomp.pe32:DataDirectory.to_dict",
+    "x86decomp.pe32:DebugRecord.to_dict",
+    "x86decomp.pe32:DelayImportLibrary.to_dict",
+    "x86decomp.pe32:ExportSymbol.to_dict",
+    "x86decomp.pe32:ImportLibrary.to_dict",
+    "x86decomp.pe32:ImportSymbol.to_dict",
+    "x86decomp.pe32:LoadConfigInfo.to_dict",
+    "x86decomp.pe32:PE32Image.entry_va",
+    "x86decomp.pe32:PE32Image.to_dict",
+    "x86decomp.pe32:ResourceLeaf.to_dict",
+    "x86decomp.pe32:Section.mapped_size",
+    "x86decomp.pe32:Section.to_dict",
+    "x86decomp.pe32:TLSInfo.to_dict",
+    "x86decomp.pe32:_directory",
+    "x86decomp.pe32:_parse_debug_records",
+    "x86decomp.pe32:_parse_delay_imports",
+    "x86decomp.pe32:_parse_exports",
+    "x86decomp.pe32:_parse_imports",
+    "x86decomp.pe32:_parse_load_config",
+    "x86decomp.pe32:_parse_relocations",
+    "x86decomp.pe32:_parse_resources",
+    "x86decomp.pe32:_parse_tls",
+    "x86decomp.pe32:_rva_to_offset",
+    "x86decomp.pe32:parse_pe32",
+    "x86decomp.pe:PE64Image.entry_va",
+    "x86decomp.pe:PE64Image.to_dict",
+    "x86decomp.pe:RuntimeFunction.to_dict",
+    "x86decomp.pe:TLS64Info.to_dict",
+    "x86decomp.pe:_parse_delay_imports64",
+    "x86decomp.pe:_parse_imports64",
+    "x86decomp.pe:_parse_load_config64",
+    "x86decomp.pe:_parse_runtime_functions",
+    "x86decomp.pe:_parse_tls64",
+    "x86decomp.pe:inspect_pe_kind",
+    "x86decomp.pe:parse_pe",
+    "x86decomp.pe:parse_pe64",
+    "x86decomp.project:_resolve_binary_path",
+    "x86decomp.project:initialize_project",
+    "x86decomp.project:require_valid_project",
+    "x86decomp.project:verify_project",
+    "x86decomp.project_state:ProjectCheck.to_dict",
+    "x86decomp.project_state:ProjectStateDatabase.__enter__",
+    "x86decomp.project_state:ProjectStateDatabase.__exit__",
+    "x86decomp.project_state:ProjectStateDatabase.__init__",
+    "x86decomp.project_state:ProjectStateDatabase.artifact_digests",
+    "x86decomp.project_state:ProjectStateDatabase.close",
+    "x86decomp.project_state:ProjectStateDatabase.integrity_check",
+    "x86decomp.project_state:ProjectStateDatabase.record_migration",
+    "x86decomp.project_state:ProjectStateDatabase.snapshot",
+    "x86decomp.project_state:ProjectStateDatabase.transaction",
+    "x86decomp.project_state:ProjectStateDatabase.upsert_artifact_reference",
+    "x86decomp.project_state:_migration_2_to_3",
+    "x86decomp.project_state:check_project_state",
+    "x86decomp.project_state:create_project_backup",
+    "x86decomp.project_state:migrate_project",
+    "x86decomp.project_state:project_gc",
+    "x86decomp.project_state:repair_project_state",
+    "x86decomp.project_state:restore_project_backup",
+    "x86decomp.project_state:state_database_path",
+    "x86decomp.project_template:_artifact_roles",
+    "x86decomp.project_template:_write_project_helper",
+    "x86decomp.project_template:derive_template_contract",
+    "x86decomp.project_template:materialize_project_template",
+    "x86decomp.reconstruction.abi_contracts:ABIContracts.__init__",
+    "x86decomp.reconstruction.abi_contracts:ABIContracts.compare",
+    "x86decomp.reconstruction.abi_contracts:ABIContracts.export",
+    "x86decomp.reconstruction.abi_contracts:ABIContracts.get",
+    "x86decomp.reconstruction.abi_contracts:ABIContracts.recover",
+    "x86decomp.reconstruction.abi_contracts:ABIContracts.shim",
+    "x86decomp.reconstruction.abi_contracts:ABIContracts.verify",
+    "x86decomp.reconstruction.acceleration:_body_ranges",
+    "x86decomp.reconstruction.acceleration:_contiguous_single_range",
+    "x86decomp.reconstruction.acceleration:_file_report",
+    "x86decomp.reconstruction.acceleration:_function_name",
+    "x86decomp.reconstruction.acceleration:_json_out",
+    "x86decomp.reconstruction.acceleration:_json_rpc",
+    "x86decomp.reconstruction.acceleration:_pe_section",
+    "x86decomp.reconstruction.acceleration:_read_any_text",
+    "x86decomp.reconstruction.acceleration:_read_mnemonics",
+    "x86decomp.reconstruction.acceleration:_read_range_bytes",
+    "x86decomp.reconstruction.acceleration:_read_text_if_exists",
+    "x86decomp.reconstruction.acceleration:_safe_rel",
+    "x86decomp.reconstruction.acceleration:asset_inventory",
+    "x86decomp.reconstruction.acceleration:candidate_promote",
+    "x86decomp.reconstruction.acceleration:candidate_search",
+    "x86decomp.reconstruction.acceleration:class_scaffold",
+    "x86decomp.reconstruction.acceleration:compiler_compare_flags",
+    "x86decomp.reconstruction.acceleration:compiler_rule_learn",
+    "x86decomp.reconstruction.acceleration:compiler_rule_report",
+    "x86decomp.reconstruction.acceleration:decompiler_cleanup",
+    "x86decomp.reconstruction.acceleration:diff_explain",
+    "x86decomp.reconstruction.acceleration:function_boundary_reconcile",
+    "x86decomp.reconstruction.acceleration:function_discover",
+    "x86decomp.reconstruction.acceleration:function_list_classify",
+    "x86decomp.reconstruction.acceleration:function_list_sort",
+    "x86decomp.reconstruction.acceleration:ghidra_mcp_batch_decompile",
+    "x86decomp.reconstruction.acceleration:ghidra_mcp_decompile",
+    "x86decomp.reconstruction.acceleration:ghidra_mcp_functions",
+    "x86decomp.reconstruction.acceleration:ghidra_mcp_probe",
+    "x86decomp.reconstruction.acceleration:ghidra_mcp_sync_names",
+    "x86decomp.reconstruction.acceleration:header_synthesize_project",
+    "x86decomp.reconstruction.acceleration:image_text_compose",
+    "x86decomp.reconstruction.acceleration:llm_batch_create",
+    "x86decomp.reconstruction.acceleration:llm_batch_match",
+    "x86decomp.reconstruction.acceleration:llm_job_from_function_packet",
+    "x86decomp.reconstruction.acceleration:llm_job_from_range",
+    "x86decomp.reconstruction.acceleration:mod_branch_init",
+    "x86decomp.reconstruction.acceleration:module_assign",
+    "x86decomp.reconstruction.acceleration:module_suggest",
+    "x86decomp.reconstruction.acceleration:pattern_catalog",
+    "x86decomp.reconstruction.acceleration:pattern_generate",
+    "x86decomp.reconstruction.acceleration:pattern_match",
+    "x86decomp.reconstruction.acceleration:pattern_promote",
+    "x86decomp.reconstruction.acceleration:pattern_scan",
+    "x86decomp.reconstruction.acceleration:playability_smoke_plan",
+    "x86decomp.reconstruction.acceleration:progress_reconcile",
+    "x86decomp.reconstruction.acceleration:project_doctor_paths",
+    "x86decomp.reconstruction.acceleration:project_health",
+    "x86decomp.reconstruction.acceleration:regression_compare",
+    "x86decomp.reconstruction.acceleration:release_goal_moddable_source",
+    "x86decomp.reconstruction.acceleration:runtime_identify",
+    "x86decomp.reconstruction.acceleration:runtime_match_library",
+    "x86decomp.reconstruction.acceleration:runtime_quarantine",
+    "x86decomp.reconstruction.acceleration:script_port_audit",
+    "x86decomp.reconstruction.acceleration:source_map_annotate",
+    "x86decomp.reconstruction.acceleration:source_map_verify",
+    "x86decomp.reconstruction.acceleration:source_stage_classify",
+    "x86decomp.reconstruction.acceleration:state_machine_detect",
+    "x86decomp.reconstruction.acceleration:subsystem_detect",
+    "x86decomp.reconstruction.acceleration:text_swap_build",
+    "x86decomp.reconstruction.acceleration:text_swap_inject",
+    "x86decomp.reconstruction.acceleration:text_swap_plan",
+    "x86decomp.reconstruction.acceleration:text_swap_verify",
+    "x86decomp.reconstruction.acceleration:toolchain_hash_tree",
+    "x86decomp.reconstruction.acceleration:toolchain_redact_package",
+    "x86decomp.reconstruction.acceleration:toolchain_verify_local",
+    "x86decomp.reconstruction.acceleration:triage_next",
+    "x86decomp.reconstruction.acceleration:type_propagate",
+    "x86decomp.reconstruction.acceleration:vtable_recover",
+    "x86decomp.reconstruction.builds:BuildManager.__init__",
+    "x86decomp.reconstruction.builds:BuildManager.add_target",
+    "x86decomp.reconstruction.builds:BuildManager.add_variant",
+    "x86decomp.reconstruction.builds:BuildManager.compare_modes",
+    "x86decomp.reconstruction.builds:BuildManager.create",
+    "x86decomp.reconstruction.builds:BuildManager.generate",
+    "x86decomp.reconstruction.builds:BuildManager.matrix",
+    "x86decomp.reconstruction.builds:BuildManager.show",
+    "x86decomp.reconstruction.builds:BuildManager.show_target",
+    "x86decomp.reconstruction.builds:BuildManager.show_variant",
+    "x86decomp.reconstruction.builds:BuildManager.validate",
+    "x86decomp.reconstruction.capsules:Capsules.__init__",
+    "x86decomp.reconstruction.capsules:Capsules.create",
+    "x86decomp.reconstruction.capsules:Capsules.inspect",
+    "x86decomp.reconstruction.capsules:Capsules.reproduce",
+    "x86decomp.reconstruction.capsules:Capsules.verify",
+    "x86decomp.reconstruction.cli:_store",
+    "x86decomp.reconstruction.cli:build_parser",
+    "x86decomp.reconstruction.cli:dispatch",
+    "x86decomp.reconstruction.cli:main",
+    "x86decomp.reconstruction.generated_tests:GeneratedTests.__init__",
+    "x86decomp.reconstruction.generated_tests:GeneratedTests.add",
+    "x86decomp.reconstruction.generated_tests:GeneratedTests.explain",
+    "x86decomp.reconstruction.generated_tests:GeneratedTests.get",
+    "x86decomp.reconstruction.generated_tests:GeneratedTests.list",
+    "x86decomp.reconstruction.generated_tests:GeneratedTests.promote_counterexample",
+    "x86decomp.reconstruction.generated_tests:GeneratedTests.synthesize",
+    "x86decomp.reconstruction.headers:HeaderManager.__init__",
+    "x86decomp.reconstruction.headers:HeaderManager.create",
+    "x86decomp.reconstruction.headers:HeaderManager.cycles",
+    "x86decomp.reconstruction.headers:HeaderManager.declare",
+    "x86decomp.reconstruction.headers:HeaderManager.include",
+    "x86decomp.reconstruction.headers:HeaderManager.show",
+    "x86decomp.reconstruction.headers:HeaderManager.synthesize",
+    "x86decomp.reconstruction.headers:HeaderManager.validate",
+    "x86decomp.reconstruction.libraries:LibraryRecognition.__init__",
+    "x86decomp.reconstruction.libraries:LibraryRecognition.candidates",
+    "x86decomp.reconstruction.libraries:LibraryRecognition.disposition",
+    "x86decomp.reconstruction.libraries:LibraryRecognition.get",
+    "x86decomp.reconstruction.libraries:LibraryRecognition.identify",
+    "x86decomp.reconstruction.project_layout:ProjectLayout.__init__",
+    "x86decomp.reconstruction.project_layout:ProjectLayout.add_member",
+    "x86decomp.reconstruction.project_layout:ProjectLayout.add_translation_unit_member",
+    "x86decomp.reconstruction.project_layout:ProjectLayout.create_module",
+    "x86decomp.reconstruction.project_layout:ProjectLayout.create_translation_unit",
+    "x86decomp.reconstruction.project_layout:ProjectLayout.explain_boundaries",
+    "x86decomp.reconstruction.project_layout:ProjectLayout.export",
+    "x86decomp.reconstruction.project_layout:ProjectLayout.list_modules",
+    "x86decomp.reconstruction.project_layout:ProjectLayout.show_module",
+    "x86decomp.reconstruction.project_layout:ProjectLayout.show_translation_unit",
+    "x86decomp.reconstruction.project_layout:ProjectLayout.synthesize",
+    "x86decomp.reconstruction.provenance:ProvenanceLedger.__init__",
+    "x86decomp.reconstruction.provenance:ProvenanceLedger.binary",
+    "x86decomp.reconstruction.provenance:ProvenanceLedger.export",
+    "x86decomp.reconstruction.provenance:ProvenanceLedger.get",
+    "x86decomp.reconstruction.provenance:ProvenanceLedger.impact",
+    "x86decomp.reconstruction.provenance:ProvenanceLedger.lock",
+    "x86decomp.reconstruction.provenance:ProvenanceLedger.reconcile",
+    "x86decomp.reconstruction.provenance:ProvenanceLedger.record",
+    "x86decomp.reconstruction.provenance:ProvenanceLedger.source",
+    "x86decomp.reconstruction.provenance:ProvenanceLedger.unlock",
+    "x86decomp.reconstruction.security:SecurityReview.__init__",
+    "x86decomp.reconstruction.security:SecurityReview.finding",
+    "x86decomp.reconstruction.security:SecurityReview.get",
+    "x86decomp.reconstruction.security:SecurityReview.policy",
+    "x86decomp.reconstruction.security:SecurityReview.report",
+    "x86decomp.reconstruction.security:SecurityReview.scan",
+    "x86decomp.reconstruction.semantic_changesets:SemanticChangeSets.__init__",
+    "x86decomp.reconstruction.semantic_changesets:SemanticChangeSets.add_operation",
+    "x86decomp.reconstruction.semantic_changesets:SemanticChangeSets.conflicts",
+    "x86decomp.reconstruction.semantic_changesets:SemanticChangeSets.create",
+    "x86decomp.reconstruction.semantic_changesets:SemanticChangeSets.get",
+    "x86decomp.reconstruction.semantic_changesets:SemanticChangeSets.merge",
+    "x86decomp.reconstruction.semantic_changesets:SemanticChangeSets.rebase",
+    "x86decomp.reconstruction.semantic_changesets:SemanticChangeSets.verify",
+    "x86decomp.reconstruction.store:ReconstructionStore.check",
+    "x86decomp.reconstruction.store:ReconstructionStore.decode",
+    "x86decomp.reconstruction.store:ReconstructionStore.initialize",
+    "x86decomp.release_gate:_claim_gate",
+    "x86decomp.release_gate:_pipeline_gate",
+    "x86decomp.release_gate:_workflow_gate",
+    "x86decomp.release_gate:evaluate_release_gate",
+    "x86decomp.relink:run_full_relink",
+    "x86decomp.reproducibility:_version",
+    "x86decomp.reproducibility:build_reproduction_manifest",
+    "x86decomp.reproducibility:verify_reproduction_manifest",
+    "x86decomp.security_audit:_secret_findings",
+    "x86decomp.security_audit:audit_source_tree",
+    "x86decomp.security_audit:generate_sbom",
+    "x86decomp.security_audit:run_dependency_vulnerability_audit",
+    "x86decomp.security_audit:verify_release_manifest",
+    "x86decomp.service:_json_files",
+    "x86decomp.service:create_app",
+    "x86decomp.service:run_service",
+    "x86decomp.service:service_snapshot",
+    "x86decomp.store_utils:decode_json_fields",
+    "x86decomp.symbolic:SymState.clone",
+    "x86decomp.symbolic:_aliases",
+    "x86decomp.symbolic:_coerce_pair",
+    "x86decomp.symbolic:_concrete",
+    "x86decomp.symbolic:_condition",
+    "x86decomp.symbolic:_condition_for_family",
+    "x86decomp.symbolic:_constraint_formula",
+    "x86decomp.symbolic:_deps",
+    "x86decomp.symbolic:_is_sat",
+    "x86decomp.symbolic:_memory_address",
+    "x86decomp.symbolic:_read_memory",
+    "x86decomp.symbolic:_read_operand",
+    "x86decomp.symbolic:_read_reg",
+    "x86decomp.symbolic:_set_adc_flags",
+    "x86decomp.symbolic:_set_add_flags",
+    "x86decomp.symbolic:_set_logic_flags",
+    "x86decomp.symbolic:_set_sbb_flags",
+    "x86decomp.symbolic:_set_sub_flags",
+    "x86decomp.symbolic:_write_memory",
+    "x86decomp.symbolic:_write_operand",
+    "x86decomp.symbolic:_write_reg",
+    "x86decomp.symbolic:bounded_symbolic_compare",
+    "x86decomp.symbolic:bounded_symbolic_compare_files",
+    "x86decomp.symbolic:symbolic_execute",
+    "x86decomp.synthetic_corpus:_c_arithmetic",
+    "x86decomp.synthetic_corpus:_c_bitfield",
+    "x86decomp.synthetic_corpus:_c_branches",
+    "x86decomp.synthetic_corpus:_c_float",
+    "x86decomp.synthetic_corpus:_c_indirect",
+    "x86decomp.synthetic_corpus:_c_loop",
+    "x86decomp.synthetic_corpus:_c_struct_alias",
+    "x86decomp.synthetic_corpus:_c_switch",
+    "x86decomp.synthetic_corpus:_cpp_exception",
+    "x86decomp.synthetic_corpus:_cpp_multiple_inheritance",
+    "x86decomp.synthetic_corpus:_cpp_template",
+    "x86decomp.synthetic_corpus:_cpp_virtual",
+    "x86decomp.synthetic_corpus:_symbol",
+    "x86decomp.synthetic_corpus:generate_synthetic_corpus",
+    "x86decomp.synthetic_corpus:verify_synthetic_corpus",
+    "x86decomp.target_pack:SupportingArtifact.to_dict",
+    "x86decomp.target_pack:_safe_artifact",
+    "x86decomp.target_pack:_toml_string",
+    "x86decomp.target_pack:_write_target_toml",
+    "x86decomp.target_pack:generate_project_from_target_pack",
+    "x86decomp.target_pack:infer_target_pack",
+    "x86decomp.target_pack:load_target_pack",
+    "x86decomp.target_pack:verify_target_pack",
+    "x86decomp.test_bundle:_extract_safely",
+    "x86decomp.test_bundle:_is_symlink",
+    "x86decomp.test_bundle:_manifest_artifacts",
+    "x86decomp.test_bundle:_safe_member_path",
+    "x86decomp.test_bundle:_single_role",
+    "x86decomp.test_bundle:_validate_archive_infos",
+    "x86decomp.test_bundle:create_test_bundle",
+    "x86decomp.test_bundle:inspect_test_bundle",
+    "x86decomp.toolchains:register_toolchain",
+    "x86decomp.toolchains:verify_toolchain",
+    "x86decomp.tools:_capture",
+    "x86decomp.tools:discover_analyze_headless",
+    "x86decomp.tools:snapshot_tools",
+    "x86decomp.util:atomic_write_bytes",
+    "x86decomp.util:atomic_write_text",
+    "x86decomp.util:canonical_json_bytes",
+    "x86decomp.util:copy_file_atomic",
+    "x86decomp.util:ensure_relative_path",
+    "x86decomp.util:load_json",
+    "x86decomp.util:require_int",
+    "x86decomp.util:require_mapping",
+    "x86decomp.util:require_string",
+    "x86decomp.util:sha256_bytes",
+    "x86decomp.util:sha256_file",
+    "x86decomp.util:utc_now",
+    "x86decomp.util:write_json",
+    "x86decomp.work_queue:WorkQueue.__init__",
+    "x86decomp.work_queue:WorkQueue.claim",
+    "x86decomp.work_queue:WorkQueue.close",
+    "x86decomp.work_queue:WorkQueue.create",
+    "x86decomp.work_queue:WorkQueue.get",
+    "x86decomp.work_queue:WorkQueue.next",
+    "x86decomp.work_queue:WorkQueue.propose",
+    "x86decomp.work_queue:WorkQueue.record_validator",
+    "x86decomp.worker:WorkerLimits.validate",
+    "x86decomp.worker:WorkerResult.to_dict",
+    "x86decomp.worker:_bounded_environment",
+    "x86decomp.worker:_confined_paths",
+    "x86decomp.worker:_container_command",
+    "x86decomp.worker:_preexec",
+    "x86decomp.worker:discover_worker_capabilities",
+    "x86decomp.worker:execute_worker_request",
+    "x86decomp.workflow:FunctionWorkflow.from_dict",
+    "x86decomp.workflow:FunctionWorkflow.to_dict",
+    "x86decomp.workflow:_state_path",
+    "x86decomp.workflow:initialize_function_workflow",
+    "x86decomp.workflow:load_function_workflow",
+    "x86decomp.workflow:save_function_workflow",
+    "x86decomp.workflow:update_function_workflow"
+  ],
+  "canonical_groups": [
+    "abi",
+    "asm",
+    "asset",
+    "boundary",
+    "build",
+    "campaign",
+    "candidate",
+    "capsule",
+    "changeset",
+    "class",
+    "compiler-rules",
+    "consensus",
+    "counterexample",
+    "decompiler",
+    "diff",
+    "family",
+    "function",
+    "game-pattern",
+    "ghidra-mcp",
+    "graph",
+    "headers",
+    "hybrid",
+    "hypothesis",
+    "image-text",
+    "library",
+    "llm",
+    "loop",
+    "match",
+    "mod",
+    "module",
+    "pattern",
+    "pe",
+    "playability",
+    "plugin",
+    "progress",
+    "project",
+    "proof",
+    "provenance",
+    "regression",
+    "release-policy",
+    "reloc",
+    "review",
+    "runtime",
+    "runtime-analysis",
+    "script-port",
+    "security",
+    "source",
+    "source-map",
+    "source-stage",
+    "staging",
+    "subsystem",
+    "tests",
+    "text-swap",
+    "toolchain",
+    "triage",
+    "type",
+    "vtable",
+    "windows",
+    "worker"
+  ],
+  "canonical_routes": [
+    {
+      "action": "compare",
+      "group": "abi",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "export",
+      "group": "abi",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "recover",
+      "group": "abi",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "shim",
+      "group": "abi",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "show",
+      "group": "abi",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "verify",
+      "group": "abi",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "annotate",
+      "group": "asm",
+      "owner": "assembly"
+    },
+    {
+      "action": "batch",
+      "group": "asm",
+      "owner": "assembly"
+    },
+    {
+      "action": "list",
+      "group": "asm",
+      "owner": "assembly"
+    },
+    {
+      "action": "materialize",
+      "group": "asm",
+      "owner": "assembly"
+    },
+    {
+      "action": "report",
+      "group": "asm",
+      "owner": "assembly"
+    },
+    {
+      "action": "verify-roundtrip",
+      "group": "asm",
+      "owner": "assembly"
+    },
+    {
+      "action": "inventory",
+      "group": "asset",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "audit",
+      "group": "boundary",
+      "owner": "native"
+    },
+    {
+      "action": "audit-project",
+      "group": "boundary",
+      "owner": "native"
+    },
+    {
+      "action": "export-ghidra-fixes",
+      "group": "boundary",
+      "owner": "native"
+    },
+    {
+      "action": "list",
+      "group": "boundary",
+      "owner": "native"
+    },
+    {
+      "action": "show",
+      "group": "boundary",
+      "owner": "native"
+    },
+    {
+      "action": "add-target",
+      "group": "build",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "add-variant",
+      "group": "build",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "compare-modes",
+      "group": "build",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "create",
+      "group": "build",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "generate",
+      "group": "build",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "matrix",
+      "group": "build",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "show",
+      "group": "build",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "validate",
+      "group": "build",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "branch",
+      "group": "campaign",
+      "owner": "governance"
+    },
+    {
+      "action": "create",
+      "group": "campaign",
+      "owner": "governance"
+    },
+    {
+      "action": "list",
+      "group": "campaign",
+      "owner": "governance"
+    },
+    {
+      "action": "pause",
+      "group": "campaign",
+      "owner": "governance"
+    },
+    {
+      "action": "plan",
+      "group": "campaign",
+      "owner": "governance"
+    },
+    {
+      "action": "resume",
+      "group": "campaign",
+      "owner": "governance"
+    },
+    {
+      "action": "snapshot",
+      "group": "campaign",
+      "owner": "governance"
+    },
+    {
+      "action": "start",
+      "group": "campaign",
+      "owner": "governance"
+    },
+    {
+      "action": "status",
+      "group": "campaign",
+      "owner": "governance"
+    },
+    {
+      "action": "stop",
+      "group": "campaign",
+      "owner": "governance"
+    },
+    {
+      "action": "add-file",
+      "group": "candidate",
+      "owner": "governance"
+    },
+    {
+      "action": "compare",
+      "group": "candidate",
+      "owner": "governance"
+    },
+    {
+      "action": "create",
+      "group": "candidate",
+      "owner": "governance"
+    },
+    {
+      "action": "evaluate",
+      "group": "candidate",
+      "owner": "governance"
+    },
+    {
+      "action": "list",
+      "group": "candidate",
+      "owner": "governance"
+    },
+    {
+      "action": "promote",
+      "group": "candidate",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "search",
+      "group": "candidate",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "show",
+      "group": "candidate",
+      "owner": "governance"
+    },
+    {
+      "action": "transition",
+      "group": "candidate",
+      "owner": "governance"
+    },
+    {
+      "action": "create",
+      "group": "capsule",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "inspect",
+      "group": "capsule",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "reproduce",
+      "group": "capsule",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "verify",
+      "group": "capsule",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "add-operation",
+      "group": "changeset",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "apply",
+      "group": "changeset",
+      "owner": "governance"
+    },
+    {
+      "action": "conflicts",
+      "group": "changeset",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "create",
+      "group": "changeset",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "export",
+      "group": "changeset",
+      "owner": "governance"
+    },
+    {
+      "action": "inspect",
+      "group": "changeset",
+      "owner": "governance"
+    },
+    {
+      "action": "merge",
+      "group": "changeset",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "rebase",
+      "group": "changeset",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "show",
+      "group": "changeset",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "verify",
+      "group": "changeset",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "scaffold",
+      "group": "class",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "compare-flags",
+      "group": "compiler-rules",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "learn-rule",
+      "group": "compiler-rules",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "rule-report",
+      "group": "compiler-rules",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "conflicts",
+      "group": "consensus",
+      "owner": "governance"
+    },
+    {
+      "action": "explain",
+      "group": "consensus",
+      "owner": "governance"
+    },
+    {
+      "action": "record",
+      "group": "consensus",
+      "owner": "governance"
+    },
+    {
+      "action": "resolve",
+      "group": "consensus",
+      "owner": "governance"
+    },
+    {
+      "action": "scan",
+      "group": "consensus",
+      "owner": "governance"
+    },
+    {
+      "action": "add",
+      "group": "counterexample",
+      "owner": "governance"
+    },
+    {
+      "action": "list",
+      "group": "counterexample",
+      "owner": "governance"
+    },
+    {
+      "action": "promote",
+      "group": "counterexample",
+      "owner": "governance"
+    },
+    {
+      "action": "show",
+      "group": "counterexample",
+      "owner": "governance"
+    },
+    {
+      "action": "cleanup",
+      "group": "decompiler",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "explain",
+      "group": "diff",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "add",
+      "group": "family",
+      "owner": "governance"
+    },
+    {
+      "action": "correlate",
+      "group": "family",
+      "owner": "governance"
+    },
+    {
+      "action": "create",
+      "group": "family",
+      "owner": "governance"
+    },
+    {
+      "action": "report",
+      "group": "family",
+      "owner": "governance"
+    },
+    {
+      "action": "classify",
+      "group": "function",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "discover",
+      "group": "function",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "reconcile",
+      "group": "function",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "sort",
+      "group": "function",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "state-machine",
+      "group": "game-pattern",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "batch-decompile",
+      "group": "ghidra-mcp",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "decompile",
+      "group": "ghidra-mcp",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "functions",
+      "group": "ghidra-mcp",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "probe",
+      "group": "ghidra-mcp",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "sync-names",
+      "group": "ghidra-mcp",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "edge",
+      "group": "graph",
+      "owner": "governance"
+    },
+    {
+      "action": "impact",
+      "group": "graph",
+      "owner": "governance"
+    },
+    {
+      "action": "node",
+      "group": "graph",
+      "owner": "governance"
+    },
+    {
+      "action": "create",
+      "group": "headers",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "cycles",
+      "group": "headers",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "declare",
+      "group": "headers",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "explain",
+      "group": "headers",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "include",
+      "group": "headers",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "synthesize",
+      "group": "headers",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "synthesize-project",
+      "group": "headers",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "validate",
+      "group": "headers",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "compose",
+      "group": "hybrid",
+      "owner": "native"
+    },
+    {
+      "action": "generate",
+      "group": "hybrid",
+      "owner": "assembly"
+    },
+    {
+      "action": "verify",
+      "group": "hybrid",
+      "owner": "native"
+    },
+    {
+      "action": "create",
+      "group": "hypothesis",
+      "owner": "governance"
+    },
+    {
+      "action": "dependency",
+      "group": "hypothesis",
+      "owner": "governance"
+    },
+    {
+      "action": "evidence",
+      "group": "hypothesis",
+      "owner": "governance"
+    },
+    {
+      "action": "gate",
+      "group": "hypothesis",
+      "owner": "governance"
+    },
+    {
+      "action": "list",
+      "group": "hypothesis",
+      "owner": "governance"
+    },
+    {
+      "action": "show",
+      "group": "hypothesis",
+      "owner": "governance"
+    },
+    {
+      "action": "transition",
+      "group": "hypothesis",
+      "owner": "governance"
+    },
+    {
+      "action": "compose",
+      "group": "image-text",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "accept",
+      "group": "library",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "candidates",
+      "group": "library",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "externalize",
+      "group": "library",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "identify",
+      "group": "library",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "reconstruct",
+      "group": "library",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "reject",
+      "group": "library",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "batch-create",
+      "group": "llm",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "batch-match",
+      "group": "llm",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "cpp-generate",
+      "group": "llm",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "generate",
+      "group": "llm",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "job-create",
+      "group": "llm",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "job-from-range",
+      "group": "llm",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "match",
+      "group": "llm",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "probe",
+      "group": "llm",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "profile-create",
+      "group": "llm",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "profile-validate",
+      "group": "llm",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "prompt",
+      "group": "llm",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "providers",
+      "group": "llm",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "verify",
+      "group": "llm",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "list",
+      "group": "loop",
+      "owner": "native"
+    },
+    {
+      "action": "run",
+      "group": "loop",
+      "owner": "native"
+    },
+    {
+      "action": "show",
+      "group": "loop",
+      "owner": "native"
+    },
+    {
+      "action": "batch",
+      "group": "match",
+      "owner": "native"
+    },
+    {
+      "action": "compare",
+      "group": "match",
+      "owner": "native"
+    },
+    {
+      "action": "mismatches",
+      "group": "match",
+      "owner": "native"
+    },
+    {
+      "action": "report",
+      "group": "match",
+      "owner": "native"
+    },
+    {
+      "action": "branch-init",
+      "group": "mod",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "add-member",
+      "group": "module",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "add-unit-member",
+      "group": "module",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "assign",
+      "group": "module",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "create",
+      "group": "module",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "create-unit",
+      "group": "module",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "list",
+      "group": "module",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "show",
+      "group": "module",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "show-unit",
+      "group": "module",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "suggest",
+      "group": "module",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "catalog",
+      "group": "pattern",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "generate",
+      "group": "pattern",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "match",
+      "group": "pattern",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "promote",
+      "group": "pattern",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "scan",
+      "group": "pattern",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "export-coff",
+      "group": "pe",
+      "owner": "native"
+    },
+    {
+      "action": "export-sections",
+      "group": "pe",
+      "owner": "native"
+    },
+    {
+      "action": "inventory",
+      "group": "pe",
+      "owner": "native"
+    },
+    {
+      "action": "patch-apply",
+      "group": "pe",
+      "owner": "native"
+    },
+    {
+      "action": "patch-plan",
+      "group": "pe",
+      "owner": "native"
+    },
+    {
+      "action": "text-swap",
+      "group": "pe",
+      "owner": "native"
+    },
+    {
+      "action": "smoke-plan",
+      "group": "playability",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "doctor",
+      "group": "plugin",
+      "owner": "governance"
+    },
+    {
+      "action": "install",
+      "group": "plugin",
+      "owner": "governance"
+    },
+    {
+      "action": "invoke",
+      "group": "plugin",
+      "owner": "governance"
+    },
+    {
+      "action": "list",
+      "group": "plugin",
+      "owner": "governance"
+    },
+    {
+      "action": "validate",
+      "group": "plugin",
+      "owner": "governance"
+    },
+    {
+      "action": "reconcile",
+      "group": "progress",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "check",
+      "group": "project",
+      "owner": "assembly"
+    },
+    {
+      "action": "doctor-paths",
+      "group": "project",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "explain-boundaries",
+      "group": "project",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "export",
+      "group": "project",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "health",
+      "group": "project",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "init",
+      "group": "project",
+      "owner": "assembly"
+    },
+    {
+      "action": "synthesize-layout",
+      "group": "project",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "evaluate",
+      "group": "proof",
+      "owner": "governance"
+    },
+    {
+      "action": "export",
+      "group": "proof",
+      "owner": "governance"
+    },
+    {
+      "action": "inspect",
+      "group": "proof",
+      "owner": "governance"
+    },
+    {
+      "action": "obligation",
+      "group": "proof",
+      "owner": "governance"
+    },
+    {
+      "action": "result",
+      "group": "proof",
+      "owner": "governance"
+    },
+    {
+      "action": "verify",
+      "group": "proof",
+      "owner": "governance"
+    },
+    {
+      "action": "binary",
+      "group": "provenance",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "export",
+      "group": "provenance",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "record",
+      "group": "provenance",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "source",
+      "group": "provenance",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "compare",
+      "group": "regression",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "moddable-source",
+      "group": "release-policy",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "inspect",
+      "group": "reloc",
+      "owner": "assembly"
+    },
+    {
+      "action": "resolve",
+      "group": "reloc",
+      "owner": "assembly"
+    },
+    {
+      "action": "supported",
+      "group": "reloc",
+      "owner": "assembly"
+    },
+    {
+      "action": "assign",
+      "group": "review",
+      "owner": "governance"
+    },
+    {
+      "action": "create",
+      "group": "review",
+      "owner": "governance"
+    },
+    {
+      "action": "decide",
+      "group": "review",
+      "owner": "governance"
+    },
+    {
+      "action": "list",
+      "group": "review",
+      "owner": "governance"
+    },
+    {
+      "action": "lock",
+      "group": "review",
+      "owner": "governance"
+    },
+    {
+      "action": "show",
+      "group": "review",
+      "owner": "governance"
+    },
+    {
+      "action": "launch",
+      "group": "runtime",
+      "owner": "native"
+    },
+    {
+      "action": "map-crash",
+      "group": "runtime",
+      "owner": "native"
+    },
+    {
+      "action": "validate-image",
+      "group": "runtime",
+      "owner": "native"
+    },
+    {
+      "action": "identify",
+      "group": "runtime-analysis",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "match-library",
+      "group": "runtime-analysis",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "quarantine",
+      "group": "runtime-analysis",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "audit",
+      "group": "script-port",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "finding",
+      "group": "security",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "policy",
+      "group": "security",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "report",
+      "group": "security",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "scan",
+      "group": "security",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "impact",
+      "group": "source",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "lock",
+      "group": "source",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "reconcile",
+      "group": "source",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "unlock",
+      "group": "source",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "annotate",
+      "group": "source-map",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "verify",
+      "group": "source-map",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "classify",
+      "group": "source-stage",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "compile-check",
+      "group": "staging",
+      "owner": "native"
+    },
+    {
+      "action": "generate-context",
+      "group": "staging",
+      "owner": "native"
+    },
+    {
+      "action": "resolve",
+      "group": "staging",
+      "owner": "native"
+    },
+    {
+      "action": "scan",
+      "group": "staging",
+      "owner": "native"
+    },
+    {
+      "action": "unresolved",
+      "group": "staging",
+      "owner": "native"
+    },
+    {
+      "action": "detect",
+      "group": "subsystem",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "add",
+      "group": "tests",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "explain",
+      "group": "tests",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "list",
+      "group": "tests",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "promote-counterexample",
+      "group": "tests",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "synthesize",
+      "group": "tests",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "build",
+      "group": "text-swap",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "inject",
+      "group": "text-swap",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "plan",
+      "group": "text-swap",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "verify",
+      "group": "text-swap",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "hash-tree",
+      "group": "toolchain",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "redact-package",
+      "group": "toolchain",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "verify-local",
+      "group": "toolchain",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "next",
+      "group": "triage",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "propagate",
+      "group": "type",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "recover",
+      "group": "vtable",
+      "owner": "reconstruction"
+    },
+    {
+      "action": "discover-ghidra",
+      "group": "windows",
+      "owner": "native"
+    },
+    {
+      "action": "doctor",
+      "group": "windows",
+      "owner": "native"
+    },
+    {
+      "action": "response-file",
+      "group": "windows",
+      "owner": "native"
+    },
+    {
+      "action": "doctor",
+      "group": "worker",
+      "owner": "governance"
+    },
+    {
+      "action": "list",
+      "group": "worker",
+      "owner": "governance"
+    },
+    {
+      "action": "register",
+      "group": "worker",
+      "owner": "governance"
+    },
+    {
+      "action": "select",
+      "group": "worker",
+      "owner": "governance"
+    },
+    {
+      "action": "status",
+      "group": "worker",
+      "owner": "governance"
+    }
+  ],
+  "cli_commands": {
+    "abi": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "abi-check": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "angr-validate": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "artifact-import": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "artifact-verify": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "asm": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "asset": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "benchmark-run": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "boundary": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "build": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "campaign": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "candidate": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "capsule": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "changeset": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "claim-attach": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "claim-contradict": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "claim-create": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "claim-verify": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "class": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "coff-comdat-resolve": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "coff-extract": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "coff-inspect": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "coff-synthesize": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "commands": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "compile": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "compile-worker": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "compiler-lab": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "compiler-rules": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "consensus": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "content-put": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "content-verify": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "convergence-analyze": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "corpus-build": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "corpus-compare": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "corpus-create-manifest": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "corpus-generate": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "corpus-generated-verify": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "corpus-verify": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "counterexample": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "cpp-recover": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "crosscheck-ghidra": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "db-constraint-accept": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "db-constraint-add": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "db-constraint-conflicts": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "db-ingest": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "db-query": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "decompiler": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "decompme-pack": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "dependency-audit": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "diff": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "diff-bytes": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "diff-function": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "disassemble": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "drcov-parse": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "drcov-run": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "dynamic-validate": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "evidence-add": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "family": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "function": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "game-pattern": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "ghidra-export": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "ghidra-mcp": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "graph": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "harness-generate": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "headers": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "hybrid": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "hybrid-generate": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "hypothesis": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "image-match": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "image-profile": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "image-text": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "init": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "inspect-pe": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "integration-run": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "layout-reconstruct": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "lib-inspect": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "library": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "linker-plan": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "llm": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "loop": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "map-inspect": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "match": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "mcp-commit": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "mcp-propose": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "mcp-read": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "mcp-tools": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "memory-add": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "memory-render": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "memory-verify": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "metadata-scan": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "mod": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "module": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "objdiff-run": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "patch-image": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "pattern": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "pdb-inspect": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "pe": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "pipeline-cancel": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "pipeline-create": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "pipeline-recover": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "pipeline-retry": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "pipeline-run": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "pipeline-status": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "playability": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "plugin": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "progress": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "project": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "project-backup": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "project-check": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "project-from-target": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "project-gc": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "project-migrate": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "project-repair": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "project-restore": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "proof": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "provenance": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "regression": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "release-gate": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "release-manifest-verify": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "release-policy": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "relink": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "reloc": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "reproduce-create": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "reproduce-verify": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "review": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "runtime": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "runtime-analysis": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "sbom-generate": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "script-port": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "security": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "security-audit": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "serve": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "snapshot-tools": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "source": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "source-map": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "source-stage": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "staging": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "subsystem": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "symbolic-memory-validate": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "symbolic-validate": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "target-pack-infer": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "target-pack-verify": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "template-derive": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "template-materialize": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "test-bundle-create": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "test-bundle-inspect": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "tests": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "text-swap": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "toolchain": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "toolchain-register": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "toolchain-verify": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "triage": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "type": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "verify-project": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "vtable": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "windows": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "work-claim": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "work-create": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "work-next": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "work-propose": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "work-validate": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "worker": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "worker-capabilities": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "workflow-init": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "workflow-show": {
+      "interface": "x86decomp",
+      "status": "current"
+    },
+    "workflow-update": {
+      "interface": "x86decomp",
+      "status": "current"
+    }
+  },
+  "coverage_contract": {
+    "all_canonical_routes": true,
+    "all_current_function_and_method_bodies": true,
+    "all_root_commands": true,
+    "branch_floor_percent": 50.0,
+    "line_floor_percent": 70.0,
+    "zero_skips": true
+  },
+  "entry_points": {
+    "test_suite": "x86decomp-test",
+    "toolkit": "x86decomp"
+  },
+  "ghidra_scripts": [
+    "ExportFunctionArtifacts.java",
+    "ExportProjectManifest.java",
+    "QueryAnalysis.java"
+  ],
+  "maintenance_rule": "Every release must preserve or explicitly supersede each current capability, keep one unified interface, document and test the complete current surface, reject placeholders, and contain no source-tree upgrade subsystem.",
+  "modules": {
+    "x86decomp": {
+      "area": "core",
+      "status": "current"
+    },
+    "x86decomp.__main__": {
+      "area": "core",
+      "status": "current"
+    },
+    "x86decomp.abi": {
+      "area": "core",
+      "status": "current"
+    },
+    "x86decomp.analysis_db": {
+      "area": "core",
+      "status": "current"
+    },
+    "x86decomp.angr_backend": {
+      "area": "core",
+      "status": "current"
+    },
+    "x86decomp.artifacts": {
+      "area": "core",
+      "status": "current"
+    },
+    "x86decomp.assembly": {
+      "area": "assembly",
+      "status": "current"
+    },
+    "x86decomp.assembly.annotation": {
+      "area": "assembly",
+      "status": "current"
+    },
+    "x86decomp.assembly.cli": {
+      "area": "assembly",
+      "status": "current"
+    },
+    "x86decomp.assembly.materialize": {
+      "area": "assembly",
+      "status": "current"
+    },
+    "x86decomp.assembly.pipeline": {
+      "area": "assembly",
+      "status": "current"
+    },
+    "x86decomp.assembly.relocations": {
+      "area": "assembly",
+      "status": "current"
+    },
+    "x86decomp.assembly.store": {
+      "area": "assembly",
+      "status": "current"
+    },
+    "x86decomp.benchmarks": {
+      "area": "core",
+      "status": "current"
+    },
+    "x86decomp.binary_reader": {
+      "area": "core",
+      "status": "current"
+    },
+    "x86decomp.canonical": {
+      "area": "core",
+      "status": "current"
+    },
+    "x86decomp.cli": {
+      "area": "core",
+      "status": "current"
+    },
+    "x86decomp.cli_utils": {
+      "area": "core",
+      "status": "current"
+    },
+    "x86decomp.coff": {
+      "area": "core",
+      "status": "current"
+    },
+    "x86decomp.coff_archive": {
+      "area": "core",
+      "status": "current"
+    },
+    "x86decomp.compiler": {
+      "area": "core",
+      "status": "current"
+    },
+    "x86decomp.compiler_lab": {
+      "area": "core",
+      "status": "current"
+    },
+    "x86decomp.compiler_worker": {
+      "area": "core",
+      "status": "current"
+    },
+    "x86decomp.content_store": {
+      "area": "core",
+      "status": "current"
+    },
+    "x86decomp.contracts": {
+      "area": "core",
+      "status": "current"
+    },
+    "x86decomp.convergence": {
+      "area": "core",
+      "status": "current"
+    },
+    "x86decomp.cpp_recovery": {
+      "area": "core",
+      "status": "current"
+    },
+    "x86decomp.decompme": {
+      "area": "core",
+      "status": "current"
+    },
+    "x86decomp.diffing": {
+      "area": "core",
+      "status": "current"
+    },
+    "x86decomp.disassembly": {
+      "area": "core",
+      "status": "current"
+    },
+    "x86decomp.dynamic": {
+      "area": "core",
+      "status": "current"
+    },
+    "x86decomp.dynamorio": {
+      "area": "core",
+      "status": "current"
+    },
+    "x86decomp.errors": {
+      "area": "core",
+      "status": "current"
+    },
+    "x86decomp.evidence": {
+      "area": "core",
+      "status": "current"
+    },
+    "x86decomp.exe_diff": {
+      "area": "core",
+      "status": "current"
+    },
+    "x86decomp.ghidra": {
+      "area": "core",
+      "status": "current"
+    },
+    "x86decomp.governance": {
+      "area": "governance",
+      "status": "current"
+    },
+    "x86decomp.governance.campaigns": {
+      "area": "governance",
+      "status": "current"
+    },
+    "x86decomp.governance.candidates": {
+      "area": "governance",
+      "status": "current"
+    },
+    "x86decomp.governance.changesets": {
+      "area": "governance",
+      "status": "current"
+    },
+    "x86decomp.governance.cli": {
+      "area": "governance",
+      "status": "current"
+    },
+    "x86decomp.governance.consensus": {
+      "area": "governance",
+      "status": "current"
+    },
+    "x86decomp.governance.counterexamples": {
+      "area": "governance",
+      "status": "current"
+    },
+    "x86decomp.governance.family": {
+      "area": "governance",
+      "status": "current"
+    },
+    "x86decomp.governance.hypotheses": {
+      "area": "governance",
+      "status": "current"
+    },
+    "x86decomp.governance.knowledge_graph": {
+      "area": "governance",
+      "status": "current"
+    },
+    "x86decomp.governance.plugins": {
+      "area": "governance",
+      "status": "current"
+    },
+    "x86decomp.governance.proofs": {
+      "area": "governance",
+      "status": "current"
+    },
+    "x86decomp.governance.reviews": {
+      "area": "governance",
+      "status": "current"
+    },
+    "x86decomp.governance.store": {
+      "area": "governance",
+      "status": "current"
+    },
+    "x86decomp.governance.workers": {
+      "area": "governance",
+      "status": "current"
+    },
+    "x86decomp.ground_truth": {
+      "area": "core",
+      "status": "current"
+    },
+    "x86decomp.harness_generator": {
+      "area": "core",
+      "status": "current"
+    },
+    "x86decomp.hybrid": {
+      "area": "core",
+      "status": "current"
+    },
+    "x86decomp.image_match": {
+      "area": "core",
+      "status": "current"
+    },
+    "x86decomp.integration": {
+      "area": "core",
+      "status": "current"
+    },
+    "x86decomp.linker_layout": {
+      "area": "core",
+      "status": "current"
+    },
+    "x86decomp.linker_reconstruction": {
+      "area": "core",
+      "status": "current"
+    },
+    "x86decomp.local_llm": {
+      "area": "local-llm",
+      "status": "current"
+    },
+    "x86decomp.local_llm.matching": {
+      "area": "local-llm",
+      "status": "current"
+    },
+    "x86decomp.local_llm.profiles": {
+      "area": "local-llm",
+      "status": "current"
+    },
+    "x86decomp.local_llm.prompts": {
+      "area": "local-llm",
+      "status": "current"
+    },
+    "x86decomp.local_llm.transport": {
+      "area": "local-llm",
+      "status": "current"
+    },
+    "x86decomp.mcp": {
+      "area": "core",
+      "status": "current"
+    },
+    "x86decomp.memory": {
+      "area": "core",
+      "status": "current"
+    },
+    "x86decomp.models": {
+      "area": "core",
+      "status": "current"
+    },
+    "x86decomp.msvc_metadata": {
+      "area": "core",
+      "status": "current"
+    },
+    "x86decomp.native": {
+      "area": "native",
+      "status": "current"
+    },
+    "x86decomp.native.cli": {
+      "area": "native",
+      "status": "current"
+    },
+    "x86decomp.native.closed_loop": {
+      "area": "native",
+      "status": "current"
+    },
+    "x86decomp.native.hybrid_composer": {
+      "area": "native",
+      "status": "current"
+    },
+    "x86decomp.native.matching": {
+      "area": "native",
+      "status": "current"
+    },
+    "x86decomp.native.pe_reconstruction": {
+      "area": "native",
+      "status": "current"
+    },
+    "x86decomp.native.runtime": {
+      "area": "native",
+      "status": "current"
+    },
+    "x86decomp.native.slots": {
+      "area": "native",
+      "status": "current"
+    },
+    "x86decomp.native.staging": {
+      "area": "native",
+      "status": "current"
+    },
+    "x86decomp.native.store": {
+      "area": "native",
+      "status": "current"
+    },
+    "x86decomp.native.windows_tools": {
+      "area": "native",
+      "status": "current"
+    },
+    "x86decomp.objdiff_adapter": {
+      "area": "core",
+      "status": "current"
+    },
+    "x86decomp.orchestrator": {
+      "area": "core",
+      "status": "current"
+    },
+    "x86decomp.patching": {
+      "area": "core",
+      "status": "current"
+    },
+    "x86decomp.pdb": {
+      "area": "core",
+      "status": "current"
+    },
+    "x86decomp.pe": {
+      "area": "core",
+      "status": "current"
+    },
+    "x86decomp.pe32": {
+      "area": "core",
+      "status": "current"
+    },
+    "x86decomp.project": {
+      "area": "core",
+      "status": "current"
+    },
+    "x86decomp.project_state": {
+      "area": "core",
+      "status": "current"
+    },
+    "x86decomp.project_template": {
+      "area": "core",
+      "status": "current"
+    },
+    "x86decomp.reconstruction": {
+      "area": "reconstruction",
+      "status": "current"
+    },
+    "x86decomp.reconstruction.abi_contracts": {
+      "area": "reconstruction",
+      "status": "current"
+    },
+    "x86decomp.reconstruction.acceleration": {
+      "area": "reconstruction",
+      "status": "current"
+    },
+    "x86decomp.reconstruction.builds": {
+      "area": "reconstruction",
+      "status": "current"
+    },
+    "x86decomp.reconstruction.capsules": {
+      "area": "reconstruction",
+      "status": "current"
+    },
+    "x86decomp.reconstruction.cli": {
+      "area": "reconstruction",
+      "status": "current"
+    },
+    "x86decomp.reconstruction.generated_tests": {
+      "area": "reconstruction",
+      "status": "current"
+    },
+    "x86decomp.reconstruction.headers": {
+      "area": "reconstruction",
+      "status": "current"
+    },
+    "x86decomp.reconstruction.libraries": {
+      "area": "reconstruction",
+      "status": "current"
+    },
+    "x86decomp.reconstruction.project_layout": {
+      "area": "reconstruction",
+      "status": "current"
+    },
+    "x86decomp.reconstruction.provenance": {
+      "area": "reconstruction",
+      "status": "current"
+    },
+    "x86decomp.reconstruction.security": {
+      "area": "reconstruction",
+      "status": "current"
+    },
+    "x86decomp.reconstruction.semantic_changesets": {
+      "area": "reconstruction",
+      "status": "current"
+    },
+    "x86decomp.reconstruction.store": {
+      "area": "reconstruction",
+      "status": "current"
+    },
+    "x86decomp.release_gate": {
+      "area": "core",
+      "status": "current"
+    },
+    "x86decomp.relink": {
+      "area": "core",
+      "status": "current"
+    },
+    "x86decomp.reproducibility": {
+      "area": "core",
+      "status": "current"
+    },
+    "x86decomp.security_audit": {
+      "area": "core",
+      "status": "current"
+    },
+    "x86decomp.service": {
+      "area": "core",
+      "status": "current"
+    },
+    "x86decomp.store_utils": {
+      "area": "core",
+      "status": "current"
+    },
+    "x86decomp.symbolic": {
+      "area": "core",
+      "status": "current"
+    },
+    "x86decomp.synthetic_corpus": {
+      "area": "core",
+      "status": "current"
+    },
+    "x86decomp.target_pack": {
+      "area": "core",
+      "status": "current"
+    },
+    "x86decomp.test_bundle": {
+      "area": "core",
+      "status": "current"
+    },
+    "x86decomp.toolchains": {
+      "area": "core",
+      "status": "current"
+    },
+    "x86decomp.tools": {
+      "area": "core",
+      "status": "current"
+    },
+    "x86decomp.util": {
+      "area": "core",
+      "status": "current"
+    },
+    "x86decomp.work_queue": {
+      "area": "core",
+      "status": "current"
+    },
+    "x86decomp.worker": {
+      "area": "core",
+      "status": "current"
+    },
+    "x86decomp.workflow": {
+      "area": "core",
+      "status": "current"
+    }
+  },
+  "schema_version": 1,
+  "schemas": [
+    "abi-contract.schema.json",
+    "assembly/asm-function.schema.json",
+    "assembly/asm-run.schema.json",
+    "assembly/relocation-resolution.schema.json",
+    "assembly/roundtrip-report.schema.json",
+    "assembly/symbol-map.schema.json",
+    "benchmark-corpus.schema.json",
+    "claim.schema.json",
+    "coff-archive.schema.json",
+    "comdat-resolution.schema.json",
+    "compiler-ground-truth-comparison.schema.json",
+    "compiler-ground-truth.schema.json",
+    "compiler-lab.schema.json",
+    "compiler-profile.schema.json",
+    "convergence-report.schema.json",
+    "cpp-recovery.schema.json",
+    "decompme-packet.schema.json",
+    "dependency-audit.schema.json",
+    "drcov-trace.schema.json",
+    "dynamic-report.schema.json",
+    "evidence.schema.json",
+    "exe-diff-report.schema.json",
+    "execution-harness-generated.schema.json",
+    "execution-harness.schema.json",
+    "function-workflow.schema.json",
+    "function.schema.json",
+    "governance/campaign.schema.json",
+    "governance/candidate.schema.json",
+    "governance/changeset.schema.json",
+    "governance/consensus.schema.json",
+    "governance/counterexample.schema.json",
+    "governance/family.schema.json",
+    "governance/hypothesis.schema.json",
+    "governance/knowledge-graph.schema.json",
+    "governance/plugin.schema.json",
+    "governance/proof-bundle.schema.json",
+    "governance/review.schema.json",
+    "governance/worker.schema.json",
+    "hybrid-project.schema.json",
+    "image-match-report.schema.json",
+    "image-profile.schema.json",
+    "integration-report.schema.json",
+    "integration-scenarios.schema.json",
+    "linker-layout.schema.json",
+    "linker-reconstruction-plan.schema.json",
+    "local-llm/candidate.schema.json",
+    "local-llm/job.schema.json",
+    "local-llm/profile.schema.json",
+    "local-llm/report.schema.json",
+    "mcp-mutation.schema.json",
+    "memory-event.schema.json",
+    "msvc-metadata.schema.json",
+    "native/boundary-finding.schema.json",
+    "native/candidate-manifest.schema.json",
+    "native/function-match.schema.json",
+    "native/function-slot.schema.json",
+    "native/hybrid-composition.schema.json",
+    "native/loop-run.schema.json",
+    "native/match-run.schema.json",
+    "native/patch-plan.schema.json",
+    "native/runtime-validation.schema.json",
+    "native/section-export.schema.json",
+    "native/staging-symbol.schema.json",
+    "native/windows-tool.schema.json",
+    "objdiff-manifest.schema.json",
+    "pdb.schema.json",
+    "pipeline.schema.json",
+    "project-template.schema.json",
+    "project.schema.json",
+    "reconstruction/abi-contract.schema.json",
+    "reconstruction/build.schema.json",
+    "reconstruction/capsule.schema.json",
+    "reconstruction/compatibility-shim.schema.json",
+    "reconstruction/generated-test.schema.json",
+    "reconstruction/header.schema.json",
+    "reconstruction/library-match.schema.json",
+    "reconstruction/module.schema.json",
+    "reconstruction/security-finding.schema.json",
+    "reconstruction/semantic-changeset.schema.json",
+    "reconstruction/source-provenance.schema.json",
+    "reconstruction/translation-unit.schema.json",
+    "release-gate.schema.json",
+    "relink-manifest.schema.json",
+    "reproduction.schema.json",
+    "security-audit.schema.json",
+    "symbolic-memory-harness.schema.json",
+    "symbolic-memory-report.schema.json",
+    "symbolic-report.schema.json",
+    "synthetic-corpus.schema.json",
+    "target-decisions.schema.json",
+    "target-pack.schema.json",
+    "test-bundle-report.schema.json",
+    "test-bundle.schema.json",
+    "type-constraint.schema.json",
+    "verification.schema.json",
+    "work-task.schema.json",
+    "worker-report.schema.json"
+  ],
+  "toolkit_version": "0.7.11",
+  "workflow_states": {
+    "functional": [
+      "not_started",
+      "decompiled",
+      "compiles",
+      "abi_compatible",
+      "differentially_validated",
+      "symbolically_bounded",
+      "integration_validated",
+      "blocked"
+    ],
+    "matching": [
+      "not_started",
+      "decompiled",
+      "compiles",
+      "abi_compatible",
+      "instruction_similar",
+      "byte_matched",
+      "image_integrated",
+      "full_relink_validated",
+      "blocked"
+    ]
+  }
+}

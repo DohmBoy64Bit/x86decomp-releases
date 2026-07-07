@@ -1,0 +1,8 @@
+usage: x86decomp compiler-lab [-h] [--report REPORT] lab
+
+positional arguments:
+  lab
+
+options:
+  -h, --help       show this help message and exit
+  --report REPORT

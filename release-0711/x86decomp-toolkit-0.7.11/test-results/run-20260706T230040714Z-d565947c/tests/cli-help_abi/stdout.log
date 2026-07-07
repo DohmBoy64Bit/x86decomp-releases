@@ -1,0 +1,19 @@
+usage: x86decomp abi [-h] [--project PROJECT] [--actor ACTOR]
+                     {compare,export,recover,shim,show,verify} ...
+
+Canonical abi commands implemented by the current capability subsystem.
+
+positional arguments:
+  {compare,export,recover,shim,show,verify}
+    compare             compare command
+    export              export command
+    recover             recover command
+    shim                shim command
+    show                show command
+    verify              verify command
+
+options:
+  -h, --help            show this help message and exit
+  --project PROJECT     project root used by the capability implementation
+                        (default: current directory)
+  --actor ACTOR

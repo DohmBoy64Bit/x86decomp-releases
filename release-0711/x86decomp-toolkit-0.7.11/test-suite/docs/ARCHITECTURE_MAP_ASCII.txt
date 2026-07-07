@@ -1,0 +1,57 @@
+TEST-SUITE ARCHITECTURE MAP — 0.7.11
+
+┌────────────────────┐
+│ Adapter resolution │
+└─────────┬──────────┘
+          ├── installed adapter
+          ├── custom path
+          ├── consent-gated installation
+          └── BLOCKED
+
+LOCAL-MODEL RUNTIME ADAPTERS
+┌────────────────────────────────┐
+│ LM Studio CLI                  │
+│ Ollama                         │
+│ llama.cpp server               │
+│ vLLM                           │
+│ LocalAI                        │
+└────────────────────────────────┘
+Missing live runtimes remain BLOCKED; mock protocol tests still run.
+
+┌────────────────┐
+│ Pinned surface │
+└───────┬────────┘
+        ▼
+┌─────────────────────────────┐
+│ Recursive current inventory │
+└───────┬─────────────────────┘
+        ├── catalog drift
+        └── Built-in verification
+                │
+┌───────────────▼─────────────────────────────┐
+│ Local-LLM verification                     │
+│ - loopback mock OpenAI/Ollama servers       │
+│ - structured-output fallback                │
+│ - same-origin redirect rejection            │
+│ - real Clang COFF compilation               │
+│ - exact relocation-resolved byte identity   │
+│ - accepted-artifact tamper detection        │
+└───────────────┬─────────────────────────────┘
+                │
+┌───────────────▼──────────────┐
+│ Safe process execution       │
+└───────────────┬──────────────┘
+                ▼
+┌──────────────────────────────┐
+│ Unified result               │
+│ PASS / FAIL / ERROR / BLOCKED│
+└───────────────┬──────────────┘
+                ▼
+┌──────────────────────────────┐
+│ Strict release gate          │
+└──────────────────────────────┘
+
+v0.7.11 acceleration verification overlay
+-----------------------------------------
+pyflakes static lint -> parser contracts -> shared bounded PE/COFF reader tests -> acceleration helper tests -> docs/site sync checks
+                                      \-> source manifest verification

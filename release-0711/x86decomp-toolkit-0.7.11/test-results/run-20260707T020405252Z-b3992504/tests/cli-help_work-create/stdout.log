@@ -1,0 +1,15 @@
+usage: x86decomp work-create [-h] --validator VALIDATOR [--priority PRIORITY]
+                             database function_id {matching,functional} kind
+                             instructions
+
+positional arguments:
+  database
+  function_id
+  {matching,functional}
+  kind
+  instructions
+
+options:
+  -h, --help            show this help message and exit
+  --validator VALIDATOR
+  --priority PRIORITY

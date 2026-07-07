@@ -1,0 +1,15 @@
+usage: x86decomp game-pattern [-h] [--project PROJECT] [--actor ACTOR]
+                              {state-machine} ...
+
+Canonical game-pattern commands implemented by the current capability
+subsystem.
+
+positional arguments:
+  {state-machine}
+    state-machine    state-machine command
+
+options:
+  -h, --help         show this help message and exit
+  --project PROJECT  project root used by the capability implementation
+                     (default: current directory)
+  --actor ACTOR

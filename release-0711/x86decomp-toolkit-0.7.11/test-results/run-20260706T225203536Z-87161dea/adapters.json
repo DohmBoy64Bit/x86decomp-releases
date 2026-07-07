@@ -1,0 +1,353 @@
+{
+  "adapters": [
+    {
+      "adapter_id": "angr",
+      "capabilities": [],
+      "diagnostics": [],
+      "installed": true,
+      "path": "C:\\Python313\\python.exe",
+      "source": "python-subprocess",
+      "version": "angr=9.2.222"
+    },
+    {
+      "adapter_id": "build",
+      "capabilities": [],
+      "diagnostics": [],
+      "installed": true,
+      "path": "C:\\Python313\\python.exe",
+      "source": "python-subprocess",
+      "version": "build=1.5.0"
+    },
+    {
+      "adapter_id": "capstone",
+      "capabilities": [],
+      "diagnostics": [],
+      "installed": true,
+      "path": "C:\\Python313\\python.exe",
+      "source": "python-subprocess",
+      "version": "capstone=5.0.6"
+    },
+    {
+      "adapter_id": "clang",
+      "capabilities": [],
+      "diagnostics": [],
+      "installed": true,
+      "path": "C:\\Program Files\\LLVM\\bin\\clang.exe",
+      "source": "configured-path",
+      "version": "clang version 22.1.6 (https://github.com/llvm/llvm-project fc4aad7b5db3fff421df9a9637605b9ca5667881)"
+    },
+    {
+      "adapter_id": "clangxx",
+      "capabilities": [],
+      "diagnostics": [],
+      "installed": true,
+      "path": "C:\\Program Files\\LLVM\\bin\\clang++.exe",
+      "source": "configured-path",
+      "version": "clang version 22.1.6 (https://github.com/llvm/llvm-project fc4aad7b5db3fff421df9a9637605b9ca5667881)"
+    },
+    {
+      "adapter_id": "cmake",
+      "capabilities": [],
+      "diagnostics": [],
+      "installed": true,
+      "path": "C:\\Program Files\\CMake\\bin\\cmake.EXE",
+      "source": "PATH",
+      "version": "cmake version 4.2.1"
+    },
+    {
+      "adapter_id": "container-runtime",
+      "capabilities": [],
+      "diagnostics": [],
+      "installed": true,
+      "path": "C:\\Program Files\\Docker\\Docker\\resources\\bin\\docker.EXE",
+      "source": "PATH",
+      "version": "Docker version 29.2.0, build 0b9d198"
+    },
+    {
+      "adapter_id": "coverage",
+      "capabilities": [],
+      "diagnostics": [],
+      "installed": true,
+      "path": "C:\\Python313\\python.exe",
+      "source": "python-subprocess",
+      "version": "coverage=7.14.3"
+    },
+    {
+      "adapter_id": "dynamorio",
+      "capabilities": [],
+      "diagnostics": [],
+      "installed": true,
+      "path": "C:\\Users\\SeanS\\AppData\\Local\\Microsoft\\WinGet\\Packages\\DynamoRIO.DynamoRIO_Microsoft.Winget.Source_8wekyb3d8bbwe\\DynamoRIO-Windows-11.91.20536\\bin32\\drrun.EXE",
+      "source": "PATH",
+      "version": "ERROR: invalid arguments"
+    },
+    {
+      "adapter_id": "fastapi",
+      "capabilities": [],
+      "diagnostics": [],
+      "installed": true,
+      "path": "C:\\Python313\\python.exe",
+      "source": "python-subprocess",
+      "version": "fastapi=0.138.1"
+    },
+    {
+      "adapter_id": "gcc",
+      "capabilities": [],
+      "diagnostics": [],
+      "installed": true,
+      "path": "C:\\Users\\SeanS\\AppData\\Local\\Microsoft\\WinGet\\Packages\\BrechtSanders.WinLibs.POSIX.UCRT_Microsoft.Winget.Source_8wekyb3d8bbwe\\mingw64\\bin\\gcc.EXE",
+      "source": "PATH",
+      "version": "gcc.EXE (MinGW-W64 x86_64-ucrt-posix-seh, built by Brecht Sanders, r7) 15.2.0"
+    },
+    {
+      "adapter_id": "ghidra",
+      "capabilities": [],
+      "diagnostics": [
+        "[WinError 193] %1 is not a valid Win32 application"
+      ],
+      "installed": true,
+      "path": "C:\\Users\\SeanS\\Downloads\\x86decomp\\release-0711\\x86decomp-toolkit-0.7.11\\.x86decomp-test-tools\\ghidra\\current",
+      "source": "configured-path",
+      "version": null
+    },
+    {
+      "adapter_id": "gxx",
+      "capabilities": [],
+      "diagnostics": [],
+      "installed": true,
+      "path": "C:\\Users\\SeanS\\AppData\\Local\\Microsoft\\WinGet\\Packages\\BrechtSanders.WinLibs.POSIX.UCRT_Microsoft.Winget.Source_8wekyb3d8bbwe\\mingw64\\bin\\g++.EXE",
+      "source": "PATH",
+      "version": "g++.EXE (MinGW-W64 x86_64-ucrt-posix-seh, built by Brecht Sanders, r7) 15.2.0"
+    },
+    {
+      "adapter_id": "java",
+      "capabilities": [],
+      "diagnostics": [],
+      "installed": true,
+      "path": "C:\\Program Files\\Eclipse Adoptium\\jdk-21.0.11.10-hotspot\\bin\\java.exe",
+      "source": "environment:JAVA_HOME",
+      "version": "openjdk version \"21.0.11\" 2026-04-21 LTS"
+    },
+    {
+      "adapter_id": "javalang",
+      "capabilities": [],
+      "diagnostics": [],
+      "installed": true,
+      "path": "C:\\Python313\\python.exe",
+      "source": "python-subprocess",
+      "version": "javalang=0.13.0"
+    },
+    {
+      "adapter_id": "jsonschema",
+      "capabilities": [],
+      "diagnostics": [],
+      "installed": true,
+      "path": "C:\\Python313\\python.exe",
+      "source": "python-subprocess",
+      "version": "jsonschema=4.26.0"
+    },
+    {
+      "adapter_id": "lief",
+      "capabilities": [],
+      "diagnostics": [],
+      "installed": true,
+      "path": "C:\\Python313\\python.exe",
+      "source": "python-subprocess",
+      "version": "lief=0.17.6-08dc3b7f"
+    },
+    {
+      "adapter_id": "llama-server",
+      "capabilities": [],
+      "diagnostics": [
+        "not found in configuration, environment variables, PATH, or known locations"
+      ],
+      "installed": false,
+      "path": null,
+      "source": null,
+      "version": null
+    },
+    {
+      "adapter_id": "lld-link",
+      "capabilities": [],
+      "diagnostics": [],
+      "installed": true,
+      "path": "C:\\Program Files\\LLVM\\bin\\lld-link.exe",
+      "source": "configured-path",
+      "version": "LLD 22.1.6 (https://github.com/llvm/llvm-project fc4aad7b5db3fff421df9a9637605b9ca5667881)"
+    },
+    {
+      "adapter_id": "llvm-lib",
+      "capabilities": [],
+      "diagnostics": [],
+      "installed": true,
+      "path": "C:\\Program Files\\LLVM\\bin\\llvm-lib.exe",
+      "source": "configured-path",
+      "version": "ignoring unknown argument: --version"
+    },
+    {
+      "adapter_id": "llvm-objdump",
+      "capabilities": [],
+      "diagnostics": [],
+      "installed": true,
+      "path": "C:\\Program Files\\LLVM\\bin\\llvm-objdump.exe",
+      "source": "configured-path",
+      "version": "LLVM (http://llvm.org/):"
+    },
+    {
+      "adapter_id": "llvm-readobj",
+      "capabilities": [],
+      "diagnostics": [],
+      "installed": true,
+      "path": "C:\\Program Files\\LLVM\\bin\\llvm-readobj.exe",
+      "source": "configured-path",
+      "version": "LLVM (http://llvm.org/):"
+    },
+    {
+      "adapter_id": "lm-studio",
+      "capabilities": [
+        "local-loopback-llm",
+        "openai-compatible-chat"
+      ],
+      "diagnostics": [],
+      "installed": true,
+      "path": "C:\\Users\\SeanS\\.lmstudio\\bin\\lms.EXE",
+      "source": "PATH",
+      "version": "CLI commit: efce996"
+    },
+    {
+      "adapter_id": "lm-studio-http",
+      "capabilities": [],
+      "diagnostics": [
+        "no configured endpoint or declared endpoint environment variable found"
+      ],
+      "installed": false,
+      "path": null,
+      "source": null,
+      "version": null
+    },
+    {
+      "adapter_id": "localai",
+      "capabilities": [],
+      "diagnostics": [
+        "not found in configuration, environment variables, PATH, or known locations"
+      ],
+      "installed": false,
+      "path": null,
+      "source": null,
+      "version": null
+    },
+    {
+      "adapter_id": "msvc",
+      "capabilities": [],
+      "diagnostics": [],
+      "installed": true,
+      "path": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.43.34808\\bin\\Hostx86\\x64\\cl.exe",
+      "source": "visual-studio-discovery",
+      "version": "usage: cl [ option... ] filename... [ /link linkoption... ]"
+    },
+    {
+      "adapter_id": "ninja",
+      "capabilities": [],
+      "diagnostics": [],
+      "installed": true,
+      "path": "C:\\Users\\SeanS\\AppData\\Local\\Microsoft\\WinGet\\Links\\ninja.EXE",
+      "source": "PATH",
+      "version": "1.13.2"
+    },
+    {
+      "adapter_id": "objdiff",
+      "capabilities": [],
+      "diagnostics": [],
+      "installed": true,
+      "path": "C:\\Users\\SeanS\\Downloads\\x86decomp\\release-0711\\x86decomp-toolkit-0.7.11\\.x86decomp-test-tools\\objdiff\\current\\objdiff.exe",
+      "source": "configured-path",
+      "version": "objdiff.exe 3.7.2"
+    },
+    {
+      "adapter_id": "ollama",
+      "capabilities": [],
+      "diagnostics": [
+        "not found in configuration, environment variables, PATH, or known locations"
+      ],
+      "installed": false,
+      "path": null,
+      "source": null,
+      "version": null
+    },
+    {
+      "adapter_id": "pip-audit",
+      "capabilities": [],
+      "diagnostics": [],
+      "installed": true,
+      "path": "C:\\Python313\\python.exe",
+      "source": "python-subprocess",
+      "version": "pip_audit=2.10.1"
+    },
+    {
+      "adapter_id": "pytest",
+      "capabilities": [],
+      "diagnostics": [],
+      "installed": true,
+      "path": "C:\\Python313\\python.exe",
+      "source": "python-subprocess",
+      "version": "pytest=9.1.1"
+    },
+    {
+      "adapter_id": "python",
+      "capabilities": [],
+      "diagnostics": [],
+      "installed": true,
+      "path": "C:\\Users\\SeanS\\AppData\\Local\\Microsoft\\WindowsApps\\python3.EXE",
+      "source": "PATH",
+      "version": "Python 3.13.14"
+    },
+    {
+      "adapter_id": "pyyaml",
+      "capabilities": [],
+      "diagnostics": [],
+      "installed": true,
+      "path": "C:\\Python313\\python.exe",
+      "source": "python-subprocess",
+      "version": "yaml=6.0.3"
+    },
+    {
+      "adapter_id": "unicorn",
+      "capabilities": [],
+      "diagnostics": [],
+      "installed": true,
+      "path": "C:\\Python313\\python.exe",
+      "source": "python-subprocess",
+      "version": "unicorn=2.1.4"
+    },
+    {
+      "adapter_id": "uvicorn",
+      "capabilities": [],
+      "diagnostics": [],
+      "installed": true,
+      "path": "C:\\Python313\\python.exe",
+      "source": "python-subprocess",
+      "version": "uvicorn=0.49.0"
+    },
+    {
+      "adapter_id": "vllm",
+      "capabilities": [],
+      "diagnostics": [
+        "not found in configuration, environment variables, PATH, or known locations"
+      ],
+      "installed": false,
+      "path": null,
+      "source": null,
+      "version": null
+    },
+    {
+      "adapter_id": "z3",
+      "capabilities": [],
+      "diagnostics": [],
+      "installed": true,
+      "path": "C:\\Python313\\python.exe",
+      "source": "python-subprocess",
+      "version": "z3=4.16.0.0"
+    }
+  ],
+  "schema_version": 1
+}

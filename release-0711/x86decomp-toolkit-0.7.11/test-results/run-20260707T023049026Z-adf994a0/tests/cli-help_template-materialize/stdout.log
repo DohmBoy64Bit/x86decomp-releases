@@ -1,0 +1,7 @@
+usage: x86decomp template-materialize [-h] project
+
+positional arguments:
+  project
+
+options:
+  -h, --help  show this help message and exit

@@ -1,0 +1,9 @@
+usage: x86decomp pipeline-run [-h] [--continue-on-failure] project manifest
+
+positional arguments:
+  project
+  manifest
+
+options:
+  -h, --help            show this help message and exit
+  --continue-on-failure

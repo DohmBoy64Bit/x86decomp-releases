@@ -1,0 +1,11 @@
+usage: x86decomp pipeline-recover [-h] [--pipeline-id PIPELINE_ID]
+                                  [--stale-seconds STALE_SECONDS]
+                                  project
+
+positional arguments:
+  project
+
+options:
+  -h, --help            show this help message and exit
+  --pipeline-id PIPELINE_ID
+  --stale-seconds STALE_SECONDS

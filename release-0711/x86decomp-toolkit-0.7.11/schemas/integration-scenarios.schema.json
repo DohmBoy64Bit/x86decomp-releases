@@ -1,0 +1,250 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:x86decomp:schema:integration-scenarios:1",
+  "title": "Integration scenario manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "name",
+    "execution",
+    "scenarios"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "captured_output_limit": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "execution": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "mode"
+      ],
+      "properties": {
+        "mode": {
+          "enum": [
+            "host_explicit",
+            "external_wrapper"
+          ]
+        },
+        "acknowledge_untrusted_code_risk": {
+          "type": "boolean"
+        },
+        "command_prefix": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "mode": {
+                "const": "host_explicit"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "acknowledge_untrusted_code_risk"
+            ],
+            "properties": {
+              "acknowledge_untrusted_code_risk": {
+                "const": true
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "mode": {
+                "const": "external_wrapper"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "command_prefix"
+            ]
+          }
+        }
+      ]
+    },
+    "scenarios": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "target",
+          "candidate",
+          "observations"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "timeout_seconds": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "stdin": {
+            "type": "object",
+            "additionalProperties": false,
+            "oneOf": [
+              {
+                "required": [
+                  "text"
+                ]
+              },
+              {
+                "required": [
+                  "base64"
+                ]
+              },
+              {
+                "required": [
+                  "file"
+                ]
+              }
+            ],
+            "properties": {
+              "text": {
+                "type": "string"
+              },
+              "base64": {
+                "type": "string"
+              },
+              "file": {
+                "type": "string"
+              }
+            }
+          },
+          "fixtures": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "source",
+                "destination"
+              ],
+              "properties": {
+                "source": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "destination": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          },
+          "target": {
+            "$ref": "#/$defs/process"
+          },
+          "candidate": {
+            "$ref": "#/$defs/process"
+          },
+          "observations": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "exit_code": {
+                "type": "boolean"
+              },
+              "stdout": {
+                "enum": [
+                  "ignore",
+                  "exact",
+                  "sha256"
+                ]
+              },
+              "stderr": {
+                "enum": [
+                  "ignore",
+                  "exact",
+                  "sha256"
+                ]
+              },
+              "files": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "path"
+                  ],
+                  "properties": {
+                    "path": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "mode": {
+                      "enum": [
+                        "sha256",
+                        "bytes",
+                        "text"
+                      ]
+                    },
+                    "optional": {
+                      "type": "boolean"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "process": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "artifact",
+        "command"
+      ],
+      "properties": {
+        "artifact": {
+          "type": "string",
+          "minLength": 1
+        },
+        "command": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        },
+        "inherit_environment": {
+          "type": "boolean"
+        },
+        "environment": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

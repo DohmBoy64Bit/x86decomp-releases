@@ -1,0 +1,7 @@
+usage: x86decomp lib-inspect [-h] library
+
+positional arguments:
+  library
+
+options:
+  -h, --help  show this help message and exit

@@ -1,0 +1,8 @@
+usage: x86decomp security-audit [-h] [--report REPORT] root
+
+positional arguments:
+  root
+
+options:
+  -h, --help       show this help message and exit
+  --report REPORT

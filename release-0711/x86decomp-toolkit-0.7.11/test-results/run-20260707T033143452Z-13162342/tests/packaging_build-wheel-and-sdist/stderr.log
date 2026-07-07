@@ -1,0 +1,73 @@
+* Creating isolated environment: venv+pip...
+* Installing packages in isolated environment:
+  - setuptools>=75
+* Getting build dependencies for sdist...
+warning: no files found matching '*.yaml' under directory '.github'
+no previously-included directories found matching 'examples\labs\cache'
+no previously-included directories found matching 'examples\labs\output'
+no previously-included directories found matching 'test-suite\test-results'
+no previously-included directories found matching 'test-suite\.x86decomp-test-tools'
+no previously-included directories found matching 'test-suite\tools'
+no previously-included directories found matching '.pytest_cache'
+no previously-included directories found matching 'build'
+no previously-included directories found matching 'dist'
+no previously-included directories found matching 'test-suite\build'
+warning: no previously-included files matching '__pycache__' found anywhere in distribution
+warning: no previously-included files matching '*.egg-info' found anywhere in distribution
+warning: no previously-included files matching '.pytest_cache' found anywhere in distribution
+warning: no previously-included files matching '.coverage' found anywhere in distribution
+* Building sdist...
+warning: no files found matching '*.yaml' under directory '.github'
+no previously-included directories found matching 'examples\labs\cache'
+no previously-included directories found matching 'examples\labs\output'
+no previously-included directories found matching 'test-suite\test-results'
+no previously-included directories found matching 'test-suite\.x86decomp-test-tools'
+no previously-included directories found matching 'test-suite\tools'
+no previously-included directories found matching '.pytest_cache'
+no previously-included directories found matching 'build'
+no previously-included directories found matching 'dist'
+no previously-included directories found matching 'test-suite\build'
+warning: no previously-included files matching '__pycache__' found anywhere in distribution
+warning: no previously-included files matching '*.egg-info' found anywhere in distribution
+warning: no previously-included files matching '.pytest_cache' found anywhere in distribution
+warning: no previously-included files matching '.coverage' found anywhere in distribution
+* Building wheel from sdist
+* Creating isolated environment: venv+pip...
+* Installing packages in isolated environment:
+  - setuptools>=75
+* Getting build dependencies for wheel...
+warning: no files found matching '*.yaml' under directory '.github'
+no previously-included directories found matching 'examples\labs\cache'
+no previously-included directories found matching 'examples\labs\output'
+no previously-included directories found matching 'test-suite\test-results'
+no previously-included directories found matching 'test-suite\.x86decomp-test-tools'
+no previously-included directories found matching 'test-suite\tools'
+no previously-included directories found matching '.pytest_cache'
+no previously-included directories found matching 'test-suite\.pytest_cache'
+no previously-included directories found matching 'build'
+no previously-included directories found matching 'dist'
+no previously-included directories found matching 'test-suite\build'
+no previously-included directories found matching 'test-suite\dist'
+warning: no previously-included files matching '__pycache__' found anywhere in distribution
+warning: no previously-included files matching '*.py[cod]' found anywhere in distribution
+warning: no previously-included files matching '*.egg-info' found anywhere in distribution
+warning: no previously-included files matching '.pytest_cache' found anywhere in distribution
+warning: no previously-included files matching '.coverage' found anywhere in distribution
+* Building wheel...
+warning: no files found matching '*.yaml' under directory '.github'
+no previously-included directories found matching 'examples\labs\cache'
+no previously-included directories found matching 'examples\labs\output'
+no previously-included directories found matching 'test-suite\test-results'
+no previously-included directories found matching 'test-suite\.x86decomp-test-tools'
+no previously-included directories found matching 'test-suite\tools'
+no previously-included directories found matching '.pytest_cache'
+no previously-included directories found matching 'test-suite\.pytest_cache'
+no previously-included directories found matching 'build'
+no previously-included directories found matching 'dist'
+no previously-included directories found matching 'test-suite\build'
+no previously-included directories found matching 'test-suite\dist'
+warning: no previously-included files matching '__pycache__' found anywhere in distribution
+warning: no previously-included files matching '*.py[cod]' found anywhere in distribution
+warning: no previously-included files matching '*.egg-info' found anywhere in distribution
+warning: no previously-included files matching '.pytest_cache' found anywhere in distribution
+warning: no previously-included files matching '.coverage' found anywhere in distribution

@@ -1,0 +1,23 @@
+{
+  "schema_version": 2,
+  "selected_modes": ["matching", "functional"],
+  "matching_status": "decompiled",
+  "functional_status": "decompiled",
+  "id": "pe-rva:00001000",
+  "entry": "00401000",
+  "entry_rva": 4096,
+  "name": "entry",
+  "qualified_name": "entry",
+  "name_source": "IMPORTED",
+  "calling_convention": "__stdcall",
+  "signature": "undefined4 entry(void)",
+  "return_type": "undefined4",
+  "is_thunk": false,
+  "decompile_completed": true,
+  "decompile_error": "",
+  "artifacts": {"decompiler_c":"decompiler.c","decompiler_tree":"decompiler-tree.jsonl","high_pcode":"high-pcode.jsonl","raw_pcode":"raw-pcode.jsonl","instructions":"instructions.jsonl","references":"references.jsonl"},
+  "body_ranges": [
+    {"start":"00401000","end_inclusive":"00401006","start_rva":4096,"end_rva":4103,"size":7,"file":"ranges/00_00401000_00401006.bin"}
+  ],
+  "parameters": []
+}

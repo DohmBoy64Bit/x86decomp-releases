@@ -1,0 +1,7 @@
+usage: x86decomp sbom-generate [-h] output
+
+positional arguments:
+  output
+
+options:
+  -h, --help  show this help message and exit

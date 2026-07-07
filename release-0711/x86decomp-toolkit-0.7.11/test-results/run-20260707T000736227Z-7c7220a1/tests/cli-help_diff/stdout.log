@@ -1,0 +1,13 @@
+usage: x86decomp diff [-h] [--project PROJECT] [--actor ACTOR] {explain} ...
+
+Canonical diff commands implemented by the current capability subsystem.
+
+positional arguments:
+  {explain}
+    explain          explain command
+
+options:
+  -h, --help         show this help message and exit
+  --project PROJECT  project root used by the capability implementation
+                     (default: current directory)
+  --actor ACTOR

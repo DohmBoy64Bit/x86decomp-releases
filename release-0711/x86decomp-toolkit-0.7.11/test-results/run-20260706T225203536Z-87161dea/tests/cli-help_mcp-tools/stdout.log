@@ -1,0 +1,6 @@
+usage: x86decomp mcp-tools [-h] [--url URL] [--command-json COMMAND_JSON]
+
+options:
+  -h, --help            show this help message and exit
+  --url URL
+  --command-json COMMAND_JSON

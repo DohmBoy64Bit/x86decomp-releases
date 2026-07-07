@@ -1,0 +1,15 @@
+usage: x86decomp script-port [-h] [--project PROJECT] [--actor ACTOR]
+                             {audit} ...
+
+Canonical script-port commands implemented by the current capability
+subsystem.
+
+positional arguments:
+  {audit}
+    audit            audit command
+
+options:
+  -h, --help         show this help message and exit
+  --project PROJECT  project root used by the capability implementation
+                     (default: current directory)
+  --actor ACTOR

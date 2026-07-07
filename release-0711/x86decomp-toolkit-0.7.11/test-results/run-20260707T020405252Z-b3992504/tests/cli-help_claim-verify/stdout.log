@@ -1,0 +1,8 @@
+usage: x86decomp claim-verify [-h] project claim_id
+
+positional arguments:
+  project
+  claim_id
+
+options:
+  -h, --help  show this help message and exit

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:x86decomp:schema:linker-layout:1",
+  "title": "Linker layout reconstruction report",
+  "type": "object",
+  "required": ["schema_version", "kind", "image", "map", "contributions", "unresolved"],
+  "properties": {
+    "schema_version": {"const": 1}, "kind": {"const": "linker_layout_reconstruction"},
+    "image": {"type": "object"}, "map": {"type": "object"},
+    "contributions": {"type": "array", "items": {"type": "object"}},
+    "comdat_resolution": {"type": ["object", "null"]},
+    "unresolved": {"type": "array", "items": {"type": "string"}},
+    "object_order_evidenced": {"type": "boolean"}, "complete_original_layout_claimed": {"type": "boolean"}
+  }, "additionalProperties": true
+}

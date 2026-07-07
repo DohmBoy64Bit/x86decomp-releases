@@ -1,0 +1,14 @@
+usage: x86decomp mod [-h] [--project PROJECT] [--actor ACTOR]
+                     {branch-init} ...
+
+Canonical mod commands implemented by the current capability subsystem.
+
+positional arguments:
+  {branch-init}
+    branch-init      branch-init command
+
+options:
+  -h, --help         show this help message and exit
+  --project PROJECT  project root used by the capability implementation
+                     (default: current directory)
+  --actor ACTOR

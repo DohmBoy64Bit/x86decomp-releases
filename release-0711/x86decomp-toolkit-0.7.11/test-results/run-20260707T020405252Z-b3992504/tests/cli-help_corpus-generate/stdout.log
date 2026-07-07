@@ -1,0 +1,15 @@
+usage: x86decomp corpus-generate [-h] [--cases-per-family CASES_PER_FAMILY]
+                                 [--seed SEED] [--c-only] [--cpp-only]
+                                 [--report REPORT]
+                                 output_directory
+
+positional arguments:
+  output_directory
+
+options:
+  -h, --help            show this help message and exit
+  --cases-per-family CASES_PER_FAMILY
+  --seed SEED
+  --c-only
+  --cpp-only
+  --report REPORT

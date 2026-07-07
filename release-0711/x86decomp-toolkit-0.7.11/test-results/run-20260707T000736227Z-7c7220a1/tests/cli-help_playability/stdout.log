@@ -1,0 +1,15 @@
+usage: x86decomp playability [-h] [--project PROJECT] [--actor ACTOR]
+                             {smoke-plan} ...
+
+Canonical playability commands implemented by the current capability
+subsystem.
+
+positional arguments:
+  {smoke-plan}
+    smoke-plan       smoke-plan command
+
+options:
+  -h, --help         show this help message and exit
+  --project PROJECT  project root used by the capability implementation
+                     (default: current directory)
+  --actor ACTOR

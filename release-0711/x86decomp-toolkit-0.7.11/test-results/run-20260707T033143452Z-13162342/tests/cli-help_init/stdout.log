@@ -1,0 +1,9 @@
+usage: x86decomp init [-h] [--reference-binary] binary project
+
+positional arguments:
+  binary
+  project
+
+options:
+  -h, --help          show this help message and exit
+  --reference-binary

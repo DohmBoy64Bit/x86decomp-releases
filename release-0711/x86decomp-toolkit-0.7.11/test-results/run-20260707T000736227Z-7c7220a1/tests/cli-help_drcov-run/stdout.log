@@ -1,0 +1,14 @@
+usage: x86decomp drcov-run [-h] [--drrun DRRUN] [--program-arg PROGRAM_ARG]
+                           [--timeout TIMEOUT] [--report REPORT]
+                           executable output_directory
+
+positional arguments:
+  executable
+  output_directory
+
+options:
+  -h, --help            show this help message and exit
+  --drrun DRRUN
+  --program-arg PROGRAM_ARG
+  --timeout TIMEOUT
+  --report REPORT

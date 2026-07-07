@@ -1,0 +1,10 @@
+usage: x86decomp abi-check [-h] [--base BASE] [--report REPORT] code contract
+
+positional arguments:
+  code
+  contract
+
+options:
+  -h, --help       show this help message and exit
+  --base BASE
+  --report REPORT

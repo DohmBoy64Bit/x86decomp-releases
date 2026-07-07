@@ -1,0 +1,17 @@
+usage: x86decomp runtime-analysis [-h] [--project PROJECT] [--actor ACTOR]
+                                  {identify,match-library,quarantine} ...
+
+Canonical runtime-analysis commands implemented by the current capability
+subsystem.
+
+positional arguments:
+  {identify,match-library,quarantine}
+    identify            identify command
+    match-library       match-library command
+    quarantine          quarantine command
+
+options:
+  -h, --help            show this help message and exit
+  --project PROJECT     project root used by the capability implementation
+                        (default: current directory)
+  --actor ACTOR

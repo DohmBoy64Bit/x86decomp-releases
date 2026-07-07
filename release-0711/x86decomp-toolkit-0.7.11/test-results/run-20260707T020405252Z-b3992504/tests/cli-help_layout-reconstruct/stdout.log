@@ -1,0 +1,11 @@
+usage: x86decomp layout-reconstruct [-h] [--report REPORT]
+                                    pe map [objects ...]
+
+positional arguments:
+  pe
+  map
+  objects
+
+options:
+  -h, --help       show this help message and exit
+  --report REPORT
