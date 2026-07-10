@@ -1,0 +1,500 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+        <title>test-suite/src/x86decomp_testkit/self_tests/test_inventory_reports_process.py - x86decomp 0.7.11 Docs</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        
+        
+        
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="../../assets/css/darcula-highlight.min.css">
+
+        <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../assets/css/dracula-ui.min.css">
+        <link rel="stylesheet" href="../../assets/css/mkdocs.min.css">
+            <link href="../../assets/x86decomp-dracula-overrides.css" rel="stylesheet">
+
+        
+            <link  rel="icon" type="image/x-icon" href="../../assets/img/favicon.ico">
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+                <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+
+<body class="drac-bg-black-secondary drac-text-grey-ternary drac-text drac-scrollbar-purple">
+
+    <main class="d-flex">
+
+        <!-- block sidebar -->
+            <nav id="sidebar" class="sidebar drac-bg-black">
+    <div class="custom-menu">
+        <button type="button" id="sidebarCollapse" class="btn btn-primary">
+            <i class="fa fa-bars"></i>
+            <span class="sr-only">Menu</span>
+        </button>
+    </div>
+
+    <div class="p-4">
+        
+
+        <div class="drac-text-center">
+            
+                <span class="drac-text drac-line-height drac-text-white">x86decomp 0.7.11 Docs</span>
+            
+        </div>
+
+        <div class="drac-box flex-column">
+            <ul class="dot-ul">
+                <li><div class="dot-li drac-bg-cyan"></div></li>
+                <li><div class="dot-li drac-bg-green"></div></li>
+                <li><div class="dot-li drac-bg-orange"></div></li>
+                <li><div class="dot-li drac-bg-pink"></div></li>
+                <li><div class="dot-li drac-bg-purple"></div></li>
+                <li><div class="dot-li drac-bg-red"></div></li>
+                <li><div class="dot-li drac-bg-yellow"></div></li>
+            </ul>
+        </div>
+
+        <hr class="drac-divider" />
+
+        <!-- block menu -->
+        <ul class="mb-5 drac-list drac-list-none">
+            
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Home
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../../getting-started/"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Getting Started
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#workflows-collapse" aria-expanded="false">
+                    Workflows
+                </a>
+                <div class="collapse" id="workflows-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../workflows/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Workflow Guide
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../local-llm/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Local LLM C Generation
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../decompilation-acceleration/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Decompilation Acceleration
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../project-examples/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Project Examples
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#reference-collapse" aria-expanded="false">
+                    Reference
+                </a>
+                <div class="collapse" id="reference-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../reference/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../architecture/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Architecture
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../commands/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Commands
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../release-artifacts/COMMAND_REFERENCE_0.7.11/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Command Reference 0.7.11
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../schemas/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Schemas
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../integrations/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Integrations
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../features/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Source Modules
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../functions/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Function Index
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Tests
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../release-artifacts/DOCSTRING_AUDIT_0.7.11/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Docstring Audit
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#release-evidence-collapse" aria-expanded="false">
+                    Release Evidence
+                </a>
+                <div class="collapse" id="release-evidence-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../release-evidence/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../release-artifacts/SECOND_AUDIT_FIX_REPORT_0.7.11/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Second Audit Fix Report
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../release-artifacts/DOCSTRING_AUDIT_0.7.11/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Docstring Audit
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../release-artifacts/COMMAND_REFERENCE_0.7.11/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Command Reference 0.7.11
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../verification/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Verification
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../source-coverage/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Source Coverage
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../changelog/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Changelog
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../about/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            About
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <!-- endblock -->
+    </div>
+</nav>
+        <!-- endblock -->
+
+        <nav class="divider drac-bg-purple-cyan"></nav>
+
+        <div class="content">
+            <!-- block header -->
+                <header>
+    <nav class="navbar navbar-expand-xl drac-bg-purple">
+        <div class="container-fluid">
+            
+            <button class="navbar-toggler w-100 text-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMenu"
+                aria-controls="navbarsMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse flex-column ml-auto" id="navbarsMenu">
+                <ul class="navbar-nav text-md-center">
+
+                    <!-- block preview -->
+                    <li class="nav-item">
+                            
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block search -->
+                    <li class="nav-item"><div role="search" class="search-box">
+	<form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+		<input type="text" name="q" class="drac-input drac-input-search drac-input-white drac-text-white drac-bg-black-secondary"
+		placeholder="Search docs" title="Type search term here" />
+	</form>
+</div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block source -->
+                    <li class="nav-item">
+                        
+                    </li>
+                    <!--  endblock -->
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+</header>
+            <!-- endblock -->
+
+            <!-- block content -->
+                <section class="p-md-5 section-content">
+    <article>
+        <p><h1 id="test-suitesrcx86decomp_testkitself_teststest_inventory_reports_processpy"><code>test-suite/src/x86decomp_testkit/self_tests/test_inventory_reports_process.py</code></h1>
+<ul>
+<li>SHA-256: <code>382524e4b814f813ea18b7ba1012522f9176997e4be92d3e59c59c0911784a11</code></li>
+<li>Size: <code>6099</code> bytes</li>
+<li>Test functions: <code>4</code></li>
+</ul>
+<pre><code class="language-python">&quot;&quot;&quot;Provide the installed test-suite implementation for the `x86decomp_testkit.self_tests.test_inventory_reports_process` module.&quot;&quot;&quot;
+from __future__ import annotations
+
+import json
+from pathlib import Path
+
+from x86decomp_testkit.coverage_audit import audit_public_symbol_execution
+from x86decomp_testkit.inventory import audit_catalog, build_inventory
+from x86decomp_testkit.junit import parse_junit
+from x86decomp_testkit.logging_utils import configure_logging
+from x86decomp_testkit.models import ProbeResult, RunSummary, Status
+from x86decomp_testkit.process import blocked_result, run_process_test
+from x86decomp_testkit.reports import write_adapter_report, write_html_report, write_json_report, write_markdown_report
+
+
+def _mini_toolkit(root: Path) -&gt; Path:
+    &quot;&quot;&quot;Support mini toolkit processing for internal toolkit callers.&quot;&quot;&quot;
+    package = root / &quot;src&quot; / &quot;x86decomp&quot;
+    package.mkdir(parents=True)
+    (package / &quot;__init__.py&quot;).write_text(&quot;&quot;)
+    (package / &quot;demo.py&quot;).write_text(&quot;def public():\n    return 1\n&quot;)
+    (package / &quot;__main__.py&quot;).write_text(
+        &quot;import argparse\np=argparse.ArgumentParser()\ns=p.add_subparsers(dest='cmd')\ns.add_parser('one')\ns.add_parser('two')\np.parse_args()\n&quot;
+    )
+    (root / &quot;schemas&quot;).mkdir()
+    (root / &quot;schemas&quot; / &quot;a.schema.json&quot;).write_text('{&quot;$schema&quot;:&quot;https://json-schema.org/draft/2020-12/schema&quot;,&quot;type&quot;:&quot;object&quot;}')
+    (root / &quot;ghidra_scripts&quot;).mkdir()
+    (root / &quot;ghidra_scripts&quot; / &quot;A.java&quot;).write_text(&quot;class A {}&quot;)
+    return root
+
+
+def test_inventory_catalog_and_public_coverage(tmp_path: Path) -&gt; None:
+    &quot;&quot;&quot;Verify inventory catalog and public coverage behavior.&quot;&quot;&quot;
+    root = _mini_toolkit(tmp_path / &quot;toolkit&quot;)
+    inventory = build_inventory(root)
+    assert inventory[&quot;cli_commands&quot;] == [&quot;one&quot;, &quot;two&quot;]
+    catalog = {
+        &quot;cli_commands&quot;: {&quot;one&quot;: {}, &quot;two&quot;: {}},
+        &quot;modules&quot;: {name: {} for name in inventory[&quot;modules&quot;]},
+        &quot;schemas&quot;: inventory[&quot;schemas&quot;],
+        &quot;ghidra_scripts&quot;: inventory[&quot;ghidra_scripts&quot;],
+        &quot;all_function_symbols&quot;: [item[&quot;id&quot;] for item in inventory[&quot;all_function_symbols&quot;]],
+    }
+    assert audit_catalog(inventory, catalog)[&quot;passed&quot;]
+    coverage = tmp_path / &quot;coverage.json&quot;
+    coverage.write_text(json.dumps({
+        &quot;files&quot;: {str(root / &quot;src/x86decomp/demo.py&quot;): {&quot;executed_lines&quot;: [1, 2]}},
+        &quot;totals&quot;: {&quot;percent_statements_covered&quot;: 100, &quot;num_branches&quot;: 0, &quot;covered_branches&quot;: 0},
+    }))
+    audit = audit_public_symbol_execution(root, coverage)
+    assert audit[&quot;passed&quot;]
+
+
+def test_junit_process_logging_and_reports(tmp_path: Path) -&gt; None:
+    &quot;&quot;&quot;Verify junit process logging and reports behavior.&quot;&quot;&quot;
+    junit = tmp_path / &quot;junit.xml&quot;
+    junit.write_text('&lt;testsuite tests=&quot;2&quot; failures=&quot;1&quot; errors=&quot;0&quot; skipped=&quot;1&quot;&gt;&lt;testcase classname=&quot;a&quot; name=&quot;ok&quot;/&gt;&lt;testcase classname=&quot;a&quot; name=&quot;bad&quot;&gt;&lt;failure/&gt;&lt;/testcase&gt;&lt;testcase classname=&quot;a&quot; name=&quot;skip&quot;&gt;&lt;skipped/&gt;&lt;/testcase&gt;&lt;/testsuite&gt;')
+    parsed = parse_junit(junit)
+    assert parsed[&quot;failures&quot;] == 1 and parsed[&quot;skipped&quot;] == 1
+
+    logger, events = configure_logging(tmp_path / &quot;logs&quot;, verbose=True)
+    logger.info(&quot;hello&quot;)
+    events.emit(&quot;custom&quot;, value=1)
+    result = run_process_test(
+        test_id=&quot;process:ok&quot;, suite=&quot;self&quot;, command=[&quot;python&quot;, &quot;-c&quot;, &quot;print('ok')&quot;],
+        cwd=tmp_path, output_directory=tmp_path / &quot;run&quot;, timeout=10, event_logger=events,
+    )
+    assert result.status == Status.PASS
+    assert blocked_result(&quot;b&quot;, &quot;self&quot;, [&quot;tool&quot;]).status == Status.BLOCKED
+
+    summary = RunSummary(
+        run_id=&quot;run&quot;, toolkit_root=str(tmp_path), output_directory=str(tmp_path / &quot;run&quot;), strict=False,
+        started_at=&quot;a&quot;, finished_at=&quot;b&quot;, adapter_results=[ProbeResult(&quot;tool&quot;, False)],
+        capability_results=[],
+        test_results=[result, blocked_result(&quot;b&quot;, &quot;self&quot;, [&quot;tool&quot;])], inventory={}, configuration={},
+    )
+    write_json_report(summary, tmp_path / &quot;report.json&quot;)
+    write_markdown_report(summary, tmp_path / &quot;report.md&quot;)
+    write_html_report(summary, tmp_path / &quot;report.html&quot;)
+    write_adapter_report(summary.adapter_results, tmp_path / &quot;adapters.json&quot;)
+    for name in (&quot;report.json&quot;, &quot;report.md&quot;, &quot;report.html&quot;, &quot;adapters.json&quot;):
+        assert (tmp_path / name).is_file()
+
+def test_suite_schemas_and_catalog_are_valid() -&gt; None:
+    &quot;&quot;&quot;Verify suite schemas and catalog are valid behavior.&quot;&quot;&quot;
+    from importlib.resources import files
+    from jsonschema.validators import validator_for
+    import x86decomp_testkit
+
+    suite_root = Path(x86decomp_testkit.__file__).resolve().parents[2]
+    schema_dir = suite_root / &quot;schemas&quot;
+    if schema_dir.is_dir():
+        for path in schema_dir.glob(&quot;*.schema.json&quot;):
+            schema = json.loads(path.read_text())
+            validator_for(schema).check_schema(schema)
+    catalog_path = Path(str(files(&quot;x86decomp_testkit&quot;).joinpath(&quot;data/feature_catalog.json&quot;)))
+    catalog = json.loads(catalog_path.read_text())
+    assert catalog[&quot;toolkit_version&quot;] == &quot;0.7.11&quot;
+    assert catalog[&quot;entry_points&quot;] == {&quot;toolkit&quot;: &quot;x86decomp&quot;, &quot;test_suite&quot;: &quot;x86decomp-test&quot;}
+    assert &quot;compatibility_baseline&quot; not in catalog
+
+
+def test_recursive_inventory_includes_capability_packages_and_nested_schemas(tmp_path: Path) -&gt; None:
+    &quot;&quot;&quot;Verify recursive inventory includes capability packages and nested schemas behavior.&quot;&quot;&quot;
+    root = _mini_toolkit(tmp_path / &quot;toolkit&quot;)
+    package = root / &quot;src/x86decomp/capability&quot;
+    package.mkdir()
+    (package / &quot;__init__.py&quot;).write_text(&quot;&quot;, encoding=&quot;utf-8&quot;)
+    (package / &quot;api.py&quot;).write_text(&quot;class API:\n    def run(self):\n        return 1\n&quot;, encoding=&quot;utf-8&quot;)
+    nested = root / &quot;schemas/capability&quot;
+    nested.mkdir()
+    (nested / &quot;item.schema.json&quot;).write_text('{&quot;$schema&quot;:&quot;https://json-schema.org/draft/2020-12/schema&quot;,&quot;type&quot;:&quot;object&quot;}', encoding=&quot;utf-8&quot;)
+    inventory = build_inventory(root)
+    assert &quot;x86decomp.capability&quot; in inventory[&quot;modules&quot;]
+    assert &quot;x86decomp.capability.api&quot; in inventory[&quot;modules&quot;]
+    assert &quot;x86decomp.capability.api:API.run&quot; in {item[&quot;id&quot;] for item in inventory[&quot;all_function_symbols&quot;]}
+    assert &quot;capability/item.schema.json&quot; in inventory[&quot;schemas&quot;]
+</code></pre></p>
+    </article>
+</section>
+            <!-- endblock -->
+
+            <!-- block footer -->
+                <footer>
+    <div class="d-flex flex-sm-row justify-content-between py-2 border-top drac-text-black drac-bg-cyan-green">
+        <a href="https://github.com/dracula/mkdocs" target="_blank" style="padding-left: 1%;"
+            class="footer-text drac-anchor drac-text-black drac-text-purple--hover">
+            Made with Dracula Theme for MkDocs
+        </a>
+    </div>
+</footer>
+            <!-- endblock -->
+        </div>
+
+    </main>
+
+        <script>var base_url = '../..';</script>
+        <script src="../../assets/js/jquery-3.3.1.slim.min.js"></script>
+        <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+        <script src="../../assets/js/mkdocs.js"></script>
+			<script src="../../search/main.js" defer></script>
+
+</body>
+
+</html>

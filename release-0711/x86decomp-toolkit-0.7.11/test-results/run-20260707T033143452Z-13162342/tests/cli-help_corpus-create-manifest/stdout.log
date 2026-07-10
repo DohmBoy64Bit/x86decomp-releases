@@ -1,8 +1,0 @@
-usage: x86decomp corpus-create-manifest [-h] repository output
-
-positional arguments:
-  repository
-  output
-
-options:
-  -h, --help  show this help message and exit

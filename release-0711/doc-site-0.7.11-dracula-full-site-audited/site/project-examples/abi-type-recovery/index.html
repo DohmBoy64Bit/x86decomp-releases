@@ -1,0 +1,514 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+        <title>Example: ABI and type-recovery project - x86decomp 0.7.11 Docs</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        
+        
+        
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="../../assets/css/darcula-highlight.min.css">
+
+        <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../assets/css/dracula-ui.min.css">
+        <link rel="stylesheet" href="../../assets/css/mkdocs.min.css">
+            <link href="../../assets/x86decomp-dracula-overrides.css" rel="stylesheet">
+
+        
+            <link  rel="icon" type="image/x-icon" href="../../assets/img/favicon.ico">
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+                <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+
+<body class="drac-bg-black-secondary drac-text-grey-ternary drac-text drac-scrollbar-purple">
+
+    <main class="d-flex">
+
+        <!-- block sidebar -->
+            <nav id="sidebar" class="sidebar drac-bg-black">
+    <div class="custom-menu">
+        <button type="button" id="sidebarCollapse" class="btn btn-primary">
+            <i class="fa fa-bars"></i>
+            <span class="sr-only">Menu</span>
+        </button>
+    </div>
+
+    <div class="p-4">
+        
+
+        <div class="drac-text-center">
+            
+                <span class="drac-text drac-line-height drac-text-white">x86decomp 0.7.11 Docs</span>
+            
+        </div>
+
+        <div class="drac-box flex-column">
+            <ul class="dot-ul">
+                <li><div class="dot-li drac-bg-cyan"></div></li>
+                <li><div class="dot-li drac-bg-green"></div></li>
+                <li><div class="dot-li drac-bg-orange"></div></li>
+                <li><div class="dot-li drac-bg-pink"></div></li>
+                <li><div class="dot-li drac-bg-purple"></div></li>
+                <li><div class="dot-li drac-bg-red"></div></li>
+                <li><div class="dot-li drac-bg-yellow"></div></li>
+            </ul>
+        </div>
+
+        <hr class="drac-divider" />
+
+        <!-- block menu -->
+        <ul class="mb-5 drac-list drac-list-none">
+            
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Home
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../../getting-started/"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Getting Started
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#workflows-collapse" aria-expanded="false">
+                    Workflows
+                </a>
+                <div class="collapse" id="workflows-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../workflows/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Workflow Guide
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../local-llm/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Local LLM C Generation
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../decompilation-acceleration/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Decompilation Acceleration
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Project Examples
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#reference-collapse" aria-expanded="false">
+                    Reference
+                </a>
+                <div class="collapse" id="reference-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../reference/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../architecture/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Architecture
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../commands/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Commands
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../release-artifacts/COMMAND_REFERENCE_0.7.11/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Command Reference 0.7.11
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../schemas/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Schemas
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../integrations/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Integrations
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../features/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Source Modules
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../functions/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Function Index
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../tests/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Tests
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../release-artifacts/DOCSTRING_AUDIT_0.7.11/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Docstring Audit
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#release-evidence-collapse" aria-expanded="false">
+                    Release Evidence
+                </a>
+                <div class="collapse" id="release-evidence-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../release-evidence/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../release-artifacts/SECOND_AUDIT_FIX_REPORT_0.7.11/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Second Audit Fix Report
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../release-artifacts/DOCSTRING_AUDIT_0.7.11/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Docstring Audit
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../release-artifacts/COMMAND_REFERENCE_0.7.11/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Command Reference 0.7.11
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../verification/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Verification
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../source-coverage/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Source Coverage
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../changelog/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Changelog
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../about/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            About
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <!-- endblock -->
+    </div>
+</nav>
+        <!-- endblock -->
+
+        <nav class="divider drac-bg-purple-cyan"></nav>
+
+        <div class="content">
+            <!-- block header -->
+                <header>
+    <nav class="navbar navbar-expand-xl drac-bg-purple">
+        <div class="container-fluid">
+            
+            <button class="navbar-toggler w-100 text-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMenu"
+                aria-controls="navbarsMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse flex-column ml-auto" id="navbarsMenu">
+                <ul class="navbar-nav text-md-center">
+
+                    <!-- block preview -->
+                    <li class="nav-item">
+                            
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block search -->
+                    <li class="nav-item"><div role="search" class="search-box">
+	<form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+		<input type="text" name="q" class="drac-input drac-input-search drac-input-white drac-text-white drac-bg-black-secondary"
+		placeholder="Search docs" title="Type search term here" />
+	</form>
+</div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block source -->
+                    <li class="nav-item">
+                        
+                    </li>
+                    <!--  endblock -->
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+</header>
+            <!-- endblock -->
+
+            <!-- block content -->
+                <section class="p-md-5 section-content">
+    <article>
+        <p><p><a id="model"></a>
+<a id="abi-type-recovery-flow-title"></a>
+<a id="abi-type-recovery-flow-desc"></a>
+<a id="arrow-abi-type-recovery"></a>
+<a id="abi-type-recovery-flow-caption"></a>
+<a id="observe"></a>
+<a id="abi"></a>
+<a id="cpp"></a>
+<a id="constraints"></a>
+<a id="conflicts"></a>
+<a id="harness"></a>
+<a id="limits"></a>
+<a id="source-basis"></a></p>
+<p>Section: Project examples</p>
+<h1 id="example-abi-and-type-recovery-project">Example: ABI and type-recovery project</h1>
+<p>Recover calling-convention and C++ relationship candidates, store provenance-bearing constraints, reject conflicts, and generate bounded harnesses before implementation work proceeds.</p>
+<blockquote>
+<p><strong>Example notation.</strong> Paths and function identifiers are representative local names. Commands and options are exact v0.7.11 parser forms; target-specific hashes, addresses, profiles, reports, and passing outcomes must come from the actual project.</p>
+<p><strong>Classification.</strong> This is a supporting recovery workflow. It establishes interface constraints for matching and functional candidates; it is not original-header recovery.</p>
+</blockquote>
+<p><strong>On this page</strong></p>
+<ol>
+<li><a href="#model">Constraint model</a></li>
+<li><a href="#observe">Collect observations</a></li>
+<li><a href="#abi">Write and check ABI</a></li>
+<li><a href="#cpp">Recover C++ metadata</a></li>
+<li><a href="#constraints">Store constraints</a></li>
+<li><a href="#conflicts">Resolve conflicts</a></li>
+<li><a href="#harness">Generate harness</a></li>
+<li><a href="#limits">Truth boundary</a></li>
+<li><a href="#source-basis">Source basis</a></li>
+</ol>
+<h2 id="constraint-model">Constraint model</h2>
+<p>No inferred type becomes accepted merely because one analysis tool proposed it.Call sites → Instruction evidence → ABI contract → C++ metadata → Type constraints → Conflict gate → Harness</p>
+<p>Call sitesInstruction evidenceABI contractC++ metadataType constraintsConflict gateHarness</p>
+<p>No inferred type becomes accepted merely because one analysis tool proposed it.</p>
+<pre><code class="language-ascii-fallback">Call sites → Instruction evidence → ABI contract → C++ metadata → Type constraints → Conflict gate → Harness
+</code></pre>
+<p>1</p>
+<h2 id="collect-independent-call-and-metadata-observations">Collect independent call and metadata observations</h2>
+<pre><code>x86decomp metadata-scan target.exe --object original/foo.obj --map target.map --report reports/metadata.json
+x86decomp disassemble target/sub_00401230.bin --base 0x401230 --architecture x86 --report reports/disassembly/sub_00401230.json
+x86decomp crosscheck-ghidra project/functions/pe-rva_00401230/instructions.jsonl target/sub_00401230.bin --base 0x401230 --architecture x86 --report reports/crosscheck/sub_00401230.json
+</code></pre>
+<p>Look for stack cleanup, register use, return behavior, this-pointer patterns, structure-return conventions, vtable references, RTTI, unwind data, and static initializer evidence. Record disagreements rather than averaging them away.</p>
+<p>2</p>
+<h2 id="write-an-explicit-abi-contract-and-check-bytes">Write an explicit ABI contract and check bytes</h2>
+<p>The bundled stdcall example is a complete contract for two 32-bit integer stack arguments:</p>
+<pre><code>{
+  &quot;architecture&quot;: &quot;x86&quot;,
+  &quot;convention&quot;: &quot;stdcall&quot;,
+  &quot;stack_argument_bytes&quot;: 8,
+  &quot;callee_stack_cleanup&quot;: 8,
+  &quot;variadic&quot;: false,
+  &quot;this_register&quot;: null,
+  &quot;register_arguments&quot;: [],
+  &quot;return_registers&quot;: [&quot;eax&quot;],
+  &quot;structure_return&quot;: false,
+  &quot;floating_point&quot;: &quot;none&quot;
+}
+</code></pre>
+<pre><code>x86decomp abi-check target/sub_00401230.bin examples/abi/stdcall-two-ints.json --base 0x401230 --report reports/abi/target.json
+x86decomp abi-check build/sub_00401230.bin examples/abi/stdcall-two-ints.json --base 0 --report reports/abi/candidate.json
+</code></pre>
+<p>Passing means the implemented checks are consistent with the declared contract. It is not a complete proof of every ABI property or all caller/callee interactions.</p>
+<p>3</p>
+<h2 id="recover-bounded-c-relationships">Recover bounded C++ relationships</h2>
+<pre><code>x86decomp cpp-recover target.exe --metadata-report reports/metadata.json --object original/foo.obj --map target.map --report reports/cpp-recovery.json
+</code></pre>
+<p>The recovery model can report bounded RTTI, vtables, base relationships, adjustor-thunk candidates, and static initializer order when evidence exists. It explicitly does not recover original class declarations, source names, access modifiers, or templates.</p>
+<p>4</p>
+<h2 id="store-provenance-bearing-type-constraints">Store provenance-bearing type constraints</h2>
+<pre><code>x86decomp db-constraint-add project/analysis.sqlite pe-rva:00401230 calling_convention stdcall disassembly-crosscheck --evidence-id ev-callsite-1 --confidence 0.85
+x86decomp db-constraint-add project/analysis.sqlite pe-rva:00401230 return_register eax abi-report --evidence-id ev-abi-1 --confidence 0.95
+x86decomp db-constraint-conflicts project/analysis.sqlite pe-rva:00401230 calling_convention
+</code></pre>
+<p>Every constraint carries its provenance and optional confidence. Confidence is metadata, not automatic acceptance.</p>
+<p>5</p>
+<h2 id="resolve-contradictions-before-acceptance">Resolve contradictions before acceptance</h2>
+<pre><code>x86decomp db-query project/analysis.sqlite &quot;SELECT id, subject_entity, relation, object_value, provenance, status FROM type_constraints WHERE subject_entity = ?&quot; --parameters-json '[&quot;pe-rva:00401230&quot;]' 
+x86decomp db-constraint-accept project/analysis.sqlite 42
+</code></pre>
+<p>The analysis database refuses acceptance while contradictory constraints remain. Resolve the evidence first, then accept the surviving constraint ID.</p>
+<p>6</p>
+<h2 id="generate-a-deterministic-bounded-harness">Generate a deterministic bounded harness</h2>
+<pre><code>x86decomp harness-generate contracts/sub_00401230-abi.json harnesses/sub_00401230.json --pointer-parameters contracts/sub_00401230-pointers.json --max-instructions 100000 --timeout-ms 1000
+</code></pre>
+<p>The generator creates deterministic test inputs from the ABI and declared pointer regions. These are test inputs, not recovered original runtime inputs. External calls still require explicit stubs, and pointer observations are included only when declared.</p>
+<h2 id="truth-boundary">Truth boundary</h2>
+<ul>
+<li>ABI checks are bounded to implemented observations and the supplied contract.</li>
+<li>Recovered C++ structures are candidates derived from metadata, not original declarations.</li>
+<li>Constraint confidence does not replace corroborating evidence.</li>
+<li>Generated harnesses do not model an entire application or operating system.</li>
+</ul>
+<h2 id="v0711-source-basis">v0.7.11 source basis</h2>
+<blockquote>
+<p><strong>Verification model.</strong> Command syntax is checked against the live parser. The source files below are hashed from the current release; implementation and test rows are retained as independent truth boundaries.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Evidence file</th>
+<th>SHA-256</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>src/x86decomp/cli.py</code></td>
+<td><code>21e0654ced2f5dd0588adcbedec328613fba524ff1e0a91ef07d63cbbf88288c</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/abi.py</code></td>
+<td><code>e69b8d4ba247b2e3dbd3553cd207ee8fbe24fe244878c4dabb4afffbebb33903</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/cpp_recovery.py</code></td>
+<td><code>c1f07b15f8649be4235cb56bb2e8f953ed31211b98311633d6beccde38dce8fa</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/harness_generator.py</code></td>
+<td><code>75ab6f14bcef35574409e280dad90a705f71bc5763d507258f705ad8f4c431f2</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/analysis_db.py</code></td>
+<td><code>409e503d6c264dba48a00e1d1afc475ce735cf25f1ec4aab7ac41b07ed5b9bad</code></td>
+</tr>
+<tr>
+<td><code>tests/test_abi_disassembly.py</code></td>
+<td><code>7707cba729a70b66986595aea747f5c1e782023e2b58134d2786680b52840a64</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="related-examples">Related examples</h2>
+<p>[Matching project</p>
+<p>Open the source-verified workflow.](matching-project.md)[Functional project</p>
+<p>Open the source-verified workflow.](functional-project.md)[Hybrid composition</p>
+<p>Open the source-verified workflow.](hybrid-project.md)</p></p>
+    </article>
+</section>
+            <!-- endblock -->
+
+            <!-- block footer -->
+                <footer>
+    <div class="d-flex flex-sm-row justify-content-between py-2 border-top drac-text-black drac-bg-cyan-green">
+        <a href="https://github.com/dracula/mkdocs" target="_blank" style="padding-left: 1%;"
+            class="footer-text drac-anchor drac-text-black drac-text-purple--hover">
+            Made with Dracula Theme for MkDocs
+        </a>
+    </div>
+</footer>
+            <!-- endblock -->
+        </div>
+
+    </main>
+
+        <script>var base_url = '../..';</script>
+        <script src="../../assets/js/jquery-3.3.1.slim.min.js"></script>
+        <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+        <script src="../../assets/js/mkdocs.js"></script>
+			<script src="../../search/main.js" defer></script>
+
+</body>
+
+</html>

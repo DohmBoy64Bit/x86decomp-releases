@@ -1,0 +1,1444 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+        <title>Source Modules - x86decomp 0.7.11 Docs</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        
+        
+        
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="../assets/css/darcula-highlight.min.css">
+
+        <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../assets/css/dracula-ui.min.css">
+        <link rel="stylesheet" href="../assets/css/mkdocs.min.css">
+            <link href="../assets/x86decomp-dracula-overrides.css" rel="stylesheet">
+
+        
+            <link  rel="icon" type="image/x-icon" href="../assets/img/favicon.ico">
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+                <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+
+<body class="drac-bg-black-secondary drac-text-grey-ternary drac-text drac-scrollbar-purple">
+
+    <main class="d-flex">
+
+        <!-- block sidebar -->
+            <nav id="sidebar" class="sidebar drac-bg-black">
+    <div class="custom-menu">
+        <button type="button" id="sidebarCollapse" class="btn btn-primary">
+            <i class="fa fa-bars"></i>
+            <span class="sr-only">Menu</span>
+        </button>
+    </div>
+
+    <div class="p-4">
+        
+
+        <div class="drac-text-center">
+            
+                <span class="drac-text drac-line-height drac-text-white">x86decomp 0.7.11 Docs</span>
+            
+        </div>
+
+        <div class="drac-box flex-column">
+            <ul class="dot-ul">
+                <li><div class="dot-li drac-bg-cyan"></div></li>
+                <li><div class="dot-li drac-bg-green"></div></li>
+                <li><div class="dot-li drac-bg-orange"></div></li>
+                <li><div class="dot-li drac-bg-pink"></div></li>
+                <li><div class="dot-li drac-bg-purple"></div></li>
+                <li><div class="dot-li drac-bg-red"></div></li>
+                <li><div class="dot-li drac-bg-yellow"></div></li>
+            </ul>
+        </div>
+
+        <hr class="drac-divider" />
+
+        <!-- block menu -->
+        <ul class="mb-5 drac-list drac-list-none">
+            
+            <li class="drac-box">
+                <a href=".."
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Home
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../getting-started/"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Getting Started
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href=".."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#workflows-collapse" aria-expanded="false">
+                    Workflows
+                </a>
+                <div class="collapse" id="workflows-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../workflows/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Workflow Guide
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../local-llm/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Local LLM C Generation
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../decompilation-acceleration/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Decompilation Acceleration
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../project-examples/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Project Examples
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href=".."
+                    class=" active 
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#reference-collapse" aria-expanded="false">
+                    Reference
+                </a>
+                <div class="collapse" id="reference-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../reference/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../architecture/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Architecture
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../commands/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Commands
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../release-artifacts/COMMAND_REFERENCE_0.7.11/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Command Reference 0.7.11
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../schemas/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Schemas
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../integrations/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Integrations
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="./"
+            class=" active 
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Source Modules
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../functions/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Function Index
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../tests/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Tests
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../release-artifacts/DOCSTRING_AUDIT_0.7.11/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Docstring Audit
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href=".."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#release-evidence-collapse" aria-expanded="false">
+                    Release Evidence
+                </a>
+                <div class="collapse" id="release-evidence-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../release-evidence/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../release-artifacts/SECOND_AUDIT_FIX_REPORT_0.7.11/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Second Audit Fix Report
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../release-artifacts/DOCSTRING_AUDIT_0.7.11/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Docstring Audit
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../release-artifacts/COMMAND_REFERENCE_0.7.11/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Command Reference 0.7.11
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../verification/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Verification
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../source-coverage/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Source Coverage
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../changelog/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Changelog
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../about/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            About
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <!-- endblock -->
+    </div>
+</nav>
+        <!-- endblock -->
+
+        <nav class="divider drac-bg-purple-cyan"></nav>
+
+        <div class="content">
+            <!-- block header -->
+                <header>
+    <nav class="navbar navbar-expand-xl drac-bg-purple">
+        <div class="container-fluid">
+            
+            <button class="navbar-toggler w-100 text-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMenu"
+                aria-controls="navbarsMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse flex-column ml-auto" id="navbarsMenu">
+                <ul class="navbar-nav text-md-center">
+
+                    <!-- block preview -->
+                    <li class="nav-item">
+                            
+        <div class="container">
+            <div class="row row-preview">
+                <div class="col">
+                    <a href="../integrations/"
+                        class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover">
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="../functions/"
+                        class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover" style="padding-left: 3%;">
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block search -->
+                    <li class="nav-item"><div role="search" class="search-box">
+	<form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+		<input type="text" name="q" class="drac-input drac-input-search drac-input-white drac-text-white drac-bg-black-secondary"
+		placeholder="Search docs" title="Type search term here" />
+	</form>
+</div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block source -->
+                    <li class="nav-item">
+                        
+                    </li>
+                    <!--  endblock -->
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+</header>
+            <!-- endblock -->
+
+            <!-- block content -->
+                <section class="p-md-5 section-content">
+    <article>
+        <p><h1 id="source-modules">Source Modules</h1>
+<p>Regenerated from Python AST and file hashes in the 0.7.11 bundle.</p>
+<p>Module count: <strong>148</strong></p>
+<table>
+<thead>
+<tr>
+<th>Module</th>
+<th>Area</th>
+<th>Source</th>
+<th>SHA-256</th>
+<th>Symbols</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="x86decomp---init--/">x86decomp.<strong>init</strong></a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/__init__.py</code></td>
+<td><code>08fb24b72cf16b71245c88f08254d76da25b0b9581ec070a23ca043ff2372f99</code></td>
+<td>0</td>
+</tr>
+<tr>
+<td><a href="x86decomp---main--/">x86decomp.<strong>main</strong></a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/__main__.py</code></td>
+<td><code>cd307c2c0d8d783cc42355eb7a64ec5a09987b0c0d63e873ae7adc0c67af2b04</code></td>
+<td>0</td>
+</tr>
+<tr>
+<td><a href="x86decomp-abi/">x86decomp.abi</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/abi.py</code></td>
+<td><code>262520e2ad900c65f75520d0965926f2b9229456520c82900f0d6a50791d9f4b</code></td>
+<td>8</td>
+</tr>
+<tr>
+<td><a href="x86decomp-analysis-db/">x86decomp.analysis_db</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/analysis_db.py</code></td>
+<td><code>583910cb27d192fa35e39b0e4165ffa71ac5a1fd77de1b78843245e525e414fe</code></td>
+<td>12</td>
+</tr>
+<tr>
+<td><a href="x86decomp-angr-backend/">x86decomp.angr_backend</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/angr_backend.py</code></td>
+<td><code>65a806874de433e75550e45759ce6ace0bf9fdcfdcf27fb179c3b90f73f9d0be</code></td>
+<td>11</td>
+</tr>
+<tr>
+<td><a href="x86decomp-artifacts/">x86decomp.artifacts</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/artifacts.py</code></td>
+<td><code>ba1e61fc66c5daf8dd5ec50ded74de9831967a54f533c398b1fbed2abd7f8727</code></td>
+<td>4</td>
+</tr>
+<tr>
+<td><a href="x86decomp-assembly---init--/">x86decomp.assembly.<strong>init</strong></a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/assembly/__init__.py</code></td>
+<td><code>60dcbf406ebd10f56f155b70ea0657b0d40a2405ef65cf3caa32979fd90ca254</code></td>
+<td>0</td>
+</tr>
+<tr>
+<td><a href="x86decomp-assembly-annotation/">x86decomp.assembly.annotation</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/assembly/annotation.py</code></td>
+<td><code>b124d036b79e6ffa168f1e500717af68c615534f8bb789892f2818c5787bb1cd</code></td>
+<td>7</td>
+</tr>
+<tr>
+<td><a href="x86decomp-assembly-cli/">x86decomp.assembly.cli</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/assembly/cli.py</code></td>
+<td><code>819bc8a11f0cdce8301add84c746d290057aaa1748cc4628901558073294a788</code></td>
+<td>7</td>
+</tr>
+<tr>
+<td><a href="x86decomp-assembly-materialize/">x86decomp.assembly.materialize</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/assembly/materialize.py</code></td>
+<td><code>fc6ebc3aff941f6664c7e3b83b874401a86a1a1fc9608a587486046607b686a1</code></td>
+<td>16</td>
+</tr>
+<tr>
+<td><a href="x86decomp-assembly-pipeline/">x86decomp.assembly.pipeline</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/assembly/pipeline.py</code></td>
+<td><code>f9c39a196061a060c62f27790683038c4ab4bf02828656f0bb34f6a4c3274e56</code></td>
+<td>9</td>
+</tr>
+<tr>
+<td><a href="x86decomp-assembly-relocations/">x86decomp.assembly.relocations</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/assembly/relocations.py</code></td>
+<td><code>bc19a023e373f5a64a2a2ffdcc9835e57fc65bd76ba8c6ca87f1855b0ccb66a1</code></td>
+<td>13</td>
+</tr>
+<tr>
+<td><a href="x86decomp-assembly-store/">x86decomp.assembly.store</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/assembly/store.py</code></td>
+<td><code>9cc40fd2fa51e63f32b04caab2fcd1ea352358deb539b805193224366efaf51f</code></td>
+<td>4</td>
+</tr>
+<tr>
+<td><a href="x86decomp-benchmarks/">x86decomp.benchmarks</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/benchmarks.py</code></td>
+<td><code>495856330b73b3f9635160d77cea6d4e67ef6c7a9e8db14b908aa2c4ade3acf1</code></td>
+<td>3</td>
+</tr>
+<tr>
+<td><a href="x86decomp-binary-reader/">x86decomp.binary_reader</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/binary_reader.py</code></td>
+<td><code>484e3667fb7a5301501d453e8393264f10d8bc9f2d76810405cd16038faa04e4</code></td>
+<td>11</td>
+</tr>
+<tr>
+<td><a href="x86decomp-canonical/">x86decomp.canonical</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/canonical.py</code></td>
+<td><code>3dd78fd485ff2f9b8fb939d5ab00ed68a23c84f0b36db048a709a4f05ac8df1c</code></td>
+<td>12</td>
+</tr>
+<tr>
+<td><a href="x86decomp-cli/">x86decomp.cli</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/cli.py</code></td>
+<td><code>674c6069aa4fcda3240077d81e4c56065db26766d9abf1fa786503be4005edd8</code></td>
+<td>8</td>
+</tr>
+<tr>
+<td><a href="x86decomp-cli-utils/">x86decomp.cli_utils</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/cli_utils.py</code></td>
+<td><code>9b51fe87fa1e4b93d5cbae791655451f0c1bf467ea88013aa37fa1176d0c9c97</code></td>
+<td>2</td>
+</tr>
+<tr>
+<td><a href="x86decomp-coff/">x86decomp.coff</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/coff.py</code></td>
+<td><code>4630e57a2d64ffb3d9961e044437d5fe5f0bb4811a2c9748515baf59b167f798</code></td>
+<td>64</td>
+</tr>
+<tr>
+<td><a href="x86decomp-coff-archive/">x86decomp.coff_archive</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/coff_archive.py</code></td>
+<td><code>334fc0ec09fc70cb1ec34654cd73ae4e5ba14650fb6afef97791f9cf088459d1</code></td>
+<td>13</td>
+</tr>
+<tr>
+<td><a href="x86decomp-compiler/">x86decomp.compiler</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/compiler.py</code></td>
+<td><code>cd474dd4aa9c3ba80b6e5d1b50df0e2e2d460aae68b30bc63233531e730834bb</code></td>
+<td>5</td>
+</tr>
+<tr>
+<td><a href="x86decomp-compiler-lab/">x86decomp.compiler_lab</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/compiler_lab.py</code></td>
+<td><code>7feb0c4fe8f912f3ecd72216a67be512c76e0ab0a80ded41c0a32cc9c7a03b82</code></td>
+<td>2</td>
+</tr>
+<tr>
+<td><a href="x86decomp-compiler-worker/">x86decomp.compiler_worker</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/compiler_worker.py</code></td>
+<td><code>587489d60ee4c66870a3fb37ecadfb1f03d675902a5bb7438c066e6e9571cec9</code></td>
+<td>1</td>
+</tr>
+<tr>
+<td><a href="x86decomp-content-store/">x86decomp.content_store</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/content_store.py</code></td>
+<td><code>3a7dbe29ec407dff4966ae962ea4685141056fb57cfb8dc4ba84145547ec3a41</code></td>
+<td>18</td>
+</tr>
+<tr>
+<td><a href="x86decomp-contracts/">x86decomp.contracts</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/contracts.py</code></td>
+<td><code>516d98ec7d1ae79f5ea60a450174a4f4781d71eb169c40fa69f840c55507bbab</code></td>
+<td>13</td>
+</tr>
+<tr>
+<td><a href="x86decomp-convergence/">x86decomp.convergence</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/convergence.py</code></td>
+<td><code>fdc0f36afb90be8d0a8724878be24d104a662e1f4515850516810894228d1725</code></td>
+<td>3</td>
+</tr>
+<tr>
+<td><a href="x86decomp-cpp-recovery/">x86decomp.cpp_recovery</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/cpp_recovery.py</code></td>
+<td><code>354295c6c6a16f6b8296760d153c824945f8f46bb035e843805d0979c5a55a3e</code></td>
+<td>3</td>
+</tr>
+<tr>
+<td><a href="x86decomp-decompme/">x86decomp.decompme</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/decompme.py</code></td>
+<td><code>ead409a6bd6d0060631b4bfd849191aa885a6f793968993432b048621a662bf2</code></td>
+<td>2</td>
+</tr>
+<tr>
+<td><a href="x86decomp-diffing/">x86decomp.diffing</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/diffing.py</code></td>
+<td><code>e15fdd427ebeee553b08dfedc704d21c7fd4146da984abfef1a77c18846731e7</code></td>
+<td>2</td>
+</tr>
+<tr>
+<td><a href="x86decomp-disassembly/">x86decomp.disassembly</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/disassembly.py</code></td>
+<td><code>7beb7f66049ca498017a9180be738f35d1dea545e04bb8d6e69747f0e14e3754</code></td>
+<td>8</td>
+</tr>
+<tr>
+<td><a href="x86decomp-dynamic/">x86decomp.dynamic</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/dynamic.py</code></td>
+<td><code>9b3cd201a5701bf48b73edd9e1a1984d4c6550d116e1a5b603453270c34ea4a8</code></td>
+<td>12</td>
+</tr>
+<tr>
+<td><a href="x86decomp-dynamorio/">x86decomp.dynamorio</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/dynamorio.py</code></td>
+<td><code>8568a98326d91a775f2feec1847e8d3230c58253e1b015c3ee75dcb9b0d8b30d</code></td>
+<td>2</td>
+</tr>
+<tr>
+<td><a href="x86decomp-errors/">x86decomp.errors</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/errors.py</code></td>
+<td><code>5bb50a4d169960abdc486866d2e68c894d8c13da401361931d86991ff9f8030d</code></td>
+<td>5</td>
+</tr>
+<tr>
+<td><a href="x86decomp-evidence/">x86decomp.evidence</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/evidence.py</code></td>
+<td><code>5e84e855cf3aa99a089ca44a049786ee37538761fa86b0a3ea988675230818eb</code></td>
+<td>13</td>
+</tr>
+<tr>
+<td><a href="x86decomp-exe-diff/">x86decomp.exe_diff</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/exe_diff.py</code></td>
+<td><code>c6ba882c4efd60db8e9cdf487bc13012257ca0be8f258030657ad87aba66ff48</code></td>
+<td>6</td>
+</tr>
+<tr>
+<td><a href="x86decomp-ghidra/">x86decomp.ghidra</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/ghidra.py</code></td>
+<td><code>a4b9ba54d680ccc858a4dbee991eb2462f2e003a49b28224588e2d4eea615474</code></td>
+<td>2</td>
+</tr>
+<tr>
+<td><a href="x86decomp-governance---init--/">x86decomp.governance.<strong>init</strong></a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/governance/__init__.py</code></td>
+<td><code>a0483ba8e8314f9c9ba3a8387147195d183c6c7a47b067e2f6a92354f6612c00</code></td>
+<td>0</td>
+</tr>
+<tr>
+<td><a href="x86decomp-governance-campaigns/">x86decomp.governance.campaigns</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/governance/campaigns.py</code></td>
+<td><code>d605a3e6f607bae80fcedc86f800c94afc07cab70804233a77bc1b2d351e731a</code></td>
+<td>17</td>
+</tr>
+<tr>
+<td><a href="x86decomp-governance-candidates/">x86decomp.governance.candidates</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/governance/candidates.py</code></td>
+<td><code>68a8097e14ed00cfc4887bff181118924ac51afa4976c454ee8d7ee4863565e5</code></td>
+<td>10</td>
+</tr>
+<tr>
+<td><a href="x86decomp-governance-changesets/">x86decomp.governance.changesets</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/governance/changesets.py</code></td>
+<td><code>1294e380f06937649500476ca9c3d41aad674dd71174cc65d2242fda7f8138ef</code></td>
+<td>4</td>
+</tr>
+<tr>
+<td><a href="x86decomp-governance-cli/">x86decomp.governance.cli</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/governance/cli.py</code></td>
+<td><code>d99c282b8594b3da375230043e393af6486cfd913e2a33b797538cb61d782bd2</code></td>
+<td>4</td>
+</tr>
+<tr>
+<td><a href="x86decomp-governance-consensus/">x86decomp.governance.consensus</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/governance/consensus.py</code></td>
+<td><code>28f7df66867b88b8ee9eb2a9d9f56f90a35b6cd74769d4a74d1df5b3bda132cf</code></td>
+<td>7</td>
+</tr>
+<tr>
+<td><a href="x86decomp-governance-counterexamples/">x86decomp.governance.counterexamples</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/governance/counterexamples.py</code></td>
+<td><code>a271d06f33c3569cf9bee6433703a7575b7be39ff363dd8667d60952f6b58a2b</code></td>
+<td>8</td>
+</tr>
+<tr>
+<td><a href="x86decomp-governance-family/">x86decomp.governance.family</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/governance/family.py</code></td>
+<td><code>e0c94c0fe9db646c135dc0fd949ba5627dda30978465c5e83da85e2afb83379b</code></td>
+<td>10</td>
+</tr>
+<tr>
+<td><a href="x86decomp-governance-hypotheses/">x86decomp.governance.hypotheses</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/governance/hypotheses.py</code></td>
+<td><code>8fe031d32f8bad8b396772ae5ae48ee101e0069a767e6fefab8790ff6a5fce95</code></td>
+<td>14</td>
+</tr>
+<tr>
+<td><a href="x86decomp-governance-knowledge-graph/">x86decomp.governance.knowledge_graph</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/governance/knowledge_graph.py</code></td>
+<td><code>ff8866a5a5059e20895b85954cbe6a51a619d1887ea7c66f94cccb4b62ccf204</code></td>
+<td>6</td>
+</tr>
+<tr>
+<td><a href="x86decomp-governance-plugins/">x86decomp.governance.plugins</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/governance/plugins.py</code></td>
+<td><code>42547b4341e529b6ba203aba18556b6bb0965e56fbcc43d7160a11675e290c9a</code></td>
+<td>8</td>
+</tr>
+<tr>
+<td><a href="x86decomp-governance-proofs/">x86decomp.governance.proofs</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/governance/proofs.py</code></td>
+<td><code>ea3a39b8256c6ecdec73f88ad6d55fe8df19691c8f21f32ba21c17939ba98311</code></td>
+<td>13</td>
+</tr>
+<tr>
+<td><a href="x86decomp-governance-reviews/">x86decomp.governance.reviews</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/governance/reviews.py</code></td>
+<td><code>2d56d02e53a18cf0d8fcf2542d302a30923c06e9d09e4ab62e8a6b3624cbffc8</code></td>
+<td>8</td>
+</tr>
+<tr>
+<td><a href="x86decomp-governance-store/">x86decomp.governance.store</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/governance/store.py</code></td>
+<td><code>3d94335f441a98bf91ac0d211e01f9d00c52e7f7bf56a81a6282b0c9fcd68191</code></td>
+<td>8</td>
+</tr>
+<tr>
+<td><a href="x86decomp-governance-workers/">x86decomp.governance.workers</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/governance/workers.py</code></td>
+<td><code>b41f6fc57502ffc1b070ebe21b125083a9a44bcb20589fec17a31204119f877a</code></td>
+<td>8</td>
+</tr>
+<tr>
+<td><a href="x86decomp-ground-truth/">x86decomp.ground_truth</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/ground_truth.py</code></td>
+<td><code>8e4ada1866c092d9594a5478abc51ee6d17de7cb2a344e8e29e7115906ab4eef</code></td>
+<td>7</td>
+</tr>
+<tr>
+<td><a href="x86decomp-harness-generator/">x86decomp.harness_generator</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/harness_generator.py</code></td>
+<td><code>a5d1bf5ac1fc22d34e2975ee93d73e021345d641ef883bc2bd3e2b9638179fe4</code></td>
+<td>3</td>
+</tr>
+<tr>
+<td><a href="x86decomp-hybrid/">x86decomp.hybrid</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/hybrid.py</code></td>
+<td><code>c6773b5b03b59a3a02b3e628b229ff32377b4b801046eb4605d79b9bff0f78b1</code></td>
+<td>2</td>
+</tr>
+<tr>
+<td><a href="x86decomp-image-match/">x86decomp.image_match</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/image_match.py</code></td>
+<td><code>e4a53eae89cdc55df81e579ead9ff5f386d632c0a1ff9dd75e61489348d095ae</code></td>
+<td>10</td>
+</tr>
+<tr>
+<td><a href="x86decomp-integration/">x86decomp.integration</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/integration.py</code></td>
+<td><code>1dd501274cd70e4e97ee72667c488439d1cdd651e92a6306995e5c5655b39779</code></td>
+<td>10</td>
+</tr>
+<tr>
+<td><a href="x86decomp-linker-layout/">x86decomp.linker_layout</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/linker_layout.py</code></td>
+<td><code>695a3353f9f7b93e27e71f6a5ede51882b979997adb6fe47bd53946e87bd73fb</code></td>
+<td>12</td>
+</tr>
+<tr>
+<td><a href="x86decomp-linker-reconstruction/">x86decomp.linker_reconstruction</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/linker_reconstruction.py</code></td>
+<td><code>e2485c40df661dea95be2a879a8a91ff185ed25b859d8683c969e922cf1dc79c</code></td>
+<td>2</td>
+</tr>
+<tr>
+<td><a href="x86decomp-local-llm---init--/">x86decomp.local_llm.<strong>init</strong></a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/local_llm/__init__.py</code></td>
+<td><code>471640b8f53e194e4f5f246699cfdabbfc5ba1ff818bed6d060e8348eaf09d25</code></td>
+<td>0</td>
+</tr>
+<tr>
+<td><a href="x86decomp-local-llm-matching/">x86decomp.local_llm.matching</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/local_llm/matching.py</code></td>
+<td><code>9b392884b6a186206dd50705b4099157c8073aa77512c5b144a1a358991e8d66</code></td>
+<td>7</td>
+</tr>
+<tr>
+<td><a href="x86decomp-local-llm-profiles/">x86decomp.local_llm.profiles</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/local_llm/profiles.py</code></td>
+<td><code>6d956f6d013147c86d2ca4ff16d110b648871c7f78e31bb7426d268995521da2</code></td>
+<td>8</td>
+</tr>
+<tr>
+<td><a href="x86decomp-local-llm-prompts/">x86decomp.local_llm.prompts</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/local_llm/prompts.py</code></td>
+<td><code>03aa0e774538d41645426c911742ae8f710df75b7f1b126493428c166a347918</code></td>
+<td>7</td>
+</tr>
+<tr>
+<td><a href="x86decomp-local-llm-transport/">x86decomp.local_llm.transport</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/local_llm/transport.py</code></td>
+<td><code>040da7a261eb8b5c012cf2e3f7b303231666d5054ab449c34df11b69f5275990</code></td>
+<td>16</td>
+</tr>
+<tr>
+<td><a href="x86decomp-mcp/">x86decomp.mcp</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/mcp.py</code></td>
+<td><code>061836293bf188b96de9dca62dfda3710fd51c313a5eff738224eed135fd5e59</code></td>
+<td>27</td>
+</tr>
+<tr>
+<td><a href="x86decomp-memory/">x86decomp.memory</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/memory.py</code></td>
+<td><code>127b52aab344329016f75bf176937087932be5d9ab611c8f8badfb6d5b8e27e2</code></td>
+<td>7</td>
+</tr>
+<tr>
+<td><a href="x86decomp-models/">x86decomp.models</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/models.py</code></td>
+<td><code>703196ad755b9e7b0059bb551a2e858928c26252e2587a0d3d47be5995750a5b</code></td>
+<td>7</td>
+</tr>
+<tr>
+<td><a href="x86decomp-msvc-metadata/">x86decomp.msvc_metadata</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/msvc_metadata.py</code></td>
+<td><code>00acf48e912266dd7142f7b98ad81f218bfed88f8e5276b1bd80037afb681a12</code></td>
+<td>41</td>
+</tr>
+<tr>
+<td><a href="x86decomp-native---init--/">x86decomp.native.<strong>init</strong></a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/native/__init__.py</code></td>
+<td><code>c06bf6b79e240a8ec82b7084a6f50358b49e0c28084ed2cece59bd0f803dfb0d</code></td>
+<td>0</td>
+</tr>
+<tr>
+<td><a href="x86decomp-native-cli/">x86decomp.native.cli</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/native/cli.py</code></td>
+<td><code>84b351c03685e10ebed9d550928be651febba22b029ee666167716028d0eb7f6</code></td>
+<td>4</td>
+</tr>
+<tr>
+<td><a href="x86decomp-native-closed-loop/">x86decomp.native.closed_loop</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/native/closed_loop.py</code></td>
+<td><code>8ca0f2b6adb455f6a3adcfbe88a9d1f536ed28ac13d7cea3048db214a507d831</code></td>
+<td>5</td>
+</tr>
+<tr>
+<td><a href="x86decomp-native-hybrid-composer/">x86decomp.native.hybrid_composer</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/native/hybrid_composer.py</code></td>
+<td><code>07650208ea10d64e9a2dd98312b14b6dd54cca2064effa3693e2e0d00ee71ff7</code></td>
+<td>4</td>
+</tr>
+<tr>
+<td><a href="x86decomp-native-matching/">x86decomp.native.matching</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/native/matching.py</code></td>
+<td><code>4fbc421f01f6f432c888d431a243b4ba4f5166977a5f47adcafcc01d11cd0565</code></td>
+<td>8</td>
+</tr>
+<tr>
+<td><a href="x86decomp-native-pe-reconstruction/">x86decomp.native.pe_reconstruction</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/native/pe_reconstruction.py</code></td>
+<td><code>bbea10165b3b1aed6e6a3a9aa2776296480c729f8a6002471467d4791c71e200</code></td>
+<td>11</td>
+</tr>
+<tr>
+<td><a href="x86decomp-native-runtime/">x86decomp.native.runtime</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/native/runtime.py</code></td>
+<td><code>6e43a6f773e0c67ad6eaedd3b8177b5a1f853cd9dd829296eaa952852f3c526d</code></td>
+<td>6</td>
+</tr>
+<tr>
+<td><a href="x86decomp-native-slots/">x86decomp.native.slots</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/native/slots.py</code></td>
+<td><code>a4d751d6b0adc193cb36b4847e2d8e5ce242e62b56677c0eb03b72ffd7544582</code></td>
+<td>9</td>
+</tr>
+<tr>
+<td><a href="x86decomp-native-staging/">x86decomp.native.staging</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/native/staging.py</code></td>
+<td><code>f4179ca0b7807241266480760fcfef527054a69be26a08cd7b3d31725b70ddef</code></td>
+<td>7</td>
+</tr>
+<tr>
+<td><a href="x86decomp-native-store/">x86decomp.native.store</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/native/store.py</code></td>
+<td><code>3e79c3dcdb28c4e49ec129537b58254574d8f887a91c654238f3690e6fa24611</code></td>
+<td>4</td>
+</tr>
+<tr>
+<td><a href="x86decomp-native-windows-tools/">x86decomp.native.windows_tools</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/native/windows_tools.py</code></td>
+<td><code>b7faf19779e497b1338a585113dfc053663d02ea92d3630a78d6c57660d01cfe</code></td>
+<td>6</td>
+</tr>
+<tr>
+<td><a href="x86decomp-objdiff-adapter/">x86decomp.objdiff_adapter</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/objdiff_adapter.py</code></td>
+<td><code>a8e9ce06780f783f2ad9c6e50cf106fd0ecc1b82052d39fbbeeb1f40632a7d4b</code></td>
+<td>2</td>
+</tr>
+<tr>
+<td><a href="x86decomp-orchestrator/">x86decomp.orchestrator</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/orchestrator.py</code></td>
+<td><code>fab775aab1d71a2fa1a728147b8792302350689496896caa3a1936a502dbdfd7</code></td>
+<td>28</td>
+</tr>
+<tr>
+<td><a href="x86decomp-patching/">x86decomp.patching</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/patching.py</code></td>
+<td><code>f81a6e2fc12323262049645808778be12227704ee0f0d36eb343e946e56b3822</code></td>
+<td>3</td>
+</tr>
+<tr>
+<td><a href="x86decomp-pdb/">x86decomp.pdb</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/pdb.py</code></td>
+<td><code>cafd35f8251e24a91b6b01e36d651ef28b698fac11266a47c7daf9b5e9bd6179</code></td>
+<td>24</td>
+</tr>
+<tr>
+<td><a href="x86decomp-pe/">x86decomp.pe</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/pe.py</code></td>
+<td><code>3ebcfae28c9da57b446624277b20cfcde2a1c39960ba30cfb2c08a24b0db3c79</code></td>
+<td>16</td>
+</tr>
+<tr>
+<td><a href="x86decomp-pe32/">x86decomp.pe32</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/pe32.py</code></td>
+<td><code>1487c4fa4c92d7b161f89beac59c79fab7672439806825ed76010f63fd598837</code></td>
+<td>40</td>
+</tr>
+<tr>
+<td><a href="x86decomp-project/">x86decomp.project</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/project.py</code></td>
+<td><code>5a6ce12a71a6617d39cb2619a7adb97e8308e330989d6a93f3a2e82faaf2bc07</code></td>
+<td>4</td>
+</tr>
+<tr>
+<td><a href="x86decomp-project-state/">x86decomp.project_state</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/project_state.py</code></td>
+<td><code>4d988a5e72646f9e1930e2e656398810196323092bc6db62f10ccb81135805ee</code></td>
+<td>21</td>
+</tr>
+<tr>
+<td><a href="x86decomp-project-template/">x86decomp.project_template</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/project_template.py</code></td>
+<td><code>21050aad81e374bafd2400628ea946f8bc3040ddd735d6ea4299b7a33604d589</code></td>
+<td>4</td>
+</tr>
+<tr>
+<td><a href="x86decomp-reconstruction---init--/">x86decomp.reconstruction.<strong>init</strong></a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/reconstruction/__init__.py</code></td>
+<td><code>52313d0bee948e0909b7dbad630958a9631187f643927aa9b604acf3184599c8</code></td>
+<td>0</td>
+</tr>
+<tr>
+<td><a href="x86decomp-reconstruction-abi-contracts/">x86decomp.reconstruction.abi_contracts</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/reconstruction/abi_contracts.py</code></td>
+<td><code>3eb4e79869758ec544c5534c94f9a92fae194044d9900b1cf0b9b7674b3107ac</code></td>
+<td>8</td>
+</tr>
+<tr>
+<td><a href="x86decomp-reconstruction-acceleration/">x86decomp.reconstruction.acceleration</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/reconstruction/acceleration.py</code></td>
+<td><code>70942db2fd66b84d8c33439d7bf5b9cd50be38d28a8f068ea284036c95ce78e3</code></td>
+<td>70</td>
+</tr>
+<tr>
+<td><a href="x86decomp-reconstruction-builds/">x86decomp.reconstruction.builds</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/reconstruction/builds.py</code></td>
+<td><code>7ac186b0ec0d29a58632161a206f38e5e57b3444043fefa4d3b28d8e3c57d594</code></td>
+<td>12</td>
+</tr>
+<tr>
+<td><a href="x86decomp-reconstruction-capsules/">x86decomp.reconstruction.capsules</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/reconstruction/capsules.py</code></td>
+<td><code>700d2e7078242821ac30a9e8a7064bb1685b1981402df938fc3c35e5a3eda6c3</code></td>
+<td>6</td>
+</tr>
+<tr>
+<td><a href="x86decomp-reconstruction-cli/">x86decomp.reconstruction.cli</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/reconstruction/cli.py</code></td>
+<td><code>a84d52db369e1a01acd906c8d6a9cdee7786b403a76e7676d3932b67dd51b8ca</code></td>
+<td>4</td>
+</tr>
+<tr>
+<td><a href="x86decomp-reconstruction-generated-tests/">x86decomp.reconstruction.generated_tests</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/reconstruction/generated_tests.py</code></td>
+<td><code>b8a7365129c9e8c5f7e2f834b5feec8997440f43facdf81ec90b917f1e434e67</code></td>
+<td>8</td>
+</tr>
+<tr>
+<td><a href="x86decomp-reconstruction-headers/">x86decomp.reconstruction.headers</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/reconstruction/headers.py</code></td>
+<td><code>b578c7a48857ab9da72a1c7103502792a4a919f98ef3e3f4561865b655cc6840</code></td>
+<td>10</td>
+</tr>
+<tr>
+<td><a href="x86decomp-reconstruction-libraries/">x86decomp.reconstruction.libraries</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/reconstruction/libraries.py</code></td>
+<td><code>ae16b90a7305823aca1dc000581ecd593ac57ab97b9b0ed4dc8923ecdc081fb3</code></td>
+<td>6</td>
+</tr>
+<tr>
+<td><a href="x86decomp-reconstruction-project-layout/">x86decomp.reconstruction.project_layout</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/reconstruction/project_layout.py</code></td>
+<td><code>b9143acf55abf6b8a4018e130cb249d146d1d04c0edebe8a8ad396ea8c76bc20</code></td>
+<td>12</td>
+</tr>
+<tr>
+<td><a href="x86decomp-reconstruction-provenance/">x86decomp.reconstruction.provenance</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/reconstruction/provenance.py</code></td>
+<td><code>b769842f4ca5cdb45620fa14806c011fef749bdc2d0beb7716b41f50a8d518be</code></td>
+<td>11</td>
+</tr>
+<tr>
+<td><a href="x86decomp-reconstruction-security/">x86decomp.reconstruction.security</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/reconstruction/security.py</code></td>
+<td><code>3d131ae1f0702c631202a51639b85b53843a7394c7bb331e2364e53404fe1fa0</code></td>
+<td>7</td>
+</tr>
+<tr>
+<td><a href="x86decomp-reconstruction-semantic-changesets/">x86decomp.reconstruction.semantic_changesets</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/reconstruction/semantic_changesets.py</code></td>
+<td><code>8162c89a2e231164a4c4940804355c123bc6eeae6a1de7234bc2468af80bbeae</code></td>
+<td>9</td>
+</tr>
+<tr>
+<td><a href="x86decomp-reconstruction-store/">x86decomp.reconstruction.store</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/reconstruction/store.py</code></td>
+<td><code>e9909aa9d757a1425b1563590a5c2df93d4ce65a54825e80dfdb99be66593b6f</code></td>
+<td>4</td>
+</tr>
+<tr>
+<td><a href="x86decomp-release-gate/">x86decomp.release_gate</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/release_gate.py</code></td>
+<td><code>381121856f0ce249fe7e268be5f57d20bc6b7bc31b05c26b4056796629bce9c7</code></td>
+<td>4</td>
+</tr>
+<tr>
+<td><a href="x86decomp-relink/">x86decomp.relink</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/relink.py</code></td>
+<td><code>b4ea5875ec158515fc1a9408a7c1b46845e605cb2e8f4ea9548bc6b052d76cbd</code></td>
+<td>1</td>
+</tr>
+<tr>
+<td><a href="x86decomp-reproducibility/">x86decomp.reproducibility</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/reproducibility.py</code></td>
+<td><code>42890412018863aa16c5913570286c5bb71ef865e55a1b8f6de59e4618cab6ed</code></td>
+<td>3</td>
+</tr>
+<tr>
+<td><a href="x86decomp-security-audit/">x86decomp.security_audit</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/security_audit.py</code></td>
+<td><code>908cac0bdfd28cbd619ecf628ebee71753c735617f4570b3a07f36a35c8dfb6c</code></td>
+<td>5</td>
+</tr>
+<tr>
+<td><a href="x86decomp-service/">x86decomp.service</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/service.py</code></td>
+<td><code>07d1d2b97b4b34432e3a60023f1cc5769e62927bb67e118384b361b23fa402e4</code></td>
+<td>16</td>
+</tr>
+<tr>
+<td><a href="x86decomp-store-utils/">x86decomp.store_utils</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/store_utils.py</code></td>
+<td><code>79ca047c185646cc9cd5fb8493b8c4024cab512fbafe2a4687971a7c650113fb</code></td>
+<td>1</td>
+</tr>
+<tr>
+<td><a href="x86decomp-symbolic/">x86decomp.symbolic</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/symbolic.py</code></td>
+<td><code>44313e4a9c3ba6fe819da4bad51d85ac75cc08357dcbe9d0678f8b8792ab3d68</code></td>
+<td>27</td>
+</tr>
+<tr>
+<td><a href="x86decomp-synthetic-corpus/">x86decomp.synthetic_corpus</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/synthetic_corpus.py</code></td>
+<td><code>432382a2bab467462c312306adf333e3151c8a28ae2ece0f4e7f6afd42bc5358</code></td>
+<td>15</td>
+</tr>
+<tr>
+<td><a href="x86decomp-target-pack/">x86decomp.target_pack</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/target_pack.py</code></td>
+<td><code>113aae1251f1143cc8a6f2a4e32adc05fbef2afb3a98bca0bbf588ae129ab8e9</code></td>
+<td>9</td>
+</tr>
+<tr>
+<td><a href="x86decomp-test-bundle/">x86decomp.test_bundle</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/test_bundle.py</code></td>
+<td><code>e39fa02455b0bffa5ff85455eaf86bbaad76921df269e3b5cd8c7dc188cb8de3</code></td>
+<td>9</td>
+</tr>
+<tr>
+<td><a href="x86decomp-toolchains/">x86decomp.toolchains</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/toolchains.py</code></td>
+<td><code>5bd47468fa9b0574ba82a60bec59d7e1b221760aa49af27ce49cd033c1bfd622</code></td>
+<td>2</td>
+</tr>
+<tr>
+<td><a href="x86decomp-tools/">x86decomp.tools</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/tools.py</code></td>
+<td><code>8ea17b0382ccc5da5cf930dd702d7e0e73109e88a6e6fa1dcbea7e62256363fb</code></td>
+<td>3</td>
+</tr>
+<tr>
+<td><a href="x86decomp-util/">x86decomp.util</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/util.py</code></td>
+<td><code>a31791a06728eb30ecd156b1ab6f57dc3a56197be2ea6fe2043a2903228d9510</code></td>
+<td>13</td>
+</tr>
+<tr>
+<td><a href="x86decomp-work-queue/">x86decomp.work_queue</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/work_queue.py</code></td>
+<td><code>0faf02ac6c5e6871728c3a81bf0737d189b5ba0b44c76335403b015c11c71d09</code></td>
+<td>9</td>
+</tr>
+<tr>
+<td><a href="x86decomp-worker/">x86decomp.worker</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/worker.py</code></td>
+<td><code>4ecd317bb9013edb1d0c1b79037ed139d0e240da60703e0b21198b5b131ffe33</code></td>
+<td>13</td>
+</tr>
+<tr>
+<td><a href="x86decomp-workflow/">x86decomp.workflow</a></td>
+<td>toolkit</td>
+<td><code>src/x86decomp/workflow.py</code></td>
+<td><code>7f8feb468bf53f4cd1d5bc98cec7da39a21ebab9ee9483284d10052453129553</code></td>
+<td>12</td>
+</tr>
+<tr>
+<td><a href="x86decomp-testkit---init--/">x86decomp_testkit.<strong>init</strong></a></td>
+<td>test-suite</td>
+<td><code>test-suite/src/x86decomp_testkit/__init__.py</code></td>
+<td><code>fc0b90629b6ab9477e318b04008c3c5d68ec2cbdaef20e3e145984491b986de2</code></td>
+<td>0</td>
+</tr>
+<tr>
+<td><a href="x86decomp-testkit---main--/">x86decomp_testkit.<strong>main</strong></a></td>
+<td>test-suite</td>
+<td><code>test-suite/src/x86decomp_testkit/__main__.py</code></td>
+<td><code>8049ea31e024fbdc10e22c425b395576481d340e58811ab6fdf39530896ffc98</code></td>
+<td>0</td>
+</tr>
+<tr>
+<td><a href="x86decomp-testkit-adapters---init--/">x86decomp_testkit.adapters.<strong>init</strong></a></td>
+<td>test-suite</td>
+<td><code>test-suite/src/x86decomp_testkit/adapters/__init__.py</code></td>
+<td><code>1ddce6290f1b4d3745c163a2473f72888548faf2af70e04f498a11882989df21</code></td>
+<td>0</td>
+</tr>
+<tr>
+<td><a href="x86decomp-testkit-adapters-capabilities/">x86decomp_testkit.adapters.capabilities</a></td>
+<td>test-suite</td>
+<td><code>test-suite/src/x86decomp_testkit/adapters/capabilities.py</code></td>
+<td><code>e0ddf047e75550e1a2a0263951f9bc275753d355fa4b096d76d1c89a9da7b756</code></td>
+<td>9</td>
+</tr>
+<tr>
+<td><a href="x86decomp-testkit-adapters-catalog/">x86decomp_testkit.adapters.catalog</a></td>
+<td>test-suite</td>
+<td><code>test-suite/src/x86decomp_testkit/adapters/catalog.py</code></td>
+<td><code>171feae0e00a5729a0dcb3f5f877bc2c7479e4560841217a1e8e478025dc672f</code></td>
+<td>1</td>
+</tr>
+<tr>
+<td><a href="x86decomp-testkit-adapters-detection/">x86decomp_testkit.adapters.detection</a></td>
+<td>test-suite</td>
+<td><code>test-suite/src/x86decomp_testkit/adapters/detection.py</code></td>
+<td><code>0e2e601a66a26d0789cec226e04eaff565d3ca56f207721393fecd69a3c2245f</code></td>
+<td>11</td>
+</tr>
+<tr>
+<td><a href="x86decomp-testkit-adapters-download/">x86decomp_testkit.adapters.download</a></td>
+<td>test-suite</td>
+<td><code>test-suite/src/x86decomp_testkit/adapters/download.py</code></td>
+<td><code>2ec4601f9a87429760a222219714b4d29bc509c22e5975b1be069df0061aa22c</code></td>
+<td>6</td>
+</tr>
+<tr>
+<td><a href="x86decomp-testkit-adapters-installation/">x86decomp_testkit.adapters.installation</a></td>
+<td>test-suite</td>
+<td><code>test-suite/src/x86decomp_testkit/adapters/installation.py</code></td>
+<td><code>a2f492bca8f0a07e627ee98de16122c3e56bd67cfdadb0e743e82156ab6f7c90</code></td>
+<td>10</td>
+</tr>
+<tr>
+<td><a href="x86decomp-testkit-cli/">x86decomp_testkit.cli</a></td>
+<td>test-suite</td>
+<td><code>test-suite/src/x86decomp_testkit/cli.py</code></td>
+<td><code>4895bf74207b82a195a590b75db4d454ca5ca8ed0b721cddcd368e3f160ccaed</code></td>
+<td>4</td>
+</tr>
+<tr>
+<td><a href="x86decomp-testkit-config/">x86decomp_testkit.config</a></td>
+<td>test-suite</td>
+<td><code>test-suite/src/x86decomp_testkit/config.py</code></td>
+<td><code>040632f7652257a669121fa9a2729fd5f225123879adb483ee209841181638d5</code></td>
+<td>6</td>
+</tr>
+<tr>
+<td><a href="x86decomp-testkit-coverage-audit/">x86decomp_testkit.coverage_audit</a></td>
+<td>test-suite</td>
+<td><code>test-suite/src/x86decomp_testkit/coverage_audit.py</code></td>
+<td><code>74a93d93dd429f3920938e9c29d2b59b3607de538577200e8b7f7926a545ca62</code></td>
+<td>2</td>
+</tr>
+<tr>
+<td><a href="x86decomp-testkit-fixtures/">x86decomp_testkit.fixtures</a></td>
+<td>test-suite</td>
+<td><code>test-suite/src/x86decomp_testkit/fixtures.py</code></td>
+<td><code>562e5bfa76c730cc96a2ace5aa92efdbc5514cd797aef4c212554730a70946df</code></td>
+<td>4</td>
+</tr>
+<tr>
+<td><a href="x86decomp-testkit-inventory/">x86decomp_testkit.inventory</a></td>
+<td>test-suite</td>
+<td><code>test-suite/src/x86decomp_testkit/inventory.py</code></td>
+<td><code>8e0de0c4c8e4a66f6dbf6e59ea44c0b1eea41d3ed80511dd2bc8eabce79fc4a1</code></td>
+<td>16</td>
+</tr>
+<tr>
+<td><a href="x86decomp-testkit-junit/">x86decomp_testkit.junit</a></td>
+<td>test-suite</td>
+<td><code>test-suite/src/x86decomp_testkit/junit.py</code></td>
+<td><code>a51e772d766abd7e73cece8c589265dbcd53ab5a5a7f66b7c302d8b95ebdb1c1</code></td>
+<td>1</td>
+</tr>
+<tr>
+<td><a href="x86decomp-testkit-live-adapters/">x86decomp_testkit.live_adapters</a></td>
+<td>test-suite</td>
+<td><code>test-suite/src/x86decomp_testkit/live_adapters.py</code></td>
+<td><code>6516fd582f68338dbdb455c5d910c74055db3d17dd96b55d08841cf111f57d63</code></td>
+<td>9</td>
+</tr>
+<tr>
+<td><a href="x86decomp-testkit-logging-utils/">x86decomp_testkit.logging_utils</a></td>
+<td>test-suite</td>
+<td><code>test-suite/src/x86decomp_testkit/logging_utils.py</code></td>
+<td><code>0cbf9084920bee2069ea38f4b3105b913a6ac88d8ce545582f7a319cf40cfbfa</code></td>
+<td>4</td>
+</tr>
+<tr>
+<td><a href="x86decomp-testkit-models/">x86decomp_testkit.models</a></td>
+<td>test-suite</td>
+<td><code>test-suite/src/x86decomp_testkit/models.py</code></td>
+<td><code>cd3c09bfe5c1f30f8693c64b7a6f9b8ae0f4ce6cff40a82f9b8c42b5a1bea00c</code></td>
+<td>12</td>
+</tr>
+<tr>
+<td><a href="x86decomp-testkit-orchestrator/">x86decomp_testkit.orchestrator</a></td>
+<td>test-suite</td>
+<td><code>test-suite/src/x86decomp_testkit/orchestrator.py</code></td>
+<td><code>5f99094a835bc81db82694f10972870b96644966531d9930359ae3319298b3a4</code></td>
+<td>4</td>
+</tr>
+<tr>
+<td><a href="x86decomp-testkit-process/">x86decomp_testkit.process</a></td>
+<td>test-suite</td>
+<td><code>test-suite/src/x86decomp_testkit/process.py</code></td>
+<td><code>b1521f7cd16821a086c9eb17f7d680eb11b8c3e903dd8a7fe518553f3873596d</code></td>
+<td>2</td>
+</tr>
+<tr>
+<td><a href="x86decomp-testkit-reports/">x86decomp_testkit.reports</a></td>
+<td>test-suite</td>
+<td><code>test-suite/src/x86decomp_testkit/reports.py</code></td>
+<td><code>b433e8f157f959ba1bcb1d4a1f328fe8d04b28bdde08bfb4f438b39e3d84d8bc</code></td>
+<td>5</td>
+</tr>
+<tr>
+<td><a href="x86decomp-testkit-self-tests---init--/">x86decomp_testkit.self_tests.<strong>init</strong></a></td>
+<td>test-suite</td>
+<td><code>test-suite/src/x86decomp_testkit/self_tests/__init__.py</code></td>
+<td><code>2fdabb54d9fb50db6ec807fffbfad75f6fb167b169a02c667b49d9097540e3a0</code></td>
+<td>0</td>
+</tr>
+<tr>
+<td><a href="x86decomp-testkit-self-tests-test-adapter-capabilities/">x86decomp_testkit.self_tests.test_adapter_capabilities</a></td>
+<td>test-suite</td>
+<td><code>test-suite/src/x86decomp_testkit/self_tests/test_adapter_capabilities.py</code></td>
+<td><code>29edcce9190f01a43c81eaa7a38a65e12ff049958a4bf735d2685d329b134fd9</code></td>
+<td>7</td>
+</tr>
+<tr>
+<td><a href="x86decomp-testkit-self-tests-test-adapter-detection-resolution/">x86decomp_testkit.self_tests.test_adapter_detection_resolution</a></td>
+<td>test-suite</td>
+<td><code>test-suite/src/x86decomp_testkit/self_tests/test_adapter_detection_resolution.py</code></td>
+<td><code>f5088b0b7ffcea762bf15990d087f76b782ae7d2ad88316aa0f532e5620c5cd3</code></td>
+<td>9</td>
+</tr>
+<tr>
+<td><a href="x86decomp-testkit-self-tests-test-archive-security/">x86decomp_testkit.self_tests.test_archive_security</a></td>
+<td>test-suite</td>
+<td><code>test-suite/src/x86decomp_testkit/self_tests/test_archive_security.py</code></td>
+<td><code>c9a85a238d72824ef8e346e340dc2607f0ce75d17c102e8d1fb5812973e6c60a</code></td>
+<td>4</td>
+</tr>
+<tr>
+<td><a href="x86decomp-testkit-self-tests-test-cli-and-installation/">x86decomp_testkit.self_tests.test_cli_and_installation</a></td>
+<td>test-suite</td>
+<td><code>test-suite/src/x86decomp_testkit/self_tests/test_cli_and_installation.py</code></td>
+<td><code>a732ea719dcdebc30e0c4a2bdfb75be4c74ebd55ce96ddc99c70faf3a4ac2092</code></td>
+<td>4</td>
+</tr>
+<tr>
+<td><a href="x86decomp-testkit-self-tests-test-config-models/">x86decomp_testkit.self_tests.test_config_models</a></td>
+<td>test-suite</td>
+<td><code>test-suite/src/x86decomp_testkit/self_tests/test_config_models.py</code></td>
+<td><code>f4537a948d0a737075e16a1003b9a8b8e99f8369edc1248c29caba7e140586ae</code></td>
+<td>3</td>
+</tr>
+<tr>
+<td><a href="x86decomp-testkit-self-tests-test-inventory-reports-process/">x86decomp_testkit.self_tests.test_inventory_reports_process</a></td>
+<td>test-suite</td>
+<td><code>test-suite/src/x86decomp_testkit/self_tests/test_inventory_reports_process.py</code></td>
+<td><code>382524e4b814f813ea18b7ba1012522f9176997e4be92d3e59c59c0911784a11</code></td>
+<td>5</td>
+</tr>
+<tr>
+<td><a href="x86decomp-testkit-suites/">x86decomp_testkit.suites</a></td>
+<td>test-suite</td>
+<td><code>test-suite/src/x86decomp_testkit/suites.py</code></td>
+<td><code>010c3da7b0b415857c7764b44e39863447e2f4245d68aea69c7513038a80225d</code></td>
+<td>12</td>
+</tr>
+<tr>
+<td><a href="x86decomp-testkit-timeutil/">x86decomp_testkit.timeutil</a></td>
+<td>test-suite</td>
+<td><code>test-suite/src/x86decomp_testkit/timeutil.py</code></td>
+<td><code>32bb1893be8e6d365c6781ac07e4d74bcb24ecea8eb29d35fb449432737ddc43</code></td>
+<td>1</td>
+</tr>
+<tr>
+<td><a href="x86decomp-testkit-toolkit-tests---init--/">x86decomp_testkit.toolkit_tests.<strong>init</strong></a></td>
+<td>test-suite</td>
+<td><code>test-suite/src/x86decomp_testkit/toolkit_tests/__init__.py</code></td>
+<td><code>59233872c30dd4805dd978aca63924506145697eab953e5e5d741c6cd17bd96c</code></td>
+<td>0</td>
+</tr>
+<tr>
+<td><a href="x86decomp-testkit-toolkit-tests-test-public-api-contract/">x86decomp_testkit.toolkit_tests.test_public_api_contract</a></td>
+<td>test-suite</td>
+<td><code>test-suite/src/x86decomp_testkit/toolkit_tests/test_public_api_contract.py</code></td>
+<td><code>a171bf51a1313d918e7f546817fa6525008b245dba8d47a8dde7e22785539b0b</code></td>
+<td>32</td>
+</tr>
+</tbody>
+</table></p>
+    </article>
+</section>
+            <!-- endblock -->
+
+            <!-- block footer -->
+                <footer>
+    <div class="d-flex flex-sm-row justify-content-between py-2 border-top drac-text-black drac-bg-cyan-green">
+        <a href="https://github.com/dracula/mkdocs" target="_blank" style="padding-left: 1%;"
+            class="footer-text drac-anchor drac-text-black drac-text-purple--hover">
+            Made with Dracula Theme for MkDocs
+        </a>
+    </div>
+</footer>
+            <!-- endblock -->
+        </div>
+
+    </main>
+
+        <script>var base_url = '..';</script>
+        <script src="../assets/js/jquery-3.3.1.slim.min.js"></script>
+        <script src="../assets/js/bootstrap.bundle.min.js"></script>
+        <script src="../assets/js/mkdocs.js"></script>
+			<script src="../search/main.js" defer></script>
+
+</body>
+
+</html>

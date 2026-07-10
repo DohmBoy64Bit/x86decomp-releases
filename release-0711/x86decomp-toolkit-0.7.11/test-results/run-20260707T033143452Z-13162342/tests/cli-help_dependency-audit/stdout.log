@@ -1,8 +1,0 @@
-usage: x86decomp dependency-audit [-h] [--executable EXECUTABLE]
-                                  [--timeout TIMEOUT] [--report REPORT]
-
-options:
-  -h, --help            show this help message and exit
-  --executable EXECUTABLE
-  --timeout TIMEOUT
-  --report REPORT

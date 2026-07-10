@@ -1,7 +1,0 @@
-2026-07-06T22:52:08.964Z INFO x86decomp_testkit building toolkit inventory and enforcing the feature catalog
-2026-07-06T22:52:10.885Z INFO x86decomp_testkit running structural and contract tests
-2026-07-06T22:52:13.366Z INFO x86decomp_testkit parse-testing every discovered CLI command
-2026-07-06T22:56:13.634Z INFO x86decomp_testkit running the verification harness self-tests
-2026-07-06T22:56:15.703Z INFO x86decomp_testkit running toolkit and supplemental pytest suites under branch coverage
-2026-07-06T22:58:13.809Z INFO x86decomp_testkit building and clean-installing toolkit distributions
-2026-07-06T22:58:39.094Z INFO x86decomp_testkit running installed-adapter tests; unresolved adapters become BLOCKED

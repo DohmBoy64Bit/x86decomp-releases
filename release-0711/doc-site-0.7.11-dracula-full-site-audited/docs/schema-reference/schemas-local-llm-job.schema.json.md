@@ -1,0 +1,68 @@
+---
+title: schemas/local-llm/job.schema.json
+description: Schema reference page for schemas/local-llm/job.schema.json.
+---
+
+# `schemas/local-llm/job.schema.json`
+
+- SHA-256: `6ac68b5f4f22855154f8ec09e599c7caa3ce12d117fb125a0bae8e4dce0197a8`
+- Size: `1900` bytes
+- Title: Local LLM C generation and byte-match job
+- Type: `object`
+
+```json
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://x86decomp.local/schemas/local-llm/job.schema.json",
+  "title": "Local LLM C generation and byte-match job",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "id", "function_name", "architecture"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "id": {"type": "string", "minLength": 1},
+    "function_name": {"type": "string", "minLength": 1},
+    "symbol": {"type": "string", "minLength": 1},
+    "architecture": {"enum": ["x86", "x86_64"]},
+    "mnemonics": {"type": "string", "minLength": 1},
+    "mnemonics_file": {"type": "string", "minLength": 1},
+    "target_bytes_hex": {"type": "string", "minLength": 2},
+    "target_bytes_file": {"type": "string", "minLength": 1},
+    "base_rva": {"type": "integer", "minimum": 0},
+    "image_base": {"type": "integer", "minimum": 0},
+    "symbol_map": {
+      "oneOf": [
+        {"type": "object"},
+        {"type": "array", "items": {"type": "object"}}
+      ]
+    },
+    "section_placements": {"type": "object"},
+    "abi": {"type": "object"},
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "decompiler_c": {"type": "string"},
+        "pcode": {"type": "string"},
+        "references": {"type": "string"},
+        "analyst_notes": {"type": "string"}
+      }
+    },
+    "max_attempts": {"type": "integer", "minimum": 1, "maximum": 32}
+  },
+  "allOf": [
+    {
+      "oneOf": [
+        {"required": ["mnemonics"], "not": {"required": ["mnemonics_file"]}},
+        {"required": ["mnemonics_file"], "not": {"required": ["mnemonics"]}}
+      ]
+    },
+    {
+      "oneOf": [
+        {"required": ["target_bytes_hex"], "not": {"required": ["target_bytes_file"]}},
+        {"required": ["target_bytes_file"], "not": {"required": ["target_bytes_hex"]}}
+      ]
+    }
+  ]
+}
+```

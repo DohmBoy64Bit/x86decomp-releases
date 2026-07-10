@@ -1,0 +1,5 @@
+mkdocs==1.6.1
+mkdocs-dracula-theme==1.0.9
+markdownify==1.2.3
+beautifulsoup4>=4.13,<5
+PyYAML>=6,<7

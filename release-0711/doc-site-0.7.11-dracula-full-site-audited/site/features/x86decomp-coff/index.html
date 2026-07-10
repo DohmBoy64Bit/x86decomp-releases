@@ -1,0 +1,791 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+        <title>x86decomp.coff - x86decomp 0.7.11 Docs</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        
+        
+        
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="../../assets/css/darcula-highlight.min.css">
+
+        <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../assets/css/dracula-ui.min.css">
+        <link rel="stylesheet" href="../../assets/css/mkdocs.min.css">
+            <link href="../../assets/x86decomp-dracula-overrides.css" rel="stylesheet">
+
+        
+            <link  rel="icon" type="image/x-icon" href="../../assets/img/favicon.ico">
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+                <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+
+<body class="drac-bg-black-secondary drac-text-grey-ternary drac-text drac-scrollbar-purple">
+
+    <main class="d-flex">
+
+        <!-- block sidebar -->
+            <nav id="sidebar" class="sidebar drac-bg-black">
+    <div class="custom-menu">
+        <button type="button" id="sidebarCollapse" class="btn btn-primary">
+            <i class="fa fa-bars"></i>
+            <span class="sr-only">Menu</span>
+        </button>
+    </div>
+
+    <div class="p-4">
+        
+
+        <div class="drac-text-center">
+            
+                <span class="drac-text drac-line-height drac-text-white">x86decomp 0.7.11 Docs</span>
+            
+        </div>
+
+        <div class="drac-box flex-column">
+            <ul class="dot-ul">
+                <li><div class="dot-li drac-bg-cyan"></div></li>
+                <li><div class="dot-li drac-bg-green"></div></li>
+                <li><div class="dot-li drac-bg-orange"></div></li>
+                <li><div class="dot-li drac-bg-pink"></div></li>
+                <li><div class="dot-li drac-bg-purple"></div></li>
+                <li><div class="dot-li drac-bg-red"></div></li>
+                <li><div class="dot-li drac-bg-yellow"></div></li>
+            </ul>
+        </div>
+
+        <hr class="drac-divider" />
+
+        <!-- block menu -->
+        <ul class="mb-5 drac-list drac-list-none">
+            
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Home
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../../getting-started/"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Getting Started
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#workflows-collapse" aria-expanded="false">
+                    Workflows
+                </a>
+                <div class="collapse" id="workflows-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../workflows/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Workflow Guide
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../local-llm/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Local LLM C Generation
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../decompilation-acceleration/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Decompilation Acceleration
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../project-examples/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Project Examples
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#reference-collapse" aria-expanded="false">
+                    Reference
+                </a>
+                <div class="collapse" id="reference-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../reference/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../architecture/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Architecture
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../commands/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Commands
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../release-artifacts/COMMAND_REFERENCE_0.7.11/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Command Reference 0.7.11
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../schemas/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Schemas
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../integrations/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Integrations
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Source Modules
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../functions/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Function Index
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../tests/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Tests
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../release-artifacts/DOCSTRING_AUDIT_0.7.11/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Docstring Audit
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#release-evidence-collapse" aria-expanded="false">
+                    Release Evidence
+                </a>
+                <div class="collapse" id="release-evidence-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../release-evidence/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../release-artifacts/SECOND_AUDIT_FIX_REPORT_0.7.11/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Second Audit Fix Report
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../release-artifacts/DOCSTRING_AUDIT_0.7.11/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Docstring Audit
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../release-artifacts/COMMAND_REFERENCE_0.7.11/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Command Reference 0.7.11
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../verification/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Verification
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../source-coverage/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Source Coverage
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../changelog/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Changelog
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../about/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            About
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <!-- endblock -->
+    </div>
+</nav>
+        <!-- endblock -->
+
+        <nav class="divider drac-bg-purple-cyan"></nav>
+
+        <div class="content">
+            <!-- block header -->
+                <header>
+    <nav class="navbar navbar-expand-xl drac-bg-purple">
+        <div class="container-fluid">
+            
+            <button class="navbar-toggler w-100 text-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMenu"
+                aria-controls="navbarsMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse flex-column ml-auto" id="navbarsMenu">
+                <ul class="navbar-nav text-md-center">
+
+                    <!-- block preview -->
+                    <li class="nav-item">
+                            
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block search -->
+                    <li class="nav-item"><div role="search" class="search-box">
+	<form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+		<input type="text" name="q" class="drac-input drac-input-search drac-input-white drac-text-white drac-bg-black-secondary"
+		placeholder="Search docs" title="Type search term here" />
+	</form>
+</div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block source -->
+                    <li class="nav-item">
+                        
+                    </li>
+                    <!--  endblock -->
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+</header>
+            <!-- endblock -->
+
+            <!-- block content -->
+                <section class="p-md-5 section-content">
+    <article>
+        <p><h1 id="x86decompcoff"><code>x86decomp.coff</code></h1>
+<ul>
+<li>Area: <code>toolkit</code></li>
+<li>Source path: <code>src/x86decomp/coff.py</code></li>
+<li>SHA-256: <code>4630e57a2d64ffb3d9961e044437d5fe5f0bb4811a2c9748515baf59b167f798</code></li>
+<li>Size: <code>51950</code> bytes</li>
+<li>Lines: <code>1395</code></li>
+</ul>
+<h2 id="module-docstring">Module docstring</h2>
+<p>Strict COFF object parsing, COMDAT resolution, and deterministic synthesis.</p>
+<p>The implementation covers classic Microsoft COFF and <code>ANON_OBJECT_HEADER_BIGOBJ</code>
+objects for IMAGE_FILE_MACHINE_I386 and IMAGE_FILE_MACHINE_AMD64.  It preserves
+auxiliary symbol records, section-definition COMDAT metadata, weak externals,
+function definitions, relocation-overflow records, and enough linker semantics
+to reconstruct deterministic object groups for matching-decompilation projects.</p>
+<p>It intentionally does not pretend that a linked PE still contains every original
+COFF relocation.  This module operates on actual object files or explicitly
+reconstructed synthetic objects.</p>
+<h2 id="symbols">Symbols</h2>
+<table>
+<thead>
+<tr>
+<th>Kind</th>
+<th>Name</th>
+<th>Line</th>
+<th>Docstring summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>function</td>
+<td><code>relocation_name</code></td>
+<td>128</td>
+<td>Execute the relocation name operation for the current toolkit workflow.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>relocation_width</code></td>
+<td>134</td>
+<td>Execute the relocation width operation for the current toolkit workflow.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>relocation_is_pc_relative</code></td>
+<td>140</td>
+<td>Execute the relocation is pc relative operation for the current toolkit workflow.</td>
+</tr>
+<tr>
+<td>class</td>
+<td><code>CoffRelocation</code></td>
+<td>148</td>
+<td>Store validated coff relocation fields used by toolkit reports and adapters.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>width</code></td>
+<td>156</td>
+<td>Execute the width operation for the current toolkit workflow.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>to_dict</code></td>
+<td>160</td>
+<td>Return a serializable dictionary representation.</td>
+</tr>
+<tr>
+<td>class</td>
+<td><code>SectionDefinitionAux</code></td>
+<td>176</td>
+<td>Store validated section definition aux fields used by toolkit reports and adapters.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>selection_name</code></td>
+<td>186</td>
+<td>Select ion name for the current toolkit workflow.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>to_dict</code></td>
+<td>190</td>
+<td>Return a serializable dictionary representation.</td>
+</tr>
+<tr>
+<td>class</td>
+<td><code>FunctionDefinitionAux</code></td>
+<td>206</td>
+<td>Store validated function definition aux fields used by toolkit reports and adapters.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>to_dict</code></td>
+<td>213</td>
+<td>Return a serializable dictionary representation.</td>
+</tr>
+<tr>
+<td>class</td>
+<td><code>WeakExternalAux</code></td>
+<td>225</td>
+<td>Store validated weak external aux fields used by toolkit reports and adapters.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>to_dict</code></td>
+<td>230</td>
+<td>Return a serializable dictionary representation.</td>
+</tr>
+<tr>
+<td>class</td>
+<td><code>FileAux</code></td>
+<td>242</td>
+<td>Store validated file aux fields used by toolkit reports and adapters.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>to_dict</code></td>
+<td>246</td>
+<td>Return a serializable dictionary representation.</td>
+</tr>
+<tr>
+<td>class</td>
+<td><code>RawAux</code></td>
+<td>252</td>
+<td>Store validated raw aux fields used by toolkit reports and adapters.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>to_dict</code></td>
+<td>256</td>
+<td>Return a serializable dictionary representation.</td>
+</tr>
+<tr>
+<td>class</td>
+<td><code>CoffSection</code></td>
+<td>265</td>
+<td>Store validated coff section fields used by toolkit reports and adapters.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>is_comdat</code></td>
+<td>282</td>
+<td>Execute the is comdat operation for the current toolkit workflow.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>comdat_selection_name</code></td>
+<td>287</td>
+<td>Execute the comdat selection name operation for the current toolkit workflow.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>alignment_power</code></td>
+<td>292</td>
+<td>Execute the alignment power operation for the current toolkit workflow.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>alignment</code></td>
+<td>302</td>
+<td>Execute the alignment operation for the current toolkit workflow.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>to_dict</code></td>
+<td>307</td>
+<td>Return a serializable dictionary representation.</td>
+</tr>
+<tr>
+<td>class</td>
+<td><code>CoffSymbol</code></td>
+<td>333</td>
+<td>Store validated coff symbol fields used by toolkit reports and adapters.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>is_function</code></td>
+<td>345</td>
+<td>Execute the is function operation for the current toolkit workflow.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>section_definition</code></td>
+<td>352</td>
+<td>Execute the section definition operation for the current toolkit workflow.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>function_definition</code></td>
+<td>360</td>
+<td>Execute the function definition operation for the current toolkit workflow.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>weak_external</code></td>
+<td>368</td>
+<td>Execute the weak external operation for the current toolkit workflow.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>to_dict</code></td>
+<td>375</td>
+<td>Return a serializable dictionary representation.</td>
+</tr>
+<tr>
+<td>class</td>
+<td><code>CoffObject</code></td>
+<td>391</td>
+<td>Store validated coff object fields used by toolkit reports and adapters.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>architecture</code></td>
+<td>404</td>
+<td>Execute the architecture operation for the current toolkit workflow.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>section</code></td>
+<td>412</td>
+<td>Execute the section operation for the current toolkit workflow.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>find_symbols</code></td>
+<td>418</td>
+<td>Execute the find symbols operation for the current toolkit workflow.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>symbol_by_index</code></td>
+<td>425</td>
+<td>Execute the symbol by index operation for the current toolkit workflow.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>to_dict</code></td>
+<td>429</td>
+<td>Return a serializable dictionary representation.</td>
+</tr>
+<tr>
+<td>class</td>
+<td><code>ExtractedSymbol</code></td>
+<td>448</td>
+<td>Store validated extracted symbol fields used by toolkit reports and adapters.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>to_dict</code></td>
+<td>457</td>
+<td>Return a serializable dictionary representation.</td>
+</tr>
+<tr>
+<td>class</td>
+<td><code>ComdatCandidate</code></td>
+<td>470</td>
+<td>Store validated comdat candidate fields used by toolkit reports and adapters.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>to_dict</code></td>
+<td>482</td>
+<td>Return a serializable dictionary representation.</td>
+</tr>
+<tr>
+<td>class</td>
+<td><code>ComdatResolution</code></td>
+<td>499</td>
+<td>Store validated comdat resolution fields used by toolkit reports and adapters.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>valid</code></td>
+<td>506</td>
+<td>Execute the valid operation for the current toolkit workflow.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>to_dict</code></td>
+<td>510</td>
+<td>Return a serializable dictionary representation.</td>
+</tr>
+<tr>
+<td>class</td>
+<td><code>SyntheticSymbolSpec</code></td>
+<td>522</td>
+<td>Store validated synthetic symbol spec fields used by toolkit reports and adapters.</td>
+</tr>
+<tr>
+<td>class</td>
+<td><code>SyntheticSectionSpec</code></td>
+<td>533</td>
+<td>Store validated synthetic section spec fields used by toolkit reports and adapters.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>_read_string_table</code></td>
+<td>547</td>
+<td>Support read string table processing for internal toolkit callers.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>_string_at</code></td>
+<td>562</td>
+<td>Support string at processing for internal toolkit callers.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>_decode_symbol_name</code></td>
+<td>572</td>
+<td>Support decode symbol name processing for internal toolkit callers.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>_decode_section_name</code></td>
+<td>580</td>
+<td>Support decode section name processing for internal toolkit callers.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>_parse_header</code></td>
+<td>588</td>
+<td>Return variant, machine, sections, timestamp, symptr, symcount,</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>_parse_auxiliary_records</code></td>
+<td>642</td>
+<td>Support parse auxiliary records processing for internal toolkit callers.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>_read_addend</code></td>
+<td>701</td>
+<td>Support read addend processing for internal toolkit callers.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>parse_coff_bytes</code></td>
+<td>708</td>
+<td>Parse coff bytes for the current toolkit workflow.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>parse_coff</code></td>
+<td>907</td>
+<td>Parse coff for the current toolkit workflow.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>extract_symbol</code></td>
+<td>915</td>
+<td>Extract symbol for the current toolkit workflow.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>collect_comdat_candidates</code></td>
+<td>971</td>
+<td>Execute the collect comdat candidates operation for the current toolkit workflow.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>resolve_comdats</code></td>
+<td>999</td>
+<td>Resolve COMDAT groups using PE/COFF selection semantics.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>_encode_name</code></td>
+<td>1100</td>
+<td>Support encode name processing for internal toolkit callers.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>_section_aux_bytes</code></td>
+<td>1110</td>
+<td>Support section aux bytes processing for internal toolkit callers.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>build_synthetic_coff_object</code></td>
+<td>1127</td>
+<td>Build a deterministic classic COFF object with multiple sections.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>synthetic_symbol_indices</code></td>
+<td>1244</td>
+<td>Execute the synthetic symbol indices operation for the current toolkit workflow.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>build_synthetic_coff</code></td>
+<td>1256</td>
+<td>Backward-compatible one-section synthetic COFF builder.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>build_comdat_coff</code></td>
+<td>1296</td>
+<td>Build comdat coff for the current toolkit workflow.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>write_synthetic_coff</code></td>
+<td>1362</td>
+<td>Write synthetic coff for the current toolkit workflow.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>write_synthetic_coff_object</code></td>
+<td>1380</td>
+<td>Write synthetic coff object for the current toolkit workflow.</td>
+</tr>
+</tbody>
+</table></p>
+    </article>
+</section>
+            <!-- endblock -->
+
+            <!-- block footer -->
+                <footer>
+    <div class="d-flex flex-sm-row justify-content-between py-2 border-top drac-text-black drac-bg-cyan-green">
+        <a href="https://github.com/dracula/mkdocs" target="_blank" style="padding-left: 1%;"
+            class="footer-text drac-anchor drac-text-black drac-text-purple--hover">
+            Made with Dracula Theme for MkDocs
+        </a>
+    </div>
+</footer>
+            <!-- endblock -->
+        </div>
+
+    </main>
+
+        <script>var base_url = '../..';</script>
+        <script src="../../assets/js/jquery-3.3.1.slim.min.js"></script>
+        <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+        <script src="../../assets/js/mkdocs.js"></script>
+			<script src="../../search/main.js" defer></script>
+
+</body>
+
+</html>

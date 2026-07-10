@@ -1,8 +1,0 @@
-.........................                                                [100%]
-============================== warnings summary ===============================
-src\x86decomp_testkit\config.py:14
-  C:\Users\SeanS\Downloads\x86decomp\release-0711\x86decomp-toolkit-0.7.11\test-suite\src\x86decomp_testkit\config.py:14: PytestCollectionWarning: cannot collect test class 'TestConfig' because it has a __init__ constructor (from: tests/test_adapter_capabilities.py)
-    @dataclass
-
--- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
-25 passed, 1 warning in 1.74s

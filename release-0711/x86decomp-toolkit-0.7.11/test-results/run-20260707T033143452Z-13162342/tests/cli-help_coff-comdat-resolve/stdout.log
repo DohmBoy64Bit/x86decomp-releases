@@ -1,9 +1,0 @@
-usage: x86decomp coff-comdat-resolve [-h] [--report REPORT]
-                                     objects [objects ...]
-
-positional arguments:
-  objects
-
-options:
-  -h, --help       show this help message and exit
-  --report REPORT

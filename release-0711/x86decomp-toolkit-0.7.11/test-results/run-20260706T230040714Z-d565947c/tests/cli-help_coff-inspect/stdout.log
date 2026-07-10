@@ -1,7 +1,0 @@
-usage: x86decomp coff-inspect [-h] object
-
-positional arguments:
-  object
-
-options:
-  -h, --help  show this help message and exit

@@ -1,0 +1,75 @@
+---
+title: schemas/project.schema.json
+description: Schema reference page for schemas/project.schema.json.
+---
+
+# `schemas/project.schema.json`
+
+- SHA-256: `4ab19d9064e8d249fdd545d1fa183920902d6afbe647d004ddd571a208295b0b`
+- Size: `2917` bytes
+- Title: x86decomp project (schema versions 1, 2, and 3)
+- Type: `object`
+
+```json
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:x86decomp:schema:project:3",
+  "title": "x86decomp project (schema versions 1, 2, and 3)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "project_id", "created_at", "supported_scope", "binary", "program_manifest", "memory_ledger", "function_root", "evidence_root", "status"],
+  "properties": {
+    "schema_version": {"enum": [1, 2, 3]},
+    "project_id": {"type": "string", "pattern": "^(?:x86d|x64d)-[0-9a-f]{16}-[0-9a-f]{8}$"},
+    "created_at": {"type": "string", "format": "date-time"},
+    "supported_scope": {"enum": ["native Windows PE32 x86", "native Windows PE32+ x86-64"]},
+    "architecture": {"enum": ["x86", "x86_64"]},
+    "default_modes": {"const": ["matching", "functional"]},
+    "binary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "source_kind", "path", "sha256", "size"],
+      "properties": {
+        "name": {"type": "string", "minLength": 1},
+        "source_kind": {"enum": ["copied", "external_reference"]},
+        "path": {"type": "string", "minLength": 1},
+        "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "size": {"type": "integer", "minimum": 1}
+      }
+    },
+    "program_manifest": {"type": "string", "minLength": 1},
+    "analysis_database": {"type": "string", "minLength": 1},
+    "work_queue": {"type": "string", "minLength": 1},
+    "memory_ledger": {"type": "string", "minLength": 1},
+    "function_root": {"type": "string", "minLength": 1},
+    "evidence_root": {"type": "string", "minLength": 1},
+    "project_state_database": {"type": "string", "minLength": 1},
+    "content_store": {"type": "string", "minLength": 1},
+    "target_pack": {"type": "string", "minLength": 1},
+    "target_id": {"type": "string", "minLength": 1},
+    "template_kind": {"enum": ["matching", "functional", "hybrid"]},
+    "orchestration_root": {"type": "string", "minLength": 1},
+    "toolkit_release": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"},
+    "status": {"enum": ["initialized", "analyzing", "active", "archived"]}
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"schema_version": {"const": 1}}, "required": ["schema_version"]},
+      "then": {
+        "properties": {
+          "project_id": {"pattern": "^x86d-[0-9a-f]{16}-[0-9a-f]{8}$"},
+          "supported_scope": {"const": "native Windows PE32 x86"}
+        }
+      }
+    },
+    {
+      "if": {"properties": {"schema_version": {"enum": [2, 3]}}, "required": ["schema_version"]},
+      "then": {"required": ["architecture", "default_modes", "analysis_database", "work_queue"]}
+    },
+    {
+      "if": {"properties": {"schema_version": {"const": 3}}, "required": ["schema_version"]},
+      "then": {"required": ["project_state_database", "content_store", "target_pack", "orchestration_root", "toolkit_release"]}
+    }
+  ]
+}
+```

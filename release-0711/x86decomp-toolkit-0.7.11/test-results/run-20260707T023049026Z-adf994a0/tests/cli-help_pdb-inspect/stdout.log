@@ -1,8 +1,0 @@
-usage: x86decomp pdb-inspect [-h] [--pe PE] pdb
-
-positional arguments:
-  pdb
-
-options:
-  -h, --help  show this help message and exit
-  --pe PE

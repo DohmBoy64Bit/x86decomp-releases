@@ -1,0 +1,53 @@
+---
+title: schemas/image-profile.schema.json
+description: Schema reference page for schemas/image-profile.schema.json.
+---
+
+# `schemas/image-profile.schema.json`
+
+- SHA-256: `5916e3589fb77876a26861ccfea7dfbfbf4b9c55e92243ed66dae4270dad70d7`
+- Size: `1687` bytes
+- Title: Target-specific PE image layout profile
+- Type: `object`
+
+```json
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:x86decomp:schema:image-profile:1",
+  "title": "Target-specific PE image layout profile",
+  "type": "object",
+  "required": ["schema_version", "kind", "reference_sha256", "architecture", "section_order", "normalization"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "kind": {"const": "target_specific_image_profile"},
+    "reference_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "architecture": {"enum": ["x86", "x86_64"]},
+    "image_base": {"type": "integer", "minimum": 0},
+    "entry_rva": {"type": "integer", "minimum": 0},
+    "section_order": {"type": "array", "items": {"type": "string"}},
+    "sections": {"type": "array", "items": {"type": "object"}},
+    "normalization": {
+      "type": "object",
+      "required": ["coff_timestamp", "checksum", "certificate_directory_entry", "debug_directory_records", "rebase_candidate", "extra_ranges"],
+      "properties": {
+        "coff_timestamp": {"type": "boolean"},
+        "checksum": {"type": "boolean"},
+        "certificate_directory_entry": {"type": "boolean"},
+        "debug_directory_records": {"type": "boolean"},
+        "rebase_candidate": {"type": "boolean"},
+        "extra_ranges": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["start", "end", "reason"],
+            "properties": {"start": {"type": "integer", "minimum": 0}, "end": {"type": "integer", "minimum": 0}, "reason": {"type": "string"}},
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": true
+}
+```

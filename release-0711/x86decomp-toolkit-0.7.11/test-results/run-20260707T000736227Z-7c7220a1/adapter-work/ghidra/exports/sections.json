@@ -1,7 +1,0 @@
-{
-  "schema_version": 1,
-  "blocks": [
-    {"name": "Headers", "start": "00400000", "end_inclusive": "004001ff", "size": 512, "initialized": true, "read": true, "write": false, "execute": false, "volatile": false, "source_name": ""},
-    {"name": ".text", "start": "00401000", "end_inclusive": "004011ff", "size": 512, "initialized": true, "read": true, "write": false, "execute": true, "volatile": false, "source_name": ""}
-  ]
-}

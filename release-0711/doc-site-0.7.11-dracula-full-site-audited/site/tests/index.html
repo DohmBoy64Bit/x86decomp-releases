@@ -1,0 +1,719 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+        <title>Tests - x86decomp 0.7.11 Docs</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        
+        
+        
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="../assets/css/darcula-highlight.min.css">
+
+        <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../assets/css/dracula-ui.min.css">
+        <link rel="stylesheet" href="../assets/css/mkdocs.min.css">
+            <link href="../assets/x86decomp-dracula-overrides.css" rel="stylesheet">
+
+        
+            <link  rel="icon" type="image/x-icon" href="../assets/img/favicon.ico">
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+                <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+
+<body class="drac-bg-black-secondary drac-text-grey-ternary drac-text drac-scrollbar-purple">
+
+    <main class="d-flex">
+
+        <!-- block sidebar -->
+            <nav id="sidebar" class="sidebar drac-bg-black">
+    <div class="custom-menu">
+        <button type="button" id="sidebarCollapse" class="btn btn-primary">
+            <i class="fa fa-bars"></i>
+            <span class="sr-only">Menu</span>
+        </button>
+    </div>
+
+    <div class="p-4">
+        
+
+        <div class="drac-text-center">
+            
+                <span class="drac-text drac-line-height drac-text-white">x86decomp 0.7.11 Docs</span>
+            
+        </div>
+
+        <div class="drac-box flex-column">
+            <ul class="dot-ul">
+                <li><div class="dot-li drac-bg-cyan"></div></li>
+                <li><div class="dot-li drac-bg-green"></div></li>
+                <li><div class="dot-li drac-bg-orange"></div></li>
+                <li><div class="dot-li drac-bg-pink"></div></li>
+                <li><div class="dot-li drac-bg-purple"></div></li>
+                <li><div class="dot-li drac-bg-red"></div></li>
+                <li><div class="dot-li drac-bg-yellow"></div></li>
+            </ul>
+        </div>
+
+        <hr class="drac-divider" />
+
+        <!-- block menu -->
+        <ul class="mb-5 drac-list drac-list-none">
+            
+            <li class="drac-box">
+                <a href=".."
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Home
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../getting-started/"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Getting Started
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href=".."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#workflows-collapse" aria-expanded="false">
+                    Workflows
+                </a>
+                <div class="collapse" id="workflows-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../workflows/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Workflow Guide
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../local-llm/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Local LLM C Generation
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../decompilation-acceleration/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Decompilation Acceleration
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../project-examples/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Project Examples
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href=".."
+                    class=" active 
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#reference-collapse" aria-expanded="false">
+                    Reference
+                </a>
+                <div class="collapse" id="reference-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../reference/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../architecture/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Architecture
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../commands/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Commands
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../release-artifacts/COMMAND_REFERENCE_0.7.11/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Command Reference 0.7.11
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../schemas/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Schemas
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../integrations/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Integrations
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../features/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Source Modules
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../functions/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Function Index
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="./"
+            class=" active 
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Tests
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../release-artifacts/DOCSTRING_AUDIT_0.7.11/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Docstring Audit
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href=".."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#release-evidence-collapse" aria-expanded="false">
+                    Release Evidence
+                </a>
+                <div class="collapse" id="release-evidence-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../release-evidence/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../release-artifacts/SECOND_AUDIT_FIX_REPORT_0.7.11/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Second Audit Fix Report
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../release-artifacts/DOCSTRING_AUDIT_0.7.11/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Docstring Audit
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../release-artifacts/COMMAND_REFERENCE_0.7.11/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Command Reference 0.7.11
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../verification/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Verification
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../source-coverage/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Source Coverage
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../changelog/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Changelog
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../about/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            About
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <!-- endblock -->
+    </div>
+</nav>
+        <!-- endblock -->
+
+        <nav class="divider drac-bg-purple-cyan"></nav>
+
+        <div class="content">
+            <!-- block header -->
+                <header>
+    <nav class="navbar navbar-expand-xl drac-bg-purple">
+        <div class="container-fluid">
+            
+            <button class="navbar-toggler w-100 text-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMenu"
+                aria-controls="navbarsMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse flex-column ml-auto" id="navbarsMenu">
+                <ul class="navbar-nav text-md-center">
+
+                    <!-- block preview -->
+                    <li class="nav-item">
+                            
+        <div class="container">
+            <div class="row row-preview">
+                <div class="col">
+                    <a href="../functions/"
+                        class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover">
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="../release-artifacts/DOCSTRING_AUDIT_0.7.11/"
+                        class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover" style="padding-left: 3%;">
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block search -->
+                    <li class="nav-item"><div role="search" class="search-box">
+	<form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+		<input type="text" name="q" class="drac-input drac-input-search drac-input-white drac-text-white drac-bg-black-secondary"
+		placeholder="Search docs" title="Type search term here" />
+	</form>
+</div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block source -->
+                    <li class="nav-item">
+                        
+                    </li>
+                    <!--  endblock -->
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+</header>
+            <!-- endblock -->
+
+            <!-- block content -->
+                <section class="p-md-5 section-content">
+    <article>
+        <p><h1 id="tests">Tests</h1>
+<p>Regenerated from test source files in the 0.7.11 bundle.</p>
+<ul>
+<li>Test source files: <strong>62</strong></li>
+<li>Test functions indexed: <strong>269</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Test source</th>
+<th>SHA-256</th>
+<th>Test functions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="test-suite-src-x86decomp-testkit-self-tests-test-adapter-capabilities.py/">test-suite/src/x86decomp_testkit/self_tests/test_adapter_capabilities.py</a></td>
+<td><code>29edcce9190f01a43c81eaa7a38a65e12ff049958a4bf735d2685d329b134fd9</code></td>
+<td>3</td>
+</tr>
+<tr>
+<td><a href="test-suite-src-x86decomp-testkit-self-tests-test-adapter-detection-resolution.py/">test-suite/src/x86decomp_testkit/self_tests/test_adapter_detection_resolution.py</a></td>
+<td><code>f5088b0b7ffcea762bf15990d087f76b782ae7d2ad88316aa0f532e5620c5cd3</code></td>
+<td>6</td>
+</tr>
+<tr>
+<td><a href="test-suite-src-x86decomp-testkit-self-tests-test-archive-security.py/">test-suite/src/x86decomp_testkit/self_tests/test_archive_security.py</a></td>
+<td><code>c9a85a238d72824ef8e346e340dc2607f0ce75d17c102e8d1fb5812973e6c60a</code></td>
+<td>4</td>
+</tr>
+<tr>
+<td><a href="test-suite-src-x86decomp-testkit-self-tests-test-cli-and-installation.py/">test-suite/src/x86decomp_testkit/self_tests/test_cli_and_installation.py</a></td>
+<td><code>a732ea719dcdebc30e0c4a2bdfb75be4c74ebd55ce96ddc99c70faf3a4ac2092</code></td>
+<td>2</td>
+</tr>
+<tr>
+<td><a href="test-suite-src-x86decomp-testkit-self-tests-test-config-models.py/">test-suite/src/x86decomp_testkit/self_tests/test_config_models.py</a></td>
+<td><code>f4537a948d0a737075e16a1003b9a8b8e99f8369edc1248c29caba7e140586ae</code></td>
+<td>2</td>
+</tr>
+<tr>
+<td><a href="test-suite-src-x86decomp-testkit-self-tests-test-inventory-reports-process.py/">test-suite/src/x86decomp_testkit/self_tests/test_inventory_reports_process.py</a></td>
+<td><code>382524e4b814f813ea18b7ba1012522f9176997e4be92d3e59c59c0911784a11</code></td>
+<td>4</td>
+</tr>
+<tr>
+<td><a href="test-suite-src-x86decomp-testkit-toolkit-tests-test-public-api-contract.py/">test-suite/src/x86decomp_testkit/toolkit_tests/test_public_api_contract.py</a></td>
+<td><code>a171bf51a1313d918e7f546817fa6525008b245dba8d47a8dde7e22785539b0b</code></td>
+<td>21</td>
+</tr>
+<tr>
+<td><a href="test-suite-tests-test-adapter-capabilities.py/">test-suite/tests/test_adapter_capabilities.py</a></td>
+<td><code>47dde51aa511486350597ec6a786e4be9ed9bc229b02e9cd8d12baff0874f133</code></td>
+<td>3</td>
+</tr>
+<tr>
+<td><a href="test-suite-tests-test-adapter-detection-resolution.py/">test-suite/tests/test_adapter_detection_resolution.py</a></td>
+<td><code>7bd6c6fd94d35d1d0773bc1afd6d8b54e63cc8cafbfad512bed398b8f267cd1e</code></td>
+<td>6</td>
+</tr>
+<tr>
+<td><a href="test-suite-tests-test-architecture-maps.py/">test-suite/tests/test_architecture_maps.py</a></td>
+<td><code>038c3d80e169d6e6a44f57bb71c5ff92dcd09f63a2e3b556c01e35238c88515b</code></td>
+<td>4</td>
+</tr>
+<tr>
+<td><a href="test-suite-tests-test-archive-security.py/">test-suite/tests/test_archive_security.py</a></td>
+<td><code>14bc490ccfb85d8128b72f44afd3e949fed6c9c74b13dd9fff64ed2edcb80a65</code></td>
+<td>4</td>
+</tr>
+<tr>
+<td><a href="test-suite-tests-test-cli-and-installation.py/">test-suite/tests/test_cli_and_installation.py</a></td>
+<td><code>a11791dcef363beb875ac676f8b4627e2513ffbe2d9357360ce9a6c27cee45b0</code></td>
+<td>2</td>
+</tr>
+<tr>
+<td><a href="test-suite-tests-test-config-models.py/">test-suite/tests/test_config_models.py</a></td>
+<td><code>2a0ea2ddce38b40acc27cad53bd77822186b8e70ebaee405796b758f683d2ed3</code></td>
+<td>2</td>
+</tr>
+<tr>
+<td><a href="test-suite-tests-test-inventory-reports-process.py/">test-suite/tests/test_inventory_reports_process.py</a></td>
+<td><code>5f373ffc72fdbeefc5126f76eac31a7052181a5c2004318cb8c6d33678720b4d</code></td>
+<td>4</td>
+</tr>
+<tr>
+<td><a href="tests-assembly-test-annotation-materialize.py/">tests/assembly/test_annotation_materialize.py</a></td>
+<td><code>6e90b4e325e12eb3b851ca22d4364a19f3cf5257c0f07ac51e057a926d504b82</code></td>
+<td>8</td>
+</tr>
+<tr>
+<td><a href="tests-assembly-test-helpers-and-relocations.py/">tests/assembly/test_helpers_and_relocations.py</a></td>
+<td><code>a5a50f7860b8f169441105450065e74a15361ed37c0e5900681b457f20914943</code></td>
+<td>3</td>
+</tr>
+<tr>
+<td><a href="tests-assembly-test-pipeline-cli-schemas.py/">tests/assembly/test_pipeline_cli_schemas.py</a></td>
+<td><code>58c18cc8d7da6b1d2dac5b42383d20bc381e303a4c2be28b25e926118bb4db64</code></td>
+<td>8</td>
+</tr>
+<tr>
+<td><a href="tests-governance-test-core.py/">tests/governance/test_core.py</a></td>
+<td><code>2ebfd3a82a8f7cd6e6cedf5acc24e614c970800b66cc254784f4971a430bfff5</code></td>
+<td>17</td>
+</tr>
+<tr>
+<td><a href="tests-governance-test-governance-cli-schemas.py/">tests/governance/test_governance_cli_schemas.py</a></td>
+<td><code>3f4f42481f815ad565a6914f285531f1de81949bc00deac360ac1046e9658a96</code></td>
+<td>5</td>
+</tr>
+<tr>
+<td><a href="tests-governance-test-proof-plugin-worker.py/">tests/governance/test_proof_plugin_worker.py</a></td>
+<td><code>ee8681038c0ae0c7882402f41e3074c4412b73b4b4f7288b20012ebc80086e33</code></td>
+<td>8</td>
+</tr>
+<tr>
+<td><a href="tests-governance-test-worker-thread-safety.py/">tests/governance/test_worker_thread_safety.py</a></td>
+<td><code>2048ff5db8124a58271d493abfc152e62d7bbc89c176e6d79bace56e7b06917d</code></td>
+<td>2</td>
+</tr>
+<tr>
+<td><a href="tests-native-test-cli-schemas.py/">tests/native/test_cli_schemas.py</a></td>
+<td><code>2465fa36eac4def208df14ecdbec59429c1dc6cb0bed09e0757b18407062a4fa</code></td>
+<td>4</td>
+</tr>
+<tr>
+<td><a href="tests-native-test-inventory-and-loops.py/">tests/native/test_inventory_and_loops.py</a></td>
+<td><code>f809f5bf1a274bed3ca1456e2ebabdc90e12d8ad9ad17464d5da1e0883baa201</code></td>
+<td>3</td>
+</tr>
+<tr>
+<td><a href="tests-native-test-pe-hybrid.py/">tests/native/test_pe_hybrid.py</a></td>
+<td><code>9cc67751b07555ce543712122eff1abb9c9f687fe944b20cc3e8e49040ecfa9d</code></td>
+<td>4</td>
+</tr>
+<tr>
+<td><a href="tests-native-test-slots-matching.py/">tests/native/test_slots_matching.py</a></td>
+<td><code>94855914f406923ea02198bd7484d0f9d64ebb271dbe50c8dd54fbf8abca3a63</code></td>
+<td>4</td>
+</tr>
+<tr>
+<td><a href="tests-native-test-staging-loop-runtime-windows.py/">tests/native/test_staging_loop_runtime_windows.py</a></td>
+<td><code>cdc2f880f176575abf4e5db1220253592bea5149b9c66ae95d153c1ccd5f2b23</code></td>
+<td>4</td>
+</tr>
+<tr>
+<td><a href="tests-reconstruction-test-capsules-security-changesets.py/">tests/reconstruction/test_capsules_security_changesets.py</a></td>
+<td><code>9b65ff6137ee793b18776ceb283f7684ebcedd08100a6b6e42c40eb73b85c269</code></td>
+<td>4</td>
+</tr>
+<tr>
+<td><a href="tests-reconstruction-test-cli-schemas-retention.py/">tests/reconstruction/test_cli_schemas_retention.py</a></td>
+<td><code>c38bb38a3af81453e5a70293bf7a913ddd32c93bbfa21199f96e4d8a29e27ce2</code></td>
+<td>6</td>
+</tr>
+<tr>
+<td><a href="tests-reconstruction-test-decomp-acceleration.py/">tests/reconstruction/test_decomp_acceleration.py</a></td>
+<td><code>b446be684115257ad47fd9132319979d563495e7d965e7897ddd391f8bb59f4d</code></td>
+<td>3</td>
+</tr>
+<tr>
+<td><a href="tests-reconstruction-test-project-headers-builds.py/">tests/reconstruction/test_project_headers_builds.py</a></td>
+<td><code>2b401fe3f216891e28e3da29520ae5d322b45cb5f75721ebbeb7e42957e835c3</code></td>
+<td>3</td>
+</tr>
+<tr>
+<td><a href="tests-reconstruction-test-provenance-abi-tests.py/">tests/reconstruction/test_provenance_abi_tests.py</a></td>
+<td><code>172d0370abc39759bf296824921c2ad7c96089317051ff3fddadc75a34cf2264</code></td>
+<td>3</td>
+</tr>
+<tr>
+<td><a href="tests-reconstruction-test-real-project-acceleration.py/">tests/reconstruction/test_real_project_acceleration.py</a></td>
+<td><code>3dd8b6ae8dc6f943896a19d12c82da87811e72335662a825a4a4ff9ebd8ac198</code></td>
+<td>3</td>
+</tr>
+<tr>
+<td><a href="tests-test-abi-disassembly.py/">tests/test_abi_disassembly.py</a></td>
+<td><code>91ebeb183e6f9728fff8d8d828615c79506b7b1d2752a0caaf016379aec1c590</code></td>
+<td>1</td>
+</tr>
+<tr>
+<td><a href="tests-test-artifacts.py/">tests/test_artifacts.py</a></td>
+<td><code>7c850b2510db574ec42cd3e1c26245717d225e7a8e91dc66794b8772d797bc84</code></td>
+<td>2</td>
+</tr>
+<tr>
+<td><a href="tests-test-audit-fixes.py/">tests/test_audit_fixes.py</a></td>
+<td><code>4991a922981b8fe9e82a31b9b1ccfd9851449ef3d78b1525f244fca07527c2bc</code></td>
+<td>5</td>
+</tr>
+<tr>
+<td><a href="tests-test-coff.py/">tests/test_coff.py</a></td>
+<td><code>0db7135636f4571252ebc19b33c78b736d1c0e552707a4b9f7d0cfdb85b7796a</code></td>
+<td>2</td>
+</tr>
+<tr>
+<td><a href="tests-test-coff-archive.py/">tests/test_coff_archive.py</a></td>
+<td><code>38b8932cc6744db56c6ca164ad1749229f89daccd8e569f797be64b49b126a60</code></td>
+<td>3</td>
+</tr>
+<tr>
+<td><a href="tests-test-compiler.py/">tests/test_compiler.py</a></td>
+<td><code>a700c74ef73cc25a268f426b937f9d1a238ee2f0a26ad42333b0b328c58b911e</code></td>
+<td>1</td>
+</tr>
+<tr>
+<td><a href="tests-test-decompme-objdiff.py/">tests/test_decompme_objdiff.py</a></td>
+<td><code>cd8f3acb39d4c6b8c2c563b625e0e73e2fe39994483cb3096a3ac5c87ff70f9d</code></td>
+<td>2</td>
+</tr>
+<tr>
+<td><a href="tests-test-diffing.py/">tests/test_diffing.py</a></td>
+<td><code>de5433ce73dcb97007481caaed594b8b4f9331828f3ebd60873c784129597bd0</code></td>
+<td>2</td>
+</tr>
+<tr>
+<td><a href="tests-test-docstring-audit.py/">tests/test_docstring_audit.py</a></td>
+<td><code>21d346e4c07e552ee8c635a91030480a0ee28a595ba566ffac35e4a3b5a0d4ee</code></td>
+<td>3</td>
+</tr>
+<tr>
+<td><a href="tests-test-documentation.py/">tests/test_documentation.py</a></td>
+<td><code>1ad36a9753c326fb264cb0fbb286ea72d7c02303e46ca21c67cf61116228b954</code></td>
+<td>3</td>
+</tr>
+<tr>
+<td><a href="tests-test-dynamic-symbolic.py/">tests/test_dynamic_symbolic.py</a></td>
+<td><code>f664786ae11deadc81c601cf6442f4422b83e3ab3118e75e5384b0a046318be2</code></td>
+<td>2</td>
+</tr>
+<tr>
+<td><a href="tests-test-dynamorio.py/">tests/test_dynamorio.py</a></td>
+<td><code>41d1f65aeefadb38e4b937899e801f20a93e495c7933427a2c483d7a6d554fcc</code></td>
+<td>2</td>
+</tr>
+<tr>
+<td><a href="tests-test-evidence.py/">tests/test_evidence.py</a></td>
+<td><code>0b32cba7e0b11589daea1342943dab03f9a2f9ec8e36261ad0818ee3c0f53159</code></td>
+<td>2</td>
+</tr>
+<tr>
+<td><a href="tests-test-ghidra.py/">tests/test_ghidra.py</a></td>
+<td><code>923c2293e595fec0df1050bb2c3ee598d2341101bb86a68276710e132afb3c87</code></td>
+<td>1</td>
+</tr>
+<tr>
+<td><a href="tests-test-integration.py/">tests/test_integration.py</a></td>
+<td><code>91835325b62f0d2d14c0b444e88f6572ff68c70825e4932f94ea60fa4c5408cb</code></td>
+<td>2</td>
+</tr>
+<tr>
+<td><a href="tests-test-linker-metadata-corpus.py/">tests/test_linker_metadata_corpus.py</a></td>
+<td><code>8f0ae11983ae7264ab57a796a2f8fe155225fd61194674c7cc08796f681cf015</code></td>
+<td>10</td>
+</tr>
+<tr>
+<td><a href="tests-test-local-llm.py/">tests/test_local_llm.py</a></td>
+<td><code>68fce843df5a6b1ec7809824c973321e518d86503d6e93fe04142f9be8437157</code></td>
+<td>8</td>
+</tr>
+<tr>
+<td><a href="tests-test-mcp.py/">tests/test_mcp.py</a></td>
+<td><code>508a19efb6d5d7f8f5ba8103a7ec38595f76ca9734a820b8b7d839a1d22dd992</code></td>
+<td>1</td>
+</tr>
+<tr>
+<td><a href="tests-test-memory.py/">tests/test_memory.py</a></td>
+<td><code>90e42ba1551ef40809011ffa01a74e4deea641bd897a45163711ddea12dcae4d</code></td>
+<td>2</td>
+</tr>
+<tr>
+<td><a href="tests-test-modes-and-db.py/">tests/test_modes_and_db.py</a></td>
+<td><code>84554d4fd263de392d7d3e43471ad0b538672e354b28b1ad639ccbd8f5a60f94</code></td>
+<td>2</td>
+</tr>
+<tr>
+<td><a href="tests-test-pdb.py/">tests/test_pdb.py</a></td>
+<td><code>a66327c79f20e3a5c0ee0590777772b5b75fd514abda9f05374e15cd0c8f034f</code></td>
+<td>2</td>
+</tr>
+<tr>
+<td><a href="tests-test-pe32.py/">tests/test_pe32.py</a></td>
+<td><code>0566aa1335fa09514110eba2495853f1eb0a06529f033546153e22dbb9a7ba4e</code></td>
+<td>2</td>
+</tr>
+<tr>
+<td><a href="tests-test-pe64-patch-hybrid.py/">tests/test_pe64_patch_hybrid.py</a></td>
+<td><code>1c4c7817684d2149bfa82bb3c91f820ae79e81f0f5ea8b82835cb876e8985fba</code></td>
+<td>3</td>
+</tr>
+<tr>
+<td><a href="tests-test-production.py/">tests/test_production.py</a></td>
+<td><code>da98cd0e561b0b3ec69afb258be55dd9201b09974c3c63090f0e3fb4cff32bf4</code></td>
+<td>22</td>
+</tr>
+<tr>
+<td><a href="tests-test-project.py/">tests/test_project.py</a></td>
+<td><code>51b66c2f0070d17f2c004af56396878c666291e1e8284c5b2e2a0155aa753a67</code></td>
+<td>2</td>
+</tr>
+<tr>
+<td><a href="tests-test-release-contract.py/">tests/test_release_contract.py</a></td>
+<td><code>7995c16cc519ee1cdf6dd7fb7645cdc6642515da64bd43c4a57951437e17d6fa</code></td>
+<td>9</td>
+</tr>
+<tr>
+<td><a href="tests-test-relink.py/">tests/test_relink.py</a></td>
+<td><code>b3a48a672550ed5392797dbb941829ec301bb24066ab9d35509f7e391fb74b92</code></td>
+<td>1</td>
+</tr>
+<tr>
+<td><a href="tests-test-second-audit-fixes.py/">tests/test_second_audit_fixes.py</a></td>
+<td><code>637f0a226e118e451f9cf2e2656a44b1ff96529cd1aae1c449d4f03541cf2a56</code></td>
+<td>7</td>
+</tr>
+<tr>
+<td><a href="tests-test-test-bundle.py/">tests/test_test_bundle.py</a></td>
+<td><code>27fd121c8a59200ffcafcfccaa6e01ca3c2bd488680f3209bbe95097686f7061</code></td>
+<td>5</td>
+</tr>
+<tr>
+<td><a href="tests-test-workqueue.py/">tests/test_workqueue.py</a></td>
+<td><code>401f98bce8178d0bc2f01a92f5c792044a8f32695868bd0cd04feec743eb56b8</code></td>
+<td>1</td>
+</tr>
+</tbody>
+</table></p>
+    </article>
+</section>
+            <!-- endblock -->
+
+            <!-- block footer -->
+                <footer>
+    <div class="d-flex flex-sm-row justify-content-between py-2 border-top drac-text-black drac-bg-cyan-green">
+        <a href="https://github.com/dracula/mkdocs" target="_blank" style="padding-left: 1%;"
+            class="footer-text drac-anchor drac-text-black drac-text-purple--hover">
+            Made with Dracula Theme for MkDocs
+        </a>
+    </div>
+</footer>
+            <!-- endblock -->
+        </div>
+
+    </main>
+
+        <script>var base_url = '..';</script>
+        <script src="../assets/js/jquery-3.3.1.slim.min.js"></script>
+        <script src="../assets/js/bootstrap.bundle.min.js"></script>
+        <script src="../assets/js/mkdocs.js"></script>
+			<script src="../search/main.js" defer></script>
+
+</body>
+
+</html>

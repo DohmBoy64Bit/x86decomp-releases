@@ -1,0 +1,117 @@
+{
+  "all_file_manifest": "ALL_FILE_MANIFEST_0.7.11.json",
+  "all_file_manifest_entries_before_packaging": 450,
+  "checks": {
+    "clean_wheel_install_and_pip_check": "PASS",
+    "compileall": "PASS",
+    "documentation_architecture_tests": "7 passed",
+    "final_compileall_before_packaging": "PASS",
+    "final_extracted_zip_compileall_pyflakes_validate_contracts": "PASS",
+    "final_extracted_zip_source_manifest_verify": "PASS: root 449/449, test-suite 63/63",
+    "final_pyflakes_before_packaging": "PASS",
+    "final_validate_contracts_before_packaging": "PASS",
+    "pyflakes_src_scripts_testsuite_src": "PASS",
+    "release_contract_tests": "9 passed",
+    "targeted_second_audit_tests": "7 passed",
+    "validate_contracts": "PASS",
+    "wheels_sdists_built": "PASS"
+  },
+  "code_config_candidate_files": 439,
+  "commands_verified": [
+    "x86decomp plugin validate",
+    "x86decomp llm prompt",
+    "x86decomp llm generate --report",
+    "x86decomp llm cpp-generate --report",
+    "x86decomp.reconstruction.cli llm prompt missing-job error handler"
+  ],
+  "files_read_hashed_before_packaging": 450,
+  "fixed_issues": [
+    {
+      "fix": "Fixed by importing json in governance/cli.py and adding a root command regression that validates a plugin manifest without NameError.",
+      "id": "CR-0710-001",
+      "title": "plugin validate missing json import"
+    },
+    {
+      "fix": "Fixed by importing write_json and replacing all typo call sites; root command tests cover llm prompt, llm generate --report, and llm cpp-generate --report.",
+      "id": "CR-0710-002",
+      "title": "llm prompt/generate report undefined writeparse_json_arg"
+    },
+    {
+      "fix": "Fixed by importing json and adding a process-level reconstruction CLI error-handler test that parses stderr as JSON.",
+      "id": "CR-0710-003",
+      "title": "reconstruction CLI error handler missing json"
+    },
+    {
+      "fix": "Fixed by adding pyflakes to dev dependencies and scripts/validate-contracts.py; pyflakes over src, scripts, and test-suite/src is now a hard gate.",
+      "id": "CR-0710-004",
+      "title": "missing static-analysis gate"
+    },
+    {
+      "fix": "Fixed by removing unused project assignment in target_pack.py and unused db assignment in reconstruction/acceleration.py.",
+      "id": "CR-0710-005",
+      "title": "two production dead assignments"
+    },
+    {
+      "fix": "Fixed by adding module docstrings to examples/integration/candidate.py, candidate_mismatch.py, and target.py; all Python files parse with module docstrings.",
+      "id": "CR-0710-006",
+      "title": "three example Python files outside docstring coverage"
+    },
+    {
+      "fix": "Fixed by adding x86decomp.binary_reader.BinaryReader and wiring COFF/PE32/PE32+ parser helpers through the shared bounded reader methods.",
+      "id": "CR-0710-007",
+      "title": "duplicate PE/COFF binary-reader helper logic"
+    },
+    {
+      "fix": "Fixed by updating candidate search, type propagate, and triage next CLI descriptions plus docs/command reference/architecture notes; a regression asserts help text exposes the plan-only boundary.",
+      "id": "CR-0710-008",
+      "title": "plan-only command contract clarity"
+    },
+    {
+      "fix": "Fixed by catching ModuleNotFoundError and raising an explicit missing-dev-extra message; a regression simulates the missing dependency.",
+      "id": "CR-0710-009",
+      "title": "validate-contracts missing javalang diagnostic"
+    }
+  ],
+  "not_claimed": [
+    "single monolithic pytest tests completion",
+    "live external local-LLM runtime quality/availability"
+  ],
+  "python_docstrings_full_tree_including_examples": {
+    "classes": {
+      "missing": [],
+      "total": 160,
+      "with_docstrings": 160
+    },
+    "functions_methods": {
+      "missing": [],
+      "total": 1451,
+      "with_docstrings": 1451
+    },
+    "modules": {
+      "missing": [],
+      "total": 213,
+      "with_docstrings": 213
+    }
+  },
+  "python_files_parsed_full_tree_including_examples": 213,
+  "python_parse_errors": [],
+  "release": "0.7.11",
+  "schema_version": 1,
+  "segmented_pytest_note": "Toolkit and test-suite files were run in segmented/file-level invocations because monolithic runs timed out in this sandbox.",
+  "source_baseline": "x86decomp-toolkit-0.7.10-audit-fix-release-bundle.zip",
+  "source_manifest_verification": {
+    "root": {
+      "checked": 449,
+      "expected": 449,
+      "failures": [],
+      "valid": true
+    },
+    "test_suite": {
+      "checked": 63,
+      "expected": 63,
+      "failures": [],
+      "valid": true
+    },
+    "valid": true
+  }
+}

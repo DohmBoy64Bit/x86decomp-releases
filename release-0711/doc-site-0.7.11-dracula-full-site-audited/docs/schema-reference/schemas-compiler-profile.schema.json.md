@@ -1,0 +1,120 @@
+---
+title: schemas/compiler-profile.schema.json
+description: Schema reference page for schemas/compiler-profile.schema.json.
+---
+
+# `schemas/compiler-profile.schema.json`
+
+- SHA-256: `6903f160acf5cfb8329567efbdd2da82b9f171705971e9842afcae21a4a4f844`
+- Size: `1869` bytes
+- Title: x86decomp compiler profile
+- Type: `object`
+
+```json
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:x86decomp:schema:compiler-profile:2",
+  "title": "x86decomp compiler profile",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "id",
+    "description",
+    "executable",
+    "language",
+    "output_kind",
+    "timeout_seconds",
+    "arguments",
+    "environment"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 2
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "description": {
+      "type": "string",
+      "minLength": 1
+    },
+    "family": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "version": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "executable": {
+      "type": "string",
+      "minLength": 1
+    },
+    "command_prefix": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "version_arguments": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "language": {
+      "enum": [
+        "c",
+        "c++",
+        "assembly"
+      ]
+    },
+    "output_kind": {
+      "enum": [
+        "relocatable_object",
+        "executable",
+        "assembly",
+        "binary"
+      ]
+    },
+    "timeout_seconds": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "arguments": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "string"
+      },
+      "allOf": [
+        {
+          "contains": {
+            "pattern": "\\{source\\}"
+          }
+        },
+        {
+          "contains": {
+            "pattern": "\\{output\\}"
+          }
+        }
+      ]
+    },
+    "environment": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "inherit_environment": {
+      "type": "boolean"
+    }
+  }
+}
+```

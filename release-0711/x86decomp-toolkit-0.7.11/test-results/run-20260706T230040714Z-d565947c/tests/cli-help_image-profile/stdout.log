@@ -1,8 +1,0 @@
-usage: x86decomp image-profile [-h] reference output
-
-positional arguments:
-  reference
-  output
-
-options:
-  -h, --help  show this help message and exit

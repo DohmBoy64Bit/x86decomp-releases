@@ -1,8 +1,0 @@
-usage: x86decomp project-backup [-h] project output
-
-positional arguments:
-  project
-  output
-
-options:
-  -h, --help  show this help message and exit

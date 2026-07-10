@@ -1,0 +1,598 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+        <title>tests/assembly/test_annotation_materialize.py - x86decomp 0.7.11 Docs</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        
+        
+        
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="../../assets/css/darcula-highlight.min.css">
+
+        <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../assets/css/dracula-ui.min.css">
+        <link rel="stylesheet" href="../../assets/css/mkdocs.min.css">
+            <link href="../../assets/x86decomp-dracula-overrides.css" rel="stylesheet">
+
+        
+            <link  rel="icon" type="image/x-icon" href="../../assets/img/favicon.ico">
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+                <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+
+<body class="drac-bg-black-secondary drac-text-grey-ternary drac-text drac-scrollbar-purple">
+
+    <main class="d-flex">
+
+        <!-- block sidebar -->
+            <nav id="sidebar" class="sidebar drac-bg-black">
+    <div class="custom-menu">
+        <button type="button" id="sidebarCollapse" class="btn btn-primary">
+            <i class="fa fa-bars"></i>
+            <span class="sr-only">Menu</span>
+        </button>
+    </div>
+
+    <div class="p-4">
+        
+
+        <div class="drac-text-center">
+            
+                <span class="drac-text drac-line-height drac-text-white">x86decomp 0.7.11 Docs</span>
+            
+        </div>
+
+        <div class="drac-box flex-column">
+            <ul class="dot-ul">
+                <li><div class="dot-li drac-bg-cyan"></div></li>
+                <li><div class="dot-li drac-bg-green"></div></li>
+                <li><div class="dot-li drac-bg-orange"></div></li>
+                <li><div class="dot-li drac-bg-pink"></div></li>
+                <li><div class="dot-li drac-bg-purple"></div></li>
+                <li><div class="dot-li drac-bg-red"></div></li>
+                <li><div class="dot-li drac-bg-yellow"></div></li>
+            </ul>
+        </div>
+
+        <hr class="drac-divider" />
+
+        <!-- block menu -->
+        <ul class="mb-5 drac-list drac-list-none">
+            
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Home
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../../getting-started/"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Getting Started
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#workflows-collapse" aria-expanded="false">
+                    Workflows
+                </a>
+                <div class="collapse" id="workflows-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../workflows/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Workflow Guide
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../local-llm/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Local LLM C Generation
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../decompilation-acceleration/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Decompilation Acceleration
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../project-examples/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Project Examples
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#reference-collapse" aria-expanded="false">
+                    Reference
+                </a>
+                <div class="collapse" id="reference-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../reference/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../architecture/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Architecture
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../commands/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Commands
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../release-artifacts/COMMAND_REFERENCE_0.7.11/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Command Reference 0.7.11
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../schemas/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Schemas
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../integrations/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Integrations
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../features/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Source Modules
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../functions/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Function Index
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Tests
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../release-artifacts/DOCSTRING_AUDIT_0.7.11/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Docstring Audit
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#release-evidence-collapse" aria-expanded="false">
+                    Release Evidence
+                </a>
+                <div class="collapse" id="release-evidence-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../release-evidence/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../release-artifacts/SECOND_AUDIT_FIX_REPORT_0.7.11/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Second Audit Fix Report
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../release-artifacts/DOCSTRING_AUDIT_0.7.11/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Docstring Audit
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../release-artifacts/COMMAND_REFERENCE_0.7.11/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Command Reference 0.7.11
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../verification/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Verification
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../source-coverage/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Source Coverage
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../changelog/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Changelog
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../about/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            About
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <!-- endblock -->
+    </div>
+</nav>
+        <!-- endblock -->
+
+        <nav class="divider drac-bg-purple-cyan"></nav>
+
+        <div class="content">
+            <!-- block header -->
+                <header>
+    <nav class="navbar navbar-expand-xl drac-bg-purple">
+        <div class="container-fluid">
+            
+            <button class="navbar-toggler w-100 text-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMenu"
+                aria-controls="navbarsMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse flex-column ml-auto" id="navbarsMenu">
+                <ul class="navbar-nav text-md-center">
+
+                    <!-- block preview -->
+                    <li class="nav-item">
+                            
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block search -->
+                    <li class="nav-item"><div role="search" class="search-box">
+	<form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+		<input type="text" name="q" class="drac-input drac-input-search drac-input-white drac-text-white drac-bg-black-secondary"
+		placeholder="Search docs" title="Type search term here" />
+	</form>
+</div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block source -->
+                    <li class="nav-item">
+                        
+                    </li>
+                    <!--  endblock -->
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+</header>
+            <!-- endblock -->
+
+            <!-- block content -->
+                <section class="p-md-5 section-content">
+    <article>
+        <p><h1 id="testsassemblytest_annotation_materializepy"><code>tests/assembly/test_annotation_materialize.py</code></h1>
+<ul>
+<li>SHA-256: <code>6e90b4e325e12eb3b851ca22d4364a19f3cf5257c0f07ac51e057a926d504b82</code></li>
+<li>Size: <code>8513</code> bytes</li>
+<li>Test functions: <code>8</code></li>
+</ul>
+<pre><code class="language-python">&quot;&quot;&quot;Verify the current toolkit behavior covered by `tests/assembly/test_annotation_materialize.py`.&quot;&quot;&quot;
+from __future__ import annotations
+
+import importlib.util
+import json
+from pathlib import Path
+
+import pytest
+
+from x86decomp.hybrid import _assembly_bytes
+from x86decomp.contracts import ContractError
+from x86decomp.errors import ExternalToolError
+from x86decomp.assembly.annotation import (
+    annotate_source,
+    parse_byte_directives,
+    render_annotated_assembly,
+    render_byte_assembly,
+    validate_symbol,
+)
+from x86decomp.assembly.materialize import materialize_function, verify_existing_source
+
+
+def _capstone_available() -&gt; bool:
+    &quot;&quot;&quot;Return whether the optional Capstone decoder is importable.&quot;&quot;&quot;
+    return importlib.util.find_spec(&quot;capstone&quot;) is not None
+
+
+def _assert_capstone_required(callable_, *args, **kwargs) -&gt; None:
+    &quot;&quot;&quot;Assert that a decoder-backed operation reports the missing optional dependency.&quot;&quot;&quot;
+    with pytest.raises(ExternalToolError, match=&quot;Capstone is required&quot;):
+        callable_(*args, **kwargs)
+
+
+def test_byte_form_is_exact_native_compatibility_output() -&gt; None:
+    &quot;&quot;&quot;Verify byte form is exact native compatibility output behavior.&quot;&quot;&quot;
+    code = bytes(range(32))
+    assert render_byte_assembly(&quot;sub_00001000&quot;, code, &quot;x86&quot;) == _assembly_bytes(
+        &quot;sub_00001000&quot;, code, &quot;x86&quot;
+    )
+    assert parse_byte_directives(render_byte_assembly(&quot;sub_00001000&quot;, code, &quot;x86&quot;)) == code
+    with pytest.raises(ContractError, match=&quot;unsafe assembly symbol&quot;):
+        validate_symbol(&quot;bad symbol&quot;)
+
+
+def test_annotation_is_idempotent_and_keeps_bytes(tmp_path: Path) -&gt; None:
+    &quot;&quot;&quot;Verify annotation is idempotent and keeps bytes behavior.&quot;&quot;&quot;
+    code = bytes.fromhex(&quot;5589e5e8000000005dc3&quot;)
+    source = tmp_path / &quot;input.S&quot;
+    source.write_text(render_byte_assembly(&quot;sub_00001000&quot;, code, &quot;x86&quot;), encoding=&quot;utf-8&quot;)
+    first = tmp_path / &quot;first.S&quot;
+    second = tmp_path / &quot;second.S&quot;
+    if not _capstone_available():
+        _assert_capstone_required(
+            annotate_source, source, first, symbol=&quot;sub_00001000&quot;, architecture=&quot;x86&quot;, base_address=0x401000
+        )
+        return
+    result = annotate_source(
+        source, first, symbol=&quot;sub_00001000&quot;, architecture=&quot;x86&quot;, base_address=0x401000
+    )
+    annotate_source(
+        first, second, symbol=&quot;sub_00001000&quot;, architecture=&quot;x86&quot;, base_address=0x401000
+    )
+    assert result[&quot;byte_identical_by_construction&quot;]
+    assert first.read_text(encoding=&quot;utf-8&quot;) == second.read_text(encoding=&quot;utf-8&quot;)
+    assert parse_byte_directives(first.read_text(encoding=&quot;utf-8&quot;)) == code
+    assert &quot;# x86decomp:&quot; in first.read_text(encoding=&quot;utf-8&quot;)
+
+
+def _materialize(tmp_path: Path, code: bytes, *, architecture: str, symbols: dict[str, object]):
+    &quot;&quot;&quot;Support materialize processing for internal toolkit callers.&quot;&quot;&quot;
+    return materialize_function(
+        code,
+        symbol=&quot;sub_00001000&quot;,
+        rva=0x1000,
+        architecture=architecture,
+        symbol_map={&quot;sub_00001000&quot;: {&quot;rva&quot;: 0x1000}, **symbols},
+        source_path=tmp_path / &quot;candidate.S&quot;,
+        object_path=tmp_path / &quot;candidate.obj&quot;,
+        resolved_path=tmp_path / &quot;candidate.bin&quot;,
+    )
+
+
+def test_x86_external_and_local_calls_roundtrip_exactly(tmp_path: Path) -&gt; None:
+    &quot;&quot;&quot;Verify x86 external and local calls roundtrip exactly behavior.&quot;&quot;&quot;
+    external = _materialize(
+        tmp_path / &quot;external&quot;,
+        bytes.fromhex(&quot;e8fb0f0000c3&quot;),
+        architecture=&quot;x86&quot;,
+        symbols={&quot;sub_00002000&quot;: {&quot;rva&quot;: 0x2000}},
+    )
+    if not _capstone_available():
+        assert external[&quot;classification&quot;] == &quot;byte-form-fallback&quot;
+        assert external[&quot;exact_match&quot;]
+        assert not external[&quot;semantic_equivalence_claimed&quot;]
+        return
+    assert external[&quot;classification&quot;] == &quot;fully-mnemonic&quot;
+    assert external[&quot;resolved_relocation_count&quot;] == 1
+    assert (tmp_path / &quot;external/candidate.bin&quot;).read_bytes() == bytes.fromhex(&quot;e8fb0f0000c3&quot;)
+    assert &quot;call sub_00002000&quot; in (tmp_path / &quot;external/candidate.S&quot;).read_text()
+
+    local = _materialize(
+        tmp_path / &quot;local&quot;,
+        bytes.fromhex(&quot;e800000000c3&quot;),
+        architecture=&quot;x86&quot;,
+        symbols={},
+    )
+    assert local[&quot;classification&quot;] == &quot;fully-mnemonic&quot;
+    assert local[&quot;relocation_count&quot;] == 0
+    assert (tmp_path / &quot;local/candidate.bin&quot;).read_bytes() == bytes.fromhex(&quot;e800000000c3&quot;)
+    assert &quot;.L_1005:&quot; in (tmp_path / &quot;local/candidate.S&quot;).read_text()
+
+
+def test_x64_rip_relative_data_reference_roundtrips(tmp_path: Path) -&gt; None:
+    &quot;&quot;&quot;Verify x64 rip relative data reference roundtrips behavior.&quot;&quot;&quot;
+    result = _materialize(
+        tmp_path,
+        bytes.fromhex(&quot;488b05f90f0000c3&quot;),
+        architecture=&quot;x86_64&quot;,
+        symbols={&quot;DAT_00002000&quot;: {&quot;rva&quot;: 0x2000, &quot;kind&quot;: &quot;data&quot;}},
+    )
+    if not _capstone_available():
+        assert result[&quot;classification&quot;] == &quot;byte-form-fallback&quot;
+        assert result[&quot;exact_match&quot;]
+        assert not result[&quot;semantic_equivalence_claimed&quot;]
+        return
+    assert result[&quot;classification&quot;] == &quot;fully-mnemonic&quot;
+    assert result[&quot;resolved_relocation_count&quot;] == 1
+    assert &quot;DAT_00002000&quot; in (tmp_path / &quot;candidate.S&quot;).read_text()
+    assert (tmp_path / &quot;candidate.bin&quot;).read_bytes() == bytes.fromhex(&quot;488b05f90f0000c3&quot;)
+
+
+def test_noncanonical_instruction_falls_back_per_instruction(tmp_path: Path) -&gt; None:
+    &quot;&quot;&quot;Verify noncanonical instruction falls back per instruction behavior.&quot;&quot;&quot;
+    result = _materialize(
+        tmp_path,
+        bytes.fromhex(&quot;6690c3&quot;),
+        architecture=&quot;x86&quot;,
+        symbols={},
+    )
+    if not _capstone_available():
+        assert result[&quot;classification&quot;] == &quot;byte-form-fallback&quot;
+        assert result[&quot;byte_escape_bytes&quot;] == 3
+        return
+    assert result[&quot;classification&quot;] == &quot;mixed-mnemonic-byte&quot;
+    assert result[&quot;mnemonic_count&quot;] == 1
+    assert result[&quot;byte_escape_count&quot;] == 1
+    text = (tmp_path / &quot;candidate.S&quot;).read_text()
+    assert &quot;.byte 0x66, 0x90&quot; in text and &quot;ret&quot; in text
+    assert (tmp_path / &quot;candidate.bin&quot;).read_bytes() == bytes.fromhex(&quot;6690c3&quot;)
+
+
+def test_unknown_target_uses_byte_fallback_without_false_claim(tmp_path: Path) -&gt; None:
+    &quot;&quot;&quot;Verify unknown target uses byte fallback without false claim behavior.&quot;&quot;&quot;
+    result = _materialize(
+        tmp_path,
+        bytes.fromhex(&quot;e8fb0f0000c3&quot;),
+        architecture=&quot;x86&quot;,
+        symbols={},
+    )
+    assert result[&quot;exact_match&quot;]
+    if not _capstone_available():
+        assert result[&quot;classification&quot;] == &quot;byte-form-fallback&quot;
+        assert not result[&quot;semantic_equivalence_claimed&quot;]
+        return
+    assert result[&quot;classification&quot;] == &quot;mixed-mnemonic-byte&quot;
+    assert not result[&quot;semantic_equivalence_claimed&quot;]
+    assert &quot;.byte 0xe8&quot; in (tmp_path / &quot;candidate.S&quot;).read_text()
+
+
+def test_verify_existing_source_reports_exact_and_mismatch(tmp_path: Path) -&gt; None:
+    &quot;&quot;&quot;Verify verify existing source reports exact and mismatch behavior.&quot;&quot;&quot;
+    code = bytes.fromhex(&quot;e8fb0f0000c3&quot;)
+    source = tmp_path / &quot;source.S&quot;
+    source.write_text(
+        &quot;.intel_syntax noprefix\n.text\n.code32\n.globl sub_00001000\n&quot;
+        &quot;.extern sub_00002000\nsub_00001000:\n  call sub_00002000\n  ret\n&quot;,
+        encoding=&quot;utf-8&quot;,
+    )
+    exact = verify_existing_source(
+        source,
+        code,
+        symbol=&quot;sub_00001000&quot;,
+        rva=0x1000,
+        architecture=&quot;x86&quot;,
+        symbol_map={&quot;sub_00002000&quot;: {&quot;rva&quot;: 0x2000}},
+        object_path=tmp_path / &quot;exact.obj&quot;,
+        resolved_path=tmp_path / &quot;exact.bin&quot;,
+    )
+    assert exact[&quot;exact_match&quot;] and exact[&quot;classification&quot;] == &quot;exact&quot;
+    mismatch = verify_existing_source(
+        source,
+        bytes.fromhex(&quot;e8fa0f0000c3&quot;),
+        symbol=&quot;sub_00001000&quot;,
+        rva=0x1000,
+        architecture=&quot;x86&quot;,
+        symbol_map={&quot;sub_00002000&quot;: {&quot;rva&quot;: 0x2000}},
+        object_path=tmp_path / &quot;mismatch.obj&quot;,
+        resolved_path=tmp_path / &quot;mismatch.bin&quot;,
+    )
+    assert not mismatch[&quot;exact_match&quot;] and mismatch[&quot;classification&quot;] == &quot;mismatch&quot;
+
+
+def test_undecodable_tail_uses_complete_byte_form_fallback(tmp_path: Path) -&gt; None:
+    &quot;&quot;&quot;Verify undecodable tail uses complete byte form fallback behavior.&quot;&quot;&quot;
+    result = _materialize(
+        tmp_path,
+        bytes.fromhex(&quot;0f&quot;),
+        architecture=&quot;x86&quot;,
+        symbols={},
+    )
+    assert result[&quot;classification&quot;] == &quot;byte-form-fallback&quot;
+    assert result[&quot;mnemonic_count&quot;] == 0
+    assert result[&quot;byte_escape_bytes&quot;] == 1
+    assert (tmp_path / &quot;candidate.bin&quot;).read_bytes() == bytes.fromhex(&quot;0f&quot;)
+    assert &quot;.byte 0x0f&quot; in (tmp_path / &quot;candidate.S&quot;).read_text()
+</code></pre></p>
+    </article>
+</section>
+            <!-- endblock -->
+
+            <!-- block footer -->
+                <footer>
+    <div class="d-flex flex-sm-row justify-content-between py-2 border-top drac-text-black drac-bg-cyan-green">
+        <a href="https://github.com/dracula/mkdocs" target="_blank" style="padding-left: 1%;"
+            class="footer-text drac-anchor drac-text-black drac-text-purple--hover">
+            Made with Dracula Theme for MkDocs
+        </a>
+    </div>
+</footer>
+            <!-- endblock -->
+        </div>
+
+    </main>
+
+        <script>var base_url = '../..';</script>
+        <script src="../../assets/js/jquery-3.3.1.slim.min.js"></script>
+        <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+        <script src="../../assets/js/mkdocs.js"></script>
+			<script src="../../search/main.js" defer></script>
+
+</body>
+
+</html>

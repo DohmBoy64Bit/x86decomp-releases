@@ -1,9 +1,0 @@
-usage: x86decomp work-claim [-h] database task_id assignee
-
-positional arguments:
-  database
-  task_id
-  assignee
-
-options:
-  -h, --help  show this help message and exit

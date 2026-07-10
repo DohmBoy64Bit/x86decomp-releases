@@ -1,0 +1,822 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+        <title>x86decomp.reconstruction.acceleration - x86decomp 0.7.11 Docs</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        
+        
+        
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="../../assets/css/darcula-highlight.min.css">
+
+        <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../assets/css/dracula-ui.min.css">
+        <link rel="stylesheet" href="../../assets/css/mkdocs.min.css">
+            <link href="../../assets/x86decomp-dracula-overrides.css" rel="stylesheet">
+
+        
+            <link  rel="icon" type="image/x-icon" href="../../assets/img/favicon.ico">
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+                <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+
+<body class="drac-bg-black-secondary drac-text-grey-ternary drac-text drac-scrollbar-purple">
+
+    <main class="d-flex">
+
+        <!-- block sidebar -->
+            <nav id="sidebar" class="sidebar drac-bg-black">
+    <div class="custom-menu">
+        <button type="button" id="sidebarCollapse" class="btn btn-primary">
+            <i class="fa fa-bars"></i>
+            <span class="sr-only">Menu</span>
+        </button>
+    </div>
+
+    <div class="p-4">
+        
+
+        <div class="drac-text-center">
+            
+                <span class="drac-text drac-line-height drac-text-white">x86decomp 0.7.11 Docs</span>
+            
+        </div>
+
+        <div class="drac-box flex-column">
+            <ul class="dot-ul">
+                <li><div class="dot-li drac-bg-cyan"></div></li>
+                <li><div class="dot-li drac-bg-green"></div></li>
+                <li><div class="dot-li drac-bg-orange"></div></li>
+                <li><div class="dot-li drac-bg-pink"></div></li>
+                <li><div class="dot-li drac-bg-purple"></div></li>
+                <li><div class="dot-li drac-bg-red"></div></li>
+                <li><div class="dot-li drac-bg-yellow"></div></li>
+            </ul>
+        </div>
+
+        <hr class="drac-divider" />
+
+        <!-- block menu -->
+        <ul class="mb-5 drac-list drac-list-none">
+            
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Home
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../../getting-started/"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Getting Started
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#workflows-collapse" aria-expanded="false">
+                    Workflows
+                </a>
+                <div class="collapse" id="workflows-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../workflows/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Workflow Guide
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../local-llm/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Local LLM C Generation
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../decompilation-acceleration/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Decompilation Acceleration
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../project-examples/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Project Examples
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#reference-collapse" aria-expanded="false">
+                    Reference
+                </a>
+                <div class="collapse" id="reference-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../reference/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../architecture/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Architecture
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../commands/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Commands
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../release-artifacts/COMMAND_REFERENCE_0.7.11/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Command Reference 0.7.11
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../schemas/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Schemas
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../integrations/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Integrations
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Source Modules
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../functions/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Function Index
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../tests/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Tests
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../release-artifacts/DOCSTRING_AUDIT_0.7.11/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Docstring Audit
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#release-evidence-collapse" aria-expanded="false">
+                    Release Evidence
+                </a>
+                <div class="collapse" id="release-evidence-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../release-evidence/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../release-artifacts/SECOND_AUDIT_FIX_REPORT_0.7.11/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Second Audit Fix Report
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../release-artifacts/DOCSTRING_AUDIT_0.7.11/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Docstring Audit
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../release-artifacts/COMMAND_REFERENCE_0.7.11/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Command Reference 0.7.11
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../verification/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Verification
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../source-coverage/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Source Coverage
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../changelog/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Changelog
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../about/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            About
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <!-- endblock -->
+    </div>
+</nav>
+        <!-- endblock -->
+
+        <nav class="divider drac-bg-purple-cyan"></nav>
+
+        <div class="content">
+            <!-- block header -->
+                <header>
+    <nav class="navbar navbar-expand-xl drac-bg-purple">
+        <div class="container-fluid">
+            
+            <button class="navbar-toggler w-100 text-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMenu"
+                aria-controls="navbarsMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse flex-column ml-auto" id="navbarsMenu">
+                <ul class="navbar-nav text-md-center">
+
+                    <!-- block preview -->
+                    <li class="nav-item">
+                            
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block search -->
+                    <li class="nav-item"><div role="search" class="search-box">
+	<form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+		<input type="text" name="q" class="drac-input drac-input-search drac-input-white drac-text-white drac-bg-black-secondary"
+		placeholder="Search docs" title="Type search term here" />
+	</form>
+</div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block source -->
+                    <li class="nav-item">
+                        
+                    </li>
+                    <!--  endblock -->
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+</header>
+            <!-- endblock -->
+
+            <!-- block content -->
+                <section class="p-md-5 section-content">
+    <article>
+        <p><h1 id="x86decompreconstructionacceleration"><code>x86decomp.reconstruction.acceleration</code></h1>
+<ul>
+<li>Area: <code>toolkit</code></li>
+<li>Source path: <code>src/x86decomp/reconstruction/acceleration.py</code></li>
+<li>SHA-256: <code>70942db2fd66b84d8c33439d7bf5b9cd50be38d28a8f068ea284036c95ce78e3</code></li>
+<li>Size: <code>72229</code> bytes</li>
+<li>Lines: <code>1247</code></li>
+</ul>
+<h2 id="module-docstring">Module docstring</h2>
+<p>Human-readable decompilation acceleration helpers.</p>
+<p>These helpers deliberately create reviewable manifests, source annotations, and
+triage reports.  They do not claim original source recovery or validator success;
+state-changing commands require concrete input reports and emit auditable JSON.</p>
+<h2 id="symbols">Symbols</h2>
+<table>
+<thead>
+<tr>
+<th>Kind</th>
+<th>Name</th>
+<th>Line</th>
+<th>Docstring summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>function</td>
+<td><code>_safe_rel</code></td>
+<td>31</td>
+<td>Support safe rel processing for internal toolkit callers.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>_read_text_if_exists</code></td>
+<td>42</td>
+<td>Support read text if exists processing for internal toolkit callers.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>_body_ranges</code></td>
+<td>47</td>
+<td>Support body ranges processing for internal toolkit callers.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>_contiguous_single_range</code></td>
+<td>62</td>
+<td>Support contiguous single range processing for internal toolkit callers.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>_read_range_bytes</code></td>
+<td>73</td>
+<td>Support read range bytes processing for internal toolkit callers.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>_read_mnemonics</code></td>
+<td>92</td>
+<td>Support read mnemonics processing for internal toolkit callers.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>_function_name</code></td>
+<td>124</td>
+<td>Support function name processing for internal toolkit callers.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>llm_job_from_function_packet</code></td>
+<td>133</td>
+<td>Create one local-LLM job from a verified function artifact directory.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>llm_job_from_range</code></td>
+<td>219</td>
+<td>Create one local-LLM job from an explicitly supplied file offset/RVA range.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>llm_batch_create</code></td>
+<td>293</td>
+<td>Execute the llm batch create operation for the current toolkit workflow.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>llm_batch_match</code></td>
+<td>329</td>
+<td>Execute the llm batch match operation for the current toolkit workflow.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>candidate_promote</code></td>
+<td>356</td>
+<td>Execute the candidate promote operation for the current toolkit workflow.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>source_map_annotate</code></td>
+<td>386</td>
+<td>Execute the source map annotate operation for the current toolkit workflow.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>source_map_verify</code></td>
+<td>405</td>
+<td>Execute the source map verify operation for the current toolkit workflow.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>module_assign</code></td>
+<td>423</td>
+<td>Execute the module assign operation for the current toolkit workflow.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>module_suggest</code></td>
+<td>435</td>
+<td>Execute the module suggest operation for the current toolkit workflow.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>type_propagate</code></td>
+<td>454</td>
+<td>Emit a type-propagation plan without silently editing source files.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>header_synthesize_project</code></td>
+<td>466</td>
+<td>Execute the header synthesize project operation for the current toolkit workflow.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>vtable_recover</code></td>
+<td>486</td>
+<td>Execute the vtable recover operation for the current toolkit workflow.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>class_scaffold</code></td>
+<td>492</td>
+<td>Execute the class scaffold operation for the current toolkit workflow.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>diff_explain</code></td>
+<td>510</td>
+<td>Execute the diff explain operation for the current toolkit workflow.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>triage_next</code></td>
+<td>525</td>
+<td>Execute the triage next operation for the current toolkit workflow.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>playability_smoke_plan</code></td>
+<td>537</td>
+<td>Execute the playability smoke plan operation for the current toolkit workflow.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>asset_inventory</code></td>
+<td>546</td>
+<td>Execute the asset inventory operation for the current toolkit workflow.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>mod_branch_init</code></td>
+<td>558</td>
+<td>Execute the mod branch init operation for the current toolkit workflow.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>regression_compare</code></td>
+<td>565</td>
+<td>Execute the regression compare operation for the current toolkit workflow.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>_json_out</code></td>
+<td>599</td>
+<td>Support json out processing for internal toolkit callers.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>_read_any_text</code></td>
+<td>606</td>
+<td>Support read any text processing for internal toolkit callers.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>_file_report</code></td>
+<td>614</td>
+<td>Support file report processing for internal toolkit callers.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>function_discover</code></td>
+<td>620</td>
+<td>Discover candidate function entry offsets using architecture profiles.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>function_boundary_reconcile</code></td>
+<td>663</td>
+<td>Execute the function boundary reconcile operation for the current toolkit workflow.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>function_list_sort</code></td>
+<td>686</td>
+<td>Execute the function list sort operation for the current toolkit workflow.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>sort_key</code></td>
+<td>694</td>
+<td>Execute the sort key operation for the current toolkit workflow.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>function_list_classify</code></td>
+<td>707</td>
+<td>Execute the function list classify operation for the current toolkit workflow.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>pattern_catalog</code></td>
+<td>731</td>
+<td>Execute the pattern catalog operation for the current toolkit workflow.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>pattern_scan</code></td>
+<td>737</td>
+<td>Execute the pattern scan operation for the current toolkit workflow.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>pattern_generate</code></td>
+<td>763</td>
+<td>Execute the pattern generate operation for the current toolkit workflow.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>pattern_match</code></td>
+<td>783</td>
+<td>Execute the pattern match operation for the current toolkit workflow.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>pattern_promote</code></td>
+<td>794</td>
+<td>Execute the pattern promote operation for the current toolkit workflow.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>image_text_compose</code></td>
+<td>802</td>
+<td>Execute the image text compose operation for the current toolkit workflow.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>_pe_section</code></td>
+<td>850</td>
+<td>Support pe section processing for internal toolkit callers.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>text_swap_plan</code></td>
+<td>872</td>
+<td>Execute the text swap plan operation for the current toolkit workflow.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>text_swap_inject</code></td>
+<td>884</td>
+<td>Execute the text swap inject operation for the current toolkit workflow.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>text_swap_verify</code></td>
+<td>908</td>
+<td>Execute the text swap verify operation for the current toolkit workflow.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>text_swap_build</code></td>
+<td>920</td>
+<td>Execute the text swap build operation for the current toolkit workflow.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>progress_reconcile</code></td>
+<td>929</td>
+<td>Execute the progress reconcile operation for the current toolkit workflow.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>project_health</code></td>
+<td>949</td>
+<td>Execute the project health operation for the current toolkit workflow.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>source_stage_classify</code></td>
+<td>962</td>
+<td>Execute the source stage classify operation for the current toolkit workflow.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>ghidra_mcp_probe</code></td>
+<td>990</td>
+<td>Execute the ghidra mcp probe operation for the current toolkit workflow.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>_json_rpc</code></td>
+<td>1003</td>
+<td>Support json rpc processing for internal toolkit callers.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>ghidra_mcp_functions</code></td>
+<td>1011</td>
+<td>Execute the ghidra mcp functions operation for the current toolkit workflow.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>ghidra_mcp_decompile</code></td>
+<td>1018</td>
+<td>Execute the ghidra mcp decompile operation for the current toolkit workflow.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>ghidra_mcp_batch_decompile</code></td>
+<td>1025</td>
+<td>Execute the ghidra mcp batch decompile operation for the current toolkit workflow.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>ghidra_mcp_sync_names</code></td>
+<td>1040</td>
+<td>Execute the ghidra mcp sync names operation for the current toolkit workflow.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>compiler_rule_learn</code></td>
+<td>1052</td>
+<td>Execute the compiler rule learn operation for the current toolkit workflow.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>compiler_rule_report</code></td>
+<td>1062</td>
+<td>Execute the compiler rule report operation for the current toolkit workflow.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>compiler_compare_flags</code></td>
+<td>1069</td>
+<td>Execute the compiler compare flags operation for the current toolkit workflow.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>runtime_identify</code></td>
+<td>1079</td>
+<td>Run time identify for the current toolkit workflow.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>runtime_quarantine</code></td>
+<td>1093</td>
+<td>Run time quarantine for the current toolkit workflow.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>runtime_match_library</code></td>
+<td>1104</td>
+<td>Run time match library for the current toolkit workflow.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>subsystem_detect</code></td>
+<td>1111</td>
+<td>Execute the subsystem detect operation for the current toolkit workflow.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>state_machine_detect</code></td>
+<td>1126</td>
+<td>Execute the state machine detect operation for the current toolkit workflow.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>project_doctor_paths</code></td>
+<td>1140</td>
+<td>Execute the project doctor paths operation for the current toolkit workflow.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>script_port_audit</code></td>
+<td>1155</td>
+<td>Execute the script port audit operation for the current toolkit workflow.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>toolchain_hash_tree</code></td>
+<td>1171</td>
+<td>Execute the toolchain hash tree operation for the current toolkit workflow.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>toolchain_verify_local</code></td>
+<td>1179</td>
+<td>Execute the toolchain verify local operation for the current toolkit workflow.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>toolchain_redact_package</code></td>
+<td>1192</td>
+<td>Execute the toolchain redact package operation for the current toolkit workflow.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>decompiler_cleanup</code></td>
+<td>1207</td>
+<td>Execute the decompiler cleanup operation for the current toolkit workflow.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>candidate_search</code></td>
+<td>1229</td>
+<td>Execute the candidate search operation for the current toolkit workflow.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>release_goal_moddable_source</code></td>
+<td>1241</td>
+<td>Execute the release goal moddable source operation for the current toolkit workflow.</td>
+</tr>
+</tbody>
+</table></p>
+    </article>
+</section>
+            <!-- endblock -->
+
+            <!-- block footer -->
+                <footer>
+    <div class="d-flex flex-sm-row justify-content-between py-2 border-top drac-text-black drac-bg-cyan-green">
+        <a href="https://github.com/dracula/mkdocs" target="_blank" style="padding-left: 1%;"
+            class="footer-text drac-anchor drac-text-black drac-text-purple--hover">
+            Made with Dracula Theme for MkDocs
+        </a>
+    </div>
+</footer>
+            <!-- endblock -->
+        </div>
+
+    </main>
+
+        <script>var base_url = '../..';</script>
+        <script src="../../assets/js/jquery-3.3.1.slim.min.js"></script>
+        <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+        <script src="../../assets/js/mkdocs.js"></script>
+			<script src="../../search/main.js" defer></script>
+
+</body>
+
+</html>

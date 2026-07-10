@@ -1,9 +1,0 @@
-usage: x86decomp serve [-h] [--host HOST] [--port PORT] project
-
-positional arguments:
-  project
-
-options:
-  -h, --help   show this help message and exit
-  --host HOST
-  --port PORT

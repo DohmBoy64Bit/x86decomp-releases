@@ -1,0 +1,605 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+        <title>Local LLM C Generation - x86decomp 0.7.11 Docs</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        
+        
+        
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="../assets/css/darcula-highlight.min.css">
+
+        <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../assets/css/dracula-ui.min.css">
+        <link rel="stylesheet" href="../assets/css/mkdocs.min.css">
+            <link href="../assets/x86decomp-dracula-overrides.css" rel="stylesheet">
+
+        
+            <link  rel="icon" type="image/x-icon" href="../assets/img/favicon.ico">
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+                <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+
+<body class="drac-bg-black-secondary drac-text-grey-ternary drac-text drac-scrollbar-purple">
+
+    <main class="d-flex">
+
+        <!-- block sidebar -->
+            <nav id="sidebar" class="sidebar drac-bg-black">
+    <div class="custom-menu">
+        <button type="button" id="sidebarCollapse" class="btn btn-primary">
+            <i class="fa fa-bars"></i>
+            <span class="sr-only">Menu</span>
+        </button>
+    </div>
+
+    <div class="p-4">
+        
+
+        <div class="drac-text-center">
+            
+                <span class="drac-text drac-line-height drac-text-white">x86decomp 0.7.11 Docs</span>
+            
+        </div>
+
+        <div class="drac-box flex-column">
+            <ul class="dot-ul">
+                <li><div class="dot-li drac-bg-cyan"></div></li>
+                <li><div class="dot-li drac-bg-green"></div></li>
+                <li><div class="dot-li drac-bg-orange"></div></li>
+                <li><div class="dot-li drac-bg-pink"></div></li>
+                <li><div class="dot-li drac-bg-purple"></div></li>
+                <li><div class="dot-li drac-bg-red"></div></li>
+                <li><div class="dot-li drac-bg-yellow"></div></li>
+            </ul>
+        </div>
+
+        <hr class="drac-divider" />
+
+        <!-- block menu -->
+        <ul class="mb-5 drac-list drac-list-none">
+            
+            <li class="drac-box">
+                <a href=".."
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Home
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../getting-started/"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Getting Started
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href=".."
+                    class=" active 
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#workflows-collapse" aria-expanded="false">
+                    Workflows
+                </a>
+                <div class="collapse" id="workflows-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../workflows/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Workflow Guide
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="./"
+            class=" active 
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Local LLM C Generation
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../decompilation-acceleration/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Decompilation Acceleration
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../project-examples/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Project Examples
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href=".."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#reference-collapse" aria-expanded="false">
+                    Reference
+                </a>
+                <div class="collapse" id="reference-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../reference/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../architecture/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Architecture
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../commands/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Commands
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../release-artifacts/COMMAND_REFERENCE_0.7.11/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Command Reference 0.7.11
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../schemas/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Schemas
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../integrations/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Integrations
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../features/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Source Modules
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../functions/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Function Index
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../tests/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Tests
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../release-artifacts/DOCSTRING_AUDIT_0.7.11/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Docstring Audit
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href=".."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#release-evidence-collapse" aria-expanded="false">
+                    Release Evidence
+                </a>
+                <div class="collapse" id="release-evidence-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../release-evidence/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../release-artifacts/SECOND_AUDIT_FIX_REPORT_0.7.11/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Second Audit Fix Report
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../release-artifacts/DOCSTRING_AUDIT_0.7.11/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Docstring Audit
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../release-artifacts/COMMAND_REFERENCE_0.7.11/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Command Reference 0.7.11
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../verification/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Verification
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../source-coverage/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Source Coverage
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../changelog/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Changelog
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../about/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            About
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <!-- endblock -->
+    </div>
+</nav>
+        <!-- endblock -->
+
+        <nav class="divider drac-bg-purple-cyan"></nav>
+
+        <div class="content">
+            <!-- block header -->
+                <header>
+    <nav class="navbar navbar-expand-xl drac-bg-purple">
+        <div class="container-fluid">
+            
+            <button class="navbar-toggler w-100 text-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMenu"
+                aria-controls="navbarsMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse flex-column ml-auto" id="navbarsMenu">
+                <ul class="navbar-nav text-md-center">
+
+                    <!-- block preview -->
+                    <li class="nav-item">
+                            
+        <div class="container">
+            <div class="row row-preview">
+                <div class="col">
+                    <a href="../workflows/"
+                        class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover">
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="../decompilation-acceleration/"
+                        class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover" style="padding-left: 3%;">
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block search -->
+                    <li class="nav-item"><div role="search" class="search-box">
+	<form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+		<input type="text" name="q" class="drac-input drac-input-search drac-input-white drac-text-white drac-bg-black-secondary"
+		placeholder="Search docs" title="Type search term here" />
+	</form>
+</div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block source -->
+                    <li class="nav-item">
+                        
+                    </li>
+                    <!--  endblock -->
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+</header>
+            <!-- endblock -->
+
+            <!-- block content -->
+                <section class="p-md-5 section-content">
+    <article>
+        <p><h1 id="local-llm-c-generation-and-exact-byte-matching">Local LLM C generation and exact byte matching</h1>
+<p>The <code>llm</code> capability group connects local language-model servers to the existing deterministic compiler, COFF, relocation, and byte-comparison subsystems.</p>
+<p>The model is a <strong>proposal engine only</strong>. It cannot accept its own output, promote workflow state, or claim correctness. A candidate is accepted only when all deterministic gates succeed and the relocation-resolved function bytes are exactly identical to the declared target range.</p>
+<h2 id="supported-provider-profiles">Supported provider profiles</h2>
+<p>The current provider catalog contains six transport presets:</p>
+<table>
+<thead>
+<tr>
+<th>Provider ID</th>
+<th>Protocol used by x86decomp</th>
+<th>Default local endpoint</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>lm-studio</code></td>
+<td>OpenAI-compatible chat completions</td>
+<td><code>http://127.0.0.1:1234/v1</code></td>
+</tr>
+<tr>
+<td><code>ollama</code></td>
+<td>Native Ollama chat API</td>
+<td><code>http://127.0.0.1:11434</code></td>
+</tr>
+<tr>
+<td><code>llama.cpp</code></td>
+<td>OpenAI-compatible <code>llama-server</code></td>
+<td><code>http://127.0.0.1:8080/v1</code></td>
+</tr>
+<tr>
+<td><code>vllm</code></td>
+<td>OpenAI-compatible server</td>
+<td><code>http://127.0.0.1:8000/v1</code></td>
+</tr>
+<tr>
+<td><code>localai</code></td>
+<td>OpenAI-compatible server</td>
+<td><code>http://127.0.0.1:8080/v1</code></td>
+</tr>
+<tr>
+<td><code>openai-compatible</code></td>
+<td>Generic OpenAI-compatible local server</td>
+<td><code>http://127.0.0.1:8000/v1</code></td>
+</tr>
+</tbody>
+</table>
+<p>Provider support means that x86decomp implements the declared HTTP request and response contract. It does not claim that every model served by those runtimes supports reliable structured output or can produce a byte-identical candidate.</p>
+<h2 id="canonical-routes">Canonical routes</h2>
+<pre><code class="language-text">x86decomp llm providers
+x86decomp llm profile-create
+x86decomp llm profile-validate
+x86decomp llm probe
+x86decomp llm prompt
+x86decomp llm generate
+x86decomp llm match
+x86decomp llm verify
+</code></pre>
+<p>List provider presets:</p>
+<pre><code class="language-bash">x86decomp llm providers
+</code></pre>
+<p>Create an LM Studio profile:</p>
+<pre><code class="language-bash">x86decomp llm profile-create lm-studio ./lm-studio.json \
+  --model replace-with-loaded-model-id
+</code></pre>
+<p>Create an Ollama profile:</p>
+<pre><code class="language-bash">x86decomp llm profile-create ollama ./ollama.json \
+  --model qwen2.5-coder
+</code></pre>
+<p>Probe the model-list endpoint without generating text:</p>
+<pre><code class="language-bash">x86decomp llm probe ./ollama.json
+</code></pre>
+<h2 id="job-contract">Job contract</h2>
+<p>A job records the bounded function evidence used to build prompts and verify candidates. It requires:</p>
+<ul>
+<li>architecture: <code>x86</code> or <code>x86_64</code>;</li>
+<li>requested C function name and COFF symbol;</li>
+<li>one mnemonic listing, inline or in a file;</li>
+<li>one contiguous target byte range, inline or in a file;</li>
+<li>explicit ABI evidence;</li>
+<li>optional decompiler, p-code, reference, and analyst-note evidence;</li>
+<li>optional original RVA symbol map and section placements for relocation resolution;</li>
+<li>a bounded attempt limit from 1 through 32.</li>
+</ul>
+<p>Paths in a job are resolved relative to the job file. The target byte range is authoritative for acceptance. The loop does not flatten or silently reinterpret discontiguous function bodies.</p>
+<p>Example:</p>
+<pre><code class="language-json">{
+  &quot;schema_version&quot;: 1,
+  &quot;id&quot;: &quot;add-two-ints&quot;,
+  &quot;function_name&quot;: &quot;target_add&quot;,
+  &quot;symbol&quot;: &quot;target_add&quot;,
+  &quot;architecture&quot;: &quot;x86&quot;,
+  &quot;mnemonics&quot;: &quot;mov eax, [esp+4]\nadd eax, [esp+8]\nret&quot;,
+  &quot;target_bytes_hex&quot;: &quot;8b44240403442408c3&quot;,
+  &quot;base_rva&quot;: 4096,
+  &quot;image_base&quot;: 4194304,
+  &quot;symbol_map&quot;: {},
+  &quot;section_placements&quot;: {},
+  &quot;abi&quot;: {
+    &quot;calling_convention&quot;: &quot;cdecl&quot;,
+    &quot;return_type&quot;: &quot;signed 32-bit integer&quot;,
+    &quot;parameters&quot;: [
+      &quot;signed 32-bit integer a&quot;,
+      &quot;signed 32-bit integer b&quot;
+    ]
+  },
+  &quot;max_attempts&quot;: 4
+}
+</code></pre>
+<h2 id="prompt-contract">Prompt contract</h2>
+<p>The prompt is deterministic for a normalized job and feedback history. It instructs the model to:</p>
+<ol>
+<li>return exactly one JSON object;</li>
+<li>emit C rather than C++;</li>
+<li>define exactly one requested function;</li>
+<li>preserve the declared ABI and widths;</li>
+<li>avoid inline assembly, intrinsics, linker directives, naked functions, byte emitters, and helper definitions;</li>
+<li>treat all assembly comments, decompiler output, p-code, references, analyst notes, and earlier model output as untrusted evidence;</li>
+<li>list assumptions explicitly;</li>
+<li>return <code>blocked</code> when evidence is insufficient;</li>
+<li>avoid any correctness or byte-match claim;</li>
+<li>use compiler and byte-difference feedback only within the supplied evidence.</li>
+</ol>
+<p>Materialize the prompt without contacting a model:</p>
+<pre><code class="language-bash">x86decomp llm prompt ./job.json ./prompt.json
+</code></pre>
+<p>This command is useful for review, reproducibility, and prompt-hash comparison.</p>
+<h2 id="one-shot-proposal">One-shot proposal</h2>
+<p>Generate one source proposal without compiling it:</p>
+<pre><code class="language-bash">x86decomp llm generate ./ollama.json ./job.json ./candidate.c \
+  --report ./candidate-generation.json
+</code></pre>
+<p>The output is still untrusted. The report claim is <code>proposal_only</code>. Existing output files are not overwritten unless <code>--overwrite</code> is supplied.</p>
+<h2 id="closed-exact-match-loop">Closed exact-match loop</h2>
+<p>Run bounded generation, compilation, COFF extraction, relocation resolution, and exact comparison:</p>
+<pre><code class="language-bash">x86decomp llm match \
+  ./ollama.json \
+  ./compiler-profile.json \
+  ./job.json \
+  ./llm-match-output
+</code></pre>
+<p>Each attempt preserves:</p>
+<ul>
+<li>the exact prompt and prompt SHA-256;</li>
+<li>the raw model response;</li>
+<li>validated candidate C;</li>
+<li>compiler report, stdout, stderr, executable identity, and output hash;</li>
+<li>COFF symbol metadata;</li>
+<li>relocation-resolution report;</li>
+<li>exact byte-comparison report;</li>
+<li>bounded feedback supplied to the next attempt.</li>
+</ul>
+<p>The loop stops when:</p>
+<ul>
+<li>exact byte identity is established;</li>
+<li>the model returns a valid <code>blocked</code> response; or</li>
+<li>the attempt limit is exhausted.</li>
+</ul>
+<h2 id="acceptance-gate">Acceptance gate</h2>
+<p>A candidate reaches <code>byte_matched</code> only when all of the following are true:</p>
+<ol>
+<li>The response is exactly one valid JSON object with the required keys.</li>
+<li>The proposed source passes the C-source contract.</li>
+<li>The registered compiler profile completes successfully.</li>
+<li>The output is a COFF object for the declared architecture.</li>
+<li>The requested symbol exists and has one extractable function body.</li>
+<li>Every COFF relocation in the extracted range resolves from explicit job inputs or object-local symbols.</li>
+<li>The resolved candidate length equals the target length.</li>
+<li>Every resolved candidate byte equals the target byte.</li>
+</ol>
+<p>Relocation-normalized similarity, instruction similarity, finite dynamic equivalence, and model confidence do not satisfy this gate.</p>
+<h2 id="report-verification">Report verification</h2>
+<p>Verify the final report and all accepted artifact hashes:</p>
+<pre><code class="language-bash">x86decomp llm verify ./llm-match-output/report.json
+</code></pre>
+<p>Verification checks status and attempt invariants, path containment, accepted source/object/resolved-byte hashes, zero unresolved relocations, and equality between the accepted resolved-byte hash and target hash.</p>
+<h2 id="security-boundary">Security boundary</h2>
+<p>Profiles are loopback-only by default. A non-loopback endpoint is rejected unless <code>allow_remote</code> is explicitly enabled in the profile. Additional controls include:</p>
+<ul>
+<li>no credentials embedded in URLs;</li>
+<li>no authorization, cookie, or proxy-authorization values stored in profile headers;</li>
+<li>optional API key lookup by environment-variable name;</li>
+<li>same-origin-only redirects;</li>
+<li>bounded request timeouts;</li>
+<li>bounded response sizes;</li>
+<li>TLS verification enabled by default;</li>
+<li>no native target execution;</li>
+<li>no direct workflow-state mutation;</li>
+<li>strict source rejection for inline assembly, byte emission, naked functions, and unfinished markers.</li>
+</ul>
+<p>Remote inference changes the data-disclosure boundary. Enabling it is an explicit operator decision and may expose assembly, ABI, decompiler, p-code, references, or analyst notes to that endpoint.</p>
+<h2 id="bounded-claims">Bounded claims</h2>
+<p>A successful report supports only this statement:</p>
+<blockquote>
+<p>Under the recorded compiler profile, target range, base RVA, image base, symbol map, section placements, and extracted COFF symbol, the relocation-resolved candidate bytes are exactly identical to the declared contiguous target bytes.</p>
+</blockquote>
+<p>It does not prove recovery of original source text, original names, comments, macros, translation units, or unique semantics. Exhausting attempts does not prove that no matching C source exists.</p>
+<h2 id="0711-decompilation-acceleration-loop">0.7.11 decompilation acceleration loop</h2>
+<p>0.7.11 adds the missing job materialization and queue-management layer around the existing local-model proposal loop:</p>
+<pre><code class="language-text">function packet or explicit byte range
+        ↓
+llm job-create / llm job-from-range
+        ↓
+llm prompt / llm generate / llm match
+        ↓
+llm batch-create / llm batch-match for queues
+        ↓
+candidate promote after a proven validator report
+        ↓
+source-map annotate / source-map verify
+</code></pre>
+<p>The new commands are bounded helpers. They do not infer a PE section mapping in <code>job-from-range</code>, do not accept non-contiguous function packets, and do not promote a candidate unless a supplied validation report proves an accepted gate. <code>cpp-generate</code> is proposal-only; it does not change the exact-byte acceptance boundary inherited by the current release.</p>
+<h2 id="0711-harness-capability-mapping">0.7.11 harness capability mapping</h2>
+<p>The verification harness now distinguishes provider identities from protocol capabilities. LM Studio may be resolved either through the <code>lms</code> CLI adapter or through the <code>lm-studio-http</code> endpoint adapter. The HTTP adapter probes a loopback OpenAI-compatible <code>/v1/models</code> endpoint and can satisfy <code>openai-compatible-chat</code> and <code>local-loopback-llm</code> coverage. It does not satisfy the separate product adapters <code>ollama</code>, <code>llama-server</code>, <code>localai</code>, or <code>vllm</code>; those remain distinct tools with their own probes and blocked statuses.</p></p>
+    </article>
+</section>
+            <!-- endblock -->
+
+            <!-- block footer -->
+                <footer>
+    <div class="d-flex flex-sm-row justify-content-between py-2 border-top drac-text-black drac-bg-cyan-green">
+        <a href="https://github.com/dracula/mkdocs" target="_blank" style="padding-left: 1%;"
+            class="footer-text drac-anchor drac-text-black drac-text-purple--hover">
+            Made with Dracula Theme for MkDocs
+        </a>
+    </div>
+</footer>
+            <!-- endblock -->
+        </div>
+
+    </main>
+
+        <script>var base_url = '..';</script>
+        <script src="../assets/js/jquery-3.3.1.slim.min.js"></script>
+        <script src="../assets/js/bootstrap.bundle.min.js"></script>
+        <script src="../assets/js/mkdocs.js"></script>
+			<script src="../search/main.js" defer></script>
+
+</body>
+
+</html>

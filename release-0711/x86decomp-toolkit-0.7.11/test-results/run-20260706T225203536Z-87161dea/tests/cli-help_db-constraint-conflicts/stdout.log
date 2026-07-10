@@ -1,9 +1,0 @@
-usage: x86decomp db-constraint-conflicts [-h] database subject relation
-
-positional arguments:
-  database
-  subject
-  relation
-
-options:
-  -h, --help  show this help message and exit

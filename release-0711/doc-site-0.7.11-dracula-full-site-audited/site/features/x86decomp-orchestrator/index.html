@@ -1,0 +1,570 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+        <title>x86decomp.orchestrator - x86decomp 0.7.11 Docs</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        
+        
+        
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="../../assets/css/darcula-highlight.min.css">
+
+        <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../assets/css/dracula-ui.min.css">
+        <link rel="stylesheet" href="../../assets/css/mkdocs.min.css">
+            <link href="../../assets/x86decomp-dracula-overrides.css" rel="stylesheet">
+
+        
+            <link  rel="icon" type="image/x-icon" href="../../assets/img/favicon.ico">
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+                <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+
+<body class="drac-bg-black-secondary drac-text-grey-ternary drac-text drac-scrollbar-purple">
+
+    <main class="d-flex">
+
+        <!-- block sidebar -->
+            <nav id="sidebar" class="sidebar drac-bg-black">
+    <div class="custom-menu">
+        <button type="button" id="sidebarCollapse" class="btn btn-primary">
+            <i class="fa fa-bars"></i>
+            <span class="sr-only">Menu</span>
+        </button>
+    </div>
+
+    <div class="p-4">
+        
+
+        <div class="drac-text-center">
+            
+                <span class="drac-text drac-line-height drac-text-white">x86decomp 0.7.11 Docs</span>
+            
+        </div>
+
+        <div class="drac-box flex-column">
+            <ul class="dot-ul">
+                <li><div class="dot-li drac-bg-cyan"></div></li>
+                <li><div class="dot-li drac-bg-green"></div></li>
+                <li><div class="dot-li drac-bg-orange"></div></li>
+                <li><div class="dot-li drac-bg-pink"></div></li>
+                <li><div class="dot-li drac-bg-purple"></div></li>
+                <li><div class="dot-li drac-bg-red"></div></li>
+                <li><div class="dot-li drac-bg-yellow"></div></li>
+            </ul>
+        </div>
+
+        <hr class="drac-divider" />
+
+        <!-- block menu -->
+        <ul class="mb-5 drac-list drac-list-none">
+            
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Home
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../../getting-started/"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Getting Started
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#workflows-collapse" aria-expanded="false">
+                    Workflows
+                </a>
+                <div class="collapse" id="workflows-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../workflows/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Workflow Guide
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../local-llm/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Local LLM C Generation
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../decompilation-acceleration/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Decompilation Acceleration
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../project-examples/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Project Examples
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#reference-collapse" aria-expanded="false">
+                    Reference
+                </a>
+                <div class="collapse" id="reference-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../reference/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../architecture/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Architecture
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../commands/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Commands
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../release-artifacts/COMMAND_REFERENCE_0.7.11/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Command Reference 0.7.11
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../schemas/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Schemas
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../integrations/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Integrations
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Source Modules
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../functions/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Function Index
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../tests/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Tests
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../release-artifacts/DOCSTRING_AUDIT_0.7.11/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Docstring Audit
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#release-evidence-collapse" aria-expanded="false">
+                    Release Evidence
+                </a>
+                <div class="collapse" id="release-evidence-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../release-evidence/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../release-artifacts/SECOND_AUDIT_FIX_REPORT_0.7.11/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Second Audit Fix Report
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../release-artifacts/DOCSTRING_AUDIT_0.7.11/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Docstring Audit
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../release-artifacts/COMMAND_REFERENCE_0.7.11/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Command Reference 0.7.11
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../verification/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Verification
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../source-coverage/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Source Coverage
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../changelog/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Changelog
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../about/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            About
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <!-- endblock -->
+    </div>
+</nav>
+        <!-- endblock -->
+
+        <nav class="divider drac-bg-purple-cyan"></nav>
+
+        <div class="content">
+            <!-- block header -->
+                <header>
+    <nav class="navbar navbar-expand-xl drac-bg-purple">
+        <div class="container-fluid">
+            
+            <button class="navbar-toggler w-100 text-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMenu"
+                aria-controls="navbarsMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse flex-column ml-auto" id="navbarsMenu">
+                <ul class="navbar-nav text-md-center">
+
+                    <!-- block preview -->
+                    <li class="nav-item">
+                            
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block search -->
+                    <li class="nav-item"><div role="search" class="search-box">
+	<form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+		<input type="text" name="q" class="drac-input drac-input-search drac-input-white drac-text-white drac-bg-black-secondary"
+		placeholder="Search docs" title="Type search term here" />
+	</form>
+</div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block source -->
+                    <li class="nav-item">
+                        
+                    </li>
+                    <!--  endblock -->
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+</header>
+            <!-- endblock -->
+
+            <!-- block content -->
+                <section class="p-md-5 section-content">
+    <article>
+        <p><h1 id="x86decomporchestrator"><code>x86decomp.orchestrator</code></h1>
+<ul>
+<li>Area: <code>toolkit</code></li>
+<li>Source path: <code>src/x86decomp/orchestrator.py</code></li>
+<li>SHA-256: <code>fab775aab1d71a2fa1a728147b8792302350689496896caa3a1936a502dbdfd7</code></li>
+<li>Size: <code>35886</code> bytes</li>
+<li>Lines: <code>769</code></li>
+</ul>
+<h2 id="module-docstring">Module docstring</h2>
+<p>Durable, resumable pipeline orchestration.</p>
+<p>Pipeline stages are concrete command executions or explicit evidence gates.  A
+stage is never represented by an unimplemented placeholder.  Missing tools or
+unmet evidence produce a durable BLOCKED state with an actionable reason.</p>
+<h2 id="symbols">Symbols</h2>
+<table>
+<thead>
+<tr>
+<th>Kind</th>
+<th>Name</th>
+<th>Line</th>
+<th>Docstring summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>class</td>
+<td><code>JobState</code></td>
+<td>32</td>
+<td>Coordinate job state behavior for the current toolkit workflow.</td>
+</tr>
+<tr>
+<td>class</td>
+<td><code>PipelineStage</code></td>
+<td>87</td>
+<td>Store validated pipeline stage fields used by toolkit reports and adapters.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>from_dict</code></td>
+<td>102</td>
+<td>Execute the from dict operation for the current toolkit workflow.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>strings</code></td>
+<td>112</td>
+<td>Execute the strings operation for the current toolkit workflow.</td>
+</tr>
+<tr>
+<td>class</td>
+<td><code>PipelineManifest</code></td>
+<td>157</td>
+<td>Store validated pipeline manifest fields used by toolkit reports and adapters.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>load</code></td>
+<td>164</td>
+<td>Load load for the current toolkit workflow.</td>
+</tr>
+<tr>
+<td>class</td>
+<td><code>Orchestrator</code></td>
+<td>193</td>
+<td>Coordinate orchestrator behavior for the current toolkit workflow.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>__init__</code></td>
+<td>195</td>
+<td>Initialize the instance with validated constructor state.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>close</code></td>
+<td>226</td>
+<td>Execute the close operation for the current toolkit workflow.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>__enter__</code></td>
+<td>230</td>
+<td>Enter the managed runtime context and return the active resource.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>__exit__</code></td>
+<td>234</td>
+<td>Exit the managed runtime context and release owned resources.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>_transaction</code></td>
+<td>238</td>
+<td>Support transaction processing for internal toolkit callers.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>register</code></td>
+<td>242</td>
+<td>Execute the register operation for the current toolkit workflow.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>_idempotency_key</code></td>
+<td>284</td>
+<td>Support idempotency key processing for internal toolkit callers.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>_event</code></td>
+<td>309</td>
+<td>Support event processing for internal toolkit callers.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>_completed_result_is_intact</code></td>
+<td>316</td>
+<td>Verify materialized outputs before reusing a succeeded job.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>_materialize_outputs</code></td>
+<td>341</td>
+<td>Support materialize outputs processing for internal toolkit callers.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>_dependency_states</code></td>
+<td>376</td>
+<td>Support dependency states processing for internal toolkit callers.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>run</code></td>
+<td>387</td>
+<td>Run run for the current toolkit workflow.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>_set_state</code></td>
+<td>420</td>
+<td>Support set state processing for internal toolkit callers.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>_run_stage</code></td>
+<td>436</td>
+<td>Support run stage processing for internal toolkit callers.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>cancellation_requested</code></td>
+<td>515</td>
+<td>Execute the cancellation requested operation for the current toolkit workflow.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>recover_stale_jobs</code></td>
+<td>547</td>
+<td>Reset only RUNNING jobs whose durable heartbeat is older than the bound.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>cancel</code></td>
+<td>592</td>
+<td>Execute the cancel operation for the current toolkit workflow.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>retry</code></td>
+<td>612</td>
+<td>Execute the retry operation for the current toolkit workflow.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>_update_pipeline_status</code></td>
+<td>638</td>
+<td>Support update pipeline status processing for internal toolkit callers.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>status</code></td>
+<td>655</td>
+<td>Execute the status operation for the current toolkit workflow.</td>
+</tr>
+<tr>
+<td>function</td>
+<td><code>create_default_pipeline</code></td>
+<td>687</td>
+<td>Generate a concrete pipeline for the current project.</td>
+</tr>
+</tbody>
+</table></p>
+    </article>
+</section>
+            <!-- endblock -->
+
+            <!-- block footer -->
+                <footer>
+    <div class="d-flex flex-sm-row justify-content-between py-2 border-top drac-text-black drac-bg-cyan-green">
+        <a href="https://github.com/dracula/mkdocs" target="_blank" style="padding-left: 1%;"
+            class="footer-text drac-anchor drac-text-black drac-text-purple--hover">
+            Made with Dracula Theme for MkDocs
+        </a>
+    </div>
+</footer>
+            <!-- endblock -->
+        </div>
+
+    </main>
+
+        <script>var base_url = '../..';</script>
+        <script src="../../assets/js/jquery-3.3.1.slim.min.js"></script>
+        <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+        <script src="../../assets/js/mkdocs.js"></script>
+			<script src="../../search/main.js" defer></script>
+
+</body>
+
+</html>

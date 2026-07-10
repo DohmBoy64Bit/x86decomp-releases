@@ -1,0 +1,73 @@
+---
+title: schemas/pdb.schema.json
+description: Schema reference page for schemas/pdb.schema.json.
+---
+
+# `schemas/pdb.schema.json`
+
+- SHA-256: `850bbf885fa040ac4601dc4d93c2fb4b3afda1dd86612a0d8866a34bacf07008`
+- Size: `2594` bytes
+- Title: x86decomp bounded PDB/MSF inventory
+- Type: `object`
+
+```json
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:x86decomp:schema:pdb:1",
+  "title": "x86decomp bounded PDB/MSF inventory",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "format", "source_path", "source_sha256", "superblock", "stream_count", "streams", "pdb_info", "tpi", "ipi", "dbi", "pe_match", "scope"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "format": {"const": "PDB_MSF_7_00"},
+    "source_path": {"type": ["string", "null"]},
+    "source_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "superblock": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["block_size", "free_block_map_block", "number_of_blocks", "directory_bytes", "block_map_address"],
+      "properties": {
+        "block_size": {"enum": [512, 1024, 2048, 4096]},
+        "free_block_map_block": {"enum": [1, 2]},
+        "number_of_blocks": {"type": "integer", "minimum": 1},
+        "directory_bytes": {"type": "integer", "minimum": 0},
+        "block_map_address": {"type": "integer", "minimum": 0}
+      }
+    },
+    "stream_count": {"type": "integer", "minimum": 0},
+    "streams": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["index", "size", "blocks", "sha256"],
+        "properties": {
+          "index": {"type": "integer", "minimum": 0},
+          "size": {"type": ["integer", "null"], "minimum": 0},
+          "blocks": {"type": "array", "items": {"type": "integer", "minimum": 0}},
+          "sha256": {"type": ["string", "null"], "pattern": "^[0-9a-f]{64}$"}
+        }
+      }
+    },
+    "pdb_info": {"type": ["object", "null"]},
+    "tpi": {"type": ["object", "null"]},
+    "ipi": {"type": ["object", "null"]},
+    "dbi": {"type": ["object", "null"]},
+    "pe_match": {"type": ["object", "null"]},
+    "scope": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["msf_directory_parsed", "pdb_identity_parsed", "tpi_ipi_headers_parsed", "dbi_modules_sources_contributions_parsed", "codeview_type_records_fully_parsed", "codeview_symbol_records_fully_parsed"],
+      "properties": {
+        "msf_directory_parsed": {"type": "boolean"},
+        "pdb_identity_parsed": {"type": "boolean"},
+        "tpi_ipi_headers_parsed": {"type": "boolean"},
+        "dbi_modules_sources_contributions_parsed": {"type": "boolean"},
+        "codeview_type_records_fully_parsed": {"const": false},
+        "codeview_symbol_records_fully_parsed": {"const": false}
+      }
+    }
+  }
+}
+```

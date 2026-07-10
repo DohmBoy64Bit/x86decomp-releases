@@ -1,9 +1,0 @@
-usage: x86decomp pipeline-create [-h] [--without-ghidra] project output
-
-positional arguments:
-  project
-  output
-
-options:
-  -h, --help        show this help message and exit
-  --without-ghidra

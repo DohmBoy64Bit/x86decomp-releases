@@ -1,0 +1,39 @@
+---
+title: schemas/execution-harness-generated.schema.json
+description: Schema reference page for schemas/execution-harness-generated.schema.json.
+---
+
+# `schemas/execution-harness-generated.schema.json`
+
+- SHA-256: `7ba43bfcb6b5b8736d784112af5531e1a890630e379eb2c345f15442c18a2c6d`
+- Size: `1397` bytes
+- Title: urn:x86decomp:schema:execution-harness-generated:1
+- Type: `object`
+
+```json
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:x86decomp:schema:execution-harness-generated:1",
+  "type": "object",
+  "required": ["schema_version", "architecture", "code_base", "stack_base", "stack_size", "sentinel_address", "max_instructions", "timeout_ms", "registers", "stack_arguments_hex", "memory", "observe_registers", "observe_memory", "stubs", "generation", "limitations"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "created_at": {"type": "string"},
+    "architecture": {"enum": ["x86", "x86_64"]},
+    "code_base": {"type": "integer", "minimum": 1},
+    "stack_base": {"type": "integer", "minimum": 1},
+    "stack_size": {"type": "integer", "minimum": 1},
+    "sentinel_address": {"type": "integer", "minimum": 1},
+    "max_instructions": {"type": "integer", "minimum": 1},
+    "timeout_ms": {"type": "integer", "minimum": 1},
+    "registers": {"type": "object", "additionalProperties": {"type": "integer"}},
+    "stack_arguments_hex": {"type": "string", "pattern": "^(?:[0-9a-fA-F]{2})*$"},
+    "memory": {"type": "array", "items": {"type": "object"}},
+    "observe_registers": {"type": "array", "items": {"type": "string"}},
+    "observe_memory": {"type": "array", "items": {"type": "object"}},
+    "stubs": {"type": "object"},
+    "generation": {"type": "object"},
+    "limitations": {"type": "array", "items": {"type": "string"}}
+  }
+}
+```

@@ -1,1 +1,0 @@
-void entry(void) {}

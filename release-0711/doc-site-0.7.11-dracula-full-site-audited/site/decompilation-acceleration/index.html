@@ -1,0 +1,495 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+        <title>Decompilation Acceleration - x86decomp 0.7.11 Docs</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        
+        
+        
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="../assets/css/darcula-highlight.min.css">
+
+        <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../assets/css/dracula-ui.min.css">
+        <link rel="stylesheet" href="../assets/css/mkdocs.min.css">
+            <link href="../assets/x86decomp-dracula-overrides.css" rel="stylesheet">
+
+        
+            <link  rel="icon" type="image/x-icon" href="../assets/img/favicon.ico">
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+                <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+
+<body class="drac-bg-black-secondary drac-text-grey-ternary drac-text drac-scrollbar-purple">
+
+    <main class="d-flex">
+
+        <!-- block sidebar -->
+            <nav id="sidebar" class="sidebar drac-bg-black">
+    <div class="custom-menu">
+        <button type="button" id="sidebarCollapse" class="btn btn-primary">
+            <i class="fa fa-bars"></i>
+            <span class="sr-only">Menu</span>
+        </button>
+    </div>
+
+    <div class="p-4">
+        
+
+        <div class="drac-text-center">
+            
+                <span class="drac-text drac-line-height drac-text-white">x86decomp 0.7.11 Docs</span>
+            
+        </div>
+
+        <div class="drac-box flex-column">
+            <ul class="dot-ul">
+                <li><div class="dot-li drac-bg-cyan"></div></li>
+                <li><div class="dot-li drac-bg-green"></div></li>
+                <li><div class="dot-li drac-bg-orange"></div></li>
+                <li><div class="dot-li drac-bg-pink"></div></li>
+                <li><div class="dot-li drac-bg-purple"></div></li>
+                <li><div class="dot-li drac-bg-red"></div></li>
+                <li><div class="dot-li drac-bg-yellow"></div></li>
+            </ul>
+        </div>
+
+        <hr class="drac-divider" />
+
+        <!-- block menu -->
+        <ul class="mb-5 drac-list drac-list-none">
+            
+            <li class="drac-box">
+                <a href=".."
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Home
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../getting-started/"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Getting Started
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href=".."
+                    class=" active 
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#workflows-collapse" aria-expanded="false">
+                    Workflows
+                </a>
+                <div class="collapse" id="workflows-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../workflows/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Workflow Guide
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../local-llm/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Local LLM C Generation
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="./"
+            class=" active 
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Decompilation Acceleration
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../project-examples/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Project Examples
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href=".."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#reference-collapse" aria-expanded="false">
+                    Reference
+                </a>
+                <div class="collapse" id="reference-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../reference/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../architecture/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Architecture
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../commands/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Commands
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../release-artifacts/COMMAND_REFERENCE_0.7.11/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Command Reference 0.7.11
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../schemas/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Schemas
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../integrations/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Integrations
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../features/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Source Modules
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../functions/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Function Index
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../tests/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Tests
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../release-artifacts/DOCSTRING_AUDIT_0.7.11/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Docstring Audit
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href=".."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#release-evidence-collapse" aria-expanded="false">
+                    Release Evidence
+                </a>
+                <div class="collapse" id="release-evidence-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../release-evidence/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../release-artifacts/SECOND_AUDIT_FIX_REPORT_0.7.11/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Second Audit Fix Report
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../release-artifacts/DOCSTRING_AUDIT_0.7.11/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Docstring Audit
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../release-artifacts/COMMAND_REFERENCE_0.7.11/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Command Reference 0.7.11
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../verification/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Verification
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../source-coverage/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Source Coverage
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../changelog/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Changelog
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../about/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            About
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <!-- endblock -->
+    </div>
+</nav>
+        <!-- endblock -->
+
+        <nav class="divider drac-bg-purple-cyan"></nav>
+
+        <div class="content">
+            <!-- block header -->
+                <header>
+    <nav class="navbar navbar-expand-xl drac-bg-purple">
+        <div class="container-fluid">
+            
+            <button class="navbar-toggler w-100 text-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMenu"
+                aria-controls="navbarsMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse flex-column ml-auto" id="navbarsMenu">
+                <ul class="navbar-nav text-md-center">
+
+                    <!-- block preview -->
+                    <li class="nav-item">
+                            
+        <div class="container">
+            <div class="row row-preview">
+                <div class="col">
+                    <a href="../local-llm/"
+                        class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover">
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="../project-examples/"
+                        class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover" style="padding-left: 3%;">
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block search -->
+                    <li class="nav-item"><div role="search" class="search-box">
+	<form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+		<input type="text" name="q" class="drac-input drac-input-search drac-input-white drac-text-white drac-bg-black-secondary"
+		placeholder="Search docs" title="Type search term here" />
+	</form>
+</div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block source -->
+                    <li class="nav-item">
+                        
+                    </li>
+                    <!--  endblock -->
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+</header>
+            <!-- endblock -->
+
+            <!-- block content -->
+                <section class="p-md-5 section-content">
+    <article>
+        <p><h1 id="decompilation-acceleration-workflow">Decompilation acceleration workflow</h1>
+<p>The 0.7.11 acceleration commands remove manual glue around local-model jobs, accepted-source promotion, source-address annotations, C++ metadata scaffolding, triage, playability smoke plans, assets, and mod/regression manifests.</p>
+<p>The commands are bounded helpers. They do not claim original source recovery, semantic proof, or successful matching unless an input validator report already proves the requested gate.</p>
+<h2 id="new-command-families">New command families</h2>
+<table>
+<thead>
+<tr>
+<th>Family</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>llm job-create</code>, <code>llm job-from-range</code></td>
+<td>Materialize local-LLM job JSON from verified function evidence or explicit bytes.</td>
+</tr>
+<tr>
+<td><code>llm batch-create</code>, <code>llm batch-match</code></td>
+<td>Build and process job queues while recording blocked reasons.</td>
+</tr>
+<tr>
+<td><code>candidate promote</code></td>
+<td>Copy a validated candidate into an accepted source stage and optionally update workflow state.</td>
+</tr>
+<tr>
+<td><code>source-map annotate</code>, <code>source-map verify</code></td>
+<td>Preserve original address identity in human-readable source files.</td>
+</tr>
+<tr>
+<td><code>module assign</code>, <code>module suggest</code></td>
+<td>Maintain and propose source-module ownership without guessing original names.</td>
+</tr>
+<tr>
+<td><code>type propagate</code>, <code>headers synthesize-project</code></td>
+<td>Create reviewable type/header propagation plans and provisional headers.</td>
+</tr>
+<tr>
+<td><code>vtable recover</code>, <code>class scaffold</code></td>
+<td>Extract C++ metadata evidence and create provisional class scaffolds.</td>
+</tr>
+<tr>
+<td><code>diff explain</code></td>
+<td>Convert mismatch reports into diagnostic hints.</td>
+</tr>
+<tr>
+<td><code>triage next</code>, <code>playability smoke-plan</code></td>
+<td>Generate contributor queues and integration-test scaffolds.</td>
+</tr>
+<tr>
+<td><code>asset inventory</code>, <code>mod branch-init</code>, <code>regression compare</code></td>
+<td>Track game assets, intentional mod branches, and regression comparison manifests.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="trust-boundary">Trust boundary</h2>
+<p>These helpers are designed to speed up project movement, not to weaken verification. Model output remains untrusted. Source promotion requires an accepted validation report. Module suggestions and class scaffolds are review aids and explicitly do not claim original source names or declarations.</p>
+<h1 id="v0711-universal-acceleration-commands">v0.7.11 universal acceleration commands</h1>
+<p>These commands turn lessons from real projects into reusable, project-neutral workflows. They are bounded helpers: they emit manifests, reports, source candidates, or safe derived files; they do not claim recovered original source or validation success unless a validator report proves it.</p>
+<h2 id="function-discovery-and-reconciliation">Function discovery and reconciliation</h2>
+<pre><code class="language-powershell">x86decomp function discover target.text --profile prologue --architecture x86 --output reports\functions\discover.json
+x86decomp function reconcile reports\functions\discover.json --output reports\functions\reconciled.json
+x86decomp function sort reports\functions\reconciled.json --key rva --output reports\functions\sorted.json
+x86decomp function classify reports\functions\sorted.json --output reports\functions\classified.json
+</code></pre>
+<p>The profile name is generic. <code>prologue</code> and <code>ret-boundary</code> are heuristic profiles, not MSVC-only promises.</p>
+<h2 id="pattern-recipes-before-llm-search">Pattern recipes before LLM search</h2>
+<pre><code class="language-powershell">x86decomp pattern catalog --output reports\patterns\catalog.json
+x86decomp pattern scan functions\ranges --output reports\patterns\scan.json
+x86decomp pattern generate reports\patterns\scan.json generated\patterns
+x86decomp pattern match generated\patterns\pattern-generation-report.json --output reports\patterns\triage.json
+</code></pre>
+<p>Generated pattern source is unaccepted until it compiles and passes matching or functional validation.</p>
+<h2 id="text-section-swap-workflow">Text-section swap workflow</h2>
+<pre><code class="language-powershell">x86decomp image-text compose project\text.bin --function-list reports\functions\sorted.json
+x86decomp text-swap plan original.exe project\text.bin reports\text-swap\plan.json --section-name .text
+x86decomp text-swap inject reports\text-swap\plan.json --output build\text-swap.exe
+x86decomp text-swap verify reports\text-swap\plan.json build\text-swap.exe --output reports\text-swap\verify.json
+</code></pre>
+<p>This is a container-preserving intermediate workflow. It is not a full relink claim.</p>
+<h2 id="project-accounting-and-mod-source-policy">Project accounting and mod-source policy</h2>
+<pre><code class="language-powershell">x86decomp project health --project project --output reports\health.json
+x86decomp progress reconcile --project project --output reports\progress.json
+x86decomp source-stage classify --project project --output reports\source-stage.json
+x86decomp release-policy moddable-source --project project --output reports\moddable-source.json
+</code></pre>
+<p>The source-stage policy distinguishes assembly fallbacks, byte wrappers, generated candidates, and human-reviewed source so byte-preserving wrappers do not masquerade as mod-ready decompilation.</p>
+<h2 id="ghidramcp-and-hygiene-helpers">GhidraMCP and hygiene helpers</h2>
+<pre><code class="language-powershell">x86decomp ghidra-mcp probe http://127.0.0.1:8080
+x86decomp ghidra-mcp functions http://127.0.0.1:8080 --output reports\ghidra-mcp\functions.json
+x86decomp ghidra-mcp decompile http://127.0.0.1:8080 0x401000 --output reports\ghidra-mcp\401000.json
+x86decomp project doctor-paths . --project project --output reports\paths.json
+x86decomp script-port audit scripts --output reports\script-port.json
+</code></pre>
+<p>MCP responses are captured as external observations. They are not trusted source.</p>
+<h2 id="runtime-subsystem-and-toolchain-helpers">Runtime, subsystem, and toolchain helpers</h2>
+<pre><code class="language-powershell">x86decomp runtime-analysis identify --project project --output reports\runtime.json
+x86decomp subsystem detect project --output reports\subsystems.json
+x86decomp game-pattern state-machine project --output reports\state-machines.json
+x86decomp toolchain hash-tree tools\local-msvc reports\toolchain-hashes.json
+x86decomp toolchain verify-local reports\toolchain-hashes.json
+x86decomp toolchain redact-package tools\local-msvc release\toolchain-redacted --manifest reports\toolchain-hashes.json
+</code></pre>
+<p>Toolchain packaging records hashes and instructions; it intentionally does not claim redistribution rights for proprietary compilers.</p></p>
+    </article>
+</section>
+            <!-- endblock -->
+
+            <!-- block footer -->
+                <footer>
+    <div class="d-flex flex-sm-row justify-content-between py-2 border-top drac-text-black drac-bg-cyan-green">
+        <a href="https://github.com/dracula/mkdocs" target="_blank" style="padding-left: 1%;"
+            class="footer-text drac-anchor drac-text-black drac-text-purple--hover">
+            Made with Dracula Theme for MkDocs
+        </a>
+    </div>
+</footer>
+            <!-- endblock -->
+        </div>
+
+    </main>
+
+        <script>var base_url = '..';</script>
+        <script src="../assets/js/jquery-3.3.1.slim.min.js"></script>
+        <script src="../assets/js/bootstrap.bundle.min.js"></script>
+        <script src="../assets/js/mkdocs.js"></script>
+			<script src="../search/main.js" defer></script>
+
+</body>
+
+</html>

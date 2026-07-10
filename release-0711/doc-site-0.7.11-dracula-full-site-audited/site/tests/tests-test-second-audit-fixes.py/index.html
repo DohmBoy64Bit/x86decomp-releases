@@ -1,0 +1,653 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+        <title>tests/test_second_audit_fixes.py - x86decomp 0.7.11 Docs</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        
+        
+        
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="../../assets/css/darcula-highlight.min.css">
+
+        <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../assets/css/dracula-ui.min.css">
+        <link rel="stylesheet" href="../../assets/css/mkdocs.min.css">
+            <link href="../../assets/x86decomp-dracula-overrides.css" rel="stylesheet">
+
+        
+            <link  rel="icon" type="image/x-icon" href="../../assets/img/favicon.ico">
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+                <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+
+<body class="drac-bg-black-secondary drac-text-grey-ternary drac-text drac-scrollbar-purple">
+
+    <main class="d-flex">
+
+        <!-- block sidebar -->
+            <nav id="sidebar" class="sidebar drac-bg-black">
+    <div class="custom-menu">
+        <button type="button" id="sidebarCollapse" class="btn btn-primary">
+            <i class="fa fa-bars"></i>
+            <span class="sr-only">Menu</span>
+        </button>
+    </div>
+
+    <div class="p-4">
+        
+
+        <div class="drac-text-center">
+            
+                <span class="drac-text drac-line-height drac-text-white">x86decomp 0.7.11 Docs</span>
+            
+        </div>
+
+        <div class="drac-box flex-column">
+            <ul class="dot-ul">
+                <li><div class="dot-li drac-bg-cyan"></div></li>
+                <li><div class="dot-li drac-bg-green"></div></li>
+                <li><div class="dot-li drac-bg-orange"></div></li>
+                <li><div class="dot-li drac-bg-pink"></div></li>
+                <li><div class="dot-li drac-bg-purple"></div></li>
+                <li><div class="dot-li drac-bg-red"></div></li>
+                <li><div class="dot-li drac-bg-yellow"></div></li>
+            </ul>
+        </div>
+
+        <hr class="drac-divider" />
+
+        <!-- block menu -->
+        <ul class="mb-5 drac-list drac-list-none">
+            
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Home
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../../getting-started/"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Getting Started
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#workflows-collapse" aria-expanded="false">
+                    Workflows
+                </a>
+                <div class="collapse" id="workflows-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../workflows/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Workflow Guide
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../local-llm/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Local LLM C Generation
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../decompilation-acceleration/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Decompilation Acceleration
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../project-examples/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Project Examples
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#reference-collapse" aria-expanded="false">
+                    Reference
+                </a>
+                <div class="collapse" id="reference-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../reference/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../architecture/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Architecture
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../commands/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Commands
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../release-artifacts/COMMAND_REFERENCE_0.7.11/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Command Reference 0.7.11
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../schemas/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Schemas
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../integrations/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Integrations
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../features/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Source Modules
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../functions/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Function Index
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Tests
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../release-artifacts/DOCSTRING_AUDIT_0.7.11/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Docstring Audit
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#release-evidence-collapse" aria-expanded="false">
+                    Release Evidence
+                </a>
+                <div class="collapse" id="release-evidence-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../release-evidence/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../release-artifacts/SECOND_AUDIT_FIX_REPORT_0.7.11/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Second Audit Fix Report
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../release-artifacts/DOCSTRING_AUDIT_0.7.11/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Docstring Audit
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../release-artifacts/COMMAND_REFERENCE_0.7.11/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Command Reference 0.7.11
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../verification/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Verification
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../source-coverage/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Source Coverage
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../changelog/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Changelog
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../about/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            About
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <!-- endblock -->
+    </div>
+</nav>
+        <!-- endblock -->
+
+        <nav class="divider drac-bg-purple-cyan"></nav>
+
+        <div class="content">
+            <!-- block header -->
+                <header>
+    <nav class="navbar navbar-expand-xl drac-bg-purple">
+        <div class="container-fluid">
+            
+            <button class="navbar-toggler w-100 text-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMenu"
+                aria-controls="navbarsMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse flex-column ml-auto" id="navbarsMenu">
+                <ul class="navbar-nav text-md-center">
+
+                    <!-- block preview -->
+                    <li class="nav-item">
+                            
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block search -->
+                    <li class="nav-item"><div role="search" class="search-box">
+	<form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+		<input type="text" name="q" class="drac-input drac-input-search drac-input-white drac-text-white drac-bg-black-secondary"
+		placeholder="Search docs" title="Type search term here" />
+	</form>
+</div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block source -->
+                    <li class="nav-item">
+                        
+                    </li>
+                    <!--  endblock -->
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+</header>
+            <!-- endblock -->
+
+            <!-- block content -->
+                <section class="p-md-5 section-content">
+    <article>
+        <p><h1 id="teststest_second_audit_fixespy"><code>tests/test_second_audit_fixes.py</code></h1>
+<ul>
+<li>SHA-256: <code>637f0a226e118e451f9cf2e2656a44b1ff96529cd1aae1c449d4f03541cf2a56</code></li>
+<li>Size: <code>10126</code> bytes</li>
+<li>Test functions: <code>7</code></li>
+</ul>
+<pre><code class="language-python">&quot;&quot;&quot;Regression tests for the second-audit fix release transaction.&quot;&quot;&quot;
+from __future__ import annotations
+
+import importlib.util
+import json
+import os
+import subprocess
+import sys
+import threading
+from contextlib import contextmanager
+from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
+from pathlib import Path
+from typing import Any, Iterator
+
+import pytest
+
+from x86decomp.local_llm import create_profile
+from x86decomp.util import write_json
+
+ROOT = Path(__file__).resolve().parents[1]
+
+
+class _ScriptedHandler(BaseHTTPRequestHandler):
+    &quot;&quot;&quot;Serve scripted JSON responses for command-level local-model tests.&quot;&quot;&quot;
+
+    script: list[tuple[int, dict[str, str], dict[str, Any]]] = []
+    requests: list[dict[str, Any]] = []
+
+    def log_message(self, format: str, *args: object) -&gt; None:
+        &quot;&quot;&quot;Suppress noisy HTTP server logs during tests.&quot;&quot;&quot;
+
+    def _respond(self) -&gt; None:
+        &quot;&quot;&quot;Handle one scripted GET or POST request.&quot;&quot;&quot;
+        length = int(self.headers.get(&quot;Content-Length&quot;, &quot;0&quot;))
+        body = self.rfile.read(length) if length else b&quot;&quot;
+        parsed: Any = json.loads(body.decode(&quot;utf-8&quot;)) if body else None
+        type(self).requests.append({&quot;method&quot;: self.command, &quot;path&quot;: self.path, &quot;body&quot;: parsed})
+        status, headers, payload = type(self).script.pop(0)
+        encoded = json.dumps(payload).encode(&quot;utf-8&quot;)
+        self.send_response(status)
+        for key, value in headers.items():
+            self.send_header(key, value)
+        self.send_header(&quot;Content-Type&quot;, &quot;application/json&quot;)
+        self.send_header(&quot;Content-Length&quot;, str(len(encoded)))
+        self.end_headers()
+        self.wfile.write(encoded)
+
+    do_GET = _respond
+    do_POST = _respond
+
+
+@contextmanager
+def _server(script: list[tuple[int, dict[str, str], dict[str, Any]]]) -&gt; Iterator[str]:
+    &quot;&quot;&quot;Run a loopback scripted HTTP server for one test.&quot;&quot;&quot;
+    handler = type(&quot;ScriptedHandler&quot;, (_ScriptedHandler,), {&quot;script&quot;: list(script), &quot;requests&quot;: []})
+    server = ThreadingHTTPServer((&quot;127.0.0.1&quot;, 0), handler)
+    thread = threading.Thread(target=server.serve_forever, daemon=True)
+    thread.start()
+    try:
+        yield f&quot;http://127.0.0.1:{server.server_port}&quot;
+    finally:
+        server.shutdown()
+        thread.join(timeout=5)
+        server.server_close()
+
+
+def _run_cli(*args: str, cwd: Path) -&gt; subprocess.CompletedProcess[str]:
+    &quot;&quot;&quot;Run the root x86decomp CLI from the source tree.&quot;&quot;&quot;
+    env = os.environ.copy()
+    env[&quot;PYTHONPATH&quot;] = str(ROOT / &quot;src&quot;)
+    return subprocess.run(
+        [sys.executable, &quot;-m&quot;, &quot;x86decomp.cli&quot;, *args],
+        cwd=cwd,
+        env=env,
+        text=True,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+        check=False,
+    )
+
+
+def _write_job(path: Path) -&gt; None:
+    &quot;&quot;&quot;Write a minimal local-LLM job used by prompt and generation commands.&quot;&quot;&quot;
+    write_json(
+        path,
+        {
+            &quot;schema_version&quot;: 1,
+            &quot;id&quot;: &quot;add-two-ints&quot;,
+            &quot;function_name&quot;: &quot;target_add&quot;,
+            &quot;symbol&quot;: &quot;target_add&quot;,
+            &quot;architecture&quot;: &quot;x86&quot;,
+            &quot;mnemonics&quot;: &quot;mov eax, [esp+4]\nadd eax, [esp+8]\nret&quot;,
+            &quot;target_bytes_hex&quot;: &quot;8b44240403442408c3&quot;,
+            &quot;base_rva&quot;: 4096,
+            &quot;image_base&quot;: 4194304,
+            &quot;abi&quot;: {
+                &quot;calling_convention&quot;: &quot;cdecl&quot;,
+                &quot;return_type&quot;: &quot;signed 32-bit integer&quot;,
+                &quot;parameters&quot;: [&quot;signed 32-bit integer a&quot;, &quot;signed 32-bit integer b&quot;],
+            },
+            &quot;evidence&quot;: {&quot;analyst_notes&quot;: &quot;bounded fixture&quot;},
+            &quot;max_attempts&quot;: 2,
+        },
+    )
+
+
+def test_root_plugin_validate_returns_json_without_name_error(tmp_path: Path) -&gt; None:
+    &quot;&quot;&quot;Verify the canonical plugin validate route no longer crashes on missing json import.&quot;&quot;&quot;
+    executable = tmp_path / &quot;plugin.py&quot;
+    executable.write_text(&quot;#!/usr/bin/env python3\nprint('ok')\n&quot;, encoding=&quot;utf-8&quot;)
+    manifest = tmp_path / &quot;plugin.json&quot;
+    write_json(
+        manifest,
+        {
+            &quot;name&quot;: &quot;demo&quot;,
+            &quot;version&quot;: &quot;1.0&quot;,
+            &quot;api_version&quot;: &quot;1&quot;,
+            &quot;executable&quot;: str(executable),
+            &quot;capabilities&quot;: [&quot;analyze&quot;],
+        },
+    )
+    result = _run_cli(&quot;plugin&quot;, &quot;--project&quot;, str(tmp_path / &quot;project&quot;), &quot;validate&quot;, str(manifest), cwd=ROOT)
+    assert result.returncode == 0, result.stderr
+    payload = json.loads(result.stdout)
+    assert payload[&quot;passed&quot;] is True
+    assert &quot;NameError&quot; not in result.stderr
+
+
+def test_root_llm_prompt_writes_prompt_file(tmp_path: Path) -&gt; None:
+    &quot;&quot;&quot;Verify the canonical llm prompt route writes deterministic prompt JSON.&quot;&quot;&quot;
+    job = tmp_path / &quot;job.json&quot;
+    output = tmp_path / &quot;prompt.json&quot;
+    _write_job(job)
+    result = _run_cli(&quot;llm&quot;, &quot;--project&quot;, str(tmp_path), &quot;prompt&quot;, str(job), str(output), cwd=ROOT)
+    assert result.returncode == 0, result.stderr
+    assert output.is_file()
+    prompt = json.loads(output.read_text(encoding=&quot;utf-8&quot;))
+    assert prompt[&quot;schema_version&quot;] == 1
+    assert prompt[&quot;job_id&quot;] == &quot;add-two-ints&quot;
+    assert &quot;prompt_sha256&quot; in prompt
+
+
+def test_root_llm_generate_report_writes_report_file(tmp_path: Path) -&gt; None:
+    &quot;&quot;&quot;Verify llm generate --report uses the shared JSON writer instead of a missing symbol.&quot;&quot;&quot;
+    job = tmp_path / &quot;job.json&quot;
+    profile = tmp_path / &quot;profile.json&quot;
+    output = tmp_path / &quot;candidate.c&quot;
+    report = tmp_path / &quot;generation.json&quot;
+    _write_job(job)
+    payload = {
+        &quot;status&quot;: &quot;proposed&quot;,
+        &quot;c_source&quot;: &quot;int target_add(int a, int b) { return a + b; }\n&quot;,
+        &quot;assumptions&quot;: [&quot;bounded command fixture&quot;],
+        &quot;rationale&quot;: &quot;The function adds two integer parameters.&quot;,
+    }
+    with _server([(200, {}, {&quot;choices&quot;: [{&quot;message&quot;: {&quot;content&quot;: json.dumps(payload)}}]})]) as base_url:
+        create_profile(
+            &quot;openai-compatible&quot;,
+            profile,
+            model=&quot;test-model&quot;,
+            base_url=f&quot;{base_url}/v1&quot;,
+        )
+        result = _run_cli(
+            &quot;llm&quot;, &quot;--project&quot;, str(tmp_path), &quot;generate&quot;, str(profile), str(job), str(output), &quot;--report&quot;, str(report), cwd=ROOT
+        )
+    assert result.returncode == 0, result.stderr
+    assert output.read_text(encoding=&quot;utf-8&quot;) == payload[&quot;c_source&quot;]
+    written = json.loads(report.read_text(encoding=&quot;utf-8&quot;))
+    assert written[&quot;kind&quot;] == &quot;local_llm_generation&quot;
+    assert written[&quot;claim&quot;] == &quot;proposal_only&quot;
+
+
+
+def test_root_llm_cpp_generate_report_writes_report_file(tmp_path: Path) -&gt; None:
+    &quot;&quot;&quot;Verify llm cpp-generate --report writes the bounded proposal report.&quot;&quot;&quot;
+    job = tmp_path / &quot;job.json&quot;
+    profile = tmp_path / &quot;profile.json&quot;
+    output = tmp_path / &quot;candidate.cpp&quot;
+    report = tmp_path / &quot;cpp-generation.json&quot;
+    _write_job(job)
+    payload = {
+        &quot;status&quot;: &quot;proposed&quot;,
+        &quot;c_source&quot;: &quot;int target_add(int a, int b) { return a + b; }\n&quot;,
+        &quot;assumptions&quot;: [&quot;bounded command fixture&quot;],
+        &quot;rationale&quot;: &quot;The function adds two integer parameters.&quot;,
+    }
+    with _server([(200, {}, {&quot;choices&quot;: [{&quot;message&quot;: {&quot;content&quot;: json.dumps(payload)}}]})]) as base_url:
+        create_profile(
+            &quot;openai-compatible&quot;,
+            profile,
+            model=&quot;test-model&quot;,
+            base_url=f&quot;{base_url}/v1&quot;,
+        )
+        result = _run_cli(
+            &quot;llm&quot;,
+            &quot;--project&quot;,
+            str(tmp_path),
+            &quot;cpp-generate&quot;,
+            str(profile),
+            str(job),
+            str(output),
+            &quot;--report&quot;,
+            str(report),
+            cwd=ROOT,
+        )
+    assert result.returncode == 0, result.stderr
+    written = json.loads(report.read_text(encoding=&quot;utf-8&quot;))
+    assert written[&quot;language&quot;] == &quot;cpp&quot;
+    assert written[&quot;claim&quot;] == &quot;proposal_only_cpp_uncompiled&quot;
+
+def test_reconstruction_cli_error_handler_emits_json(tmp_path: Path) -&gt; None:
+    &quot;&quot;&quot;Verify reconstruction CLI handled errors are emitted as JSON, not NameError.&quot;&quot;&quot;
+    env = os.environ.copy()
+    env[&quot;PYTHONPATH&quot;] = str(ROOT / &quot;src&quot;)
+    result = subprocess.run(
+        [
+            sys.executable,
+            &quot;-m&quot;,
+            &quot;x86decomp.reconstruction.cli&quot;,
+            &quot;llm&quot;,
+            &quot;prompt&quot;,
+            str(tmp_path / &quot;missing-job.json&quot;),
+            str(tmp_path / &quot;prompt.json&quot;),
+        ],
+        cwd=ROOT,
+        env=env,
+        text=True,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+        check=False,
+    )
+    assert result.returncode == 2
+    payload = json.loads(result.stderr)
+    assert payload[&quot;error&quot;] in {&quot;ContractError&quot;, &quot;FileNotFoundError&quot;, &quot;OSError&quot;}
+    assert &quot;NameError&quot; not in result.stderr
+
+
+def test_validate_contracts_missing_javalang_message(monkeypatch: pytest.MonkeyPatch) -&gt; None:
+    &quot;&quot;&quot;Verify validate-contracts reports a clear missing-javalang diagnostic.&quot;&quot;&quot;
+    module_path = ROOT / &quot;scripts&quot; / &quot;validate-contracts.py&quot;
+    spec = importlib.util.spec_from_file_location(&quot;validate_contracts_under_test&quot;, module_path)
+    assert spec and spec.loader
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    real_import = __import__
+
+    def blocked_import(name: str, *args: Any, **kwargs: Any) -&gt; Any:
+        &quot;&quot;&quot;Raise ModuleNotFoundError only for the simulated javalang import.&quot;&quot;&quot;
+        if name == &quot;javalang&quot;:
+            raise ModuleNotFoundError(&quot;No module named 'javalang'&quot;)
+        return real_import(name, *args, **kwargs)
+
+    monkeypatch.setattr(&quot;builtins.__import__&quot;, blocked_import)
+    with pytest.raises(RuntimeError, match=&quot;missing validation dependency: install the dev extra&quot;):
+        module.validate_java_syntax()
+
+
+def test_plan_only_command_help_is_explicit(capsys: pytest.CaptureFixture[str]) -&gt; None:
+    &quot;&quot;&quot;Verify action-named plan-only commands advertise that they do not mutate state.&quot;&quot;&quot;
+    from x86decomp.reconstruction.cli import build_parser
+
+    for argv, phrase in (
+        ([&quot;candidate&quot;, &quot;search&quot;, &quot;--help&quot;], &quot;plan only&quot;),
+        ([&quot;type&quot;, &quot;propagate&quot;, &quot;--help&quot;], &quot;no source edits&quot;),
+        ([&quot;triage&quot;, &quot;next&quot;, &quot;--help&quot;], &quot;plan only&quot;),
+    ):
+        with pytest.raises(SystemExit):
+            build_parser().parse_args(argv)
+        captured = capsys.readouterr()
+        assert phrase in captured.out
+</code></pre></p>
+    </article>
+</section>
+            <!-- endblock -->
+
+            <!-- block footer -->
+                <footer>
+    <div class="d-flex flex-sm-row justify-content-between py-2 border-top drac-text-black drac-bg-cyan-green">
+        <a href="https://github.com/dracula/mkdocs" target="_blank" style="padding-left: 1%;"
+            class="footer-text drac-anchor drac-text-black drac-text-purple--hover">
+            Made with Dracula Theme for MkDocs
+        </a>
+    </div>
+</footer>
+            <!-- endblock -->
+        </div>
+
+    </main>
+
+        <script>var base_url = '../..';</script>
+        <script src="../../assets/js/jquery-3.3.1.slim.min.js"></script>
+        <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+        <script src="../../assets/js/mkdocs.js"></script>
+			<script src="../../search/main.js" defer></script>
+
+</body>
+
+</html>

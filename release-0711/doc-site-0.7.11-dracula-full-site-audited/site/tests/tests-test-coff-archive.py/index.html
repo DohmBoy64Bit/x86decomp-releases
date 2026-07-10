@@ -1,0 +1,498 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+        <title>tests/test_coff_archive.py - x86decomp 0.7.11 Docs</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        
+        
+        
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="../../assets/css/darcula-highlight.min.css">
+
+        <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../assets/css/dracula-ui.min.css">
+        <link rel="stylesheet" href="../../assets/css/mkdocs.min.css">
+            <link href="../../assets/x86decomp-dracula-overrides.css" rel="stylesheet">
+
+        
+            <link  rel="icon" type="image/x-icon" href="../../assets/img/favicon.ico">
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+                <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+
+<body class="drac-bg-black-secondary drac-text-grey-ternary drac-text drac-scrollbar-purple">
+
+    <main class="d-flex">
+
+        <!-- block sidebar -->
+            <nav id="sidebar" class="sidebar drac-bg-black">
+    <div class="custom-menu">
+        <button type="button" id="sidebarCollapse" class="btn btn-primary">
+            <i class="fa fa-bars"></i>
+            <span class="sr-only">Menu</span>
+        </button>
+    </div>
+
+    <div class="p-4">
+        
+
+        <div class="drac-text-center">
+            
+                <span class="drac-text drac-line-height drac-text-white">x86decomp 0.7.11 Docs</span>
+            
+        </div>
+
+        <div class="drac-box flex-column">
+            <ul class="dot-ul">
+                <li><div class="dot-li drac-bg-cyan"></div></li>
+                <li><div class="dot-li drac-bg-green"></div></li>
+                <li><div class="dot-li drac-bg-orange"></div></li>
+                <li><div class="dot-li drac-bg-pink"></div></li>
+                <li><div class="dot-li drac-bg-purple"></div></li>
+                <li><div class="dot-li drac-bg-red"></div></li>
+                <li><div class="dot-li drac-bg-yellow"></div></li>
+            </ul>
+        </div>
+
+        <hr class="drac-divider" />
+
+        <!-- block menu -->
+        <ul class="mb-5 drac-list drac-list-none">
+            
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Home
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../../getting-started/"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Getting Started
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#workflows-collapse" aria-expanded="false">
+                    Workflows
+                </a>
+                <div class="collapse" id="workflows-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../workflows/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Workflow Guide
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../local-llm/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Local LLM C Generation
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../decompilation-acceleration/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Decompilation Acceleration
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../project-examples/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Project Examples
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#reference-collapse" aria-expanded="false">
+                    Reference
+                </a>
+                <div class="collapse" id="reference-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../reference/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../architecture/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Architecture
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../commands/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Commands
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../release-artifacts/COMMAND_REFERENCE_0.7.11/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Command Reference 0.7.11
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../schemas/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Schemas
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../integrations/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Integrations
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../features/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Source Modules
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../functions/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Function Index
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Tests
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../release-artifacts/DOCSTRING_AUDIT_0.7.11/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Docstring Audit
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#release-evidence-collapse" aria-expanded="false">
+                    Release Evidence
+                </a>
+                <div class="collapse" id="release-evidence-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../release-evidence/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../release-artifacts/SECOND_AUDIT_FIX_REPORT_0.7.11/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Second Audit Fix Report
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../release-artifacts/DOCSTRING_AUDIT_0.7.11/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Docstring Audit
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../release-artifacts/COMMAND_REFERENCE_0.7.11/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Command Reference 0.7.11
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../verification/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Verification
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../source-coverage/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Source Coverage
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../changelog/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Changelog
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../about/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            About
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <!-- endblock -->
+    </div>
+</nav>
+        <!-- endblock -->
+
+        <nav class="divider drac-bg-purple-cyan"></nav>
+
+        <div class="content">
+            <!-- block header -->
+                <header>
+    <nav class="navbar navbar-expand-xl drac-bg-purple">
+        <div class="container-fluid">
+            
+            <button class="navbar-toggler w-100 text-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMenu"
+                aria-controls="navbarsMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse flex-column ml-auto" id="navbarsMenu">
+                <ul class="navbar-nav text-md-center">
+
+                    <!-- block preview -->
+                    <li class="nav-item">
+                            
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block search -->
+                    <li class="nav-item"><div role="search" class="search-box">
+	<form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+		<input type="text" name="q" class="drac-input drac-input-search drac-input-white drac-text-white drac-bg-black-secondary"
+		placeholder="Search docs" title="Type search term here" />
+	</form>
+</div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block source -->
+                    <li class="nav-item">
+                        
+                    </li>
+                    <!--  endblock -->
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+</header>
+            <!-- endblock -->
+
+            <!-- block content -->
+                <section class="p-md-5 section-content">
+    <article>
+        <p><h1 id="teststest_coff_archivepy"><code>tests/test_coff_archive.py</code></h1>
+<ul>
+<li>SHA-256: <code>38b8932cc6744db56c6ca164ad1749229f89daccd8e569f797be64b49b126a60</code></li>
+<li>Size: <code>4889</code> bytes</li>
+<li>Test functions: <code>3</code></li>
+</ul>
+<pre><code class="language-python">&quot;&quot;&quot;Verify the current toolkit behavior covered by `tests/test_coff_archive.py`.&quot;&quot;&quot;
+from __future__ import annotations
+
+import shutil
+import subprocess
+from pathlib import Path
+
+import pytest
+
+from x86decomp.coff_archive import parse_coff_archive
+from x86decomp.test_bundle import create_test_bundle, inspect_test_bundle
+
+
+@pytest.mark.skipif(shutil.which(&quot;clang&quot;) is None or shutil.which(&quot;llvm-ar&quot;) is None, reason=&quot;LLVM tools unavailable&quot;)
+def test_real_coff_archive_members_symbols_and_comdat(tmp_path: Path) -&gt; None:
+    &quot;&quot;&quot;Verify real coff archive members symbols and comdat behavior.&quot;&quot;&quot;
+    first_source = tmp_path / &quot;first.c&quot;
+    first_source.write_text(&quot;int add(int a,int b){return a+b;}\n&quot;, encoding=&quot;utf-8&quot;)
+    second_source = tmp_path / &quot;second.c&quot;
+    second_source.write_text(
+        &quot;__declspec(selectany) int shared_value=7;\n&quot;
+        &quot;int get_shared(void){return shared_value;}\n&quot;,
+        encoding=&quot;utf-8&quot;,
+    )
+    first_object = tmp_path / &quot;first.obj&quot;
+    second_object = tmp_path / &quot;second.obj&quot;
+    archive = tmp_path / &quot;sample.lib&quot;
+    for source, output in ((first_source, first_object), (second_source, second_object)):
+        subprocess.run(
+            [&quot;clang&quot;, &quot;--target=i686-pc-windows-msvc&quot;, &quot;-c&quot;, str(source), &quot;-o&quot;, str(output)],
+            check=True,
+            capture_output=True,
+            text=True,
+        )
+    subprocess.run(
+        [&quot;llvm-ar&quot;, &quot;rc&quot;, str(archive), str(first_object), str(second_object)],
+        check=True,
+        capture_output=True,
+        text=True,
+    )
+
+    report = parse_coff_archive(archive).to_dict()
+    object_members = [member for member in report[&quot;members&quot;] if member[&quot;kind&quot;] == &quot;coff_object&quot;]
+    assert [member[&quot;name&quot;] for member in object_members] == [&quot;first.obj&quot;, &quot;second.obj&quot;]
+    assert all(member[&quot;coff&quot;][&quot;architecture&quot;] == &quot;x86&quot; for member in object_members)
+    symbols = {entry[&quot;name&quot;] for entry in report[&quot;linker_symbols&quot;]}
+    assert {&quot;_add&quot;, &quot;_get_shared&quot;, &quot;_shared_value&quot;}.issubset(symbols)
+    assert any(
+        section.get(&quot;comdat&quot;) is not None
+        for member in object_members
+        for section in member[&quot;coff&quot;][&quot;sections&quot;]
+    )
+
+
+@pytest.mark.skipif(shutil.which(&quot;clang&quot;) is None or shutil.which(&quot;llvm-ar&quot;) is None, reason=&quot;LLVM tools unavailable&quot;)
+def test_static_library_is_inspected_in_safe_bundle(tmp_path: Path) -&gt; None:
+    &quot;&quot;&quot;Verify static library is inspected in safe bundle behavior.&quot;&quot;&quot;
+    source = tmp_path / &quot;library.c&quot;
+    source.write_text(&quot;int library_value(void){return 19;}\n&quot;, encoding=&quot;utf-8&quot;)
+    obj = tmp_path / &quot;library.obj&quot;
+    archive = tmp_path / &quot;library.lib&quot;
+    subprocess.run(
+        [&quot;clang&quot;, &quot;--target=i686-pc-windows-msvc&quot;, &quot;-c&quot;, str(source), &quot;-o&quot;, str(obj)],
+        check=True,
+        capture_output=True,
+        text=True,
+    )
+    subprocess.run([&quot;llvm-ar&quot;, &quot;rc&quot;, str(archive), str(obj)], check=True, capture_output=True, text=True)
+
+    bundle = tmp_path / &quot;bundle.zip&quot;
+    created = create_test_bundle(
+        bundle,
+        artifacts=[(&quot;static_library&quot;, archive)],
+        authorization_statement=&quot;Synthetic library created and owned by this regression test.&quot;,
+        expected_architecture=&quot;x86&quot;,
+    )
+    assert created[&quot;static_verification_passed&quot;]
+    report = inspect_test_bundle(bundle)
+    assert report[&quot;passed&quot;]
+    archives = report[&quot;analyses&quot;][&quot;coff_archives&quot;]
+    assert len(archives) == 1
+    assert any(member[&quot;kind&quot;] == &quot;coff_object&quot; for member in archives[0][&quot;archive&quot;][&quot;members&quot;])
+    assert report[&quot;supplied_code_executed&quot;] is False
+
+@pytest.mark.skipif(
+    shutil.which(&quot;clang&quot;) is None or shutil.which(&quot;lld-link&quot;) is None,
+    reason=&quot;LLVM Windows linker tools unavailable&quot;,
+)
+def test_real_import_library_records(tmp_path: Path) -&gt; None:
+    &quot;&quot;&quot;Verify real import library records behavior.&quot;&quot;&quot;
+    source = tmp_path / &quot;export.c&quot;
+    source.write_text(&quot;__declspec(dllexport) int exported_value(int x){return x+1;}\n&quot;, encoding=&quot;utf-8&quot;)
+    obj = tmp_path / &quot;export.obj&quot;
+    dll = tmp_path / &quot;export.dll&quot;
+    library = tmp_path / &quot;export.lib&quot;
+    subprocess.run(
+        [&quot;clang&quot;, &quot;--target=i686-pc-windows-msvc&quot;, &quot;-c&quot;, str(source), &quot;-o&quot;, str(obj)],
+        check=True,
+        capture_output=True,
+        text=True,
+    )
+    completed = subprocess.run(
+        [
+            &quot;lld-link&quot;, &quot;/nologo&quot;, &quot;/dll&quot;, &quot;/noentry&quot;, &quot;/nodefaultlib&quot;, &quot;/machine:x86&quot;,
+            f&quot;/out:{dll}&quot;, f&quot;/implib:{library}&quot;, str(obj),
+        ],
+        check=False,
+        capture_output=True,
+        text=True,
+    )
+    assert completed.returncode == 0, completed.stderr
+    report = parse_coff_archive(library).to_dict()
+    imports = [member[&quot;import_object&quot;] for member in report[&quot;members&quot;] if member[&quot;kind&quot;] == &quot;import_object&quot;]
+    assert any(item[&quot;symbol&quot;] == &quot;_exported_value&quot; and item[&quot;dll&quot;] == &quot;export.dll&quot; for item in imports)
+    assert any(entry[&quot;name&quot;] == &quot;__imp__exported_value&quot; for entry in report[&quot;linker_symbols&quot;])
+</code></pre></p>
+    </article>
+</section>
+            <!-- endblock -->
+
+            <!-- block footer -->
+                <footer>
+    <div class="d-flex flex-sm-row justify-content-between py-2 border-top drac-text-black drac-bg-cyan-green">
+        <a href="https://github.com/dracula/mkdocs" target="_blank" style="padding-left: 1%;"
+            class="footer-text drac-anchor drac-text-black drac-text-purple--hover">
+            Made with Dracula Theme for MkDocs
+        </a>
+    </div>
+</footer>
+            <!-- endblock -->
+        </div>
+
+    </main>
+
+        <script>var base_url = '../..';</script>
+        <script src="../../assets/js/jquery-3.3.1.slim.min.js"></script>
+        <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+        <script src="../../assets/js/mkdocs.js"></script>
+			<script src="../../search/main.js" defer></script>
+
+</body>
+
+</html>

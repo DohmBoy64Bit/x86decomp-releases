@@ -1,7 +1,0 @@
-usage: x86decomp template-derive [-h] target_pack
-
-positional arguments:
-  target_pack
-
-options:
-  -h, --help   show this help message and exit

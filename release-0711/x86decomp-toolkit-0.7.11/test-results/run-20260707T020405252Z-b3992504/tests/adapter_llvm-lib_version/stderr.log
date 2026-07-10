@@ -1,4 +1,0 @@
-ignoring unknown argument: --version
-warning: no input files, not writing output file
-         pass /llvmlibempty to write empty .lib file,
-         pass /ignore:emptyoutput to suppress warning

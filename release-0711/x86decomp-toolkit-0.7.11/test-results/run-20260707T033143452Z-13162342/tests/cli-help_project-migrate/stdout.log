@@ -1,9 +1,0 @@
-usage: x86decomp project-migrate [-h] [--dry-run] [--backup BACKUP] project
-
-positional arguments:
-  project
-
-options:
-  -h, --help       show this help message and exit
-  --dry-run
-  --backup BACKUP

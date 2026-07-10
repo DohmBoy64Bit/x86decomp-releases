@@ -1,0 +1,41 @@
+---
+title: x86decomp boundary
+description: Parser-derived command reference page for `boundary`.
+---
+
+# `x86decomp boundary`
+
+Source: `0.7.11` parser surface.
+
+## Canonical routes
+
+| Action | Owner |
+| --- | --- |
+| `audit` | `native` |
+| `audit-project` | `native` |
+| `export-ghidra-fixes` | `native` |
+| `list` | `native` |
+| `show` | `native` |
+## Parser help
+
+```text
+usage: x86decomp boundary [-h] [--project PROJECT] [--actor ACTOR]
+                          {audit,audit-project,export-ghidra-fixes,list,show} ...
+
+Canonical boundary commands implemented by the current capability subsystem.
+
+positional arguments:
+  {audit,audit-project,export-ghidra-fixes,list,show}
+    audit               audit command
+    audit-project       audit-project command
+    export-ghidra-fixes
+                        export-ghidra-fixes command
+    list                list command
+    show                show command
+
+options:
+  -h, --help            show this help message and exit
+  --project PROJECT     project root used by the capability implementation
+                        (default: current directory)
+  --actor ACTOR
+```

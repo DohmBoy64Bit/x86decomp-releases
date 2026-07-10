@@ -1,0 +1,523 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+        <title>Example: static analysis and evidence project - x86decomp 0.7.11 Docs</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        
+        
+        
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="../../assets/css/darcula-highlight.min.css">
+
+        <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../assets/css/dracula-ui.min.css">
+        <link rel="stylesheet" href="../../assets/css/mkdocs.min.css">
+            <link href="../../assets/x86decomp-dracula-overrides.css" rel="stylesheet">
+
+        
+            <link  rel="icon" type="image/x-icon" href="../../assets/img/favicon.ico">
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+                <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+
+<body class="drac-bg-black-secondary drac-text-grey-ternary drac-text drac-scrollbar-purple">
+
+    <main class="d-flex">
+
+        <!-- block sidebar -->
+            <nav id="sidebar" class="sidebar drac-bg-black">
+    <div class="custom-menu">
+        <button type="button" id="sidebarCollapse" class="btn btn-primary">
+            <i class="fa fa-bars"></i>
+            <span class="sr-only">Menu</span>
+        </button>
+    </div>
+
+    <div class="p-4">
+        
+
+        <div class="drac-text-center">
+            
+                <span class="drac-text drac-line-height drac-text-white">x86decomp 0.7.11 Docs</span>
+            
+        </div>
+
+        <div class="drac-box flex-column">
+            <ul class="dot-ul">
+                <li><div class="dot-li drac-bg-cyan"></div></li>
+                <li><div class="dot-li drac-bg-green"></div></li>
+                <li><div class="dot-li drac-bg-orange"></div></li>
+                <li><div class="dot-li drac-bg-pink"></div></li>
+                <li><div class="dot-li drac-bg-purple"></div></li>
+                <li><div class="dot-li drac-bg-red"></div></li>
+                <li><div class="dot-li drac-bg-yellow"></div></li>
+            </ul>
+        </div>
+
+        <hr class="drac-divider" />
+
+        <!-- block menu -->
+        <ul class="mb-5 drac-list drac-list-none">
+            
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Home
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../../getting-started/"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Getting Started
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#workflows-collapse" aria-expanded="false">
+                    Workflows
+                </a>
+                <div class="collapse" id="workflows-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../workflows/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Workflow Guide
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../local-llm/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Local LLM C Generation
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../decompilation-acceleration/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Decompilation Acceleration
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Project Examples
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#reference-collapse" aria-expanded="false">
+                    Reference
+                </a>
+                <div class="collapse" id="reference-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../reference/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../architecture/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Architecture
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../commands/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Commands
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../release-artifacts/COMMAND_REFERENCE_0.7.11/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Command Reference 0.7.11
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../schemas/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Schemas
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../integrations/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Integrations
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../features/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Source Modules
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../functions/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Function Index
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../tests/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Tests
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../release-artifacts/DOCSTRING_AUDIT_0.7.11/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Docstring Audit
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#release-evidence-collapse" aria-expanded="false">
+                    Release Evidence
+                </a>
+                <div class="collapse" id="release-evidence-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../release-evidence/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../release-artifacts/SECOND_AUDIT_FIX_REPORT_0.7.11/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Second Audit Fix Report
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../release-artifacts/DOCSTRING_AUDIT_0.7.11/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Docstring Audit
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../release-artifacts/COMMAND_REFERENCE_0.7.11/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Command Reference 0.7.11
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../verification/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Verification
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../source-coverage/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Source Coverage
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../changelog/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Changelog
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../about/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            About
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <!-- endblock -->
+    </div>
+</nav>
+        <!-- endblock -->
+
+        <nav class="divider drac-bg-purple-cyan"></nav>
+
+        <div class="content">
+            <!-- block header -->
+                <header>
+    <nav class="navbar navbar-expand-xl drac-bg-purple">
+        <div class="container-fluid">
+            
+            <button class="navbar-toggler w-100 text-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMenu"
+                aria-controls="navbarsMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse flex-column ml-auto" id="navbarsMenu">
+                <ul class="navbar-nav text-md-center">
+
+                    <!-- block preview -->
+                    <li class="nav-item">
+                            
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block search -->
+                    <li class="nav-item"><div role="search" class="search-box">
+	<form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+		<input type="text" name="q" class="drac-input drac-input-search drac-input-white drac-text-white drac-bg-black-secondary"
+		placeholder="Search docs" title="Type search term here" />
+	</form>
+</div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block source -->
+                    <li class="nav-item">
+                        
+                    </li>
+                    <!--  endblock -->
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+</header>
+            <!-- endblock -->
+
+            <!-- block content -->
+                <section class="p-md-5 section-content">
+    <article>
+        <p><p><a id="model"></a>
+<a id="static-analysis-evidence-flow-title"></a>
+<a id="static-analysis-evidence-flow-desc"></a>
+<a id="arrow-static-analysis-evidence"></a>
+<a id="static-analysis-evidence-flow-caption"></a>
+<a id="pack"></a>
+<a id="inspect"></a>
+<a id="ghidra"></a>
+<a id="crosscheck"></a>
+<a id="claims"></a>
+<a id="database"></a>
+<a id="deliverables"></a>
+<a id="limits"></a>
+<a id="source-basis"></a></p>
+<p>Section: Project examples</p>
+<h1 id="example-static-analysis-and-evidence-project">Example: static analysis and evidence project</h1>
+<p>Inventory a native PE, supporting symbols, objects, libraries, and function artifacts without executing the target or claiming reconstructed source.</p>
+<blockquote>
+<p><strong>Example notation.</strong> Paths and function identifiers are representative local names. Commands and options are exact v0.7.11 parser forms; target-specific hashes, addresses, profiles, reports, and passing outcomes must come from the actual project.</p>
+<p><strong>Classification.</strong> This is a supporting analysis workflow, not an additional project mode. It can feed either matching or functional work.</p>
+</blockquote>
+<p><strong>On this page</strong></p>
+<ol>
+<li><a href="#model">Evidence flow</a></li>
+<li><a href="#pack">Seal inputs</a></li>
+<li><a href="#inspect">Inspect formats</a></li>
+<li><a href="#ghidra">Export Ghidra artifacts</a></li>
+<li><a href="#crosscheck">Cross-check instructions</a></li>
+<li><a href="#claims">Record evidence and claims</a></li>
+<li><a href="#database">Ingest/query analysis</a></li>
+<li><a href="#deliverables">Deliverables</a></li>
+<li><a href="#limits">Truth boundary</a></li>
+<li><a href="#source-basis">Source basis</a></li>
+</ol>
+<h2 id="evidence-flow">Evidence flow</h2>
+<p>Static observations remain provenance-bearing and separate from operator decisions or reconstructed-source claims.Authorized files → Target pack → PE/PDB/MAP/COFF → Ghidra export → Disassembly check → Evidence claims → Analysis report</p>
+<p>Authorized filesTarget packPE/PDB/MAP/COFFGhidra exportDisassembly checkEvidence claimsAnalysis report</p>
+<p>Static observations remain provenance-bearing and separate from operator decisions or reconstructed-source claims.</p>
+<pre><code class="language-ascii-fallback">Authorized files → Target pack → PE/PDB/MAP/COFF → Ghidra export → Disassembly check → Evidence claims → Analysis report
+</code></pre>
+<p>1</p>
+<h2 id="create-and-verify-the-target-pack">Create and verify the target pack</h2>
+<pre><code>x86decomp target-pack-infer target.exe target-pack --pdb target.pdb --map target.map --object original/foo.obj --library original/runtime.lib --decisions decisions.json
+x86decomp target-pack-verify target-pack
+</code></pre>
+<p>By default the pack copies regular-file artifacts and records their identities. <code>--reference-artifacts</code> stores references instead; use it only when that storage policy is deliberate.</p>
+<p>2</p>
+<h2 id="inspect-every-available-binary-format">Inspect every available binary format</h2>
+<pre><code>x86decomp inspect-pe target.exe
+x86decomp pdb-inspect target.pdb --pe target.exe
+x86decomp map-inspect target.map
+x86decomp coff-inspect original/foo.obj
+x86decomp lib-inspect original/runtime.lib
+x86decomp metadata-scan target.exe --object original/foo.obj --map target.map --report reports/metadata.json
+</code></pre>
+<p>These parsers expose format metadata and bounded recoveries. Unsupported, malformed, packed, virtualized, encrypted, self-modifying, CLR, kernel-mode, or anti-analysis targets must not be silently treated as ordinary supported inputs.</p>
+<p>3</p>
+<h2 id="export-and-import-ghidra-function-artifacts">Export and import Ghidra function artifacts</h2>
+<pre><code>x86decomp ghidra-export target.exe ghidra-projects TargetProject exports/ghidra --selector all --report reports/ghidra-export.json
+x86decomp artifact-import project exports/ghidra/functions/pe-rva_00401230
+x86decomp artifact-verify project/functions/pe-rva_00401230
+</code></pre>
+<p>The exporter records function body ranges, instructions, references, decompiler output, and p-code where available. Imported hashes protect the packet from unnoticed mutation; they do not authenticate Ghidra’s semantic interpretation.</p>
+<p>4</p>
+<h2 id="independently-disassemble-and-cross-check">Independently disassemble and cross-check</h2>
+<pre><code>$functionDir = &quot;project/functions/pe-rva_00401230&quot;
+$rangeFile = (Get-Content &quot;$functionDir/function.json&quot; | ConvertFrom-Json).body_ranges[0].file
+$rangePath = Join-Path $functionDir $rangeFile
+x86decomp disassemble $rangePath --base 0x401230 --architecture x86 --report reports/disassembly/sub_00401230.json
+x86decomp crosscheck-ghidra &quot;$functionDir/instructions.jsonl&quot; $rangePath --base 0x401230 --architecture x86 --report reports/crosscheck/sub_00401230.json
+</code></pre>
+<p>The cross-check compares an independent decoder’s view with the exported instruction stream. Agreement strengthens a bounded observation; disagreement is evidence to investigate, not something to normalize away.</p>
+<p>5</p>
+<h2 id="store-evidence-before-making-claims">Store evidence before making claims</h2>
+<pre><code>x86decomp evidence-add project --kind static_analysis --source ghidra --locator pe-rva:00401230 --assertion &quot;Ghidra exported a function beginning at RVA 0x401230&quot; --independent-group ghidra-export --file project/functions/pe-rva_00401230/function.json --id ev-ghidra-00401230
+x86decomp evidence-add project --kind static_analysis --source independent-disassembler --locator pe-rva:00401230 --assertion &quot;Independent disassembly starts at RVA 0x401230&quot; --independent-group independent-disassembly --file reports/crosscheck/sub_00401230.json --id ev-crosscheck-00401230
+x86decomp evidence-add project --kind human_review --source analyst --locator pe-rva:00401230 --assertion &quot;Analyst reviewed the exported manifest and independent cross-check&quot; --independent-group analyst-review --id ev-review-00401230
+x86decomp claim-create project --subject pe-rva:00401230 --predicate has-entry-rva --object 0x401230 --evidence ev-ghidra-00401230 --evidence ev-crosscheck-00401230 --evidence ev-review-00401230 --id claim-entry-00401230
+x86decomp claim-verify project claim-entry-00401230
+</code></pre>
+<p>The strict governance gate requires at least three evidence records, three independent groups, two evidence kinds, no unresolved contradiction records, and intact hashes for file-backed evidence. It does not parse the referenced report files to decide whether their substantive conclusions support the assertion, so only add each evidence record after review. Passing the gate records a governed <code>verified</code> state; it is not a mathematical guarantee that the proposition is true. Contradictory evidence can be attached with <code>claim-contradict</code>.</p>
+<p>6</p>
+<h2 id="ingest-artifacts-and-inspect-type-constraints">Ingest artifacts and inspect type constraints</h2>
+<pre><code>x86decomp db-ingest project/analysis.sqlite project/functions/pe-rva_00401230 --image-base 0x400000
+x86decomp db-query project/analysis.sqlite &quot;SELECT id, address_rva, name FROM entities WHERE kind = 'function' ORDER BY address_rva&quot;
+x86decomp db-constraint-add project/analysis.sqlite pe-rva:00401230 calling_convention stdcall analyst-note --evidence-id ev-abi-1 --confidence 0.8
+x86decomp db-constraint-conflicts project/analysis.sqlite pe-rva:00401230 calling_convention
+</code></pre>
+<p>Constraints retain provenance and confidence. A contradictory constraint cannot be accepted until conflicts are resolved; the database is not a truth oracle.</p>
+<h2 id="typical-deliverables">Typical deliverables</h2>
+<ul>
+<li>Verified target pack and artifact inventory.</li>
+<li>PE/PDB/MAP/COFF/library parser reports.</li>
+<li>Hash-verified per-function analysis packets.</li>
+<li>Independent disassembly cross-check reports.</li>
+<li>Provenance-bearing evidence, claims, and unresolved contradictions.</li>
+<li>An analysis database ready for ABI, matching, functional, or linker work.</li>
+</ul>
+<h2 id="truth-boundary">Truth boundary</h2>
+<p>Static analysis can establish observed bytes, metadata, references, and tool-derived hypotheses. It does not recover authenticated original source, prove decompiler types, or establish runtime equivalence without later validation.</p>
+<h2 id="v0711-source-basis">v0.7.11 source basis</h2>
+<blockquote>
+<p><strong>Verification model.</strong> Command syntax is checked against the live parser. The source files below are hashed from the current release; implementation and test rows are retained as independent truth boundaries.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Evidence file</th>
+<th>SHA-256</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>src/x86decomp/cli.py</code></td>
+<td><code>21e0654ced2f5dd0588adcbedec328613fba524ff1e0a91ef07d63cbbf88288c</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/pe.py</code></td>
+<td><code>39a5dd1b26da8d0ef84e8ff247183068eb4943ab38211df3c56c43ca9a6911c0</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/ghidra.py</code></td>
+<td><code>98657d48a9d3ebb79eaf951aa8676ffd7ca696c2ba2f07fe8a5c4f0ad622c2b3</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/disassembly.py</code></td>
+<td><code>cc86a46f8c8674a6e14304158bd1d2467fb09ccbb00778c116204b0a639638b3</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/evidence.py</code></td>
+<td><code>de8befd97c8e7f0529f7c3c2750836f8f38fab52e26987cf390d725faad3ee1e</code></td>
+</tr>
+<tr>
+<td><code>src/x86decomp/analysis_db.py</code></td>
+<td><code>409e503d6c264dba48a00e1d1afc475ce735cf25f1ec4aab7ac41b07ed5b9bad</code></td>
+</tr>
+<tr>
+<td><code>tests/test_ghidra.py</code></td>
+<td><code>1c9a934bad943761f8d9b6bc22509a054a8ead82747d2091d5f7e84c5682b88b</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="related-examples">Related examples</h2>
+<p>[Matching project</p>
+<p>Open the source-verified workflow.](matching-project.md)[Functional project</p>
+<p>Open the source-verified workflow.](functional-project.md)[Hybrid composition</p>
+<p>Open the source-verified workflow.](hybrid-project.md)</p></p>
+    </article>
+</section>
+            <!-- endblock -->
+
+            <!-- block footer -->
+                <footer>
+    <div class="d-flex flex-sm-row justify-content-between py-2 border-top drac-text-black drac-bg-cyan-green">
+        <a href="https://github.com/dracula/mkdocs" target="_blank" style="padding-left: 1%;"
+            class="footer-text drac-anchor drac-text-black drac-text-purple--hover">
+            Made with Dracula Theme for MkDocs
+        </a>
+    </div>
+</footer>
+            <!-- endblock -->
+        </div>
+
+    </main>
+
+        <script>var base_url = '../..';</script>
+        <script src="../../assets/js/jquery-3.3.1.slim.min.js"></script>
+        <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+        <script src="../../assets/js/mkdocs.js"></script>
+			<script src="../../search/main.js" defer></script>
+
+</body>
+
+</html>

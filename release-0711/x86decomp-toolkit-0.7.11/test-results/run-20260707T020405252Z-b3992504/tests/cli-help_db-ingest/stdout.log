@@ -1,9 +1,0 @@
-usage: x86decomp db-ingest [-h] [--image-base IMAGE_BASE] database artifact
-
-positional arguments:
-  database
-  artifact
-
-options:
-  -h, --help            show this help message and exit
-  --image-base IMAGE_BASE

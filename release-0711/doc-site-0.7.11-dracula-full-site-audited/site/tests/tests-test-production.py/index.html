@@ -1,0 +1,958 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+        <title>tests/test_production.py - x86decomp 0.7.11 Docs</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        
+        
+        
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="../../assets/css/darcula-highlight.min.css">
+
+        <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../assets/css/dracula-ui.min.css">
+        <link rel="stylesheet" href="../../assets/css/mkdocs.min.css">
+            <link href="../../assets/x86decomp-dracula-overrides.css" rel="stylesheet">
+
+        
+            <link  rel="icon" type="image/x-icon" href="../../assets/img/favicon.ico">
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+                <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+
+<body class="drac-bg-black-secondary drac-text-grey-ternary drac-text drac-scrollbar-purple">
+
+    <main class="d-flex">
+
+        <!-- block sidebar -->
+            <nav id="sidebar" class="sidebar drac-bg-black">
+    <div class="custom-menu">
+        <button type="button" id="sidebarCollapse" class="btn btn-primary">
+            <i class="fa fa-bars"></i>
+            <span class="sr-only">Menu</span>
+        </button>
+    </div>
+
+    <div class="p-4">
+        
+
+        <div class="drac-text-center">
+            
+                <span class="drac-text drac-line-height drac-text-white">x86decomp 0.7.11 Docs</span>
+            
+        </div>
+
+        <div class="drac-box flex-column">
+            <ul class="dot-ul">
+                <li><div class="dot-li drac-bg-cyan"></div></li>
+                <li><div class="dot-li drac-bg-green"></div></li>
+                <li><div class="dot-li drac-bg-orange"></div></li>
+                <li><div class="dot-li drac-bg-pink"></div></li>
+                <li><div class="dot-li drac-bg-purple"></div></li>
+                <li><div class="dot-li drac-bg-red"></div></li>
+                <li><div class="dot-li drac-bg-yellow"></div></li>
+            </ul>
+        </div>
+
+        <hr class="drac-divider" />
+
+        <!-- block menu -->
+        <ul class="mb-5 drac-list drac-list-none">
+            
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Home
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../../getting-started/"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Getting Started
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#workflows-collapse" aria-expanded="false">
+                    Workflows
+                </a>
+                <div class="collapse" id="workflows-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../workflows/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Workflow Guide
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../local-llm/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Local LLM C Generation
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../decompilation-acceleration/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Decompilation Acceleration
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../project-examples/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Project Examples
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#reference-collapse" aria-expanded="false">
+                    Reference
+                </a>
+                <div class="collapse" id="reference-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../reference/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../architecture/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Architecture
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../commands/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Commands
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../release-artifacts/COMMAND_REFERENCE_0.7.11/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Command Reference 0.7.11
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../schemas/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Schemas
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../integrations/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Integrations
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../features/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Source Modules
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../functions/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Function Index
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Tests
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../release-artifacts/DOCSTRING_AUDIT_0.7.11/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Docstring Audit
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#release-evidence-collapse" aria-expanded="false">
+                    Release Evidence
+                </a>
+                <div class="collapse" id="release-evidence-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../release-evidence/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../release-artifacts/SECOND_AUDIT_FIX_REPORT_0.7.11/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Second Audit Fix Report
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../release-artifacts/DOCSTRING_AUDIT_0.7.11/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Docstring Audit
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../release-artifacts/COMMAND_REFERENCE_0.7.11/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Command Reference 0.7.11
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../verification/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Verification
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../source-coverage/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Source Coverage
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../changelog/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Changelog
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../about/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            About
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <!-- endblock -->
+    </div>
+</nav>
+        <!-- endblock -->
+
+        <nav class="divider drac-bg-purple-cyan"></nav>
+
+        <div class="content">
+            <!-- block header -->
+                <header>
+    <nav class="navbar navbar-expand-xl drac-bg-purple">
+        <div class="container-fluid">
+            
+            <button class="navbar-toggler w-100 text-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMenu"
+                aria-controls="navbarsMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse flex-column ml-auto" id="navbarsMenu">
+                <ul class="navbar-nav text-md-center">
+
+                    <!-- block preview -->
+                    <li class="nav-item">
+                            
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block search -->
+                    <li class="nav-item"><div role="search" class="search-box">
+	<form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+		<input type="text" name="q" class="drac-input drac-input-search drac-input-white drac-text-white drac-bg-black-secondary"
+		placeholder="Search docs" title="Type search term here" />
+	</form>
+</div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block source -->
+                    <li class="nav-item">
+                        
+                    </li>
+                    <!--  endblock -->
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+</header>
+            <!-- endblock -->
+
+            <!-- block content -->
+                <section class="p-md-5 section-content">
+    <article>
+        <p><h1 id="teststest_productionpy"><code>tests/test_production.py</code></h1>
+<ul>
+<li>SHA-256: <code>da98cd0e561b0b3ec69afb258be55dd9201b09974c3c63090f0e3fb4cff32bf4</code></li>
+<li>Size: <code>25294</code> bytes</li>
+<li>Test functions: <code>22</code></li>
+</ul>
+<pre><code class="language-python">&quot;&quot;&quot;Verify the current toolkit behavior covered by `tests/test_production.py`.&quot;&quot;&quot;
+from __future__ import annotations
+
+import importlib.util
+import json
+import os
+import subprocess
+import sys
+from pathlib import Path
+
+from pe_fixture import build_minimal_pe32
+from x86decomp.abi import ABIContract, CallingConvention, FloatMode
+from x86decomp.compiler_worker import run_compiler_worker
+from x86decomp.content_store import ContentStore
+from x86decomp.errors import ExternalToolError
+from x86decomp.convergence import analyze_image_convergence, append_convergence_history
+from x86decomp.cpp_recovery import recover_cpp_model
+from x86decomp.harness_generator import generate_execution_harness
+from x86decomp.linker_reconstruction import build_linker_reconstruction_plan, write_relink_manifest_from_plan
+from x86decomp.coff import write_synthetic_coff
+from x86decomp.orchestrator import JobState, Orchestrator, PipelineManifest
+from x86decomp.project import initialize_project
+from x86decomp.project_state import (
+    check_project_state,
+    create_project_backup,
+    migrate_project,
+    project_gc,
+    repair_project_state,
+    restore_project_backup,
+)
+from x86decomp.reproducibility import build_reproduction_manifest, verify_reproduction_manifest
+from x86decomp.security_audit import audit_source_tree, generate_sbom
+from x86decomp.target_pack import generate_project_from_target_pack, infer_target_pack, verify_target_pack
+from x86decomp.util import load_json, write_json
+from x86decomp.worker import WorkerLimits, WorkerRequest, discover_worker_capabilities, execute_worker_request
+
+
+def test_content_store_roundtrip_and_gc(tmp_path: Path) -&gt; None:
+    &quot;&quot;&quot;Verify content store roundtrip and gc behavior.&quot;&quot;&quot;
+    source = tmp_path / &quot;source.bin&quot;
+    source.write_bytes(b&quot;artifact&quot;)
+    store = ContentStore(tmp_path / &quot;store&quot;)
+    artifact = store.put_file(source)
+    assert store.read_bytes(artifact.digest) == b&quot;artifact&quot;
+    store.add_reference(&quot;functions/f&quot;, artifact.digest, kind=&quot;function&quot;, owner=&quot;test&quot;)
+    assert store.verify()[&quot;valid&quot;]
+    assert project_gc_like(store, dry_run=True)[&quot;candidate_count&quot;] == 0
+    assert store.remove_reference(&quot;functions/f&quot;)
+    assert store.garbage_collect(dry_run=True)[&quot;candidate_count&quot;] == 1
+    assert store.garbage_collect(dry_run=False)[&quot;candidate_count&quot;] == 1
+
+
+def project_gc_like(store: ContentStore, *, dry_run: bool) -&gt; dict:
+    &quot;&quot;&quot;Execute the project gc like operation for the current toolkit workflow.&quot;&quot;&quot;
+    return store.garbage_collect(dry_run=dry_run)
+
+
+def test_worker_executes_bounded_command_and_hashes_outputs(tmp_path: Path) -&gt; None:
+    &quot;&quot;&quot;Verify worker executes bounded command and hashes outputs behavior.&quot;&quot;&quot;
+    work = tmp_path / &quot;work&quot;
+    work.mkdir()
+    input_path = work / &quot;input.txt&quot;
+    input_path.write_text(&quot;hello&quot;, encoding=&quot;utf-8&quot;)
+    output_path = work / &quot;output.txt&quot;
+    request = WorkerRequest(
+        command=(sys.executable, &quot;-c&quot;, &quot;from pathlib import Path;Path('output.txt').write_text(Path('input.txt').read_text().upper())&quot;),
+        working_directory=work,
+        input_files=(Path(&quot;input.txt&quot;),),
+        expected_outputs=(Path(&quot;output.txt&quot;),),
+        limits=WorkerLimits(timeout_seconds=10, cpu_seconds=10, memory_bytes=512 * 1024 * 1024),
+    )
+    result = execute_worker_request(request, log_directory=tmp_path / &quot;logs&quot;)
+    assert result.status == &quot;passed&quot;
+    assert output_path.read_text() == &quot;HELLO&quot;
+    assert result.input_hashes and result.output_hashes
+    capabilities = discover_worker_capabilities()
+    assert capabilities[&quot;local_bounded&quot;] is True
+    assert capabilities[&quot;network_namespace_enforced_in_local_mode&quot;] is False
+
+
+def test_target_pack_auto_template_and_project(tmp_path: Path) -&gt; None:
+    &quot;&quot;&quot;Verify target pack auto template and project behavior.&quot;&quot;&quot;
+    image = build_minimal_pe32(tmp_path / &quot;target.exe&quot;)
+    pack_dir = tmp_path / &quot;pack&quot;
+    result = infer_target_pack(
+        image,
+        pack_dir,
+        name=&quot;Grounded target&quot;,
+        decisions={&quot;preferred_mode&quot;: &quot;both&quot;, &quot;compiler_family&quot;: &quot;unknown&quot;},
+    )
+    assert result[&quot;target_pack&quot;][&quot;architecture&quot;] == &quot;x86&quot;
+    verification = verify_target_pack(pack_dir)
+    assert verification[&quot;valid&quot;], verification
+    project_root = tmp_path / &quot;project&quot;
+    project_result = generate_project_from_target_pack(pack_dir, project_root)
+    assert project_result[&quot;project&quot;][&quot;target_id&quot;] == result[&quot;target_pack&quot;][&quot;target_id&quot;]
+    assert (project_root / &quot;target-pack&quot; / &quot;target.toml&quot;).is_file()
+    assert check_project_state(project_root).valid
+
+
+def test_project_migration_backup_restore_repair_and_gc(tmp_path: Path) -&gt; None:
+    &quot;&quot;&quot;Verify project migration backup restore repair and gc behavior.&quot;&quot;&quot;
+    image = build_minimal_pe32(tmp_path / &quot;target.exe&quot;)
+    project_root = tmp_path / &quot;project&quot;
+    initialize_project(image, project_root)
+    project = load_json(project_root / &quot;project.json&quot;)
+    project[&quot;schema_version&quot;] = 2
+    for key in (&quot;project_state_database&quot;, &quot;content_store&quot;, &quot;target_pack&quot;, &quot;orchestration_root&quot;, &quot;toolkit_release&quot;):
+        project.pop(key, None)
+    write_json(project_root / &quot;project.json&quot;, project)
+    (project_root / &quot;state&quot; / &quot;project-state.sqlite3&quot;).unlink()
+    # Content-store directory can exist empty; migration reinitializes it.
+    dry = migrate_project(project_root, dry_run=True)
+    assert dry[&quot;to_version&quot;] == 3
+    backup = tmp_path / &quot;backup.tar.gz&quot;
+    migrated = migrate_project(project_root, backup_path=backup)
+    assert migrated[&quot;changed&quot;]
+    assert check_project_state(project_root).valid
+    restore_root = tmp_path / &quot;restored&quot;
+    restored = restore_project_backup(backup, restore_root)
+    assert restored[&quot;restored&quot;]
+    # The backup is pre-migration by design, so it is valid input for a migration.
+    assert load_json(restore_root / &quot;project.json&quot;)[&quot;schema_version&quot;] == 2
+    assert repair_project_state(project_root, dry_run=True)[&quot;dry_run&quot;]
+    assert project_gc(project_root, dry_run=True)[&quot;dry_run&quot;]
+    second_backup = create_project_backup(project_root, tmp_path / &quot;post.tar.gz&quot;)
+    assert second_backup[&quot;file_count&quot;] &gt; 0
+
+
+def test_orchestrator_resume_failure_retry_and_cancel(tmp_path: Path) -&gt; None:
+    &quot;&quot;&quot;Verify orchestrator resume failure retry and cancel behavior.&quot;&quot;&quot;
+    image = build_minimal_pe32(tmp_path / &quot;target.exe&quot;)
+    project_root = tmp_path / &quot;project&quot;
+    initialize_project(image, project_root)
+    manifest = project_root / &quot;orchestration&quot; / &quot;pipelines&quot; / &quot;test.json&quot;
+    write_json(
+        manifest,
+        {
+            &quot;schema_version&quot;: 1,
+            &quot;pipeline_id&quot;: &quot;test-pipeline&quot;,
+            &quot;project_root&quot;: str(project_root),
+            &quot;stages&quot;: [
+                {
+                    &quot;id&quot;: &quot;one&quot;,
+                    &quot;kind&quot;: &quot;command&quot;,
+                    &quot;command&quot;: [sys.executable, &quot;-c&quot;, &quot;from pathlib import Path;Path(r'{work}/outputs/one.txt').write_text('one')&quot;],
+                    &quot;outputs&quot;: [&quot;one.txt&quot;],
+                },
+                {
+                    &quot;id&quot;: &quot;two&quot;,
+                    &quot;kind&quot;: &quot;command&quot;,
+                    &quot;depends_on&quot;: [&quot;one&quot;],
+                    &quot;command&quot;: [sys.executable, &quot;-c&quot;, &quot;from pathlib import Path;Path(r'{work}/outputs/two.txt').write_text('two')&quot;],
+                    &quot;outputs&quot;: [&quot;two.txt&quot;],
+                },
+            ],
+        },
+    )
+    parsed = PipelineManifest.load(manifest)
+    assert len(parsed.stages) == 2
+    with Orchestrator(project_root) as orchestrator:
+        status = orchestrator.run(manifest)
+        assert status[&quot;status&quot;] == &quot;succeeded&quot;
+        attempts = [job[&quot;attempt&quot;] for job in status[&quot;jobs&quot;]]
+        status2 = orchestrator.run(manifest)
+        assert [job[&quot;attempt&quot;] for job in status2[&quot;jobs&quot;]] == attempts
+        retried = orchestrator.retry(&quot;test-pipeline&quot;, &quot;two&quot;)
+        assert retried[&quot;jobs_reset&quot;] == 1
+        status3 = orchestrator.run(manifest)
+        assert status3[&quot;status&quot;] == &quot;succeeded&quot;
+        cancelled = orchestrator.cancel(&quot;test-pipeline&quot;)
+        assert cancelled[&quot;cancel_requests&quot;] == 0
+
+
+def test_compiler_worker_uses_real_subprocess_contract(tmp_path: Path) -&gt; None:
+    &quot;&quot;&quot;Verify compiler worker uses real subprocess contract behavior.&quot;&quot;&quot;
+    source = tmp_path / &quot;input.c&quot;
+    source.write_text(&quot;int value;\n&quot;, encoding=&quot;utf-8&quot;)
+    profile = tmp_path / &quot;profile.json&quot;
+    write_json(
+        profile,
+        {
+            &quot;schema_version&quot;: 2,
+            &quot;id&quot;: &quot;python-copy&quot;,
+            &quot;family&quot;: &quot;test&quot;,
+            &quot;version&quot;: sys.version.split()[0],
+            &quot;executable&quot;: sys.executable,
+            &quot;arguments&quot;: [
+                &quot;-S&quot;,
+                &quot;-c&quot;,
+                &quot;import shutil,sys;shutil.copyfile(sys.argv[1],sys.argv[2])&quot;,
+                &quot;{source}&quot;,
+                &quot;{output}&quot;,
+            ],
+            &quot;timeout_seconds&quot;: 30,
+            &quot;output_kind&quot;: &quot;copied_source&quot;,
+            &quot;inherit_environment&quot;: False,
+        },
+    )
+    output = tmp_path / &quot;output.obj&quot;
+    report = run_compiler_worker(profile, source, output)
+    assert report[&quot;success&quot;]
+    assert output.read_bytes() == source.read_bytes()
+    assert report[&quot;worker&quot;][&quot;isolation_strength&quot;] == &quot;resource_bounded_not_security_boundary&quot;
+
+
+def test_harness_generation_is_deterministic_and_explicit(tmp_path: Path) -&gt; None:
+    &quot;&quot;&quot;Verify harness generation is deterministic and explicit behavior.&quot;&quot;&quot;
+    contract = ABIContract(
+        architecture=&quot;x86&quot;,
+        convention=CallingConvention.THISCALL,
+        stack_argument_bytes=4,
+        callee_stack_cleanup=4,
+        variadic=False,
+        this_register=&quot;ecx&quot;,
+        register_arguments=(),
+        return_registers=(&quot;eax&quot;,),
+        structure_return=False,
+        floating_point=FloatMode.NONE,
+    )
+    first = generate_execution_harness(contract, pointer_parameters=[{&quot;position&quot;: 0, &quot;size&quot;: 8}])
+    second = generate_execution_harness(contract, pointer_parameters=[{&quot;position&quot;: 0, &quot;size&quot;: 8}])
+    for value in (first, second):
+        value.pop(&quot;created_at&quot;)
+    assert first == second
+    assert first[&quot;generation&quot;][&quot;original_runtime_inputs_claimed&quot;] is False
+    assert first[&quot;observe_memory&quot;]
+
+
+def test_convergence_and_history(tmp_path: Path) -&gt; None:
+    &quot;&quot;&quot;Verify convergence and history behavior.&quot;&quot;&quot;
+    reference = build_minimal_pe32(tmp_path / &quot;reference.exe&quot;)
+    candidate = tmp_path / &quot;candidate.exe&quot;
+    data = bytearray(reference.read_bytes())
+    data[0x200] ^= 0xFF
+    candidate.write_bytes(data)
+    report_path = tmp_path / &quot;convergence.json&quot;
+    report = analyze_image_convergence(reference, candidate, report_path=report_path)
+    assert not report[&quot;complete&quot;]
+    assert report[&quot;totals&quot;][&quot;executable_mismatch_bytes&quot;] == 1
+    history = append_convergence_history(tmp_path / &quot;history.jsonl&quot;, report)
+    assert history[&quot;entry_count&quot;] == 1
+    same = analyze_image_convergence(reference, reference, previous_report=report_path)
+    assert same[&quot;complete&quot;]
+    assert same[&quot;delta_from_previous&quot;][&quot;normalized_mismatch_count&quot;] &lt; 0
+
+
+def test_linker_reconstruction_plan_is_evidence_limited(tmp_path: Path) -&gt; None:
+    &quot;&quot;&quot;Verify linker reconstruction plan is evidence limited behavior.&quot;&quot;&quot;
+    image = build_minimal_pe32(tmp_path / &quot;target.exe&quot;)
+    obj = tmp_path / &quot;entry.obj&quot;
+    write_synthetic_coff(obj, code=b&quot;\x31\xc0\xc3&quot;, symbol_name=&quot;_entry&quot;)
+    map_path = tmp_path / &quot;target.map&quot;
+    map_path.write_text(
+        &quot;&quot;&quot;target\n Preferred load address is 00400000\n\n Start         Length     Name                   Class\n 0001:00000000 00000003H .text                  CODE\n 0001:00000000 00000003H entry.obj\n\n Address         Publics by Value              Rva+Base       Lib:Object\n 0001:00000000       _entry                     00401000 f   entry.obj\n\n entry point at        0001:00000000\n&quot;&quot;&quot;,
+        encoding=&quot;utf-8&quot;,
+    )
+    plan = build_linker_reconstruction_plan(image, map_path, object_paths=[obj])
+    assert plan[&quot;placements&quot;][0][&quot;exact_extent&quot;]
+    assert plan[&quot;ready_for_relink&quot;]
+    manifest = tmp_path / &quot;relink.json&quot;
+    write_relink_manifest_from_plan(plan, manifest)
+    assert load_json(manifest)[&quot;objects&quot;]
+
+
+def test_cpp_recovery_empty_metadata_is_truthful(tmp_path: Path) -&gt; None:
+    &quot;&quot;&quot;Verify cpp recovery empty metadata is truthful behavior.&quot;&quot;&quot;
+    image = build_minimal_pe32(tmp_path / &quot;target.exe&quot;)
+    report = recover_cpp_model(image)
+    assert report[&quot;kind&quot;] == &quot;bounded_cpp_recovery&quot;
+    assert report[&quot;claims&quot;][&quot;original_source_declarations_recovered&quot;] is False
+    assert report[&quot;counts&quot;][&quot;classes&quot;] == 0
+
+
+def test_reproduction_and_security_reports(tmp_path: Path) -&gt; None:
+    &quot;&quot;&quot;Verify reproduction and security reports behavior.&quot;&quot;&quot;
+    image = build_minimal_pe32(tmp_path / &quot;target.exe&quot;)
+    project_root = tmp_path / &quot;project&quot;
+    initialize_project(image, project_root)
+    reproduction_path = tmp_path / &quot;reproduction.json&quot;
+    manifest = build_reproduction_manifest(project_root, output=reproduction_path, required_tools=[&quot;python&quot;])
+    assert manifest[&quot;binary&quot;][&quot;sha256&quot;] == manifest[&quot;binary&quot;][&quot;expected_sha256&quot;]
+    check = verify_reproduction_manifest(project_root, reproduction_path)
+    assert check[&quot;reproducible&quot;], check
+    audit_root = tmp_path / &quot;audit&quot;
+    audit_root.mkdir()
+    (audit_root / &quot;safe.txt&quot;).write_text(&quot;safe&quot;, encoding=&quot;utf-8&quot;)
+    audit = audit_source_tree(audit_root)
+    assert audit[&quot;passed&quot;]
+    sbom = generate_sbom()
+    assert sbom[&quot;bomFormat&quot;] == &quot;CycloneDX&quot;
+    assert sbom[&quot;metadata&quot;][&quot;properties&quot;][1][&quot;value&quot;] == &quot;false&quot;
+
+
+def test_generated_template_is_grounded_and_executable(tmp_path: Path) -&gt; None:
+    &quot;&quot;&quot;Verify generated template is grounded and executable behavior.&quot;&quot;&quot;
+    from x86decomp.project_template import derive_template_contract, materialize_project_template
+
+    image = build_minimal_pe32(tmp_path / &quot;target.exe&quot;)
+    pack = tmp_path / &quot;pack&quot;
+    infer_target_pack(image, pack, decisions={&quot;preferred_mode&quot;: &quot;matching&quot;})
+    contract = derive_template_contract(pack)
+    assert contract[&quot;selected_modes&quot;] == [&quot;matching&quot;]
+    assert contract[&quot;truth_policy&quot;][&quot;generated_source_claimed&quot;] is False
+    project = tmp_path / &quot;project&quot;
+    generate_project_from_target_pack(pack, project)
+    materialized = materialize_project_template(project)
+    assert Path(project / materialized[&quot;helper&quot;]).is_file()
+    assert load_json(project / &quot;config&quot; / &quot;project-template.json&quot;)[&quot;blockers&quot;]
+    assert (project / &quot;src&quot; / &quot;matching&quot;).is_dir()
+    assert not list((project / &quot;src&quot; / &quot;matching&quot;).glob(&quot;*.c&quot;))
+
+    # The generated helper must remain executable when the console-script entry
+    # point is not on PATH, as long as the Python package is importable.
+    env = dict(os.environ)
+    env[&quot;PATH&quot;] = str(tmp_path / &quot;empty-path&quot;)
+    source_root = Path(__file__).resolve().parents[1] / &quot;src&quot;
+    current_pythonpath = env.get(&quot;PYTHONPATH&quot;, &quot;&quot;)
+    env[&quot;PYTHONPATH&quot;] = str(source_root) + (os.pathsep + current_pythonpath if current_pythonpath else &quot;&quot;)
+    completed = subprocess.run(
+        [sys.executable, str(project / &quot;scripts&quot; / &quot;project.py&quot;), &quot;check&quot;],
+        cwd=project,
+        env=env,
+        capture_output=True,
+        text=True,
+        timeout=30,
+        check=False,
+    )
+    assert completed.returncode == 0, completed.stdout + completed.stderr
+
+
+def test_orchestrator_materializes_and_revalidates_outputs(tmp_path: Path) -&gt; None:
+    &quot;&quot;&quot;Verify orchestrator materializes and revalidates outputs behavior.&quot;&quot;&quot;
+    image = build_minimal_pe32(tmp_path / &quot;target.exe&quot;)
+    project_root = tmp_path / &quot;project&quot;
+    initialize_project(image, project_root)
+    manifest = project_root / &quot;orchestration&quot; / &quot;pipelines&quot; / &quot;materialize.json&quot;
+    write_json(
+        manifest,
+        {
+            &quot;schema_version&quot;: 1,
+            &quot;pipeline_id&quot;: &quot;materialize&quot;,
+            &quot;project_root&quot;: str(project_root),
+            &quot;stages&quot;: [
+                {
+                    &quot;id&quot;: &quot;write&quot;,
+                    &quot;kind&quot;: &quot;command&quot;,
+                    &quot;command&quot;: [
+                        sys.executable,
+                        &quot;-c&quot;,
+                        &quot;from pathlib import Path;Path(r'{work}/outputs/value.txt').write_text('verified')&quot;,
+                    ],
+                    &quot;outputs&quot;: [&quot;value.txt&quot;],
+                }
+            ],
+        },
+    )
+    with Orchestrator(project_root) as orchestrator:
+        first = orchestrator.run(manifest)
+        assert first[&quot;status&quot;] == &quot;succeeded&quot;
+        row = orchestrator.connection.execute(&quot;SELECT attempt,result_json FROM jobs WHERE pipeline_id='materialize'&quot;).fetchone()
+        payload = json.loads(row[&quot;result_json&quot;])
+        output = project_root / payload[&quot;materialized_outputs&quot;][0][&quot;path&quot;]
+        assert output.read_text() == &quot;verified&quot;
+        assert row[&quot;attempt&quot;] == 1
+        output.write_text(&quot;tampered&quot;, encoding=&quot;utf-8&quot;)
+        second = orchestrator.run(manifest)
+        assert second[&quot;status&quot;] == &quot;succeeded&quot;
+        row2 = orchestrator.connection.execute(&quot;SELECT attempt,result_json FROM jobs WHERE pipeline_id='materialize'&quot;).fetchone()
+        assert row2[&quot;attempt&quot;] == 2
+        assert output.read_text() == &quot;verified&quot;
+    assert ContentStore(project_root / &quot;artifacts&quot;).verify()[&quot;valid&quot;]
+
+
+def test_extended_symbolic_conditions_adc_sbb_setcc_cmovcc() -&gt; None:
+    &quot;&quot;&quot;Verify extended symbolic conditions adc sbb setcc cmovcc behavior.&quot;&quot;&quot;
+    from x86decomp.symbolic import bounded_symbolic_compare
+
+    # cmp edx,0; stc; adc eax,ecx; sbb eax,ecx; sete al; cmove eax,ecx; ret
+    code = bytes.fromhex(&quot;83fa00f911c819c80f94c00f44c1c3&quot;)
+    if importlib.util.find_spec(&quot;capstone&quot;) is None or importlib.util.find_spec(&quot;z3&quot;) is None:
+        import pytest
+
+        with pytest.raises(ExternalToolError, match=&quot;Capstone and z3-solver are required&quot;):
+            bounded_symbolic_compare(
+                code,
+                code,
+                architecture=&quot;x86&quot;,
+                input_registers=(&quot;eax&quot;, &quot;ecx&quot;, &quot;edx&quot;),
+                output_registers=(&quot;eax&quot;,),
+                max_steps=64,
+                max_paths=8,
+            )
+        return
+    report = bounded_symbolic_compare(
+        code,
+        code,
+        architecture=&quot;x86&quot;,
+        input_registers=(&quot;eax&quot;, &quot;ecx&quot;, &quot;edx&quot;),
+        output_registers=(&quot;eax&quot;,),
+        max_steps=64,
+        max_paths=8,
+    )
+    assert report[&quot;equivalent_within_model&quot;]
+    assert report[&quot;solver_result&quot;] == &quot;unsat&quot;
+
+
+def test_service_snapshot_exposes_control_plane(tmp_path: Path) -&gt; None:
+    &quot;&quot;&quot;Verify service snapshot exposes control plane behavior.&quot;&quot;&quot;
+    from x86decomp.service import service_snapshot
+
+    image = build_minimal_pe32(tmp_path / &quot;target.exe&quot;)
+    project_root = tmp_path / &quot;project&quot;
+    initialize_project(image, project_root)
+    snapshot = service_snapshot(project_root)
+    assert snapshot[&quot;read_only&quot;] is True
+    assert snapshot[&quot;verification&quot;][&quot;valid&quot;]
+    assert snapshot[&quot;state_check&quot;][&quot;valid&quot;]
+    assert &quot;container_runtime&quot; in snapshot[&quot;worker_capabilities&quot;]
+
+
+def test_project_backup_is_deterministic(tmp_path: Path) -&gt; None:
+    &quot;&quot;&quot;Verify project backup is deterministic behavior.&quot;&quot;&quot;
+    image = build_minimal_pe32(tmp_path / &quot;target.exe&quot;)
+    project = tmp_path / &quot;project&quot;
+    initialize_project(image, project)
+    first = create_project_backup(project, tmp_path / &quot;first.tar.gz&quot;)
+    second = create_project_backup(project, tmp_path / &quot;second.tar.gz&quot;)
+    assert first[&quot;sha256&quot;] == second[&quot;sha256&quot;]
+
+
+def test_active_pipeline_cancellation_is_observed(tmp_path: Path) -&gt; None:
+    &quot;&quot;&quot;Verify active pipeline cancellation is observed behavior.&quot;&quot;&quot;
+    import threading
+    import time
+
+    image = build_minimal_pe32(tmp_path / &quot;target.exe&quot;)
+    project = tmp_path / &quot;project&quot;
+    initialize_project(image, project)
+    manifest = project / &quot;orchestration&quot; / &quot;pipelines&quot; / &quot;cancel.json&quot;
+    write_json(
+        manifest,
+        {
+            &quot;schema_version&quot;: 1,
+            &quot;pipeline_id&quot;: &quot;cancel-active&quot;,
+            &quot;project_root&quot;: str(project),
+            &quot;stages&quot;: [
+                {
+                    &quot;id&quot;: &quot;sleep&quot;,
+                    &quot;kind&quot;: &quot;command&quot;,
+                    &quot;command&quot;: [sys.executable, &quot;-c&quot;, &quot;import time;time.sleep(30)&quot;],
+                    &quot;outputs&quot;: [],
+                    &quot;limits&quot;: {&quot;timeout_seconds&quot;: 60},
+                }
+            ],
+        },
+    )
+    result: dict[str, object] = {}
+
+    def run_pipeline() -&gt; None:
+        &quot;&quot;&quot;Run pipeline for the current toolkit workflow.&quot;&quot;&quot;
+        with Orchestrator(project) as orchestrator:
+            result.update(orchestrator.run(manifest))
+
+    thread = threading.Thread(target=run_pipeline)
+    thread.start()
+    deadline = time.monotonic() + 10
+    while time.monotonic() &lt; deadline:
+        with Orchestrator(project) as observer:
+            try:
+                status = observer.status(&quot;cancel-active&quot;)
+            except Exception:
+                status = {&quot;jobs&quot;: []}
+            if status.get(&quot;jobs&quot;) and status[&quot;jobs&quot;][0][&quot;state&quot;] == &quot;running&quot;:
+                observer.cancel(&quot;cancel-active&quot;, &quot;sleep&quot;)
+                break
+        time.sleep(0.05)
+    thread.join(timeout=10)
+    assert not thread.is_alive()
+    assert result[&quot;status&quot;] == &quot;cancelled&quot;
+
+
+def test_dependency_audit_adapter_parsing(tmp_path: Path) -&gt; None:
+    &quot;&quot;&quot;Verify dependency audit adapter parsing behavior.&quot;&quot;&quot;
+    from x86decomp.security_audit import run_dependency_vulnerability_audit
+
+    tool = tmp_path / &quot;pip-audit&quot;
+    tool.write_text(
+        &quot;#!/usr/bin/env python3\nimport json\nprint(json.dumps({'dependencies':[{'name':'safe','version':'1','vulns':[]}]}))\n&quot;,
+        encoding=&quot;utf-8&quot;,
+    )
+    tool.chmod(0o755)
+    report = run_dependency_vulnerability_audit(executable=str(tool))
+    assert report[&quot;passed&quot;]
+    assert report[&quot;dependency_count&quot;] == 1
+    assert report[&quot;vulnerability_count&quot;] == 0
+
+
+def test_pipeline_stale_heartbeat_recovery(tmp_path: Path) -&gt; None:
+    &quot;&quot;&quot;Verify pipeline stale heartbeat recovery behavior.&quot;&quot;&quot;
+    image = build_minimal_pe32(tmp_path / &quot;target.exe&quot;)
+    project = tmp_path / &quot;project&quot;
+    initialize_project(image, project)
+    manifest = project / &quot;orchestration&quot; / &quot;pipelines&quot; / &quot;recover.json&quot;
+    write_json(
+        manifest,
+        {
+            &quot;schema_version&quot;: 1,
+            &quot;pipeline_id&quot;: &quot;recover&quot;,
+            &quot;project_root&quot;: str(project),
+            &quot;stages&quot;: [{&quot;id&quot;: &quot;one&quot;, &quot;kind&quot;: &quot;command&quot;, &quot;command&quot;: [sys.executable, &quot;-c&quot;, &quot;pass&quot;], &quot;outputs&quot;: []}],
+        },
+    )
+    with Orchestrator(project) as orchestrator:
+        orchestrator.register(manifest)
+        orchestrator.connection.execute(
+            &quot;UPDATE jobs SET state='running',runner_id='dead',heartbeat_at='2000-01-01T00:00:00Z' WHERE pipeline_id='recover'&quot;
+        )
+        recovered = orchestrator.recover_stale_jobs(pipeline_id=&quot;recover&quot;, stale_seconds=1)
+        assert recovered[&quot;jobs_recovered&quot;] == 1
+        assert orchestrator.status(&quot;recover&quot;)[&quot;jobs&quot;][0][&quot;state&quot;] == &quot;pending&quot;
+
+
+def test_release_gate_is_explicit_and_truth_scoped(tmp_path: Path) -&gt; None:
+    &quot;&quot;&quot;Verify release gate is explicit and truth scoped behavior.&quot;&quot;&quot;
+    from x86decomp.release_gate import evaluate_release_gate
+
+    image = build_minimal_pe32(tmp_path / &quot;target.exe&quot;)
+    pack = tmp_path / &quot;pack&quot;
+    infer_target_pack(image, pack)
+    project = tmp_path / &quot;project&quot;
+    generate_project_from_target_pack(pack, project)
+    baseline = evaluate_release_gate(project)
+    assert baseline[&quot;passed&quot;]
+    assert &quot;not proof&quot; in baseline[&quot;truth_statement&quot;]
+    strict = evaluate_release_gate(
+        project,
+        require_workflows=True,
+        require_verified_claims=True,
+        require_succeeded_pipelines=True,
+    )
+    assert not strict[&quot;passed&quot;]
+    assert any(&quot;no function workflows&quot; in item for item in strict[&quot;failures&quot;])
+
+
+def test_synthetic_corpus_generation_is_reproducible_and_hash_checked(tmp_path: Path) -&gt; None:
+    &quot;&quot;&quot;Verify synthetic corpus generation is reproducible and hash checked behavior.&quot;&quot;&quot;
+    from x86decomp.synthetic_corpus import generate_synthetic_corpus, verify_synthetic_corpus
+
+    first_root = tmp_path / &quot;first&quot;
+    second_root = tmp_path / &quot;second&quot;
+    first = generate_synthetic_corpus(first_root, cases_per_family=2, seed=12345)
+    second = generate_synthetic_corpus(second_root, cases_per_family=2, seed=12345)
+    assert first[&quot;case_count&quot;] == 24
+    assert [item[&quot;source_sha256&quot;] for item in first[&quot;cases&quot;]] == [
+        item[&quot;source_sha256&quot;] for item in second[&quot;cases&quot;]
+    ]
+    verified = verify_synthetic_corpus(first_root / &quot;corpus-generation.json&quot;)
+    assert verified == {&quot;valid&quot;: True, &quot;case_count&quot;: 24, &quot;failures&quot;: []}
+    source = first_root / first[&quot;cases&quot;][0][&quot;source&quot;]
+    source.write_text(source.read_text(encoding=&quot;utf-8&quot;) + &quot;\n/* tampered */\n&quot;, encoding=&quot;utf-8&quot;)
+    tampered = verify_synthetic_corpus(first_root / &quot;corpus-generation.json&quot;)
+    assert not tampered[&quot;valid&quot;]
+    assert any(&quot;hash mismatch&quot; in item for item in tampered[&quot;failures&quot;])
+
+
+def test_target_decisions_example_preserves_unknowns() -&gt; None:
+    &quot;&quot;&quot;Verify target decisions example preserves unknowns behavior.&quot;&quot;&quot;
+    decisions = load_json(Path(__file__).resolve().parents[1] / &quot;examples/release/target-decisions.json&quot;)
+    assert decisions[&quot;preferred_mode&quot;] == &quot;both&quot;
+    assert decisions[&quot;compiler_family&quot;] == &quot;unknown&quot;
+    assert decisions[&quot;compiler_version&quot;] == &quot;unknown&quot;
+    assert decisions[&quot;linker_family&quot;] == &quot;unknown&quot;
+    assert decisions[&quot;source_language&quot;] == &quot;unknown&quot;
+    assert decisions[&quot;allow_host_execution&quot;] is False
+</code></pre></p>
+    </article>
+</section>
+            <!-- endblock -->
+
+            <!-- block footer -->
+                <footer>
+    <div class="d-flex flex-sm-row justify-content-between py-2 border-top drac-text-black drac-bg-cyan-green">
+        <a href="https://github.com/dracula/mkdocs" target="_blank" style="padding-left: 1%;"
+            class="footer-text drac-anchor drac-text-black drac-text-purple--hover">
+            Made with Dracula Theme for MkDocs
+        </a>
+    </div>
+</footer>
+            <!-- endblock -->
+        </div>
+
+    </main>
+
+        <script>var base_url = '../..';</script>
+        <script src="../../assets/js/jquery-3.3.1.slim.min.js"></script>
+        <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+        <script src="../../assets/js/mkdocs.js"></script>
+			<script src="../../search/main.js" defer></script>
+
+</body>
+
+</html>

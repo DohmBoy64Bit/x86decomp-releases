@@ -1,8 +1,0 @@
-usage: x86decomp db-constraint-accept [-h] database constraint_id
-
-positional arguments:
-  database
-  constraint_id
-
-options:
-  -h, --help     show this help message and exit

@@ -1,0 +1,120 @@
+---
+title: schemas/compiler-lab.schema.json
+description: Schema reference page for schemas/compiler-lab.schema.json.
+---
+
+# `schemas/compiler-lab.schema.json`
+
+- SHA-256: `37bc55f945daffc31844a78c2b4788191f501589303826a6cee207c5c4717506`
+- Size: `2141` bytes
+- Title: Compiler experiment matrix
+- Type: `object`
+
+```json
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:x86decomp:schema:compiler-lab:1",
+  "title": "Compiler experiment matrix",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "source",
+    "profiles"
+  ],
+  "properties": {
+    "source": {
+      "type": "string"
+    },
+    "profiles": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "output_root": {
+      "type": "string"
+    },
+    "cache_root": {
+      "type": "string"
+    },
+    "output_name": {
+      "type": "string"
+    },
+    "max_experiments": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "matrix": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "axes": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "target": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "kind",
+            "pe",
+            "rva",
+            "size",
+            "symbol"
+          ],
+          "properties": {
+            "kind": {
+              "const": "pe_function"
+            },
+            "pe": {
+              "type": "string"
+            },
+            "rva": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "size": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "symbol": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "kind",
+            "path"
+          ],
+          "properties": {
+            "kind": {
+              "const": "file"
+            },
+            "path": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "maxProperties": 0
+        }
+      ]
+    }
+  }
+}
+```

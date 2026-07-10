@@ -1,0 +1,30 @@
+---
+title: tests/test_workqueue.py
+description: Test source page for tests/test_workqueue.py.
+---
+
+# `tests/test_workqueue.py`
+
+- SHA-256: `401f98bce8178d0bc2f01a92f5c792044a8f32695868bd0cd04feec743eb56b8`
+- Size: `807` bytes
+- Test functions: `1`
+
+```python
+"""Verify the current toolkit behavior covered by `tests/test_workqueue.py`."""
+from pathlib import Path
+
+from x86decomp.work_queue import WorkQueue
+
+
+def test_work_queue_requires_validators(tmp_path: Path) -> None:
+    """Verify work queue requires validators behavior."""
+    q = WorkQueue(tmp_path / "q.db")
+    try:
+        task = q.create(function_id="pe-rva:00001000", mode="matching", kind="source", instructions="Draft candidate", required_validators=["compile", "diff"])
+        q.claim(task["id"], "agent")
+        q.propose(task["id"], {"source": "x.c"}, ["e1"])
+        assert q.record_validator(task["id"], "compile", "compile.json", True)["status"] == "validating"
+        assert q.record_validator(task["id"], "diff", "diff.json", True)["status"] == "accepted"
+    finally:
+        q.close()
+```

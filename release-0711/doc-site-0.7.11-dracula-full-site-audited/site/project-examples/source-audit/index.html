@@ -1,0 +1,576 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+        <title>Project Example Source Audit - x86decomp 0.7.11 Docs</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        
+        
+        
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="../../assets/css/darcula-highlight.min.css">
+
+        <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../assets/css/dracula-ui.min.css">
+        <link rel="stylesheet" href="../../assets/css/mkdocs.min.css">
+            <link href="../../assets/x86decomp-dracula-overrides.css" rel="stylesheet">
+
+        
+            <link  rel="icon" type="image/x-icon" href="../../assets/img/favicon.ico">
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+                <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+
+<body class="drac-bg-black-secondary drac-text-grey-ternary drac-text drac-scrollbar-purple">
+
+    <main class="d-flex">
+
+        <!-- block sidebar -->
+            <nav id="sidebar" class="sidebar drac-bg-black">
+    <div class="custom-menu">
+        <button type="button" id="sidebarCollapse" class="btn btn-primary">
+            <i class="fa fa-bars"></i>
+            <span class="sr-only">Menu</span>
+        </button>
+    </div>
+
+    <div class="p-4">
+        
+
+        <div class="drac-text-center">
+            
+                <span class="drac-text drac-line-height drac-text-white">x86decomp 0.7.11 Docs</span>
+            
+        </div>
+
+        <div class="drac-box flex-column">
+            <ul class="dot-ul">
+                <li><div class="dot-li drac-bg-cyan"></div></li>
+                <li><div class="dot-li drac-bg-green"></div></li>
+                <li><div class="dot-li drac-bg-orange"></div></li>
+                <li><div class="dot-li drac-bg-pink"></div></li>
+                <li><div class="dot-li drac-bg-purple"></div></li>
+                <li><div class="dot-li drac-bg-red"></div></li>
+                <li><div class="dot-li drac-bg-yellow"></div></li>
+            </ul>
+        </div>
+
+        <hr class="drac-divider" />
+
+        <!-- block menu -->
+        <ul class="mb-5 drac-list drac-list-none">
+            
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Home
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../../getting-started/"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Getting Started
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#workflows-collapse" aria-expanded="false">
+                    Workflows
+                </a>
+                <div class="collapse" id="workflows-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../workflows/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Workflow Guide
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../local-llm/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Local LLM C Generation
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../decompilation-acceleration/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Decompilation Acceleration
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Project Examples
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#reference-collapse" aria-expanded="false">
+                    Reference
+                </a>
+                <div class="collapse" id="reference-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../reference/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../architecture/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Architecture
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../commands/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Commands
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../release-artifacts/COMMAND_REFERENCE_0.7.11/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Command Reference 0.7.11
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../schemas/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Schemas
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../integrations/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Integrations
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../features/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Source Modules
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../functions/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Function Index
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../tests/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Tests
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../release-artifacts/DOCSTRING_AUDIT_0.7.11/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Docstring Audit
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#release-evidence-collapse" aria-expanded="false">
+                    Release Evidence
+                </a>
+                <div class="collapse" id="release-evidence-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../release-evidence/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../release-artifacts/SECOND_AUDIT_FIX_REPORT_0.7.11/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Second Audit Fix Report
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../release-artifacts/DOCSTRING_AUDIT_0.7.11/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Docstring Audit
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../release-artifacts/COMMAND_REFERENCE_0.7.11/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Command Reference 0.7.11
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../verification/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Verification
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../source-coverage/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Source Coverage
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../changelog/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Changelog
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../about/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            About
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <!-- endblock -->
+    </div>
+</nav>
+        <!-- endblock -->
+
+        <nav class="divider drac-bg-purple-cyan"></nav>
+
+        <div class="content">
+            <!-- block header -->
+                <header>
+    <nav class="navbar navbar-expand-xl drac-bg-purple">
+        <div class="container-fluid">
+            
+            <button class="navbar-toggler w-100 text-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMenu"
+                aria-controls="navbarsMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse flex-column ml-auto" id="navbarsMenu">
+                <ul class="navbar-nav text-md-center">
+
+                    <!-- block preview -->
+                    <li class="nav-item">
+                            
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block search -->
+                    <li class="nav-item"><div role="search" class="search-box">
+	<form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+		<input type="text" name="q" class="drac-input drac-input-search drac-input-white drac-text-white drac-bg-black-secondary"
+		placeholder="Search docs" title="Type search term here" />
+	</form>
+</div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block source -->
+                    <li class="nav-item">
+                        
+                    </li>
+                    <!--  endblock -->
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+</header>
+            <!-- endblock -->
+
+            <!-- block content -->
+                <section class="p-md-5 section-content">
+    <article>
+        <p><h1 id="project-example-source-audit">Project Example Source Audit</h1>
+<p>This ledger is regenerated from the 0.7.11 source tree. Each listed digest is a full SHA-256 of the referenced current file.</p>
+<table>
+<thead>
+<tr>
+<th>Path</th>
+<th>SHA-256</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>examples/abi/stdcall-two-ints.json</code></td>
+<td><code>f2c7a723de83de7169612e1cdc305a4bd8779e9ad82c7ff3a2ce90d400ac3ace</code></td>
+</tr>
+<tr>
+<td><code>examples/benchmarks/bounded-demo.json</code></td>
+<td><code>980ad9dc8352019f4dca1f06e25a8654ec87248befc178c35490ecc3d129a51a</code></td>
+</tr>
+<tr>
+<td><code>examples/compiler-profiles/gcc-i686-object.json</code></td>
+<td><code>dc5dee89f0aff786350b51e24e7b77067de8d2a0a332fc6e880041a330729572</code></td>
+</tr>
+<tr>
+<td><code>examples/contracts/command-surface.json</code></td>
+<td><code>d03d54a17a1cdad06398277bae6a9df80ee6bcd11edc4b6457d35631b715e30f</code></td>
+</tr>
+<tr>
+<td><code>examples/contracts/public-surface.json</code></td>
+<td><code>7216f4234aa63821ef8dc5a1d03c68e3cbc817b96c91e956ee922690db166d85</code></td>
+</tr>
+<tr>
+<td><code>examples/integration/bounded-demo.json</code></td>
+<td><code>e1b589e23a5fa0a7c1310c69760ef7729fa912c2a5584985a7cbb487f57eab26</code></td>
+</tr>
+<tr>
+<td><code>examples/integration/candidate.py</code></td>
+<td><code>fdec1c8156f57d6ba8a11f898a846634783644a8c8aaaabaa98854aa5adb1bd4</code></td>
+</tr>
+<tr>
+<td><code>examples/integration/candidate_mismatch.py</code></td>
+<td><code>557e63b6c825e0d9a6110de93770a7b57af40118d8b5024563fc2b7b7e88c4dd</code></td>
+</tr>
+<tr>
+<td><code>examples/integration/target.py</code></td>
+<td><code>fdec1c8156f57d6ba8a11f898a846634783644a8c8aaaabaa98854aa5adb1bd4</code></td>
+</tr>
+<tr>
+<td><code>examples/labs/gcc-optimization-matrix.json</code></td>
+<td><code>f4f19ea47da16374312c4eff46d2914e3d0c425a229f92a95b2fe99221acbd78</code></td>
+</tr>
+<tr>
+<td><code>examples/local-llm/add-two-ints-job.json</code></td>
+<td><code>aac7785ac0e8ccc9e408fe583c7a96ca8a4bb01abd51eb17c1553f127a8a86b5</code></td>
+</tr>
+<tr>
+<td><code>examples/local-llm/lm-studio-profile.json</code></td>
+<td><code>f8135459f4354bf16ab4797924efb4a02f44b494ac36ee4873464609307c202e</code></td>
+</tr>
+<tr>
+<td><code>examples/local-llm/ollama-profile.json</code></td>
+<td><code>f10e53e8646689be08c75c7e06fa238ddf78159aa672da8e35aa3c3df415e5bb</code></td>
+</tr>
+<tr>
+<td><code>examples/release/release-gate-policy.json</code></td>
+<td><code>7ad41612264a71c3bd1d1ea44b5ad0f9145710ef926492975796dd9264948026</code></td>
+</tr>
+<tr>
+<td><code>examples/release/target-decisions.json</code></td>
+<td><code>91b5bfcd613ac3d76fc020e5bb415d0ae11594886c6cac4317cc06e7ea5df1cb</code></td>
+</tr>
+<tr>
+<td><code>examples/relink/lld-link-x64.json</code></td>
+<td><code>6addc382de2d64d223f4e24e47207b5741d2583d1717f4aec04107123a6013ef</code></td>
+</tr>
+<tr>
+<td><code>examples/sample_source/add.c</code></td>
+<td><code>860aaedc4520b18df5ce99de71a36487eb333dcdb09f65fce222677c8fe8cd97</code></td>
+</tr>
+<tr>
+<td><code>examples/symbolic/symbolic-alias-harness.json</code></td>
+<td><code>e5bbc6d9470e269f41051e95a444a9218f9919140bc74070dd223caf4eb7c130</code></td>
+</tr>
+<tr>
+<td><code>examples/test-bundle/x86decomp-test-bundle.json</code></td>
+<td><code>6d88af2c016e6e88a5ba66fab7c88c9d7b56f70c1f5e71d2cb494aab69da6a68</code></td>
+</tr>
+<tr>
+<td><code>examples/validators/add_stack_candidate.bin</code></td>
+<td><code>6d1e1d30f2068501de61e0022c4352fda2a7650f29eb96f01ad04fa160305e21</code></td>
+</tr>
+<tr>
+<td><code>examples/validators/add_stack_harness.json</code></td>
+<td><code>beeaeeecbe1136402ef0b3c1c3f799256a2613f87bb9457f97b71fe605ec0d0f</code></td>
+</tr>
+<tr>
+<td><code>examples/validators/add_stack_target.bin</code></td>
+<td><code>6d1e1d30f2068501de61e0022c4352fda2a7650f29eb96f01ad04fa160305e21</code></td>
+</tr>
+<tr>
+<td><code>examples/validators/sub_stack_candidate.bin</code></td>
+<td><code>fe10777e0899cf9cabd2bc8dc3367d711f6af675bdda9c5e28144539792f922f</code></td>
+</tr>
+<tr>
+<td><code>corpus/ground_truth_sources/aliasing.c</code></td>
+<td><code>09a93c1038059384920be8ed617f196950b3b935fa4e7ecdcccd4b38215f222c</code></td>
+</tr>
+<tr>
+<td><code>corpus/ground_truth_sources/arithmetic.c</code></td>
+<td><code>1a39b20e36efc0d23c5570152a1db30922527835bfc82ddf4b629980c916326e</code></td>
+</tr>
+<tr>
+<td><code>corpus/ground_truth_sources/bitfields.c</code></td>
+<td><code>44c9a66d27e87a270af05fdb87d82d87512b70fe72600df0bc89f4e091b5a7dd</code></td>
+</tr>
+<tr>
+<td><code>corpus/ground_truth_sources/branches.c</code></td>
+<td><code>0dcc84cf6d38aa0a3e90a66bd349f349d504cd2dc0160db16933466c56aa99bb</code></td>
+</tr>
+<tr>
+<td><code>corpus/ground_truth_sources/calling_conventions.c</code></td>
+<td><code>cfb331698f9ccdb113849a7c535a500ee6631a46a716be1d3791e49f9c1e69b3</code></td>
+</tr>
+<tr>
+<td><code>corpus/ground_truth_sources/classes.cpp</code></td>
+<td><code>d04c86180d9424ea91914dc7b73d93b4b3da432d7a26d8d801ff9d5718701521</code></td>
+</tr>
+<tr>
+<td><code>corpus/ground_truth_sources/eh_multiple.cpp</code></td>
+<td><code>7b3cc0e687132f70957e55dbbaa5c479d6a4864fde0e11cb49df0c600d6f2665</code></td>
+</tr>
+<tr>
+<td><code>corpus/ground_truth_sources/exceptions.cpp</code></td>
+<td><code>fd15c6bd23f39262a9aa02f94f02210dacab53a2a5d358aae415bba2c329394e</code></td>
+</tr>
+<tr>
+<td><code>corpus/ground_truth_sources/floating_point.c</code></td>
+<td><code>ff00c63ae76817932bdd0b4a5b0a0c8bc661e03314889d1eef404e580279bb89</code></td>
+</tr>
+<tr>
+<td><code>corpus/ground_truth_sources/globals.c</code></td>
+<td><code>e4fbe6bc2a51161e651a23264f5de4e90d052b2e9efcbcea1c1ff76a748528c4</code></td>
+</tr>
+<tr>
+<td><code>corpus/ground_truth_sources/indirect_calls.c</code></td>
+<td><code>b9b6dc58d6912bf8a54c46868a5a61b321447c9826660dfb29f76f741b21b92e</code></td>
+</tr>
+<tr>
+<td><code>corpus/ground_truth_sources/loops.c</code></td>
+<td><code>d929c2eb356d9e45d27aa9a9e9929d1ce3fad324d8843d7e53e4dbe7dabe9262</code></td>
+</tr>
+<tr>
+<td><code>corpus/ground_truth_sources/member_pointers.cpp</code></td>
+<td><code>8e84a7254ebeda7ec4db40335350606cf26227868e20be7db4f4382cdd3e9f69</code></td>
+</tr>
+<tr>
+<td><code>corpus/ground_truth_sources/multiple_inheritance.cpp</code></td>
+<td><code>2fc99918de8375a035774b6cff12866defb77d2095bf1a6005b6419c4afc4410</code></td>
+</tr>
+<tr>
+<td><code>corpus/ground_truth_sources/static_initializers.cpp</code></td>
+<td><code>5566d58941846d63fafa6e6047f5f0a70dd19ff484aea58f1eac88cfa1c3156c</code></td>
+</tr>
+<tr>
+<td><code>corpus/ground_truth_sources/structs.c</code></td>
+<td><code>0b29f69d01886989d3d34fb430acb259ca55c604b8b59c968e5d341972102280</code></td>
+</tr>
+<tr>
+<td><code>corpus/ground_truth_sources/switch_dense.c</code></td>
+<td><code>2a696a875c034a89e16a9b28359f6603942c536954321bc7403a9b780d24546f</code></td>
+</tr>
+<tr>
+<td><code>corpus/ground_truth_sources/tail_calls.c</code></td>
+<td><code>874edb70e2470cafdd6bed6a7a05519da95c926d1b0777622d1fba726194ddb3</code></td>
+</tr>
+<tr>
+<td><code>corpus/ground_truth_sources/templates.cpp</code></td>
+<td><code>cd18fc097a4bbbacacff6685edb8c5e6a0dfe7d8e27a68eb0b0febad6508194b</code></td>
+</tr>
+<tr>
+<td><code>corpus/ground_truth_sources/tls.c</code></td>
+<td><code>9f917229ae42021f4045f2f56af5ac3116987dc442e304c1b9b6b441200ba54b</code></td>
+</tr>
+<tr>
+<td><code>corpus/ground_truth_sources/unions.c</code></td>
+<td><code>2906ac1f944da7f6020756df9f20451048f8e2ed81ed5ac6ea06554afe1c7f60</code></td>
+</tr>
+<tr>
+<td><code>corpus/ground_truth_sources/varargs.c</code></td>
+<td><code>3326edfa00e59cd41f5409c8ef01d1d5b96c0e1a13471972a2a107725032cdbb</code></td>
+</tr>
+<tr>
+<td><code>corpus/ground_truth_sources/vectorizable.c</code></td>
+<td><code>4e71d283a0479bd5264da8f235bdb4f434a1b841289d9eac335c8b997be10f43</code></td>
+</tr>
+<tr>
+<td><code>corpus/ground_truth_sources/virtual_inheritance.cpp</code></td>
+<td><code>c8e83579cd4d6159e716c23270110d997349e3b1a609bf1d50c0b93a2e64d1d2</code></td>
+</tr>
+</tbody>
+</table></p>
+    </article>
+</section>
+            <!-- endblock -->
+
+            <!-- block footer -->
+                <footer>
+    <div class="d-flex flex-sm-row justify-content-between py-2 border-top drac-text-black drac-bg-cyan-green">
+        <a href="https://github.com/dracula/mkdocs" target="_blank" style="padding-left: 1%;"
+            class="footer-text drac-anchor drac-text-black drac-text-purple--hover">
+            Made with Dracula Theme for MkDocs
+        </a>
+    </div>
+</footer>
+            <!-- endblock -->
+        </div>
+
+    </main>
+
+        <script>var base_url = '../..';</script>
+        <script src="../../assets/js/jquery-3.3.1.slim.min.js"></script>
+        <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+        <script src="../../assets/js/mkdocs.js"></script>
+			<script src="../../search/main.js" defer></script>
+
+</body>
+
+</html>

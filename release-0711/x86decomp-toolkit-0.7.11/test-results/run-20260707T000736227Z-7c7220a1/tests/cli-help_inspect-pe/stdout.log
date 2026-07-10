@@ -1,7 +1,0 @@
-usage: x86decomp inspect-pe [-h] binary
-
-positional arguments:
-  binary
-
-options:
-  -h, --help  show this help message and exit

@@ -1,9 +1,0 @@
-usage: x86decomp decompme-pack [-h] [--overwrite] artifact_dir output_dir
-
-positional arguments:
-  artifact_dir
-  output_dir
-
-options:
-  -h, --help    show this help message and exit
-  --overwrite

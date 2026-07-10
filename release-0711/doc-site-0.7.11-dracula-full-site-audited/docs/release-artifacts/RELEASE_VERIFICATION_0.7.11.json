@@ -1,0 +1,35 @@
+{
+  "new_or_changed": [
+    "Fixed all nine second-audit findings",
+    "Added shared bounded PE/COFF BinaryReader",
+    "Added pyflakes release gate",
+    "Added command-level regressions",
+    "Clarified plan-only command contracts"
+  ],
+  "not_claimed": [
+    "single monolithic pytest tests completion",
+    "live external local-model runtime availability or model quality"
+  ],
+  "release": "0.7.11",
+  "schema_version": 1,
+  "summary": "Second-audit fix release for the current unified toolkit surface.",
+  "surface": {
+    "adapters": 37,
+    "canonical_groups": 59,
+    "canonical_routes": 239,
+    "root_commands": 166,
+    "schemas": 97
+  },
+  "verification": {
+    "build": "wheels and sdists built",
+    "clean_install": "PASS",
+    "compileall": "PASS",
+    "final_extracted_zip_compileall_pyflakes_validate_contracts": "PASS",
+    "final_extracted_zip_source_manifest_verify": "PASS: root 449/449, test-suite 63/63",
+    "pip_check": "PASS",
+    "pyflakes": "PASS",
+    "segmented_pytest": "PASS for recorded file-level runs",
+    "source_manifests": "PASS: root 449/449, test-suite 63/63",
+    "validate_contracts": "PASS"
+  }
+}

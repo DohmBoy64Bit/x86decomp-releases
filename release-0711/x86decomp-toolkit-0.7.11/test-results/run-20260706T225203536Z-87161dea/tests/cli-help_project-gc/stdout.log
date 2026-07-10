@@ -1,8 +1,0 @@
-usage: x86decomp project-gc [-h] [--apply] project
-
-positional arguments:
-  project
-
-options:
-  -h, --help  show this help message and exit
-  --apply

@@ -1,8 +1,0 @@
-usage: x86decomp objdiff-run [-h] [--report REPORT] manifest
-
-positional arguments:
-  manifest
-
-options:
-  -h, --help       show this help message and exit
-  --report REPORT

@@ -1,0 +1,2654 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+        <title>Source Coverage - x86decomp 0.7.11 Docs</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        
+        
+        
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="../assets/css/darcula-highlight.min.css">
+
+        <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../assets/css/dracula-ui.min.css">
+        <link rel="stylesheet" href="../assets/css/mkdocs.min.css">
+            <link href="../assets/x86decomp-dracula-overrides.css" rel="stylesheet">
+
+        
+            <link  rel="icon" type="image/x-icon" href="../assets/img/favicon.ico">
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+                <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+
+<body class="drac-bg-black-secondary drac-text-grey-ternary drac-text drac-scrollbar-purple">
+
+    <main class="d-flex">
+
+        <!-- block sidebar -->
+            <nav id="sidebar" class="sidebar drac-bg-black">
+    <div class="custom-menu">
+        <button type="button" id="sidebarCollapse" class="btn btn-primary">
+            <i class="fa fa-bars"></i>
+            <span class="sr-only">Menu</span>
+        </button>
+    </div>
+
+    <div class="p-4">
+        
+
+        <div class="drac-text-center">
+            
+                <span class="drac-text drac-line-height drac-text-white">x86decomp 0.7.11 Docs</span>
+            
+        </div>
+
+        <div class="drac-box flex-column">
+            <ul class="dot-ul">
+                <li><div class="dot-li drac-bg-cyan"></div></li>
+                <li><div class="dot-li drac-bg-green"></div></li>
+                <li><div class="dot-li drac-bg-orange"></div></li>
+                <li><div class="dot-li drac-bg-pink"></div></li>
+                <li><div class="dot-li drac-bg-purple"></div></li>
+                <li><div class="dot-li drac-bg-red"></div></li>
+                <li><div class="dot-li drac-bg-yellow"></div></li>
+            </ul>
+        </div>
+
+        <hr class="drac-divider" />
+
+        <!-- block menu -->
+        <ul class="mb-5 drac-list drac-list-none">
+            
+            <li class="drac-box">
+                <a href=".."
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Home
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../getting-started/"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Getting Started
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href=".."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#workflows-collapse" aria-expanded="false">
+                    Workflows
+                </a>
+                <div class="collapse" id="workflows-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../workflows/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Workflow Guide
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../local-llm/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Local LLM C Generation
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../decompilation-acceleration/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Decompilation Acceleration
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../project-examples/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Project Examples
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href=".."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#reference-collapse" aria-expanded="false">
+                    Reference
+                </a>
+                <div class="collapse" id="reference-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../reference/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../architecture/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Architecture
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../commands/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Commands
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../release-artifacts/COMMAND_REFERENCE_0.7.11/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Command Reference 0.7.11
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../schemas/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Schemas
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../integrations/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Integrations
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../features/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Source Modules
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../functions/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Function Index
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../tests/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Tests
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../release-artifacts/DOCSTRING_AUDIT_0.7.11/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Docstring Audit
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href=".."
+                    class=" active 
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#release-evidence-collapse" aria-expanded="false">
+                    Release Evidence
+                </a>
+                <div class="collapse" id="release-evidence-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../release-evidence/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../release-artifacts/SECOND_AUDIT_FIX_REPORT_0.7.11/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Second Audit Fix Report
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../release-artifacts/DOCSTRING_AUDIT_0.7.11/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Docstring Audit
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../release-artifacts/COMMAND_REFERENCE_0.7.11/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Command Reference 0.7.11
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../verification/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Verification
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="./"
+            class=" active 
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Source Coverage
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../changelog/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Changelog
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../about/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            About
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <!-- endblock -->
+    </div>
+</nav>
+        <!-- endblock -->
+
+        <nav class="divider drac-bg-purple-cyan"></nav>
+
+        <div class="content">
+            <!-- block header -->
+                <header>
+    <nav class="navbar navbar-expand-xl drac-bg-purple">
+        <div class="container-fluid">
+            
+            <button class="navbar-toggler w-100 text-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMenu"
+                aria-controls="navbarsMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse flex-column ml-auto" id="navbarsMenu">
+                <ul class="navbar-nav text-md-center">
+
+                    <!-- block preview -->
+                    <li class="nav-item">
+                            
+        <div class="container">
+            <div class="row row-preview">
+                <div class="col">
+                    <a href="../verification/"
+                        class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover">
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="../changelog/"
+                        class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover" style="padding-left: 3%;">
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block search -->
+                    <li class="nav-item"><div role="search" class="search-box">
+	<form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+		<input type="text" name="q" class="drac-input drac-input-search drac-input-white drac-text-white drac-bg-black-secondary"
+		placeholder="Search docs" title="Type search term here" />
+	</form>
+</div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block source -->
+                    <li class="nav-item">
+                        
+                    </li>
+                    <!--  endblock -->
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+</header>
+            <!-- endblock -->
+
+            <!-- block content -->
+                <section class="p-md-5 section-content">
+    <article>
+        <p><h1 id="source-coverage">Source Coverage</h1>
+<p>This page is regenerated from <code>MANIFEST.sha256</code> and <code>test-suite/MANIFEST.sha256</code> in the 0.7.11 release bundle.</p>
+<ul>
+<li>Manifest entries: <strong>449</strong></li>
+<li>Verified entries: <strong>449/449</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Path</th>
+<th>SHA-256</th>
+<th>Verified</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.github/workflows/ci.yml</code></td>
+<td><code>99a936711b46f589c3af298cb9f8be9a258646b0f56fd5aa530049c7338d6bb6</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>.gitignore</code></td>
+<td><code>eb154655b2dbbff2977bbd627126c84338f553da429720d464adf7e99dc52c26</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>AGENTS.md</code></td>
+<td><code>63a01156035245a7636fdf8c71cde7e1911307cb40146c10bd26f0556fe73efc</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>ALL_FILE_MANIFEST_0.7.11.json</code></td>
+<td><code>f161c468173b9aa4723fdab00c58faaeadcaea06622cc9a475f7c5dfb4cfafa7</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>CHANGELOG.md</code></td>
+<td><code>597d519caba43aeed63542c2a2d17a997a66ba71853c2bdb5ecfefdf1a80ffa9</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>DOCSTRING_AUDIT_0.7.11.json</code></td>
+<td><code>c0124b290fcb4d7e156fc72521131c2979e81377d958098b2724054d909cf05c</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>DOCSTRING_AUDIT_0.7.11.md</code></td>
+<td><code>0dcdaf72f5d81ee3b777718e153e0976de21bd130f5671c08644aa86fe57913f</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>FEATURE_PARITY.md</code></td>
+<td><code>c10e21eb65d93dfa195dcc4e47f82033ff94a32e7cecb72692a4c5686b287124</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>LICENSE</code></td>
+<td><code>ac2e979d38c247879e05243433cf891e77f87f71cb39bc24f6efe81ac3e38df3</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>MANIFEST.in</code></td>
+<td><code>69db866c1421555409f490a901506cf31957aa7944eb920565f0602653783f22</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>Makefile</code></td>
+<td><code>d034035386a8ab7bea1c7e4348d3608367b3ab890c0711a488d2bdbdb48806f7</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>PROJECT_MEMORY.md</code></td>
+<td><code>c7b05ecb5a481d6d343bfa77201a2c3f8921f9771ab7c5e2398b068b374fbeb3</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>README.md</code></td>
+<td><code>204dd469f382126691730b675d447b6420bb7e714fdb1216b193403b90d61a9a</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>RELEASE_VERIFICATION.json</code></td>
+<td><code>d5ba5daefac49dab9dad17944b8c26bc7bc18643fb252e83cdb39607da27a592</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>RELEASE_VERIFICATION.md</code></td>
+<td><code>7b5d1cf142bc4e78c9aa04bf5196ede0d9ec05e37e1844caf3fa3dcd82458d33</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>SECOND_AUDIT_FIX_REPORT_0.7.11.md</code></td>
+<td><code>b26378c1d95878461f4abf0bee571baa430050f207ebfa2fa18b15a7ecf9c62c</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>SECOND_AUDIT_FIX_VERIFICATION_0.7.11.json</code></td>
+<td><code>bb4a39f3ed205dcea8cb253c892d70f03f78f5f1a1008f7092920009d085afe5</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>SECURITY.md</code></td>
+<td><code>c0ae20d07f307c75655e57b0bd95fe02cd01ba2fd5a7264ef4dd8ddb36ef66de</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>VERIFICATION.md</code></td>
+<td><code>607bda4645c43606226fd12e12bbfd52939c382d207c5770c70776df1514f180</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>corpus/ground_truth_sources/aliasing.c</code></td>
+<td><code>09a93c1038059384920be8ed617f196950b3b935fa4e7ecdcccd4b38215f222c</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>corpus/ground_truth_sources/arithmetic.c</code></td>
+<td><code>1a39b20e36efc0d23c5570152a1db30922527835bfc82ddf4b629980c916326e</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>corpus/ground_truth_sources/bitfields.c</code></td>
+<td><code>44c9a66d27e87a270af05fdb87d82d87512b70fe72600df0bc89f4e091b5a7dd</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>corpus/ground_truth_sources/branches.c</code></td>
+<td><code>0dcc84cf6d38aa0a3e90a66bd349f349d504cd2dc0160db16933466c56aa99bb</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>corpus/ground_truth_sources/calling_conventions.c</code></td>
+<td><code>cfb331698f9ccdb113849a7c535a500ee6631a46a716be1d3791e49f9c1e69b3</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>corpus/ground_truth_sources/classes.cpp</code></td>
+<td><code>d04c86180d9424ea91914dc7b73d93b4b3da432d7a26d8d801ff9d5718701521</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>corpus/ground_truth_sources/eh_multiple.cpp</code></td>
+<td><code>7b3cc0e687132f70957e55dbbaa5c479d6a4864fde0e11cb49df0c600d6f2665</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>corpus/ground_truth_sources/exceptions.cpp</code></td>
+<td><code>fd15c6bd23f39262a9aa02f94f02210dacab53a2a5d358aae415bba2c329394e</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>corpus/ground_truth_sources/floating_point.c</code></td>
+<td><code>ff00c63ae76817932bdd0b4a5b0a0c8bc661e03314889d1eef404e580279bb89</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>corpus/ground_truth_sources/globals.c</code></td>
+<td><code>e4fbe6bc2a51161e651a23264f5de4e90d052b2e9efcbcea1c1ff76a748528c4</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>corpus/ground_truth_sources/indirect_calls.c</code></td>
+<td><code>b9b6dc58d6912bf8a54c46868a5a61b321447c9826660dfb29f76f741b21b92e</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>corpus/ground_truth_sources/loops.c</code></td>
+<td><code>d929c2eb356d9e45d27aa9a9e9929d1ce3fad324d8843d7e53e4dbe7dabe9262</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>corpus/ground_truth_sources/member_pointers.cpp</code></td>
+<td><code>8e84a7254ebeda7ec4db40335350606cf26227868e20be7db4f4382cdd3e9f69</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>corpus/ground_truth_sources/multiple_inheritance.cpp</code></td>
+<td><code>2fc99918de8375a035774b6cff12866defb77d2095bf1a6005b6419c4afc4410</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>corpus/ground_truth_sources/static_initializers.cpp</code></td>
+<td><code>5566d58941846d63fafa6e6047f5f0a70dd19ff484aea58f1eac88cfa1c3156c</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>corpus/ground_truth_sources/structs.c</code></td>
+<td><code>0b29f69d01886989d3d34fb430acb259ca55c604b8b59c968e5d341972102280</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>corpus/ground_truth_sources/switch_dense.c</code></td>
+<td><code>2a696a875c034a89e16a9b28359f6603942c536954321bc7403a9b780d24546f</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>corpus/ground_truth_sources/tail_calls.c</code></td>
+<td><code>874edb70e2470cafdd6bed6a7a05519da95c926d1b0777622d1fba726194ddb3</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>corpus/ground_truth_sources/templates.cpp</code></td>
+<td><code>cd18fc097a4bbbacacff6685edb8c5e6a0dfe7d8e27a68eb0b0febad6508194b</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>corpus/ground_truth_sources/tls.c</code></td>
+<td><code>9f917229ae42021f4045f2f56af5ac3116987dc442e304c1b9b6b441200ba54b</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>corpus/ground_truth_sources/unions.c</code></td>
+<td><code>2906ac1f944da7f6020756df9f20451048f8e2ed81ed5ac6ea06554afe1c7f60</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>corpus/ground_truth_sources/varargs.c</code></td>
+<td><code>3326edfa00e59cd41f5409c8ef01d1d5b96c0e1a13471972a2a107725032cdbb</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>corpus/ground_truth_sources/vectorizable.c</code></td>
+<td><code>4e71d283a0479bd5264da8f235bdb4f434a1b841289d9eac335c8b997be10f43</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>corpus/ground_truth_sources/virtual_inheritance.cpp</code></td>
+<td><code>c8e83579cd4d6159e716c23270110d997349e3b1a609bf1d50c0b93a2e64d1d2</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>docs/ARCHITECTURE_MAP.md</code></td>
+<td><code>0ee14319cb33f5fa3a914b53703c8bc5de19b4869c17c35c490d37f9f4fbae9e</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>docs/ARCHITECTURE_MAP_ASCII.txt</code></td>
+<td><code>c7939f8da9a7e3a3293b7b4819493d707ddac7201c49e962df2433dc025c9128</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>docs/COMMAND_REFERENCE_0.7.11.json</code></td>
+<td><code>1df25634770729c41c7df804f9af9b991c70fb2bbe4fa3650d33949c58c179f3</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>docs/COMMAND_REFERENCE_0.7.11.md</code></td>
+<td><code>2ce27d17ff8261b9e25a5f15905813352ec68f8c2d28d4ebff4c991de47a68df</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>docs/architecture.md</code></td>
+<td><code>6753571b1d85da4e562ec6ef2534a325e20c2640a3e989296d716f9a3102439f</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>docs/build-and-verification.md</code></td>
+<td><code>398c7081166cb31dfd6c347e2b485166ca9dee37c927977dc90e5849b5b09479</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>docs/contracts.md</code></td>
+<td><code>ca03911160dff537c0320208dc20b8dff7d8b44617d2344f40cedd72f28707cd</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>docs/evidence-and-claims.md</code></td>
+<td><code>a573ac934a840cec2976052600e8631ce736442ac86650cce2116d0011a28f16</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>docs/ghidra-integration.md</code></td>
+<td><code>c60e3ad7b722d1063d4a11e59e5225ddc5e1468781917992db958aba7387006a</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>docs/guardrails.md</code></td>
+<td><code>c900c3cf8ad5d8631d14f8325e4c130d75c4c16a73fb53b6ce6ae0dc5d09134f</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>docs/local-llm.md</code></td>
+<td><code>d130229c46928ac6a42c5b82610d3c50208676ec31d5c1199bd8bf9dffb68533</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>docs/operations-and-recovery.md</code></td>
+<td><code>7430e41f4663a97f752ccc7a8686c1a39693605ea71ad88725c9fa33fe755238</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>docs/project-memory.md</code></td>
+<td><code>9053e590e5f0394ff3d07534b017e51b593f5d71d225d2b6e71d70dfd51284ea</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>docs/roadmap.md</code></td>
+<td><code>910ad2690ff63134b2e0a0f6de75d2eb480dfda333aadd61d7ff880c078c27a5</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>docs/source-basis.md</code></td>
+<td><code>b0950b1b47308b283028c141a84c8cbf41f377d68b269d418c239edd7e8e9ee4</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>docs/supported-scope.md</code></td>
+<td><code>da10c7f01980d8393fcd41223feb4ec6a7c2f8fdb259f56336b4c5c384848ca4</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>docs/target-packs-and-templates.md</code></td>
+<td><code>7e65033dff4a1d532861775161d621e8f73ec238363b43fce2b7101a3ba6a2d0</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>docs/test-bundle.md</code></td>
+<td><code>a46690243ada69526ce92db7b4f667a8aea677db98a286c5a56ff7b18af9f113</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>examples/abi/stdcall-two-ints.json</code></td>
+<td><code>f2c7a723de83de7169612e1cdc305a4bd8779e9ad82c7ff3a2ce90d400ac3ace</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>examples/benchmarks/bounded-demo.json</code></td>
+<td><code>980ad9dc8352019f4dca1f06e25a8654ec87248befc178c35490ecc3d129a51a</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>examples/compiler-profiles/gcc-i686-object.json</code></td>
+<td><code>dc5dee89f0aff786350b51e24e7b77067de8d2a0a332fc6e880041a330729572</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>examples/contracts/command-surface.json</code></td>
+<td><code>85a67b1da249fa898cfa7b65c7cbd1c1896297993cc547e8823ddd440a50d5e2</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>examples/contracts/public-surface.json</code></td>
+<td><code>d04d7f8622da4eb0c103fd7515720a32265ae6336e410bfa5358398f9d975fda</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>examples/integration/bounded-demo.json</code></td>
+<td><code>e1b589e23a5fa0a7c1310c69760ef7729fa912c2a5584985a7cbb487f57eab26</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>examples/integration/candidate.py</code></td>
+<td><code>2b348feb64cd2832d57b07c74cd35c58a2b9c36916263a04b3d80bc0c377b8b3</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>examples/integration/candidate_mismatch.py</code></td>
+<td><code>108e2316477fc03c410ec8ca790b035729fcdc2199f8ec5cd0ca749e09e21347</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>examples/integration/target.py</code></td>
+<td><code>2b348feb64cd2832d57b07c74cd35c58a2b9c36916263a04b3d80bc0c377b8b3</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>examples/labs/gcc-optimization-matrix.json</code></td>
+<td><code>f4f19ea47da16374312c4eff46d2914e3d0c425a229f92a95b2fe99221acbd78</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>examples/local-llm/add-two-ints-job.json</code></td>
+<td><code>aac7785ac0e8ccc9e408fe583c7a96ca8a4bb01abd51eb17c1553f127a8a86b5</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>examples/local-llm/lm-studio-profile.json</code></td>
+<td><code>f8135459f4354bf16ab4797924efb4a02f44b494ac36ee4873464609307c202e</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>examples/local-llm/ollama-profile.json</code></td>
+<td><code>f10e53e8646689be08c75c7e06fa238ddf78159aa672da8e35aa3c3df415e5bb</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>examples/release/release-gate-policy.json</code></td>
+<td><code>7ad41612264a71c3bd1d1ea44b5ad0f9145710ef926492975796dd9264948026</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>examples/release/target-decisions.json</code></td>
+<td><code>91b5bfcd613ac3d76fc020e5bb415d0ae11594886c6cac4317cc06e7ea5df1cb</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>examples/relink/lld-link-x64.json</code></td>
+<td><code>6addc382de2d64d223f4e24e47207b5741d2583d1717f4aec04107123a6013ef</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>examples/sample_source/add.c</code></td>
+<td><code>860aaedc4520b18df5ce99de71a36487eb333dcdb09f65fce222677c8fe8cd97</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>examples/symbolic/symbolic-alias-harness.json</code></td>
+<td><code>e5bbc6d9470e269f41051e95a444a9218f9919140bc74070dd223caf4eb7c130</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>examples/test-bundle/x86decomp-test-bundle.json</code></td>
+<td><code>6d88af2c016e6e88a5ba66fab7c88c9d7b56f70c1f5e71d2cb494aab69da6a68</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>examples/validators/add_stack_candidate.bin</code></td>
+<td><code>6d1e1d30f2068501de61e0022c4352fda2a7650f29eb96f01ad04fa160305e21</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>examples/validators/add_stack_harness.json</code></td>
+<td><code>beeaeeecbe1136402ef0b3c1c3f799256a2613f87bb9457f97b71fe605ec0d0f</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>examples/validators/add_stack_target.bin</code></td>
+<td><code>6d1e1d30f2068501de61e0022c4352fda2a7650f29eb96f01ad04fa160305e21</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>examples/validators/sub_stack_candidate.bin</code></td>
+<td><code>fe10777e0899cf9cabd2bc8dc3367d711f6af675bdda9c5e28144539792f922f</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>ghidra_scripts/ExportFunctionArtifacts.java</code></td>
+<td><code>2c1a21482d49c2bdd2fcf86e6df9d3c401fc4e5e4c4a36ea358aa9e2ddf6ca49</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>ghidra_scripts/ExportProjectManifest.java</code></td>
+<td><code>136d6c725b1dcf122e4cc650f2a008c2dbbaf5322c3e943657074cb3c73d2653</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>ghidra_scripts/QueryAnalysis.java</code></td>
+<td><code>5f6b639103a6d104f63db3c1d6cf070d486a461d3a2be9db83f09bcd5d4a6150</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>pyproject.toml</code></td>
+<td><code>060a452b2c4356e1db1de87cb85995f8d3442e9e6670518e07b560d394cfd4c5</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/abi-contract.schema.json</code></td>
+<td><code>536e89f5ab760329f3799138b17c8a321170fc1fc729528d97b7f75d4af96c76</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/assembly/asm-function.schema.json</code></td>
+<td><code>5203c2e7147c3d4a5b57d7f481e62a341c8a5a49aa6534c27350c51b67f49f4b</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/assembly/asm-run.schema.json</code></td>
+<td><code>da6ccd5588a1e5a2324c9e99e4ac21bc9246d7393c3042e5436ee5a40ba98736</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/assembly/relocation-resolution.schema.json</code></td>
+<td><code>2cf985f26cc073f194e444ef49215b8bc4f2cd66d0ee546f05e67559afba63a2</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/assembly/roundtrip-report.schema.json</code></td>
+<td><code>fd727824f525c79838ba3366ea7a3651490cd270d9e267734efca7d9223a3650</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/assembly/symbol-map.schema.json</code></td>
+<td><code>ddacd944e055f1b3e9e902199252271944479183e3cfc77cbf11ff9443b867d6</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/benchmark-corpus.schema.json</code></td>
+<td><code>0081dd4d038287641f14ccd228dd0e824bff8bd3745f8251aaa0a94c1c61e36c</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/claim.schema.json</code></td>
+<td><code>362341adcb81640a7839c77d37d7203b911e7e79655be6c0ab4115f460609532</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/coff-archive.schema.json</code></td>
+<td><code>5f5a43f1ce6ae1221df24107f7b9db057156731736ff4aad5c81c93a73abaab3</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/comdat-resolution.schema.json</code></td>
+<td><code>01fd177dfa983202ca8770e7985aa623e166fd22c20fdecc1d3d37f9cbfe0aae</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/compiler-ground-truth-comparison.schema.json</code></td>
+<td><code>1ea55d940c62d4e60487f74ac4d9756e4ff4c7cb2c39c9dd629b1d4150646dfb</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/compiler-ground-truth.schema.json</code></td>
+<td><code>1f8d15358ce71168a0f7c4d61ba7ad9db1ef12b534b27444bdda1f77f96392a2</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/compiler-lab.schema.json</code></td>
+<td><code>37bc55f945daffc31844a78c2b4788191f501589303826a6cee207c5c4717506</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/compiler-profile.schema.json</code></td>
+<td><code>6903f160acf5cfb8329567efbdd2da82b9f171705971e9842afcae21a4a4f844</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/convergence-report.schema.json</code></td>
+<td><code>ace195921a16f72366e2920e6e2ce4e464b51f665d4d12ff5117dbea49119185</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/cpp-recovery.schema.json</code></td>
+<td><code>9eda5eb04cdd6404ed82077dab0b1f2668f3682b33f864fec3c7348439515d8a</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/decompme-packet.schema.json</code></td>
+<td><code>65cd0a5d3197e6de85ec46c8eb372a387102192d9341ee252a7f40ca83b91704</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/dependency-audit.schema.json</code></td>
+<td><code>2eef4097789050d846536b406ccd7b9e8e639467bdf1ca530045fcc6050c8ee2</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/drcov-trace.schema.json</code></td>
+<td><code>aedc8ab92612b4b325552d3de98da9d04e2e4c3aa2bb2ab319e20f85616cfe7f</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/dynamic-report.schema.json</code></td>
+<td><code>1af7c179c9d4fedbf542c098eab126d556fc8345a464176d211640f391effce0</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/evidence.schema.json</code></td>
+<td><code>5c5199ae9f480dbbb28eb3ebd889a53a46c08535cabf346d3a0bf04f4a4aa7bd</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/exe-diff-report.schema.json</code></td>
+<td><code>3bfb70b7158750523074f638ff5955cc519097a37543f9f097909f4576373b50</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/execution-harness-generated.schema.json</code></td>
+<td><code>7ba43bfcb6b5b8736d784112af5531e1a890630e379eb2c345f15442c18a2c6d</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/execution-harness.schema.json</code></td>
+<td><code>2ec27dc202dcf7ab923c646c71e30769b0c18527aaf2e6ba44e70536574e4f68</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/function-workflow.schema.json</code></td>
+<td><code>972f7c4fef555a4653a57cad04f1dedb186cc70a6c59de7e674645b30c240351</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/function.schema.json</code></td>
+<td><code>00c65be77cc237df28a9112019c07019f88f38072ceb329907adc88bcfc34704</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/governance/campaign.schema.json</code></td>
+<td><code>df027ea63ef0017b5a9ecae133a21ab7fa13f68e00545529e8606b5f39d1f854</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/governance/candidate.schema.json</code></td>
+<td><code>db23f94af8b37ebdfff2798c271a0ef02ea9d77aae83fa8c8ebdab3d2f55ad67</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/governance/changeset.schema.json</code></td>
+<td><code>6788b90056dbf46cdaaaab292bdc6c3102e20ff47c790f131b47c15d08f5cbd3</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/governance/consensus.schema.json</code></td>
+<td><code>f3edcf4a5962701cde7a0f4f483a19d49e9f5beea5e6a4dc3c643c9970ee9c43</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/governance/counterexample.schema.json</code></td>
+<td><code>0e2b706ed1bf89e6c07a483dd171dbb23fbac4f67c87ef1df16be6c2fe50d19c</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/governance/family.schema.json</code></td>
+<td><code>cd02347eefe68396b21d7ec5af6ef9c1554dd4715e962e302ece657cb0b851ed</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/governance/hypothesis.schema.json</code></td>
+<td><code>1013bee5c093d4cf0e619dbcdc52a2b2ff79c0b768da9c699ad0483bfc283a83</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/governance/knowledge-graph.schema.json</code></td>
+<td><code>d1bc76932c0264e763eb4cdb47d46397ddf00bb57e1c240371ef42049631db28</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/governance/plugin.schema.json</code></td>
+<td><code>1fb5e12f5c8eb5408dea6372c5442273b1694559dc9c09784bbca4309dbf5fd2</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/governance/proof-bundle.schema.json</code></td>
+<td><code>b169fcd67f41318514ea5984fa5715cab569020f56547ccb58f93a98679090c0</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/governance/review.schema.json</code></td>
+<td><code>280cfe7963adcdcbbb3a1fde01b921cad82751d2240a4fcdaa9b9543db071bc2</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/governance/worker.schema.json</code></td>
+<td><code>ca8f6768a4c7dfe89e80f2107c4bb43badde4d01d3ec6947ff001c9b207b403c</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/hybrid-project.schema.json</code></td>
+<td><code>c72692b4469f7ba92b2945968974d495371e2c0f03ad438c970418c3ce31d9b0</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/image-match-report.schema.json</code></td>
+<td><code>f81f81c2581b2941b9a3850aa2d296957e1d14de2ad3d8ee92839b34ccfadc23</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/image-profile.schema.json</code></td>
+<td><code>5916e3589fb77876a26861ccfea7dfbfbf4b9c55e92243ed66dae4270dad70d7</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/integration-report.schema.json</code></td>
+<td><code>4732a3a8f4038739f46c7b7b74b20999c68d9f637bac783a53b03eee91e91d1a</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/integration-scenarios.schema.json</code></td>
+<td><code>60799068b8df90e7d457415f6e08fa236a0620630ddab2641dec2ff8bac6e43e</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/linker-layout.schema.json</code></td>
+<td><code>a8faf6022c8b70e04c3375d47a480b9a811e72edd55ea7e0ec4e80a77a8ca934</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/linker-reconstruction-plan.schema.json</code></td>
+<td><code>1d6fadf9737abed4d02cc90d3859898785edf62d3909c39fe893c8841c57f504</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/local-llm/candidate.schema.json</code></td>
+<td><code>cadff624248794b1841a55fd49f2f980658a442d046530c183ec0c89d44d99ab</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/local-llm/job.schema.json</code></td>
+<td><code>6ac68b5f4f22855154f8ec09e599c7caa3ce12d117fb125a0bae8e4dce0197a8</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/local-llm/profile.schema.json</code></td>
+<td><code>dc3ed501bada8be1896567c329fd550ad843059786ed07bbae6ef3063fdfe3ee</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/local-llm/report.schema.json</code></td>
+<td><code>d61c0308354431848f281d3c62cd32b39c9d61277492bee480a02276e5ad6ac0</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/mcp-mutation.schema.json</code></td>
+<td><code>64335798160269133e880d823f14de7f0cb4f2dafbf0c47526e24fb9fb16ea29</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/memory-event.schema.json</code></td>
+<td><code>d2f38971ac7dda92dda0564bb77bb4858160b5a342476d36fe52238eb5289e74</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/msvc-metadata.schema.json</code></td>
+<td><code>84d0b6bc880ab47954f951a4eed4db317c14ee33ed5cdbe0ee098ce61c1d6273</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/native/boundary-finding.schema.json</code></td>
+<td><code>58d723eee6c5c374f78dcac68a23be5d0b60c6f002c3e8285d307eef496e74fc</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/native/candidate-manifest.schema.json</code></td>
+<td><code>d3bad2e693b4b7d6e1c230d9e03ff775298273523c8b562d3b78400c13313029</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/native/function-match.schema.json</code></td>
+<td><code>e598ca859f33c96b62fe8dac7fcf78ec77b53e4b8f178b9f19e1f288e2725cd1</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/native/function-slot.schema.json</code></td>
+<td><code>61bb10550455068b1c58073dfb30939aea8095cefbd775abab4d044efe9a2914</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/native/hybrid-composition.schema.json</code></td>
+<td><code>feb6682c1aa1ed0a3bc3c06230ce27f006641d96238050151ad22584eb02cb9d</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/native/loop-run.schema.json</code></td>
+<td><code>de5d1a277444c3ea53ae0c4860d1a7978b478893fb893cf4c1ba1fca4a11b038</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/native/match-run.schema.json</code></td>
+<td><code>7afbfb42c5995ff375a050c93bb119ce50f2a761220c610f2c1622f082c23fb5</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/native/patch-plan.schema.json</code></td>
+<td><code>90a1f06eaa3f6a3d6b235cc0439c57fec0187006ccc4c01b8fbb76571bb31958</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/native/runtime-validation.schema.json</code></td>
+<td><code>f314d1ae2b72314a6ebf6c6d2905a8eb2f314498f256f567e01ae08622da90f3</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/native/section-export.schema.json</code></td>
+<td><code>121ed87fe1b51a248b230acafd9780b96e74e01c72e9cba7fcd20fbb466eb317</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/native/staging-symbol.schema.json</code></td>
+<td><code>44b3ce02db0758435f6a230a9ad37bd00c3a6308bf71761836050e5c90c6c4d0</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/native/windows-tool.schema.json</code></td>
+<td><code>22af6f0e3266250f1c741e95e231c4ee3d62fd3944e0000e6ab6e652089906e0</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/objdiff-manifest.schema.json</code></td>
+<td><code>2fe8f65399749687b2890cc643f474c0b8de221e90f6ae5013ce0d8b46590360</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/pdb.schema.json</code></td>
+<td><code>850bbf885fa040ac4601dc4d93c2fb4b3afda1dd86612a0d8866a34bacf07008</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/pipeline.schema.json</code></td>
+<td><code>a9b7b790fb6c877370a4c61ecbdf0f92eac13d9aba389cc0ab8d8723aee92ca6</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/project-template.schema.json</code></td>
+<td><code>1bf881ea328d3a6c00d727c0cbe1e47763726e70362a085354178add994458ce</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/project.schema.json</code></td>
+<td><code>4ab19d9064e8d249fdd545d1fa183920902d6afbe647d004ddd571a208295b0b</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/reconstruction/abi-contract.schema.json</code></td>
+<td><code>d2286943caed629e873a4107fcceb21f18b0759cfebd17b71f761af14e68e016</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/reconstruction/build.schema.json</code></td>
+<td><code>647d938812825abaa84206de119ebc4a18d8fad70a4f50121f990a4af2571dd0</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/reconstruction/capsule.schema.json</code></td>
+<td><code>c042105ec33667d5f67b4bd36311aa9c2989f97ef6c6c57cd5d0e634ada1437c</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/reconstruction/compatibility-shim.schema.json</code></td>
+<td><code>714bcc499ffc2db676e163a5886ce9ca4fca7df0b2382a94488c6dfc5a782926</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/reconstruction/generated-test.schema.json</code></td>
+<td><code>8e99342ae82922d0c5c17c41e857074a5a2cec9b1269e23572aea09b5715a7b5</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/reconstruction/header.schema.json</code></td>
+<td><code>c878f851e64b11db9e0dad34785d5ef3ba3baa753e380af72f554fe44529a850</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/reconstruction/library-match.schema.json</code></td>
+<td><code>cdf8967118c99e0f1d224829f1e3067a2b9db50f31ca945db68a3cec61b0f36e</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/reconstruction/module.schema.json</code></td>
+<td><code>4aa87665cf31d30d9395bff7fb9388c9bd55257718808572669a874922436a4f</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/reconstruction/security-finding.schema.json</code></td>
+<td><code>9a4f8a220e2e2d1d7dbc8116968bf2752d57a5725e18673faf59a192ace1826e</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/reconstruction/semantic-changeset.schema.json</code></td>
+<td><code>2cc66c0075ba39a54d86a20ca3705d4656ce90e922ce5a8c0b9357db1bc27b28</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/reconstruction/source-provenance.schema.json</code></td>
+<td><code>d80a00434549c01f14f1afa7c43cb65b9eb653808b42fb5fa10f25b1d7ac1b0c</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/reconstruction/translation-unit.schema.json</code></td>
+<td><code>ea17fb7bfec69c8e9e3eb5d14179194acece94ba90d5e0ad76c5f3e653dca642</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/release-gate.schema.json</code></td>
+<td><code>50e1f5a6cb46b67f833c881a7f025be5c7c047c1f23c3607608488afe17256cd</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/relink-manifest.schema.json</code></td>
+<td><code>ca2b77b7be6b562589e841753a9afa8c6baf1fc7cf8c703409c90fc56507e890</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/reproduction.schema.json</code></td>
+<td><code>aea350be271c7795406a2dd55096775e9d0b531215e05f43b75a9c6b5bd98281</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/security-audit.schema.json</code></td>
+<td><code>d62a14bd5c6d796dd52aee929ccfdf8e1265f825167070c8ffd680321a00b637</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/symbolic-memory-harness.schema.json</code></td>
+<td><code>e7ce53b843c172758fc086503e040cd1c60a3836f528b2c8396a7e77ab7c200a</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/symbolic-memory-report.schema.json</code></td>
+<td><code>5e17dedb1bedf6581662f4cced118e40b8075957a161daea2abfab778d0298ba</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/symbolic-report.schema.json</code></td>
+<td><code>cc596ec7c42bc74e7810dbf52bf50cba2d17375e9438f0a3fcbb3dae67a88e29</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/synthetic-corpus.schema.json</code></td>
+<td><code>3c05d2c0a766021805afdd306d6a08068af6a24cdb0adb82fb3eca4d0f1d7c7d</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/target-decisions.schema.json</code></td>
+<td><code>647192549c5e079a02e597648a0d3d2ade5078866f869b7e0da34324b5976ed6</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/target-pack.schema.json</code></td>
+<td><code>867b89f3738ff1310340d078c5ae530f0087277e96cd00106fa1275cd0bcc954</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/test-bundle-report.schema.json</code></td>
+<td><code>482f5b618cd46eb5e815392f2655bb9fe4f3683e1f5122b8f7ab0ea69f8a2820</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/test-bundle.schema.json</code></td>
+<td><code>398d162a3ccc9e3bd1e984af67efbfaf12a840f4013b406c0cf8d150f490deab</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/type-constraint.schema.json</code></td>
+<td><code>f98328b457deccc685ea8be764507320d5ff94deddb366e47c5018a678baa59d</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/verification.schema.json</code></td>
+<td><code>a70e3422e6b0bec967695257c7b66d44f17a0cfe3f15d99799eb1c038ccb7fa0</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/work-task.schema.json</code></td>
+<td><code>36794b2e24e785918a28d8bd7f5fedd100c090ed64030c71eefa0a8c933b92c9</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>schemas/worker-report.schema.json</code></td>
+<td><code>f4fee8d629c5e963519a4f5ab25c4bb0856592421ee218fe7d047b5ebe089b3c</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>scripts/run-pytest-partitions.py</code></td>
+<td><code>9e19f2f989ee6d471c1cddbad44be24741abc0bb1519965dac2476986fb98179</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>scripts/source_hashes.py</code></td>
+<td><code>e09d431daa5e3986b435b5f6dd07b8357a47b6fff97c50e3fc1ddeb142013f19</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>scripts/sync-release-contracts.py</code></td>
+<td><code>2ce74c75d2b1fd60f1c290fdabe5e487e9844decb6a9e96923cda3d2505a857b</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>scripts/validate-contracts.py</code></td>
+<td><code>f03c8ca2c28e9925a2e6d08acd41b2d330bf85369acc35f52e1904723810e4d5</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>scripts/verify-ghidra.sh</code></td>
+<td><code>254ae110f3a9b12b33ca77c698d7185792c180139fcef31017e400523440e111</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>scripts/verify.sh</code></td>
+<td><code>324346ded8358e7fe227f69035deefa0365843e3735dbef904a7ce7387b5e853</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>setup.cfg</code></td>
+<td><code>1c473cbaee8da5fc46e7f0158794af5cea4414c34a3cf3f180c2001f5e38bd3e</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>skills/x86decomp/SKILL.md</code></td>
+<td><code>f8bff9e63605d3137355dafa5383c3eba7e3aba681bde1ce8d06f19fdf4a4dff</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/__init__.py</code></td>
+<td><code>08fb24b72cf16b71245c88f08254d76da25b0b9581ec070a23ca043ff2372f99</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/__main__.py</code></td>
+<td><code>cd307c2c0d8d783cc42355eb7a64ec5a09987b0c0d63e873ae7adc0c67af2b04</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/abi.py</code></td>
+<td><code>262520e2ad900c65f75520d0965926f2b9229456520c82900f0d6a50791d9f4b</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/analysis_db.py</code></td>
+<td><code>583910cb27d192fa35e39b0e4165ffa71ac5a1fd77de1b78843245e525e414fe</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/angr_backend.py</code></td>
+<td><code>65a806874de433e75550e45759ce6ace0bf9fdcfdcf27fb179c3b90f73f9d0be</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/artifacts.py</code></td>
+<td><code>ba1e61fc66c5daf8dd5ec50ded74de9831967a54f533c398b1fbed2abd7f8727</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/assembly/__init__.py</code></td>
+<td><code>60dcbf406ebd10f56f155b70ea0657b0d40a2405ef65cf3caa32979fd90ca254</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/assembly/annotation.py</code></td>
+<td><code>b124d036b79e6ffa168f1e500717af68c615534f8bb789892f2818c5787bb1cd</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/assembly/cli.py</code></td>
+<td><code>819bc8a11f0cdce8301add84c746d290057aaa1748cc4628901558073294a788</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/assembly/materialize.py</code></td>
+<td><code>fc6ebc3aff941f6664c7e3b83b874401a86a1a1fc9608a587486046607b686a1</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/assembly/pipeline.py</code></td>
+<td><code>f9c39a196061a060c62f27790683038c4ab4bf02828656f0bb34f6a4c3274e56</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/assembly/relocations.py</code></td>
+<td><code>bc19a023e373f5a64a2a2ffdcc9835e57fc65bd76ba8c6ca87f1855b0ccb66a1</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/assembly/store.py</code></td>
+<td><code>9cc40fd2fa51e63f32b04caab2fcd1ea352358deb539b805193224366efaf51f</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/benchmarks.py</code></td>
+<td><code>495856330b73b3f9635160d77cea6d4e67ef6c7a9e8db14b908aa2c4ade3acf1</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/binary_reader.py</code></td>
+<td><code>484e3667fb7a5301501d453e8393264f10d8bc9f2d76810405cd16038faa04e4</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/canonical.py</code></td>
+<td><code>3dd78fd485ff2f9b8fb939d5ab00ed68a23c84f0b36db048a709a4f05ac8df1c</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/cli.py</code></td>
+<td><code>674c6069aa4fcda3240077d81e4c56065db26766d9abf1fa786503be4005edd8</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/cli_utils.py</code></td>
+<td><code>9b51fe87fa1e4b93d5cbae791655451f0c1bf467ea88013aa37fa1176d0c9c97</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/coff.py</code></td>
+<td><code>4630e57a2d64ffb3d9961e044437d5fe5f0bb4811a2c9748515baf59b167f798</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/coff_archive.py</code></td>
+<td><code>334fc0ec09fc70cb1ec34654cd73ae4e5ba14650fb6afef97791f9cf088459d1</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/compiler.py</code></td>
+<td><code>cd474dd4aa9c3ba80b6e5d1b50df0e2e2d460aae68b30bc63233531e730834bb</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/compiler_lab.py</code></td>
+<td><code>7feb0c4fe8f912f3ecd72216a67be512c76e0ab0a80ded41c0a32cc9c7a03b82</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/compiler_worker.py</code></td>
+<td><code>587489d60ee4c66870a3fb37ecadfb1f03d675902a5bb7438c066e6e9571cec9</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/content_store.py</code></td>
+<td><code>3a7dbe29ec407dff4966ae962ea4685141056fb57cfb8dc4ba84145547ec3a41</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/contracts.py</code></td>
+<td><code>516d98ec7d1ae79f5ea60a450174a4f4781d71eb169c40fa69f840c55507bbab</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/convergence.py</code></td>
+<td><code>fdc0f36afb90be8d0a8724878be24d104a662e1f4515850516810894228d1725</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/corpus/ground_truth_sources/aliasing.c</code></td>
+<td><code>09a93c1038059384920be8ed617f196950b3b935fa4e7ecdcccd4b38215f222c</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/corpus/ground_truth_sources/arithmetic.c</code></td>
+<td><code>1a39b20e36efc0d23c5570152a1db30922527835bfc82ddf4b629980c916326e</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/corpus/ground_truth_sources/bitfields.c</code></td>
+<td><code>44c9a66d27e87a270af05fdb87d82d87512b70fe72600df0bc89f4e091b5a7dd</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/corpus/ground_truth_sources/branches.c</code></td>
+<td><code>0dcc84cf6d38aa0a3e90a66bd349f349d504cd2dc0160db16933466c56aa99bb</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/corpus/ground_truth_sources/calling_conventions.c</code></td>
+<td><code>cfb331698f9ccdb113849a7c535a500ee6631a46a716be1d3791e49f9c1e69b3</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/corpus/ground_truth_sources/classes.cpp</code></td>
+<td><code>d04c86180d9424ea91914dc7b73d93b4b3da432d7a26d8d801ff9d5718701521</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/corpus/ground_truth_sources/eh_multiple.cpp</code></td>
+<td><code>7b3cc0e687132f70957e55dbbaa5c479d6a4864fde0e11cb49df0c600d6f2665</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/corpus/ground_truth_sources/exceptions.cpp</code></td>
+<td><code>fd15c6bd23f39262a9aa02f94f02210dacab53a2a5d358aae415bba2c329394e</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/corpus/ground_truth_sources/floating_point.c</code></td>
+<td><code>ff00c63ae76817932bdd0b4a5b0a0c8bc661e03314889d1eef404e580279bb89</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/corpus/ground_truth_sources/globals.c</code></td>
+<td><code>e4fbe6bc2a51161e651a23264f5de4e90d052b2e9efcbcea1c1ff76a748528c4</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/corpus/ground_truth_sources/indirect_calls.c</code></td>
+<td><code>b9b6dc58d6912bf8a54c46868a5a61b321447c9826660dfb29f76f741b21b92e</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/corpus/ground_truth_sources/loops.c</code></td>
+<td><code>d929c2eb356d9e45d27aa9a9e9929d1ce3fad324d8843d7e53e4dbe7dabe9262</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/corpus/ground_truth_sources/member_pointers.cpp</code></td>
+<td><code>8e84a7254ebeda7ec4db40335350606cf26227868e20be7db4f4382cdd3e9f69</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/corpus/ground_truth_sources/multiple_inheritance.cpp</code></td>
+<td><code>2fc99918de8375a035774b6cff12866defb77d2095bf1a6005b6419c4afc4410</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/corpus/ground_truth_sources/static_initializers.cpp</code></td>
+<td><code>5566d58941846d63fafa6e6047f5f0a70dd19ff484aea58f1eac88cfa1c3156c</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/corpus/ground_truth_sources/structs.c</code></td>
+<td><code>0b29f69d01886989d3d34fb430acb259ca55c604b8b59c968e5d341972102280</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/corpus/ground_truth_sources/switch_dense.c</code></td>
+<td><code>2a696a875c034a89e16a9b28359f6603942c536954321bc7403a9b780d24546f</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/corpus/ground_truth_sources/tail_calls.c</code></td>
+<td><code>874edb70e2470cafdd6bed6a7a05519da95c926d1b0777622d1fba726194ddb3</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/corpus/ground_truth_sources/templates.cpp</code></td>
+<td><code>cd18fc097a4bbbacacff6685edb8c5e6a0dfe7d8e27a68eb0b0febad6508194b</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/corpus/ground_truth_sources/tls.c</code></td>
+<td><code>9f917229ae42021f4045f2f56af5ac3116987dc442e304c1b9b6b441200ba54b</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/corpus/ground_truth_sources/unions.c</code></td>
+<td><code>2906ac1f944da7f6020756df9f20451048f8e2ed81ed5ac6ea06554afe1c7f60</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/corpus/ground_truth_sources/varargs.c</code></td>
+<td><code>3326edfa00e59cd41f5409c8ef01d1d5b96c0e1a13471972a2a107725032cdbb</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/corpus/ground_truth_sources/vectorizable.c</code></td>
+<td><code>4e71d283a0479bd5264da8f235bdb4f434a1b841289d9eac335c8b997be10f43</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/corpus/ground_truth_sources/virtual_inheritance.cpp</code></td>
+<td><code>c8e83579cd4d6159e716c23270110d997349e3b1a609bf1d50c0b93a2e64d1d2</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/cpp_recovery.py</code></td>
+<td><code>354295c6c6a16f6b8296760d153c824945f8f46bb035e843805d0979c5a55a3e</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/decompme.py</code></td>
+<td><code>ead409a6bd6d0060631b4bfd849191aa885a6f793968993432b048621a662bf2</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/diffing.py</code></td>
+<td><code>e15fdd427ebeee553b08dfedc704d21c7fd4146da984abfef1a77c18846731e7</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/disassembly.py</code></td>
+<td><code>7beb7f66049ca498017a9180be738f35d1dea545e04bb8d6e69747f0e14e3754</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/dynamic.py</code></td>
+<td><code>9b3cd201a5701bf48b73edd9e1a1984d4c6550d116e1a5b603453270c34ea4a8</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/dynamorio.py</code></td>
+<td><code>8568a98326d91a775f2feec1847e8d3230c58253e1b015c3ee75dcb9b0d8b30d</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/errors.py</code></td>
+<td><code>5bb50a4d169960abdc486866d2e68c894d8c13da401361931d86991ff9f8030d</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/evidence.py</code></td>
+<td><code>5e84e855cf3aa99a089ca44a049786ee37538761fa86b0a3ea988675230818eb</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/exe_diff.py</code></td>
+<td><code>c6ba882c4efd60db8e9cdf487bc13012257ca0be8f258030657ad87aba66ff48</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/ghidra.py</code></td>
+<td><code>a4b9ba54d680ccc858a4dbee991eb2462f2e003a49b28224588e2d4eea615474</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/governance/__init__.py</code></td>
+<td><code>a0483ba8e8314f9c9ba3a8387147195d183c6c7a47b067e2f6a92354f6612c00</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/governance/campaigns.py</code></td>
+<td><code>d605a3e6f607bae80fcedc86f800c94afc07cab70804233a77bc1b2d351e731a</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/governance/candidates.py</code></td>
+<td><code>68a8097e14ed00cfc4887bff181118924ac51afa4976c454ee8d7ee4863565e5</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/governance/changesets.py</code></td>
+<td><code>1294e380f06937649500476ca9c3d41aad674dd71174cc65d2242fda7f8138ef</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/governance/cli.py</code></td>
+<td><code>d99c282b8594b3da375230043e393af6486cfd913e2a33b797538cb61d782bd2</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/governance/consensus.py</code></td>
+<td><code>28f7df66867b88b8ee9eb2a9d9f56f90a35b6cd74769d4a74d1df5b3bda132cf</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/governance/counterexamples.py</code></td>
+<td><code>a271d06f33c3569cf9bee6433703a7575b7be39ff363dd8667d60952f6b58a2b</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/governance/family.py</code></td>
+<td><code>e0c94c0fe9db646c135dc0fd949ba5627dda30978465c5e83da85e2afb83379b</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/governance/hypotheses.py</code></td>
+<td><code>8fe031d32f8bad8b396772ae5ae48ee101e0069a767e6fefab8790ff6a5fce95</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/governance/knowledge_graph.py</code></td>
+<td><code>ff8866a5a5059e20895b85954cbe6a51a619d1887ea7c66f94cccb4b62ccf204</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/governance/plugins.py</code></td>
+<td><code>42547b4341e529b6ba203aba18556b6bb0965e56fbcc43d7160a11675e290c9a</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/governance/proofs.py</code></td>
+<td><code>ea3a39b8256c6ecdec73f88ad6d55fe8df19691c8f21f32ba21c17939ba98311</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/governance/reviews.py</code></td>
+<td><code>2d56d02e53a18cf0d8fcf2542d302a30923c06e9d09e4ab62e8a6b3624cbffc8</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/governance/store.py</code></td>
+<td><code>3d94335f441a98bf91ac0d211e01f9d00c52e7f7bf56a81a6282b0c9fcd68191</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/governance/workers.py</code></td>
+<td><code>b41f6fc57502ffc1b070ebe21b125083a9a44bcb20589fec17a31204119f877a</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/ground_truth.py</code></td>
+<td><code>8e4ada1866c092d9594a5478abc51ee6d17de7cb2a344e8e29e7115906ab4eef</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/harness_generator.py</code></td>
+<td><code>a5d1bf5ac1fc22d34e2975ee93d73e021345d641ef883bc2bd3e2b9638179fe4</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/hybrid.py</code></td>
+<td><code>c6773b5b03b59a3a02b3e628b229ff32377b4b801046eb4605d79b9bff0f78b1</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/image_match.py</code></td>
+<td><code>e4a53eae89cdc55df81e579ead9ff5f386d632c0a1ff9dd75e61489348d095ae</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/integration.py</code></td>
+<td><code>1dd501274cd70e4e97ee72667c488439d1cdd651e92a6306995e5c5655b39779</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/linker_layout.py</code></td>
+<td><code>695a3353f9f7b93e27e71f6a5ede51882b979997adb6fe47bd53946e87bd73fb</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/linker_reconstruction.py</code></td>
+<td><code>e2485c40df661dea95be2a879a8a91ff185ed25b859d8683c969e922cf1dc79c</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/local_llm/__init__.py</code></td>
+<td><code>471640b8f53e194e4f5f246699cfdabbfc5ba1ff818bed6d060e8348eaf09d25</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/local_llm/matching.py</code></td>
+<td><code>9b392884b6a186206dd50705b4099157c8073aa77512c5b144a1a358991e8d66</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/local_llm/profiles.py</code></td>
+<td><code>6d956f6d013147c86d2ca4ff16d110b648871c7f78e31bb7426d268995521da2</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/local_llm/prompts.py</code></td>
+<td><code>03aa0e774538d41645426c911742ae8f710df75b7f1b126493428c166a347918</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/local_llm/transport.py</code></td>
+<td><code>040da7a261eb8b5c012cf2e3f7b303231666d5054ab449c34df11b69f5275990</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/mcp.py</code></td>
+<td><code>061836293bf188b96de9dca62dfda3710fd51c313a5eff738224eed135fd5e59</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/memory.py</code></td>
+<td><code>127b52aab344329016f75bf176937087932be5d9ab611c8f8badfb6d5b8e27e2</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/models.py</code></td>
+<td><code>703196ad755b9e7b0059bb551a2e858928c26252e2587a0d3d47be5995750a5b</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/msvc_metadata.py</code></td>
+<td><code>00acf48e912266dd7142f7b98ad81f218bfed88f8e5276b1bd80037afb681a12</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/native/__init__.py</code></td>
+<td><code>c06bf6b79e240a8ec82b7084a6f50358b49e0c28084ed2cece59bd0f803dfb0d</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/native/cli.py</code></td>
+<td><code>84b351c03685e10ebed9d550928be651febba22b029ee666167716028d0eb7f6</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/native/closed_loop.py</code></td>
+<td><code>8ca0f2b6adb455f6a3adcfbe88a9d1f536ed28ac13d7cea3048db214a507d831</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/native/hybrid_composer.py</code></td>
+<td><code>07650208ea10d64e9a2dd98312b14b6dd54cca2064effa3693e2e0d00ee71ff7</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/native/matching.py</code></td>
+<td><code>4fbc421f01f6f432c888d431a243b4ba4f5166977a5f47adcafcc01d11cd0565</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/native/pe_reconstruction.py</code></td>
+<td><code>bbea10165b3b1aed6e6a3a9aa2776296480c729f8a6002471467d4791c71e200</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/native/runtime.py</code></td>
+<td><code>6e43a6f773e0c67ad6eaedd3b8177b5a1f853cd9dd829296eaa952852f3c526d</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/native/slots.py</code></td>
+<td><code>a4d751d6b0adc193cb36b4847e2d8e5ce242e62b56677c0eb03b72ffd7544582</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/native/staging.py</code></td>
+<td><code>f4179ca0b7807241266480760fcfef527054a69be26a08cd7b3d31725b70ddef</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/native/store.py</code></td>
+<td><code>3e79c3dcdb28c4e49ec129537b58254574d8f887a91c654238f3690e6fa24611</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/native/windows_tools.py</code></td>
+<td><code>b7faf19779e497b1338a585113dfc053663d02ea92d3630a78d6c57660d01cfe</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/objdiff_adapter.py</code></td>
+<td><code>a8e9ce06780f783f2ad9c6e50cf106fd0ecc1b82052d39fbbeeb1f40632a7d4b</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/orchestrator.py</code></td>
+<td><code>fab775aab1d71a2fa1a728147b8792302350689496896caa3a1936a502dbdfd7</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/patching.py</code></td>
+<td><code>f81a6e2fc12323262049645808778be12227704ee0f0d36eb343e946e56b3822</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/pdb.py</code></td>
+<td><code>cafd35f8251e24a91b6b01e36d651ef28b698fac11266a47c7daf9b5e9bd6179</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/pe.py</code></td>
+<td><code>3ebcfae28c9da57b446624277b20cfcde2a1c39960ba30cfb2c08a24b0db3c79</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/pe32.py</code></td>
+<td><code>1487c4fa4c92d7b161f89beac59c79fab7672439806825ed76010f63fd598837</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/project.py</code></td>
+<td><code>5a6ce12a71a6617d39cb2619a7adb97e8308e330989d6a93f3a2e82faaf2bc07</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/project_state.py</code></td>
+<td><code>4d988a5e72646f9e1930e2e656398810196323092bc6db62f10ccb81135805ee</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/project_template.py</code></td>
+<td><code>21050aad81e374bafd2400628ea946f8bc3040ddd735d6ea4299b7a33604d589</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/reconstruction/__init__.py</code></td>
+<td><code>52313d0bee948e0909b7dbad630958a9631187f643927aa9b604acf3184599c8</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/reconstruction/abi_contracts.py</code></td>
+<td><code>3eb4e79869758ec544c5534c94f9a92fae194044d9900b1cf0b9b7674b3107ac</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/reconstruction/acceleration.py</code></td>
+<td><code>70942db2fd66b84d8c33439d7bf5b9cd50be38d28a8f068ea284036c95ce78e3</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/reconstruction/builds.py</code></td>
+<td><code>7ac186b0ec0d29a58632161a206f38e5e57b3444043fefa4d3b28d8e3c57d594</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/reconstruction/capsules.py</code></td>
+<td><code>700d2e7078242821ac30a9e8a7064bb1685b1981402df938fc3c35e5a3eda6c3</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/reconstruction/cli.py</code></td>
+<td><code>a84d52db369e1a01acd906c8d6a9cdee7786b403a76e7676d3932b67dd51b8ca</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/reconstruction/generated_tests.py</code></td>
+<td><code>b8a7365129c9e8c5f7e2f834b5feec8997440f43facdf81ec90b917f1e434e67</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/reconstruction/headers.py</code></td>
+<td><code>b578c7a48857ab9da72a1c7103502792a4a919f98ef3e3f4561865b655cc6840</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/reconstruction/libraries.py</code></td>
+<td><code>ae16b90a7305823aca1dc000581ecd593ac57ab97b9b0ed4dc8923ecdc081fb3</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/reconstruction/project_layout.py</code></td>
+<td><code>b9143acf55abf6b8a4018e130cb249d146d1d04c0edebe8a8ad396ea8c76bc20</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/reconstruction/provenance.py</code></td>
+<td><code>b769842f4ca5cdb45620fa14806c011fef749bdc2d0beb7716b41f50a8d518be</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/reconstruction/security.py</code></td>
+<td><code>3d131ae1f0702c631202a51639b85b53843a7394c7bb331e2364e53404fe1fa0</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/reconstruction/semantic_changesets.py</code></td>
+<td><code>8162c89a2e231164a4c4940804355c123bc6eeae6a1de7234bc2468af80bbeae</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/reconstruction/store.py</code></td>
+<td><code>e9909aa9d757a1425b1563590a5c2df93d4ce65a54825e80dfdb99be66593b6f</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/release_gate.py</code></td>
+<td><code>381121856f0ce249fe7e268be5f57d20bc6b7bc31b05c26b4056796629bce9c7</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/relink.py</code></td>
+<td><code>b4ea5875ec158515fc1a9408a7c1b46845e605cb2e8f4ea9548bc6b052d76cbd</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/reproducibility.py</code></td>
+<td><code>42890412018863aa16c5913570286c5bb71ef865e55a1b8f6de59e4618cab6ed</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/security_audit.py</code></td>
+<td><code>908cac0bdfd28cbd619ecf628ebee71753c735617f4570b3a07f36a35c8dfb6c</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/service.py</code></td>
+<td><code>07d1d2b97b4b34432e3a60023f1cc5769e62927bb67e118384b361b23fa402e4</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/store_utils.py</code></td>
+<td><code>79ca047c185646cc9cd5fb8493b8c4024cab512fbafe2a4687971a7c650113fb</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/symbolic.py</code></td>
+<td><code>44313e4a9c3ba6fe819da4bad51d85ac75cc08357dcbe9d0678f8b8792ab3d68</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/synthetic_corpus.py</code></td>
+<td><code>432382a2bab467462c312306adf333e3151c8a28ae2ece0f4e7f6afd42bc5358</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/target_pack.py</code></td>
+<td><code>113aae1251f1143cc8a6f2a4e32adc05fbef2afb3a98bca0bbf588ae129ab8e9</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/test_bundle.py</code></td>
+<td><code>e39fa02455b0bffa5ff85455eaf86bbaad76921df269e3b5cd8c7dc188cb8de3</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/toolchains.py</code></td>
+<td><code>5bd47468fa9b0574ba82a60bec59d7e1b221760aa49af27ce49cd033c1bfd622</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/tools.py</code></td>
+<td><code>8ea17b0382ccc5da5cf930dd702d7e0e73109e88a6e6fa1dcbea7e62256363fb</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/util.py</code></td>
+<td><code>a31791a06728eb30ecd156b1ab6f57dc3a56197be2ea6fe2043a2903228d9510</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/work_queue.py</code></td>
+<td><code>0faf02ac6c5e6871728c3a81bf0737d189b5ba0b44c76335403b015c11c71d09</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/worker.py</code></td>
+<td><code>4ecd317bb9013edb1d0c1b79037ed139d0e240da60703e0b21198b5b131ffe33</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>src/x86decomp/workflow.py</code></td>
+<td><code>7f8feb468bf53f4cd1d5bc98cec7da39a21ebab9ee9483284d10052453129553</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>test-suite/.gitignore</code></td>
+<td><code>a436e3b7faa06acfab37ac4d6870f732d0eee90f2d8d5095d25af8fa4af2d2db</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>test-suite/CHANGELOG.md</code></td>
+<td><code>452c4c2cc45e9192e25f19d65de8cd1f56dd0169654d6e26b5efd8db72b600d4</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>test-suite/INTEGRATION.md</code></td>
+<td><code>378c0c34e8ab00d53107ef7259fd1e2cd04a3299acf1ec4f488d326a8895fafa</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>test-suite/LICENSE</code></td>
+<td><code>469b8fd4bf8c3ead57817703e5a8ea98c7759304f0da851b57810e410decffc5</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>test-suite/MAINTENANCE.md</code></td>
+<td><code>c5ba78a5f186e4fb0282d1d14b4a637fde620eba12adbcd7c38ac2e56fb7e12c</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>test-suite/MANIFEST.in</code></td>
+<td><code>576d360c349d1ac066a139b866a474d5bfcfc8be7db53b924a3cd671d7ae6778</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>test-suite/README.md</code></td>
+<td><code>08e7aa0d1bc2dacd2430cd9ac0f9955ba48af79b3567edf1fdb5489953c26f14</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>test-suite/SECURITY.md</code></td>
+<td><code>4af92df1455941633efd7e47b34c20a9c3f3a5914406c3475cc464d068f1a625</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>test-suite/VERIFICATION.md</code></td>
+<td><code>2a50802fcb119c5e4c712fd5cd54d259e66387d878911dbadac0869035c1ebf0</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>test-suite/docs/ADAPTERS.md</code></td>
+<td><code>dcbf62259392c91cafcacdae8c21510d1c902cb7d5ad82356e97d0d0ab1ba307</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>test-suite/docs/ARCHITECTURE.md</code></td>
+<td><code>4450716f9c6ff79d4f8a795438cb19c851cdf81cca9967e14212041a100add84</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>test-suite/docs/ARCHITECTURE_MAP.md</code></td>
+<td><code>80a50857c0d0d0da0f36a55b9f6f890dfc48d5207fe1d5d8401f46e2a15741d5</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>test-suite/docs/ARCHITECTURE_MAP_ASCII.txt</code></td>
+<td><code>9b6a765311addfb49f588f7b7b9b1d6f0fb2983fcd67077135b8c42d4134ec5e</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>test-suite/docs/COVERAGE_CONTRACT.md</code></td>
+<td><code>ec9f63965b35fe1a00d5d5f94d77eab6dad6cc10a7c0fc794672dfcaeb58679e</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>test-suite/docs/LOGGING.md</code></td>
+<td><code>d40bc1bc6a88d916b082ea8a17d83199a62a307b6c319e9918e8cc5edd1b64c9</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>test-suite/docs/TEST_PLAN.md</code></td>
+<td><code>17cc7ae35698d656a51136e588d44d6b18b91182a1702718888ddd6f9c4f0ed0</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>test-suite/examples/x86decomp-test.json</code></td>
+<td><code>5cd31838533f866853e0730aa63ed36958b4d1dc92f8cfb3d5825da9c9d4204d</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>test-suite/pyproject.toml</code></td>
+<td><code>64140fe2f874dffc14dfed8a811a2f9e3e7eb9f5d06358fff79260c27ef77ce3</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>test-suite/schemas/feature-catalog.schema.json</code></td>
+<td><code>d6bc10903a5a2760c669b9fc5b1cec7990a0118de30318c2727f3934afe00daa</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>test-suite/schemas/run-report.schema.json</code></td>
+<td><code>9d2b3fcab807e52866a5b8e7bac9f7813e6d7e003d4de9f2f80d05e8798e93c6</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>test-suite/schemas/test-config.schema.json</code></td>
+<td><code>c33b8ab58a509c7f688ff159d0cef5726a4909801d40fd4899c81c4626eda90d</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>test-suite/scripts/run-all.ps1</code></td>
+<td><code>29211e8199239685346d666b03824714984db61c73526a8ebc8fb1bd461273cf</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>test-suite/scripts/run-all.sh</code></td>
+<td><code>b2ed622ebf3f48fd4735088604e027152df7d446d4283fc63235d81b5c0caef2</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>test-suite/setup.cfg</code></td>
+<td><code>1c473cbaee8da5fc46e7f0158794af5cea4414c34a3cf3f180c2001f5e38bd3e</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>test-suite/src/x86decomp_testkit/__init__.py</code></td>
+<td><code>fc0b90629b6ab9477e318b04008c3c5d68ec2cbdaef20e3e145984491b986de2</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>test-suite/src/x86decomp_testkit/__main__.py</code></td>
+<td><code>8049ea31e024fbdc10e22c425b395576481d340e58811ab6fdf39530896ffc98</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>test-suite/src/x86decomp_testkit/adapters/__init__.py</code></td>
+<td><code>1ddce6290f1b4d3745c163a2473f72888548faf2af70e04f498a11882989df21</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>test-suite/src/x86decomp_testkit/adapters/capabilities.py</code></td>
+<td><code>e0ddf047e75550e1a2a0263951f9bc275753d355fa4b096d76d1c89a9da7b756</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>test-suite/src/x86decomp_testkit/adapters/catalog.py</code></td>
+<td><code>171feae0e00a5729a0dcb3f5f877bc2c7479e4560841217a1e8e478025dc672f</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>test-suite/src/x86decomp_testkit/adapters/detection.py</code></td>
+<td><code>0e2e601a66a26d0789cec226e04eaff565d3ca56f207721393fecd69a3c2245f</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>test-suite/src/x86decomp_testkit/adapters/download.py</code></td>
+<td><code>2ec4601f9a87429760a222219714b4d29bc509c22e5975b1be069df0061aa22c</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>test-suite/src/x86decomp_testkit/adapters/installation.py</code></td>
+<td><code>a2f492bca8f0a07e627ee98de16122c3e56bd67cfdadb0e743e82156ab6f7c90</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>test-suite/src/x86decomp_testkit/cli.py</code></td>
+<td><code>4895bf74207b82a195a590b75db4d454ca5ca8ed0b721cddcd368e3f160ccaed</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>test-suite/src/x86decomp_testkit/config.py</code></td>
+<td><code>040632f7652257a669121fa9a2729fd5f225123879adb483ee209841181638d5</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>test-suite/src/x86decomp_testkit/coverage_audit.py</code></td>
+<td><code>74a93d93dd429f3920938e9c29d2b59b3607de538577200e8b7f7926a545ca62</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>test-suite/src/x86decomp_testkit/data/feature_catalog.json</code></td>
+<td><code>f5f77e88119e7dcfd11995973124799ae0f07133520ca39e9604be3b3c934b0e</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>test-suite/src/x86decomp_testkit/fixtures.py</code></td>
+<td><code>562e5bfa76c730cc96a2ace5aa92efdbc5514cd797aef4c212554730a70946df</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>test-suite/src/x86decomp_testkit/inventory.py</code></td>
+<td><code>8e0de0c4c8e4a66f6dbf6e59ea44c0b1eea41d3ed80511dd2bc8eabce79fc4a1</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>test-suite/src/x86decomp_testkit/junit.py</code></td>
+<td><code>a51e772d766abd7e73cece8c589265dbcd53ab5a5a7f66b7c302d8b95ebdb1c1</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>test-suite/src/x86decomp_testkit/live_adapters.py</code></td>
+<td><code>6516fd582f68338dbdb455c5d910c74055db3d17dd96b55d08841cf111f57d63</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>test-suite/src/x86decomp_testkit/logging_utils.py</code></td>
+<td><code>0cbf9084920bee2069ea38f4b3105b913a6ac88d8ce545582f7a319cf40cfbfa</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>test-suite/src/x86decomp_testkit/models.py</code></td>
+<td><code>cd3c09bfe5c1f30f8693c64b7a6f9b8ae0f4ce6cff40a82f9b8c42b5a1bea00c</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>test-suite/src/x86decomp_testkit/orchestrator.py</code></td>
+<td><code>5f99094a835bc81db82694f10972870b96644966531d9930359ae3319298b3a4</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>test-suite/src/x86decomp_testkit/process.py</code></td>
+<td><code>b1521f7cd16821a086c9eb17f7d680eb11b8c3e903dd8a7fe518553f3873596d</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>test-suite/src/x86decomp_testkit/reports.py</code></td>
+<td><code>b433e8f157f959ba1bcb1d4a1f328fe8d04b28bdde08bfb4f438b39e3d84d8bc</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>test-suite/src/x86decomp_testkit/self_tests/__init__.py</code></td>
+<td><code>2fdabb54d9fb50db6ec807fffbfad75f6fb167b169a02c667b49d9097540e3a0</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>test-suite/src/x86decomp_testkit/self_tests/test_adapter_capabilities.py</code></td>
+<td><code>29edcce9190f01a43c81eaa7a38a65e12ff049958a4bf735d2685d329b134fd9</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>test-suite/src/x86decomp_testkit/self_tests/test_adapter_detection_resolution.py</code></td>
+<td><code>f5088b0b7ffcea762bf15990d087f76b782ae7d2ad88316aa0f532e5620c5cd3</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>test-suite/src/x86decomp_testkit/self_tests/test_archive_security.py</code></td>
+<td><code>c9a85a238d72824ef8e346e340dc2607f0ce75d17c102e8d1fb5812973e6c60a</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>test-suite/src/x86decomp_testkit/self_tests/test_cli_and_installation.py</code></td>
+<td><code>a732ea719dcdebc30e0c4a2bdfb75be4c74ebd55ce96ddc99c70faf3a4ac2092</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>test-suite/src/x86decomp_testkit/self_tests/test_config_models.py</code></td>
+<td><code>f4537a948d0a737075e16a1003b9a8b8e99f8369edc1248c29caba7e140586ae</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>test-suite/src/x86decomp_testkit/self_tests/test_inventory_reports_process.py</code></td>
+<td><code>382524e4b814f813ea18b7ba1012522f9176997e4be92d3e59c59c0911784a11</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>test-suite/src/x86decomp_testkit/suites.py</code></td>
+<td><code>010c3da7b0b415857c7764b44e39863447e2f4245d68aea69c7513038a80225d</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>test-suite/src/x86decomp_testkit/timeutil.py</code></td>
+<td><code>32bb1893be8e6d365c6781ac07e4d74bcb24ecea8eb29d35fb449432737ddc43</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>test-suite/src/x86decomp_testkit/toolkit_tests/__init__.py</code></td>
+<td><code>59233872c30dd4805dd978aca63924506145697eab953e5e5d741c6cd17bd96c</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>test-suite/src/x86decomp_testkit/toolkit_tests/test_public_api_contract.py</code></td>
+<td><code>a171bf51a1313d918e7f546817fa6525008b245dba8d47a8dde7e22785539b0b</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>test-suite/tests/test_adapter_capabilities.py</code></td>
+<td><code>47dde51aa511486350597ec6a786e4be9ed9bc229b02e9cd8d12baff0874f133</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>test-suite/tests/test_adapter_detection_resolution.py</code></td>
+<td><code>7bd6c6fd94d35d1d0773bc1afd6d8b54e63cc8cafbfad512bed398b8f267cd1e</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>test-suite/tests/test_architecture_maps.py</code></td>
+<td><code>038c3d80e169d6e6a44f57bb71c5ff92dcd09f63a2e3b556c01e35238c88515b</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>test-suite/tests/test_archive_security.py</code></td>
+<td><code>14bc490ccfb85d8128b72f44afd3e949fed6c9c74b13dd9fff64ed2edcb80a65</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>test-suite/tests/test_cli_and_installation.py</code></td>
+<td><code>a11791dcef363beb875ac676f8b4627e2513ffbe2d9357360ce9a6c27cee45b0</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>test-suite/tests/test_config_models.py</code></td>
+<td><code>2a0ea2ddce38b40acc27cad53bd77822186b8e70ebaee405796b758f683d2ed3</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>test-suite/tests/test_inventory_reports_process.py</code></td>
+<td><code>5f373ffc72fdbeefc5126f76eac31a7052181a5c2004318cb8c6d33678720b4d</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>tests/assembly/conftest.py</code></td>
+<td><code>f11e34a5e847aefbc29f1f353e27f8ec3c78e541e579caaa08f3a7fe89954bd7</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>tests/assembly/test_annotation_materialize.py</code></td>
+<td><code>6e90b4e325e12eb3b851ca22d4364a19f3cf5257c0f07ac51e057a926d504b82</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>tests/assembly/test_helpers_and_relocations.py</code></td>
+<td><code>a5a50f7860b8f169441105450065e74a15361ed37c0e5900681b457f20914943</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>tests/assembly/test_pipeline_cli_schemas.py</code></td>
+<td><code>58c18cc8d7da6b1d2dac5b42383d20bc381e303a4c2be28b25e926118bb4db64</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>tests/governance/test_core.py</code></td>
+<td><code>2ebfd3a82a8f7cd6e6cedf5acc24e614c970800b66cc254784f4971a430bfff5</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>tests/governance/test_governance_cli_schemas.py</code></td>
+<td><code>3f4f42481f815ad565a6914f285531f1de81949bc00deac360ac1046e9658a96</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>tests/governance/test_proof_plugin_worker.py</code></td>
+<td><code>ee8681038c0ae0c7882402f41e3074c4412b73b4b4f7288b20012ebc80086e33</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>tests/governance/test_worker_thread_safety.py</code></td>
+<td><code>2048ff5db8124a58271d493abfc152e62d7bbc89c176e6d79bace56e7b06917d</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>tests/native/conftest.py</code></td>
+<td><code>58bbe95bddee65423d1af35d6070a1953f050b8910f74c3c427a088de8eff92b</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>tests/native/test_cli_schemas.py</code></td>
+<td><code>2465fa36eac4def208df14ecdbec59429c1dc6cb0bed09e0757b18407062a4fa</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>tests/native/test_inventory_and_loops.py</code></td>
+<td><code>f809f5bf1a274bed3ca1456e2ebabdc90e12d8ad9ad17464d5da1e0883baa201</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>tests/native/test_pe_hybrid.py</code></td>
+<td><code>9cc67751b07555ce543712122eff1abb9c9f687fe944b20cc3e8e49040ecfa9d</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>tests/native/test_slots_matching.py</code></td>
+<td><code>94855914f406923ea02198bd7484d0f9d64ebb271dbe50c8dd54fbf8abca3a63</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>tests/native/test_staging_loop_runtime_windows.py</code></td>
+<td><code>cdc2f880f176575abf4e5db1220253592bea5149b9c66ae95d153c1ccd5f2b23</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>tests/pe_fixture.py</code></td>
+<td><code>7b44240a0891b24f52e2c8235b0c2a0e449192560f9bc88456d41e340c9e3907</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>tests/reconstruction/test_capsules_security_changesets.py</code></td>
+<td><code>9b65ff6137ee793b18776ceb283f7684ebcedd08100a6b6e42c40eb73b85c269</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>tests/reconstruction/test_cli_schemas_retention.py</code></td>
+<td><code>c38bb38a3af81453e5a70293bf7a913ddd32c93bbfa21199f96e4d8a29e27ce2</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>tests/reconstruction/test_decomp_acceleration.py</code></td>
+<td><code>b446be684115257ad47fd9132319979d563495e7d965e7897ddd391f8bb59f4d</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>tests/reconstruction/test_project_headers_builds.py</code></td>
+<td><code>2b401fe3f216891e28e3da29520ae5d322b45cb5f75721ebbeb7e42957e835c3</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>tests/reconstruction/test_provenance_abi_tests.py</code></td>
+<td><code>172d0370abc39759bf296824921c2ad7c96089317051ff3fddadc75a34cf2264</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>tests/reconstruction/test_real_project_acceleration.py</code></td>
+<td><code>3dd8b6ae8dc6f943896a19d12c82da87811e72335662a825a4a4ff9ebd8ac198</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>tests/test_abi_disassembly.py</code></td>
+<td><code>91ebeb183e6f9728fff8d8d828615c79506b7b1d2752a0caaf016379aec1c590</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>tests/test_artifacts.py</code></td>
+<td><code>7c850b2510db574ec42cd3e1c26245717d225e7a8e91dc66794b8772d797bc84</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>tests/test_audit_fixes.py</code></td>
+<td><code>4991a922981b8fe9e82a31b9b1ccfd9851449ef3d78b1525f244fca07527c2bc</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>tests/test_coff.py</code></td>
+<td><code>0db7135636f4571252ebc19b33c78b736d1c0e552707a4b9f7d0cfdb85b7796a</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>tests/test_coff_archive.py</code></td>
+<td><code>38b8932cc6744db56c6ca164ad1749229f89daccd8e569f797be64b49b126a60</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>tests/test_compiler.py</code></td>
+<td><code>a700c74ef73cc25a268f426b937f9d1a238ee2f0a26ad42333b0b328c58b911e</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>tests/test_decompme_objdiff.py</code></td>
+<td><code>cd8f3acb39d4c6b8c2c563b625e0e73e2fe39994483cb3096a3ac5c87ff70f9d</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>tests/test_diffing.py</code></td>
+<td><code>de5433ce73dcb97007481caaed594b8b4f9331828f3ebd60873c784129597bd0</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>tests/test_docstring_audit.py</code></td>
+<td><code>21d346e4c07e552ee8c635a91030480a0ee28a595ba566ffac35e4a3b5a0d4ee</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>tests/test_documentation.py</code></td>
+<td><code>1ad36a9753c326fb264cb0fbb286ea72d7c02303e46ca21c67cf61116228b954</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>tests/test_dynamic_symbolic.py</code></td>
+<td><code>f664786ae11deadc81c601cf6442f4422b83e3ab3118e75e5384b0a046318be2</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>tests/test_dynamorio.py</code></td>
+<td><code>41d1f65aeefadb38e4b937899e801f20a93e495c7933427a2c483d7a6d554fcc</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>tests/test_evidence.py</code></td>
+<td><code>0b32cba7e0b11589daea1342943dab03f9a2f9ec8e36261ad0818ee3c0f53159</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>tests/test_ghidra.py</code></td>
+<td><code>923c2293e595fec0df1050bb2c3ee598d2341101bb86a68276710e132afb3c87</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>tests/test_integration.py</code></td>
+<td><code>91835325b62f0d2d14c0b444e88f6572ff68c70825e4932f94ea60fa4c5408cb</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>tests/test_linker_metadata_corpus.py</code></td>
+<td><code>8f0ae11983ae7264ab57a796a2f8fe155225fd61194674c7cc08796f681cf015</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>tests/test_local_llm.py</code></td>
+<td><code>68fce843df5a6b1ec7809824c973321e518d86503d6e93fe04142f9be8437157</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>tests/test_mcp.py</code></td>
+<td><code>508a19efb6d5d7f8f5ba8103a7ec38595f76ca9734a820b8b7d839a1d22dd992</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>tests/test_memory.py</code></td>
+<td><code>90e42ba1551ef40809011ffa01a74e4deea641bd897a45163711ddea12dcae4d</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>tests/test_modes_and_db.py</code></td>
+<td><code>84554d4fd263de392d7d3e43471ad0b538672e354b28b1ad639ccbd8f5a60f94</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>tests/test_pdb.py</code></td>
+<td><code>a66327c79f20e3a5c0ee0590777772b5b75fd514abda9f05374e15cd0c8f034f</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>tests/test_pe32.py</code></td>
+<td><code>0566aa1335fa09514110eba2495853f1eb0a06529f033546153e22dbb9a7ba4e</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>tests/test_pe64_patch_hybrid.py</code></td>
+<td><code>1c4c7817684d2149bfa82bb3c91f820ae79e81f0f5ea8b82835cb876e8985fba</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>tests/test_production.py</code></td>
+<td><code>da98cd0e561b0b3ec69afb258be55dd9201b09974c3c63090f0e3fb4cff32bf4</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>tests/test_project.py</code></td>
+<td><code>51b66c2f0070d17f2c004af56396878c666291e1e8284c5b2e2a0155aa753a67</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>tests/test_release_contract.py</code></td>
+<td><code>7995c16cc519ee1cdf6dd7fb7645cdc6642515da64bd43c4a57951437e17d6fa</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>tests/test_relink.py</code></td>
+<td><code>b3a48a672550ed5392797dbb941829ec301bb24066ab9d35509f7e391fb74b92</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>tests/test_second_audit_fixes.py</code></td>
+<td><code>637f0a226e118e451f9cf2e2656a44b1ff96529cd1aae1c449d4f03541cf2a56</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>tests/test_test_bundle.py</code></td>
+<td><code>27fd121c8a59200ffcafcfccaa6e01ca3c2bd488680f3209bbe95097686f7061</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>tests/test_workqueue.py</code></td>
+<td><code>401f98bce8178d0bc2f01a92f5c792044a8f32695868bd0cd04feec743eb56b8</code></td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>x86decomp-test.json</code></td>
+<td><code>6ea3a3cbe4503d66294100af49b27e88222514338cb579e05e8535a0156c4cdf</code></td>
+<td>yes</td>
+</tr>
+</tbody>
+</table></p>
+    </article>
+</section>
+            <!-- endblock -->
+
+            <!-- block footer -->
+                <footer>
+    <div class="d-flex flex-sm-row justify-content-between py-2 border-top drac-text-black drac-bg-cyan-green">
+        <a href="https://github.com/dracula/mkdocs" target="_blank" style="padding-left: 1%;"
+            class="footer-text drac-anchor drac-text-black drac-text-purple--hover">
+            Made with Dracula Theme for MkDocs
+        </a>
+    </div>
+</footer>
+            <!-- endblock -->
+        </div>
+
+    </main>
+
+        <script>var base_url = '..';</script>
+        <script src="../assets/js/jquery-3.3.1.slim.min.js"></script>
+        <script src="../assets/js/bootstrap.bundle.min.js"></script>
+        <script src="../assets/js/mkdocs.js"></script>
+			<script src="../search/main.js" defer></script>
+
+</body>
+
+</html>

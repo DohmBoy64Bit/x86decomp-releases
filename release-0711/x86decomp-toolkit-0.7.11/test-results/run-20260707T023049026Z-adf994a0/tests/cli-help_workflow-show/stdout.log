@@ -1,8 +1,0 @@
-usage: x86decomp workflow-show [-h] project function_id
-
-positional arguments:
-  project
-  function_id
-
-options:
-  -h, --help   show this help message and exit

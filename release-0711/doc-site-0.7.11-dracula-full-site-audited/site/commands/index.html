@@ -1,0 +1,1240 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+        <title>Commands - x86decomp 0.7.11 Docs</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        
+        
+        
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="../assets/css/darcula-highlight.min.css">
+
+        <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../assets/css/dracula-ui.min.css">
+        <link rel="stylesheet" href="../assets/css/mkdocs.min.css">
+            <link href="../assets/x86decomp-dracula-overrides.css" rel="stylesheet">
+
+        
+            <link  rel="icon" type="image/x-icon" href="../assets/img/favicon.ico">
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+                <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+
+<body class="drac-bg-black-secondary drac-text-grey-ternary drac-text drac-scrollbar-purple">
+
+    <main class="d-flex">
+
+        <!-- block sidebar -->
+            <nav id="sidebar" class="sidebar drac-bg-black">
+    <div class="custom-menu">
+        <button type="button" id="sidebarCollapse" class="btn btn-primary">
+            <i class="fa fa-bars"></i>
+            <span class="sr-only">Menu</span>
+        </button>
+    </div>
+
+    <div class="p-4">
+        
+
+        <div class="drac-text-center">
+            
+                <span class="drac-text drac-line-height drac-text-white">x86decomp 0.7.11 Docs</span>
+            
+        </div>
+
+        <div class="drac-box flex-column">
+            <ul class="dot-ul">
+                <li><div class="dot-li drac-bg-cyan"></div></li>
+                <li><div class="dot-li drac-bg-green"></div></li>
+                <li><div class="dot-li drac-bg-orange"></div></li>
+                <li><div class="dot-li drac-bg-pink"></div></li>
+                <li><div class="dot-li drac-bg-purple"></div></li>
+                <li><div class="dot-li drac-bg-red"></div></li>
+                <li><div class="dot-li drac-bg-yellow"></div></li>
+            </ul>
+        </div>
+
+        <hr class="drac-divider" />
+
+        <!-- block menu -->
+        <ul class="mb-5 drac-list drac-list-none">
+            
+            <li class="drac-box">
+                <a href=".."
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Home
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../getting-started/"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Getting Started
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href=".."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#workflows-collapse" aria-expanded="false">
+                    Workflows
+                </a>
+                <div class="collapse" id="workflows-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../workflows/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Workflow Guide
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../local-llm/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Local LLM C Generation
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../decompilation-acceleration/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Decompilation Acceleration
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../project-examples/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Project Examples
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href=".."
+                    class=" active 
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#reference-collapse" aria-expanded="false">
+                    Reference
+                </a>
+                <div class="collapse" id="reference-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../reference/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../architecture/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Architecture
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="./"
+            class=" active 
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Commands
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../release-artifacts/COMMAND_REFERENCE_0.7.11/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Command Reference 0.7.11
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../schemas/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Schemas
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../integrations/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Integrations
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../features/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Source Modules
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../functions/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Function Index
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../tests/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Tests
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../release-artifacts/DOCSTRING_AUDIT_0.7.11/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Docstring Audit
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href=".."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#release-evidence-collapse" aria-expanded="false">
+                    Release Evidence
+                </a>
+                <div class="collapse" id="release-evidence-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../release-evidence/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../release-artifacts/SECOND_AUDIT_FIX_REPORT_0.7.11/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Second Audit Fix Report
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../release-artifacts/DOCSTRING_AUDIT_0.7.11/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Docstring Audit
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../release-artifacts/COMMAND_REFERENCE_0.7.11/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Command Reference 0.7.11
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../verification/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Verification
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../source-coverage/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Source Coverage
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../changelog/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Changelog
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../about/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            About
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <!-- endblock -->
+    </div>
+</nav>
+        <!-- endblock -->
+
+        <nav class="divider drac-bg-purple-cyan"></nav>
+
+        <div class="content">
+            <!-- block header -->
+                <header>
+    <nav class="navbar navbar-expand-xl drac-bg-purple">
+        <div class="container-fluid">
+            
+            <button class="navbar-toggler w-100 text-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMenu"
+                aria-controls="navbarsMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse flex-column ml-auto" id="navbarsMenu">
+                <ul class="navbar-nav text-md-center">
+
+                    <!-- block preview -->
+                    <li class="nav-item">
+                            
+        <div class="container">
+            <div class="row row-preview">
+                <div class="col">
+                    <a href="../architecture/"
+                        class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover">
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="../release-artifacts/COMMAND_REFERENCE_0.7.11/"
+                        class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover" style="padding-left: 3%;">
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block search -->
+                    <li class="nav-item"><div role="search" class="search-box">
+	<form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+		<input type="text" name="q" class="drac-input drac-input-search drac-input-white drac-text-white drac-bg-black-secondary"
+		placeholder="Search docs" title="Type search term here" />
+	</form>
+</div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block source -->
+                    <li class="nav-item">
+                        
+                    </li>
+                    <!--  endblock -->
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+</header>
+            <!-- endblock -->
+
+            <!-- block content -->
+                <section class="p-md-5 section-content">
+    <article>
+        <p><h1 id="commands">Commands</h1>
+<p>This index is regenerated from the <code>0.7.11</code> parser and canonical route registry.</p>
+<ul>
+<li>Root commands: <strong>166</strong></li>
+<li>Canonical groups: <strong>59</strong></li>
+<li>Canonical routes: <strong>239</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Canonical group</th>
+<th>Route actions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="abi/"><code>abi</code></a></td>
+<td>yes</td>
+<td>compare, export, recover, shim, show, verify</td>
+</tr>
+<tr>
+<td><a href="abi-check/"><code>abi-check</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="angr-validate/"><code>angr-validate</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="artifact-import/"><code>artifact-import</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="artifact-verify/"><code>artifact-verify</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="asm/"><code>asm</code></a></td>
+<td>yes</td>
+<td>annotate, batch, list, materialize, report, verify-roundtrip</td>
+</tr>
+<tr>
+<td><a href="asset/"><code>asset</code></a></td>
+<td>yes</td>
+<td>inventory</td>
+</tr>
+<tr>
+<td><a href="benchmark-run/"><code>benchmark-run</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="boundary/"><code>boundary</code></a></td>
+<td>yes</td>
+<td>audit, audit-project, export-ghidra-fixes, list, show</td>
+</tr>
+<tr>
+<td><a href="build/"><code>build</code></a></td>
+<td>yes</td>
+<td>add-target, add-variant, compare-modes, create, generate, matrix, show, validate</td>
+</tr>
+<tr>
+<td><a href="campaign/"><code>campaign</code></a></td>
+<td>yes</td>
+<td>branch, create, list, pause, plan, resume, snapshot, start, status, stop</td>
+</tr>
+<tr>
+<td><a href="candidate/"><code>candidate</code></a></td>
+<td>yes</td>
+<td>add-file, compare, create, evaluate, list, promote, search, show, transition</td>
+</tr>
+<tr>
+<td><a href="capsule/"><code>capsule</code></a></td>
+<td>yes</td>
+<td>create, inspect, reproduce, verify</td>
+</tr>
+<tr>
+<td><a href="changeset/"><code>changeset</code></a></td>
+<td>yes</td>
+<td>add-operation, apply, conflicts, create, export, inspect, merge, rebase, show, verify</td>
+</tr>
+<tr>
+<td><a href="claim-attach/"><code>claim-attach</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="claim-contradict/"><code>claim-contradict</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="claim-create/"><code>claim-create</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="claim-verify/"><code>claim-verify</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="class/"><code>class</code></a></td>
+<td>yes</td>
+<td>scaffold</td>
+</tr>
+<tr>
+<td><a href="coff-comdat-resolve/"><code>coff-comdat-resolve</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="coff-extract/"><code>coff-extract</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="coff-inspect/"><code>coff-inspect</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="coff-synthesize/"><code>coff-synthesize</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="commands/"><code>commands</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="compile/"><code>compile</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="compile-worker/"><code>compile-worker</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="compiler-lab/"><code>compiler-lab</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="compiler-rules/"><code>compiler-rules</code></a></td>
+<td>yes</td>
+<td>compare-flags, learn-rule, rule-report</td>
+</tr>
+<tr>
+<td><a href="consensus/"><code>consensus</code></a></td>
+<td>yes</td>
+<td>conflicts, explain, record, resolve, scan</td>
+</tr>
+<tr>
+<td><a href="content-put/"><code>content-put</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="content-verify/"><code>content-verify</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="convergence-analyze/"><code>convergence-analyze</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="corpus-build/"><code>corpus-build</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="corpus-compare/"><code>corpus-compare</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="corpus-create-manifest/"><code>corpus-create-manifest</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="corpus-generate/"><code>corpus-generate</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="corpus-generated-verify/"><code>corpus-generated-verify</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="corpus-verify/"><code>corpus-verify</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="counterexample/"><code>counterexample</code></a></td>
+<td>yes</td>
+<td>add, list, promote, show</td>
+</tr>
+<tr>
+<td><a href="cpp-recover/"><code>cpp-recover</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="crosscheck-ghidra/"><code>crosscheck-ghidra</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="db-constraint-accept/"><code>db-constraint-accept</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="db-constraint-add/"><code>db-constraint-add</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="db-constraint-conflicts/"><code>db-constraint-conflicts</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="db-ingest/"><code>db-ingest</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="db-query/"><code>db-query</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="decompiler/"><code>decompiler</code></a></td>
+<td>yes</td>
+<td>cleanup</td>
+</tr>
+<tr>
+<td><a href="decompme-pack/"><code>decompme-pack</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="dependency-audit/"><code>dependency-audit</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="diff/"><code>diff</code></a></td>
+<td>yes</td>
+<td>explain</td>
+</tr>
+<tr>
+<td><a href="diff-bytes/"><code>diff-bytes</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="diff-function/"><code>diff-function</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="disassemble/"><code>disassemble</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="drcov-parse/"><code>drcov-parse</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="drcov-run/"><code>drcov-run</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="dynamic-validate/"><code>dynamic-validate</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="evidence-add/"><code>evidence-add</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="family/"><code>family</code></a></td>
+<td>yes</td>
+<td>add, correlate, create, report</td>
+</tr>
+<tr>
+<td><a href="function/"><code>function</code></a></td>
+<td>yes</td>
+<td>classify, discover, reconcile, sort</td>
+</tr>
+<tr>
+<td><a href="game-pattern/"><code>game-pattern</code></a></td>
+<td>yes</td>
+<td>state-machine</td>
+</tr>
+<tr>
+<td><a href="ghidra-export/"><code>ghidra-export</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="ghidra-mcp/"><code>ghidra-mcp</code></a></td>
+<td>yes</td>
+<td>batch-decompile, decompile, functions, probe, sync-names</td>
+</tr>
+<tr>
+<td><a href="graph/"><code>graph</code></a></td>
+<td>yes</td>
+<td>edge, impact, node</td>
+</tr>
+<tr>
+<td><a href="harness-generate/"><code>harness-generate</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="headers/"><code>headers</code></a></td>
+<td>yes</td>
+<td>create, cycles, declare, explain, include, synthesize, synthesize-project, validate</td>
+</tr>
+<tr>
+<td><a href="hybrid/"><code>hybrid</code></a></td>
+<td>yes</td>
+<td>compose, generate, verify</td>
+</tr>
+<tr>
+<td><a href="hybrid-generate/"><code>hybrid-generate</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="hypothesis/"><code>hypothesis</code></a></td>
+<td>yes</td>
+<td>create, dependency, evidence, gate, list, show, transition</td>
+</tr>
+<tr>
+<td><a href="image-match/"><code>image-match</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="image-profile/"><code>image-profile</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="image-text/"><code>image-text</code></a></td>
+<td>yes</td>
+<td>compose</td>
+</tr>
+<tr>
+<td><a href="init/"><code>init</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="inspect-pe/"><code>inspect-pe</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="integration-run/"><code>integration-run</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="layout-reconstruct/"><code>layout-reconstruct</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="lib-inspect/"><code>lib-inspect</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="library/"><code>library</code></a></td>
+<td>yes</td>
+<td>accept, candidates, externalize, identify, reconstruct, reject</td>
+</tr>
+<tr>
+<td><a href="linker-plan/"><code>linker-plan</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="llm/"><code>llm</code></a></td>
+<td>yes</td>
+<td>batch-create, batch-match, cpp-generate, generate, job-create, job-from-range, match, probe, profile-create, profile-validate, prompt, providers, verify</td>
+</tr>
+<tr>
+<td><a href="loop/"><code>loop</code></a></td>
+<td>yes</td>
+<td>list, run, show</td>
+</tr>
+<tr>
+<td><a href="map-inspect/"><code>map-inspect</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="match/"><code>match</code></a></td>
+<td>yes</td>
+<td>batch, compare, mismatches, report</td>
+</tr>
+<tr>
+<td><a href="mcp-commit/"><code>mcp-commit</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="mcp-propose/"><code>mcp-propose</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="mcp-read/"><code>mcp-read</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="mcp-tools/"><code>mcp-tools</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="memory-add/"><code>memory-add</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="memory-render/"><code>memory-render</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="memory-verify/"><code>memory-verify</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="metadata-scan/"><code>metadata-scan</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="mod/"><code>mod</code></a></td>
+<td>yes</td>
+<td>branch-init</td>
+</tr>
+<tr>
+<td><a href="module/"><code>module</code></a></td>
+<td>yes</td>
+<td>add-member, add-unit-member, assign, create, create-unit, list, show, show-unit, suggest</td>
+</tr>
+<tr>
+<td><a href="objdiff-run/"><code>objdiff-run</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="patch-image/"><code>patch-image</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="pattern/"><code>pattern</code></a></td>
+<td>yes</td>
+<td>catalog, generate, match, promote, scan</td>
+</tr>
+<tr>
+<td><a href="pdb-inspect/"><code>pdb-inspect</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="pe/"><code>pe</code></a></td>
+<td>yes</td>
+<td>export-coff, export-sections, inventory, patch-apply, patch-plan, text-swap</td>
+</tr>
+<tr>
+<td><a href="pipeline-cancel/"><code>pipeline-cancel</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="pipeline-create/"><code>pipeline-create</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="pipeline-recover/"><code>pipeline-recover</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="pipeline-retry/"><code>pipeline-retry</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="pipeline-run/"><code>pipeline-run</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="pipeline-status/"><code>pipeline-status</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="playability/"><code>playability</code></a></td>
+<td>yes</td>
+<td>smoke-plan</td>
+</tr>
+<tr>
+<td><a href="plugin/"><code>plugin</code></a></td>
+<td>yes</td>
+<td>doctor, install, invoke, list, validate</td>
+</tr>
+<tr>
+<td><a href="progress/"><code>progress</code></a></td>
+<td>yes</td>
+<td>reconcile</td>
+</tr>
+<tr>
+<td><a href="project/"><code>project</code></a></td>
+<td>yes</td>
+<td>check, doctor-paths, explain-boundaries, export, health, init, synthesize-layout</td>
+</tr>
+<tr>
+<td><a href="project-backup/"><code>project-backup</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="project-check/"><code>project-check</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="project-from-target/"><code>project-from-target</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="project-gc/"><code>project-gc</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="project-migrate/"><code>project-migrate</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="project-repair/"><code>project-repair</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="project-restore/"><code>project-restore</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="proof/"><code>proof</code></a></td>
+<td>yes</td>
+<td>evaluate, export, inspect, obligation, result, verify</td>
+</tr>
+<tr>
+<td><a href="provenance/"><code>provenance</code></a></td>
+<td>yes</td>
+<td>binary, export, record, source</td>
+</tr>
+<tr>
+<td><a href="regression/"><code>regression</code></a></td>
+<td>yes</td>
+<td>compare</td>
+</tr>
+<tr>
+<td><a href="release-gate/"><code>release-gate</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="release-manifest-verify/"><code>release-manifest-verify</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="release-policy/"><code>release-policy</code></a></td>
+<td>yes</td>
+<td>moddable-source</td>
+</tr>
+<tr>
+<td><a href="relink/"><code>relink</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="reloc/"><code>reloc</code></a></td>
+<td>yes</td>
+<td>inspect, resolve, supported</td>
+</tr>
+<tr>
+<td><a href="reproduce-create/"><code>reproduce-create</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="reproduce-verify/"><code>reproduce-verify</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="review/"><code>review</code></a></td>
+<td>yes</td>
+<td>assign, create, decide, list, lock, show</td>
+</tr>
+<tr>
+<td><a href="runtime/"><code>runtime</code></a></td>
+<td>yes</td>
+<td>launch, map-crash, validate-image</td>
+</tr>
+<tr>
+<td><a href="runtime-analysis/"><code>runtime-analysis</code></a></td>
+<td>yes</td>
+<td>identify, match-library, quarantine</td>
+</tr>
+<tr>
+<td><a href="sbom-generate/"><code>sbom-generate</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="script-port/"><code>script-port</code></a></td>
+<td>yes</td>
+<td>audit</td>
+</tr>
+<tr>
+<td><a href="security/"><code>security</code></a></td>
+<td>yes</td>
+<td>finding, policy, report, scan</td>
+</tr>
+<tr>
+<td><a href="security-audit/"><code>security-audit</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="serve/"><code>serve</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="snapshot-tools/"><code>snapshot-tools</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="source/"><code>source</code></a></td>
+<td>yes</td>
+<td>impact, lock, reconcile, unlock</td>
+</tr>
+<tr>
+<td><a href="source-map/"><code>source-map</code></a></td>
+<td>yes</td>
+<td>annotate, verify</td>
+</tr>
+<tr>
+<td><a href="source-stage/"><code>source-stage</code></a></td>
+<td>yes</td>
+<td>classify</td>
+</tr>
+<tr>
+<td><a href="staging/"><code>staging</code></a></td>
+<td>yes</td>
+<td>compile-check, generate-context, resolve, scan, unresolved</td>
+</tr>
+<tr>
+<td><a href="subsystem/"><code>subsystem</code></a></td>
+<td>yes</td>
+<td>detect</td>
+</tr>
+<tr>
+<td><a href="symbolic-memory-validate/"><code>symbolic-memory-validate</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="symbolic-validate/"><code>symbolic-validate</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="target-pack-infer/"><code>target-pack-infer</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="target-pack-verify/"><code>target-pack-verify</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="template-derive/"><code>template-derive</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="template-materialize/"><code>template-materialize</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="test-bundle-create/"><code>test-bundle-create</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="test-bundle-inspect/"><code>test-bundle-inspect</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="tests/"><code>tests</code></a></td>
+<td>yes</td>
+<td>add, explain, list, promote-counterexample, synthesize</td>
+</tr>
+<tr>
+<td><a href="text-swap/"><code>text-swap</code></a></td>
+<td>yes</td>
+<td>build, inject, plan, verify</td>
+</tr>
+<tr>
+<td><a href="toolchain/"><code>toolchain</code></a></td>
+<td>yes</td>
+<td>hash-tree, redact-package, verify-local</td>
+</tr>
+<tr>
+<td><a href="toolchain-register/"><code>toolchain-register</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="toolchain-verify/"><code>toolchain-verify</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="triage/"><code>triage</code></a></td>
+<td>yes</td>
+<td>next</td>
+</tr>
+<tr>
+<td><a href="type/"><code>type</code></a></td>
+<td>yes</td>
+<td>propagate</td>
+</tr>
+<tr>
+<td><a href="verify-project/"><code>verify-project</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="vtable/"><code>vtable</code></a></td>
+<td>yes</td>
+<td>recover</td>
+</tr>
+<tr>
+<td><a href="windows/"><code>windows</code></a></td>
+<td>yes</td>
+<td>discover-ghidra, doctor, response-file</td>
+</tr>
+<tr>
+<td><a href="work-claim/"><code>work-claim</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="work-create/"><code>work-create</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="work-next/"><code>work-next</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="work-propose/"><code>work-propose</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="work-validate/"><code>work-validate</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="worker/"><code>worker</code></a></td>
+<td>yes</td>
+<td>doctor, list, register, select, status</td>
+</tr>
+<tr>
+<td><a href="worker-capabilities/"><code>worker-capabilities</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="workflow-init/"><code>workflow-init</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="workflow-show/"><code>workflow-show</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+<tr>
+<td><a href="workflow-update/"><code>workflow-update</code></a></td>
+<td>no</td>
+<td>Root command or compatibility entry point</td>
+</tr>
+</tbody>
+</table></p>
+    </article>
+</section>
+            <!-- endblock -->
+
+            <!-- block footer -->
+                <footer>
+    <div class="d-flex flex-sm-row justify-content-between py-2 border-top drac-text-black drac-bg-cyan-green">
+        <a href="https://github.com/dracula/mkdocs" target="_blank" style="padding-left: 1%;"
+            class="footer-text drac-anchor drac-text-black drac-text-purple--hover">
+            Made with Dracula Theme for MkDocs
+        </a>
+    </div>
+</footer>
+            <!-- endblock -->
+        </div>
+
+    </main>
+
+        <script>var base_url = '..';</script>
+        <script src="../assets/js/jquery-3.3.1.slim.min.js"></script>
+        <script src="../assets/js/bootstrap.bundle.min.js"></script>
+        <script src="../assets/js/mkdocs.js"></script>
+			<script src="../search/main.js" defer></script>
+
+</body>
+
+</html>

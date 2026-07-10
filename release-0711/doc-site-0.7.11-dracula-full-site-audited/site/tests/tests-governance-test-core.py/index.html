@@ -1,0 +1,556 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+        <title>tests/governance/test_core.py - x86decomp 0.7.11 Docs</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        
+        
+        
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="../../assets/css/darcula-highlight.min.css">
+
+        <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../assets/css/dracula-ui.min.css">
+        <link rel="stylesheet" href="../../assets/css/mkdocs.min.css">
+            <link href="../../assets/x86decomp-dracula-overrides.css" rel="stylesheet">
+
+        
+            <link  rel="icon" type="image/x-icon" href="../../assets/img/favicon.ico">
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+                <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+
+<body class="drac-bg-black-secondary drac-text-grey-ternary drac-text drac-scrollbar-purple">
+
+    <main class="d-flex">
+
+        <!-- block sidebar -->
+            <nav id="sidebar" class="sidebar drac-bg-black">
+    <div class="custom-menu">
+        <button type="button" id="sidebarCollapse" class="btn btn-primary">
+            <i class="fa fa-bars"></i>
+            <span class="sr-only">Menu</span>
+        </button>
+    </div>
+
+    <div class="p-4">
+        
+
+        <div class="drac-text-center">
+            
+                <span class="drac-text drac-line-height drac-text-white">x86decomp 0.7.11 Docs</span>
+            
+        </div>
+
+        <div class="drac-box flex-column">
+            <ul class="dot-ul">
+                <li><div class="dot-li drac-bg-cyan"></div></li>
+                <li><div class="dot-li drac-bg-green"></div></li>
+                <li><div class="dot-li drac-bg-orange"></div></li>
+                <li><div class="dot-li drac-bg-pink"></div></li>
+                <li><div class="dot-li drac-bg-purple"></div></li>
+                <li><div class="dot-li drac-bg-red"></div></li>
+                <li><div class="dot-li drac-bg-yellow"></div></li>
+            </ul>
+        </div>
+
+        <hr class="drac-divider" />
+
+        <!-- block menu -->
+        <ul class="mb-5 drac-list drac-list-none">
+            
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Home
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../../getting-started/"
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Getting Started
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#workflows-collapse" aria-expanded="false">
+                    Workflows
+                </a>
+                <div class="collapse" id="workflows-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../workflows/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Workflow Guide
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../local-llm/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Local LLM C Generation
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../decompilation-acceleration/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Decompilation Acceleration
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../project-examples/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Project Examples
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#reference-collapse" aria-expanded="false">
+                    Reference
+                </a>
+                <div class="collapse" id="reference-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../reference/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../architecture/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Architecture
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../commands/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Commands
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../release-artifacts/COMMAND_REFERENCE_0.7.11/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Command Reference 0.7.11
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../schemas/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Schemas
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../integrations/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Integrations
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../features/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Source Modules
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../functions/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Function Index
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Tests
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../release-artifacts/DOCSTRING_AUDIT_0.7.11/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Docstring Audit
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#release-evidence-collapse" aria-expanded="false">
+                    Release Evidence
+                </a>
+                <div class="collapse" id="release-evidence-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../release-evidence/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../release-artifacts/SECOND_AUDIT_FIX_REPORT_0.7.11/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Second Audit Fix Report
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../release-artifacts/DOCSTRING_AUDIT_0.7.11/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Docstring Audit
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../release-artifacts/COMMAND_REFERENCE_0.7.11/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Command Reference 0.7.11
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../verification/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Verification
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../source-coverage/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Source Coverage
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../changelog/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Changelog
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../about/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            About
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <!-- endblock -->
+    </div>
+</nav>
+        <!-- endblock -->
+
+        <nav class="divider drac-bg-purple-cyan"></nav>
+
+        <div class="content">
+            <!-- block header -->
+                <header>
+    <nav class="navbar navbar-expand-xl drac-bg-purple">
+        <div class="container-fluid">
+            
+            <button class="navbar-toggler w-100 text-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMenu"
+                aria-controls="navbarsMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse flex-column ml-auto" id="navbarsMenu">
+                <ul class="navbar-nav text-md-center">
+
+                    <!-- block preview -->
+                    <li class="nav-item">
+                            
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block search -->
+                    <li class="nav-item"><div role="search" class="search-box">
+	<form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+		<input type="text" name="q" class="drac-input drac-input-search drac-input-white drac-text-white drac-bg-black-secondary"
+		placeholder="Search docs" title="Type search term here" />
+	</form>
+</div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block source -->
+                    <li class="nav-item">
+                        
+                    </li>
+                    <!--  endblock -->
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+</header>
+            <!-- endblock -->
+
+            <!-- block content -->
+                <section class="p-md-5 section-content">
+    <article>
+        <p><h1 id="testsgovernancetest_corepy"><code>tests/governance/test_core.py</code></h1>
+<ul>
+<li>SHA-256: <code>2ebfd3a82a8f7cd6e6cedf5acc24e614c970800b66cc254784f4971a430bfff5</code></li>
+<li>Size: <code>9870</code> bytes</li>
+<li>Test functions: <code>17</code></li>
+</ul>
+<pre><code class="language-python">&quot;&quot;&quot;Verify the current toolkit behavior covered by `tests/governance/test_core.py`.&quot;&quot;&quot;
+from __future__ import annotations
+
+import json
+from pathlib import Path
+
+import pytest
+
+from x86decomp.governance.campaigns import CampaignEngine
+from x86decomp.governance.candidates import CandidateStore
+from x86decomp.contracts import ContractError
+from x86decomp.governance.consensus import ConsensusEngine
+from x86decomp.governance.counterexamples import CounterexampleStore, ddmin_bytes
+from x86decomp.governance.family import BinaryFamilyStore
+from x86decomp.governance.hypotheses import HypothesisLedger
+from x86decomp.governance.knowledge_graph import KnowledgeGraph
+from x86decomp.governance.reviews import ReviewQueue
+from x86decomp.governance.store import GovernanceStore
+
+
+def store(tmp_path: Path) -&gt; GovernanceStore:
+    &quot;&quot;&quot;Execute the store operation for the current toolkit workflow.&quot;&quot;&quot;
+    return GovernanceStore(tmp_path / &quot;project&quot;)
+
+
+def test_store_is_additive_and_audit_chain(tmp_path: Path) -&gt; None:
+    &quot;&quot;&quot;Verify store is additive and audit chain behavior.&quot;&quot;&quot;
+    s = store(tmp_path); s.initialize()
+    with s.connect() as con:
+        con.execute(&quot;CREATE TABLE legacy_data(id INTEGER PRIMARY KEY, value TEXT)&quot;)
+        con.execute(&quot;INSERT INTO legacy_data(value) VALUES('kept')&quot;); con.commit()
+    s.audit(&quot;test&quot;, &quot;event&quot;, &quot;subject&quot;, {&quot;x&quot;: 1})
+    assert s.check()[&quot;passed&quot;]
+    with s.connect() as con:
+        assert con.execute(&quot;SELECT value FROM legacy_data&quot;).fetchone()[0] == &quot;kept&quot;
+    assert s.verify_audit_chain()[&quot;events&quot;] == 1
+
+
+def test_audit_tamper_detected(tmp_path: Path) -&gt; None:
+    &quot;&quot;&quot;Verify audit tamper detected behavior.&quot;&quot;&quot;
+    s=store(tmp_path); s.initialize(); s.audit(&quot;a&quot;,&quot;b&quot;,None,{&quot;c&quot;:1})
+    with s.connect() as con:
+        con.execute(&quot;UPDATE governance_audit_events SET payload_json='{}'&quot;); con.commit()
+    assert not s.verify_audit_chain()[&quot;valid&quot;]
+
+
+def test_hypothesis_gate_and_accept(tmp_path: Path) -&gt; None:
+    &quot;&quot;&quot;Verify hypothesis gate and accept behavior.&quot;&quot;&quot;
+    ledger=HypothesisLedger(store(tmp_path)); h=ledger.create(&quot;parameter is unsigned&quot;,&quot;function&quot;,&quot;f1&quot;,origin=&quot;analyst&quot;)
+    for i,(kind,group) in enumerate([(&quot;static&quot;,&quot;ghidra&quot;),(&quot;dynamic&quot;,&quot;unicorn&quot;),(&quot;compiler&quot;,&quot;msvc&quot;)]):
+        ledger.attach_evidence(h.hypothesis_id,f&quot;ev{i}&quot;,stance=&quot;supports&quot;,weight=.9,evidence_kind=kind,independence_group=group)
+    ledger.transition(h.hypothesis_id,&quot;scheduled&quot;,reason=&quot;ready&quot;)
+    ledger.transition(h.hypothesis_id,&quot;testing&quot;,reason=&quot;running&quot;)
+    ledger.transition(h.hypothesis_id,&quot;supported&quot;,reason=&quot;results agree&quot;)
+    accepted=ledger.transition(h.hypothesis_id,&quot;accepted&quot;,reason=&quot;gate passed&quot;,lock=True)
+    assert accepted.state == &quot;accepted&quot; and accepted.locked
+
+
+def test_hypothesis_contradiction_blocks_acceptance(tmp_path: Path) -&gt; None:
+    &quot;&quot;&quot;Verify hypothesis contradiction blocks acceptance behavior.&quot;&quot;&quot;
+    ledger=HypothesisLedger(store(tmp_path)); h=ledger.create(&quot;x&quot;,&quot;function&quot;,&quot;f&quot;,origin=&quot;test&quot;)
+    for i in range(3): ledger.attach_evidence(h.hypothesis_id,f&quot;s{i}&quot;,stance=&quot;supports&quot;,weight=1,evidence_kind=&quot;static&quot; if i&lt;2 else &quot;dynamic&quot;,independence_group=f&quot;g{i}&quot;)
+    ledger.attach_evidence(h.hypothesis_id,&quot;bad&quot;,stance=&quot;contradicts&quot;,weight=1,evidence_kind=&quot;dynamic&quot;,independence_group=&quot;g4&quot;)
+    assert not ledger.acceptance_gate(h.hypothesis_id)[&quot;passed&quot;]
+
+
+def test_hypothesis_dependency_cycle_rejected(tmp_path: Path) -&gt; None:
+    &quot;&quot;&quot;Verify hypothesis dependency cycle rejected behavior.&quot;&quot;&quot;
+    ledger=HypothesisLedger(store(tmp_path)); a=ledger.create(&quot;a&quot;,&quot;x&quot;,&quot;1&quot;,origin=&quot;t&quot;); b=ledger.create(&quot;b&quot;,&quot;x&quot;,&quot;2&quot;,origin=&quot;t&quot;)
+    ledger.add_dependency(a.hypothesis_id,b.hypothesis_id)
+    with pytest.raises(ContractError): ledger.add_dependency(b.hypothesis_id,a.hypothesis_id)
+
+
+def test_campaign_lifecycle_and_planner(tmp_path: Path) -&gt; None:
+    &quot;&quot;&quot;Verify campaign lifecycle and planner behavior.&quot;&quot;&quot;
+    s=store(tmp_path); api=CampaignEngine(s); c=api.create(&quot;behavioral_equivalence&quot;,budget={&quot;actions&quot;:2}); api.start(c[&quot;campaign_id&quot;])
+    first=api.plan_next(c[&quot;campaign_id&quot;])
+    assert first[&quot;action&quot;] == &quot;inventory_unknowns&quot;
+    assert api.get(c[&quot;campaign_id&quot;])[&quot;used&quot;][&quot;actions&quot;] == 1
+    api.pause(c[&quot;campaign_id&quot;]); assert api.resume(c[&quot;campaign_id&quot;])[&quot;status&quot;] == &quot;running&quot;
+
+
+def test_campaign_budget_blocks(tmp_path: Path) -&gt; None:
+    &quot;&quot;&quot;Verify campaign budget blocks behavior.&quot;&quot;&quot;
+    api=CampaignEngine(store(tmp_path)); c=api.create(&quot;types_and_symbols&quot;,budget={&quot;actions&quot;:0}); api.start(c[&quot;campaign_id&quot;])
+    with pytest.raises(ContractError): api.plan_next(c[&quot;campaign_id&quot;])
+    assert api.get(c[&quot;campaign_id&quot;])[&quot;status&quot;] == &quot;blocked&quot;
+
+
+def test_campaign_branch(tmp_path: Path) -&gt; None:
+    &quot;&quot;&quot;Verify campaign branch behavior.&quot;&quot;&quot;
+    api=CampaignEngine(store(tmp_path)); c=api.create(&quot;byte_identical&quot;)
+    branch=api.branch(c[&quot;campaign_id&quot;],&quot;type-layout-a&quot;)
+    assert branch[&quot;name&quot;] == &quot;type-layout-a&quot;
+
+
+def test_candidate_branch_compare_and_promotion(tmp_path: Path) -&gt; None:
+    &quot;&quot;&quot;Verify candidate branch compare and promotion behavior.&quot;&quot;&quot;
+    api=CandidateStore(store(tmp_path)); source=tmp_path/&quot;a.c&quot;; source.write_text(&quot;int x;\n&quot;)
+    a=api.create(&quot;main&quot;); api.add_file(a,source,&quot;src/a.c&quot;)
+    b=api.create(&quot;variant&quot;,parent_candidate_id=a); source.write_text(&quot;unsigned x;\n&quot;); api.add_file(b,source,&quot;src/a.c&quot;)
+    assert api.compare(a,b)[&quot;changed_files&quot;][0][&quot;change&quot;] == &quot;modified&quot;
+    api.record_evaluation(b,&quot;dynamic&quot;,&quot;pass&quot;,value=1)
+    assert api.transition(b,&quot;promoted&quot;,reason=&quot;validated&quot;)[&quot;state&quot;] == &quot;promoted&quot;
+
+
+def test_candidate_rejects_traversal(tmp_path: Path) -&gt; None:
+    &quot;&quot;&quot;Verify candidate rejects traversal behavior.&quot;&quot;&quot;
+    api=CandidateStore(store(tmp_path)); f=tmp_path/&quot;x&quot;; f.write_text(&quot;x&quot;); c=api.create(&quot;main&quot;)
+    with pytest.raises(ContractError): api.add_file(c,f,&quot;../x&quot;)
+
+
+def test_ddmin_and_counterexample_promotion(tmp_path: Path) -&gt; None:
+    &quot;&quot;&quot;Verify ddmin and counterexample promotion behavior.&quot;&quot;&quot;
+    result, tests=ddmin_bytes(b&quot;AAAAFAILBBBB&quot;,lambda b:b&quot;FAIL&quot; in b)
+    assert result == b&quot;FAIL&quot; and tests &gt; 0
+    api=CounterexampleStore(store(tmp_path)); ident=api.add(&quot;function&quot;,&quot;f&quot;,b&quot;AAAAFAILBBBB&quot;,predicate={&quot;kind&quot;:&quot;contains&quot;,&quot;value&quot;:&quot;FAIL&quot;})
+    minimized=api.minimize(ident,lambda b:b&quot;FAIL&quot; in b)
+    assert minimized[&quot;new_size&quot;] == 4
+    promoted=api.promote_to_regression(ident,tmp_path/&quot;regressions&quot;)
+    assert Path(promoted[&quot;fixture&quot;]).read_bytes() == b&quot;FAIL&quot;
+
+
+def test_consensus_conflict_and_resolution(tmp_path: Path) -&gt; None:
+    &quot;&quot;&quot;Verify consensus conflict and resolution behavior.&quot;&quot;&quot;
+    api=ConsensusEngine(store(tmp_path))
+    api.record(&quot;function&quot;,&quot;f&quot;,&quot;end&quot;,10,adapter_name=&quot;A&quot;,adapter_version=&quot;1&quot;,evidence_id=&quot;e1&quot;,independence_group=&quot;a&quot;)
+    api.record(&quot;function&quot;,&quot;f&quot;,&quot;end&quot;,12,adapter_name=&quot;B&quot;,adapter_version=&quot;1&quot;,evidence_id=&quot;e2&quot;,independence_group=&quot;b&quot;)
+    assert len(api.conflicts()) == 1
+    api.resolve(&quot;function&quot;,&quot;f&quot;,&quot;end&quot;,10,method=&quot;analyst&quot;,rationale=&quot;exception metadata&quot;,lock=True)
+    assert api.explain(&quot;function&quot;,&quot;f&quot;,&quot;end&quot;)[&quot;resolution&quot;][&quot;locked&quot;] is True
+
+
+def test_graph_impact(tmp_path: Path) -&gt; None:
+    &quot;&quot;&quot;Verify graph impact behavior.&quot;&quot;&quot;
+    api=KnowledgeGraph(store(tmp_path)); api.upsert_node(&quot;type:T&quot;,&quot;type&quot;,&quot;T&quot;); api.upsert_node(&quot;func:F&quot;,&quot;function&quot;,&quot;F&quot;); api.add_edge(&quot;type:T&quot;,&quot;func:F&quot;,&quot;affects&quot;)
+    report=api.impact(&quot;type:T&quot;)
+    assert {n[&quot;node&quot;][&quot;node_id&quot;] for n in report[&quot;nodes&quot;]} == {&quot;type:T&quot;,&quot;func:F&quot;}
+
+
+def test_review_lock_resists_automation(tmp_path: Path) -&gt; None:
+    &quot;&quot;&quot;Verify review lock resists automation behavior.&quot;&quot;&quot;
+    api=ReviewQueue(store(tmp_path)); rid=api.create(&quot;conflict&quot;,&quot;f&quot;,&quot;resolve&quot;,priority=90)
+    api.decide(rid,&quot;accept&quot;,&quot;human reviewed&quot;,lock=True)
+    with pytest.raises(ContractError): api.decide(rid,&quot;reject&quot;,&quot;automation changed mind&quot;,actor=&quot;automation&quot;)
+
+
+def test_family_correlation_is_bounded(tmp_path: Path) -&gt; None:
+    &quot;&quot;&quot;Verify family correlation is bounded behavior.&quot;&quot;&quot;
+    api=BinaryFamilyStore(store(tmp_path)); fam=api.create(&quot;game&quot;)
+    a=tmp_path/&quot;a.bin&quot;; b=tmp_path/&quot;b.bin&quot;; a.write_bytes(b&quot;A&quot;*64+b&quot;B&quot;*64); b.write_bytes(b&quot;A&quot;*64+b&quot;C&quot;*64)
+    ma=api.add(fam[&quot;family_id&quot;],&quot;1.0&quot;,a); mb=api.add(fam[&quot;family_id&quot;],&quot;1.1&quot;,b)
+    corr=api.correlate(ma[&quot;member_id&quot;],mb[&quot;member_id&quot;],block_size=64)
+    assert corr[&quot;score&quot;] == pytest.approx(1/3)
+    assert &quot;not function identity&quot; in corr[&quot;details&quot;][&quot;interpretation&quot;]
+
+def test_remaining_public_list_snapshot_and_review_paths(tmp_path: Path) -&gt; None:
+    &quot;&quot;&quot;Verify remaining public list snapshot and review paths behavior.&quot;&quot;&quot;
+    s=store(tmp_path)
+    campaigns=CampaignEngine(s); c=campaigns.create(&quot;recover_function&quot;); campaigns.start(c[&quot;campaign_id&quot;])
+    campaigns.plan_next(c[&quot;campaign_id&quot;]); assert campaigns.snapshot(c[&quot;campaign_id&quot;])[&quot;branches&quot;][0][&quot;name&quot;] == &quot;main&quot;
+    assert campaigns.list()[0][&quot;campaign_id&quot;] == c[&quot;campaign_id&quot;]
+    assert campaigns.stop(c[&quot;campaign_id&quot;])[&quot;status&quot;] == &quot;stopped&quot;
+    candidates=CandidateStore(s); cid=candidates.create(&quot;main&quot;); assert candidates.list()[0][&quot;candidate_id&quot;] == cid
+    counterexamples=CounterexampleStore(s); xid=counterexamples.add(&quot;function&quot;,&quot;f&quot;,b&quot;X&quot;,predicate={&quot;kind&quot;:&quot;always&quot;}); assert counterexamples.list()[0][&quot;counterexample_id&quot;] == xid
+    hypotheses=HypothesisLedger(s); hid=hypotheses.create(&quot;h&quot;,&quot;function&quot;,&quot;f&quot;,origin=&quot;test&quot;); assert hypotheses.list()[0].hypothesis_id == hid.hypothesis_id
+    reviews=ReviewQueue(s); rid=reviews.create(&quot;type&quot;,&quot;T&quot;,&quot;review type&quot;); assert reviews.assign(rid,&quot;alice&quot;)[&quot;assigned_to&quot;] == &quot;alice&quot;; assert reviews.lock(rid)[&quot;locked&quot;]; assert reviews.list()[0][&quot;review_id&quot;] == rid
+
+
+def test_family_report_path(tmp_path: Path) -&gt; None:
+    &quot;&quot;&quot;Verify family report path behavior.&quot;&quot;&quot;
+    api=BinaryFamilyStore(store(tmp_path)); fam=api.create(&quot;related&quot;); f=tmp_path/&quot;x&quot;; f.write_bytes(b&quot;x&quot;); api.add(fam[&quot;family_id&quot;],&quot;one&quot;,f)
+    report=api.report(fam[&quot;family_id&quot;]); assert len(report[&quot;members&quot;]) == 1 and report[&quot;non_claims&quot;]
+</code></pre></p>
+    </article>
+</section>
+            <!-- endblock -->
+
+            <!-- block footer -->
+                <footer>
+    <div class="d-flex flex-sm-row justify-content-between py-2 border-top drac-text-black drac-bg-cyan-green">
+        <a href="https://github.com/dracula/mkdocs" target="_blank" style="padding-left: 1%;"
+            class="footer-text drac-anchor drac-text-black drac-text-purple--hover">
+            Made with Dracula Theme for MkDocs
+        </a>
+    </div>
+</footer>
+            <!-- endblock -->
+        </div>
+
+    </main>
+
+        <script>var base_url = '../..';</script>
+        <script src="../../assets/js/jquery-3.3.1.slim.min.js"></script>
+        <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+        <script src="../../assets/js/mkdocs.js"></script>
+			<script src="../../search/main.js" defer></script>
+
+</body>
+
+</html>
