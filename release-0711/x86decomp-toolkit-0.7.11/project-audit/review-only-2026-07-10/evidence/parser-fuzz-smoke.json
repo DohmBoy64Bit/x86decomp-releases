@@ -1,0 +1,22 @@
+{
+  "coff": {
+    "accepted": 0,
+    "expected_rejections": 2000,
+    "unexpected": []
+  },
+  "archive": {
+    "accepted": 0,
+    "expected_rejections": 2000,
+    "unexpected": []
+  },
+  "pdb": {
+    "accepted": 0,
+    "expected_rejections": 2000,
+    "unexpected": []
+  },
+  "pe": {
+    "accepted": 0,
+    "expected_rejections": 1000,
+    "unexpected": []
+  }
+}

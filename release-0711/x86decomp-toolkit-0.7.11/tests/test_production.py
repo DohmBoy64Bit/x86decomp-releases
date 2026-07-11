@@ -51,7 +51,7 @@ def test_content_store_roundtrip_and_gc(tmp_path: Path) -> None:
 
 
 def project_gc_like(store: ContentStore, *, dry_run: bool) -> dict:
-    """Execute the project gc like operation for the current toolkit workflow."""
+    """Run project garbage collection while preserving the test helper call contract."""
     return store.garbage_collect(dry_run=dry_run)
 
 
@@ -458,7 +458,7 @@ def test_active_pipeline_cancellation_is_observed(tmp_path: Path) -> None:
     result: dict[str, object] = {}
 
     def run_pipeline() -> None:
-        """Run pipeline for the current toolkit workflow."""
+        """Run pipeline."""
         with Orchestrator(project) as orchestrator:
             result.update(orchestrator.run(manifest))
 

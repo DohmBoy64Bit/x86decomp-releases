@@ -9,7 +9,7 @@ from x86decomp.ghidra import build_export_command
 
 
 class GhidraCommandTests(unittest.TestCase):
-    """Coordinate ghidra command tests behavior for the current toolkit workflow."""
+    """Group regression tests covering GhidraCommand behavior."""
     def test_build_export_command_is_argument_array(self) -> None:
         """Verify build export command is argument array behavior."""
         with tempfile.TemporaryDirectory() as temp:

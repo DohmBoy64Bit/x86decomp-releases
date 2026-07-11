@@ -39,14 +39,28 @@ class BinaryReader:
         """Read an unsigned little-endian 64-bit integer."""
         return int(self.unpack("<Q", offset, context)[0])
 
-    def c_string(self, offset: int, context: str, max_length: int = 4096) -> str:
-        """Read a bounded NUL-terminated UTF-8 string."""
-        self.require(offset, 1, context)
-        end_limit = min(len(self.data), offset + max_length)
+    def c_string_with_end(
+        self,
+        offset: int,
+        context: str,
+        *,
+        limit: int | None = None,
+        max_length: int = 4096,
+    ) -> tuple[str, int]:
+        """Read a bounded NUL-terminated UTF-8 string and return its next offset."""
+        upper = len(self.data) if limit is None else limit
+        if upper < 0 or upper > len(self.data) or offset < 0 or offset >= upper:
+            raise FormatError(f"{context} starts outside file bounds")
+        end_limit = min(upper, offset + max_length)
         end = self.data.find(b"\x00", offset, end_limit)
         if end < 0:
             raise FormatError(f"unterminated string while reading {context}")
-        return self.data[offset:end].decode("utf-8", errors="replace")
+        return self.data[offset:end].decode("utf-8", errors="replace"), end + 1
+
+    def c_string(self, offset: int, context: str, max_length: int = 4096) -> str:
+        """Read a bounded NUL-terminated UTF-8 string."""
+        value, _ = self.c_string_with_end(offset, context, max_length=max_length)
+        return value
 
     def optional_u16(self, base: int, relative: int, available: int, context: str) -> int | None:
         """Read a relative 16-bit field when it is present in a bounded record."""

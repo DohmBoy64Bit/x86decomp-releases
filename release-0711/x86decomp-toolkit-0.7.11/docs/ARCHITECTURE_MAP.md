@@ -1,6 +1,6 @@
 # Toolkit architecture map — 0.7.11
 
-Plain-text companion: `docs/ARCHITECTURE_MAP_ASCII.txt`  
+Plain-text companion: `docs/ARCHITECTURE_MAP_ASCII.txt`
 Verification companion: `test-suite/docs/ARCHITECTURE_MAP.md` and `test-suite/docs/ARCHITECTURE_MAP_ASCII.txt`
 
 ```mermaid

@@ -1,35 +1,78 @@
 {
-  "new_or_changed": [
-    "Fixed all nine second-audit findings",
-    "Added shared bounded PE/COFF BinaryReader",
-    "Added pyflakes release gate",
-    "Added command-level regressions",
-    "Clarified plan-only command contracts"
+  "audit_findings": {
+    "closed": 24,
+    "coverage_percent": 100.0,
+    "total": 24
+  },
+  "coverage": {
+    "branch_percent": 43.93118827652118,
+    "combined_percent": 63.27669393748689,
+    "covered_branches": 2758,
+    "covered_lines": 12324,
+    "line_percent": 70.19422452583015,
+    "note": "Measured coverage: line/statement coverage is covered_lines / num_statements; combined_percent is coverage.py's line-plus-branch aggregate. The 100% figure applies only to audit-finding closure.",
+    "num_branches": 6278,
+    "num_statements": 17557,
+    "scope": "src/x86decomp and test-suite/src/x86decomp_testkit under the complete 258-test monolithic run"
+  },
+  "docstrings": {
+    "classes_total": 160,
+    "classes_with_docstrings": 160,
+    "files": 212,
+    "functions_total": 1474,
+    "functions_with_docstrings": 1474,
+    "missing": 0,
+    "modules_total": 212,
+    "modules_with_docstrings": 212,
+    "passed": true,
+    "repeated_leading_verb_occurrences": 0,
+    "repeated_leading_verb_symbols": [],
+    "template_phrase_occurrences": 0,
+    "template_phrase_symbols": []
+  },
+  "gates": {
+    "candidate_clean_install_and_pip_check": "PASS",
+    "candidate_test_suite_build": "PASS",
+    "candidate_toolkit_build": "PASS",
+    "compileall": "PASS",
+    "corpus_sync": "PASS",
+    "mkdocs_strict": "PASS",
+    "package_source_comparison": "PASS (141 wheel + 141 sdist files)",
+    "pyflakes": "PASS",
+    "source_manifests": "generated and verified after report generation",
+    "validate_contracts": "PASS"
+  },
+  "notes": [
+    "Code coverage is reported exactly and is not 100%.",
+    "Final source manifests and external package hashes are verified after all in-tree reports are written."
   ],
-  "not_claimed": [
-    "single monolithic pytest tests completion",
-    "live external local-model runtime availability or model quality"
-  ],
+  "pytest": {
+    "collected": 258,
+    "exact_partition_report": "FINAL_TEST_PARTITION_REPORT_0.7.11.json",
+    "exact_partition_report_sha256": "3af53a95e608a01b2856d14261992fb26bcc51e0ae084fec59f7805fada8239b",
+    "final_exact_partition_replay": "258/258 passed; 0 failures; 0 errors; 0 skipped; 86/86 JUnit partitions reconciled",
+    "final_exact_partition_report": "FINAL_TEST_PARTITION_REPORT_0.7.11.json",
+    "final_exact_partition_report_sha256": "3af53a95e608a01b2856d14261992fb26bcc51e0ae084fec59f7805fada8239b",
+    "final_group_report": "FINAL_TEST_GROUP_REPORT_0.7.11.json",
+    "final_group_report_sha256": "7b95d2afca5c49bf7fadd2195eb4f76826869330ed26907f213d71b398a5d33c",
+    "final_post_packaging_replay": "258/258 passed; 0 failures; 0 errors; 0 skipped across 6 reconciled groups",
+    "isolated_errors": 0,
+    "isolated_failed": 0,
+    "isolated_partitions": 86,
+    "isolated_passed": 258,
+    "isolated_skipped": 0,
+    "monolithic_failed": 0,
+    "monolithic_passed": 258,
+    "monolithic_seconds": 69.55,
+    "monolithic_skipped": 0
+  },
   "release": "0.7.11",
-  "schema_version": 1,
-  "summary": "Second-audit fix release for the current unified toolkit surface.",
+  "status": "PASS",
   "surface": {
     "adapters": 37,
     "canonical_groups": 59,
     "canonical_routes": 239,
     "root_commands": 166,
     "schemas": 97
-  },
-  "verification": {
-    "build": "wheels and sdists built",
-    "clean_install": "PASS",
-    "compileall": "PASS",
-    "final_extracted_zip_compileall_pyflakes_validate_contracts": "PASS",
-    "final_extracted_zip_source_manifest_verify": "PASS: root 449/449, test-suite 63/63",
-    "pip_check": "PASS",
-    "pyflakes": "PASS",
-    "segmented_pytest": "PASS for recorded file-level runs",
-    "source_manifests": "PASS: root 449/449, test-suite 63/63",
-    "validate_contracts": "PASS"
   }
 }

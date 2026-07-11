@@ -36,7 +36,7 @@ from x86decomp.reconstruction.acceleration import (
 
 
 def _minimal_pe(path: Path, text: bytes) -> None:
-    """Support minimal pe processing for internal toolkit callers."""
+    """Write a minimal PE fixture containing the supplied text-section bytes."""
     data = bytearray(0x400 + len(text))
     data[:2] = b"MZ"
     struct.pack_into("<I", data, 0x3C, 0x80)

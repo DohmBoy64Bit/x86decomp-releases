@@ -1,4 +1,6 @@
-"""Provide the current runtime implementation for the `x86decomp.__main__` module."""
+"""Module entry point for ``python -m x86decomp``."""
 from .cli import main
 
-raise SystemExit(main())
+
+if __name__ == "__main__":
+    raise SystemExit(main())

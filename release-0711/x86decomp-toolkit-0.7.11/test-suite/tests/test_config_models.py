@@ -13,7 +13,7 @@ from x86decomp_testkit.models import ProbeResult, RunSummary, Status, TestResult
 
 def test_config_roundtrip_and_relative_resolution(tmp_path: Path) -> None:
     """Verify config roundtrip and relative resolution.
-    
+
     Parameters and return values follow the signature and runtime validation in the body.
     """
     path = tmp_path / "config.json"
@@ -43,12 +43,12 @@ def test_config_roundtrip_and_relative_resolution(tmp_path: Path) -> None:
 
 def test_status_counts_and_strict_exit_code(tmp_path: Path) -> None:
     """Verify status counts and strict exit code.
-    
+
     Parameters and return values follow the signature and runtime validation in the body.
     """
     def result(status: Status) -> HarnessResult:
         """Implement result.
-        
+
         Parameters and return values follow the signature and runtime validation in the body.
         """
         return HarnessResult("id", "suite", status, "a", "b", 0, "summary")

@@ -34,7 +34,7 @@ def test_proof_bundle_rejects_outside_artifact(tmp_path: Path) -> None:
 
 
 def _plugin(tmp_path: Path) -> tuple[Path,Path]:
-    """Support plugin processing for internal toolkit callers."""
+    """Return the plugin derived from `tmp_path`."""
     executable=tmp_path/"plugin.py"
     executable.write_text("#!/usr/bin/env python3\nimport json,sys\nr=json.load(sys.stdin)\nprint(json.dumps({'api_version':'1','result':{'capability':r['capability'],'ok':True}}))\n")
     executable.chmod(0o755)

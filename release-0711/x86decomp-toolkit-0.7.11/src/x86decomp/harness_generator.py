@@ -15,7 +15,7 @@ from .util import load_json, utc_now, write_json
 
 
 def _deterministic_word(index: int, bits: int) -> int:
-    """Support deterministic word processing for internal toolkit callers."""
+    """Generate a reproducible fixed-width integer for a corpus case index."""
     mask = (1 << bits) - 1
     return (0x13579BDF2468ACE0 + index * 0x102030405060708) & mask
 
@@ -29,7 +29,7 @@ def generate_execution_harness(
     max_instructions: int = 100000,
     timeout_ms: int = 1000,
 ) -> dict[str, Any]:
-    """Generate execution harness for the current toolkit workflow."""
+    """Generate execution harness."""
     if max_instructions <= 0 or timeout_ms <= 0:
         raise ContractError("harness bounds must be positive")
     architecture = abi_contract.architecture
@@ -147,7 +147,7 @@ def generate_execution_harness_from_files(
     max_instructions: int = 100000,
     timeout_ms: int = 1000,
 ) -> dict[str, Any]:
-    """Generate execution harness from files for the current toolkit workflow."""
+    """Generate execution harness from files."""
     pointers: list[dict[str, Any]] | None = None
     if pointer_parameters_path is not None:
         raw = load_json(pointer_parameters_path)

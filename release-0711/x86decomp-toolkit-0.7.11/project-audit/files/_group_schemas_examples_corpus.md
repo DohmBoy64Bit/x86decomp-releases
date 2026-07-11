@@ -8,7 +8,7 @@
 ## examples/ (26 files) — Audited — complete
 - JSON examples (abi/benchmarks/compiler-profiles/contracts/integration/local-llm/release/relink/symbolic/test-bundle) all validated by validate-contracts (R-018 PASS) against their schemas — the CR-0710-006 fix added module docstrings to the 3 integration .py.
 - Python fixtures (integration/candidate.py, candidate_mismatch.py, target.py): tiny, docstring'd stdin/stdout echo fixtures for integration scenarios; benign. (Their cpython-310 pyc are pre-existing, mtime Jul 6.)
-- validators/*.bin + *.json: small binary fixtures + harness configs for symbolic/dynamic validation. Binary — inventoried with hash, not line-audited (fixture data). Belong in repo (test inputs). 
+- validators/*.bin + *.json: small binary fixtures + harness configs for symbolic/dynamic validation. Binary — inventoried with hash, not line-audited (fixture data). Belong in repo (test inputs).
 - sample_source/add.c: trivial sample. No findings.
 
 ## corpus/ (root 24) + src/x86decomp/corpus/ (24, package-data) — Audited — complete

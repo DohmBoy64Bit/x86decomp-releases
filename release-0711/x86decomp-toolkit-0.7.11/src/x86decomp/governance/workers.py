@@ -1,4 +1,4 @@
-"""Provide the current runtime implementation for the `x86decomp.governance.workers` module."""
+"""Coordinate bounded governance worker execution."""
 from __future__ import annotations
 
 import json
@@ -11,14 +11,14 @@ WORKER_STATES = {"active", "draining", "offline", "unhealthy"}
 
 
 class WorkerRegistry:
-    """Coordinate worker registry behavior for the current toolkit workflow."""
+    """Manage worker registry state and operations."""
     def __init__(self, store: GovernanceStore):
-        """Initialize the instance with validated constructor state."""
+        """Initialize WorkerRegistry with `store`."""
         self.store = store
         self.store.initialize()
 
     def register(self, name: str, capabilities: dict[str, Any], *, endpoint: str | None = None, environment_sha256: str | None = None, actor: str = "analyst") -> dict[str, Any]:
-        """Execute the register operation for the current toolkit workflow."""
+        """Register worker registry."""
         if environment_sha256 is not None and len(environment_sha256) != 64:
             raise ContractError("environment_sha256 must be a 64-character digest")
         if not isinstance(capabilities, dict) or not capabilities:
@@ -33,7 +33,7 @@ class WorkerRegistry:
         return self.get(worker_id)
 
     def get(self, worker_id: str) -> dict[str, Any]:
-        """Execute the get operation for the current toolkit workflow."""
+        """Return data from worker registry."""
         with self.store.connect() as connection:
             row = connection.execute("SELECT * FROM governance_worker_profiles WHERE worker_id=?", (worker_id,)).fetchone()
         if not row:
@@ -43,7 +43,7 @@ class WorkerRegistry:
         return result
 
     def list(self, *, status: str | None = None) -> list[dict[str, Any]]:
-        """Execute the list operation for the current toolkit workflow."""
+        """List records in worker registry."""
         if status and status not in WORKER_STATES:
             raise ContractError(f"invalid worker status: {status}")
         where, args = (" WHERE status=?", [status]) if status else ("", [])
@@ -52,7 +52,7 @@ class WorkerRegistry:
         return [self.get(item) for item in ids]
 
     def select(self, required: dict[str, Any]) -> dict[str, Any]:
-        """Select select for the current toolkit workflow."""
+        """Select an item from worker registry."""
         candidates = []
         for worker in self.list(status="active"):
             capabilities = worker["capabilities"]
@@ -63,7 +63,7 @@ class WorkerRegistry:
         return sorted(candidates, key=lambda item: item["name"])[0]
 
     def set_status(self, worker_id: str, status: str, *, actor: str = "analyst") -> dict[str, Any]:
-        """Execute the set status operation for the current toolkit workflow."""
+        """Set status for WorkerRegistry."""
         if status not in WORKER_STATES:
             raise ContractError(f"invalid worker status: {status}")
         current = self.get(worker_id)
@@ -73,7 +73,7 @@ class WorkerRegistry:
         return self.get(worker_id)
 
     def doctor(self, worker_id: str) -> dict[str, Any]:
-        """Execute the doctor operation for the current toolkit workflow."""
+        """Diagnose WorkerRegistry for WorkerRegistry."""
         worker = self.get(worker_id)
         failures = []
         if worker["endpoint"] and not (worker["endpoint"].startswith("https://") or worker["endpoint"].startswith("unix://")):

@@ -1,4 +1,4 @@
-"""Provide the current runtime implementation for the `x86decomp.governance.family` module."""
+"""Correlate related candidates into governance families."""
 from __future__ import annotations
 
 import json
@@ -13,13 +13,13 @@ class BinaryFamilyStore:
     """Static, content-addressed related-binary correlation."""
 
     def __init__(self, store: GovernanceStore):
-        """Initialize the instance with validated constructor state."""
+        """Initialize BinaryFamilyStore with `store`."""
         self.store = store
         self.store.initialize()
         self.root = self.store.project_root / "artifacts" / "governance" / "families"
 
     def create(self, name: str, *, actor: str = "analyst") -> dict[str, Any]:
-        """Create create for the current toolkit workflow."""
+        """Create a record in binary family store."""
         if not name.strip():
             raise ContractError("family name must not be empty")
         family_id = random_id("fam")
@@ -29,7 +29,7 @@ class BinaryFamilyStore:
         return self.get(family_id)
 
     def add(self, family_id: str, label: str, path: str | Path, *, metadata: dict[str, Any] | None = None, actor: str = "analyst") -> dict[str, Any]:
-        """Execute the add operation for the current toolkit workflow."""
+        """Add a record to binary family store."""
         source = Path(path).resolve()
         if not source.is_file() or source.is_symlink():
             raise ContractError("family member must be a regular non-symlink file")
@@ -52,13 +52,13 @@ class BinaryFamilyStore:
 
     @staticmethod
     def _block_fingerprints(data: bytes, block_size: int) -> set[bytes]:
-        """Support block fingerprints processing for internal toolkit callers."""
+        """Return the block fingerprints derived from `data`, `block_size` for BinaryFamilyStore."""
         if block_size <= 0:
             raise ContractError("block_size must be positive")
         return {data[i:i + block_size] for i in range(0, len(data), block_size) if data[i:i + block_size]}
 
     def correlate(self, left_member_id: str, right_member_id: str, *, block_size: int = 64, actor: str = "system") -> dict[str, Any]:
-        """Execute the correlate operation for the current toolkit workflow."""
+        """Correlate BinaryFamilyStore for BinaryFamilyStore from `left_member_id`, `right_member_id`, `block_size`, and additional options."""
         left, right = self.member(left_member_id), self.member(right_member_id)
         if left["family_id"] != right["family_id"]:
             raise ContractError("family members must belong to the same family")
@@ -81,7 +81,7 @@ class BinaryFamilyStore:
         return self.correlation(actual)
 
     def get(self, family_id: str) -> dict[str, Any]:
-        """Execute the get operation for the current toolkit workflow."""
+        """Return data from binary family store."""
         with self.store.connect() as connection:
             row = connection.execute("SELECT * FROM governance_binary_families WHERE family_id=?", (family_id,)).fetchone()
         if not row:
@@ -89,7 +89,7 @@ class BinaryFamilyStore:
         return dict(row)
 
     def member(self, member_id: str) -> dict[str, Any]:
-        """Execute the member operation for the current toolkit workflow."""
+        """Return the member derived from `member_id` for BinaryFamilyStore."""
         with self.store.connect() as connection:
             row = connection.execute("SELECT * FROM governance_family_members WHERE member_id=?", (member_id,)).fetchone()
         if not row:
@@ -99,7 +99,7 @@ class BinaryFamilyStore:
         return result
 
     def correlation(self, correlation_id: str) -> dict[str, Any]:
-        """Execute the correlation operation for the current toolkit workflow."""
+        """Return the correlation derived from `correlation_id` for BinaryFamilyStore."""
         with self.store.connect() as connection:
             row = connection.execute("SELECT * FROM governance_family_correlations WHERE correlation_id=?", (correlation_id,)).fetchone()
         if not row:
@@ -109,7 +109,7 @@ class BinaryFamilyStore:
         return result
 
     def report(self, family_id: str) -> dict[str, Any]:
-        """Execute the report operation for the current toolkit workflow."""
+        """Build BinaryFamilyStore for BinaryFamilyStore from `family_id`."""
         family = self.get(family_id)
         with self.store.connect() as connection:
             family["members"] = [self.member(r[0]) for r in connection.execute("SELECT member_id FROM governance_family_members WHERE family_id=? ORDER BY label", (family_id,)).fetchall()]

@@ -22,7 +22,7 @@ _ALLOWED_TOKENS = {"{artifact}", "{workdir}"}
 
 
 def _require_string_list(value: Any, name: str, *, nonempty: bool = False) -> list[str]:
-    """Support require string list processing for internal toolkit callers."""
+    """Validate that a manifest field is a list containing only strings."""
     if not isinstance(value, list) or not all(isinstance(item, str) for item in value):
         raise ContractError(f"{name} must be an array of strings")
     if nonempty and not value:
@@ -31,7 +31,7 @@ def _require_string_list(value: Any, name: str, *, nonempty: bool = False) -> li
 
 
 def _resolve_existing(base: Path, value: Any, name: str) -> Path:
-    """Support resolve existing processing for internal toolkit callers."""
+    """Resolve existing."""
     if not isinstance(value, str) or not value:
         raise ContractError(f"{name} must be a non-empty string")
     path = (base / value).resolve()
@@ -41,7 +41,7 @@ def _resolve_existing(base: Path, value: Any, name: str) -> Path:
 
 
 def _parse_stdin(base: Path, value: Any) -> bytes:
-    """Support parse stdin processing for internal toolkit callers."""
+    """Parse stdin."""
     if value is None:
         return b""
     if not isinstance(value, dict):
@@ -64,7 +64,7 @@ def _parse_stdin(base: Path, value: Any) -> bytes:
 
 
 def _copy_fixtures(base: Path, workdir: Path, fixtures: Any) -> list[dict[str, Any]]:
-    """Support copy fixtures processing for internal toolkit callers."""
+    """Copy fixtures."""
     if fixtures is None:
         return []
     if not isinstance(fixtures, list):
@@ -96,7 +96,7 @@ def _copy_fixtures(base: Path, workdir: Path, fixtures: Any) -> list[dict[str, A
 
 
 def _substitute_command(command: list[str], *, artifact: Path, workdir: Path) -> list[str]:
-    """Support substitute command processing for internal toolkit callers."""
+    """Substitute declared integration placeholders into a command argument vector."""
     result: list[str] = []
     for argument in command:
         unknown = [
@@ -111,7 +111,7 @@ def _substitute_command(command: list[str], *, artifact: Path, workdir: Path) ->
 
 
 def _bounded_output(data: bytes, limit: int) -> dict[str, Any]:
-    """Support bounded output processing for internal toolkit callers."""
+    """Decode subprocess output and truncate it to the configured report limit."""
     shown = data[:limit]
     return {
         "sha256": sha256_bytes(data),
@@ -134,7 +134,7 @@ def _run_side(
     fixtures: Any,
     output_limit: int,
 ) -> tuple[dict[str, Any], Path]:
-    """Support run side processing for internal toolkit callers."""
+    """Run side."""
     if not isinstance(spec, dict):
         raise ContractError(f"scenario {scenario_id} {side_name} must be an object")
     artifact = _resolve_existing(base, spec.get("artifact"), f"scenario {scenario_id} {side_name}.artifact")
@@ -202,7 +202,7 @@ def _run_side(
 
 
 def _observe_file(workdir: Path, item: Any, *, side: str, index: int, output_limit: int) -> dict[str, Any]:
-    """Support observe file processing for internal toolkit callers."""
+    """Record a file observation with existence, size, and digest metadata."""
     if not isinstance(item, dict):
         raise ContractError(f"observations.files[{index}] must be an object")
     relative = item.get("path")
@@ -257,7 +257,7 @@ def _observe_file(workdir: Path, item: Any, *, side: str, index: int, output_lim
 
 
 def _compare_stream(name: str, mode: Any, target: bytes, candidate: bytes) -> dict[str, Any] | None:
-    """Support compare stream processing for internal toolkit callers."""
+    """Compare stream."""
     if mode in (None, "ignore"):
         return None
     if mode not in ("exact", "sha256"):

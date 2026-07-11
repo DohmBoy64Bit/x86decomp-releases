@@ -8,7 +8,7 @@ from x86decomp.mcp import GhidraMCPGateway, StdioMCPClient
 
 
 def _server(path: Path) -> None:
-    """Support server processing for internal toolkit callers."""
+    """Write the deterministic MCP server script used by client tests."""
     path.write_text(
         """import json, sys
 for line in sys.stdin:

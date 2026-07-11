@@ -65,7 +65,7 @@ def test_annotation_is_idempotent_and_keeps_bytes(tmp_path: Path) -> None:
 
 
 def _materialize(tmp_path: Path, code: bytes, *, architecture: str, symbols: dict[str, object]):
-    """Support materialize processing for internal toolkit callers."""
+    """Materialize the requested operation."""
     return materialize_function(
         code,
         symbol="sub_00001000",
@@ -166,7 +166,7 @@ def test_unknown_target_uses_byte_fallback_without_false_claim(tmp_path: Path) -
 
 
 def test_verify_existing_source_reports_exact_and_mismatch(tmp_path: Path) -> None:
-    """Verify verify existing source reports exact and mismatch behavior."""
+    """Verify exact and mismatched existing-source reports."""
     code = bytes.fromhex("e8fb0f0000c3")
     source = tmp_path / "source.S"
     source.write_text(

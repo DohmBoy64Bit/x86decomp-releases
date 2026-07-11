@@ -1,4 +1,4 @@
-"""Provide the installed test-suite implementation for the `x86decomp_testkit.logging_utils` module."""
+"""Provide logging utils support for the standalone verification harness."""
 from __future__ import annotations
 
 import json
@@ -15,7 +15,7 @@ from .timeutil import utc_now
 class JsonlEventLogger:
     """Append structured events as JSON Lines to a file, one JSON object per line."""
     def __init__(self, path: Path):
-        """Initialize the instance with validated constructor state."""
+        """Initialize JsonlEventLogger with `path`."""
         self.path = path
         self.path.parent.mkdir(parents=True, exist_ok=True)
 

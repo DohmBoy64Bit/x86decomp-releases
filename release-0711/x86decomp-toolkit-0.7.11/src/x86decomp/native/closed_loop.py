@@ -1,4 +1,4 @@
-"""Provide the current runtime implementation for the `x86decomp.native.closed_loop` module."""
+"""Run closed-loop native reconstruction and verification."""
 from __future__ import annotations
 
 import subprocess
@@ -12,13 +12,13 @@ from .store import NativeStore
 
 
 class ClosedLoop:
-    """Coordinate closed loop behavior for the current toolkit workflow."""
+    """Run and inspect iterative native reconstruction attempts and their validation evidence."""
     def __init__(self, store:NativeStore):
-        """Initialize the instance with validated constructor state."""
+        """Initialize ClosedLoop with `store`."""
         self.store=store; store.initialize()
 
     def run(self, function_id:str, source_path:Path, compile_command:list[str], candidate_path:Path, original_path:Path, rva:int, slot_size:int, *, symbol:str|None=None, policy:str='trailing-padding', execute:bool=False, timeout_seconds:int=120, actor:str='analyst')->dict[str,Any]:
-        """Run run for the current toolkit workflow."""
+        """Run the closed loop workflow."""
         source_path=source_path.resolve(); candidate_path=candidate_path.resolve(); original_path=original_path.resolve()
         if not source_path.is_file(): raise ContractError(f'source does not exist: {source_path}')
         if not execute: raise ContractError('closed-loop compilation requires explicit execute=True consent')
@@ -39,12 +39,12 @@ class ClosedLoop:
         return result
 
     def show(self,loop_id:str)->dict[str,Any]:
-        """Execute the show operation for the current toolkit workflow."""
+        """Show closed loop."""
         with self.store.connect() as c:
             row=c.execute('SELECT * FROM native_loop_runs WHERE loop_id=?',(loop_id,)).fetchone()
             if row is None: raise KeyError(loop_id)
             return self.store.decode(row,'compile_command_json','result_json')
 
     def list(self)->list[dict[str,Any]]:
-        """Execute the list operation for the current toolkit workflow."""
+        """List records in closed loop."""
         with self.store.connect() as c: return [self.store.decode(row,'compile_command_json','result_json') for row in c.execute('SELECT * FROM native_loop_runs ORDER BY created_at')]

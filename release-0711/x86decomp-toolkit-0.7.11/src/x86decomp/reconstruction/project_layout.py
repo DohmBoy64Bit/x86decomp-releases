@@ -1,4 +1,4 @@
-"""Provide the current runtime implementation for the `x86decomp.reconstruction.project_layout` module."""
+"""Model reconstructed project boundaries and source layout."""
 from __future__ import annotations
 
 import json
@@ -9,13 +9,13 @@ from x86decomp.contracts import ContractError, canonical_json, ensure_relative_p
 from .store import ReconstructionStore
 
 class ProjectLayout:
-    """Coordinate project layout behavior for the current toolkit workflow."""
+    """Model reconstructed modules, translation units, members, and boundary evidence."""
     def __init__(self, store: ReconstructionStore):
-        """Initialize the instance with validated constructor state."""
+        """Initialize ProjectLayout with `store`."""
         self.store=store; store.initialize()
 
     def create_module(self, name: str, *, kind: str='static-library', source_path: str|None=None, confidence: float=1.0, evidence: list[dict[str,Any]]|None=None, actor: str='analyst') -> dict[str,Any]:
-        """Create module for the current toolkit workflow."""
+        """Create module."""
         if kind not in {'executable','static-library','shared-library','resource','support'}: raise ContractError('invalid module kind')
         if not 0 <= confidence <= 1: raise ContractError('confidence must be between 0 and 1')
         if source_path is not None: source_path=ensure_relative_path(source_path).as_posix()
@@ -26,7 +26,7 @@ class ProjectLayout:
         return self.show_module(module_id)
 
     def add_member(self, module_id: str, member_kind: str, member_id: str, *, ordinal: int=0, evidence: list[dict[str,Any]]|None=None, actor: str='analyst') -> dict[str,Any]:
-        """Execute the add member operation for the current toolkit workflow."""
+        """Add member."""
         if member_kind not in {'function','global','resource','object','translation-unit','library'}: raise ContractError('invalid member kind')
         with self.store.transaction() as c:
             if not c.execute('SELECT 1 FROM reconstruction_modules WHERE module_id=?',(module_id,)).fetchone(): raise KeyError(module_id)
@@ -36,7 +36,7 @@ class ProjectLayout:
         return self.show_module(module_id)
 
     def create_translation_unit(self, source_path: str, *, module_id: str|None=None, language: str='cpp', confidence: float=1.0, evidence: list[dict[str,Any]]|None=None, actor: str='analyst') -> dict[str,Any]:
-        """Create translation unit for the current toolkit workflow."""
+        """Create translation unit."""
         source_path=ensure_relative_path(source_path).as_posix()
         if language not in {'c','cpp','asm','resource'}: raise ContractError('invalid translation-unit language')
         if not 0 <= confidence <= 1: raise ContractError('confidence must be between 0 and 1')
@@ -49,7 +49,7 @@ class ProjectLayout:
         return self.show_translation_unit(unit_id)
 
     def add_translation_unit_member(self, unit_id: str, member_kind: str, member_id: str, *, linkage: str='external', ordinal: int=0, actor: str='analyst') -> dict[str,Any]:
-        """Execute the add translation unit member operation for the current toolkit workflow."""
+        """Add translation unit member."""
         if linkage not in {'external','internal','weak','comdat'}: raise ContractError('invalid linkage')
         with self.store.transaction() as c:
             if not c.execute('SELECT 1 FROM reconstruction_translation_units WHERE unit_id=?',(unit_id,)).fetchone(): raise KeyError(unit_id)
@@ -78,7 +78,7 @@ class ProjectLayout:
         return {'modules':created,'input_count':len(inventory),'unknown_group_present':'unknown' in groups}
 
     def show_module(self,module_id:str)->dict[str,Any]:
-        """Execute the show module operation for the current toolkit workflow."""
+        """Show module."""
         with self.store.connect() as c:
             row=c.execute('SELECT * FROM reconstruction_modules WHERE module_id=?',(module_id,)).fetchone()
             if not row: raise KeyError(module_id)
@@ -87,7 +87,7 @@ class ProjectLayout:
         return result
 
     def show_translation_unit(self,unit_id:str)->dict[str,Any]:
-        """Execute the show translation unit operation for the current toolkit workflow."""
+        """Show translation unit."""
         with self.store.connect() as c:
             row=c.execute('SELECT * FROM reconstruction_translation_units WHERE unit_id=?',(unit_id,)).fetchone()
             if not row: raise KeyError(unit_id)
@@ -96,17 +96,17 @@ class ProjectLayout:
         return result
 
     def list_modules(self)->list[dict[str,Any]]:
-        """Execute the list modules operation for the current toolkit workflow."""
+        """List modules."""
         with self.store.connect() as c: ids=[r[0] for r in c.execute('SELECT module_id FROM reconstruction_modules ORDER BY name')]
         return [self.show_module(x) for x in ids]
 
     def explain_boundaries(self,module_id:str)->dict[str,Any]:
-        """Execute the explain boundaries operation for the current toolkit workflow."""
+        """Explain persisted module boundaries and the evidence supporting each assignment."""
         module=self.show_module(module_id)
         return {'module_id':module_id,'name':module['name'],'confidence':module['confidence'],'status':module['status'],'evidence':module['evidence'],'members':[{'kind':m['member_kind'],'id':m['member_id'],'ordinal':m['ordinal'],'evidence':m['evidence']} for m in module['members']], 'claim':'inferred module boundary; not original-source attribution'}
 
     def export(self,path:str|Path)->dict[str,Any]:
-        """Execute the export operation for the current toolkit workflow."""
+        """Export project layout."""
         out=Path(path); out.parent.mkdir(parents=True,exist_ok=True)
         payload={'schema':'x86decomp.project-layout.v1','modules':self.list_modules()}
         out.write_text(json.dumps(payload,indent=2,sort_keys=True)+'\n',encoding='utf-8')

@@ -40,12 +40,12 @@ class SupportingArtifact:
 
 
 def _toml_string(value: str) -> str:
-    """Support toml string processing for internal toolkit callers."""
+    """Escape a string for deterministic TOML output."""
     return json.dumps(value, ensure_ascii=False)
 
 
 def _write_target_toml(path: Path, pack: dict[str, Any]) -> None:
-    """Support write target toml processing for internal toolkit callers."""
+    """Write target toml."""
     lines = [
         f"schema_version = {pack['schema_version']}",
         f"target_id = {_toml_string(pack['target_id'])}",
@@ -88,7 +88,7 @@ def _write_target_toml(path: Path, pack: dict[str, Any]) -> None:
 
 
 def _safe_artifact(path: Path) -> Path:
-    """Support safe artifact processing for internal toolkit callers."""
+    """Resolve an artifact path and require it to remain inside the project."""
     resolved = path.resolve()
     if not resolved.is_file() or resolved.is_symlink():
         raise ContractError(f"target-pack artifact must be a regular file: {resolved}")
@@ -108,7 +108,7 @@ def infer_target_pack(
     decisions: dict[str, Any] | None = None,
     copy_artifacts: bool = True,
 ) -> dict[str, Any]:
-    """Execute the infer target pack operation for the current toolkit workflow."""
+    """Infer target pack."""
     image_path = _safe_artifact(primary_image)
     image = parse_pe(image_path)
     output = output_directory.resolve()
@@ -243,7 +243,7 @@ def infer_target_pack(
             {
                 "path": record["path"],
                 "member_count": len(archive.members),
-                "symbol_count": len(archive.symbols),
+                "symbol_count": len(archive.linker_symbols),
                 "import_object_count": sum(1 for member in archive.members if member.kind == "import_object"),
                 "coff_object_count": sum(1 for member in archive.members if member.kind == "coff_object"),
             }
@@ -306,7 +306,7 @@ def infer_target_pack(
 
 
 def load_target_pack(path: Path) -> dict[str, Any]:
-    """Load target pack for the current toolkit workflow."""
+    """Load target pack."""
     target_path = path.resolve()
     if target_path.is_dir():
         target_path = target_path / "target.toml"
@@ -318,7 +318,7 @@ def load_target_pack(path: Path) -> dict[str, Any]:
 
 
 def verify_target_pack(path: Path) -> dict[str, Any]:
-    """Verify target pack for the current toolkit workflow."""
+    """Verify target pack."""
     target_path = path.resolve()
     root = target_path if target_path.is_dir() else target_path.parent
     pack = load_target_pack(target_path)
@@ -355,7 +355,7 @@ def generate_project_from_target_pack(
     copy_binary: bool = True,
     overwrite_empty: bool = False,
 ) -> dict[str, Any]:
-    """Generate project from target pack for the current toolkit workflow."""
+    """Generate project from target pack."""
     pack_root = target_pack.resolve() if target_pack.is_dir() else target_pack.resolve().parent
     verification = verify_target_pack(pack_root)
     if not verification["valid"]:

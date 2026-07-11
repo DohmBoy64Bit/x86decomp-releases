@@ -14,18 +14,18 @@ CURRENT_VERSION = "0.7.11"
 
 
 def load(path: Path):
-    """Load load for the current toolkit workflow."""
+    """Load the requested operation."""
     return json.loads(path.read_text(encoding="utf-8"))
 
 
 def validate_schema_files() -> None:
-    """Validate schema files for the current toolkit workflow."""
+    """Validate schema files."""
     for path in sorted(SCHEMAS.rglob("*.json")):
         Draft202012Validator.check_schema(load(path))
 
 
 def validate_examples() -> None:
-    """Validate examples for the current toolkit workflow."""
+    """Validate examples."""
     pairs = [
         (ROOT / "examples/compiler-profiles/gcc-i686-object.json", SCHEMAS / "compiler-profile.schema.json"),
         (ROOT / "examples/validators/add_stack_harness.json", SCHEMAS / "execution-harness.schema.json"),
@@ -81,7 +81,7 @@ def validate_static_lint() -> None:
 
 
 def validate_skill_frontmatter() -> None:
-    """Validate skill frontmatter for the current toolkit workflow."""
+    """Validate skill frontmatter."""
     import yaml
 
     path = ROOT / "skills" / "x86decomp" / "SKILL.md"
@@ -118,7 +118,7 @@ def validate_skill_frontmatter() -> None:
 
 
 def validate_current_release_shape() -> None:
-    """Validate current release shape for the current toolkit workflow."""
+    """Validate current release shape."""
     import tomllib
 
     project = tomllib.loads((ROOT / "pyproject.toml").read_text(encoding="utf-8"))

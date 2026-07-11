@@ -13,7 +13,7 @@ _MAX_TEXT_FIELD = 512 * 1024
 
 
 def _text(value: Any, field: str, *, required: bool = False) -> str:
-    """Support text processing for internal toolkit callers."""
+    """Validate and normalize a textual prompt field."""
     if value is None:
         if required:
             raise ContractError(f"{field} is required")
@@ -29,14 +29,14 @@ def _text(value: Any, field: str, *, required: bool = False) -> str:
 
 
 def _integer(value: Any, field: str, *, minimum: int = 0) -> int:
-    """Support integer processing for internal toolkit callers."""
+    """Validate an integer prompt field against its minimum value."""
     if isinstance(value, bool) or not isinstance(value, int) or value < minimum:
         raise ContractError(f"{field} must be an integer >= {minimum}")
     return value
 
 
 def _resolve_job_path(job_path: Path, value: str, field: str) -> Path:
-    """Support resolve job path processing for internal toolkit callers."""
+    """Resolve job path."""
     candidate = Path(value)
     if not candidate.is_absolute():
         candidate = job_path.parent / candidate
@@ -129,7 +129,7 @@ def load_job(job_path: Path) -> dict[str, Any]:
 
 
 def _evidence_block(job: dict[str, Any]) -> str:
-    """Support evidence block processing for internal toolkit callers."""
+    """Render the verified evidence attached to a reconstruction job."""
     sections: list[str] = []
     for label, key in (
         ("Decompiler candidate", "decompiler_c"),
@@ -191,7 +191,7 @@ Hard rules:
 
 
 def prompt_record(job: dict[str, Any], feedback: list[dict[str, Any]] | None = None) -> dict[str, Any]:
-    """Execute the prompt record operation for the current toolkit workflow."""
+    """Build the structured prompt and metadata record for a model request."""
     messages = build_messages(job, feedback)
     encoded = json.dumps(messages, sort_keys=True, separators=(",", ":"), ensure_ascii=False).encode("utf-8")
     return {

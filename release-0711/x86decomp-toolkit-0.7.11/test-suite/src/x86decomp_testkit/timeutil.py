@@ -1,9 +1,9 @@
-"""Provide the installed test-suite implementation for the `x86decomp_testkit.timeutil` module."""
+"""Provide timeutil support for the standalone verification harness."""
 from __future__ import annotations
 
 from datetime import datetime, timezone
 
 
 def utc_now() -> str:
-    """Execute the utc now operation for the current toolkit workflow."""
+    """Return the current UTC timestamp in the harness serialization format."""
     return datetime.now(timezone.utc).isoformat(timespec="milliseconds").replace("+00:00", "Z")

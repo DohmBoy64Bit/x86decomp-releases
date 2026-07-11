@@ -1,4 +1,4 @@
-"""Provide the installed test-suite implementation for the `x86decomp_testkit.adapters` module."""
+"""Provide init support for the standalone verification harness."""
 from .catalog import adapter_catalog
 from .capabilities import CapabilityResult, capabilities_from_adapters, capability_map
 from .detection import detect_adapter, detect_all

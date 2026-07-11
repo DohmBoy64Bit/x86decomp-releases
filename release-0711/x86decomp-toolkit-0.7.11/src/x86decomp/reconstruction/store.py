@@ -1,4 +1,4 @@
-"""Provide the current runtime implementation for the `x86decomp.reconstruction.store` module."""
+"""Persist reconstructed project entities, relationships, and change history."""
 from __future__ import annotations
 
 from typing import Any
@@ -142,7 +142,7 @@ class ReconstructionStore(GovernanceStore):
     """Project-scale schema layered on the governance store."""
 
     def initialize(self) -> None:
-        """Initialize initialize for the current toolkit workflow."""
+        """Initialize reconstruction store storage."""
         super().initialize()
         with self.transaction() as connection:
             connection.executescript(_SCHEMA_SQL)
@@ -153,7 +153,7 @@ class ReconstructionStore(GovernanceStore):
             connection.execute("INSERT INTO reconstruction_metadata(key,value) VALUES('release_version','0.7.11') ON CONFLICT(key) DO UPDATE SET value=excluded.value")
 
     def check(self) -> dict[str, Any]:
-        """Check check for the current toolkit workflow."""
+        """Check reconstruction store state."""
         self.initialize()
         base = super().check()
         with self.connect() as connection:

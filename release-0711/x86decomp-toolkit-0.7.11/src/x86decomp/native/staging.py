@@ -1,4 +1,4 @@
-"""Provide the current runtime implementation for the `x86decomp.native.staging` module."""
+"""Bridge staged reconstruction artifacts into native workflows."""
 from __future__ import annotations
 
 import re
@@ -24,13 +24,13 @@ _SYMBOL_RE = re.compile(r"\b(?P<kind>FUN|DAT|LAB|PTR)_?[0-9A-Fa-f]{6,16}\b")
 
 
 class StagingBridge:
-    """Coordinate staging bridge behavior for the current toolkit workflow."""
+    """Scan staged artifacts, generate reconstruction context, and record resolutions."""
     def __init__(self, store: NativeStore):
-        """Initialize the instance with validated constructor state."""
+        """Initialize StagingBridge with `store`."""
         self.store=store; store.initialize()
 
     def scan(self, source_paths: Iterable[Path]) -> dict[str,Any]:
-        """Execute the scan operation for the current toolkit workflow."""
+        """Scan staging bridge."""
         symbols: dict[str,str]={}; types:set[str]=set()
         files=[]
         for path in source_paths:
@@ -43,7 +43,7 @@ class StagingBridge:
         return {'files':files,'types':sorted(types),'symbols':[{'name':name,'kind':kind} for name,kind in sorted(symbols.items())]}
 
     def generate_context(self, source_paths:Iterable[Path], output:Path, *, actor:str='analyst')->dict[str,Any]:
-        """Generate context for the current toolkit workflow."""
+        """Generate context."""
         scan=self.scan(source_paths); lines=['#ifndef X86DECOMP_GENERATED_CONTEXT_H','#define X86DECOMP_GENERATED_CONTEXT_H','','#include <stdint.h>','#include <stddef.h>','']
         for token in scan['types']: lines.append(f'typedef {_TYPE_MAP[token]} {token};')
         if scan['types']: lines.append('')
@@ -63,7 +63,7 @@ class StagingBridge:
         return {'output':str(output),'sha256':sha256_file(output),**scan}
 
     def resolve(self, mapping:dict[str,str], *, actor:str='analyst')->dict[str,Any]:
-        """Resolve resolve for the current toolkit workflow."""
+        """Resolve staging bridge data."""
         updated=[]
         with self.store.transaction() as c:
             for name,declaration in sorted(mapping.items()):
@@ -75,11 +75,11 @@ class StagingBridge:
         return {'updated':updated,'count':len(updated)}
 
     def unresolved(self)->list[dict[str,Any]]:
-        """Execute the unresolved operation for the current toolkit workflow."""
+        """List staged reconstruction items that do not yet have a recorded resolution."""
         with self.store.connect() as c: return [dict(row) for row in c.execute("SELECT * FROM native_staging_symbols WHERE status!='accepted' ORDER BY symbol_name")]
 
     def compile_check(self, command:list[str], *, cwd:Path|None=None, timeout_seconds:int=120)->dict[str,Any]:
-        """Execute the compile check operation for the current toolkit workflow."""
+        """Compile check."""
         if not command or timeout_seconds<=0: raise ContractError('compile-check requires a command and positive timeout')
         completed=subprocess.run(command,cwd=None if cwd is None else cwd.resolve(),capture_output=True,text=True,timeout=timeout_seconds,check=False)
         return {'command':command,'cwd':None if cwd is None else str(cwd.resolve()),'return_code':completed.returncode,'passed':completed.returncode==0,'stdout':completed.stdout,'stderr':completed.stderr,'timeout_seconds':timeout_seconds}

@@ -15,7 +15,7 @@ jobs:
       fail-fast: false
       matrix:
         os: [ubuntu-latest, windows-latest]
-        python: ["3.11", "3.12", "3.13"]
+        python: ["3.11.0", "3.12", "3.13"]
     env:
       PYTEST_DISABLE_PLUGIN_AUTOLOAD: "1"
     steps:
@@ -28,6 +28,18 @@ jobs:
         run: python -m pip install -e ".[disassembly,dynamic,symbolic,service,dev]"
       - name: Run contracts
         run: python scripts/validate-contracts.py
+      - name: Verify deterministic docstring reports
+        run: python scripts/audit-docstrings.py --check
+      - name: Verify generated command reference
+        run: python scripts/generate_command_reference.py --check
+      - name: Verify packaged self-test synchronization
+        run: python scripts/verify_self_test_sync.py
+      - name: Run Ruff
+        run: python -m ruff check src tests scripts test-suite/src test-suite/tests
+      - name: Run Pyright
+        run: python -m pyright
+      - name: Build documentation
+        run: python -m mkdocs build --strict --site-dir "${{ runner.temp }}/x86decomp-site"
       - name: Run regression suite
         run: python -m pytest -q
       - name: Run test-suite self-tests

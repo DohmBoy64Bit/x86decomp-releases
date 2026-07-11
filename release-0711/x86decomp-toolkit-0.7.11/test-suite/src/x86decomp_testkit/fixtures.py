@@ -1,4 +1,4 @@
-"""Provide the installed test-suite implementation for the `x86decomp_testkit.fixtures` module."""
+"""Provide fixtures support for the standalone verification harness."""
 from __future__ import annotations
 
 import json
@@ -8,14 +8,14 @@ from typing import Any
 
 
 def write_json(path: Path, value: Any) -> Path:
-    """Write json for the current toolkit workflow."""
+    """Write JSON."""
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(value, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     return path
 
 
 def build_minimal_pe32(path: Path, code: bytes = b"\x55\x8b\xec\x31\xc0\x5d\xc3") -> Path:
-    """Build minimal pe32 for the current toolkit workflow."""
+    """Build minimal pe32."""
     pe_offset = 0x80
     optional_size = 224
     section_raw_offset = 0x200
@@ -49,7 +49,7 @@ def build_minimal_pe32(path: Path, code: bytes = b"\x55\x8b\xec\x31\xc0\x5d\xc3"
 
 
 def build_minimal_pe64(path: Path, code: bytes = b"\x31\xc0\xc3") -> Path:
-    """Build minimal pe64 for the current toolkit workflow."""
+    """Build minimal pe64."""
     pe_offset = 0x80
     optional_size = 240
     section_raw_offset = 0x200
@@ -84,7 +84,7 @@ def build_minimal_pe64(path: Path, code: bytes = b"\x31\xc0\xc3") -> Path:
 
 
 def create_common_fixtures(root: Path) -> dict[str, Path]:
-    """Create common fixtures for the current toolkit workflow."""
+    """Create common fixtures."""
     root.mkdir(parents=True, exist_ok=True)
     paths: dict[str, Path] = {}
     paths["pe32"] = build_minimal_pe32(root / "minimal32.exe")

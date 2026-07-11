@@ -17,7 +17,7 @@ from x86decomp_testkit.models import AdapterKind, AdapterSpec
 
 def _config(tmp_path: Path, **kwargs) -> HarnessConfig:
     """Implement config.
-    
+
     Parameters and return values follow the signature and runtime validation in the body.
     """
     defaults = dict(toolkit_root=tmp_path, output_root=tmp_path / "out", interactive=True, allow_install=False)
@@ -27,7 +27,7 @@ def _config(tmp_path: Path, **kwargs) -> HarnessConfig:
 
 def test_installed_adapter_never_prompts(tmp_path: Path) -> None:
     """Verify installed adapter never prompts.
-    
+
     Parameters and return values follow the signature and runtime validation in the body.
     """
     spec = AdapterSpec("python-self", "Python", AdapterKind.EXECUTABLE, ("test",), commands=(Path(os.sys.executable).name,), optional=False)
@@ -36,7 +36,7 @@ def test_installed_adapter_never_prompts(tmp_path: Path) -> None:
 
     def prompt(text: str) -> str:
         """Implement prompt.
-        
+
         Parameters and return values follow the signature and runtime validation in the body.
         """
         prompts.append(text)
@@ -49,7 +49,7 @@ def test_installed_adapter_never_prompts(tmp_path: Path) -> None:
 
 def test_missing_adapter_prompts_custom_path_then_accepts(tmp_path: Path) -> None:
     """Verify missing adapter prompts custom path then accepts.
-    
+
     Parameters and return values follow the signature and runtime validation in the body.
     """
     executable = tmp_path / "my-tool"
@@ -62,7 +62,7 @@ def test_missing_adapter_prompts_custom_path_then_accepts(tmp_path: Path) -> Non
 
     def prompt(text: str) -> str:
         """Implement prompt.
-        
+
         Parameters and return values follow the signature and runtime validation in the body.
         """
         prompts.append(text)
@@ -77,7 +77,7 @@ def test_missing_adapter_prompts_custom_path_then_accepts(tmp_path: Path) -> Non
 
 def test_missing_noninteractive_is_explicit_unresolved(tmp_path: Path) -> None:
     """Verify missing noninteractive is explicit unresolved.
-    
+
     Parameters and return values follow the signature and runtime validation in the body.
     """
     spec = AdapterSpec("missing", "Missing", AdapterKind.EXECUTABLE, ("feature",), commands=("impossible-command-xyz",), optional=False)
@@ -89,7 +89,7 @@ def test_missing_noninteractive_is_explicit_unresolved(tmp_path: Path) -> None:
 
 def test_environment_and_configured_root_detection(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
     """Verify environment and configured root detection.
-    
+
     Parameters and return values follow the signature and runtime validation in the body.
     """
     root = tmp_path / "root"
@@ -110,7 +110,7 @@ def test_environment_and_configured_root_detection(tmp_path: Path, monkeypatch: 
 
 def test_path_detection_preserves_symlink_argv0(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
     """Verify path detection preserves symlink argv0.
-    
+
     Parameters and return values follow the signature and runtime validation in the body.
     """
     if os.name == "nt":
@@ -131,7 +131,7 @@ def test_path_detection_preserves_symlink_argv0(tmp_path: Path, monkeypatch: pyt
 
 def test_missing_python_adapter_accepts_custom_interpreter(tmp_path: Path) -> None:
     """Verify missing python adapter accepts custom interpreter.
-    
+
     Parameters and return values follow the signature and runtime validation in the body.
     """
     spec = AdapterSpec("pytest-custom", "pytest", AdapterKind.PYTHON, ("test",), python_modules=("pytest",), optional=False)

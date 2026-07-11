@@ -22,7 +22,7 @@ def build_export_command(
     overwrite: bool = False,
     function_selector: str = "all",
 ) -> list[str]:
-    """Build export command for the current toolkit workflow."""
+    """Build export command."""
     executable = discover_analyze_headless(ghidra_home)
     if executable is None:
         raise ExternalToolError("Ghidra analyzeHeadless was not found; set GHIDRA_HOME")
@@ -63,7 +63,7 @@ def build_export_command(
 
 
 def run_export(command: list[str], *, timeout_seconds: int, report_path: Path | None = None) -> dict[str, Any]:
-    """Run export for the current toolkit workflow."""
+    """Run export."""
     if timeout_seconds <= 0:
         raise ContractError("timeout_seconds must be positive")
     try:

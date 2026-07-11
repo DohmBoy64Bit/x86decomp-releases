@@ -1,6 +1,6 @@
 include MANIFEST.sha256
 include setup.cfg
-include .gitignore README.md LICENSE CHANGELOG.md MAINTENANCE.md SECURITY.md INTEGRATION.md VERIFICATION.md
+include .gitignore README.md LICENSE NOTICE CHANGELOG.md MAINTENANCE.md SECURITY.md INTEGRATION.md VERIFICATION.md
 recursive-include docs *.md *.txt
 recursive-include examples *.json
 recursive-include schemas *.json

@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="1" time="0.265" timestamp="2026-07-10T18:50:37.779786+00:00" hostname="0c658486d65f"><testcase classname="tests.test_production" name="test_project_migration_backup_restore_repair_and_gc" time="0.062" /></testsuite></testsuites>

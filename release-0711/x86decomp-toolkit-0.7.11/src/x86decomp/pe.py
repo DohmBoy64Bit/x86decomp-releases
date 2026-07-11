@@ -15,7 +15,6 @@ from .pe32 import (
     DelayImportLibrary,
     ExportSymbol,
     ImportLibrary,
-    ImportSymbol,
     LoadConfigInfo,
     ResourceLeaf,
     Section,
@@ -25,6 +24,8 @@ from .pe32 import (
     _parse_exports,
     _parse_relocations,
     _parse_resources,
+    _parse_thunk_symbols,
+    _parse_tls_callbacks,
     _rva_to_offset,
     parse_pe32,
 )
@@ -192,19 +193,16 @@ def _parse_imports64(reader: _Reader, directories: tuple[DataDirectory, ...], se
             raise FormatError("import descriptor has a missing name or first thunk")
         name = reader.c_string(_rva_to_offset(name_rva, sections, size_of_headers, len(reader.data)), "import library name")
         lookup_rva = original_thunk or first_thunk
-        lookup_offset = _rva_to_offset(lookup_rva, sections, size_of_headers, len(reader.data))
-        symbols: list[ImportSymbol] = []
-        for index in range(MAX_IMPORT_THUNKS):
-            value = reader.u64(lookup_offset + index * 8, "PE32+ import thunk")
-            if value == 0:
-                break
-            if value & IMAGE_ORDINAL_FLAG64:
-                symbols.append(ImportSymbol(None, value & 0xFFFF, None, lookup_rva + index * 8, first_thunk + index * 8))
-            else:
-                name_offset = _rva_to_offset(value, sections, size_of_headers, len(reader.data))
-                symbols.append(ImportSymbol(reader.c_string(name_offset + 2, "import symbol name"), None, reader.u16(name_offset, "import hint"), lookup_rva + index * 8, first_thunk + index * 8))
-        else:
-            raise FormatError("import thunk table exceeds safety limit")
+        symbols = _parse_thunk_symbols(
+            reader,
+            sections,
+            size_of_headers,
+            lookup_rva,
+            first_thunk,
+            pointer_size=8,
+            ordinal_flag=IMAGE_ORDINAL_FLAG64,
+            context="PE32+ import",
+        )
         libraries.append(ImportLibrary(name, tuple(symbols)))
     else:
         raise FormatError("import descriptor table has no terminator")
@@ -233,18 +231,15 @@ def _parse_tls64(reader: _Reader, directories: tuple[DataDirectory, ...], sectio
         return None
     offset = _rva_to_offset(directory.rva, sections, size_of_headers, len(reader.data))
     start, end, index_va, callbacks_va, zero_fill, characteristics = reader.unpack("<QQQQII", offset, "PE32+ TLS directory")
-    callbacks: list[int] = []
-    if callbacks_va:
-        if callbacks_va < image_base:
-            raise FormatError("TLS callback address is below image base")
-        callback_offset = _rva_to_offset(callbacks_va - image_base, sections, size_of_headers, len(reader.data))
-        for index in range(MAX_TLS_CALLBACKS):
-            callback = reader.u64(callback_offset + index * 8, "PE32+ TLS callback")
-            if callback == 0:
-                break
-            callbacks.append(callback)
-        else:
-            raise FormatError("TLS callback table exceeds safety limit")
+    callbacks = _parse_tls_callbacks(
+        reader,
+        sections,
+        size_of_headers,
+        callbacks_va,
+        image_base,
+        pointer_size=8,
+        context="PE32+ TLS",
+    )
     return TLS64Info(start, end, index_va, callbacks_va, zero_fill, characteristics, tuple(callbacks))
 
 
@@ -298,20 +293,17 @@ def _parse_delay_imports64(reader: _Reader, directories: tuple[DataDirectory, ..
             return value - image_base
         name_rva, iat_rva, lookup_rva = to_rva(name_value), to_rva(iat_value), to_rva(int_value) or to_rva(iat_value)
         name = reader.c_string(_rva_to_offset(name_rva, sections, size_of_headers, len(reader.data)), "delay import name")
-        lookup_offset = _rva_to_offset(lookup_rva, sections, size_of_headers, len(reader.data))
-        symbols: list[ImportSymbol] = []
-        for index in range(MAX_IMPORT_THUNKS):
-            value = reader.u64(lookup_offset + index * 8, "delay import thunk")
-            if value == 0:
-                break
-            if value & IMAGE_ORDINAL_FLAG64:
-                symbols.append(ImportSymbol(None, value & 0xFFFF, None, lookup_rva + index * 8, iat_rva + index * 8))
-            else:
-                hint_name_rva = to_rva(value)
-                hint_name_offset = _rva_to_offset(hint_name_rva, sections, size_of_headers, len(reader.data))
-                symbols.append(ImportSymbol(reader.c_string(hint_name_offset + 2, "delay import symbol"), None, reader.u16(hint_name_offset, "delay import hint"), lookup_rva + index * 8, iat_rva + index * 8))
-        else:
-            raise FormatError("delay import thunk table exceeds safety limit")
+        symbols = _parse_thunk_symbols(
+            reader,
+            sections,
+            size_of_headers,
+            lookup_rva,
+            iat_rva,
+            pointer_size=8,
+            ordinal_flag=IMAGE_ORDINAL_FLAG64,
+            context="PE32+ delay import",
+            value_to_rva=to_rva,
+        )
         libraries.append(DelayImportLibrary(name, attributes, iat_rva, tuple(symbols)))
     else:
         raise FormatError("delay import descriptor table has no terminator")

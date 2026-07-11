@@ -22,16 +22,16 @@ from x86decomp.util import write_json
 
 
 class _ScriptedHandler(BaseHTTPRequestHandler):
-    """Coordinate scripted handler behavior for the current toolkit workflow."""
+    """Serve scripted local-model responses for transport and matching tests."""
     script: list[tuple[int, dict[str, str], dict[str, Any]]] = []
     requests: list[dict[str, Any]] = []
 
     def log_message(self, format: str, *args: Any) -> None:
-        """Execute the log message operation for the current toolkit workflow."""
+        """Suppress default HTTP server logging during deterministic tests."""
         return
 
     def _respond(self) -> None:
-        """Support respond processing for internal toolkit callers."""
+        """Send the next scripted JSON response from the local-model test handler."""
         length = int(self.headers.get("Content-Length", "0"))
         body = self.rfile.read(length) if length else b""
         parsed: Any = None
@@ -64,7 +64,7 @@ class _ScriptedHandler(BaseHTTPRequestHandler):
 
 @contextmanager
 def _server(script: list[tuple[int, dict[str, str], dict[str, Any]]]) -> Iterator[tuple[str, type[_ScriptedHandler]]]:
-    """Support server processing for internal toolkit callers."""
+    """Start a scripted loopback HTTP server for local-model transport tests."""
     handler = type("ScriptedHandler", (_ScriptedHandler,), {"script": list(script), "requests": []})
     server = ThreadingHTTPServer(("127.0.0.1", 0), handler)
     thread = threading.Thread(target=server.serve_forever, daemon=True)
@@ -78,7 +78,7 @@ def _server(script: list[tuple[int, dict[str, str], dict[str, Any]]]) -> Iterato
 
 
 def _write_job(root: Path, target: bytes, *, max_attempts: int = 2) -> Path:
-    """Support write job processing for internal toolkit callers."""
+    """Write job."""
     path = root / "job.json"
     write_json(
         path,
@@ -107,7 +107,7 @@ def _write_job(root: Path, target: bytes, *, max_attempts: int = 2) -> Path:
 
 
 def _clang_profile(root: Path) -> Path:
-    """Support clang profile processing for internal toolkit callers."""
+    """Create a deterministic local Clang compiler profile for matching tests."""
     clang = shutil.which("clang")
     assert clang is not None, "clang is required for the exact local-LLM matching test"
     path = root / "clang-i686.json"
@@ -137,12 +137,12 @@ def _clang_profile(root: Path) -> Path:
 
 
 def _good_source() -> str:
-    """Support good source processing for internal toolkit callers."""
+    """Return a minimal candidate source file that compiles for matching tests."""
     return "int target_add(int a, int b) { return a + b; }\n"
 
 
 def _candidate_payload(source: str, *, status: str = "proposed") -> dict[str, Any]:
-    """Support candidate payload processing for internal toolkit callers."""
+    """Build a deterministic model response containing candidate source and status."""
     return {
         "status": status,
         "c_source": source,

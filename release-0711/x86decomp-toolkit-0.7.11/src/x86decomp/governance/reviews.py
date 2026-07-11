@@ -1,4 +1,4 @@
-"""Provide the current runtime implementation for the `x86decomp.governance.reviews` module."""
+"""Assign, decide, and lock governance reviews."""
 from __future__ import annotations
 
 import json
@@ -11,14 +11,14 @@ REVIEW_STATES = {"open", "assigned", "accepted", "rejected", "needs_evidence", "
 
 
 class ReviewQueue:
-    """Coordinate review queue behavior for the current toolkit workflow."""
+    """Manage review queue state and operations."""
     def __init__(self, store: GovernanceStore):
-        """Initialize the instance with validated constructor state."""
+        """Initialize ReviewQueue with `store`."""
         self.store = store
         self.store.initialize()
 
     def create(self, kind: str, subject_id: str, summary: str, *, priority: int = 50, details: dict[str, Any] | None = None, actor: str = "system") -> str:
-        """Create create for the current toolkit workflow."""
+        """Create a record in review queue."""
         if not 0 <= priority <= 100:
             raise ContractError("review priority must be in [0,100]")
         review_id = random_id("rev")
@@ -32,7 +32,7 @@ class ReviewQueue:
         return review_id
 
     def assign(self, review_id: str, assignee: str, *, actor: str = "analyst") -> dict[str, Any]:
-        """Execute the assign operation for the current toolkit workflow."""
+        """Assign ReviewQueue for ReviewQueue."""
         if not assignee.strip():
             raise ContractError("assignee must not be empty")
         now = utc_now()
@@ -47,7 +47,7 @@ class ReviewQueue:
         return self.get(review_id)
 
     def decide(self, review_id: str, decision: str, rationale: str, *, actor: str = "analyst", lock: bool = False) -> dict[str, Any]:
-        """Execute the decide operation for the current toolkit workflow."""
+        """Record ReviewQueue for ReviewQueue."""
         state_map = {"accept": "accepted", "reject": "rejected", "request_evidence": "needs_evidence", "supersede": "superseded"}
         if decision not in state_map:
             raise ContractError(f"invalid review decision: {decision}")
@@ -73,7 +73,7 @@ class ReviewQueue:
         return self.get(review_id)
 
     def lock(self, review_id: str, *, actor: str = "analyst") -> dict[str, Any]:
-        """Execute the lock operation for the current toolkit workflow."""
+        """Lock ReviewQueue for ReviewQueue."""
         with self.store.transaction() as connection:
             row = connection.execute("SELECT review_id FROM governance_review_items WHERE review_id=?", (review_id,)).fetchone()
             if not row:
@@ -83,7 +83,7 @@ class ReviewQueue:
         return self.get(review_id)
 
     def get(self, review_id: str) -> dict[str, Any]:
-        """Execute the get operation for the current toolkit workflow."""
+        """Return data from review queue."""
         with self.store.connect() as connection:
             row = connection.execute("SELECT * FROM governance_review_items WHERE review_id=?", (review_id,)).fetchone()
             if not row:
@@ -96,13 +96,13 @@ class ReviewQueue:
         return result
 
     def list(self, *, status: str | None = None, limit: int = 100) -> list[dict[str, Any]]:
-        """Execute the list operation for the current toolkit workflow."""
+        """List records in review queue."""
         if status and status not in REVIEW_STATES:
             raise ContractError(f"invalid review status: {status}")
         if not 1 <= limit <= 1000:
             raise ContractError("limit must be in [1,1000]")
         where = " WHERE status=?" if status else ""
-        args = [status] if status else []
+        args: list[Any] = [status] if status else []
         args.append(limit)
         with self.store.connect() as connection:
             rows = connection.execute(f"SELECT * FROM governance_review_items{where} ORDER BY priority DESC,created_at LIMIT ?", args).fetchall()

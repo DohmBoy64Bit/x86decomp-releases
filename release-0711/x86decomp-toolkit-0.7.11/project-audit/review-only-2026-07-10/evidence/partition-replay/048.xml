@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="1" time="0.207" timestamp="2026-07-10T18:48:44.195186+00:00" hostname="0c658486d65f"><testcase classname="tests.test_linker_metadata_corpus" name="test_real_clang_weak_external_and_tls_coff" time="0.096" /></testsuite></testsuites>

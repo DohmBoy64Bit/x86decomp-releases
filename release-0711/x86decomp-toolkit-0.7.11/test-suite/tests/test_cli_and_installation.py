@@ -17,7 +17,7 @@ from x86decomp_testkit.models import AdapterKind, AdapterSpec
 
 def test_cli_init_config_catalog_and_missing_config(tmp_path: Path, capsys: pytest.CaptureFixture[str]) -> None:
     """Verify cli init config catalog and missing config.
-    
+
     Parameters and return values follow the signature and runtime validation in the body.
     """
     config = tmp_path / "config.json"
@@ -30,7 +30,7 @@ def test_cli_init_config_catalog_and_missing_config(tmp_path: Path, capsys: pyte
 
 def test_install_python_command_and_failure(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
     """Verify install python command and failure.
-    
+
     Parameters and return values follow the signature and runtime validation in the body.
     """
     spec = AdapterSpec("p", "P", AdapterKind.PYTHON, ("test",), python_modules=("p",), pip_requirement="p==1", optional=False)
@@ -39,7 +39,7 @@ def test_install_python_command_and_failure(tmp_path: Path, monkeypatch: pytest.
 
     def run_ok(command, check=False):
         """Run ok.
-        
+
         Parameters and return values follow the signature and runtime validation in the body.
         """
         commands.append(command)
@@ -51,7 +51,7 @@ def test_install_python_command_and_failure(tmp_path: Path, monkeypatch: pytest.
 
     def run_bad(command, check=False):
         """Run bad.
-        
+
         Parameters and return values follow the signature and runtime validation in the body.
         """
         return subprocess.CompletedProcess(command, 7)

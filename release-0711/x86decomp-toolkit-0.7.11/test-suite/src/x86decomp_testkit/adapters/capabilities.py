@@ -1,4 +1,4 @@
-"""Provide the installed test-suite implementation for the `x86decomp_testkit.adapters.capabilities` module."""
+"""Provide capabilities support for the standalone verification harness."""
 from __future__ import annotations
 
 import json
@@ -32,7 +32,7 @@ class CapabilityResult:
 
 
 def host_is_loopback(host: str | None) -> bool:
-    """Execute the host is loopback operation for the current toolkit workflow."""
+    """Return whether a host resolves only to loopback addresses."""
     if not host:
         return False
     lowered = host.strip("[]").lower()
@@ -48,7 +48,7 @@ def host_is_loopback(host: str | None) -> bool:
 
 
 def endpoint_is_allowed(url: str, config: TestConfig) -> bool:
-    """Execute the endpoint is allowed operation for the current toolkit workflow."""
+    """Return whether an endpoint satisfies the configured network policy."""
     parsed = urlparse(url)
     if parsed.scheme not in {"http", "https"} or not parsed.netloc:
         return False
@@ -56,7 +56,7 @@ def endpoint_is_allowed(url: str, config: TestConfig) -> bool:
 
 
 def normalize_endpoint(value: str) -> str:
-    """Normalize endpoint for the current toolkit workflow."""
+    """Normalize an adapter endpoint into a validated URL."""
     url = value.strip().rstrip("/")
     if not url:
         raise ValueError("empty endpoint URL")
@@ -67,7 +67,7 @@ def normalize_endpoint(value: str) -> str:
 
 
 def probe_openai_compatible_endpoint(base_url: str, config: TestConfig, timeout: int = 5) -> tuple[bool, str | None, list[str]]:
-    """Execute the probe openai compatible endpoint operation for the current toolkit workflow."""
+    """Probe a permitted OpenAI-compatible endpoint and record the models response."""
     diagnostics: list[str] = []
     try:
         endpoint = normalize_endpoint(base_url)
@@ -95,7 +95,7 @@ def probe_openai_compatible_endpoint(base_url: str, config: TestConfig, timeout:
 
 
 def capabilities_from_adapters(catalog: dict[str, AdapterSpec], probe_results: list[ProbeResult]) -> list[CapabilityResult]:
-    """Execute the capabilities from adapters operation for the current toolkit workflow."""
+    """Derive harness capability flags from adapter inventory and probe results."""
     by_capability: dict[str, list[str]] = {}
     diagnostics: dict[str, list[str]] = {}
     installed = {result.adapter_id: result for result in probe_results if result.installed}
@@ -127,12 +127,12 @@ def capabilities_from_adapters(catalog: dict[str, AdapterSpec], probe_results: l
 
 
 def capability_map(results: list[CapabilityResult]) -> dict[str, CapabilityResult]:
-    """Execute the capability map operation for the current toolkit workflow."""
+    """Index adapter capability results by capability name."""
     return {result.capability_id: result for result in results}
 
 
 def write_capability_report(results: list[CapabilityResult], path: Path) -> None:
-    """Write capability report for the current toolkit workflow."""
+    """Write capability report."""
     path.parent.mkdir(parents=True, exist_ok=True)
     payload = {"schema_version": 1, "capabilities": [item.to_dict() for item in results]}
     path.write_text(json.dumps(payload, indent=2, sort_keys=True) + "\n", encoding="utf-8")

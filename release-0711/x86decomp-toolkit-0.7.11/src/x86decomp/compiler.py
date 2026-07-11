@@ -17,7 +17,7 @@ _ALLOWED_TOKENS = {"{source}", "{output}", "{workdir}"}
 
 
 def load_profile(path: Path) -> dict[str, Any]:
-    """Load profile for the current toolkit workflow."""
+    """Load profile."""
     value = load_json(path)
     if not isinstance(value, dict):
         raise ContractError("compiler profile must be a JSON object")
@@ -57,7 +57,7 @@ def load_profile(path: Path) -> dict[str, Any]:
 
 
 def _tool_version(executable: str, version_arguments: list[str] | None = None) -> str | None:
-    """Support tool version processing for internal toolkit callers."""
+    """Query a compiler executable for its version string."""
     try:
         completed = subprocess.run(
             [executable, *(version_arguments or ["--version"])],
@@ -73,7 +73,7 @@ def _tool_version(executable: str, version_arguments: list[str] | None = None) -
 
 
 def _resolve_executable(value: str) -> str:
-    """Support resolve executable processing for internal toolkit callers."""
+    """Resolve executable."""
     explicit = Path(value).expanduser()
     if explicit.is_absolute() or explicit.parent != Path("."):
         if not explicit.is_file():
@@ -92,7 +92,7 @@ def compiler_cache_key(
     source_sha256: str,
     extra_arguments: list[str],
 ) -> str:
-    """Execute the compiler cache key operation for the current toolkit workflow."""
+    """Build the deterministic cache key for a compiler invocation."""
     payload = {
         "profile": profile,
         "executable_sha256": executable_sha256,
@@ -112,7 +112,7 @@ def run_compiler_profile(
     working_directory: Path | None = None,
     cache_directory: Path | None = None,
 ) -> dict[str, Any]:
-    """Run compiler profile for the current toolkit workflow."""
+    """Run compiler profile."""
     profile = load_profile(profile_path)
     source = source.resolve()
     output = output.resolve()

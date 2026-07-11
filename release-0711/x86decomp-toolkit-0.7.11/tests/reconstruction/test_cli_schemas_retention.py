@@ -12,10 +12,10 @@ from x86decomp.reconstruction.cli import build_parser, main as reconstruction_ma
 ROOT=Path(__file__).resolve().parents[2]
 
 def _leaf_commands(parser):
-    """Support leaf commands processing for internal toolkit callers."""
+    """Collect leaf command paths from an argparse parser tree."""
     result=[]
     def walk(p,prefix=()):
-        """Execute the walk operation for the current toolkit workflow."""
+        """Return the walk derived from `p`, `prefix`."""
         actions=[a for a in p._actions if a.__class__.__name__=='_SubParsersAction']
         if not actions:
             result.append(' '.join(prefix)); return

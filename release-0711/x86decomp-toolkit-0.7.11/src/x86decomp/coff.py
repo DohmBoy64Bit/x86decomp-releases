@@ -126,19 +126,19 @@ AMD64_RELOCATION_WIDTHS = {
 
 
 def relocation_name(machine: int, relocation_type: int) -> str:
-    """Execute the relocation name operation for the current toolkit workflow."""
+    """Resolve the architecture-specific name for a COFF relocation type."""
     table = I386_RELOCATION_NAMES if machine == IMAGE_FILE_MACHINE_I386 else AMD64_RELOCATION_NAMES
     return table.get(relocation_type, f"UNKNOWN_0x{relocation_type:04x}")
 
 
 def relocation_width(machine: int, relocation_type: int) -> int | None:
-    """Execute the relocation width operation for the current toolkit workflow."""
+    """Return the encoded operand width for a COFF relocation type."""
     table = I386_RELOCATION_WIDTHS if machine == IMAGE_FILE_MACHINE_I386 else AMD64_RELOCATION_WIDTHS
     return table.get(relocation_type)
 
 
 def relocation_is_pc_relative(machine: int, relocation_type: int) -> bool:
-    """Execute the relocation is pc relative operation for the current toolkit workflow."""
+    """Determine whether a COFF relocation is relative to the program counter."""
     if machine == IMAGE_FILE_MACHINE_I386:
         return relocation_type in {0x0002, 0x0014}
     return relocation_type in {0x0004, 0x0005, 0x0006, 0x0007, 0x0008, 0x0009}
@@ -154,7 +154,7 @@ class CoffRelocation:
     addend: int | None = None
 
     def width(self, machine: int) -> int | None:
-        """Execute the width operation for the current toolkit workflow."""
+        """Return this relocation's encoded operand width for the selected machine."""
         return relocation_width(machine, self.type)
 
     def to_dict(self, machine: int) -> dict[str, Any]:
@@ -184,7 +184,7 @@ class SectionDefinitionAux:
 
     @property
     def selection_name(self) -> str:
-        """Select ion name for the current toolkit workflow."""
+        """Return the selection name for this SectionDefinitionAux."""
         return COMDAT_SELECTION_NAMES.get(self.selection, f"unknown_{self.selection}")
 
     def to_dict(self) -> dict[str, Any]:
@@ -280,17 +280,17 @@ class CoffSection:
 
     @property
     def is_comdat(self) -> bool:
-        """Execute the is comdat operation for the current toolkit workflow."""
+        """Report whether the section carries the COFF COMDAT characteristic."""
         return bool(self.characteristics & IMAGE_SCN_LNK_COMDAT)
 
     @property
     def comdat_selection_name(self) -> str:
-        """Execute the comdat selection name operation for the current toolkit workflow."""
+        """Return the comdat selection name for this CoffSection."""
         return COMDAT_SELECTION_NAMES.get(self.comdat_selection, f"unknown_{self.comdat_selection}")
 
     @property
     def alignment_power(self) -> int | None:
-        """Execute the alignment power operation for the current toolkit workflow."""
+        """Return the alignment power for this CoffSection."""
         encoded = (self.characteristics >> 20) & 0xF
         if encoded == 0:
             return None
@@ -300,7 +300,7 @@ class CoffSection:
 
     @property
     def alignment(self) -> int | None:
-        """Execute the alignment operation for the current toolkit workflow."""
+        """Return the alignment for this CoffSection."""
         power = self.alignment_power
         return None if power is None else 1 << power
 
@@ -343,14 +343,14 @@ class CoffSymbol:
 
     @property
     def is_function(self) -> bool:
-        """Execute the is function operation for the current toolkit workflow."""
+        """Report whether the symbol type denotes a function."""
         return (self.type & 0x20) != 0 or any(
             isinstance(record, FunctionDefinitionAux) for record in self.auxiliary_records
         )
 
     @property
     def section_definition(self) -> SectionDefinitionAux | None:
-        """Execute the section definition operation for the current toolkit workflow."""
+        """Return the section definition for this CoffSymbol."""
         return next(
             (record for record in self.auxiliary_records if isinstance(record, SectionDefinitionAux)),
             None,
@@ -358,7 +358,7 @@ class CoffSymbol:
 
     @property
     def function_definition(self) -> FunctionDefinitionAux | None:
-        """Execute the function definition operation for the current toolkit workflow."""
+        """Return the function definition for this CoffSymbol."""
         return next(
             (record for record in self.auxiliary_records if isinstance(record, FunctionDefinitionAux)),
             None,
@@ -366,7 +366,7 @@ class CoffSymbol:
 
     @property
     def weak_external(self) -> WeakExternalAux | None:
-        """Execute the weak external operation for the current toolkit workflow."""
+        """Return the weak external for this CoffSymbol."""
         return next(
             (record for record in self.auxiliary_records if isinstance(record, WeakExternalAux)),
             None,
@@ -402,7 +402,7 @@ class CoffObject:
 
     @property
     def architecture(self) -> str:
-        """Execute the architecture operation for the current toolkit workflow."""
+        """Return the architecture for this CoffObject."""
         if self.machine == IMAGE_FILE_MACHINE_I386:
             return "x86"
         if self.machine == IMAGE_FILE_MACHINE_AMD64:
@@ -410,20 +410,20 @@ class CoffObject:
         return f"unknown-0x{self.machine:04x}"
 
     def section(self, number: int) -> CoffSection:
-        """Execute the section operation for the current toolkit workflow."""
+        """Look up a COFF section by its one-based section number."""
         if number <= 0 or number > len(self.sections):
             raise ContractError(f"symbol references invalid section number {number}")
         return self.sections[number - 1]
 
     def find_symbols(self, name: str) -> list[CoffSymbol]:
-        """Execute the find symbols operation for the current toolkit workflow."""
+        """Find symbols."""
         candidates = {name}
         if self.machine == IMAGE_FILE_MACHINE_I386:
             candidates.update({f"_{name}", name.lstrip("_")})
         return [symbol for symbol in self.symbols if symbol.name in candidates]
 
     def symbol_by_index(self, index: int) -> CoffSymbol | None:
-        """Execute the symbol by index operation for the current toolkit workflow."""
+        """Look up a primary or auxiliary COFF symbol by its on-disk index."""
         return next((symbol for symbol in self.symbols if symbol.index == index), None)
 
     def to_dict(self) -> dict[str, Any]:
@@ -504,7 +504,7 @@ class ComdatResolution:
 
     @property
     def valid(self) -> bool:
-        """Execute the valid operation for the current toolkit workflow."""
+        """Report whether COMDAT resolution completed without conflicts."""
         return not self.conflicts
 
     def to_dict(self) -> dict[str, Any]:
@@ -547,7 +547,7 @@ _Reader = BinaryReader
 def _read_string_table(
     reader: _Reader, pointer_to_symbols: int, count: int, symbol_record_size: int
 ) -> bytes:
-    """Support read string table processing for internal toolkit callers."""
+    """Read string table."""
     offset = pointer_to_symbols + count * symbol_record_size
     if offset == len(reader.data):
         return b"\x04\x00\x00\x00"
@@ -560,7 +560,7 @@ def _read_string_table(
 
 
 def _string_at(table: bytes, offset: int, context: str) -> str:
-    """Support string at processing for internal toolkit callers."""
+    """Decode a NUL-terminated UTF-8 string at a validated COFF string-table offset."""
     if offset < 4 or offset >= len(table):
         raise FormatError(f"{context} string-table offset is invalid: {offset}")
     end = table.find(b"\x00", offset)
@@ -570,7 +570,7 @@ def _string_at(table: bytes, offset: int, context: str) -> str:
 
 
 def _decode_symbol_name(raw: bytes, table: bytes) -> str:
-    """Support decode symbol name processing for internal toolkit callers."""
+    """Decode symbol name."""
     if raw[:4] == b"\x00\x00\x00\x00":
         offset = struct.unpack_from("<I", raw, 4)[0]
         return _string_at(table, offset, "symbol")
@@ -578,7 +578,7 @@ def _decode_symbol_name(raw: bytes, table: bytes) -> str:
 
 
 def _decode_section_name(raw: bytes, table: bytes) -> str:
-    """Support decode section name processing for internal toolkit callers."""
+    """Decode section name."""
     inline = raw.rstrip(b"\x00").decode("ascii", errors="replace")
     if inline.startswith("/") and inline[1:].isdigit():
         return _string_at(table, int(inline[1:]), "section")
@@ -648,7 +648,7 @@ def _parse_auxiliary_records(
     raw_records: Sequence[bytes],
     symbol_record_size: int,
 ) -> tuple[CoffAuxRecord, ...]:
-    """Support parse auxiliary records processing for internal toolkit callers."""
+    """Parse auxiliary records."""
     if not raw_records:
         return ()
     if storage_class == IMAGE_SYM_CLASS_FILE:
@@ -699,14 +699,14 @@ def _parse_auxiliary_records(
 
 
 def _read_addend(raw_data: bytes, offset: int, width: int | None) -> int | None:
-    """Support read addend processing for internal toolkit callers."""
+    """Read addend."""
     if width is None or width not in {1, 2, 4, 8} or offset < 0 or offset + width > len(raw_data):
         return None
     return int.from_bytes(raw_data[offset : offset + width], "little", signed=False)
 
 
 def parse_coff_bytes(data: bytes, *, path: Path | None = None) -> CoffObject:
-    """Parse coff bytes for the current toolkit workflow."""
+    """Parse COFF bytes."""
     reader = _Reader(data)
     (
         variant,
@@ -905,7 +905,7 @@ def parse_coff_bytes(data: bytes, *, path: Path | None = None) -> CoffObject:
 
 
 def parse_coff(path: Path) -> CoffObject:
-    """Parse coff for the current toolkit workflow."""
+    """Parse COFF."""
     resolved = path.resolve()
     if not resolved.is_file():
         raise ContractError(f"COFF object does not exist: {resolved}")
@@ -913,7 +913,7 @@ def parse_coff(path: Path) -> CoffObject:
 
 
 def extract_symbol(obj: CoffObject, name: str, *, size: int | None = None) -> ExtractedSymbol:
-    """Extract symbol for the current toolkit workflow."""
+    """Extract symbol."""
     matches = [symbol for symbol in obj.find_symbols(name) if symbol.section_number > 0]
     if not matches:
         available = sorted(symbol.name for symbol in obj.symbols if symbol.section_number > 0)
@@ -969,7 +969,7 @@ def extract_symbol(obj: CoffObject, name: str, *, size: int | None = None) -> Ex
 
 
 def collect_comdat_candidates(objects: Sequence[CoffObject]) -> tuple[ComdatCandidate, ...]:
-    """Execute the collect comdat candidates operation for the current toolkit workflow."""
+    """Collect comdat candidates."""
     candidates: list[ComdatCandidate] = []
     for object_index, obj in enumerate(objects):
         object_id = str(obj.path) if obj.path is not None else f"memory:{obj.raw_sha256}"
@@ -1098,7 +1098,7 @@ def resolve_comdats(objects: Sequence[CoffObject]) -> ComdatResolution:
 
 
 def _encode_name(name: str, strings: bytearray) -> bytes:
-    """Support encode name processing for internal toolkit callers."""
+    """Encode name."""
     encoded = name.encode("utf-8")
     if len(encoded) <= 8:
         return encoded.ljust(8, b"\x00")
@@ -1110,7 +1110,7 @@ def _encode_name(name: str, strings: bytearray) -> bytes:
 def _section_aux_bytes(
     *, length: int, relocation_count: int, checksum: int, associative_section: int, selection: int
 ) -> bytes:
-    """Support section aux bytes processing for internal toolkit callers."""
+    """Encode a classic COFF section-definition auxiliary symbol record."""
     return struct.pack(
         "<IHHIhBBH",
         length,
@@ -1242,7 +1242,7 @@ def build_synthetic_coff_object(
 
 
 def synthetic_symbol_indices(symbols: Sequence[SyntheticSymbolSpec]) -> dict[str, int]:
-    """Execute the synthetic symbol indices operation for the current toolkit workflow."""
+    """Map synthetic symbol names to their final on-disk COFF indices."""
     result: dict[str, int] = {}
     index = 0
     for symbol in symbols:
@@ -1305,7 +1305,7 @@ def build_comdat_coff(
     characteristics: int = IMAGE_SCN_CNT_CODE | IMAGE_SCN_MEM_EXECUTE | IMAGE_SCN_MEM_READ,
     relocations: Iterable[CoffRelocation] = (),
 ) -> bytes:
-    """Build comdat coff for the current toolkit workflow."""
+    """Build comdat COFF."""
     if selection not in COMDAT_SELECTION_NAMES or selection == 0:
         raise ContractError("invalid COMDAT selection")
     checksum = int.from_bytes(bytes.fromhex(sha256_bytes(data))[:4], "little")
@@ -1367,7 +1367,7 @@ def write_synthetic_coff(
     machine: int = IMAGE_FILE_MACHINE_I386,
     relocations: Iterable[CoffRelocation] = (),
 ) -> dict[str, Any]:
-    """Write synthetic coff for the current toolkit workflow."""
+    """Write synthetic COFF."""
     payload = build_synthetic_coff(
         code=code, symbol_name=symbol_name, machine=machine, relocations=relocations
     )
@@ -1385,7 +1385,7 @@ def write_synthetic_coff_object(
     machine: int = IMAGE_FILE_MACHINE_I386,
     timestamp: int = 0,
 ) -> dict[str, Any]:
-    """Write synthetic coff object for the current toolkit workflow."""
+    """Write synthetic COFF object."""
     payload = build_synthetic_coff_object(
         sections=sections, symbols=symbols, machine=machine, timestamp=timestamp
     )

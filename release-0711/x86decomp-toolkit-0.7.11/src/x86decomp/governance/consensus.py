@@ -1,4 +1,4 @@
-"""Provide the current runtime implementation for the `x86decomp.governance.consensus` module."""
+"""Compute and record governance consensus decisions."""
 from __future__ import annotations
 
 import json
@@ -10,14 +10,14 @@ from .store import GovernanceStore
 
 
 class ConsensusEngine:
-    """Coordinate consensus engine behavior for the current toolkit workflow."""
+    """Manage ConsensusEngine through `record`, `scan`, `conflicts`."""
     def __init__(self, store: GovernanceStore):
-        """Initialize the instance with validated constructor state."""
+        """Initialize ConsensusEngine with `store`."""
         self.store = store
         self.store.initialize()
 
     def record(self, subject_kind: str, subject_id: str, property_name: str, value: Any, *, adapter_name: str, adapter_version: str, evidence_id: str, independence_group: str, confidence: float = 1.0, actor: str = "adapter") -> str:
-        """Record record for the current toolkit workflow."""
+        """Record data in consensus engine."""
         if not 0.0 <= confidence <= 1.0:
             raise ContractError("confidence must be in [0,1]")
         observation_id = random_id("obs")
@@ -30,7 +30,7 @@ class ConsensusEngine:
         return observation_id
 
     def scan(self, *, subject_kind: str | None = None, subject_id: str | None = None) -> list[dict[str, Any]]:
-        """Execute the scan operation for the current toolkit workflow."""
+        """Scan consensus engine."""
         clauses: list[str] = []
         args: list[Any] = []
         if subject_kind:
@@ -73,11 +73,11 @@ class ConsensusEngine:
         return results
 
     def conflicts(self) -> list[dict[str, Any]]:
-        """Execute the conflicts operation for the current toolkit workflow."""
+        """Return the conflicts for this ConsensusEngine."""
         return [item for item in self.scan() if item["status"] == "conflict"]
 
     def resolve(self, subject_kind: str, subject_id: str, property_name: str, selected_value: Any, *, method: str, rationale: str, actor: str = "analyst", lock: bool = False) -> str:
-        """Resolve resolve for the current toolkit workflow."""
+        """Resolve consensus engine data."""
         scans = [item for item in self.scan(subject_kind=subject_kind, subject_id=subject_id) if item["property_name"] == property_name]
         if not scans:
             raise ContractError("no observations exist for consensus subject")
@@ -99,7 +99,7 @@ class ConsensusEngine:
         return resolution_id
 
     def explain(self, subject_kind: str, subject_id: str, property_name: str) -> dict[str, Any]:
-        """Execute the explain operation for the current toolkit workflow."""
+        """Explain ConsensusEngine for ConsensusEngine."""
         scan = next((item for item in self.scan(subject_kind=subject_kind, subject_id=subject_id) if item["property_name"] == property_name), None)
         if not scan:
             raise KeyError((subject_kind, subject_id, property_name))

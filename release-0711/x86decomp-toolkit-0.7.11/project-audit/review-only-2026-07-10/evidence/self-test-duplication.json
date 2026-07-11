@@ -1,0 +1,38 @@
+[
+  {
+    "file": "test_adapter_capabilities.py",
+    "same_without_docstrings": true,
+    "source_sha256": "47dde51aa511486350597ec6a786e4be9ed9bc229b02e9cd8d12baff0874f133",
+    "packaged_sha256": "aef940d89f5de3c9395b64b0d0f2b5af1c50ee923f8f81ccd3fa44d86ceca4cc"
+  },
+  {
+    "file": "test_adapter_detection_resolution.py",
+    "same_without_docstrings": true,
+    "source_sha256": "7bd6c6fd94d35d1d0773bc1afd6d8b54e63cc8cafbfad512bed398b8f267cd1e",
+    "packaged_sha256": "0bbc8b61e7b6265c5388ece028a6306a8f0aa9df7fbf8f5253e135e9618c0000"
+  },
+  {
+    "file": "test_archive_security.py",
+    "same_without_docstrings": true,
+    "source_sha256": "14bc490ccfb85d8128b72f44afd3e949fed6c9c74b13dd9fff64ed2edcb80a65",
+    "packaged_sha256": "c9a85a238d72824ef8e346e340dc2607f0ce75d17c102e8d1fb5812973e6c60a"
+  },
+  {
+    "file": "test_cli_and_installation.py",
+    "same_without_docstrings": true,
+    "source_sha256": "fd636ec4313e3bb50c3d38d6a32c4e6a6d64866ba87064cd37d4f6e92b5c06ba",
+    "packaged_sha256": "d0e12b263bb5c3653605a8dcc49f08622ead6b67ed2f04a3864c3cfdca11a169"
+  },
+  {
+    "file": "test_config_models.py",
+    "same_without_docstrings": true,
+    "source_sha256": "2a0ea2ddce38b40acc27cad53bd77822186b8e70ebaee405796b758f683d2ed3",
+    "packaged_sha256": "f9e1bf8dc24dcb6262fa774d149f5ab28b7214146a6b86e2cfc544efe32f3f3e"
+  },
+  {
+    "file": "test_inventory_reports_process.py",
+    "same_without_docstrings": true,
+    "source_sha256": "4cc4d734640af3ef4816a0d5150d6152b8514f2ae80e4e0257aab9c74abbd3d6",
+    "packaged_sha256": "f8186d271848a6e4b44352ce1a858ee10cc1aaccd75c818c3ab7ad4ba5e3c13d"
+  }
+]

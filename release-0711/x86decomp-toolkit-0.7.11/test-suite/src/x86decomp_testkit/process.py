@@ -1,4 +1,4 @@
-"""Provide the installed test-suite implementation for the `x86decomp_testkit.process` module."""
+"""Provide process support for the standalone verification harness."""
 from __future__ import annotations
 
 import os
@@ -25,7 +25,7 @@ def run_process_test(
     event_logger: JsonlEventLogger | None = None,
     accepted_return_codes: tuple[int, ...] = (0,),
 ) -> TestResult:
-    """Run process test for the current toolkit workflow."""
+    """Run process test."""
     started_at = utc_now()
     started = time.monotonic()
     test_directory = output_directory / "tests" / test_id.replace("/", "_").replace(":", "_")
@@ -89,7 +89,7 @@ def run_process_test(
 
 
 def blocked_result(test_id: str, suite: str, missing_adapters: list[str], summary: str | None = None) -> TestResult:
-    """Execute the blocked result operation for the current toolkit workflow."""
+    """Build a blocked test result that names all unavailable required adapters."""
     now = utc_now()
     return TestResult(
         test_id=test_id,

@@ -48,7 +48,7 @@ class ContentStore:
     """Immutable SHA-256 store rooted at ``root``."""
 
     def __init__(self, root: Path):
-        """Initialize the instance with validated constructor state."""
+        """Initialize ContentStore with `root`."""
         self.root = root.resolve()
         self.objects = self.root / "objects" / "sha256"
         self.metadata = self.root / "metadata"

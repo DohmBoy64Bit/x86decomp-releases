@@ -1,11 +1,11 @@
-"""Provide the installed test-suite implementation for the `x86decomp_testkit.adapters.catalog` module."""
+"""Provide catalog support for the standalone verification harness."""
 from __future__ import annotations
 
 from ..models import AdapterKind, AdapterSpec
 
 
 def adapter_catalog() -> dict[str, AdapterSpec]:
-    """Execute the adapter catalog operation for the current toolkit workflow."""
+    """Return the immutable catalog of adapters supported by the harness."""
     specs = [
         AdapterSpec(
             "python",

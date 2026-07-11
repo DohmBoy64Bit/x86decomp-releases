@@ -18,7 +18,7 @@ _TEMPLATE_SCHEMA_VERSION = 1
 
 
 def _artifact_roles(pack: dict[str, Any]) -> set[str]:
-    """Support artifact roles processing for internal toolkit callers."""
+    """Index target-pack artifacts by their declared semantic roles."""
     return {str(item.get("role")) for item in pack.get("artifacts", []) if isinstance(item, dict)}
 
 
@@ -86,7 +86,7 @@ def derive_template_contract(target_pack: Path) -> dict[str, Any]:
 
 
 def _write_project_helper(path: Path) -> None:
-    """Support write project helper processing for internal toolkit callers."""
+    """Write project helper."""
     script = '''#!/usr/bin/env python3
 """Project-local helper for the generated x86decomp workflow."""
 from __future__ import annotations

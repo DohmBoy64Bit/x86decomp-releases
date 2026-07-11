@@ -1,4 +1,4 @@
-"""Provide the installed test-suite implementation for the `x86decomp_testkit.self_tests.test_cli_and_installation` module."""
+"""Provide test CLI and installation support for the standalone verification harness."""
 from __future__ import annotations
 
 import subprocess
@@ -29,7 +29,7 @@ def test_install_python_command_and_failure(tmp_path: Path, monkeypatch: pytest.
     commands: list[list[str]] = []
 
     def run_ok(command, check=False):
-        """Run ok for the current toolkit workflow."""
+        """Run ok."""
         commands.append(command)
         return subprocess.CompletedProcess(command, 0)
 
@@ -38,7 +38,7 @@ def test_install_python_command_and_failure(tmp_path: Path, monkeypatch: pytest.
     assert commands == [["python", "-m", "pip", "install", "p==1"]]
 
     def run_bad(command, check=False):
-        """Run bad for the current toolkit workflow."""
+        """Run bad."""
         return subprocess.CompletedProcess(command, 7)
 
     monkeypatch.setattr(installation.subprocess, "run", run_bad)

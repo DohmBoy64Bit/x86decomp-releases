@@ -14,7 +14,7 @@ from .util import sha256_bytes, utc_now, write_json
 
 
 def rva_to_file_offset(image: Any, rva: int) -> int:
-    """Execute the rva to file offset operation for the current toolkit workflow."""
+    """Translate an RVA to a validated file offset in a PE image."""
     if rva < 0:
         raise ContractError("RVA must be non-negative")
     if rva < image.size_of_headers:
@@ -31,7 +31,7 @@ def rva_to_file_offset(image: Any, rva: int) -> int:
 
 
 def extract_pe_bytes(path: Path, *, rva: int, size: int) -> tuple[Any, bytes]:
-    """Extract pe bytes for the current toolkit workflow."""
+    """Extract PE bytes."""
     if size <= 0:
         raise ContractError("PE extraction size must be positive")
     image = parse_pe(path)
@@ -49,7 +49,7 @@ def extract_pe_bytes(path: Path, *, rva: int, size: int) -> tuple[Any, bytes]:
 
 
 def _masked_copy(data: bytes, masks: list[tuple[int, int, str]]) -> bytes:
-    """Support masked copy processing for internal toolkit callers."""
+    """Return a byte copy with relocation-sensitive ranges normalized to zero."""
     result = bytearray(data)
     for offset, width, _reason in masks:
         if offset < 0 or width <= 0 or offset + width > len(result):
@@ -59,7 +59,7 @@ def _masked_copy(data: bytes, masks: list[tuple[int, int, str]]) -> bytes:
 
 
 def _candidate_relocation_masks(relocations: tuple[CoffRelocation, ...], machine: int) -> list[tuple[int, int, str]]:
-    """Support candidate relocation masks processing for internal toolkit callers."""
+    """Build candidate-byte mask ranges from COFF relocation records."""
     masks: list[tuple[int, int, str]] = []
     for relocation in relocations:
         width = relocation.width(machine)
@@ -76,7 +76,7 @@ def _candidate_relocation_masks(relocations: tuple[CoffRelocation, ...], machine
 
 
 def _pe_base_relocation_masks(image: Any, *, function_rva: int, size: int) -> list[tuple[int, int, str]]:
-    """Support pe base relocation masks processing for internal toolkit callers."""
+    """Build target-byte mask ranges from PE base relocations inside a function."""
     masks: list[tuple[int, int, str]] = []
     for relocation in image.base_relocations:
         if function_rva <= relocation.rva < function_rva + size:
@@ -95,7 +95,7 @@ def compare_pe_function_to_coff_symbol(
     symbol_name: str,
     report_path: Path | None = None,
 ) -> dict[str, Any]:
-    """Compare pe function to coff symbol for the current toolkit workflow."""
+    """Compare PE function to COFF symbol."""
     image, target = extract_pe_bytes(pe_path, rva=function_rva, size=function_size)
     obj = parse_coff(coff_path)
     expected_machine = image.machine

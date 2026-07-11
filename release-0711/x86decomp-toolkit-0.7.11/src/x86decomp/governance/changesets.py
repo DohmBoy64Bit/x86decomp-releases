@@ -1,4 +1,4 @@
-"""Provide the current runtime implementation for the `x86decomp.governance.changesets` module."""
+"""Create and validate governance change sets."""
 from __future__ import annotations
 
 import json
@@ -16,7 +16,7 @@ class ChangeSet:
 
     @staticmethod
     def export(store: GovernanceStore, output: str | Path, *, after_hash: str | None = None) -> dict[str, Any]:
-        """Execute the export operation for the current toolkit workflow."""
+        """Export change set."""
         store.initialize()
         with store.connect() as connection:
             if after_hash:
@@ -42,7 +42,7 @@ class ChangeSet:
 
     @staticmethod
     def inspect(path: str | Path) -> dict[str, Any]:
-        """Execute the inspect operation for the current toolkit workflow."""
+        """Inspect change set."""
         path = Path(path).resolve()
         with zipfile.ZipFile(path) as archive:
             infos = archive.infolist()
@@ -69,7 +69,7 @@ class ChangeSet:
 
     @classmethod
     def apply(cls, store: GovernanceStore, path: str | Path, *, actor: str = "analyst") -> dict[str, Any]:
-        """Execute the apply operation for the current toolkit workflow."""
+        """Apply an operation to change set."""
         inspected = cls.inspect(path)
         if not inspected["passed"]:
             raise ContractError("changeset integrity failed")

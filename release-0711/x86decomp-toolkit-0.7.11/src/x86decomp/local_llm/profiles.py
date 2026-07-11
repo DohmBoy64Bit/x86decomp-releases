@@ -87,7 +87,7 @@ def provider_catalog() -> dict[str, Any]:
 
 
 def _normalized_base_url(value: str) -> str:
-    """Support normalized base url processing for internal toolkit callers."""
+    """Normalize a local model endpoint URL and reject unsupported schemes or hosts."""
     if not isinstance(value, str) or not value.strip():
         raise ContractError("base_url must be a non-empty string")
     parsed = urlsplit(value.strip())
@@ -177,7 +177,7 @@ def create_profile(
 
 
 def load_profile(path: Path) -> dict[str, Any]:
-    """Load profile for the current toolkit workflow."""
+    """Load profile."""
     value = load_json(path)
     if not isinstance(value, dict):
         raise ContractError("local-model profile must be a JSON object")

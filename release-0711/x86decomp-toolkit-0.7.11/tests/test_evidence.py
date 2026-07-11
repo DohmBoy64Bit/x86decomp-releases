@@ -10,7 +10,7 @@ from x86decomp.models import ClaimState, EvidenceKind
 
 
 class EvidenceTests(unittest.TestCase):
-    """Coordinate evidence tests behavior for the current toolkit workflow."""
+    """Group regression tests covering Evidence behavior."""
     def test_three_independent_sources_verify_claim(self) -> None:
         """Verify three independent sources verify claim behavior."""
         with tempfile.TemporaryDirectory() as temp:

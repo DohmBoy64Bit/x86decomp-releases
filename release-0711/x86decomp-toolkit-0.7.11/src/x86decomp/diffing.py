@@ -11,7 +11,7 @@ from .util import sha256_bytes, utc_now, write_json
 
 
 def compare_bytes(target: bytes, candidate: bytes, *, max_mismatches: int = 64) -> dict[str, Any]:
-    """Compare bytes for the current toolkit workflow."""
+    """Compare bytes."""
     if max_mismatches < 1:
         raise ContractError("max_mismatches must be positive")
     common = min(len(target), len(candidate))
@@ -65,7 +65,7 @@ def compare_files(
     max_mismatches: int = 64,
     report_path: Path | None = None,
 ) -> dict[str, Any]:
-    """Compare files for the current toolkit workflow."""
+    """Compare files."""
     if not target_path.is_file() or not candidate_path.is_file():
         raise ContractError("both target and candidate must be existing files")
     report = compare_bytes(

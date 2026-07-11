@@ -1,4 +1,4 @@
-"""Provide the installed test-suite implementation for the `x86decomp_testkit.models` module."""
+"""Provide models support for the standalone verification harness."""
 from __future__ import annotations
 
 from dataclasses import asdict, dataclass, field
@@ -102,14 +102,14 @@ class RunSummary:
     configuration: dict[str, Any]
 
     def counts(self) -> dict[str, int]:
-        """Execute the counts operation for the current toolkit workflow."""
+        """Return the counts for this RunSummary."""
         counts = {status.value: 0 for status in Status}
         for result in self.test_results:
             counts[result.status.value] += 1
         return counts
 
     def exit_code(self) -> int:
-        """Execute the exit code operation for the current toolkit workflow."""
+        """Return the exit code for this RunSummary."""
         counts = self.counts()
         if counts[Status.FAIL.value] or counts[Status.ERROR.value]:
             return 1
@@ -138,5 +138,5 @@ class RunSummary:
 
 
 def normalized_path(value: str | Path) -> str:
-    """Normalize d path for the current toolkit workflow."""
+    """Normalize an optional filesystem path for deterministic serialization."""
     return str(Path(value).expanduser().resolve())

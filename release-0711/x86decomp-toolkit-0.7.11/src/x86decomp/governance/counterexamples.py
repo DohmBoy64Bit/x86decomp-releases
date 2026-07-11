@@ -1,4 +1,4 @@
-"""Provide the current runtime implementation for the `x86decomp.governance.counterexamples` module."""
+"""Record, minimize, and promote governance counterexamples."""
 from __future__ import annotations
 
 import json
@@ -13,15 +13,15 @@ Predicate = Callable[[bytes], bool]
 
 
 class CounterexampleStore:
-    """Coordinate counterexample store behavior for the current toolkit workflow."""
+    """Manage counterexample store state and operations."""
     def __init__(self, store: GovernanceStore):
-        """Initialize the instance with validated constructor state."""
+        """Initialize CounterexampleStore with `store`."""
         self.store = store
         self.store.initialize()
         self.root = self.store.project_root / "counterexamples"
 
     def add(self, scope_kind: str, scope_id: str, payload: bytes | str | Path, *, predicate: dict[str, Any], provenance: dict[str, Any] | None = None, actor: str = "validator") -> str:
-        """Execute the add operation for the current toolkit workflow."""
+        """Add a record to counterexample store."""
         data = payload if isinstance(payload, bytes) else Path(payload).read_bytes()
         if not data:
             raise ContractError("counterexample payload must not be empty")
@@ -40,7 +40,7 @@ class CounterexampleStore:
         return counterexample_id
 
     def minimize(self, counterexample_id: str, predicate: Predicate, *, actor: str = "validator", max_tests: int = 10000) -> dict[str, Any]:
-        """Execute the minimize operation for the current toolkit workflow."""
+        """Minimize CounterexampleStore for CounterexampleStore."""
         item = self.get(counterexample_id)
         data = Path(item["absolute_payload_path"]).read_bytes()
         if not predicate(data):
@@ -66,7 +66,7 @@ class CounterexampleStore:
         return {"counterexample_id": counterexample_id, "old_size": len(data), "new_size": len(minimized), "tests": tests, "sha256": digest}
 
     def promote_to_regression(self, counterexample_id: str, destination_root: str | Path, *, actor: str = "analyst") -> dict[str, Any]:
-        """Execute the promote to regression operation for the current toolkit workflow."""
+        """Promote to regression for CounterexampleStore."""
         item = self.get(counterexample_id)
         destination = Path(destination_root) / f"{counterexample_id}.bin"
         destination.parent.mkdir(parents=True, exist_ok=True)
@@ -83,7 +83,7 @@ class CounterexampleStore:
         return {"fixture": str(destination), "metadata": str(metadata), "sha256": digest}
 
     def get(self, counterexample_id: str) -> dict[str, Any]:
-        """Execute the get operation for the current toolkit workflow."""
+        """Return data from counterexample store."""
         with self.store.connect() as connection:
             row = connection.execute("SELECT * FROM governance_counterexamples WHERE counterexample_id=?", (counterexample_id,)).fetchone()
         if not row:
@@ -95,7 +95,7 @@ class CounterexampleStore:
         return result
 
     def list(self) -> list[dict[str, Any]]:
-        """Execute the list operation for the current toolkit workflow."""
+        """List records in counterexample store."""
         with self.store.connect() as connection:
             ids = [row[0] for row in connection.execute("SELECT counterexample_id FROM governance_counterexamples ORDER BY created_at").fetchall()]
         return [self.get(item_id) for item_id in ids]

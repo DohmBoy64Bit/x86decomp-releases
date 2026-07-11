@@ -22,7 +22,7 @@ from .util import load_json, sha256_file, utc_now, write_json
 
 
 def _version(executable: str) -> dict[str, Any]:
-    """Support version processing for internal toolkit callers."""
+    """Query a tool executable for the version text captured in a reproduction record."""
     path = shutil.which(executable)
     if path is None:
         return {"available": False, "requested": executable}
@@ -54,7 +54,7 @@ def build_reproduction_manifest(
     output: Path | None = None,
     required_tools: list[str] | None = None,
 ) -> dict[str, Any]:
-    """Build reproduction manifest for the current toolkit workflow."""
+    """Build reproduction manifest."""
     root = project_root.resolve()
     project = load_json(root / "project.json")
     binary = Path(project["binary"]["path"])
@@ -118,7 +118,7 @@ def build_reproduction_manifest(
 
 
 def verify_reproduction_manifest(project_root: Path, manifest_path: Path) -> dict[str, Any]:
-    """Verify reproduction manifest for the current toolkit workflow."""
+    """Verify reproduction manifest."""
     root = project_root.resolve()
     manifest = load_json(manifest_path)
     if not isinstance(manifest, dict) or manifest.get("schema_version") != 1:

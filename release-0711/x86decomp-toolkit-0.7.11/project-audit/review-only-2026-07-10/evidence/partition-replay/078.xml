@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="1" time="0.277" timestamp="2026-07-10T18:53:01.960691+00:00" hostname="0c658486d65f"><testcase classname="tests.test_production" name="test_release_gate_is_explicit_and_truth_scoped" time="0.063" /></testsuite></testsuites>

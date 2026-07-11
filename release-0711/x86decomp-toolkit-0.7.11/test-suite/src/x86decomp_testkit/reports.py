@@ -1,4 +1,4 @@
-"""Provide the installed test-suite implementation for the `x86decomp_testkit.reports` module."""
+"""Provide reports support for the standalone verification harness."""
 from __future__ import annotations
 
 import html
@@ -10,13 +10,13 @@ from .models import RunSummary, Status
 
 
 def write_json_report(summary: RunSummary, path: Path) -> None:
-    """Write json report for the current toolkit workflow."""
+    """Write JSON report."""
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(summary.to_dict(), indent=2, sort_keys=True, ensure_ascii=False) + "\n", encoding="utf-8")
 
 
 def write_adapter_report(adapter_results: list[Any], path: Path) -> None:
-    """Write adapter report for the current toolkit workflow."""
+    """Write adapter report."""
     path.parent.mkdir(parents=True, exist_ok=True)
     payload = {
         "schema_version": 1,
@@ -26,7 +26,7 @@ def write_adapter_report(adapter_results: list[Any], path: Path) -> None:
 
 
 def _status_icon(status: Status) -> str:
-    """Support status icon processing for internal toolkit callers."""
+    """Map a harness result status to its Markdown report icon."""
     return {
         Status.PASS: "PASS",
         Status.FAIL: "FAIL",
@@ -36,7 +36,7 @@ def _status_icon(status: Status) -> str:
 
 
 def write_markdown_report(summary: RunSummary, path: Path) -> None:
-    """Write markdown report for the current toolkit workflow."""
+    """Write markdown report."""
     counts = summary.counts()
     lines = [
         "# x86decomp comprehensive test report",
@@ -106,7 +106,7 @@ def write_markdown_report(summary: RunSummary, path: Path) -> None:
 
 
 def write_html_report(summary: RunSummary, path: Path) -> None:
-    """Write html report for the current toolkit workflow."""
+    """Write html report."""
     counts = summary.counts()
     rows = []
     for result in summary.test_results:

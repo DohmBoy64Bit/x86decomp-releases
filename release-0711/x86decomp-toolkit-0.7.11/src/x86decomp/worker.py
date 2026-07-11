@@ -33,7 +33,7 @@ class WorkerLimits:
     max_processes: int = 512
 
     def validate(self) -> None:
-        """Validate validate for the current toolkit workflow."""
+        """Validate worker limits inputs and state."""
         for name, value in vars(self).items():
             if not isinstance(value, int) or isinstance(value, bool) or value <= 0:
                 raise ContractError(f"worker limit {name} must be a positive integer")
@@ -92,7 +92,7 @@ class WorkerResult:
 
 
 def discover_worker_capabilities() -> dict[str, Any]:
-    """Discover worker capabilities for the current toolkit workflow."""
+    """Discover worker capabilities."""
     docker = shutil.which("docker")
     podman = shutil.which("podman")
     return {
@@ -107,7 +107,7 @@ def discover_worker_capabilities() -> dict[str, Any]:
 
 
 def _bounded_environment(extra: dict[str, str], working_directory: Path) -> dict[str, str]:
-    """Support bounded environment processing for internal toolkit callers."""
+    """Build the allowlisted environment passed to a worker subprocess."""
     allowed = {
         "PATH",
         "SYSTEMROOT",
@@ -154,7 +154,7 @@ def _preexec(limits: WorkerLimits) -> Any:
         return None
 
     def apply() -> None:
-        """Execute the apply operation for the current toolkit workflow."""
+        """Apply the requested operation."""
         import resource
 
         resource.setrlimit(resource.RLIMIT_CPU, (limits.cpu_seconds, limits.cpu_seconds + 1))
@@ -170,7 +170,7 @@ def _preexec(limits: WorkerLimits) -> Any:
 
 
 def _confined_paths(root: Path, values: tuple[Path, ...], *, must_exist: bool) -> tuple[Path, ...]:
-    """Support confined paths processing for internal toolkit callers."""
+    """Resolve worker paths and require them to remain inside the workspace."""
     root = root.resolve()
     result: list[Path] = []
     for value in values:
@@ -187,7 +187,7 @@ def _confined_paths(root: Path, values: tuple[Path, ...], *, must_exist: bool) -
 
 
 def _container_command(request: WorkerRequest, runtime: str) -> tuple[str, ...]:
-    """Support container command processing for internal toolkit callers."""
+    """Build the container-runtime command for a confined worker task."""
     if request.container_image is None or not request.container_image.strip():
         raise ContractError("container isolation requires container_image")
     work = request.working_directory.resolve()
@@ -219,7 +219,7 @@ def execute_worker_request(
     report_path: Path | None = None,
     cancel_check: Callable[[], bool] | None = None,
 ) -> WorkerResult:
-    """Execute the execute worker request operation for the current toolkit workflow."""
+    """Execute worker request."""
     request.limits.validate()
     if not request.command or not all(isinstance(item, str) and item and "\x00" not in item for item in request.command):
         raise ContractError("worker command must be a non-empty string array")
@@ -251,7 +251,7 @@ def execute_worker_request(
         raise ContractError("worker isolation must be local_bounded or container")
 
     def resource_wrapped_command(value: tuple[str, ...]) -> tuple[str, ...]:
-        """Execute the resource wrapped command operation for the current toolkit workflow."""
+        """Wrap a worker command with the configured resource limits."""
         if os.name != "posix":
             return value
         wrapper = (

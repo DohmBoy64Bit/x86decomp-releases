@@ -8,6 +8,7 @@ artifact references, and project integrity snapshots.
 from __future__ import annotations
 
 import gzip
+import inspect
 import json
 import os
 import shutil
@@ -521,6 +522,18 @@ def project_gc(project_root: Path, *, dry_run: bool = True) -> dict[str, Any]:
     return ContentStore(root / str(project.get("content_store", "artifacts"))).garbage_collect(dry_run=dry_run)
 
 
+def _extract_validated_backup(archive: tarfile.TarFile, destination: Path) -> None:
+    """Extract prevalidated members with the strongest filter supported by Python."""
+    parameters = inspect.signature(archive.extractall).parameters
+    if "filter" in parameters:
+        archive.extractall(destination, filter="data")
+    else:
+        # Python 3.11.0-3.11.3 do not expose extraction filters. The caller has
+        # already rejected absolute paths, traversal, links, devices, and size
+        # violations for every member before this compatibility path executes.
+        archive.extractall(destination)
+
+
 def restore_project_backup(archive_path: Path, destination: Path) -> dict[str, Any]:
     """Safely restore a project backup into an empty destination."""
     archive_path = archive_path.resolve()
@@ -554,7 +567,7 @@ def restore_project_backup(archive_path: Path, destination: Path) -> dict[str, A
                 total += max(member.size, 0)
                 if total > 8 * 1024 * 1024 * 1024:
                     raise ContractError("backup expands beyond 8 GiB safety limit")
-            archive.extractall(staging, filter="data")
+            _extract_validated_backup(archive, staging)
         extracted_root = staging / root_name
         if not (extracted_root / "project.json").is_file():
             raise ContractError("backup does not contain project.json")

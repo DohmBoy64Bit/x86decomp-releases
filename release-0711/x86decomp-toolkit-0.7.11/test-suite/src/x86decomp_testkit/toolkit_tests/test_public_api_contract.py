@@ -1,4 +1,4 @@
-"""Provide the installed test-suite implementation for the `x86decomp_testkit.toolkit_tests.test_public_api_contract` module."""
+"""Provide test public API contract support for the standalone verification harness."""
 from __future__ import annotations
 
 import importlib.util
@@ -287,7 +287,7 @@ def test_dynamorio_runner_with_fake_subprocess(tmp_path: Path, monkeypatch: pyte
     drrun.chmod(drrun.stat().st_mode | stat.S_IXUSR)
 
     def fake_run(command, **kwargs):
-        """Execute the fake run operation for the current toolkit workflow."""
+        """Return the deterministic subprocess result used by this contract test."""
         logdir = Path(command[command.index("-logdir") + 1])
         (logdir / "trace.log").write_text(
             "DRCOV VERSION: 2\nDRCOV FLAVOR: drcov\nModule Table: version 2, count 1\n"
@@ -322,7 +322,7 @@ def test_model_status_enums_expose_stable_public_values() -> None:
 
 
 def _verified_store(project: Path) -> tuple[EvidenceStore, str, str]:
-    """Support verified store processing for internal toolkit callers."""
+    """Create an evidence store containing a fully verified three-source claim."""
     store = EvidenceStore(project)
     evidence = [
         store.add_evidence(kind=EvidenceKind.STATIC_ANALYSIS, source="ghidra", locator="f", assertion="x", independent_group="g1"),
@@ -460,21 +460,21 @@ def test_streamable_http_mcp_public_methods(monkeypatch: pytest.MonkeyPatch) -> 
     from x86decomp.mcp import StreamableHTTPMCPClient
 
     class Headers:
-        """Coordinate headers behavior for the current toolkit workflow."""
+        """Manage Headers through `get`, `get_content_type`."""
         def get(self, key: str, default=None):
-            """Execute the get operation for the current toolkit workflow."""
+            """Return data from headers."""
             return "session-1" if key.lower() == "mcp-session-id" else default
 
         def get_content_type(self) -> str:
-            """Execute the get content type operation for the current toolkit workflow."""
+            """Return content type."""
             return "application/json"
 
     class Response:
-        """Coordinate response behavior for the current toolkit workflow."""
+        """Manage Response through `read`."""
         headers = Headers()
 
         def __init__(self, payload: dict):
-            """Initialize the instance with validated constructor state."""
+            """Initialize Response with `payload`."""
             self.payload = payload
 
         def __enter__(self):
@@ -486,11 +486,11 @@ def test_streamable_http_mcp_public_methods(monkeypatch: pytest.MonkeyPatch) -> 
             return False
 
         def read(self) -> bytes:
-            """Read read for the current toolkit workflow."""
+            """Read data from response."""
             return json.dumps(self.payload).encode("utf-8")
 
     def fake_urlopen(request, timeout=0):
-        """Execute the fake urlopen operation for the current toolkit workflow."""
+        """Return the deterministic HTTP response used by this contract test."""
         payload = json.loads(request.data.decode("utf-8"))
         method = payload["method"]
         if method == "notifications/initialized":

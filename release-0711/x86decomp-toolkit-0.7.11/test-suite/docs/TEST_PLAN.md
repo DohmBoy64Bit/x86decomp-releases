@@ -2,7 +2,7 @@
 
 ## Exact current inventory
 
-The feature catalog pins 117 Python modules, 946 function and method bodies, 166 root commands, 59 canonical groups, 239 canonical routes, 97 schemas, 3 Ghidra scripts, and 37 adapter contracts.
+The feature catalog pins 117 Python modules, 952 function and method bodies, 166 root commands, 59 canonical groups, 239 canonical routes, 97 schemas, 3 Ghidra scripts, and 37 adapter contracts.
 
 ## Required suites
 

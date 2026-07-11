@@ -1,0 +1,23 @@
+{
+  "index": 63,
+  "partition": "tests/test_production.py::test_orchestrator_resume_failure_retry_and_cancel",
+  "targets": [
+    "tests/test_production.py::test_orchestrator_resume_failure_retry_and_cancel"
+  ],
+  "command": [
+    "/opt/pyvenv/bin/python3",
+    "-m",
+    "pytest",
+    "-q",
+    "tests/test_production.py::test_orchestrator_resume_failure_retry_and_cancel",
+    "-p",
+    "no:cacheprovider",
+    "--junitxml=/mnt/data/x86decomp-audit-external/partition-replay/063.xml"
+  ],
+  "returncode": 0,
+  "tests": 1,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "output_tail": ".                                                                        [100%]\n1 passed in 7.11s\n"
+}

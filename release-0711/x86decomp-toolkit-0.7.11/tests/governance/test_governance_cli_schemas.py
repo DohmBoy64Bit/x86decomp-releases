@@ -59,7 +59,7 @@ def test_all_governance_leaf_commands_parse_help() -> None:
     leaves = []
 
     def walk(current, prefix=()):
-        """Execute the walk operation for the current toolkit workflow."""
+        """Return the walk derived from `current`, `prefix`."""
         children = []
         for action in current._actions:
             if action.__class__.__name__ == "_SubParsersAction":

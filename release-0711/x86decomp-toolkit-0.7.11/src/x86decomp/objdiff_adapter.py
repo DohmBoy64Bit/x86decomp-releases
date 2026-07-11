@@ -22,7 +22,7 @@ _ALLOWED_TOKENS = {"{target}", "{candidate}", "{output}", "{workdir}"}
 
 
 def _resolve_executable(value: Any) -> str:
-    """Support resolve executable processing for internal toolkit callers."""
+    """Resolve executable."""
     if not isinstance(value, str) or not value:
         raise ContractError("objdiff executable must be a non-empty string")
     explicit = Path(value).expanduser()
@@ -41,7 +41,7 @@ def run_objdiff_manifest(
     *,
     report_path: Path | None = None,
 ) -> dict[str, Any]:
-    """Run objdiff manifest for the current toolkit workflow."""
+    """Run objdiff manifest."""
     manifest = load_json(manifest_path)
     if not isinstance(manifest, dict) or manifest.get("schema_version") != 1:
         raise ContractError("objdiff manifest must be a schema_version 1 object")

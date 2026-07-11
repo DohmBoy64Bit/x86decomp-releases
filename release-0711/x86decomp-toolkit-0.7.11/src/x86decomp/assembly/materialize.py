@@ -1,4 +1,4 @@
-"""Provide the current runtime implementation for the `x86decomp.assembly.materialize` module."""
+"""Materialize assembly source, relocations, and COFF objects."""
 from __future__ import annotations
 
 import json
@@ -22,7 +22,7 @@ class AssemblerError(ContractError):
     """Assembler failure with source line numbers retained for focused fallback."""
 
     def __init__(self, message: str, *, line_numbers: Sequence[int] = ()) -> None:
-        """Initialize the instance with validated constructor state."""
+        """Initialize AssemblerError with `message`, `line_numbers`."""
         super().__init__(message)
         self.line_numbers = tuple(sorted(set(int(value) for value in line_numbers if value > 0)))
 
@@ -41,12 +41,12 @@ class InstructionCandidate:
 
     @property
     def end(self) -> int:
-        """Execute the end operation for the current toolkit workflow."""
+        """Return the exclusive end offset of this assembly unit."""
         return self.offset + self.size
 
 
 def _capstone() -> tuple[Any, Any]:
-    """Support capstone processing for internal toolkit callers."""
+    """Load the Capstone bindings or raise a dependency error."""
     try:
         import capstone  # type: ignore[import-not-found]
         from capstone import x86_const  # type: ignore[import-not-found]
@@ -56,14 +56,14 @@ def _capstone() -> tuple[Any, Any]:
 
 
 def _safe_symbol(name: str) -> bool:
-    """Support safe symbol processing for internal toolkit callers."""
+    """Normalize a symbol name for safe use in generated assembly."""
     return bool(_SAFE_SYMBOL_RE.fullmatch(name))
 
 
 def _preferred_addresses(
     symbol_map: Mapping[str, SymbolAddress], *, image_base: int
 ) -> dict[int, str]:
-    """Support preferred addresses processing for internal toolkit callers."""
+    """Return preferred instruction addresses keyed by source offset."""
     candidates: dict[int, list[str]] = {}
     for name, entry in symbol_map.items():
         if name.startswith("_") and name[1:] in symbol_map:
@@ -79,7 +79,7 @@ def _preferred_addresses(
 
 
 def _replace_address_token(op_str: str, address: int, symbol: str) -> str | None:
-    """Support replace address token processing for internal toolkit callers."""
+    """Replace one address token with its resolved symbolic form."""
     forms = {
         f"0x{address:x}",
         f"0X{address:X}",
@@ -100,7 +100,7 @@ def _instruction_candidates(
     symbol_map: Mapping[str, SymbolAddress],
     image_base: int,
 ) -> tuple[list[InstructionCandidate], set[str]]:
-    """Support instruction candidates processing for internal toolkit callers."""
+    """Enumerate candidate instruction encodings for one source unit."""
     capstone, x86_const = _capstone()
     mode = capstone.CS_MODE_32 if architecture == "x86" else capstone.CS_MODE_64
     engine = capstone.Cs(capstone.CS_ARCH_X86, mode)
@@ -195,7 +195,7 @@ def _render_source_with_line_map(
     fallback_offsets: set[int],
     externals: set[str],
 ) -> tuple[str, dict[int, int]]:
-    """Support render source with line map processing for internal toolkit callers."""
+    """Render source with line map."""
     lines = [
         ".intel_syntax noprefix",
         ".text",
@@ -230,7 +230,7 @@ def _render_source(
     fallback_offsets: set[int],
     externals: set[str],
 ) -> str:
-    """Support render source processing for internal toolkit callers."""
+    """Render source."""
     source, _ = _render_source_with_line_map(
         symbol=symbol,
         architecture=architecture,
@@ -242,7 +242,7 @@ def _render_source(
 
 
 def discover_assembler(architecture: str) -> list[str]:
-    """Discover assembler for the current toolkit workflow."""
+    """Discover assembler."""
     clang = shutil.which("clang")
     if clang is None and sys.platform == "win32":
         candidate = Path("C:/Program Files/LLVM/bin/clang.exe")
@@ -273,7 +273,7 @@ def assemble_coff(
     assembler_command: Sequence[str] | None = None,
     timeout_seconds: int = 60,
 ) -> dict[str, Any]:
-    """Execute the assemble coff operation for the current toolkit workflow."""
+    """Assemble generated source into a COFF object with the selected toolchain."""
     command = list(assembler_command or discover_assembler(architecture))
     if not command:
         raise ContractError("assembler command must not be empty")
@@ -319,7 +319,7 @@ def assemble_coff(
 
 
 def _unit_for_offset(units: Sequence[InstructionCandidate], offset: int) -> InstructionCandidate | None:
-    """Support unit for offset processing for internal toolkit callers."""
+    """Return the assembly source unit that contains an output offset."""
     return next((unit for unit in units if unit.offset <= offset < unit.end), None)
 
 

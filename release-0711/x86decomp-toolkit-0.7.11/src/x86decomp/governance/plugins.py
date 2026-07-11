@@ -1,4 +1,4 @@
-"""Provide the current runtime implementation for the `x86decomp.governance.plugins` module."""
+"""Install, validate, and invoke governance plugins."""
 from __future__ import annotations
 
 import json
@@ -15,15 +15,15 @@ PLUGIN_API_VERSION = "1"
 
 
 class PluginRegistry:
-    """Coordinate plugin registry behavior for the current toolkit workflow."""
+    """Manage plugin registry state and operations."""
     def __init__(self, store: GovernanceStore):
-        """Initialize the instance with validated constructor state."""
+        """Initialize PluginRegistry with `store`."""
         self.store = store
         self.store.initialize()
 
     @staticmethod
     def validate_manifest(manifest: dict[str, Any]) -> dict[str, Any]:
-        """Validate manifest for the current toolkit workflow."""
+        """Validate manifest."""
         required = {"name", "version", "api_version", "executable", "capabilities"}
         missing = sorted(required - set(manifest))
         failures = [f"missing field: {item}" for item in missing]
@@ -37,7 +37,7 @@ class PluginRegistry:
         return {"passed": not failures, "failures": failures, "resolved_executable": str(executable)}
 
     def install(self, manifest_path: str | Path, *, actor: str = "analyst") -> dict[str, Any]:
-        """Execute the install operation for the current toolkit workflow."""
+        """Install PluginRegistry for PluginRegistry."""
         path = Path(manifest_path).resolve()
         manifest = json.loads(path.read_text(encoding="utf-8"))
         validation = self.validate_manifest(manifest)
@@ -55,7 +55,7 @@ class PluginRegistry:
         return self.get(plugin_id)
 
     def get(self, plugin_id: str) -> dict[str, Any]:
-        """Execute the get operation for the current toolkit workflow."""
+        """Return data from plugin registry."""
         with self.store.connect() as connection:
             row = connection.execute("SELECT * FROM governance_plugin_records WHERE plugin_id=?", (plugin_id,)).fetchone()
         if not row:
@@ -66,13 +66,13 @@ class PluginRegistry:
         return result
 
     def list(self) -> list[dict[str, Any]]:
-        """Execute the list operation for the current toolkit workflow."""
+        """List records in plugin registry."""
         with self.store.connect() as connection:
             ids = [r[0] for r in connection.execute("SELECT plugin_id FROM governance_plugin_records ORDER BY name").fetchall()]
         return [self.get(item) for item in ids]
 
     def doctor(self, plugin_id: str) -> dict[str, Any]:
-        """Execute the doctor operation for the current toolkit workflow."""
+        """Diagnose PluginRegistry for PluginRegistry."""
         plugin = self.get(plugin_id)
         executable = Path(plugin["executable"])
         failures = []
@@ -83,7 +83,7 @@ class PluginRegistry:
         return {"plugin_id": plugin_id, "passed": not failures, "failures": failures, "enabled": plugin["enabled"]}
 
     def invoke(self, plugin_id: str, capability: str, request: dict[str, Any], *, timeout_seconds: int = 60, max_output_bytes: int = 16 * 1024 * 1024, actor: str = "system") -> dict[str, Any]:
-        """Execute the invoke operation for the current toolkit workflow."""
+        """Invoke PluginRegistry for PluginRegistry."""
         if not 1 <= timeout_seconds <= 3600:
             raise ContractError("timeout_seconds must be in [1,3600]")
         plugin = self.get(plugin_id)

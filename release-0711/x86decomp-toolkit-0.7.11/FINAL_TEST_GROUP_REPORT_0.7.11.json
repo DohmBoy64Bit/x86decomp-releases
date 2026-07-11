@@ -1,0 +1,68 @@
+{
+  "collected": 258,
+  "errors": 0,
+  "failures": 0,
+  "group_count": 6,
+  "groups": [
+    {
+      "errors": 0,
+      "failures": 0,
+      "group": "architecture_governance_native_reconstruction",
+      "junit_file": "final_group_1.xml",
+      "junit_sha256": "48e4861eea2d9c077a05f1a5212edb15de353f3e051a3314215ac22d491c0aba",
+      "skipped": 0,
+      "tests": 92
+    },
+    {
+      "errors": 0,
+      "failures": 0,
+      "group": "flat_audit_docs_compiler_integration",
+      "junit_file": "final_group_2.xml",
+      "junit_sha256": "28dc1f862eb58ab1d21aa7b77f540a77b5968988e65ccccb55dced342fda22b6",
+      "skipped": 0,
+      "tests": 42
+    },
+    {
+      "errors": 0,
+      "failures": 0,
+      "group": "linker_llm_mcp_memory_pdb_pe",
+      "junit_file": "final_group_3.xml",
+      "junit_sha256": "27a4864284a92d098f65ed3e763019c0b739156f9ca09848be7b1e92989dde45",
+      "skipped": 0,
+      "tests": 30
+    },
+    {
+      "errors": 0,
+      "failures": 0,
+      "group": "production",
+      "junit_file": "final_group_4a.xml",
+      "junit_sha256": "cdbb1fc51eb7e8d77af4dde0b839842417b0fc578df56d7308c5f2e6d4bf3d18",
+      "skipped": 0,
+      "tests": 22
+    },
+    {
+      "errors": 0,
+      "failures": 0,
+      "group": "project_release_second_audit_bundle",
+      "junit_file": "final_group_4b.xml",
+      "junit_sha256": "16519beccb92d218e0a0183ab71b73cbbbb7899d5daf612406a3eb0580fa7af2",
+      "skipped": 0,
+      "tests": 25
+    },
+    {
+      "errors": 0,
+      "failures": 0,
+      "group": "standalone_test_suite_and_public_contract",
+      "junit_file": "final_group_5.xml",
+      "junit_sha256": "81494d0badc32c283ceca5795a8402d41404c1f0be3eafa68fa66b75392a68f8",
+      "skipped": 0,
+      "tests": 47
+    }
+  ],
+  "passed": 258,
+  "release": "0.7.11",
+  "runner": "final-post-packaging-grouped-reconciliation",
+  "schema_version": 1,
+  "skipped": 0,
+  "tests": 258
+}

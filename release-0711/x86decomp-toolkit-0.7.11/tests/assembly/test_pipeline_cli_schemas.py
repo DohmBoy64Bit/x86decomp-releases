@@ -27,10 +27,10 @@ def _capstone_available() -> bool:
 
 
 def _leaf_commands(parser):
-    """Support leaf commands processing for internal toolkit callers."""
+    """Collect leaf command paths from an argparse parser tree."""
     output = []
     def walk(current, prefix=()):
-        """Execute the walk operation for the current toolkit workflow."""
+        """Return the walk derived from `current`, `prefix`."""
         children = []
         for action in current._actions:
             if action.__class__.__name__ == "_SubParsersAction":
@@ -46,7 +46,7 @@ def _leaf_commands(parser):
 
 
 def _manifest(tmp_path: Path) -> Path:
-    """Support manifest processing for internal toolkit callers."""
+    """Return the manifest derived from `tmp_path`."""
     raw = tmp_path / "function.bin"
     raw.write_bytes(bytes.fromhex("e8fb0f0000c3"))
     path = tmp_path / "manifest.json"

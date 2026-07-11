@@ -18,7 +18,7 @@ def register_toolchain(
     executables: dict[str, Path],
     metadata: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
-    """Execute the register toolchain operation for the current toolkit workflow."""
+    """Register toolchain."""
     if not toolchain_id or not family or not version:
         raise ContractError("toolchain id, family, and version are required")
     registry = load_json(registry_path) if registry_path.is_file() else {"schema_version": 1, "toolchains": {}}
@@ -45,7 +45,7 @@ def register_toolchain(
 
 
 def verify_toolchain(registry_path: Path, toolchain_id: str) -> dict[str, Any]:
-    """Verify toolchain for the current toolkit workflow."""
+    """Verify toolchain."""
     registry = load_json(registry_path)
     entry = registry.get("toolchains", {}).get(toolchain_id)
     if not isinstance(entry, dict):

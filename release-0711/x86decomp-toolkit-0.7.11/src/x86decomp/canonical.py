@@ -5,6 +5,7 @@ from __future__ import annotations
 import argparse
 import subprocess
 from collections import defaultdict
+from functools import lru_cache
 from typing import Any
 
 from x86decomp.cli_utils import run_cli
@@ -81,6 +82,7 @@ def _subparsers(parser: argparse.ArgumentParser) -> argparse._SubParsersAction[a
     raise ContractError(f"parser {parser.prog!r} has no subcommands")
 
 
+@lru_cache(maxsize=1)
 def _source_parsers() -> dict[str, argparse.ArgumentParser]:
     """Build the top-level parser for each capability owner.
 
@@ -93,6 +95,7 @@ def _source_parsers() -> dict[str, argparse.ArgumentParser]:
     }
 
 
+@lru_cache(maxsize=1)
 def _group_parsers() -> dict[tuple[str, str], argparse.ArgumentParser]:
     """Enumerate every ``(owner, group)`` command group across all owners.
 
@@ -106,6 +109,7 @@ def _group_parsers() -> dict[tuple[str, str], argparse.ArgumentParser]:
     return result
 
 
+@lru_cache(maxsize=1)
 def _leaf_parsers() -> dict[tuple[str, str, str], argparse.ArgumentParser]:
     """Enumerate every ``(owner, group, action)`` leaf command across all owners.
 
@@ -156,6 +160,7 @@ def _route_owner(group: str, action: str, owners: tuple[str, ...]) -> str:
     return owners[0]
 
 
+@lru_cache(maxsize=1)
 def canonical_routes() -> tuple[dict[str, str], ...]:
     """Compute the resolved canonical routing table.
 
@@ -173,6 +178,7 @@ def canonical_routes() -> tuple[dict[str, str], ...]:
     return tuple(routes)
 
 
+@lru_cache(maxsize=1)
 def canonical_groups() -> tuple[str, ...]:
     """Return the sorted set of canonical group names.
 

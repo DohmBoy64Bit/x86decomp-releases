@@ -16,7 +16,7 @@ from .util import load_json, utc_now, write_json
 
 
 def _function_prefix(view: PEView, rva: int, size: int = 24) -> bytes:
-    """Support function prefix processing for internal toolkit callers."""
+    """Read the bounded instruction prefix used for C++ thunk recognition."""
     if not view.valid_rva(rva, 1):
         return b""
     for length in range(size, 0, -1):
@@ -26,7 +26,7 @@ def _function_prefix(view: PEView, rva: int, size: int = 24) -> bytes:
 
 
 def _adjustor_thunk_candidate(view: PEView, rva: int) -> dict[str, Any] | None:
-    """Support adjustor thunk candidate processing for internal toolkit callers."""
+    """Recognize a supported this-adjusting thunk at the supplied RVA."""
     prefix = _function_prefix(view, rva)
     if not prefix:
         return None
@@ -61,7 +61,7 @@ def recover_cpp_model(
     map_path: Path | None = None,
     report_path: Path | None = None,
 ) -> dict[str, Any]:
-    """Execute the recover cpp model operation for the current toolkit workflow."""
+    """Recover C++ model."""
     if metadata_report is None:
         metadata = analyze_msvc_metadata(pe_path, object_paths=object_paths or (), map_path=map_path)
         metadata_source = "generated"

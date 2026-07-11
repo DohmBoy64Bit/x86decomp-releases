@@ -9,7 +9,7 @@ SEVERITIES={'informational','low','medium','high','critical'}
 class SecurityReview:
     """Record, query, and report security findings for a single reconstruction store."""
     def __init__(self,store:ReconstructionStore):
-        """Initialize the instance with validated constructor state."""
+        """Initialize SecurityReview with `store`."""
         self.store=store; store.initialize()
     def finding(self,rule_id:str,severity:str,subject_id:str,summary:str,*,evidence:list[dict[str,Any]],actor:str='analyst')->dict[str,Any]:
         """Record a single security finding with supporting evidence.

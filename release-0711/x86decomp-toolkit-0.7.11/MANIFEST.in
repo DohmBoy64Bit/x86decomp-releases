@@ -1,6 +1,9 @@
 include MANIFEST.sha256
-include .gitignore AGENTS.md CHANGELOG.md FEATURE_PARITY.md LICENSE Makefile PROJECT_MEMORY.md README.md SECURITY.md VERIFICATION.md
+include .gitignore AGENTS.md CHANGELOG.md FEATURE_PARITY.md LICENSE NOTICE Makefile PROJECT_MEMORY.md README.md SECURITY.md VERIFICATION.md mkdocs.yml
+include DOCSTRING_AUDIT_0.7.11.json DOCSTRING_AUDIT_0.7.11.md FINAL_TEST_GROUP_REPORT_0.7.11.json FINAL_TEST_PARTITION_REPORT_0.7.11.json RELEASE_VERIFICATION.json RELEASE_VERIFICATION.md
+include AUDIT_READ_RECEIPT_0.7.11.json AUDIT_REMEDIATION_VERIFICATION_0.7.11.json AUDIT_REMEDIATION_CHANGELOG.md ALL_FILE_MANIFEST_0.7.11.json
 recursive-include .github *.yml *.yaml
+graft project-audit
 recursive-include docs *.md *.txt
 recursive-include corpus *.c *.cpp
 recursive-include examples *.json *.c *.py *.bin

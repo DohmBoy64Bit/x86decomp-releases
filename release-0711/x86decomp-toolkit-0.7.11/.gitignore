@@ -17,3 +17,10 @@ test-suite/test-results/
 test-suite/.x86decomp-test-tools/
 test-suite/tools/
 test-suite/x86decomp-test.json
+.ruff_cache/
+.mypy_cache/
+.tox/
+/x86decomp-test.json
+/.x86decomp-test-tools/
+/test-results/
+/tools/

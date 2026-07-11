@@ -12,7 +12,7 @@ class HeaderManager:
     """Manage reconstructed header files and their declarations, include graph, and
     synthesized output, persisting all state through a :class:`ReconstructionStore`."""
     def __init__(self,store:ReconstructionStore):
-        """Initialize the instance with validated constructor state."""
+        """Initialize HeaderManager with `store`."""
         self.store=store; store.initialize()
     def create(self,path:str,*,visibility:str='private',actor:str='analyst')->dict[str,Any]:
         """Create a new proposed header record.

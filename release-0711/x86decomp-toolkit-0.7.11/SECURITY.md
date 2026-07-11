@@ -16,4 +16,6 @@ x86decomp processes untrusted binary artifacts. Static analysis is the default. 
 
 ## Reporting
 
-Security findings should include the affected command or module, artifact identity, reproduction steps, impact, and a minimal safe test case. Do not attach proprietary or unauthorized binaries.
+Send vulnerability reports privately to [cyborgplague1@gmail.com](mailto:cyborgplague1@gmail.com) before opening a public issue. Use a subject beginning with `x86decomp security:`. Include the affected command or module, release version, artifact identity or hash, reproduction steps, impact, and a minimal safe test case. Do not attach proprietary or unauthorized binaries.
+
+The maintainer will acknowledge receipt through the same private channel and coordinate disclosure after a fix or documented mitigation is available.

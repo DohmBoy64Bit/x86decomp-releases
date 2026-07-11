@@ -1,0 +1,203 @@
+{
+  "closed_findings": 9,
+  "closures": [
+    {
+      "changes": [
+        "scripts/audit-docstrings.py now emits deterministic content and separates --check from --write",
+        "Makefile verify invokes the non-mutating check target; regeneration is explicit via docstrings-update",
+        "README.md and docs/build-and-verification.md document the read-only gate",
+        "tests/test_review_remediation.py hashes both reports before and after --check"
+      ],
+      "id": "REL-001",
+      "limitations": [],
+      "severity": "High",
+      "status": "Closed \u2014 verified",
+      "title": "Documented verification sequence rewrites sealed reports before hash verification",
+      "verification": [
+        "python scripts/audit-docstrings.py --check returned 0 and reported no mismatches",
+        "Regression test proved the JSON and Markdown report bytes do not change",
+        "Final source manifests are regenerated only after all intentional edits and verified separately"
+      ]
+    },
+    {
+      "changes": [
+        "src/x86decomp/project_state.py feature-detects the TarFile.extractall filter parameter",
+        "Runtimes with filter support use filter=\"data\"; older 3.11 signatures extract only after the existing complete member/path/type validation",
+        "CI now pins Python 3.11.0 in addition to 3.12 and 3.13",
+        "Regression tests exercise both legacy and filtered extraction signatures"
+      ],
+      "id": "COR-001",
+      "limitations": [
+        "A CPython 3.11.0 binary was not available in the execution image; uv also reported no downloadable 3.11.0 build. The compatibility branch was verified with an exact legacy-signature test and is pinned for CI execution."
+      ],
+      "severity": "Medium",
+      "status": "Closed \u2014 verified by signature-contract tests",
+      "title": "Declared Python 3.11 minimum includes patch releases unsupported by backup restore",
+      "verification": [
+        "test_backup_extraction_supports_pre_filter_python passed",
+        "test_backup_extraction_uses_data_filter_when_available passed",
+        "The entire 268-test source inventory passed"
+      ]
+    },
+    {
+      "changes": [
+        "Replaced both LICENSE files with the complete Apache License 2.0 text",
+        "Added root and test-suite NOTICE files",
+        "Updated both MANIFEST.in files to include NOTICE"
+      ],
+      "id": "LIC-001",
+      "limitations": [
+        "This is a technical packaging remediation, not legal advice."
+      ],
+      "severity": "Medium",
+      "status": "Closed \u2014 source verified; package payload verified in final delivery report",
+      "title": "Distributed LICENSE files contain abbreviated notices rather than the full Apache-2.0 text",
+      "verification": [
+        "Both LICENSE files are byte-identical, exceed 10,000 bytes, and contain the complete terms headings",
+        "Regression tests require the complete text and both NOTICE files"
+      ]
+    },
+    {
+      "changes": [
+        "Replaced all 364 audit-identified generic docstrings across 128 files",
+        "Refined 127 initially mechanical replacements into behavior-specific summaries",
+        "Expanded scripts/audit-docstrings.py to detect every audited template family",
+        "Made reports deterministic and source-state-bound"
+      ],
+      "id": "DOC-001",
+      "limitations": [],
+      "severity": "Medium",
+      "status": "Closed \u2014 verified",
+      "title": "Docstring quality gate passes 364 generic low-information docstrings",
+      "verification": [
+        "215 Python files audited",
+        "215/215 modules, 163/163 classes, and 1,522/1,522 functions or methods have docstrings",
+        "Zero generic occurrences, zero missing docstrings, and zero repeated-leading-verb defects",
+        "tests/test_audit_fixes.py and tests/test_docstring_audit.py passed"
+      ]
+    },
+    {
+      "changes": [
+        "Added scripts/generate_command_reference.py as the reproducible source of command documentation",
+        "Generated JSON and Markdown references for 166 root commands, 239 canonical routes, and 405 parser nodes",
+        "Each node records summary, arguments/options/defaults, usage/help, success and error contracts, safety classification/note, example, and real-world use case",
+        "Added check/update Makefile targets, CI enforcement, and regression tests"
+      ],
+      "id": "DOC-002",
+      "limitations": [
+        "Examples intentionally use non-mutating --help invocations; destructive or environment-dependent workflows are documented but were not executed merely to validate prose."
+      ],
+      "severity": "Medium",
+      "status": "Closed \u2014 verified",
+      "title": "Detailed command documentation covers only a small fraction of the live command surface",
+      "verification": [
+        "Generator --check reports 405/405 current records with no mismatches",
+        "All 405 published --help examples parsed successfully against the live CLI",
+        "Command reference coverage counters are 405/405 for every required field"
+      ]
+    },
+    {
+      "changes": [
+        "Added scripts/verify_self_test_sync.py with a fixed six-pair inventory",
+        "The gate strips docstrings and compares normalized ASTs, preserving documentation freedom while enforcing executable equivalence",
+        "Added Makefile and CI enforcement"
+      ],
+      "id": "TEST-001",
+      "limitations": [],
+      "severity": "Low",
+      "status": "Closed \u2014 verified",
+      "title": "Six packaged self-test files duplicate source tests without an explicit synchronization gate",
+      "verification": [
+        "All six pairs pass the synchronization gate",
+        "A regression test mutates a packaged copy and proves the gate reports the exact mismatch",
+        "21/21 packaged self-tests pass independently"
+      ]
+    },
+    {
+      "changes": [
+        "Added bounded Ruff and Pyright versions to the dev extra",
+        "Added lint and typecheck Makefile targets and verify dependencies",
+        "Added Ruff and Pyright CI steps",
+        "Set an enforced Pyright basic source scope instead of an aspirational unenforced strict configuration",
+        "Corrected type-contract defects exposed in CLI claim serialization, COFF archive symbol access, metadata handling, SQL arguments, PE checksum typing, and related paths"
+      ],
+      "id": "MAINT-001",
+      "limitations": [],
+      "severity": "Low",
+      "status": "Closed \u2014 verified",
+      "title": "Strict lint/type configurations are not installable or enforced by the declared development workflow",
+      "verification": [
+        "Ruff completed with no findings",
+        "Pyright completed with zero errors, warnings, or information diagnostics",
+        "The tools were installed from the declared version ranges in an isolated target directory"
+      ]
+    },
+    {
+      "changes": [
+        "Registered argparse version action using x86decomp.__version__",
+        "Documented x86decomp --version in README.md"
+      ],
+      "id": "UX-001",
+      "limitations": [],
+      "severity": "Low",
+      "status": "Closed \u2014 verified",
+      "title": "Primary CLI exposes no version-reporting option",
+      "verification": [
+        "Parser regression test confirms exit status 0 and exact output: x86decomp 0.7.11"
+      ]
+    },
+    {
+      "changes": [
+        "Removed all 45 audited trailing-whitespace occurrences from active release files",
+        "Preserved the immutable historical review-only evidence subtree rather than rewriting audit evidence",
+        "Added a repository-wide regression scan outside that historical evidence subtree",
+        "Removed 116 compiled Python cache files present in the working baseline"
+      ],
+      "id": "REPO-001",
+      "limitations": [
+        "The original review named 17 files while its explicit affected-file list contained 14 active files; every listed active file and every reproducibly detected occurrence was cleaned."
+      ],
+      "severity": "Informational",
+      "status": "Closed \u2014 verified",
+      "title": "Forty-five trailing-whitespace lines remain in seventeen text files",
+      "verification": [
+        "Regression scan reports zero trailing-whitespace lines in active release text",
+        "No __pycache__, .pyc, .pytest_cache, .ruff_cache, build, or dist artifacts remain in the sealed source tree"
+      ]
+    }
+  ],
+  "created_at": "2026-07-10T00:00:00Z",
+  "open_findings": 0,
+  "release": "0.7.11",
+  "schema_version": 1,
+  "source_review_findings": 9,
+  "static_gates": {
+    "command_examples": "405/405 passed",
+    "command_reference": "passed",
+    "contracts_schema_java_static": "passed",
+    "corpus_sync": "24/24 passed",
+    "docstring_audit": "passed",
+    "mkdocs_strict": "passed with upstream MkDocs 2.0 advisory only",
+    "pyright": "0 errors, 0 warnings, 0 information diagnostics",
+    "ruff": "passed",
+    "self_test_sync": "6/6 passed"
+  },
+  "test_evidence": {
+    "packaged_self_tests": {
+      "errors": 0,
+      "failures": 0,
+      "passed": 21,
+      "skipped": 0,
+      "tests": 21
+    },
+    "source_inventory": {
+      "batches": 6,
+      "errors": 0,
+      "failures": 0,
+      "passed": 268,
+      "skipped": 0,
+      "tests": 268
+    },
+    "targeted_regression_tests": 23
+  }
+}

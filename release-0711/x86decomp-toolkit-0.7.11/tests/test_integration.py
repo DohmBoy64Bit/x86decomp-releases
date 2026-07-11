@@ -12,7 +12,7 @@ from x86decomp.integration import run_integration_scenarios
 
 
 def _write_program(path: Path, expression: str) -> None:
-    """Support write program processing for internal toolkit callers."""
+    """Write program."""
     path.write_text(
         "from pathlib import Path\n"
         "import sys\n"
@@ -25,7 +25,7 @@ def _write_program(path: Path, expression: str) -> None:
 
 
 def _manifest(tmp_path: Path, candidate_expression: str) -> Path:
-    """Support manifest processing for internal toolkit callers."""
+    """Return the manifest derived from `tmp_path`, `candidate_expression`."""
     tmp_path.mkdir(parents=True, exist_ok=True)
     target = tmp_path / "target.py"
     candidate = tmp_path / "candidate.py"

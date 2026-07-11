@@ -7,6 +7,7 @@ validated without reproducing the original instruction stream.
 
 from __future__ import annotations
 
+import re
 from dataclasses import dataclass, field
 from enum import StrEnum
 from pathlib import Path
@@ -18,14 +19,17 @@ from .memory import ProjectMemory
 from .util import load_json, utc_now, write_json
 
 
+_FUNCTION_ID_RE = re.compile(r"^pe-rva:[0-9a-fA-F]{8}$")
+
+
 class DecompilationMode(StrEnum):
-    """Coordinate decompilation mode behavior for the current toolkit workflow."""
+    """Enumerate supported decompilation mode values."""
     MATCHING = "matching"
     FUNCTIONAL = "functional"
 
 
 class SourceStage(StrEnum):
-    """Coordinate source stage behavior for the current toolkit workflow."""
+    """Enumerate supported source stage values."""
     ORIGINAL_BYTES = "original_bytes"
     GENERATED_ASSEMBLY = "generated_assembly"
     DECOMPILER_CANDIDATE = "decompiler_candidate"
@@ -34,7 +38,7 @@ class SourceStage(StrEnum):
 
 
 class MatchingStatus(StrEnum):
-    """Coordinate matching status behavior for the current toolkit workflow."""
+    """Enumerate supported matching status values."""
     NOT_STARTED = "not_started"
     DECOMPILED = "decompiled"
     COMPILES = "compiles"
@@ -47,7 +51,7 @@ class MatchingStatus(StrEnum):
 
 
 class FunctionalStatus(StrEnum):
-    """Coordinate functional status behavior for the current toolkit workflow."""
+    """Enumerate supported functional status values."""
     NOT_STARTED = "not_started"
     DECOMPILED = "decompiled"
     COMPILES = "compiles"
@@ -99,7 +103,7 @@ class FunctionWorkflow:
 
     @classmethod
     def from_dict(cls, value: Any) -> "FunctionWorkflow":
-        """Execute the from dict operation for the current toolkit workflow."""
+        """Build function workflow from validated mapping data."""
         if not isinstance(value, dict):
             raise ContractError("function workflow must be an object")
         function_id = value.get("function_id")
@@ -131,8 +135,10 @@ class FunctionWorkflow:
 
 
 def _state_path(project_root: Path, function_id: str) -> Path:
-    """Support state path processing for internal toolkit callers."""
-    safe = function_id.replace(":", "_")
+    """Return the contained workflow path for a validated PE function identifier."""
+    if not _FUNCTION_ID_RE.fullmatch(function_id):
+        raise ContractError("function_id must use pe-rva:XXXXXXXX")
+    safe = function_id.replace(":", "_", 1)
     return project_root.resolve() / "functions" / safe / "workflow.json"
 
 
@@ -143,7 +149,7 @@ def initialize_function_workflow(
     rva: int | None = None,
     modes: set[DecompilationMode] | None = None,
 ) -> FunctionWorkflow:
-    """Initialize function workflow for the current toolkit workflow."""
+    """Initialize function workflow."""
     if function_id is None:
         if rva is None:
             raise ContractError("function_id or rva is required")
@@ -168,7 +174,7 @@ def initialize_function_workflow(
 
 
 def load_function_workflow(project_root: Path, function_id: str) -> FunctionWorkflow:
-    """Load function workflow for the current toolkit workflow."""
+    """Load function workflow."""
     path = _state_path(project_root, function_id)
     if not path.is_file():
         raise ContractError(f"missing function workflow: {path}")
@@ -176,7 +182,7 @@ def load_function_workflow(project_root: Path, function_id: str) -> FunctionWork
 
 
 def save_function_workflow(project_root: Path, workflow: FunctionWorkflow) -> None:
-    """Execute the save function workflow operation for the current toolkit workflow."""
+    """Save function workflow."""
     workflow.updated_at = utc_now()
     write_json(_state_path(project_root, workflow.function_id), workflow.to_dict())
 
@@ -195,7 +201,7 @@ def update_function_workflow(
     blocker: str | None = None,
     allow_regression: bool = False,
 ) -> FunctionWorkflow:
-    """Update function workflow for the current toolkit workflow."""
+    """Update function workflow."""
     workflow = load_function_workflow(project_root, function_id)
     if matching_status is not None:
         if DecompilationMode.MATCHING not in workflow.selected_modes:

@@ -1,36 +1,19 @@
 # x86decomp-toolkit 0.7.11 release verification
 
-Second-audit fix release for the current unified toolkit surface.
+Status: **PASS**
 
-## Surface
+- Audit finding closure: **24 / 24 (100%)**
+- Final post-packaging inventory: **258 passed, 0 failed, 0 errors, 0 skipped** across **6 reconciled groups**; see `FINAL_TEST_GROUP_REPORT_0.7.11.json`
+- Exact isolated inventory: **258 passed, 0 failed, 0 errors, 0 skipped** across **86 partitions**; see `FINAL_TEST_PARTITION_REPORT_0.7.11.json`
+- Monolithic exact inventory: **258 passed, 0 failed, 0 skipped** in **69.55 seconds**
+- Measured coverage: **70.19% line/statements**, **43.93% branch**, **63.28% combined line-plus-branch**
+- Docstrings: **212/212 modules, 160/160 classes, 1,474/1,474 functions and methods**; zero audited quality defects
+- Contracts/schemas/Java syntax: PASS
+- pyflakes: PASS
+- strict MkDocs Material build: PASS
+- 24-file corpus package-data synchronization: PASS
+- toolkit and test-suite wheel/sdist build, clean install, entry-point launch, and `pip check`: PASS
+- packaged toolkit source comparison: 141 wheel files and 141 sdist files matched current source
+- root, standalone test-suite, and exact all-release-file SHA-256 inventories: regenerated and verified after final report generation
 
-- root_commands: 166
-- canonical_groups: 59
-- canonical_routes: 239
-- schemas: 97
-- adapters: 37
-
-## New or changed
-
-- Fixed all nine concrete issues from the second 0.7.10 audit report.
-- Added `x86decomp.binary_reader.BinaryReader` and moved PE/COFF bounded-reader behavior to the shared helper.
-- Added pyflakes as a declared dev dependency and hard validation gate.
-- Added command-level tests for `plugin validate`, `llm prompt`, `llm generate --report`, `llm cpp-generate --report`, and reconstruction CLI JSON error handling.
-- Added module docstrings to the integration Python examples.
-- Clarified plan-only CLI contracts and synchronized command/docs/architecture artifacts.
-
-## Verification performed
-
-- compileall: PASS for `src`, `test-suite/src`, `tests`, and `scripts`.
-- pyflakes: PASS for `src`, `scripts`, and `test-suite/src`.
-- validate-contracts: PASS.
-- source manifests: PASS; root 449/449 and test-suite 63/63 after final report files were written.
-- segmented pytest: PASS for the file-level root toolkit, test-suite, self-test, and public API contract files recorded in `SECOND_AUDIT_FIX_VERIFICATION_0.7.11.json`.
-- wheels/sdists: built for toolkit and test-suite.
-- clean install and `pip check`: PASS.
-- final extracted ZIP verification: PASS for source manifests, compileall, pyflakes, and validate-contracts.
-
-## Not claimed
-
-- A single monolithic `pytest tests` completion is not claimed because all-at-once/sequential sandbox runs timed out even though individual files passed.
-- Live external local-model runtime availability or model quality is not claimed.
+The 100% figure is finding closure. It is not a code-coverage claim; exact code-coverage values are shown above and in `AUDIT_REMEDIATION_VERIFICATION_0.7.11.json`.

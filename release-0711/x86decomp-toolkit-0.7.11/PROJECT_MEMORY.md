@@ -23,6 +23,6 @@ The toolkit is a unified current-release product. All retained behavior lives in
 The source tree is distributed as a complete release. Package managers or replacement source archives handle installation. The toolkit does not mutate an older source tree through embedded release installers.
 
 
-## 0.7.11 adapter-capability note
+## Adapter capability decision
 
-The test harness now records protocol capabilities separately from product adapter identities. `lm-studio-http` can satisfy OpenAI-compatible local-LLM coverage through a loopback `/v1/models` probe without marking `ollama`, `llama-server`, `localai`, or `vllm` as installed.
+Release 0.7.11 records protocol compatibility independently from product installation. The maintained rationale and exact probe semantics live in `docs/adapter-capabilities.md`.

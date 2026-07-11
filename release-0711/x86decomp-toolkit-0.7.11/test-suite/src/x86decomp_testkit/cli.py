@@ -1,4 +1,4 @@
-"""Provide the installed test-suite implementation for the `x86decomp_testkit.cli` module."""
+"""Provide CLI support for the standalone verification harness."""
 from __future__ import annotations
 
 import argparse
@@ -15,7 +15,7 @@ from .orchestrator import feature_catalog_path, run_all
 
 
 def _path(value: str) -> Path:
-    """Support path processing for internal toolkit callers."""
+    """Expand and resolve a command-line filesystem path."""
     return Path(value).expanduser()
 
 
@@ -59,7 +59,7 @@ def _base_parser() -> argparse.ArgumentParser:
 
 
 def _load(path: Path) -> TestConfig:
-    """Support load processing for internal toolkit callers."""
+    """Load the requested operation."""
     if not path.is_file():
         raise FileNotFoundError(f"configuration does not exist: {path}; run init-config first")
     return load_config(path.resolve())

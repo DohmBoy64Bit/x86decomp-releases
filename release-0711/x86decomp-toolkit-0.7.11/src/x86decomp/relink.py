@@ -21,7 +21,7 @@ from .util import load_json, sha256_file, utc_now, write_json
 
 
 def run_full_relink(manifest_path: Path, *, report_path: Path | None = None) -> dict[str, Any]:
-    """Run full relink for the current toolkit workflow."""
+    """Run full relink."""
     manifest = load_json(manifest_path)
     if not isinstance(manifest, dict):
         raise ContractError("relink manifest must be an object")

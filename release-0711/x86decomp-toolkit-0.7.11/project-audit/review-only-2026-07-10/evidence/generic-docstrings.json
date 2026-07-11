@@ -1,0 +1,2561 @@
+{
+  "symbols": 1853,
+  "count": 364,
+  "patterns": {
+    "perform_operation": 231,
+    "run_requested": 2,
+    "initialize_component": 43,
+    "provide_implementation": 60,
+    "represent_data_behavior": 28
+  },
+  "hits": [
+    {
+      "pattern": "perform_operation",
+      "path": "scripts/run-pytest-partitions.py",
+      "line": 22,
+      "symbol": "_environment",
+      "first": "Perform the environment operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "scripts/run-pytest-partitions.py",
+      "line": 53,
+      "symbol": "_partitions",
+      "first": "Perform the partitions operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "scripts/run-pytest-partitions.py",
+      "line": 67,
+      "symbol": "_junit_counts",
+      "first": "Perform the junit counts operation."
+    },
+    {
+      "pattern": "run_requested",
+      "path": "scripts/run-pytest-partitions.py",
+      "line": 77,
+      "symbol": "run",
+      "first": "Run the requested operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "scripts/sync-release-contracts.py",
+      "line": 27,
+      "symbol": "root_commands",
+      "first": "Perform the root commands operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "scripts/sync-release-contracts.py",
+      "line": 34,
+      "symbol": "module_area",
+      "first": "Perform the module area operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/abi.py",
+      "line": 61,
+      "symbol": "optional_nonnegative",
+      "first": "Perform the optional nonnegative operation."
+    },
+    {
+      "pattern": "initialize_component",
+      "path": "src/x86decomp/analysis_db.py",
+      "line": 73,
+      "symbol": "__init__",
+      "first": "Initialize the instance with validated constructor state."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/artifacts.py",
+      "line": 16,
+      "symbol": "function_id_from_rva",
+      "first": "Perform the function identifier from RVA operation."
+    },
+    {
+      "pattern": "provide_implementation",
+      "path": "src/x86decomp/assembly/annotation.py",
+      "line": 1,
+      "symbol": "<module>",
+      "first": "Provide the current runtime implementation for the `x86decomp.assembly.annotation` module."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/assembly/annotation.py",
+      "line": 63,
+      "symbol": "_chunk_comments",
+      "first": "Perform the chunk comments operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/assembly/annotation.py",
+      "line": 96,
+      "symbol": "annotate_source",
+      "first": "Perform the annotate source operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/assembly/annotation.py",
+      "line": 121,
+      "symbol": "byte_directive_lines",
+      "first": "Perform the byte directive lines operation."
+    },
+    {
+      "pattern": "provide_implementation",
+      "path": "src/x86decomp/assembly/cli.py",
+      "line": 1,
+      "symbol": "<module>",
+      "first": "Provide the current runtime implementation for the `x86decomp.assembly.cli` module."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/assembly/cli.py",
+      "line": 29,
+      "symbol": "_json_array",
+      "first": "Perform the JSON array operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/assembly/cli.py",
+      "line": 42,
+      "symbol": "_int",
+      "first": "Perform the int operation."
+    },
+    {
+      "pattern": "provide_implementation",
+      "path": "src/x86decomp/assembly/materialize.py",
+      "line": 1,
+      "symbol": "<module>",
+      "first": "Provide the current runtime implementation for the `x86decomp.assembly.materialize` module."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/assembly/materialize.py",
+      "line": 48,
+      "symbol": "_capstone",
+      "first": "Perform the capstone operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/assembly/materialize.py",
+      "line": 58,
+      "symbol": "_safe_symbol",
+      "first": "Perform the safe symbol operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/assembly/materialize.py",
+      "line": 63,
+      "symbol": "_preferred_addresses",
+      "first": "Perform the preferred addresses operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/assembly/materialize.py",
+      "line": 81,
+      "symbol": "_replace_address_token",
+      "first": "Perform the replace address token operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/assembly/materialize.py",
+      "line": 94,
+      "symbol": "_instruction_candidates",
+      "first": "Perform the instruction candidates operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/assembly/materialize.py",
+      "line": 268,
+      "symbol": "assemble_coff",
+      "first": "Perform the assemble COFF operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/assembly/materialize.py",
+      "line": 321,
+      "symbol": "_unit_for_offset",
+      "first": "Perform the unit for offset operation."
+    },
+    {
+      "pattern": "initialize_component",
+      "path": "src/x86decomp/assembly/materialize.py",
+      "line": 24,
+      "symbol": "__init__",
+      "first": "Initialize the instance with validated constructor state."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/assembly/materialize.py",
+      "line": 43,
+      "symbol": "end",
+      "first": "Perform the end operation."
+    },
+    {
+      "pattern": "provide_implementation",
+      "path": "src/x86decomp/assembly/pipeline.py",
+      "line": 1,
+      "symbol": "<module>",
+      "first": "Provide the current runtime implementation for the `x86decomp.assembly.pipeline` module."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/assembly/pipeline.py",
+      "line": 40,
+      "symbol": "_function_bytes",
+      "first": "Perform the function bytes operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/assembly/pipeline.py",
+      "line": 60,
+      "symbol": "_symbol_map",
+      "first": "Perform the symbol map operation."
+    },
+    {
+      "pattern": "represent_data_behavior",
+      "path": "src/x86decomp/assembly/pipeline.py",
+      "line": 84,
+      "symbol": "AssemblyPipeline",
+      "first": "Represent assembly pipeline data and behavior."
+    },
+    {
+      "pattern": "initialize_component",
+      "path": "src/x86decomp/assembly/pipeline.py",
+      "line": 86,
+      "symbol": "__init__",
+      "first": "Initialize the instance with validated constructor state."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/assembly/pipeline.py",
+      "line": 91,
+      "symbol": "batch",
+      "first": "Perform the batch operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/assembly/pipeline.py",
+      "line": 319,
+      "symbol": "report",
+      "first": "Perform the report operation."
+    },
+    {
+      "pattern": "provide_implementation",
+      "path": "src/x86decomp/assembly/relocations.py",
+      "line": 1,
+      "symbol": "<module>",
+      "first": "Provide the current runtime implementation for the `x86decomp.assembly.relocations` module."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/assembly/relocations.py",
+      "line": 49,
+      "symbol": "normalize_symbol_map",
+      "first": "Perform the normalize symbol map operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/assembly/relocations.py",
+      "line": 100,
+      "symbol": "supported_relocations",
+      "first": "Perform the supported relocations operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/assembly/relocations.py",
+      "line": 139,
+      "symbol": "_object_symbol_target",
+      "first": "Perform the object symbol target operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/assembly/relocations.py",
+      "line": 187,
+      "symbol": "_compute_value",
+      "first": "Perform the compute value operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/assembly/relocations.py",
+      "line": 34,
+      "symbol": "safe_name",
+      "first": "Perform the safe name operation."
+    },
+    {
+      "pattern": "provide_implementation",
+      "path": "src/x86decomp/assembly/store.py",
+      "line": 1,
+      "symbol": "<module>",
+      "first": "Provide the current runtime implementation for the `x86decomp.assembly.store` module."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/benchmarks.py",
+      "line": 17,
+      "symbol": "classification_metrics",
+      "first": "Perform the classification metrics operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/cli.py",
+      "line": 175,
+      "symbol": "_json_object",
+      "first": "Perform the JSON object operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/cli.py",
+      "line": 326,
+      "symbol": "_mcp_client",
+      "first": "Perform the MCP client operation."
+    },
+    {
+      "pattern": "run_requested",
+      "path": "src/x86decomp/cli.py",
+      "line": 338,
+      "symbol": "_run",
+      "first": "Run the requested operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/coff.py",
+      "line": 128,
+      "symbol": "relocation_name",
+      "first": "Perform the relocation name operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/coff.py",
+      "line": 134,
+      "symbol": "relocation_width",
+      "first": "Perform the relocation width operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/coff.py",
+      "line": 140,
+      "symbol": "relocation_is_pc_relative",
+      "first": "Perform the relocation is pc relative operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/coff.py",
+      "line": 562,
+      "symbol": "_string_at",
+      "first": "Perform the string at operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/coff.py",
+      "line": 1110,
+      "symbol": "_section_aux_bytes",
+      "first": "Perform the section aux bytes operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/coff.py",
+      "line": 1244,
+      "symbol": "synthetic_symbol_indices",
+      "first": "Perform the synthetic symbol indices operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/coff.py",
+      "line": 156,
+      "symbol": "width",
+      "first": "Perform the width operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/coff.py",
+      "line": 186,
+      "symbol": "selection_name",
+      "first": "Perform the selection name operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/coff.py",
+      "line": 282,
+      "symbol": "is_comdat",
+      "first": "Perform the is comdat operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/coff.py",
+      "line": 287,
+      "symbol": "comdat_selection_name",
+      "first": "Perform the comdat selection name operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/coff.py",
+      "line": 292,
+      "symbol": "alignment_power",
+      "first": "Perform the alignment power operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/coff.py",
+      "line": 302,
+      "symbol": "alignment",
+      "first": "Perform the alignment operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/coff.py",
+      "line": 345,
+      "symbol": "is_function",
+      "first": "Perform the is function operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/coff.py",
+      "line": 352,
+      "symbol": "section_definition",
+      "first": "Perform the section definition operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/coff.py",
+      "line": 360,
+      "symbol": "function_definition",
+      "first": "Perform the function definition operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/coff.py",
+      "line": 368,
+      "symbol": "weak_external",
+      "first": "Perform the weak external operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/coff.py",
+      "line": 404,
+      "symbol": "architecture",
+      "first": "Perform the architecture operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/coff.py",
+      "line": 412,
+      "symbol": "section",
+      "first": "Perform the section operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/coff.py",
+      "line": 425,
+      "symbol": "symbol_by_index",
+      "first": "Perform the symbol by index operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/coff.py",
+      "line": 506,
+      "symbol": "valid",
+      "first": "Perform the valid operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/compiler.py",
+      "line": 59,
+      "symbol": "_tool_version",
+      "first": "Perform the tool version operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/compiler.py",
+      "line": 88,
+      "symbol": "compiler_cache_key",
+      "first": "Perform the compiler cache key operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/compiler_lab.py",
+      "line": 16,
+      "symbol": "_variant_arguments",
+      "first": "Perform the variant arguments operation."
+    },
+    {
+      "pattern": "initialize_component",
+      "path": "src/x86decomp/content_store.py",
+      "line": 50,
+      "symbol": "__init__",
+      "first": "Initialize the instance with validated constructor state."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/convergence.py",
+      "line": 20,
+      "symbol": "_section_kind",
+      "first": "Perform the section kind operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/cpp_recovery.py",
+      "line": 18,
+      "symbol": "_function_prefix",
+      "first": "Perform the function prefix operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/cpp_recovery.py",
+      "line": 28,
+      "symbol": "_adjustor_thunk_candidate",
+      "first": "Perform the adjustor thunk candidate operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/disassembly.py",
+      "line": 14,
+      "symbol": "_capstone",
+      "first": "Perform the capstone operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/disassembly.py",
+      "line": 55,
+      "symbol": "_is_known_address",
+      "first": "Perform the is known address operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/disassembly.py",
+      "line": 149,
+      "symbol": "control_flow_edges",
+      "first": "Perform the control flow edges operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/disassembly.py",
+      "line": 226,
+      "symbol": "cross_check_ghidra_instructions",
+      "first": "Perform the cross check Ghidra instructions operation."
+    },
+    {
+      "pattern": "initialize_component",
+      "path": "src/x86decomp/evidence.py",
+      "line": 28,
+      "symbol": "__init__",
+      "first": "Initialize the instance with validated constructor state."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/evidence.py",
+      "line": 166,
+      "symbol": "attach_evidence",
+      "first": "Perform the attach evidence operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/evidence.py",
+      "line": 259,
+      "symbol": "require_verified",
+      "first": "Perform the require verified operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/exe_diff.py",
+      "line": 16,
+      "symbol": "rva_to_file_offset",
+      "first": "Perform the RVA to file offset operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/exe_diff.py",
+      "line": 51,
+      "symbol": "_masked_copy",
+      "first": "Perform the masked copy operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/exe_diff.py",
+      "line": 61,
+      "symbol": "_candidate_relocation_masks",
+      "first": "Perform the candidate relocation masks operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/exe_diff.py",
+      "line": 78,
+      "symbol": "_pe_base_relocation_masks",
+      "first": "Perform the PE base relocation masks operation."
+    },
+    {
+      "pattern": "initialize_component",
+      "path": "src/x86decomp/governance/campaigns.py",
+      "line": 17,
+      "symbol": "__init__",
+      "first": "Initialize the instance with validated constructor state."
+    },
+    {
+      "pattern": "initialize_component",
+      "path": "src/x86decomp/governance/candidates.py",
+      "line": 17,
+      "symbol": "__init__",
+      "first": "Initialize the instance with validated constructor state."
+    },
+    {
+      "pattern": "provide_implementation",
+      "path": "src/x86decomp/governance/changesets.py",
+      "line": 1,
+      "symbol": "<module>",
+      "first": "Provide the current runtime implementation for the `x86decomp.governance.changesets` module."
+    },
+    {
+      "pattern": "provide_implementation",
+      "path": "src/x86decomp/governance/cli.py",
+      "line": 1,
+      "symbol": "<module>",
+      "first": "Provide the current runtime implementation for the `x86decomp.governance.cli` module."
+    },
+    {
+      "pattern": "provide_implementation",
+      "path": "src/x86decomp/governance/consensus.py",
+      "line": 1,
+      "symbol": "<module>",
+      "first": "Provide the current runtime implementation for the `x86decomp.governance.consensus` module."
+    },
+    {
+      "pattern": "represent_data_behavior",
+      "path": "src/x86decomp/governance/consensus.py",
+      "line": 12,
+      "symbol": "ConsensusEngine",
+      "first": "Represent consensus engine data and behavior."
+    },
+    {
+      "pattern": "initialize_component",
+      "path": "src/x86decomp/governance/consensus.py",
+      "line": 14,
+      "symbol": "__init__",
+      "first": "Initialize the instance with validated constructor state."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/governance/consensus.py",
+      "line": 75,
+      "symbol": "conflicts",
+      "first": "Perform the conflicts operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/governance/consensus.py",
+      "line": 101,
+      "symbol": "explain",
+      "first": "Perform the explain operation."
+    },
+    {
+      "pattern": "provide_implementation",
+      "path": "src/x86decomp/governance/counterexamples.py",
+      "line": 1,
+      "symbol": "<module>",
+      "first": "Provide the current runtime implementation for the `x86decomp.governance.counterexamples` module."
+    },
+    {
+      "pattern": "initialize_component",
+      "path": "src/x86decomp/governance/counterexamples.py",
+      "line": 17,
+      "symbol": "__init__",
+      "first": "Initialize the instance with validated constructor state."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/governance/counterexamples.py",
+      "line": 42,
+      "symbol": "minimize",
+      "first": "Perform the minimize operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/governance/counterexamples.py",
+      "line": 68,
+      "symbol": "promote_to_regression",
+      "first": "Perform the promote to regression operation."
+    },
+    {
+      "pattern": "provide_implementation",
+      "path": "src/x86decomp/governance/family.py",
+      "line": 1,
+      "symbol": "<module>",
+      "first": "Provide the current runtime implementation for the `x86decomp.governance.family` module."
+    },
+    {
+      "pattern": "initialize_component",
+      "path": "src/x86decomp/governance/family.py",
+      "line": 15,
+      "symbol": "__init__",
+      "first": "Initialize the instance with validated constructor state."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/governance/family.py",
+      "line": 54,
+      "symbol": "_block_fingerprints",
+      "first": "Perform the block fingerprints operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/governance/family.py",
+      "line": 60,
+      "symbol": "correlate",
+      "first": "Perform the correlate operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/governance/family.py",
+      "line": 91,
+      "symbol": "member",
+      "first": "Perform the member operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/governance/family.py",
+      "line": 101,
+      "symbol": "correlation",
+      "first": "Perform the correlation operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/governance/family.py",
+      "line": 111,
+      "symbol": "report",
+      "first": "Perform the report operation."
+    },
+    {
+      "pattern": "initialize_component",
+      "path": "src/x86decomp/governance/hypotheses.py",
+      "line": 79,
+      "symbol": "__init__",
+      "first": "Initialize the instance with validated constructor state."
+    },
+    {
+      "pattern": "provide_implementation",
+      "path": "src/x86decomp/governance/knowledge_graph.py",
+      "line": 1,
+      "symbol": "<module>",
+      "first": "Provide the current runtime implementation for the `x86decomp.governance.knowledge_graph` module."
+    },
+    {
+      "pattern": "represent_data_behavior",
+      "path": "src/x86decomp/governance/knowledge_graph.py",
+      "line": 12,
+      "symbol": "KnowledgeGraph",
+      "first": "Represent knowledge graph data and behavior."
+    },
+    {
+      "pattern": "initialize_component",
+      "path": "src/x86decomp/governance/knowledge_graph.py",
+      "line": 14,
+      "symbol": "__init__",
+      "first": "Initialize the instance with validated constructor state."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/governance/knowledge_graph.py",
+      "line": 65,
+      "symbol": "impact",
+      "first": "Perform the impact operation."
+    },
+    {
+      "pattern": "provide_implementation",
+      "path": "src/x86decomp/governance/plugins.py",
+      "line": 1,
+      "symbol": "<module>",
+      "first": "Provide the current runtime implementation for the `x86decomp.governance.plugins` module."
+    },
+    {
+      "pattern": "initialize_component",
+      "path": "src/x86decomp/governance/plugins.py",
+      "line": 19,
+      "symbol": "__init__",
+      "first": "Initialize the instance with validated constructor state."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/governance/plugins.py",
+      "line": 39,
+      "symbol": "install",
+      "first": "Perform the install operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/governance/plugins.py",
+      "line": 74,
+      "symbol": "doctor",
+      "first": "Perform the doctor operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/governance/plugins.py",
+      "line": 85,
+      "symbol": "invoke",
+      "first": "Perform the invoke operation."
+    },
+    {
+      "pattern": "provide_implementation",
+      "path": "src/x86decomp/governance/proofs.py",
+      "line": 1,
+      "symbol": "<module>",
+      "first": "Provide the current runtime implementation for the `x86decomp.governance.proofs` module."
+    },
+    {
+      "pattern": "represent_data_behavior",
+      "path": "src/x86decomp/governance/proofs.py",
+      "line": 20,
+      "symbol": "ProofLedger",
+      "first": "Represent proof ledger data and behavior."
+    },
+    {
+      "pattern": "initialize_component",
+      "path": "src/x86decomp/governance/proofs.py",
+      "line": 22,
+      "symbol": "__init__",
+      "first": "Initialize the instance with validated constructor state."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/governance/proofs.py",
+      "line": 56,
+      "symbol": "obligation",
+      "first": "Perform the obligation operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/governance/proofs.py",
+      "line": 68,
+      "symbol": "result",
+      "first": "Perform the result operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/governance/proofs.py",
+      "line": 90,
+      "symbol": "_zip_info",
+      "first": "Perform the zip info operation."
+    },
+    {
+      "pattern": "provide_implementation",
+      "path": "src/x86decomp/governance/reviews.py",
+      "line": 1,
+      "symbol": "<module>",
+      "first": "Provide the current runtime implementation for the `x86decomp.governance.reviews` module."
+    },
+    {
+      "pattern": "initialize_component",
+      "path": "src/x86decomp/governance/reviews.py",
+      "line": 15,
+      "symbol": "__init__",
+      "first": "Initialize the instance with validated constructor state."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/governance/reviews.py",
+      "line": 34,
+      "symbol": "assign",
+      "first": "Perform the assign operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/governance/reviews.py",
+      "line": 49,
+      "symbol": "decide",
+      "first": "Perform the decide operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/governance/reviews.py",
+      "line": 75,
+      "symbol": "lock",
+      "first": "Perform the lock operation."
+    },
+    {
+      "pattern": "provide_implementation",
+      "path": "src/x86decomp/governance/store.py",
+      "line": 1,
+      "symbol": "<module>",
+      "first": "Provide the current runtime implementation for the `x86decomp.governance.store` module."
+    },
+    {
+      "pattern": "initialize_component",
+      "path": "src/x86decomp/governance/store.py",
+      "line": 297,
+      "symbol": "__init__",
+      "first": "Initialize the instance with validated constructor state."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/governance/store.py",
+      "line": 321,
+      "symbol": "connect",
+      "first": "Perform the connect operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/governance/store.py",
+      "line": 332,
+      "symbol": "transaction",
+      "first": "Perform the transaction operation."
+    },
+    {
+      "pattern": "provide_implementation",
+      "path": "src/x86decomp/governance/workers.py",
+      "line": 1,
+      "symbol": "<module>",
+      "first": "Provide the current runtime implementation for the `x86decomp.governance.workers` module."
+    },
+    {
+      "pattern": "initialize_component",
+      "path": "src/x86decomp/governance/workers.py",
+      "line": 15,
+      "symbol": "__init__",
+      "first": "Initialize the instance with validated constructor state."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/governance/workers.py",
+      "line": 65,
+      "symbol": "set_status",
+      "first": "Perform the set status operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/governance/workers.py",
+      "line": 75,
+      "symbol": "doctor",
+      "first": "Perform the doctor operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/ground_truth.py",
+      "line": 37,
+      "symbol": "_version",
+      "first": "Perform the version operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/ground_truth.py",
+      "line": 48,
+      "symbol": "_expand_flag_matrix",
+      "first": "Perform the expand flag matrix operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/harness_generator.py",
+      "line": 17,
+      "symbol": "_deterministic_word",
+      "first": "Perform the deterministic word operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/hybrid.py",
+      "line": 14,
+      "symbol": "_assembly_bytes",
+      "first": "Perform the assembly bytes operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/integration.py",
+      "line": 24,
+      "symbol": "_require_string_list",
+      "first": "Perform the require string list operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/integration.py",
+      "line": 98,
+      "symbol": "_substitute_command",
+      "first": "Perform the substitute command operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/integration.py",
+      "line": 113,
+      "symbol": "_bounded_output",
+      "first": "Perform the bounded output operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/integration.py",
+      "line": 204,
+      "symbol": "_observe_file",
+      "first": "Perform the observe file operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/linker_layout.py",
+      "line": 232,
+      "symbol": "_normalize_object_key",
+      "first": "Perform the normalize object key operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/linker_layout.py",
+      "line": 240,
+      "symbol": "reconstruct_linker_layout",
+      "first": "Perform the reconstruct linker layout operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/local_llm/matching.py",
+      "line": 105,
+      "symbol": "_feedback_from_compile",
+      "first": "Perform the feedback from compile operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/local_llm/matching.py",
+      "line": 116,
+      "symbol": "_feedback_from_diff",
+      "first": "Perform the feedback from diff operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/local_llm/profiles.py",
+      "line": 89,
+      "symbol": "_normalized_base_url",
+      "first": "Perform the normalized base URL operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/local_llm/prompts.py",
+      "line": 15,
+      "symbol": "_text",
+      "first": "Perform the text operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/local_llm/prompts.py",
+      "line": 31,
+      "symbol": "_integer",
+      "first": "Perform the integer operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/local_llm/prompts.py",
+      "line": 131,
+      "symbol": "_evidence_block",
+      "first": "Perform the evidence block operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/local_llm/prompts.py",
+      "line": 193,
+      "symbol": "prompt_record",
+      "first": "Perform the prompt record operation."
+    },
+    {
+      "pattern": "initialize_component",
+      "path": "src/x86decomp/mcp.py",
+      "line": 38,
+      "symbol": "__init__",
+      "first": "Initialize the instance with validated constructor state."
+    },
+    {
+      "pattern": "initialize_component",
+      "path": "src/x86decomp/mcp.py",
+      "line": 205,
+      "symbol": "__init__",
+      "first": "Initialize the instance with validated constructor state."
+    },
+    {
+      "pattern": "represent_data_behavior",
+      "path": "src/x86decomp/memory.py",
+      "line": 14,
+      "symbol": "ProjectMemory",
+      "first": "Represent project memory data and behavior."
+    },
+    {
+      "pattern": "initialize_component",
+      "path": "src/x86decomp/memory.py",
+      "line": 16,
+      "symbol": "__init__",
+      "first": "Initialize the instance with validated constructor state."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/memory.py",
+      "line": 96,
+      "symbol": "require_valid",
+      "first": "Perform the require valid operation."
+    },
+    {
+      "pattern": "provide_implementation",
+      "path": "src/x86decomp/native/closed_loop.py",
+      "line": 1,
+      "symbol": "<module>",
+      "first": "Provide the current runtime implementation for the `x86decomp.native.closed_loop` module."
+    },
+    {
+      "pattern": "represent_data_behavior",
+      "path": "src/x86decomp/native/closed_loop.py",
+      "line": 14,
+      "symbol": "ClosedLoop",
+      "first": "Represent closed loop data and behavior."
+    },
+    {
+      "pattern": "initialize_component",
+      "path": "src/x86decomp/native/closed_loop.py",
+      "line": 16,
+      "symbol": "__init__",
+      "first": "Initialize the instance with validated constructor state."
+    },
+    {
+      "pattern": "provide_implementation",
+      "path": "src/x86decomp/native/hybrid_composer.py",
+      "line": 1,
+      "symbol": "<module>",
+      "first": "Provide the current runtime implementation for the `x86decomp.native.hybrid_composer` module."
+    },
+    {
+      "pattern": "represent_data_behavior",
+      "path": "src/x86decomp/native/hybrid_composer.py",
+      "line": 14,
+      "symbol": "HybridComposer",
+      "first": "Represent hybrid composer data and behavior."
+    },
+    {
+      "pattern": "initialize_component",
+      "path": "src/x86decomp/native/hybrid_composer.py",
+      "line": 16,
+      "symbol": "__init__",
+      "first": "Initialize the instance with validated constructor state."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/native/hybrid_composer.py",
+      "line": 20,
+      "symbol": "compose",
+      "first": "Perform the compose operation."
+    },
+    {
+      "pattern": "provide_implementation",
+      "path": "src/x86decomp/native/matching.py",
+      "line": 1,
+      "symbol": "<module>",
+      "first": "Provide the current runtime implementation for the `x86decomp.native.matching` module."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/native/matching.py",
+      "line": 16,
+      "symbol": "rva_to_file_offset",
+      "first": "Perform the RVA to file offset operation."
+    },
+    {
+      "pattern": "represent_data_behavior",
+      "path": "src/x86decomp/native/matching.py",
+      "line": 81,
+      "symbol": "FunctionMatching",
+      "first": "Represent function matching data and behavior."
+    },
+    {
+      "pattern": "initialize_component",
+      "path": "src/x86decomp/native/matching.py",
+      "line": 83,
+      "symbol": "__init__",
+      "first": "Initialize the instance with validated constructor state."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/native/matching.py",
+      "line": 87,
+      "symbol": "batch",
+      "first": "Perform the batch operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/native/matching.py",
+      "line": 153,
+      "symbol": "report",
+      "first": "Perform the report operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/native/matching.py",
+      "line": 164,
+      "symbol": "mismatches",
+      "first": "Perform the mismatches operation."
+    },
+    {
+      "pattern": "provide_implementation",
+      "path": "src/x86decomp/native/pe_reconstruction.py",
+      "line": 1,
+      "symbol": "<module>",
+      "first": "Provide the current runtime implementation for the `x86decomp.native.pe_reconstruction` module."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/native/pe_reconstruction.py",
+      "line": 19,
+      "symbol": "_section_header_records",
+      "first": "Perform the section header records operation."
+    },
+    {
+      "pattern": "represent_data_behavior",
+      "path": "src/x86decomp/native/pe_reconstruction.py",
+      "line": 68,
+      "symbol": "PEReconstruction",
+      "first": "Represent pereconstruction data and behavior."
+    },
+    {
+      "pattern": "initialize_component",
+      "path": "src/x86decomp/native/pe_reconstruction.py",
+      "line": 70,
+      "symbol": "__init__",
+      "first": "Initialize the instance with validated constructor state."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/native/pe_reconstruction.py",
+      "line": 74,
+      "symbol": "inventory",
+      "first": "Perform the inventory operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/native/pe_reconstruction.py",
+      "line": 128,
+      "symbol": "text_swap",
+      "first": "Perform the text swap operation."
+    },
+    {
+      "pattern": "initialize_component",
+      "path": "src/x86decomp/native/runtime.py",
+      "line": 17,
+      "symbol": "__init__",
+      "first": "Initialize the instance with validated constructor state."
+    },
+    {
+      "pattern": "provide_implementation",
+      "path": "src/x86decomp/native/slots.py",
+      "line": 1,
+      "symbol": "<module>",
+      "first": "Provide the current runtime implementation for the `x86decomp.native.slots` module."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/native/slots.py",
+      "line": 13,
+      "symbol": "_int",
+      "first": "Perform the int operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/native/slots.py",
+      "line": 25,
+      "symbol": "inventory_from_project",
+      "first": "Perform the inventory from project operation."
+    },
+    {
+      "pattern": "represent_data_behavior",
+      "path": "src/x86decomp/native/slots.py",
+      "line": 49,
+      "symbol": "FunctionSlots",
+      "first": "Represent function slots data and behavior."
+    },
+    {
+      "pattern": "initialize_component",
+      "path": "src/x86decomp/native/slots.py",
+      "line": 51,
+      "symbol": "__init__",
+      "first": "Initialize the instance with validated constructor state."
+    },
+    {
+      "pattern": "provide_implementation",
+      "path": "src/x86decomp/native/staging.py",
+      "line": 1,
+      "symbol": "<module>",
+      "first": "Provide the current runtime implementation for the `x86decomp.native.staging` module."
+    },
+    {
+      "pattern": "represent_data_behavior",
+      "path": "src/x86decomp/native/staging.py",
+      "line": 26,
+      "symbol": "StagingBridge",
+      "first": "Represent staging bridge data and behavior."
+    },
+    {
+      "pattern": "initialize_component",
+      "path": "src/x86decomp/native/staging.py",
+      "line": 28,
+      "symbol": "__init__",
+      "first": "Initialize the instance with validated constructor state."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/native/staging.py",
+      "line": 77,
+      "symbol": "unresolved",
+      "first": "Perform the unresolved operation."
+    },
+    {
+      "pattern": "provide_implementation",
+      "path": "src/x86decomp/native/store.py",
+      "line": 1,
+      "symbol": "<module>",
+      "first": "Provide the current runtime implementation for the `x86decomp.native.store` module."
+    },
+    {
+      "pattern": "provide_implementation",
+      "path": "src/x86decomp/native/windows_tools.py",
+      "line": 1,
+      "symbol": "<module>",
+      "first": "Provide the current runtime implementation for the `x86decomp.native.windows_tools` module."
+    },
+    {
+      "pattern": "represent_data_behavior",
+      "path": "src/x86decomp/native/windows_tools.py",
+      "line": 41,
+      "symbol": "WindowsTools",
+      "first": "Represent windows tools data and behavior."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/native/windows_tools.py",
+      "line": 33,
+      "symbol": "quote",
+      "first": "Perform the quote operation."
+    },
+    {
+      "pattern": "initialize_component",
+      "path": "src/x86decomp/native/windows_tools.py",
+      "line": 43,
+      "symbol": "__init__",
+      "first": "Initialize the instance with validated constructor state."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/native/windows_tools.py",
+      "line": 47,
+      "symbol": "doctor",
+      "first": "Perform the doctor operation."
+    },
+    {
+      "pattern": "initialize_component",
+      "path": "src/x86decomp/orchestrator.py",
+      "line": 232,
+      "symbol": "__init__",
+      "first": "Initialize the instance with validated constructor state."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/patching.py",
+      "line": 15,
+      "symbol": "_checksum_offset",
+      "first": "Perform the checksum offset operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/patching.py",
+      "line": 25,
+      "symbol": "calculate_pe_checksum",
+      "first": "Perform the calculate PE checksum operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/pdb.py",
+      "line": 52,
+      "symbol": "_align4",
+      "first": "Perform the align4 operation."
+    },
+    {
+      "pattern": "represent_data_behavior",
+      "path": "src/x86decomp/pdb.py",
+      "line": 124,
+      "symbol": "_MSF",
+      "first": "Represent msf data and behavior."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/pdb.py",
+      "line": 561,
+      "symbol": "_correlate_pe",
+      "first": "Perform the correlate PE operation."
+    },
+    {
+      "pattern": "initialize_component",
+      "path": "src/x86decomp/pdb.py",
+      "line": 126,
+      "symbol": "__init__",
+      "first": "Initialize the instance with validated constructor state."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/pdb.py",
+      "line": 154,
+      "symbol": "_block",
+      "first": "Perform the block operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/pdb.py",
+      "line": 194,
+      "symbol": "stream",
+      "first": "Perform the stream operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/project.py",
+      "line": 226,
+      "symbol": "require_valid_project",
+      "first": "Perform the require valid project operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/project_template.py",
+      "line": 20,
+      "symbol": "_artifact_roles",
+      "first": "Perform the artifact roles operation."
+    },
+    {
+      "pattern": "provide_implementation",
+      "path": "src/x86decomp/reconstruction/abi_contracts.py",
+      "line": 1,
+      "symbol": "<module>",
+      "first": "Provide the current runtime implementation for the `x86decomp.reconstruction.abi_contracts` module."
+    },
+    {
+      "pattern": "represent_data_behavior",
+      "path": "src/x86decomp/reconstruction/abi_contracts.py",
+      "line": 11,
+      "symbol": "ABIContracts",
+      "first": "Represent abicontracts data and behavior."
+    },
+    {
+      "pattern": "initialize_component",
+      "path": "src/x86decomp/reconstruction/abi_contracts.py",
+      "line": 13,
+      "symbol": "__init__",
+      "first": "Initialize the instance with validated constructor state."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/reconstruction/abi_contracts.py",
+      "line": 51,
+      "symbol": "shim",
+      "first": "Perform the shim operation."
+    },
+    {
+      "pattern": "initialize_component",
+      "path": "src/x86decomp/reconstruction/builds.py",
+      "line": 13,
+      "symbol": "__init__",
+      "first": "Initialize the instance with validated constructor state."
+    },
+    {
+      "pattern": "provide_implementation",
+      "path": "src/x86decomp/reconstruction/capsules.py",
+      "line": 1,
+      "symbol": "<module>",
+      "first": "Provide the current runtime implementation for the `x86decomp.reconstruction.capsules` module."
+    },
+    {
+      "pattern": "represent_data_behavior",
+      "path": "src/x86decomp/reconstruction/capsules.py",
+      "line": 12,
+      "symbol": "Capsules",
+      "first": "Represent capsules data and behavior."
+    },
+    {
+      "pattern": "initialize_component",
+      "path": "src/x86decomp/reconstruction/capsules.py",
+      "line": 14,
+      "symbol": "__init__",
+      "first": "Initialize the instance with validated constructor state."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/reconstruction/capsules.py",
+      "line": 54,
+      "symbol": "reproduce",
+      "first": "Perform the reproduce operation."
+    },
+    {
+      "pattern": "provide_implementation",
+      "path": "src/x86decomp/reconstruction/cli.py",
+      "line": 1,
+      "symbol": "<module>",
+      "first": "Provide the current runtime implementation for the `x86decomp.reconstruction.cli` module."
+    },
+    {
+      "pattern": "initialize_component",
+      "path": "src/x86decomp/reconstruction/generated_tests.py",
+      "line": 16,
+      "symbol": "__init__",
+      "first": "Initialize the instance with validated constructor state."
+    },
+    {
+      "pattern": "initialize_component",
+      "path": "src/x86decomp/reconstruction/headers.py",
+      "line": 14,
+      "symbol": "__init__",
+      "first": "Initialize the instance with validated constructor state."
+    },
+    {
+      "pattern": "provide_implementation",
+      "path": "src/x86decomp/reconstruction/libraries.py",
+      "line": 1,
+      "symbol": "<module>",
+      "first": "Provide the current runtime implementation for the `x86decomp.reconstruction.libraries` module."
+    },
+    {
+      "pattern": "represent_data_behavior",
+      "path": "src/x86decomp/reconstruction/libraries.py",
+      "line": 8,
+      "symbol": "LibraryRecognition",
+      "first": "Represent library recognition data and behavior."
+    },
+    {
+      "pattern": "initialize_component",
+      "path": "src/x86decomp/reconstruction/libraries.py",
+      "line": 10,
+      "symbol": "__init__",
+      "first": "Initialize the instance with validated constructor state."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/reconstruction/libraries.py",
+      "line": 13,
+      "symbol": "identify",
+      "first": "Perform the identify operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/reconstruction/libraries.py",
+      "line": 26,
+      "symbol": "candidates",
+      "first": "Perform the candidates operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/reconstruction/libraries.py",
+      "line": 30,
+      "symbol": "disposition",
+      "first": "Perform the disposition operation."
+    },
+    {
+      "pattern": "provide_implementation",
+      "path": "src/x86decomp/reconstruction/project_layout.py",
+      "line": 1,
+      "symbol": "<module>",
+      "first": "Provide the current runtime implementation for the `x86decomp.reconstruction.project_layout` module."
+    },
+    {
+      "pattern": "represent_data_behavior",
+      "path": "src/x86decomp/reconstruction/project_layout.py",
+      "line": 11,
+      "symbol": "ProjectLayout",
+      "first": "Represent project layout data and behavior."
+    },
+    {
+      "pattern": "initialize_component",
+      "path": "src/x86decomp/reconstruction/project_layout.py",
+      "line": 13,
+      "symbol": "__init__",
+      "first": "Initialize the instance with validated constructor state."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/reconstruction/project_layout.py",
+      "line": 103,
+      "symbol": "explain_boundaries",
+      "first": "Perform the explain boundaries operation."
+    },
+    {
+      "pattern": "initialize_component",
+      "path": "src/x86decomp/reconstruction/provenance.py",
+      "line": 13,
+      "symbol": "__init__",
+      "first": "Initialize the instance with validated constructor state."
+    },
+    {
+      "pattern": "initialize_component",
+      "path": "src/x86decomp/reconstruction/security.py",
+      "line": 11,
+      "symbol": "__init__",
+      "first": "Initialize the instance with validated constructor state."
+    },
+    {
+      "pattern": "provide_implementation",
+      "path": "src/x86decomp/reconstruction/semantic_changesets.py",
+      "line": 1,
+      "symbol": "<module>",
+      "first": "Provide the current runtime implementation for the `x86decomp.reconstruction.semantic_changesets` module."
+    },
+    {
+      "pattern": "represent_data_behavior",
+      "path": "src/x86decomp/reconstruction/semantic_changesets.py",
+      "line": 9,
+      "symbol": "SemanticChangeSets",
+      "first": "Represent semantic change sets data and behavior."
+    },
+    {
+      "pattern": "initialize_component",
+      "path": "src/x86decomp/reconstruction/semantic_changesets.py",
+      "line": 11,
+      "symbol": "__init__",
+      "first": "Initialize the instance with validated constructor state."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/reconstruction/semantic_changesets.py",
+      "line": 37,
+      "symbol": "merge",
+      "first": "Perform the merge operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/reconstruction/semantic_changesets.py",
+      "line": 51,
+      "symbol": "conflicts",
+      "first": "Perform the conflicts operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/reconstruction/semantic_changesets.py",
+      "line": 58,
+      "symbol": "rebase",
+      "first": "Perform the rebase operation."
+    },
+    {
+      "pattern": "provide_implementation",
+      "path": "src/x86decomp/reconstruction/store.py",
+      "line": 1,
+      "symbol": "<module>",
+      "first": "Provide the current runtime implementation for the `x86decomp.reconstruction.store` module."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/release_gate.py",
+      "line": 31,
+      "symbol": "_workflow_gate",
+      "first": "Perform the workflow gate operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/release_gate.py",
+      "line": 79,
+      "symbol": "_pipeline_gate",
+      "first": "Perform the pipeline gate operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/reproducibility.py",
+      "line": 24,
+      "symbol": "_version",
+      "first": "Perform the version operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/security_audit.py",
+      "line": 30,
+      "symbol": "_secret_findings",
+      "first": "Perform the secret findings operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/synthetic_corpus.py",
+      "line": 25,
+      "symbol": "_symbol",
+      "first": "Perform the symbol operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/synthetic_corpus.py",
+      "line": 35,
+      "symbol": "_c_arithmetic",
+      "first": "Perform the c arithmetic operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/synthetic_corpus.py",
+      "line": 49,
+      "symbol": "_c_branches",
+      "first": "Perform the c branches operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/synthetic_corpus.py",
+      "line": 66,
+      "symbol": "_c_loop",
+      "first": "Perform the c loop operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/synthetic_corpus.py",
+      "line": 84,
+      "symbol": "_c_switch",
+      "first": "Perform the c switch operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/synthetic_corpus.py",
+      "line": 100,
+      "symbol": "_c_struct_alias",
+      "first": "Perform the c struct alias operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/synthetic_corpus.py",
+      "line": 124,
+      "symbol": "_c_bitfield",
+      "first": "Perform the c bitfield operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/synthetic_corpus.py",
+      "line": 144,
+      "symbol": "_c_float",
+      "first": "Perform the c float operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/synthetic_corpus.py",
+      "line": 158,
+      "symbol": "_c_indirect",
+      "first": "Perform the c indirect operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/synthetic_corpus.py",
+      "line": 170,
+      "symbol": "_cpp_virtual",
+      "first": "Perform the C++ virtual operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/synthetic_corpus.py",
+      "line": 194,
+      "symbol": "_cpp_multiple_inheritance",
+      "first": "Perform the C++ multiple inheritance operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/synthetic_corpus.py",
+      "line": 211,
+      "symbol": "_cpp_exception",
+      "first": "Perform the C++ exception operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/synthetic_corpus.py",
+      "line": 228,
+      "symbol": "_cpp_template",
+      "first": "Perform the C++ template operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/target_pack.py",
+      "line": 42,
+      "symbol": "_toml_string",
+      "first": "Perform the toml string operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/target_pack.py",
+      "line": 90,
+      "symbol": "_safe_artifact",
+      "first": "Perform the safe artifact operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/test_bundle.py",
+      "line": 57,
+      "symbol": "_safe_member_path",
+      "first": "Perform the safe member path operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/test_bundle.py",
+      "line": 71,
+      "symbol": "_is_symlink",
+      "first": "Perform the is symlink operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/test_bundle.py",
+      "line": 139,
+      "symbol": "_manifest_artifacts",
+      "first": "Perform the manifest artifacts operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/test_bundle.py",
+      "line": 193,
+      "symbol": "_single_role",
+      "first": "Perform the single role operation."
+    },
+    {
+      "pattern": "initialize_component",
+      "path": "src/x86decomp/work_queue.py",
+      "line": 37,
+      "symbol": "__init__",
+      "first": "Initialize the instance with validated constructor state."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/work_queue.py",
+      "line": 122,
+      "symbol": "next",
+      "first": "Perform the next operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/worker.py",
+      "line": 109,
+      "symbol": "_bounded_environment",
+      "first": "Perform the bounded environment operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/worker.py",
+      "line": 172,
+      "symbol": "_confined_paths",
+      "first": "Perform the confined paths operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/worker.py",
+      "line": 189,
+      "symbol": "_container_command",
+      "first": "Perform the container command operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "src/x86decomp/worker.py",
+      "line": 253,
+      "symbol": "resource_wrapped_command",
+      "first": "Perform the resource wrapped command operation."
+    },
+    {
+      "pattern": "provide_implementation",
+      "path": "test-suite/src/x86decomp_testkit/__main__.py",
+      "line": 1,
+      "symbol": "<module>",
+      "first": "Provide the installed test-suite implementation for the `x86decomp_testkit.__main__` module."
+    },
+    {
+      "pattern": "provide_implementation",
+      "path": "test-suite/src/x86decomp_testkit/adapters/__init__.py",
+      "line": 1,
+      "symbol": "<module>",
+      "first": "Provide the installed test-suite implementation for the `x86decomp_testkit.adapters` module."
+    },
+    {
+      "pattern": "provide_implementation",
+      "path": "test-suite/src/x86decomp_testkit/adapters/capabilities.py",
+      "line": 1,
+      "symbol": "<module>",
+      "first": "Provide the installed test-suite implementation for the `x86decomp_testkit.adapters.capabilities` module."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "test-suite/src/x86decomp_testkit/adapters/capabilities.py",
+      "line": 34,
+      "symbol": "host_is_loopback",
+      "first": "Perform the host is loopback operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "test-suite/src/x86decomp_testkit/adapters/capabilities.py",
+      "line": 50,
+      "symbol": "endpoint_is_allowed",
+      "first": "Perform the endpoint is allowed operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "test-suite/src/x86decomp_testkit/adapters/capabilities.py",
+      "line": 58,
+      "symbol": "normalize_endpoint",
+      "first": "Perform the normalize endpoint operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "test-suite/src/x86decomp_testkit/adapters/capabilities.py",
+      "line": 69,
+      "symbol": "probe_openai_compatible_endpoint",
+      "first": "Perform the probe openai compatible endpoint operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "test-suite/src/x86decomp_testkit/adapters/capabilities.py",
+      "line": 97,
+      "symbol": "capabilities_from_adapters",
+      "first": "Perform the capabilities from adapters operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "test-suite/src/x86decomp_testkit/adapters/capabilities.py",
+      "line": 129,
+      "symbol": "capability_map",
+      "first": "Perform the capability map operation."
+    },
+    {
+      "pattern": "provide_implementation",
+      "path": "test-suite/src/x86decomp_testkit/adapters/catalog.py",
+      "line": 1,
+      "symbol": "<module>",
+      "first": "Provide the installed test-suite implementation for the `x86decomp_testkit.adapters.catalog` module."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "test-suite/src/x86decomp_testkit/adapters/catalog.py",
+      "line": 7,
+      "symbol": "adapter_catalog",
+      "first": "Perform the adapter catalog operation."
+    },
+    {
+      "pattern": "provide_implementation",
+      "path": "test-suite/src/x86decomp_testkit/adapters/download.py",
+      "line": 1,
+      "symbol": "<module>",
+      "first": "Provide the installed test-suite implementation for the `x86decomp_testkit.adapters.download` module."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "test-suite/src/x86decomp_testkit/adapters/download.py",
+      "line": 20,
+      "symbol": "platform_key",
+      "first": "Perform the platform key operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "test-suite/src/x86decomp_testkit/adapters/download.py",
+      "line": 31,
+      "symbol": "github_latest_release",
+      "first": "Perform the github latest release operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "test-suite/src/x86decomp_testkit/adapters/download.py",
+      "line": 60,
+      "symbol": "download_file",
+      "first": "Perform the download file operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "test-suite/src/x86decomp_testkit/adapters/download.py",
+      "line": 86,
+      "symbol": "_safe_destination",
+      "first": "Perform the safe destination operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "test-suite/src/x86decomp_testkit/adapters/download.py",
+      "line": 98,
+      "symbol": "safe_extract_archive",
+      "first": "Perform the safe extract archive operation."
+    },
+    {
+      "pattern": "provide_implementation",
+      "path": "test-suite/src/x86decomp_testkit/adapters/installation.py",
+      "line": 1,
+      "symbol": "<module>",
+      "first": "Provide the installed test-suite implementation for the `x86decomp_testkit.adapters.installation` module."
+    },
+    {
+      "pattern": "provide_implementation",
+      "path": "test-suite/src/x86decomp_testkit/cli.py",
+      "line": 1,
+      "symbol": "<module>",
+      "first": "Provide the installed test-suite implementation for the `x86decomp_testkit.cli` module."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "test-suite/src/x86decomp_testkit/cli.py",
+      "line": 17,
+      "symbol": "_path",
+      "first": "Perform the path operation."
+    },
+    {
+      "pattern": "provide_implementation",
+      "path": "test-suite/src/x86decomp_testkit/config.py",
+      "line": 1,
+      "symbol": "<module>",
+      "first": "Provide the installed test-suite implementation for the `x86decomp_testkit.config` module."
+    },
+    {
+      "pattern": "provide_implementation",
+      "path": "test-suite/src/x86decomp_testkit/coverage_audit.py",
+      "line": 1,
+      "symbol": "<module>",
+      "first": "Provide the installed test-suite implementation for the `x86decomp_testkit.coverage_audit` module."
+    },
+    {
+      "pattern": "provide_implementation",
+      "path": "test-suite/src/x86decomp_testkit/fixtures.py",
+      "line": 1,
+      "symbol": "<module>",
+      "first": "Provide the installed test-suite implementation for the `x86decomp_testkit.fixtures` module."
+    },
+    {
+      "pattern": "provide_implementation",
+      "path": "test-suite/src/x86decomp_testkit/inventory.py",
+      "line": 1,
+      "symbol": "<module>",
+      "first": "Provide the installed test-suite implementation for the `x86decomp_testkit.inventory` module."
+    },
+    {
+      "pattern": "provide_implementation",
+      "path": "test-suite/src/x86decomp_testkit/live_adapters.py",
+      "line": 1,
+      "symbol": "<module>",
+      "first": "Provide the installed test-suite implementation for the `x86decomp_testkit.live_adapters` module."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "test-suite/src/x86decomp_testkit/live_adapters.py",
+      "line": 21,
+      "symbol": "_path_for",
+      "first": "Perform the path for operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "test-suite/src/x86decomp_testkit/live_adapters.py",
+      "line": 49,
+      "symbol": "_python_adapter_test",
+      "first": "Perform the python adapter test operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "test-suite/src/x86decomp_testkit/live_adapters.py",
+      "line": 76,
+      "symbol": "_generic_executable_test",
+      "first": "Perform the generic executable test operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "test-suite/src/x86decomp_testkit/live_adapters.py",
+      "line": 101,
+      "symbol": "_compiler_test",
+      "first": "Perform the compiler test operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "test-suite/src/x86decomp_testkit/live_adapters.py",
+      "line": 134,
+      "symbol": "_lld_link_test",
+      "first": "Perform the lld link test operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "test-suite/src/x86decomp_testkit/live_adapters.py",
+      "line": 172,
+      "symbol": "_ghidra_test",
+      "first": "Perform the Ghidra test operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "test-suite/src/x86decomp_testkit/live_adapters.py",
+      "line": 207,
+      "symbol": "_dynamorio_test",
+      "first": "Perform the dynamorio test operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "test-suite/src/x86decomp_testkit/live_adapters.py",
+      "line": 236,
+      "symbol": "_objdiff_test",
+      "first": "Perform the objdiff test operation."
+    },
+    {
+      "pattern": "provide_implementation",
+      "path": "test-suite/src/x86decomp_testkit/logging_utils.py",
+      "line": 1,
+      "symbol": "<module>",
+      "first": "Provide the installed test-suite implementation for the `x86decomp_testkit.logging_utils` module."
+    },
+    {
+      "pattern": "initialize_component",
+      "path": "test-suite/src/x86decomp_testkit/logging_utils.py",
+      "line": 17,
+      "symbol": "__init__",
+      "first": "Initialize the instance with validated constructor state."
+    },
+    {
+      "pattern": "provide_implementation",
+      "path": "test-suite/src/x86decomp_testkit/models.py",
+      "line": 1,
+      "symbol": "<module>",
+      "first": "Provide the installed test-suite implementation for the `x86decomp_testkit.models` module."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "test-suite/src/x86decomp_testkit/models.py",
+      "line": 140,
+      "symbol": "normalized_path",
+      "first": "Perform the normalized path operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "test-suite/src/x86decomp_testkit/models.py",
+      "line": 104,
+      "symbol": "counts",
+      "first": "Perform the counts operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "test-suite/src/x86decomp_testkit/models.py",
+      "line": 111,
+      "symbol": "exit_code",
+      "first": "Perform the exit code operation."
+    },
+    {
+      "pattern": "provide_implementation",
+      "path": "test-suite/src/x86decomp_testkit/orchestrator.py",
+      "line": 1,
+      "symbol": "<module>",
+      "first": "Provide the installed test-suite implementation for the `x86decomp_testkit.orchestrator` module."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "test-suite/src/x86decomp_testkit/orchestrator.py",
+      "line": 26,
+      "symbol": "package_root",
+      "first": "Perform the package root operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "test-suite/src/x86decomp_testkit/orchestrator.py",
+      "line": 31,
+      "symbol": "suite_root",
+      "first": "Perform the suite root operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "test-suite/src/x86decomp_testkit/orchestrator.py",
+      "line": 38,
+      "symbol": "feature_catalog_path",
+      "first": "Perform the feature catalog path operation."
+    },
+    {
+      "pattern": "provide_implementation",
+      "path": "test-suite/src/x86decomp_testkit/process.py",
+      "line": 1,
+      "symbol": "<module>",
+      "first": "Provide the installed test-suite implementation for the `x86decomp_testkit.process` module."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "test-suite/src/x86decomp_testkit/process.py",
+      "line": 91,
+      "symbol": "blocked_result",
+      "first": "Perform the blocked result operation."
+    },
+    {
+      "pattern": "provide_implementation",
+      "path": "test-suite/src/x86decomp_testkit/reports.py",
+      "line": 1,
+      "symbol": "<module>",
+      "first": "Provide the installed test-suite implementation for the `x86decomp_testkit.reports` module."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "test-suite/src/x86decomp_testkit/reports.py",
+      "line": 28,
+      "symbol": "_status_icon",
+      "first": "Perform the status icon operation."
+    },
+    {
+      "pattern": "provide_implementation",
+      "path": "test-suite/src/x86decomp_testkit/self_tests/__init__.py",
+      "line": 1,
+      "symbol": "<module>",
+      "first": "Provide the installed test-suite implementation for the `x86decomp_testkit.self_tests` module."
+    },
+    {
+      "pattern": "provide_implementation",
+      "path": "test-suite/src/x86decomp_testkit/self_tests/test_adapter_capabilities.py",
+      "line": 1,
+      "symbol": "<module>",
+      "first": "Provide the installed test-suite implementation for the `x86decomp_testkit.self_tests.test_adapter_capabilities` module."
+    },
+    {
+      "pattern": "represent_data_behavior",
+      "path": "test-suite/src/x86decomp_testkit/self_tests/test_adapter_capabilities.py",
+      "line": 16,
+      "symbol": "_ModelsHandler",
+      "first": "Represent models handler data and behavior."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "test-suite/src/x86decomp_testkit/self_tests/test_adapter_capabilities.py",
+      "line": 36,
+      "symbol": "_config",
+      "first": "Perform the config operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "test-suite/src/x86decomp_testkit/self_tests/test_adapter_capabilities.py",
+      "line": 18,
+      "symbol": "do_GET",
+      "first": "Perform the do get operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "test-suite/src/x86decomp_testkit/self_tests/test_adapter_capabilities.py",
+      "line": 31,
+      "symbol": "log_message",
+      "first": "Perform the log message operation."
+    },
+    {
+      "pattern": "provide_implementation",
+      "path": "test-suite/src/x86decomp_testkit/self_tests/test_adapter_detection_resolution.py",
+      "line": 1,
+      "symbol": "<module>",
+      "first": "Provide the installed test-suite implementation for the `x86decomp_testkit.self_tests.test_adapter_detection_resolution` module."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "test-suite/src/x86decomp_testkit/self_tests/test_adapter_detection_resolution.py",
+      "line": 15,
+      "symbol": "_config",
+      "first": "Perform the config operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "test-suite/src/x86decomp_testkit/self_tests/test_adapter_detection_resolution.py",
+      "line": 28,
+      "symbol": "prompt",
+      "first": "Perform the prompt operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "test-suite/src/x86decomp_testkit/self_tests/test_adapter_detection_resolution.py",
+      "line": 48,
+      "symbol": "prompt",
+      "first": "Perform the prompt operation."
+    },
+    {
+      "pattern": "provide_implementation",
+      "path": "test-suite/src/x86decomp_testkit/self_tests/test_archive_security.py",
+      "line": 1,
+      "symbol": "<module>",
+      "first": "Provide the installed test-suite implementation for the `x86decomp_testkit.self_tests.test_archive_security` module."
+    },
+    {
+      "pattern": "provide_implementation",
+      "path": "test-suite/src/x86decomp_testkit/self_tests/test_cli_and_installation.py",
+      "line": 1,
+      "symbol": "<module>",
+      "first": "Provide the installed test-suite implementation for the `x86decomp_testkit.self_tests.test_cli_and_installation` module."
+    },
+    {
+      "pattern": "provide_implementation",
+      "path": "test-suite/src/x86decomp_testkit/self_tests/test_config_models.py",
+      "line": 1,
+      "symbol": "<module>",
+      "first": "Provide the installed test-suite implementation for the `x86decomp_testkit.self_tests.test_config_models` module."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "test-suite/src/x86decomp_testkit/self_tests/test_config_models.py",
+      "line": 40,
+      "symbol": "result",
+      "first": "Perform the result operation."
+    },
+    {
+      "pattern": "provide_implementation",
+      "path": "test-suite/src/x86decomp_testkit/self_tests/test_inventory_reports_process.py",
+      "line": 1,
+      "symbol": "<module>",
+      "first": "Provide the installed test-suite implementation for the `x86decomp_testkit.self_tests.test_inventory_reports_process` module."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "test-suite/src/x86decomp_testkit/self_tests/test_inventory_reports_process.py",
+      "line": 16,
+      "symbol": "_mini_toolkit",
+      "first": "Perform the mini toolkit operation."
+    },
+    {
+      "pattern": "provide_implementation",
+      "path": "test-suite/src/x86decomp_testkit/suites.py",
+      "line": 1,
+      "symbol": "<module>",
+      "first": "Provide the installed test-suite implementation for the `x86decomp_testkit.suites` module."
+    },
+    {
+      "pattern": "provide_implementation",
+      "path": "test-suite/src/x86decomp_testkit/timeutil.py",
+      "line": 1,
+      "symbol": "<module>",
+      "first": "Provide the installed test-suite implementation for the `x86decomp_testkit.timeutil` module."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "test-suite/src/x86decomp_testkit/timeutil.py",
+      "line": 7,
+      "symbol": "utc_now",
+      "first": "Perform the utc now operation."
+    },
+    {
+      "pattern": "provide_implementation",
+      "path": "test-suite/src/x86decomp_testkit/toolkit_tests/__init__.py",
+      "line": 1,
+      "symbol": "<module>",
+      "first": "Provide the installed test-suite implementation for the `x86decomp_testkit.toolkit_tests` module."
+    },
+    {
+      "pattern": "provide_implementation",
+      "path": "test-suite/src/x86decomp_testkit/toolkit_tests/test_public_api_contract.py",
+      "line": 1,
+      "symbol": "<module>",
+      "first": "Provide the installed test-suite implementation for the `x86decomp_testkit.toolkit_tests.test_public_api_contract` module."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "test-suite/src/x86decomp_testkit/toolkit_tests/test_public_api_contract.py",
+      "line": 324,
+      "symbol": "_verified_store",
+      "first": "Perform the verified store operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "test-suite/src/x86decomp_testkit/toolkit_tests/test_public_api_contract.py",
+      "line": 289,
+      "symbol": "fake_run",
+      "first": "Perform the fake run operation."
+    },
+    {
+      "pattern": "represent_data_behavior",
+      "path": "test-suite/src/x86decomp_testkit/toolkit_tests/test_public_api_contract.py",
+      "line": 462,
+      "symbol": "Headers",
+      "first": "Represent headers data and behavior."
+    },
+    {
+      "pattern": "represent_data_behavior",
+      "path": "test-suite/src/x86decomp_testkit/toolkit_tests/test_public_api_contract.py",
+      "line": 472,
+      "symbol": "Response",
+      "first": "Represent response data and behavior."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "test-suite/src/x86decomp_testkit/toolkit_tests/test_public_api_contract.py",
+      "line": 492,
+      "symbol": "fake_urlopen",
+      "first": "Perform the fake urlopen operation."
+    },
+    {
+      "pattern": "initialize_component",
+      "path": "test-suite/src/x86decomp_testkit/toolkit_tests/test_public_api_contract.py",
+      "line": 476,
+      "symbol": "__init__",
+      "first": "Initialize the instance with validated constructor state."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "tests/assembly/test_pipeline_cli_schemas.py",
+      "line": 29,
+      "symbol": "_leaf_commands",
+      "first": "Perform the leaf commands operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "tests/assembly/test_pipeline_cli_schemas.py",
+      "line": 48,
+      "symbol": "_manifest",
+      "first": "Perform the manifest operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "tests/assembly/test_pipeline_cli_schemas.py",
+      "line": 32,
+      "symbol": "walk",
+      "first": "Perform the walk operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "tests/governance/test_governance_cli_schemas.py",
+      "line": 61,
+      "symbol": "walk",
+      "first": "Perform the walk operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "tests/governance/test_proof_plugin_worker.py",
+      "line": 36,
+      "symbol": "_plugin",
+      "first": "Perform the plugin operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "tests/native/test_cli_schemas.py",
+      "line": 14,
+      "symbol": "_leaf_commands",
+      "first": "Perform the leaf commands operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "tests/native/test_cli_schemas.py",
+      "line": 17,
+      "symbol": "walk",
+      "first": "Perform the walk operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "tests/reconstruction/test_cli_schemas_retention.py",
+      "line": 14,
+      "symbol": "_leaf_commands",
+      "first": "Perform the leaf commands operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "tests/reconstruction/test_cli_schemas_retention.py",
+      "line": 17,
+      "symbol": "walk",
+      "first": "Perform the walk operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "tests/reconstruction/test_decomp_acceleration.py",
+      "line": 20,
+      "symbol": "_packet",
+      "first": "Perform the packet operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "tests/reconstruction/test_real_project_acceleration.py",
+      "line": 38,
+      "symbol": "_minimal_pe",
+      "first": "Perform the minimal PE operation."
+    },
+    {
+      "pattern": "represent_data_behavior",
+      "path": "tests/test_artifacts.py",
+      "line": 12,
+      "symbol": "ArtifactTests",
+      "first": "Represent artifact tests data and behavior."
+    },
+    {
+      "pattern": "represent_data_behavior",
+      "path": "tests/test_compiler.py",
+      "line": 12,
+      "symbol": "CompilerTests",
+      "first": "Represent compiler tests data and behavior."
+    },
+    {
+      "pattern": "represent_data_behavior",
+      "path": "tests/test_evidence.py",
+      "line": 12,
+      "symbol": "EvidenceTests",
+      "first": "Represent evidence tests data and behavior."
+    },
+    {
+      "pattern": "represent_data_behavior",
+      "path": "tests/test_ghidra.py",
+      "line": 11,
+      "symbol": "GhidraCommandTests",
+      "first": "Represent Ghidra command tests data and behavior."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "tests/test_integration.py",
+      "line": 27,
+      "symbol": "_manifest",
+      "first": "Perform the manifest operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "tests/test_linker_metadata_corpus.py",
+      "line": 30,
+      "symbol": "_minimal_bigobj",
+      "first": "Perform the minimal bigobj operation."
+    },
+    {
+      "pattern": "represent_data_behavior",
+      "path": "tests/test_local_llm.py",
+      "line": 24,
+      "symbol": "_ScriptedHandler",
+      "first": "Represent scripted handler data and behavior."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "tests/test_local_llm.py",
+      "line": 66,
+      "symbol": "_server",
+      "first": "Perform the server operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "tests/test_local_llm.py",
+      "line": 109,
+      "symbol": "_clang_profile",
+      "first": "Perform the clang profile operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "tests/test_local_llm.py",
+      "line": 139,
+      "symbol": "_good_source",
+      "first": "Perform the good source operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "tests/test_local_llm.py",
+      "line": 144,
+      "symbol": "_candidate_payload",
+      "first": "Perform the candidate payload operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "tests/test_local_llm.py",
+      "line": 29,
+      "symbol": "log_message",
+      "first": "Perform the log message operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "tests/test_local_llm.py",
+      "line": 33,
+      "symbol": "_respond",
+      "first": "Perform the respond operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "tests/test_mcp.py",
+      "line": 10,
+      "symbol": "_server",
+      "first": "Perform the server operation."
+    },
+    {
+      "pattern": "represent_data_behavior",
+      "path": "tests/test_pe32.py",
+      "line": 13,
+      "symbol": "PE32Tests",
+      "first": "Represent pe32 tests data and behavior."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "tests/test_production.py",
+      "line": 53,
+      "symbol": "project_gc_like",
+      "first": "Perform the project gc like operation."
+    },
+    {
+      "pattern": "represent_data_behavior",
+      "path": "tests/test_project.py",
+      "line": 12,
+      "symbol": "ProjectTests",
+      "first": "Represent project tests data and behavior."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "tests/test_release_contract.py",
+      "line": 16,
+      "symbol": "_commands",
+      "first": "Perform the commands operation."
+    },
+    {
+      "pattern": "perform_operation",
+      "path": "tests/test_test_bundle.py",
+      "line": 16,
+      "symbol": "_bundle",
+      "first": "Perform the bundle operation."
+    }
+  ]
+}

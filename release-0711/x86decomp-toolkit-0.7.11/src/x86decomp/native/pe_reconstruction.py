@@ -1,4 +1,4 @@
-"""Provide the current runtime implementation for the `x86decomp.native.pe_reconstruction` module."""
+"""Inventory and reconstruct PE image structures."""
 from __future__ import annotations
 
 import json
@@ -17,7 +17,7 @@ from .store import NativeStore
 
 
 def _section_header_records(data: bytes) -> list[dict[str, Any]]:
-    """Support section header records processing for internal toolkit callers."""
+    """Decode PE section-table records from a validated image buffer."""
     if len(data) < 0x40 or data[:2] != b"MZ": raise ContractError("not a PE image")
     pe = struct.unpack_from("<I", data, 0x3C)[0]
     if pe + 24 > len(data) or data[pe:pe+4] != b"PE\0\0": raise ContractError("invalid PE signature")
@@ -37,7 +37,7 @@ def _section_header_records(data: bytes) -> list[dict[str, Any]]:
 
 
 def plan_patch(original: bytes, operations: Iterable[dict[str, Any]]) -> list[dict[str, Any]]:
-    """Execute the plan patch operation for the current toolkit workflow."""
+    """Plan patch."""
     planned: list[dict[str, Any]] = []
     occupied: list[tuple[int, int]] = []
     for raw in operations:
@@ -55,7 +55,7 @@ def plan_patch(original: bytes, operations: Iterable[dict[str, Any]]) -> list[di
 
 
 def apply_operations(original: bytes, operations: Iterable[dict[str, Any]]) -> bytes:
-    """Execute the apply operations operation for the current toolkit workflow."""
+    """Apply operations."""
     planned = plan_patch(original, operations)
     result = bytearray(original)
     for operation in planned:
@@ -66,18 +66,18 @@ def apply_operations(original: bytes, operations: Iterable[dict[str, Any]]) -> b
 
 
 class PEReconstruction:
-    """Coordinate p e reconstruction behavior for the current toolkit workflow."""
+    """Inventory PE structures and export reproducible section or COFF artifacts."""
     def __init__(self, store: NativeStore):
-        """Initialize the instance with validated constructor state."""
+        """Initialize PEReconstruction with `store`."""
         self.store=store; store.initialize()
 
     def inventory(self, image_path: Path) -> dict[str, Any]:
-        """Execute the inventory operation for the current toolkit workflow."""
+        """Inventory PEReconstruction for PEReconstruction."""
         image = parse_pe(image_path)
         return {"path": str(image_path.resolve()), "architecture": image.to_dict()["architecture"], "entry_rva": image.entry_rva, "size_of_image": image.size_of_image, "sections": [section.to_dict() for section in image.sections], "directories": [directory.to_dict() for directory in image.directories]}
 
     def export_sections(self, image_path: Path, output_root: Path, *, names: Iterable[str] | None=None) -> dict[str, Any]:
-        """Execute the export sections operation for the current toolkit workflow."""
+        """Export sections."""
         image_path=image_path.resolve(); output_root=output_root.resolve(); output_root.mkdir(parents=True,exist_ok=True)
         data=image_path.read_bytes(); selected=set(names or [section.name for section in parse_pe(image_path).sections])
         records=[]
@@ -92,7 +92,7 @@ class PEReconstruction:
         return manifest
 
     def export_coff(self, image_path: Path, output_root: Path, *, names: Iterable[str] | None=None) -> dict[str, Any]:
-        """Execute the export coff operation for the current toolkit workflow."""
+        """Export COFF."""
         image=parse_pe(image_path); output_root=output_root.resolve(); output_root.mkdir(parents=True,exist_ok=True)
         data=Path(image_path).read_bytes(); selected=set(names or [s.name for s in image.sections if s.name != '.text'])
         machine=IMAGE_FILE_MACHINE_I386 if image.to_dict()['architecture']=='x86' else IMAGE_FILE_MACHINE_AMD64
@@ -106,7 +106,7 @@ class PEReconstruction:
         return {"source":str(Path(image_path).resolve()),"objects":outputs}
 
     def create_plan(self, original_path: Path, output_path: Path, operations: Iterable[dict[str,Any]], *, actor:str='analyst')->dict[str,Any]:
-        """Create plan for the current toolkit workflow."""
+        """Create plan."""
         original_path=original_path.resolve(); data=original_path.read_bytes(); planned=plan_patch(data,operations); plan_id=random_id('patch'); now=utc_now()
         with self.store.transaction() as c:
             c.execute('INSERT INTO native_patch_plans VALUES(?,?,?,?,?,?,?,?)',(plan_id,str(original_path),sha256_file(original_path),str(output_path.resolve()),canonical_json(planned),'planned',now,now))
@@ -114,7 +114,7 @@ class PEReconstruction:
         return {'plan_id':plan_id,'operations':planned,'original_sha256':sha256_file(original_path),'output_path':str(output_path.resolve())}
 
     def apply_plan(self, plan_id:str, *, actor:str='analyst')->dict[str,Any]:
-        """Execute the apply plan operation for the current toolkit workflow."""
+        """Apply plan."""
         with self.store.transaction() as c:
             row=c.execute('SELECT * FROM native_patch_plans WHERE plan_id=?',(plan_id,)).fetchone()
             if row is None: raise KeyError(plan_id)
@@ -126,7 +126,7 @@ class PEReconstruction:
         return {'plan_id':plan_id,'output':str(output.resolve()),'output_sha256':sha256_file(output),'size_preserved':output.stat().st_size==original.stat().st_size}
 
     def text_swap(self, original_path:Path, replacement_path:Path, output_path:Path, *, section_name:str='.text', actor:str='analyst')->dict[str,Any]:
-        """Execute the text swap operation for the current toolkit workflow."""
+        """Replace a PE text section after validating bounds, architecture, and output path."""
         original=original_path.resolve().read_bytes(); replacement=replacement_path.resolve().read_bytes(); sections=_section_header_records(original)
         section=next((item for item in sections if item['name']==section_name),None)
         if section is None: raise ContractError(f'PE section not found: {section_name}')

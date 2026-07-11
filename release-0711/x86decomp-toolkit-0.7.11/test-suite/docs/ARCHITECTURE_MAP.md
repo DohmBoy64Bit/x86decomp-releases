@@ -1,6 +1,6 @@
 # Test-suite architecture map — 0.7.11
 
-Toolkit map: `docs/ARCHITECTURE_MAP.md`  
+Toolkit map: `docs/ARCHITECTURE_MAP.md`
 Plain-text companion: `test-suite/docs/ARCHITECTURE_MAP_ASCII.txt`
 
 ```mermaid

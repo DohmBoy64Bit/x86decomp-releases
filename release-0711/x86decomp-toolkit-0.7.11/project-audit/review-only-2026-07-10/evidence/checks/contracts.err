@@ -1,0 +1,19 @@
+Traceback (most recent call last):
+  File "/tmp/x86decomp-audit-checks/scripts/validate-contracts.py", line 51, in validate_java_syntax
+    import javalang
+ModuleNotFoundError: No module named 'javalang'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/tmp/x86decomp-audit-checks/scripts/validate-contracts.py", line 156, in <module>
+    main()
+    ~~~~^^
+  File "/tmp/x86decomp-audit-checks/scripts/validate-contracts.py", line 148, in main
+    validate_java_syntax()
+    ~~~~~~~~~~~~~~~~~~~~^^
+  File "/tmp/x86decomp-audit-checks/scripts/validate-contracts.py", line 53, in validate_java_syntax
+    raise RuntimeError(
+        "missing validation dependency: install the dev extra that provides javalang>=0.13,<1"
+    ) from exc
+RuntimeError: missing validation dependency: install the dev extra that provides javalang>=0.13,<1

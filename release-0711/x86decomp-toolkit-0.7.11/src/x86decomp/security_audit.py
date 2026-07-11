@@ -28,7 +28,7 @@ _SECRET_ASSIGNMENT = re.compile(
 
 
 def _secret_findings(text: str) -> list[dict[str, str]]:
-    """Support secret findings processing for internal toolkit callers."""
+    """Scan project files for likely credential and secret material."""
     findings: list[dict[str, str]] = []
     for name, pattern in _PEM_BLOCKS:
         if pattern.search(text):
@@ -41,11 +41,23 @@ def _secret_findings(text: str) -> list[dict[str, str]]:
 
 
 
+def _metadata_text(metadata: importlib.metadata.PackageMetadata, key: str) -> str | None:
+    """Return one installed-distribution metadata value when it is present."""
+    values = metadata.get_all(key)
+    if not values:
+        return None
+    value = values[0].strip()
+    return value or None
+
+
 def generate_sbom(output: Path | None = None) -> dict[str, Any]:
-    """Generate sbom for the current toolkit workflow."""
+    """Generate SBOM."""
     components: list[dict[str, Any]] = []
-    for distribution in sorted(importlib.metadata.distributions(), key=lambda item: (item.metadata.get("Name") or "").lower()):
-        name = distribution.metadata.get("Name")
+    distributions = list(importlib.metadata.distributions())
+    distributions.sort(key=lambda item: (_metadata_text(item.metadata, "Name") or "").lower())
+    for distribution in distributions:
+        metadata = distribution.metadata
+        name = _metadata_text(metadata, "Name")
         if not name:
             continue
         components.append(
@@ -54,7 +66,7 @@ def generate_sbom(output: Path | None = None) -> dict[str, Any]:
                 "name": name,
                 "version": distribution.version,
                 "purl": f"pkg:pypi/{name.lower().replace('_', '-')}@{distribution.version}",
-                "licenses": [distribution.metadata.get("License")] if distribution.metadata.get("License") else [],
+                "licenses": [license_name] if (license_name := _metadata_text(metadata, "License")) else [],
             }
         )
     sbom = {
@@ -78,7 +90,7 @@ def generate_sbom(output: Path | None = None) -> dict[str, Any]:
 
 
 def audit_source_tree(root: Path, *, report_path: Path | None = None) -> dict[str, Any]:
-    """Audit source tree for the current toolkit workflow."""
+    """Audit source tree."""
     root = root.resolve()
     if not root.is_dir():
         raise ContractError(f"audit root is not a directory: {root}")
@@ -134,7 +146,7 @@ def audit_source_tree(root: Path, *, report_path: Path | None = None) -> dict[st
 
 
 def verify_release_manifest(root: Path, manifest_path: Path | None = None) -> dict[str, Any]:
-    """Verify release manifest for the current toolkit workflow."""
+    """Verify release manifest."""
     root = root.resolve()
     manifest_path = manifest_path.resolve() if manifest_path is not None else root / "MANIFEST.sha256"
     if not manifest_path.is_file():

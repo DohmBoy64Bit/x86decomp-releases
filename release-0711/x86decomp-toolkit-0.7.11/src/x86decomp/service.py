@@ -7,12 +7,13 @@ the web process write authority.
 
 from __future__ import annotations
 
+import ipaddress
 import sqlite3
 from pathlib import Path
 from typing import Any
 
 from . import __version__
-from .errors import ExternalToolError
+from .errors import ContractError, ExternalToolError
 from .project import verify_project
 from .project_state import check_project_state
 from .util import load_json
@@ -232,17 +233,28 @@ fetch('/api/project').then(r=>r.json()).then(p=>{
     return app
 
 
-def run_service(project_root: Path, *, host: str = "127.0.0.1", port: int = 8765) -> None:
+def run_service(project_root: Path, *, host: str = "127.0.0.1", port: int = 8765, allow_remote: bool = False) -> None:
     """Serve the read-only project application with Uvicorn.
 
     Args:
         project_root: Project root passed to the FastAPI application factory.
         host: Interface address to bind; defaults to loopback.
         port: TCP port to listen on.
+        allow_remote: Explicit authorization for a non-loopback bind.
 
     Raises:
+        ContractError: If ``host`` is non-loopback without explicit authorization.
         ExternalToolError: If Uvicorn is not installed.
     """
+    normalized_host = host.strip().lower()
+    is_loopback = normalized_host == "localhost"
+    if not is_loopback:
+        try:
+            is_loopback = ipaddress.ip_address(normalized_host).is_loopback
+        except ValueError:
+            is_loopback = False
+    if not is_loopback and not allow_remote:
+        raise ContractError("non-loopback service binds require --allow-remote")
     try:
         import uvicorn
     except ImportError as exc:

@@ -1,4 +1,4 @@
-"""Provide the current runtime implementation for the `x86decomp.assembly.annotation` module."""
+"""Insert evidence annotations into generated assembly source."""
 from __future__ import annotations
 
 import re
@@ -13,7 +13,7 @@ _SYMBOL_RE = re.compile(r"^[A-Za-z_.$?@][A-Za-z0-9_.$?@-]*$")
 
 
 def validate_symbol(symbol: str) -> str:
-    """Validate symbol for the current toolkit workflow."""
+    """Validate symbol."""
     if not _SYMBOL_RE.fullmatch(symbol):
         raise ContractError(f"unsafe assembly symbol: {symbol!r}")
     return symbol
@@ -38,7 +38,7 @@ def render_byte_assembly(symbol: str, code: bytes, architecture: str) -> str:
 
 
 def parse_byte_directives(text: str) -> bytes:
-    """Parse byte directives for the current toolkit workflow."""
+    """Parse byte directives."""
     output = bytearray()
     found = False
     for line_number, line in enumerate(text.splitlines(), start=1):
@@ -61,7 +61,7 @@ def parse_byte_directives(text: str) -> bytes:
 
 
 def _chunk_comments(code: bytes, *, base_address: int, architecture: str) -> dict[int, list[str]]:
-    """Support chunk comments processing for internal toolkit callers."""
+    """Split annotation comments into bounded groups for source insertion."""
     records = decode_instructions(code, base_address=base_address, architecture=architecture)
     comments: dict[int, list[str]] = {}
     for record in records:
@@ -101,7 +101,7 @@ def annotate_source(
     architecture: str,
     base_address: int,
 ) -> dict[str, object]:
-    """Execute the annotate source operation for the current toolkit workflow."""
+    """Insert evidence-backed comments into an assembly source file."""
     code = parse_byte_directives(source.read_text(encoding="utf-8"))
     rendered = render_annotated_assembly(
         symbol, code, architecture, base_address=base_address
@@ -119,7 +119,7 @@ def annotate_source(
 
 
 def byte_directive_lines(code: bytes, *, indent: str = "  ") -> Iterable[str]:
-    """Execute the byte directive lines operation for the current toolkit workflow."""
+    """Render byte values as assembly data-directive lines."""
     for offset in range(0, len(code), 16):
         chunk = code[offset : offset + 16]
         yield indent + ".byte " + ", ".join(f"0x{value:02x}" for value in chunk)

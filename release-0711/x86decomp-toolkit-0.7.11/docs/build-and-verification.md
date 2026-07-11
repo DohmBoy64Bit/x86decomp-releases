@@ -6,9 +6,11 @@ Install development dependencies, then run:
 make verify
 ```
 
-The committed source manifests are verified by `make verify`. After an intentional source change, regenerate and immediately verify them with:
+The committed reports, command reference, self-test synchronization, lint/type gates, and source manifests are checked by `make verify` without rewriting tracked files. After an intentional source change, regenerate deterministic artifacts and immediately verify them with:
 
 ```bash
+make docstrings-update
+make command-reference-update
 make hashes
 make verify-hashes
 ```
@@ -20,6 +22,11 @@ Individual gates:
 ```bash
 make compile
 make contracts
+make docstrings
+make command-reference
+make self-test-sync
+make lint
+make typecheck
 make verify-hashes
 make test
 make test-suite

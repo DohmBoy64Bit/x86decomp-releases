@@ -1,0 +1,50 @@
+{
+  "baseline_count": 543,
+  "binary_files": 3,
+  "canonical_route_rows": 239,
+  "checks": {
+    "all_final": true,
+    "commands_exact": true,
+    "inventory_exact": true,
+    "ledger_exact": true,
+    "original_files_unchanged": true,
+    "reports_exact": true,
+    "routes_exact": true,
+    "tests_exact": true,
+    "text_binary_exact": true
+  },
+  "command_rows": 405,
+  "generated_at": "2026-07-10T19:02:41Z",
+  "invalid_final_statuses": [],
+  "inventory_rows": 543,
+  "ledger_rows": 543,
+  "original_hash_reconciliation": {
+    "baseline_file_count": 543,
+    "changed_original_files": [],
+    "generated_at": "2026-07-10T19:02:41Z",
+    "matched_file_count": 543,
+    "method": "Recomputed SHA-256 and size for each of the 543 baseline paths after all audit documents were created.",
+    "missing_original_files": [],
+    "new_audit_artifact_count_including_self_excluding_manifest": 880,
+    "new_files_location": "project-audit/review-only-2026-07-10/",
+    "original_files_unchanged": true,
+    "schema_version": 1
+  },
+  "packaged_self_tests": "21 passed",
+  "passed": true,
+  "pending_or_blocked_entries": [],
+  "per_file_reports": 543,
+  "report_failures": [],
+  "schema_version": 1,
+  "test_summary": {
+    "all_clean": true,
+    "errors": 0,
+    "expected_partitions": 86,
+    "expected_tests": 258,
+    "failures": 0,
+    "partitions": 86,
+    "skipped": 0,
+    "tests": 258
+  },
+  "text_files": 540
+}

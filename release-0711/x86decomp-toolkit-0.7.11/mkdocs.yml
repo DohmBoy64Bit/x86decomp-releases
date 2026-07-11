@@ -1,0 +1,28 @@
+site_name: x86decomp toolkit 0.7.11
+site_description: Evidence-governed x86 and x86-64 decompilation toolkit
+strict: true
+theme:
+  name: material
+nav:
+  - Home: index.md
+  - Supported scope: supported-scope.md
+  - Architecture: architecture.md
+  - Architecture map: ARCHITECTURE_MAP.md
+  - Contracts: contracts.md
+  - Evidence and claims: evidence-and-claims.md
+  - Adapter capabilities: adapter-capabilities.md
+  - Commands: COMMAND_REFERENCE_0.7.11.md
+  - Ghidra integration: ghidra-integration.md
+  - Local LLM: local-llm.md
+  - Target packs and templates: target-packs-and-templates.md
+  - Test bundles: test-bundle.md
+  - Operations and recovery: operations-and-recovery.md
+  - Guardrails: guardrails.md
+  - Build and verification: build-and-verification.md
+  - Project memory: project-memory.md
+  - Source basis: source-basis.md
+  - Roadmap: roadmap.md
+markdown_extensions:
+  - admonition
+  - attr_list
+  - tables

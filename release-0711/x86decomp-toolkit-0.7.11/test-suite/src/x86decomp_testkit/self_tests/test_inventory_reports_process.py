@@ -1,4 +1,4 @@
-"""Provide the installed test-suite implementation for the `x86decomp_testkit.self_tests.test_inventory_reports_process` module."""
+"""Provide test inventory reports process support for the standalone verification harness."""
 from __future__ import annotations
 
 import json
@@ -14,7 +14,7 @@ from x86decomp_testkit.reports import write_adapter_report, write_html_report, w
 
 
 def _mini_toolkit(root: Path) -> Path:
-    """Support mini toolkit processing for internal toolkit callers."""
+    """Return the mini toolkit derived from `root`."""
     package = root / "src" / "x86decomp"
     package.mkdir(parents=True)
     (package / "__init__.py").write_text("")

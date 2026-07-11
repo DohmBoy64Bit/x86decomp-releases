@@ -1,4 +1,4 @@
-"""Provide the installed test-suite implementation for the `x86decomp_testkit.config` module."""
+"""Provide config support for the standalone verification harness."""
 from __future__ import annotations
 
 import json
@@ -54,11 +54,11 @@ class TestConfig:
 
     @classmethod
     def from_dict(cls, data: dict[str, Any], base: Path | None = None) -> "TestConfig":
-        """Execute the from dict operation for the current toolkit workflow."""
+        """Build test config from validated mapping data."""
         base = base or Path.cwd()
 
         def resolve(value: str | None, default: Path) -> Path:
-            """Resolve resolve for the current toolkit workflow."""
+            """Resolve test config data."""
             path = Path(value) if value else default
             if not path.is_absolute():
                 path = base / path
@@ -88,7 +88,7 @@ class TestConfig:
 
 
 def load_config(path: Path) -> TestConfig:
-    """Load config for the current toolkit workflow."""
+    """Load config."""
     data = json.loads(path.read_text(encoding="utf-8"))
     if not isinstance(data, dict):
         raise ValueError("configuration root must be a JSON object")
@@ -96,6 +96,6 @@ def load_config(path: Path) -> TestConfig:
 
 
 def save_config(config: TestConfig, path: Path) -> None:
-    """Execute the save config operation for the current toolkit workflow."""
+    """Save config."""
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(config.to_dict(), indent=2, sort_keys=True) + "\n", encoding="utf-8")

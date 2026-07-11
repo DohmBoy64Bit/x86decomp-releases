@@ -28,7 +28,7 @@ def build_linker_reconstruction_plan(
     output_path: str = "build/reconstructed.exe",
     report_path: Path | None = None,
 ) -> dict[str, Any]:
-    """Build linker reconstruction plan for the current toolkit workflow."""
+    """Build linker reconstruction plan."""
     objects = [path.resolve() for path in object_paths]
     libraries = [path.resolve() for path in library_paths]
     if not objects:
@@ -144,7 +144,7 @@ def build_linker_reconstruction_plan(
 
 
 def write_relink_manifest_from_plan(plan: dict[str, Any], output: Path) -> dict[str, Any]:
-    """Write relink manifest from plan for the current toolkit workflow."""
+    """Write relink manifest from plan."""
     if plan.get("kind") != "linker_reconstruction_plan":
         raise ContractError("plan kind must be linker_reconstruction_plan")
     manifest = plan.get("relink_manifest")

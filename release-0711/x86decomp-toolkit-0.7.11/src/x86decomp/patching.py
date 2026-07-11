@@ -12,8 +12,8 @@ from .pe import parse_pe
 from .util import sha256_bytes, sha256_file, utc_now, write_json
 
 
-def _checksum_offset(data: bytes) -> int:
-    """Support checksum offset processing for internal toolkit callers."""
+def _checksum_offset(data: bytes | bytearray) -> int:
+    """Locate the PE checksum field in a validated image buffer."""
     if len(data) < 0x40 or data[:2] != b"MZ":
         raise ContractError("input is not an MZ/PE image")
     pe_offset = struct.unpack_from("<I", data, 0x3C)[0]
@@ -23,7 +23,7 @@ def _checksum_offset(data: bytes) -> int:
 
 
 def calculate_pe_checksum(data: bytes, checksum_offset: int) -> int:
-    """Execute the calculate pe checksum operation for the current toolkit workflow."""
+    """Calculate the Windows PE checksum for an image buffer."""
     checksum = 0
     length = len(data)
     padded = data + (b"\x00" if length % 2 else b"")
@@ -48,7 +48,7 @@ def patch_pe_function(
     expected_function_sha256: str | None = None,
     report_path: Path | None = None,
 ) -> dict[str, Any]:
-    """Execute the patch pe function operation for the current toolkit workflow."""
+    """Patch PE function."""
     original_path = original_path.resolve()
     candidate_path = candidate_path.resolve()
     if not original_path.is_file() or not candidate_path.is_file():

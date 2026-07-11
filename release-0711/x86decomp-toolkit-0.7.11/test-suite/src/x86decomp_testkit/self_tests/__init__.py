@@ -1,1 +1,1 @@
-"""Provide the installed test-suite implementation for the `x86decomp_testkit.self_tests` module."""
+"""Provide init support for the standalone verification harness."""

@@ -1,4 +1,4 @@
-"""Provide the installed test-suite implementation for the `x86decomp_testkit.self_tests.test_adapter_detection_resolution` module."""
+"""Provide test adapter detection resolution support for the standalone verification harness."""
 from __future__ import annotations
 
 import os
@@ -13,7 +13,7 @@ from x86decomp_testkit.models import AdapterKind, AdapterSpec
 
 
 def _config(tmp_path: Path, **kwargs) -> HarnessConfig:
-    """Support config processing for internal toolkit callers."""
+    """Return the config derived from `tmp_path`, `kwargs`."""
     defaults = dict(toolkit_root=tmp_path, output_root=tmp_path / "out", interactive=True, allow_install=False)
     defaults.update(kwargs)
     return HarnessConfig(**defaults)
@@ -26,7 +26,7 @@ def test_installed_adapter_never_prompts(tmp_path: Path) -> None:
     prompts: list[str] = []
 
     def prompt(text: str) -> str:
-        """Execute the prompt operation for the current toolkit workflow."""
+        """Return the scripted response used by this interactive test double."""
         prompts.append(text)
         raise AssertionError("installed adapter must not prompt")
 
@@ -46,7 +46,7 @@ def test_missing_adapter_prompts_custom_path_then_accepts(tmp_path: Path) -> Non
     prompts: list[str] = []
 
     def prompt(text: str) -> str:
-        """Execute the prompt operation for the current toolkit workflow."""
+        """Return the scripted response used by this interactive test double."""
         prompts.append(text)
         return next(answers)
 

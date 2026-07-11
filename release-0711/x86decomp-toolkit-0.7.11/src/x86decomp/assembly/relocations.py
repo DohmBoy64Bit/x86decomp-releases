@@ -1,4 +1,4 @@
-"""Provide the current runtime implementation for the `x86decomp.assembly.relocations` module."""
+"""Resolve and encode supported COFF relocations."""
 from __future__ import annotations
 
 from dataclasses import dataclass
@@ -32,7 +32,7 @@ class SymbolAddress:
 
     @property
     def safe_name(self) -> str:
-        """Execute the safe name operation for the current toolkit workflow."""
+        """Normalize a symbol name for deterministic relocation reports."""
         return self.name
 
     def to_dict(self) -> dict[str, Any]:
@@ -47,7 +47,7 @@ class SymbolAddress:
 
 
 def normalize_symbol_map(raw: Mapping[str, Any] | list[Mapping[str, Any]]) -> dict[str, SymbolAddress]:
-    """Normalize symbol map for the current toolkit workflow."""
+    """Normalize symbol-map keys and addresses for relocation processing."""
     items: list[tuple[str, Any]]
     if isinstance(raw, Mapping):
         items = [(str(name), value) for name, value in raw.items()]
@@ -98,7 +98,7 @@ def normalize_symbol_map(raw: Mapping[str, Any] | list[Mapping[str, Any]]) -> di
 
 
 def supported_relocations() -> dict[str, list[str]]:
-    """Execute the supported relocations operation for the current toolkit workflow."""
+    """Return the relocation types supported for an architecture."""
     return {
         "x86": ["DIR16", "REL16", "DIR32", "DIR32NB", "SECTION", "SECREL", "REL32"],
         "x86_64": [
@@ -119,14 +119,14 @@ def supported_relocations() -> dict[str, list[str]]:
 
 
 def _read_addend(data: bytes, offset: int, width: int, *, signed: bool) -> int:
-    """Support read addend processing for internal toolkit callers."""
+    """Read addend."""
     if offset < 0 or offset + width > len(data):
         raise ContractError(f"relocation field [{offset},{offset + width}) exceeds extracted symbol")
     return int.from_bytes(data[offset : offset + width], "little", signed=signed)
 
 
 def _write_value(buffer: bytearray, offset: int, width: int, value: int, *, signed: bool) -> None:
-    """Support write value processing for internal toolkit callers."""
+    """Write value."""
     low = -(1 << (width * 8 - 1)) if signed else 0
     high = (1 << (width * 8 - (1 if signed else 0))) - 1
     if not low <= value <= high:
@@ -144,7 +144,7 @@ def _object_symbol_target(
     base_rva: int,
     placements: Mapping[int | str, int],
 ) -> tuple[int, int | None, int | None] | None:
-    """Support object symbol target processing for internal toolkit callers."""
+    """Resolve a COFF relocation symbol to its target address."""
     if symbol is None or symbol.section_number <= 0:
         return None
     section = obj.section(symbol.section_number)
@@ -167,7 +167,7 @@ def _resolve_target(
     symbol_map: Mapping[str, SymbolAddress],
     placements: Mapping[int | str, int],
 ) -> tuple[str | None, int | None, int | None, int | None]:
-    """Support resolve target processing for internal toolkit callers."""
+    """Resolve target."""
     symbol = obj.symbol_by_index(relocation.symbol_index)
     local = _object_symbol_target(
         obj, symbol, extracted=extracted, base_rva=base_rva, placements=placements
@@ -195,7 +195,7 @@ def _compute_value(
     target_section_rva: int | None,
     target_section_index: int | None,
 ) -> tuple[int, bool]:
-    """Support compute value processing for internal toolkit callers."""
+    """Compute the encoded relocation value for one relocation record."""
     if machine == IMAGE_FILE_MACHINE_I386:
         if relocation_type == 0x0001:  # DIR16
             return image_base + target_rva + addend, False
@@ -246,7 +246,7 @@ class RelocationResolver:
     """Resolve COFF relocation fields under an explicit original-RVA symbol map."""
 
     def inspect(self, object_path: Path, *, symbol: str | None = None) -> dict[str, Any]:
-        """Execute the inspect operation for the current toolkit workflow."""
+        """Inspect relocation resolver."""
         obj = parse_coff(object_path)
         if symbol is None:
             sections = [section.to_dict(obj.machine) for section in obj.sections]
@@ -278,7 +278,7 @@ class RelocationResolver:
         output_path: Path | None = None,
         expected_bytes: bytes | None = None,
     ) -> dict[str, Any]:
-        """Resolve resolve for the current toolkit workflow."""
+        """Resolve relocation resolver data."""
         obj = parse_coff(object_path)
         # Local labels emitted for intra-function branches may appear in the COFF
         # symbol table after the public function symbol.  In exact round-trip mode

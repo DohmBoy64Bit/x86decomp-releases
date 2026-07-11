@@ -18,7 +18,7 @@ from x86decomp.reconstruction.acceleration import (
 
 
 def _packet(tmp_path: Path) -> Path:
-    """Support packet processing for internal toolkit callers."""
+    """Create a minimal verified evidence packet for acceleration tests."""
     d = tmp_path / "packet"
     (d / "ranges").mkdir(parents=True)
     (d / "ranges" / "00.bin").write_bytes(b"\x55\x8b\xec\xc3")

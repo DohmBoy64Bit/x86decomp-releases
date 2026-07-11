@@ -1,4 +1,4 @@
-"""Provide the installed test-suite implementation for the `x86decomp_testkit.inventory` module."""
+"""Provide inventory support for the standalone verification harness."""
 from __future__ import annotations
 
 import ast

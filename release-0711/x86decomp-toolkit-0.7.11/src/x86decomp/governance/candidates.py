@@ -15,7 +15,7 @@ CANDIDATE_STATES = {"active", "evaluating", "supported", "promoted", "discarded"
 class CandidateStore:
     """Manage candidate lifecycle, file snapshots, evaluations, and state transitions."""
     def __init__(self, store: GovernanceStore):
-        """Initialize the instance with validated constructor state."""
+        """Initialize CandidateStore with `store`."""
         self.store = store
         self.store.initialize()
         self.artifact_root = self.store.project_root / "artifacts" / "governance" / "sha256"

@@ -36,7 +36,7 @@ class MCPTool:
 class StdioMCPClient:
     """JSON-RPC MCP client that speaks the 2025-06-18 protocol over a stdio subprocess."""
     def __init__(self, command: list[str], *, cwd: Path | None = None):
-        """Initialize the instance with validated constructor state."""
+        """Initialize StdioMCPClient with `command`, `cwd`."""
         if not command:
             raise ContractError("MCP stdio command may not be empty")
         self.process = subprocess.Popen(
@@ -203,7 +203,7 @@ class StdioMCPClient:
 class StreamableHTTPMCPClient:
     """JSON-RPC MCP client that speaks the 2025-06-18 protocol over Streamable HTTP."""
     def __init__(self, url: str, *, timeout: int = 60):
-        """Initialize the instance with validated constructor state."""
+        """Initialize StreamableHTTPMCPClient with `url`, `timeout`."""
         if not url.startswith(("http://", "https://")):
             raise ContractError("MCP URL must use http or https")
         self.url = url

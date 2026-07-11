@@ -8,14 +8,14 @@ from pathlib import Path
 from typing import Iterable
 
 from .errors import ContractError, VerificationError
-from .models import Claim, ClaimState, EvidenceItem, EvidenceKind
+from .models import Claim, ClaimState, EvidenceItem, EvidenceKind, VerificationStatus
 from .util import copy_file_atomic, load_json, sha256_file, utc_now, write_json
 
 _ID_RE = re.compile(r"^[a-z0-9][a-z0-9._:-]{2,127}$")
 
 
 def _validate_id(value: str, field: str) -> None:
-    """Support validate id processing for internal toolkit callers."""
+    """Validate identifier."""
     if not _ID_RE.fullmatch(value):
         raise ContractError(
             f"{field} must match {_ID_RE.pattern!r}; received {value!r}"
@@ -26,7 +26,7 @@ class EvidenceStore:
     """Filesystem-backed evidence and claims with deterministic validation rules."""
 
     def __init__(self, root: Path):
-        """Initialize the instance with validated constructor state."""
+        """Initialize EvidenceStore with `root`."""
         self.root = root
         self.items_dir = root / "evidence" / "items"
         self.claims_dir = root / "evidence" / "claims"
@@ -47,7 +47,7 @@ class EvidenceStore:
         evidence_id: str | None = None,
         metadata: dict | None = None,
     ) -> EvidenceItem:
-        """Execute the add evidence operation for the current toolkit workflow."""
+        """Add evidence."""
         if not all(value.strip() for value in (source, locator, assertion, independent_group)):
             raise ContractError("source, locator, assertion, and independent_group must be non-empty")
         evidence_id = evidence_id or f"ev-{uuid.uuid4().hex[:16]}"
@@ -82,7 +82,7 @@ class EvidenceStore:
         return item
 
     def get_evidence(self, evidence_id: str) -> EvidenceItem:
-        """Execute the get evidence operation for the current toolkit workflow."""
+        """Return evidence."""
         _validate_id(evidence_id, "evidence_id")
         path = self.items_dir / f"{evidence_id}.json"
         if not path.exists():
@@ -113,7 +113,7 @@ class EvidenceStore:
         claim_id: str | None = None,
         notes: Iterable[str] = (),
     ) -> Claim:
-        """Create claim for the current toolkit workflow."""
+        """Create claim."""
         if not all(value.strip() for value in (subject, predicate, object_value)):
             raise ContractError("subject, predicate, and object must be non-empty")
         claim_id = claim_id or f"cl-{uuid.uuid4().hex[:16]}"
@@ -136,7 +136,7 @@ class EvidenceStore:
         return claim
 
     def get_claim(self, claim_id: str) -> Claim:
-        """Execute the get claim operation for the current toolkit workflow."""
+        """Return claim."""
         _validate_id(claim_id, "claim_id")
         path = self.claims_dir / f"{claim_id}.json"
         if not path.exists():
@@ -159,12 +159,12 @@ class EvidenceStore:
             raise ContractError(f"invalid claim document: {path}") from exc
 
     def save_claim(self, claim: Claim) -> None:
-        """Execute the save claim operation for the current toolkit workflow."""
+        """Save claim."""
         claim.updated_at = utc_now()
         write_json(self.claims_dir / f"{claim.id}.json", claim.to_dict())
 
     def attach_evidence(self, claim_id: str, evidence_id: str) -> Claim:
-        """Execute the attach evidence operation for the current toolkit workflow."""
+        """Attach an existing evidence record to a claim without duplicating the relationship."""
         claim = self.get_claim(claim_id)
         self.get_evidence(evidence_id)
         if evidence_id not in claim.evidence_ids:
@@ -175,7 +175,7 @@ class EvidenceStore:
         return claim
 
     def add_contradiction(self, claim_id: str, evidence_id: str) -> Claim:
-        """Execute the add contradiction operation for the current toolkit workflow."""
+        """Add contradiction."""
         claim = self.get_claim(claim_id)
         self.get_evidence(evidence_id)
         if evidence_id not in claim.contradiction_ids:
@@ -185,7 +185,7 @@ class EvidenceStore:
         return claim
 
     def audit_evidence_integrity(self, item: EvidenceItem) -> list[str]:
-        """Audit evidence integrity for the current toolkit workflow."""
+        """Audit evidence integrity."""
         failures: list[str] = []
         file_path_raw = item.metadata.get("file_path")
         if item.digest_sha256 is not None:
@@ -246,6 +246,9 @@ class EvidenceStore:
         self.save_claim(claim)
         return {
             "claim_id": claim.id,
+            "verification_status": (
+                VerificationStatus.FAILED.value if failures else VerificationStatus.PASSED.value
+            ),
             "state": claim.state.value,
             "evidence_count": len(items),
             "independent_group_count": len(groups),
@@ -254,7 +257,7 @@ class EvidenceStore:
         }
 
     def require_verified(self, claim_id: str) -> Claim:
-        """Execute the require verified operation for the current toolkit workflow."""
+        """Return a claim only after its independent-evidence verification succeeds."""
         result = self.verify_claim(claim_id)
         if result["state"] != ClaimState.VERIFIED.value:
             raise VerificationError(

@@ -17,11 +17,9 @@ from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any, Iterable
 
+from .errors import ContractError
+
 _ID_RE = re.compile(r"^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$")
-
-
-class ContractError(ValueError):
-    """Raised when an input violates a stable project contract."""
 
 
 def utc_now() -> str:
@@ -111,6 +109,27 @@ def ensure_relative_path(value: str | Path) -> Path:
     return path
 
 
+
+def resolve_within(root: str | Path, candidate: str | Path) -> Path:
+    """Resolve ``candidate`` and require it to remain within ``root``.
+
+    This rooted containment primitive complements :func:`ensure_relative_path`:
+    callers may supply either an absolute candidate or one relative to ``root``,
+    and receive a normalized absolute path only when no traversal escapes the
+    declared root.
+
+    Raises:
+        ContractError: If the resolved candidate is outside ``root``.
+    """
+    root_path = Path(root).resolve()
+    candidate_path = Path(candidate)
+    resolved = (root_path / candidate_path).resolve() if not candidate_path.is_absolute() else candidate_path.resolve()
+    try:
+        resolved.relative_to(root_path)
+    except ValueError as exc:
+        raise ContractError(f"path escapes project root: {candidate}") from exc
+    return resolved
+
 def atomic_write_bytes(path: str | Path, data: bytes, *, mode: int = 0o644) -> None:
     """Atomically write ``data`` to ``path``.
 
@@ -143,8 +162,9 @@ def atomic_write_bytes(path: str | Path, data: bytes, *, mode: int = 0o644) -> N
 
 
 def atomic_write_json(path: str | Path, value: Any) -> None:
-    """Atomically write ``value`` to ``path`` as indented, sorted JSON."""
-    atomic_write_bytes(path, (json.dumps(value, indent=2, sort_keys=True) + "\n").encode("utf-8"))
+    """Atomically write ``value`` to ``path`` as UTF-8, indented, sorted JSON."""
+    payload = json.dumps(value, indent=2, sort_keys=True, ensure_ascii=False) + "\n"
+    atomic_write_bytes(path, payload.encode("utf-8"))
 
 
 def read_json(path: str | Path) -> Any:

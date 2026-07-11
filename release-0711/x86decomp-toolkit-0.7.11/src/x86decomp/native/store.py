@@ -1,4 +1,4 @@
-"""Provide the current runtime implementation for the `x86decomp.native.store` module."""
+"""Persist native reconstruction runs, matches, staged artifacts, and validation results."""
 from __future__ import annotations
 
 from typing import Any
@@ -75,7 +75,7 @@ class NativeStore(ReconstructionStore):
     """Native-PE reconstruction schema layered on current reconstruction data."""
 
     def initialize(self) -> None:
-        """Initialize initialize for the current toolkit workflow."""
+        """Initialize native store storage."""
         super().initialize()
         with self.transaction() as connection:
             connection.executescript(_SCHEMA_SQL)
@@ -93,7 +93,7 @@ class NativeStore(ReconstructionStore):
                 )
 
     def check(self) -> dict[str, Any]:
-        """Check check for the current toolkit workflow."""
+        """Check native store state."""
         self.initialize()
         base = super().check()
         with self.connect() as connection:

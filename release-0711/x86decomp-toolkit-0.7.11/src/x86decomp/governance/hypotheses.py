@@ -77,7 +77,7 @@ def _row_to_hypothesis(row: sqlite3.Row) -> Hypothesis:
 class HypothesisLedger:
     """Persistent ledger of hypotheses, their evidence, dependencies, and lifecycle state."""
     def __init__(self, store: GovernanceStore):
-        """Initialize the instance with validated constructor state."""
+        """Initialize HypothesisLedger with `store`."""
         self.store = store
         self.store.initialize()
 

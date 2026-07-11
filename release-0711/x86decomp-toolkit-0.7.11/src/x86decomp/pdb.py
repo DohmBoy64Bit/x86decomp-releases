@@ -14,6 +14,7 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
 
+from .binary_reader import BinaryReader
 from .errors import ContractError, FormatError
 from .pe import parse_pe
 from .util import sha256_bytes, sha256_file
@@ -27,35 +28,29 @@ _MAX_SOURCE_CONTRIBUTIONS = 10_000_000
 
 
 def _require(data: bytes, offset: int, size: int, context: str) -> None:
-    """Support require processing for internal toolkit callers."""
-    if offset < 0 or size < 0 or offset > len(data) or size > len(data) - offset:
-        raise FormatError(f"{context} exceeds bounds")
+    """Delegate a bounded-range check to the shared binary reader."""
+    BinaryReader(data).require(offset, size, context)
 
 
 def _u16(data: bytes, offset: int, context: str) -> int:
-    """Support u16 processing for internal toolkit callers."""
-    _require(data, offset, 2, context)
-    return struct.unpack_from("<H", data, offset)[0]
+    """Read a 16-bit value through the shared binary reader."""
+    return BinaryReader(data).u16(offset, context)
 
 
 def _u32(data: bytes, offset: int, context: str) -> int:
-    """Support u32 processing for internal toolkit callers."""
-    _require(data, offset, 4, context)
-    return struct.unpack_from("<I", data, offset)[0]
+    """Read a 32-bit value through the shared binary reader."""
+    return BinaryReader(data).u32(offset, context)
 
 
 def _cstring(data: bytes, offset: int, limit: int, context: str) -> tuple[str, int]:
-    """Support cstring processing for internal toolkit callers."""
-    if offset < 0 or offset >= limit or limit > len(data):
-        raise FormatError(f"{context} starts outside bounds")
-    end = data.find(b"\x00", offset, limit)
-    if end < 0:
-        raise FormatError(f"{context} is unterminated")
-    return data[offset:end].decode("utf-8", errors="replace"), end + 1
+    """Read a bounded string through the shared binary reader."""
+    return BinaryReader(data).c_string_with_end(
+        offset, context, limit=limit, max_length=max(1, limit - offset)
+    )
 
 
 def _align4(value: int) -> int:
-    """Support align4 processing for internal toolkit callers."""
+    """Round a byte count up to the next four-byte boundary."""
     return (value + 3) & ~3
 
 
@@ -127,9 +122,9 @@ class PDBFile:
 
 
 class _MSF:
-    """Coordinate m s f behavior for the current toolkit workflow."""
+    """Parse bounded streams from a Microsoft Multi-Stream Format container."""
     def __init__(self, data: bytes):
-        """Initialize the instance with validated constructor state."""
+        """Initialize _MSF with `data`."""
         self.data = data
         if len(data) < 56 or data[:32] != _MAGIC:
             raise FormatError("not an MSF 7.0 PDB")
@@ -157,14 +152,14 @@ class _MSF:
         self.stream_sizes, self.stream_blocks = self._parse_directory()
 
     def _block(self, index: int, context: str) -> bytes:
-        """Support block processing for internal toolkit callers."""
+        """Read one validated MSF block by index."""
         if index < 0 or index >= self.number_of_blocks:
             raise FormatError(f"{context} references block outside file: {index}")
         start = index * self.block_size
         return self.data[start : start + self.block_size]
 
     def _parse_directory(self) -> tuple[list[int | None], list[tuple[int, ...]]]:
-        """Support parse directory processing for internal toolkit callers."""
+        """Parse directory."""
         directory_block_count = math.ceil(self.directory_bytes / self.block_size) if self.directory_bytes else 0
         map_bytes_needed = directory_block_count * 4
         if map_bytes_needed > self.block_size:
@@ -197,7 +192,7 @@ class _MSF:
         return sizes, blocks
 
     def stream(self, index: int) -> bytes | None:
-        """Execute the stream operation for the current toolkit workflow."""
+        """Reassemble and return one bounded MSF stream by index."""
         if index < 0 or index >= len(self.stream_sizes):
             return None
         size = self.stream_sizes[index]
@@ -207,7 +202,7 @@ class _MSF:
 
 
 def _parse_info(data: bytes | None) -> dict[str, Any] | None:
-    """Support parse info processing for internal toolkit callers."""
+    """Parse info."""
     if data is None:
         return None
     if len(data) < 28:
@@ -226,7 +221,7 @@ def _parse_info(data: bytes | None) -> dict[str, Any] | None:
 
 
 def _parse_tpi(data: bytes | None, name: str) -> dict[str, Any] | None:
-    """Support parse tpi processing for internal toolkit callers."""
+    """Parse tpi."""
     if data is None:
         return None
     if len(data) < 56:
@@ -274,7 +269,7 @@ def _parse_tpi(data: bytes | None, name: str) -> dict[str, Any] | None:
 
 
 def _parse_modules(data: bytes) -> list[dict[str, Any]]:
-    """Support parse modules processing for internal toolkit callers."""
+    """Parse modules."""
     modules: list[dict[str, Any]] = []
     cursor = 0
     while cursor < len(data):
@@ -339,7 +334,7 @@ def _parse_modules(data: bytes) -> list[dict[str, Any]]:
 
 
 def _parse_source_info(data: bytes) -> dict[str, Any]:
-    """Support parse source info processing for internal toolkit callers."""
+    """Parse source info."""
     if not data:
         return {"module_count": 0, "contribution_count": 0, "files_by_module": [], "unique_files": []}
     if len(data) < 4:
@@ -388,7 +383,7 @@ def _parse_source_info(data: bytes) -> dict[str, Any]:
 
 
 def _parse_section_contributions(data: bytes) -> dict[str, Any]:
-    """Support parse section contributions processing for internal toolkit callers."""
+    """Parse section contributions."""
     if not data:
         return {"version": None, "entries": []}
     if len(data) < 4:
@@ -419,7 +414,7 @@ def _parse_section_contributions(data: bytes) -> dict[str, Any]:
 
 
 def _parse_section_map(data: bytes) -> dict[str, Any]:
-    """Support parse section map processing for internal toolkit callers."""
+    """Parse section map."""
     if not data:
         return {"count": 0, "logical_count": 0, "entries": []}
     if len(data) < 4:
@@ -451,7 +446,7 @@ def _parse_section_map(data: bytes) -> dict[str, Any]:
 
 
 def _parse_dbi(data: bytes | None) -> dict[str, Any] | None:
-    """Support parse dbi processing for internal toolkit callers."""
+    """Parse dbi."""
     if data is None:
         return None
     if len(data) < 64:
@@ -564,7 +559,7 @@ def _parse_dbi(data: bytes | None) -> dict[str, Any] | None:
 
 
 def _correlate_pe(info: dict[str, Any] | None, pe_path: Path | None) -> dict[str, Any] | None:
-    """Support correlate pe processing for internal toolkit callers."""
+    """Correlate PE from `info`, `pe_path`."""
     if pe_path is None:
         return None
     image = parse_pe(pe_path).to_dict()
@@ -596,7 +591,7 @@ def _correlate_pe(info: dict[str, Any] | None, pe_path: Path | None) -> dict[str
 
 
 def parse_pdb_bytes(data: bytes, *, path: Path | None = None, pe_path: Path | None = None) -> PDBFile:
-    """Parse pdb bytes for the current toolkit workflow."""
+    """Parse PDB bytes."""
     msf = _MSF(data)
     streams: list[PDBStream] = []
     for index, (size, blocks) in enumerate(zip(msf.stream_sizes, msf.stream_blocks)):
@@ -633,7 +628,7 @@ def parse_pdb_bytes(data: bytes, *, path: Path | None = None, pe_path: Path | No
 
 
 def parse_pdb(path: Path, *, pe_path: Path | None = None) -> PDBFile:
-    """Parse pdb for the current toolkit workflow."""
+    """Parse PDB."""
     resolved = path.resolve()
     if not resolved.is_file():
         raise ContractError(f"PDB does not exist: {resolved}")

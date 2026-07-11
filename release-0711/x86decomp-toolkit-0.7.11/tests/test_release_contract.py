@@ -14,7 +14,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 def _commands() -> set[str]:
-    """Support commands processing for internal toolkit callers."""
+    """Return the commands."""
     parser = _build_parser()
     action = next(action for action in parser._actions if getattr(action, "choices", None))
     return set(action.choices)

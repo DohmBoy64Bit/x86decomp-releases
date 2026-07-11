@@ -31,7 +31,7 @@ def run_compiler_worker(
     report_path: Path | None = None,
     limits: WorkerLimits | None = None,
 ) -> dict[str, Any]:
-    """Run compiler worker for the current toolkit workflow."""
+    """Run compiler worker."""
     profile_path = profile_path.resolve()
     source_path = source_path.resolve()
     output_path = output_path.resolve()

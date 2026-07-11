@@ -1,4 +1,4 @@
-"""Provide the current runtime implementation for the `x86decomp.assembly.store` module."""
+"""Persist assembly reconstruction runs, source units, and verification results."""
 from __future__ import annotations
 
 from typing import Any
@@ -50,7 +50,7 @@ class AssemblyStore(NativeStore):
     """Additive relocation-aware assembly schema layered on the current native reconstruction state."""
 
     def initialize(self) -> None:
-        """Initialize initialize for the current toolkit workflow."""
+        """Initialize assembly store storage."""
         super().initialize()
         with self.transaction() as connection:
             connection.executescript(_SCHEMA_SQL)
@@ -72,7 +72,7 @@ class AssemblyStore(NativeStore):
                 )
 
     def check(self) -> dict[str, Any]:
-        """Check check for the current toolkit workflow."""
+        """Check assembly store state."""
         self.initialize()
         base = super().check()
         with self.connect() as connection:

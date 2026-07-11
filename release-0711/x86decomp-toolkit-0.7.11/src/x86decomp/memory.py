@@ -12,9 +12,9 @@ from .util import atomic_write_text, canonical_json_bytes, sha256_bytes, utc_now
 
 
 class ProjectMemory:
-    """Coordinate project memory behavior for the current toolkit workflow."""
+    """Maintain a hash-chained project knowledge ledger and its rendered summary."""
     def __init__(self, project_root: Path):
-        """Initialize the instance with validated constructor state."""
+        """Initialize ProjectMemory with `project_root`."""
         self.project_root = project_root
         self.memory_dir = project_root / "memory"
         self.events_path = self.memory_dir / "events.jsonl"
@@ -24,7 +24,7 @@ class ProjectMemory:
             self.events_path.touch()
 
     def read_events(self) -> list[dict[str, Any]]:
-        """Read events for the current toolkit workflow."""
+        """Read events."""
         events: list[dict[str, Any]] = []
         with self.events_path.open("r", encoding="utf-8") as handle:
             for line_number, line in enumerate(handle, start=1):
@@ -50,7 +50,7 @@ class ProjectMemory:
         details: dict[str, Any] | None = None,
         evidence_ids: Iterable[str] = (),
     ) -> dict[str, Any]:
-        """Append append for the current toolkit workflow."""
+        """Append a record to project memory."""
         if not all(value.strip() for value in (actor, category, summary)):
             raise ContractError("actor, category, and summary must be non-empty")
         events = self.read_events()
@@ -75,7 +75,7 @@ class ProjectMemory:
         return event
 
     def verify(self) -> dict[str, Any]:
-        """Verify verify for the current toolkit workflow."""
+        """Verify project memory integrity and contracts."""
         events = self.read_events()
         failures: list[str] = []
         previous_hash: str | None = None
@@ -94,13 +94,13 @@ class ProjectMemory:
         return {"event_count": len(events), "valid": not failures, "failures": failures}
 
     def require_valid(self) -> None:
-        """Execute the require valid operation for the current toolkit workflow."""
+        """Raise a verification error unless the project-memory hash chain is valid."""
         result = self.verify()
         if not result["valid"]:
             raise VerificationError("project memory is invalid: " + "; ".join(result["failures"]))
 
     def render(self) -> str:
-        """Render render for the current toolkit workflow."""
+        """Render project memory data."""
         events = self.read_events()
         by_category: dict[str, list[dict[str, Any]]] = {}
         for event in events:

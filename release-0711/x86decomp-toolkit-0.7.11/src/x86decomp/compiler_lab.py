@@ -14,7 +14,7 @@ from .util import load_json, utc_now, write_json
 
 
 def _variant_arguments(matrix: dict[str, Any]) -> list[tuple[str, list[str]]]:
-    """Support variant arguments processing for internal toolkit callers."""
+    """Expand a compiler experiment matrix into deterministic argument variants."""
     axes = matrix.get("axes", {})
     if not isinstance(axes, dict):
         raise ContractError("compiler lab matrix.axes must be an object")
@@ -31,7 +31,7 @@ def run_compiler_lab(
     *,
     report_path: Path | None = None,
 ) -> dict[str, Any]:
-    """Run compiler lab for the current toolkit workflow."""
+    """Run compiler lab."""
     lab = load_json(lab_path)
     if not isinstance(lab, dict):
         raise ContractError("compiler lab document must be an object")

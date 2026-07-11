@@ -1,4 +1,4 @@
-"""Provide the installed test-suite implementation for the `x86decomp_testkit.self_tests.test_adapter_capabilities` module."""
+"""Provide test adapter capabilities support for the standalone verification harness."""
 from __future__ import annotations
 
 import json
@@ -14,9 +14,9 @@ from x86decomp_testkit.models import ProbeResult
 
 
 class _ModelsHandler(BaseHTTPRequestHandler):
-    """Coordinate models handler behavior for the current toolkit workflow."""
+    """Serve deterministic model-list responses for adapter capability tests."""
     def do_GET(self) -> None:
-        """Execute the do  g e t operation for the current toolkit workflow."""
+        """Serve the deterministic HTTP GET response used by this test handler."""
         if self.path != "/v1/models":
             self.send_response(404)
             self.end_headers()
@@ -29,12 +29,12 @@ class _ModelsHandler(BaseHTTPRequestHandler):
         self.wfile.write(payload)
 
     def log_message(self, format: str, *args: object) -> None:
-        """Execute the log message operation for the current toolkit workflow."""
+        """Suppress default HTTP server logging during deterministic tests."""
         return
 
 
 def _config(tmp_path: Path) -> TestConfig:
-    """Support config processing for internal toolkit callers."""
+    """Return the config derived from `tmp_path`."""
     return TestConfig(toolkit_root=tmp_path, output_root=tmp_path / "out", interactive=False, strict=False)
 
 

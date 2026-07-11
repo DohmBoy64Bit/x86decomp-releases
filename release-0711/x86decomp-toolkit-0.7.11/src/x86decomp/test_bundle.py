@@ -55,7 +55,7 @@ class BundleLimits:
 
 
 def _safe_member_path(name: str) -> PurePosixPath:
-    """Support safe member path processing for internal toolkit callers."""
+    """Validate an archive member path against traversal and absolute paths."""
     if "\\" in name:
         raise ContractError(f"ZIP member uses a backslash path separator: {name!r}")
     path = PurePosixPath(name)
@@ -69,13 +69,13 @@ def _safe_member_path(name: str) -> PurePosixPath:
 
 
 def _is_symlink(info: zipfile.ZipInfo) -> bool:
-    """Support is symlink processing for internal toolkit callers."""
+    """Return whether an archive member encodes a symbolic link."""
     mode = (info.external_attr >> 16) & 0xFFFF
     return stat.S_ISLNK(mode)
 
 
 def _validate_archive_infos(infos: list[zipfile.ZipInfo], limits: BundleLimits) -> None:
-    """Support validate archive infos processing for internal toolkit callers."""
+    """Validate archive infos."""
     if len(infos) > limits.max_files:
         raise ContractError(f"bundle has {len(infos)} members; maximum is {limits.max_files}")
     total = 0
@@ -105,7 +105,7 @@ def _validate_archive_infos(infos: list[zipfile.ZipInfo], limits: BundleLimits) 
 
 
 def _extract_safely(archive: Path, destination: Path, limits: BundleLimits) -> None:
-    """Support extract safely processing for internal toolkit callers."""
+    """Extract safely."""
     destination.mkdir(parents=True, exist_ok=False)
     root = destination.resolve()
     with zipfile.ZipFile(archive, "r") as handle:
@@ -137,7 +137,7 @@ def _extract_safely(archive: Path, destination: Path, limits: BundleLimits) -> N
 
 
 def _manifest_artifacts(manifest: dict[str, Any], root: Path) -> list[dict[str, Any]]:
-    """Support manifest artifacts processing for internal toolkit callers."""
+    """Resolve and validate every artifact path declared by a test-bundle manifest."""
     if manifest.get("schema_version") != 1:
         raise ContractError("test-bundle schema_version must be 1")
     authorization = manifest.get("authorization")
@@ -191,7 +191,7 @@ def _manifest_artifacts(manifest: dict[str, Any], root: Path) -> list[dict[str, 
 
 
 def _single_role(artifacts: list[dict[str, Any]], role: str) -> Path | None:
-    """Support single role processing for internal toolkit callers."""
+    """Require exactly one manifest artifact for a requested semantic role."""
     matches = [Path(item["resolved_path"]) for item in artifacts if item["role"] == role]
     if len(matches) > 1:
         raise ContractError(f"test bundle may contain at most one {role}")

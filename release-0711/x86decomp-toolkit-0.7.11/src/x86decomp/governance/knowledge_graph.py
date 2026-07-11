@@ -1,4 +1,4 @@
-"""Provide the current runtime implementation for the `x86decomp.governance.knowledge_graph` module."""
+"""Maintain governance entities and their graph relationships."""
 from __future__ import annotations
 
 import json
@@ -10,14 +10,14 @@ from .store import GovernanceStore
 
 
 class KnowledgeGraph:
-    """Coordinate knowledge graph behavior for the current toolkit workflow."""
+    """Manage KnowledgeGraph through `upsert_node`, `add_edge`, `get_node`."""
     def __init__(self, store: GovernanceStore):
-        """Initialize the instance with validated constructor state."""
+        """Initialize KnowledgeGraph with `store`."""
         self.store = store
         self.store.initialize()
 
     def upsert_node(self, node_id: str, kind: str, label: str, *, attributes: dict[str, Any] | None = None, actor: str = "system") -> dict[str, Any]:
-        """Execute the upsert node operation for the current toolkit workflow."""
+        """Insert or update node."""
         validate_id(node_id, field="node_id")
         if not kind or not label:
             raise ContractError("node kind and label are required")
@@ -32,7 +32,7 @@ class KnowledgeGraph:
         return self.get_node(node_id)
 
     def add_edge(self, source_id: str, target_id: str, relation: str, *, attributes: dict[str, Any] | None = None, actor: str = "system") -> str:
-        """Execute the add edge operation for the current toolkit workflow."""
+        """Add edge."""
         if source_id == target_id and relation in {"depends_on", "contains"}:
             raise ContractError(f"self edge not allowed for relation {relation}")
         with self.store.connect() as connection:
@@ -53,7 +53,7 @@ class KnowledgeGraph:
         return actual_id
 
     def get_node(self, node_id: str) -> dict[str, Any]:
-        """Execute the get node operation for the current toolkit workflow."""
+        """Return node."""
         with self.store.connect() as connection:
             row = connection.execute("SELECT * FROM governance_graph_nodes WHERE node_id=?", (node_id,)).fetchone()
         if not row:
@@ -63,7 +63,7 @@ class KnowledgeGraph:
         return result
 
     def impact(self, node_id: str, *, direction: str = "outbound", max_depth: int = 8, relations: set[str] | None = None) -> dict[str, Any]:
-        """Execute the impact operation for the current toolkit workflow."""
+        """Return the impact derived from `node_id`, `direction`, `max_depth`, and additional options for KnowledgeGraph."""
         if direction not in {"outbound", "inbound", "both"}:
             raise ContractError("direction must be outbound, inbound, or both")
         if not 0 <= max_depth <= 64:

@@ -16,7 +16,7 @@ from x86decomp_testkit.adapters.download import safe_extract_archive, select_rel
 
 def test_safe_zip_and_tar_extraction(tmp_path: Path) -> None:
     """Verify safe zip and tar extraction.
-    
+
     Parameters and return values follow the signature and runtime validation in the body.
     """
     zip_path = tmp_path / "ok.zip"
@@ -39,7 +39,7 @@ def test_safe_zip_and_tar_extraction(tmp_path: Path) -> None:
 
 def test_rejects_traversal_and_links(tmp_path: Path) -> None:
     """Verify rejects traversal and links.
-    
+
     Parameters and return values follow the signature and runtime validation in the body.
     """
     bad = tmp_path / "bad.zip"
@@ -60,7 +60,7 @@ def test_rejects_traversal_and_links(tmp_path: Path) -> None:
 
 def test_release_asset_selection_is_deterministic() -> None:
     """Verify release asset selection is deterministic.
-    
+
     Parameters and return values follow the signature and runtime validation in the body.
     """
     release = {"assets": [
@@ -73,7 +73,7 @@ def test_release_asset_selection_is_deterministic() -> None:
 
 def test_download_file_hash_and_size_limit(tmp_path: Path) -> None:
     """Verify download file hash and size limit.
-    
+
     Parameters and return values follow the signature and runtime validation in the body.
     """
     from x86decomp_testkit.adapters.download import download_file

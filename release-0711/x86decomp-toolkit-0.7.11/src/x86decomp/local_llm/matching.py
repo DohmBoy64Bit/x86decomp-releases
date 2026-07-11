@@ -33,7 +33,7 @@ _FORBIDDEN_SOURCE_PATTERNS = (
 
 
 def _parse_candidate(content: str, *, function_name: str) -> dict[str, Any]:
-    """Support parse candidate processing for internal toolkit callers."""
+    """Parse candidate."""
     if len(content.encode("utf-8")) > _MAX_C_SOURCE_BYTES:
         raise ContractError("local-model candidate exceeded maximum C source size")
     try:
@@ -89,7 +89,7 @@ def _parse_candidate(content: str, *, function_name: str) -> dict[str, Any]:
 
 
 def _prepare_output(output_directory: Path, *, overwrite: bool) -> Path:
-    """Support prepare output processing for internal toolkit callers."""
+    """Prepare output."""
     resolved = output_directory.resolve()
     if resolved.exists():
         if not overwrite:
@@ -103,7 +103,7 @@ def _prepare_output(output_directory: Path, *, overwrite: bool) -> Path:
 
 
 def _feedback_from_compile(report: dict[str, Any] | None, error: Exception) -> dict[str, Any]:
-    """Support feedback from compile processing for internal toolkit callers."""
+    """Convert compiler diagnostics into bounded feedback for the next model attempt."""
     stderr = "" if report is None else str(report.get("stderr", ""))
     return {
         "gate": "compile",
@@ -114,7 +114,7 @@ def _feedback_from_compile(report: dict[str, Any] | None, error: Exception) -> d
 
 
 def _feedback_from_diff(comparison: dict[str, Any], relocation: dict[str, Any]) -> dict[str, Any]:
-    """Support feedback from diff processing for internal toolkit callers."""
+    """Convert byte and relocation differences into bounded model feedback."""
     return {
         "gate": "byte_match",
         "passed": False,

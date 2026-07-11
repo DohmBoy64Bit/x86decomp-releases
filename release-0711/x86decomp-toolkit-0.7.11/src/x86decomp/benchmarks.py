@@ -15,7 +15,7 @@ from .util import load_json, utc_now, write_json
 
 
 def classification_metrics(expected: set[Hashable], observed: set[Hashable]) -> dict[str, Any]:
-    """Execute the classification metrics operation for the current toolkit workflow."""
+    """Calculate classification metrics from expected and observed labels."""
     true_positive = len(expected & observed)
     false_positive = len(observed - expected)
     false_negative = len(expected - observed)
@@ -33,14 +33,14 @@ def classification_metrics(expected: set[Hashable], observed: set[Hashable]) -> 
 
 
 def _resolve(base: Path, value: Any) -> Path:
-    """Support resolve processing for internal toolkit callers."""
+    """Resolve the requested operation."""
     if not isinstance(value, str):
         raise ContractError("benchmark path value must be a string")
     return (base / value).resolve()
 
 
 def run_benchmark_corpus(manifest_path: Path, *, report_path: Path | None = None) -> dict[str, Any]:
-    """Run benchmark corpus for the current toolkit workflow."""
+    """Run benchmark corpus."""
     manifest = load_json(manifest_path)
     if not isinstance(manifest, dict):
         raise ContractError("benchmark manifest must be an object")

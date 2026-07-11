@@ -11,7 +11,7 @@ from x86decomp.pe32 import parse_pe32
 
 
 class PE32Tests(unittest.TestCase):
-    """Coordinate p e32 tests behavior for the current toolkit workflow."""
+    """Group regression tests covering PE32 behavior."""
     def test_parse_minimal_i386_image(self) -> None:
         """Verify parse minimal i386 image behavior."""
         with tempfile.TemporaryDirectory() as temp:

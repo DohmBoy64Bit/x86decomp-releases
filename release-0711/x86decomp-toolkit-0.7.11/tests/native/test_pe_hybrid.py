@@ -34,10 +34,14 @@ def test_hybrid_composer_promotes_only_verified_candidates(tmp_path:Path)->None:
     original=build_minimal_pe32(tmp_path/'original.exe',b'\x55\xc3\xcc\xcc\x90\x90')
     good=tmp_path/'good.bin'; good.write_bytes(b'\x55\xc3\x90\x90')
     bad=tmp_path/'bad.bin'; bad.write_bytes(b'\x55\x55')
-    store=NativeStore(tmp_path/'project'); match=FunctionMatching(store).batch(original,[
-        {'function_id':'good','rva':0x1000,'slot_size':4,'candidate_path':str(good)},
-        {'function_id':'bad','rva':0x1004,'slot_size':2,'candidate_path':str(bad)},
-    ])
+    store=NativeStore(tmp_path/'project')
+    match=FunctionMatching(store).batch(
+        original,
+        [
+            {'function_id':'good','rva':0x1000,'slot_size':4,'candidate_path':str(good)},
+            {'function_id':'bad','rva':0x1004,'slot_size':2,'candidate_path':str(bad)},
+        ],
+    )
     result=HybridComposer(store).compose(match['run_id'],tmp_path/'hybrid.exe')
     assert result['promoted_count']==1 and result['fallback_count']==1 and result['container_size_preserved']
     payload=(tmp_path/'hybrid.exe').read_bytes(); assert payload[0x200:0x204]==good.read_bytes(); assert payload[0x204:0x206]==original.read_bytes()[0x204:0x206]

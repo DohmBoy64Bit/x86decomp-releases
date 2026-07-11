@@ -22,7 +22,7 @@ from .util import load_json, sha256_file, utc_now, write_json
 
 
 def _resolve_executable(value: str, base: Path) -> Path:
-    """Support resolve executable processing for internal toolkit callers."""
+    """Resolve executable."""
     candidate = Path(value).expanduser()
     if not candidate.is_absolute() and candidate.parent != Path("."):
         candidate = (base / candidate).resolve()
@@ -35,7 +35,7 @@ def _resolve_executable(value: str, base: Path) -> Path:
 
 
 def _version(executable: Path, arguments: list[str]) -> str:
-    """Support version processing for internal toolkit callers."""
+    """Query an executable for a reproducibility-relevant version string."""
     completed = subprocess.run(
         [str(executable), *arguments], capture_output=True, text=True, timeout=30, check=False
     )
@@ -46,7 +46,7 @@ def _version(executable: Path, arguments: list[str]) -> str:
 
 
 def _expand_flag_matrix(matrix: dict[str, Any]) -> list[tuple[str, list[str]]]:
-    """Support expand flag matrix processing for internal toolkit callers."""
+    """Expand flag matrix."""
     if not matrix:
         return [("default", [])]
     names = sorted(matrix)
@@ -78,7 +78,7 @@ def build_ground_truth_corpus(
     *,
     report_path: Path | None = None,
 ) -> dict[str, Any]:
-    """Build ground truth corpus for the current toolkit workflow."""
+    """Build ground truth corpus."""
     manifest = load_json(manifest_path)
     if not isinstance(manifest, dict):
         raise ContractError("ground-truth manifest must be an object")
@@ -193,7 +193,7 @@ def build_ground_truth_corpus(
 
 
 def verify_ground_truth_corpus(report_path: Path) -> dict[str, Any]:
-    """Verify ground truth corpus for the current toolkit workflow."""
+    """Verify ground truth corpus."""
     report = load_json(report_path)
     if not isinstance(report, dict) or report.get("kind") != "compiler_ground_truth_corpus":
         raise ContractError("not a compiler ground-truth corpus report")
@@ -238,8 +238,10 @@ def compare_ground_truth_corpora(
             if not isinstance(build, dict) or not build.get("success"):
                 continue
             key = (str(build.get("case_id")), str(build.get("variant_id")))
-            compiler = compiler_lookup.get(build.get("compiler_id"), {})
-            coff = build.get("coff") if isinstance(build.get("coff"), dict) else {}
+            compiler_value = compiler_lookup.get(build.get("compiler_id"))
+            compiler: dict[str, Any] = compiler_value if isinstance(compiler_value, dict) else {}
+            coff_value = build.get("coff")
+            coff: dict[str, Any] = coff_value if isinstance(coff_value, dict) else {}
             groups.setdefault(key, []).append(
                 {
                     "report_index": report_index,
@@ -252,10 +254,12 @@ def compare_ground_truth_corpora(
                     "architecture": coff.get("architecture"),
                     "section_fingerprint": [
                         (section.get("name"), section.get("size"), section.get("sha256"), section.get("characteristics"))
-                        for section in coff.get("sections", []) if isinstance(section, dict)
+                        for section in (coff.get("sections") or [])
+                        if isinstance(section, dict)
                     ],
                     "symbols": sorted(
-                        symbol.get("name") for symbol in coff.get("symbols", [])
+                        symbol["name"]
+                        for symbol in (coff.get("symbols") or [])
                         if isinstance(symbol, dict) and isinstance(symbol.get("name"), str)
                     ),
                 }
@@ -296,7 +300,7 @@ def compare_ground_truth_corpora(
     return result
 
 def create_builtin_manifest(root: Path, *, output: Path) -> dict[str, Any]:
-    """Create builtin manifest for the current toolkit workflow."""
+    """Create builtin manifest."""
     root = root.resolve()
     source_root = root / "corpus" / "ground_truth_sources"
     if not source_root.is_dir():

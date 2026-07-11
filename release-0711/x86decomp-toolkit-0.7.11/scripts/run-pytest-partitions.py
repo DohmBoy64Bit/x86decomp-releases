@@ -20,7 +20,7 @@ ISOLATED_TEST_FILES = {
 
 
 def _environment(root: Path) -> dict[str, str]:
-    """Support environment processing for internal toolkit callers."""
+    """Build the isolated environment inherited by each pytest subprocess."""
     environment = os.environ.copy()
     values = [str(root / "src"), str(root / "test-suite/src")]
     if environment.get("PYTHONPATH"):
@@ -31,7 +31,7 @@ def _environment(root: Path) -> dict[str, str]:
 
 
 def _collect(root: Path, environment: dict[str, str]) -> list[str]:
-    """Support collect processing for internal toolkit callers."""
+    """Collect the requested operation."""
     completed = subprocess.run(
         [sys.executable, "-m", "pytest", "--collect-only", "-q", "tests", "test-suite/tests", "test-suite/src/x86decomp_testkit/toolkit_tests"],
         cwd=root,
@@ -51,7 +51,7 @@ def _collect(root: Path, environment: dict[str, str]) -> list[str]:
 
 
 def _partitions(node_ids: list[str]) -> list[tuple[str, list[str]]]:
-    """Support partitions processing for internal toolkit callers."""
+    """Group collected test node identifiers into the exact isolated execution partitions."""
     grouped: dict[str, list[str]] = defaultdict(list)
     for node_id in node_ids:
         grouped[node_id.split("::", 1)[0]].append(node_id)
@@ -65,7 +65,7 @@ def _partitions(node_ids: list[str]) -> list[tuple[str, list[str]]]:
 
 
 def _junit_counts(path: Path) -> dict[str, int]:
-    """Support junit counts processing for internal toolkit callers."""
+    """Read test, failure, error, and skip totals from a JUnit XML report."""
     root = ET.parse(path).getroot()
     suites = [root] if root.tag == "testsuite" else list(root.findall(".//testsuite"))
     return {
@@ -75,7 +75,7 @@ def _junit_counts(path: Path) -> dict[str, int]:
 
 
 def run(root: Path, *, timeout_seconds: int, report_path: Path | None = None) -> dict[str, Any]:
-    """Run run for the current toolkit workflow."""
+    """Collect, execute, and reconcile every test partition without accepting skips."""
     root = root.resolve()
     environment = _environment(root)
     node_ids = _collect(root, environment)

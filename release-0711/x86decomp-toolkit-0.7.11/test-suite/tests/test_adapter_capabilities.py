@@ -18,12 +18,12 @@ from x86decomp_testkit.models import ProbeResult
 
 class _ModelsHandler(BaseHTTPRequestHandler):
     """Implement the _ModelsHandler class using its declared base class contract.
-    
+
     Attributes, invariants, and helper methods are defined by the class body.
     """
     def do_GET(self) -> None:
         """Implement do g e t.
-        
+
         Parameters and return values follow the signature and runtime validation in the body.
         """
         if self.path != "/v1/models":
@@ -39,7 +39,7 @@ class _ModelsHandler(BaseHTTPRequestHandler):
 
     def log_message(self, format: str, *args: object) -> None:
         """Implement log message.
-        
+
         Parameters and return values follow the signature and runtime validation in the body.
         """
         return
@@ -47,7 +47,7 @@ class _ModelsHandler(BaseHTTPRequestHandler):
 
 def _config(tmp_path: Path) -> TestConfig:
     """Implement config.
-    
+
     Parameters and return values follow the signature and runtime validation in the body.
     """
     return TestConfig(toolkit_root=tmp_path, output_root=tmp_path / "out", interactive=False, strict=False)
@@ -55,7 +55,7 @@ def _config(tmp_path: Path) -> TestConfig:
 
 def test_lm_studio_http_satisfies_openai_capability_without_product_aliasing(tmp_path: Path) -> None:
     """Verify lm studio http satisfies openai capability without product aliasing.
-    
+
     Parameters and return values follow the signature and runtime validation in the body.
     """
     server = HTTPServer(("127.0.0.1", 0), _ModelsHandler)
@@ -89,7 +89,7 @@ def test_lm_studio_http_satisfies_openai_capability_without_product_aliasing(tmp
 
 def test_non_loopback_http_endpoint_requires_network_opt_in(tmp_path: Path) -> None:
     """Verify non loopback http endpoint requires network opt in.
-    
+
     Parameters and return values follow the signature and runtime validation in the body.
     """
     config = _config(tmp_path)
@@ -100,7 +100,7 @@ def test_non_loopback_http_endpoint_requires_network_opt_in(tmp_path: Path) -> N
 
 def test_loopback_host_classifier_is_strict() -> None:
     """Verify loopback host classifier is strict.
-    
+
     Parameters and return values follow the signature and runtime validation in the body.
     """
     assert host_is_loopback("127.0.0.1")

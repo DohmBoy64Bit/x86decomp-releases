@@ -1,0 +1,23 @@
+{
+  "index": 22,
+  "partition": "tests/reconstruction/test_cli_schemas_retention.py",
+  "targets": [
+    "tests/reconstruction/test_cli_schemas_retention.py"
+  ],
+  "command": [
+    "/opt/pyvenv/bin/python3",
+    "-m",
+    "pytest",
+    "-q",
+    "tests/reconstruction/test_cli_schemas_retention.py",
+    "-p",
+    "no:cacheprovider",
+    "--junitxml=/mnt/data/x86decomp-audit-external/partition-replay/022.xml"
+  ],
+  "returncode": 0,
+  "tests": 6,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "output_tail": "......                                                                   [100%]\n6 passed in 1.77s\n"
+}

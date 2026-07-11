@@ -1,4 +1,4 @@
-"""Provide the installed test-suite implementation for the `x86decomp_testkit.self_tests.test_archive_security` module."""
+"""Provide test archive security support for the standalone verification harness."""
 from __future__ import annotations
 
 import io

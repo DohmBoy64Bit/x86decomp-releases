@@ -1,0 +1,23 @@
+{
+  "index": 4,
+  "partition": "test-suite/tests/test_architecture_maps.py",
+  "targets": [
+    "test-suite/tests/test_architecture_maps.py"
+  ],
+  "command": [
+    "/opt/pyvenv/bin/python3",
+    "-m",
+    "pytest",
+    "-q",
+    "test-suite/tests/test_architecture_maps.py",
+    "-p",
+    "no:cacheprovider",
+    "--junitxml=/mnt/data/x86decomp-audit-external/partition-replay/004.xml"
+  ],
+  "returncode": 0,
+  "tests": 4,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "output_tail": "....                                                                     [100%]\n4 passed in 0.02s\n"
+}

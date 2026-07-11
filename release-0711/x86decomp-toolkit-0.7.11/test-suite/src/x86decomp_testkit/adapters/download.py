@@ -1,4 +1,4 @@
-"""Provide the installed test-suite implementation for the `x86decomp_testkit.adapters.download` module."""
+"""Provide download support for the standalone verification harness."""
 from __future__ import annotations
 
 import hashlib
@@ -18,7 +18,7 @@ USER_AGENT = "x86decomp-test-suite/0.7.11"
 
 
 def platform_key() -> str:
-    """Execute the platform key operation for the current toolkit workflow."""
+    """Return the normalized operating-system and architecture key for downloads."""
     system = platform.system().lower()
     machine = platform.machine().lower()
     if machine in {"amd64", "x86_64"}:
@@ -29,7 +29,7 @@ def platform_key() -> str:
 
 
 def github_latest_release(repository: str, timeout: int = 30) -> dict[str, Any]:
-    """Execute the github latest release operation for the current toolkit workflow."""
+    """Fetch and validate metadata for a repository's latest GitHub release."""
     request = urllib.request.Request(
         f"https://api.github.com/repos/{repository}/releases/latest",
         headers={"User-Agent": USER_AGENT, "Accept": "application/vnd.github+json"},
@@ -42,7 +42,7 @@ def github_latest_release(repository: str, timeout: int = 30) -> dict[str, Any]:
 
 
 def select_release_asset(release: dict[str, Any], required_tokens: tuple[str, ...]) -> dict[str, Any]:
-    """Select release asset for the current toolkit workflow."""
+    """Select release asset."""
     tokens = tuple(token.lower() for token in required_tokens)
     matches = []
     for asset in release.get("assets", []):
@@ -58,7 +58,7 @@ def select_release_asset(release: dict[str, Any], required_tokens: tuple[str, ..
 
 
 def download_file(url: str, destination: Path, max_bytes: int = 2_000_000_000) -> str:
-    """Execute the download file operation for the current toolkit workflow."""
+    """Download a bounded adapter artifact to an explicitly selected destination."""
     destination.parent.mkdir(parents=True, exist_ok=True)
     request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
     digest = hashlib.sha256()
@@ -84,7 +84,7 @@ def download_file(url: str, destination: Path, max_bytes: int = 2_000_000_000) -
 
 
 def _safe_destination(root: Path, member_name: str) -> Path:
-    """Support safe destination processing for internal toolkit callers."""
+    """Resolve a download destination and require it to remain inside its root."""
     pure = PurePosixPath(member_name.replace("\\", "/"))
     if pure.is_absolute() or ".." in pure.parts:
         raise RuntimeError(f"unsafe archive path: {member_name}")
@@ -96,7 +96,7 @@ def _safe_destination(root: Path, member_name: str) -> Path:
 
 
 def safe_extract_archive(archive: Path, destination: Path, max_members: int = 200_000) -> None:
-    """Execute the safe extract archive operation for the current toolkit workflow."""
+    """Extract a supported archive after validating every member path and type."""
     destination.mkdir(parents=True, exist_ok=True)
     lower = archive.name.lower()
     if lower.endswith(".exe"):

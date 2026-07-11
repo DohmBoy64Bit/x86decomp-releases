@@ -1,4 +1,4 @@
-"""Provide the current runtime implementation for the `x86decomp.reconstruction.cli` module."""
+"""Register and dispatch project-reconstruction CLI commands."""
 from __future__ import annotations
 
 import argparse

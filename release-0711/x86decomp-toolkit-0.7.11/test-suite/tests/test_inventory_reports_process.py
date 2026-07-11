@@ -18,7 +18,7 @@ from x86decomp_testkit.reports import write_adapter_report, write_html_report, w
 
 def _mini_toolkit(root: Path) -> Path:
     """Implement mini toolkit.
-    
+
     Parameters and return values follow the signature and runtime validation in the body.
     """
     package = root / "src" / "x86decomp"
@@ -37,7 +37,7 @@ def _mini_toolkit(root: Path) -> Path:
 
 def test_inventory_catalog_and_public_coverage(tmp_path: Path) -> None:
     """Verify inventory catalog and public coverage.
-    
+
     Parameters and return values follow the signature and runtime validation in the body.
     """
     root = _mini_toolkit(tmp_path / "toolkit")
@@ -62,7 +62,7 @@ def test_inventory_catalog_and_public_coverage(tmp_path: Path) -> None:
 
 def test_junit_process_logging_and_reports(tmp_path: Path) -> None:
     """Verify junit process logging and reports.
-    
+
     Parameters and return values follow the signature and runtime validation in the body.
     """
     junit = tmp_path / "junit.xml"
@@ -95,7 +95,7 @@ def test_junit_process_logging_and_reports(tmp_path: Path) -> None:
 
 def test_suite_schemas_and_catalog_are_valid() -> None:
     """Verify suite schemas and catalog are valid.
-    
+
     Parameters and return values follow the signature and runtime validation in the body.
     """
     from importlib.resources import files
@@ -117,7 +117,7 @@ def test_suite_schemas_and_catalog_are_valid() -> None:
 
 def test_recursive_inventory_includes_capability_packages_and_nested_schemas(tmp_path: Path) -> None:
     """Verify recursive inventory includes capability packages and nested schemas.
-    
+
     Parameters and return values follow the signature and runtime validation in the body.
     """
     root = _mini_toolkit(tmp_path / "toolkit")

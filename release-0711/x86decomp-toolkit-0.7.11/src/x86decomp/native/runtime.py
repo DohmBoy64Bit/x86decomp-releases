@@ -15,7 +15,7 @@ from .store import NativeStore
 class RuntimeValidation:
     """Validate reconstructed PE images and map crash addresses back to function slots."""
     def __init__(self,store:NativeStore):
-        """Initialize the instance with validated constructor state."""
+        """Initialize RuntimeValidation with `store`."""
         self.store=store; store.initialize()
 
     def validate_image(self,image_path:Path, *, actor:str='analyst')->dict[str,Any]:

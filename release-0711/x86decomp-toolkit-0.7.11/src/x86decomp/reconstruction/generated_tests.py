@@ -14,7 +14,7 @@ class GeneratedTests:
     trail. Generated tests are regression contracts, not proof of original source.
     """
     def __init__(self,store:ReconstructionStore):
-        """Initialize the instance with validated constructor state."""
+        """Initialize GeneratedTests with `store`."""
         self.store=store; store.initialize()
     def add(self,name:str,scope_kind:str,scope_id:str,test_kind:str,relative_path:str,content:str,*,applicability:dict[str,Any],evidence:list[dict[str,Any]],actor:str='analyst')->dict[str,Any]:
         """Register a generated test, writing its source file and a store record.

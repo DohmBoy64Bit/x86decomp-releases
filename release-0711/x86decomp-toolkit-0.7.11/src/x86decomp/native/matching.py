@@ -1,4 +1,4 @@
-"""Provide the current runtime implementation for the `x86decomp.native.matching` module."""
+"""Match reconstructed functions against original PE bytes."""
 from __future__ import annotations
 
 from pathlib import Path
@@ -14,7 +14,7 @@ DEFAULT_PAD_BYTES = frozenset({0x00, 0x90, 0xCC})
 
 
 def rva_to_file_offset(image: Any, rva: int) -> int:
-    """Execute the rva to file offset operation for the current toolkit workflow."""
+    """Translate an RVA to a validated offset in the original PE image."""
     if rva < image.size_of_headers:
         return rva
     for section in image.sections:
@@ -25,7 +25,7 @@ def rva_to_file_offset(image: Any, rva: int) -> int:
 
 
 def extract_candidate(path: Path, *, symbol: str | None = None, size: int | None = None) -> bytes:
-    """Extract candidate for the current toolkit workflow."""
+    """Extract candidate."""
     if not path.is_file():
         raise ContractError(f"candidate does not exist: {path}")
     if symbol is None:
@@ -41,7 +41,7 @@ def compare_function_bytes(
     pad_bytes: Iterable[int] = DEFAULT_PAD_BYTES,
     protected_offsets: Iterable[int] = (),
 ) -> dict[str, Any]:
-    """Compare function bytes for the current toolkit workflow."""
+    """Compare function bytes."""
     if policy not in {"exact", "trailing-padding"}:
         raise ContractError(f"unsupported comparison policy: {policy}")
     pads = frozenset(int(value) for value in pad_bytes)
@@ -79,9 +79,9 @@ def compare_function_bytes(
 
 
 class FunctionMatching:
-    """Coordinate function matching behavior for the current toolkit workflow."""
+    """Compare rebuilt function bytes with original PE function slots and persist results."""
     def __init__(self, store: NativeStore):
-        """Initialize the instance with validated constructor state."""
+        """Initialize FunctionMatching with `store`."""
         self.store = store; store.initialize()
 
     def batch(
@@ -93,7 +93,7 @@ class FunctionMatching:
         pad_bytes: Iterable[int] = DEFAULT_PAD_BYTES,
         actor: str = "analyst",
     ) -> dict[str, Any]:
-        """Execute the batch operation for the current toolkit workflow."""
+        """Compare a batch of rebuilt functions against their original PE slots."""
         original_path = original_path.resolve()
         image = parse_pe(original_path)
         payload = original_path.read_bytes()
@@ -151,7 +151,7 @@ class FunctionMatching:
         return {"run_id": run_id, "summary": summary, "functions": results}
 
     def report(self, run_id: str) -> dict[str, Any]:
-        """Execute the report operation for the current toolkit workflow."""
+        """Return the persisted summary and function results for a matching run."""
         with self.store.connect() as connection:
             run = connection.execute("SELECT * FROM native_match_runs WHERE run_id=?", (run_id,)).fetchone()
             if run is None: raise KeyError(run_id)
@@ -162,5 +162,5 @@ class FunctionMatching:
             return result
 
     def mismatches(self, run_id: str) -> list[dict[str, Any]]:
-        """Execute the mismatches operation for the current toolkit workflow."""
+        """Return only nonmatching function results from a matching run."""
         return [item for item in self.report(run_id)["functions"] if not item["replacement_safe"]]

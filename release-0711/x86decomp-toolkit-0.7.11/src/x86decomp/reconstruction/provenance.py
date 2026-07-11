@@ -11,7 +11,7 @@ from .store import ReconstructionStore
 class ProvenanceLedger:
     """Record and query source-to-binary provenance, locks, and edit reconciliation."""
     def __init__(self,store:ReconstructionStore):
-        """Initialize the instance with validated constructor state."""
+        """Initialize ProvenanceLedger with `store`."""
         self.store=store; store.initialize()
     def record(self,source_path:str,line_start:int,line_end:int,binary_id:str,address_start:str,address_end:str,*,evidence:list[dict[str,Any]],confidence:float,actor:str='analyst')->dict[str,Any]:
         """Record a provenance mapping between a source range and binary region.

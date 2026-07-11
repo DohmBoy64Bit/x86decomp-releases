@@ -13,7 +13,7 @@ from .util import load_json, utc_now, write_json
 
 
 class CallingConvention(StrEnum):
-    """Coordinate calling convention behavior for the current toolkit workflow."""
+    """Enumerate supported calling convention values."""
     CDECL = "cdecl"
     STDCALL = "stdcall"
     THISCALL = "thiscall"
@@ -23,7 +23,7 @@ class CallingConvention(StrEnum):
 
 
 class FloatMode(StrEnum):
-    """Coordinate float mode behavior for the current toolkit workflow."""
+    """Enumerate supported float mode values."""
     X87 = "x87"
     SSE = "sse"
     MIXED = "mixed"
@@ -47,7 +47,7 @@ class ABIContract:
 
     @classmethod
     def from_dict(cls, value: Any) -> "ABIContract":
-        """Execute the from dict operation for the current toolkit workflow."""
+        """Build abicontract from validated mapping data."""
         if not isinstance(value, dict):
             raise ContractError("ABI contract must be an object")
         architecture = value.get("architecture")
@@ -59,7 +59,7 @@ class ABIContract:
         except ValueError as exc:
             raise ContractError(f"invalid ABI enum: {exc}") from exc
         def optional_nonnegative(key: str) -> int | None:
-            """Execute the optional nonnegative operation for the current toolkit workflow."""
+            """Validate an optional integer and reject negative values."""
             raw = value.get(key)
             if raw is None:
                 return None
@@ -90,12 +90,12 @@ class ABIContract:
 
 
 def load_abi_contract(path: Path) -> ABIContract:
-    """Load abi contract for the current toolkit workflow."""
+    """Load ABI contract."""
     return ABIContract.from_dict(load_json(path))
 
 
 def analyze_abi(code: bytes, *, architecture: str = "x86", base_address: int = 0) -> dict[str, Any]:
-    """Execute the analyze abi operation for the current toolkit workflow."""
+    """Analyze ABI."""
     instructions = decode_instructions(code, base_address=base_address, architecture=architecture)
     mnemonics = [record.mnemonic for record in instructions]
     ret_immediates: list[int] = []
@@ -164,7 +164,7 @@ def validate_abi(
     base_address: int = 0,
     report_path: Path | None = None,
 ) -> dict[str, Any]:
-    """Validate abi for the current toolkit workflow."""
+    """Validate ABI."""
     analysis = analyze_abi(code, architecture=contract.architecture, base_address=base_address)
     checks: list[dict[str, Any]] = []
     observed_cleanup = analysis["inferred_callee_stack_cleanup"]

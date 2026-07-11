@@ -1,0 +1,222 @@
+{
+  "audit_read": {
+    "all_hashes_unchanged_since_read": true,
+    "original_file_count": 83,
+    "original_files_read": 83,
+    "receipt": "AUDIT_READ_RECEIPT_0.7.11.json",
+    "registry_read_complete": true
+  },
+  "coverage": {
+    "branch_percent": 43.93118827652118,
+    "combined_percent": 63.27669393748689,
+    "covered_branches": 2758,
+    "covered_lines": 12324,
+    "line_percent": 70.19422452583015,
+    "note": "Measured coverage: line/statement coverage is covered_lines / num_statements; combined_percent is coverage.py's line-plus-branch aggregate. The 100% figure applies only to audit-finding closure.",
+    "num_branches": 6278,
+    "num_statements": 17557,
+    "scope": "src/x86decomp and test-suite/src/x86decomp_testkit under the complete 258-test monolithic run"
+  },
+  "docstrings": {
+    "classes_total": 160,
+    "classes_with_docstrings": 160,
+    "files": 212,
+    "functions_total": 1474,
+    "functions_with_docstrings": 1474,
+    "missing": 0,
+    "modules_total": 212,
+    "modules_with_docstrings": 212,
+    "passed": true,
+    "repeated_leading_verb_occurrences": 0,
+    "repeated_leading_verb_symbols": [],
+    "template_phrase_occurrences": 0,
+    "template_phrase_symbols": []
+  },
+  "finding_coverage": {
+    "closed_verified": 24,
+    "coverage_percent": 100.0,
+    "open": 0,
+    "total_unique_findings": 24
+  },
+  "findings": [
+    {
+      "change": "Regenerated deterministic root and standalone test-suite SHA-256 manifests after all remediation artifacts were written.",
+      "evidence": "scripts/source_hashes.py generate/verify; MANIFEST.sha256; test-suite/MANIFEST.sha256",
+      "id": "REPO-001",
+      "status": "closed_verified"
+    },
+    {
+      "change": "Removed the machine-local root harness configuration that exposed absolute user paths and environment data.",
+      "evidence": "x86decomp-test.json absent; root ignore rule added",
+      "id": "REPO-002",
+      "status": "closed_verified"
+    },
+    {
+      "change": "Kept build outputs, caches, downloaded tools, and harness results outside the release tree and expanded clean rules.",
+      "evidence": ".gitignore; Makefile; final hygiene scan",
+      "id": "REPO-003",
+      "status": "closed_verified"
+    },
+    {
+      "change": "Aligned root-level harness output/config/install paths with ignore and clean rules.",
+      "evidence": ".gitignore; README/CI invocation paths are now safely ignored",
+      "id": "REPO-004",
+      "status": "closed_verified"
+    },
+    {
+      "change": "Kept distribution artifacts out of the source tree, rebuilt wheel/sdist externally, byte-compared packaged source to the current tree, and clean-installed both entry points.",
+      "evidence": "external build verification; 141 wheel and 141 sdist package files matched",
+      "id": "REPO-005",
+      "status": "closed_verified"
+    },
+    {
+      "change": "Completed the entire collected test inventory both in isolated partitions and monolithically with no failures, errors, or skips.",
+      "evidence": "258/258 isolated; 258/258 monolithic",
+      "id": "TEST-001",
+      "status": "closed_verified"
+    },
+    {
+      "change": "Replaced audited template and repeated-verb docstrings and added a reproducible quality-aware docstring audit.",
+      "evidence": "212 modules, 160 classes, 1,474 functions/methods; zero missing/template/repeated defects",
+      "id": "DOC-001",
+      "status": "closed_verified"
+    },
+    {
+      "change": "Added a source-controlled MkDocs Material site, docs dependency, navigation, strict build gate, and CI step.",
+      "evidence": "mkdocs.yml; docs/index.md; strict build PASS",
+      "id": "DOC-002",
+      "status": "closed_verified"
+    },
+    {
+      "change": "Moved the repeated adapter-capability statement to one canonical page and replaced copied prose with context-specific references.",
+      "evidence": "docs/adapter-capabilities.md; README.md; PROJECT_MEMORY.md; VERIFICATION.md",
+      "id": "DUP-001",
+      "status": "closed_verified"
+    },
+    {
+      "change": "Made contracts.py the canonical implementation for hashing, JSON, time, path containment, and atomic writes; util.py now preserves compatibility through delegation.",
+      "evidence": "src/x86decomp/contracts.py; src/x86decomp/util.py",
+      "id": "DUP-002",
+      "status": "closed_verified"
+    },
+    {
+      "change": "Routed PDB and MSVC metadata bounded reads through BinaryReader, including bounded string reads with returned end offsets.",
+      "evidence": "binary_reader.py; pdb.py; msvc_metadata.py",
+      "id": "DUP-003",
+      "status": "closed_verified"
+    },
+    {
+      "change": "Extracted width-parameterized import-thunk and TLS-callback walkers shared by PE32 and PE32+ parsers.",
+      "evidence": "pe32.py::_parse_thunk_symbols/_parse_tls_callbacks; pe.py consumers",
+      "id": "DUP-004",
+      "status": "closed_verified"
+    },
+    {
+      "change": "Added an executable hash-based synchronization gate for all 24 duplicated package-data corpus sources.",
+      "evidence": "scripts/verify-corpus-sync.py; exact package/repository equality PASS",
+      "id": "DUP-005",
+      "status": "closed_verified"
+    },
+    {
+      "change": "Added an explicit private vulnerability-reporting address, subject convention, required evidence, and disclosure flow.",
+      "evidence": "SECURITY.md",
+      "id": "UX-001",
+      "status": "closed_verified"
+    },
+    {
+      "change": "Did not restore the stale prior audit report; added this disposition/remediation report tied to current verification evidence.",
+      "evidence": "project-audit/AUDIT_REMEDIATION_REPORT.md",
+      "id": "MAINT-001",
+      "status": "closed_verified"
+    },
+    {
+      "change": "Made VerificationStatus a runtime output of claim verification.",
+      "evidence": "evidence.py verification_status; regression test",
+      "id": "MAINT-002",
+      "status": "closed_verified"
+    },
+    {
+      "change": "Unified expected CLI failures around X86DecompError so domain errors emit structured JSON instead of tracebacks.",
+      "evidence": "cli_utils.py CLI_ERROR_TYPES; CLI regression tests",
+      "id": "CLI-001",
+      "status": "closed_verified"
+    },
+    {
+      "change": "Migrated the root CLI to shared run_cli handling, including OSError and subprocess errors with exit status 2.",
+      "evidence": "cli.py main; missing-file JSON regression test",
+      "id": "CLI-002",
+      "status": "closed_verified"
+    },
+    {
+      "change": "Added a specific help summary for every root command, including dynamically registered MCP commands.",
+      "evidence": "166/166 parser choices have help actions",
+      "id": "CLI-003",
+      "status": "closed_verified"
+    },
+    {
+      "change": "Collapsed the two ContractError definitions into one class that remains compatible with X86DecompError and ValueError catches.",
+      "evidence": "errors.py canonical class; contracts.py import; identity regression test",
+      "id": "ARC-001",
+      "status": "closed_verified"
+    },
+    {
+      "change": "Memoized canonical parser discovery, route generation, and group generation with process-local LRU caches.",
+      "evidence": "canonical.py cache decorators and cache-hit regression test",
+      "id": "PERF-001",
+      "status": "closed_verified"
+    },
+    {
+      "change": "Runs ad-hoc SELECT statements on a dedicated read-only SQLite connection with wall-clock interruption and a 10,000-row default cap.",
+      "evidence": "analysis_db.py; mutation and row-bound regression tests",
+      "id": "SEC-002",
+      "status": "closed_verified"
+    },
+    {
+      "change": "Rejects every workflow function identifier outside the exact pe-rva:XXXXXXXX grammar before path construction.",
+      "evidence": "workflow.py anchored regex; traversal regression test",
+      "id": "SEC-003",
+      "status": "closed_verified"
+    },
+    {
+      "change": "Requires explicit --allow-remote authorization before binding the unauthenticated read-only service to a non-loopback address.",
+      "evidence": "service.py and CLI flag; remote-bind regression test",
+      "id": "SEC-004",
+      "status": "closed_verified"
+    }
+  ],
+  "gates": {
+    "candidate_clean_install_and_pip_check": "PASS",
+    "candidate_test_suite_build": "PASS",
+    "candidate_toolkit_build": "PASS",
+    "compileall": "PASS",
+    "corpus_sync": "PASS",
+    "mkdocs_strict": "PASS",
+    "package_source_comparison": "PASS (141 wheel + 141 sdist files)",
+    "pyflakes": "PASS",
+    "source_manifests": "generated and verified after report generation",
+    "validate_contracts": "PASS"
+  },
+  "release": "0.7.11",
+  "schema_version": 1,
+  "status": "PASS",
+  "tests": {
+    "collected": 258,
+    "exact_partition_report": "FINAL_TEST_PARTITION_REPORT_0.7.11.json",
+    "exact_partition_report_sha256": "3af53a95e608a01b2856d14261992fb26bcc51e0ae084fec59f7805fada8239b",
+    "final_exact_partition_replay": "258/258 passed; 0 failures; 0 errors; 0 skipped; 86/86 JUnit partitions reconciled",
+    "final_exact_partition_report": "FINAL_TEST_PARTITION_REPORT_0.7.11.json",
+    "final_exact_partition_report_sha256": "3af53a95e608a01b2856d14261992fb26bcc51e0ae084fec59f7805fada8239b",
+    "final_group_report": "FINAL_TEST_GROUP_REPORT_0.7.11.json",
+    "final_group_report_sha256": "7b95d2afca5c49bf7fadd2195eb4f76826869330ed26907f213d71b398a5d33c",
+    "final_post_packaging_replay": "258/258 passed; 0 failures; 0 errors; 0 skipped across 6 reconciled groups",
+    "isolated_errors": 0,
+    "isolated_failed": 0,
+    "isolated_partitions": 86,
+    "isolated_passed": 258,
+    "isolated_skipped": 0,
+    "monolithic_failed": 0,
+    "monolithic_passed": 258,
+    "monolithic_seconds": 69.55,
+    "monolithic_skipped": 0
+  }
+}

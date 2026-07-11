@@ -1,4 +1,4 @@
-"""Provide the current runtime implementation for the `x86decomp.governance.proofs` module."""
+"""Record proof obligations and their verification results."""
 from __future__ import annotations
 
 import hmac
@@ -18,14 +18,14 @@ PROOF_STATUSES = {"byte_identical", "structurally_equivalent", "symbolically_pro
 
 
 class ProofLedger:
-    """Coordinate proof ledger behavior for the current toolkit workflow."""
+    """Manage ProofLedger through `create_obligation`, `add_result`, `obligation`."""
     def __init__(self, store: GovernanceStore):
-        """Initialize the instance with validated constructor state."""
+        """Initialize ProofLedger with `store`."""
         self.store = store
         self.store.initialize()
 
     def create_obligation(self, scope_kind: str, scope_id: str, property_name: str, required_status: str, *, assumptions: list[str] | None = None, actor: str = "analyst") -> dict[str, Any]:
-        """Create obligation for the current toolkit workflow."""
+        """Create obligation."""
         if required_status not in PROOF_STATUSES:
             raise ContractError(f"invalid required proof status: {required_status}")
         obligation_id = random_id("obl")
@@ -38,7 +38,7 @@ class ProofLedger:
         return self.obligation(obligation_id)
 
     def add_result(self, obligation_id: str, status: str, validator: str, report: dict[str, Any], *, artifact_sha256: str | None = None, actor: str = "validator") -> dict[str, Any]:
-        """Execute the add result operation for the current toolkit workflow."""
+        """Add result."""
         if status not in PROOF_STATUSES:
             raise ContractError(f"invalid proof status: {status}")
         self.obligation(obligation_id)
@@ -54,7 +54,7 @@ class ProofLedger:
         return self.result(result_id)
 
     def obligation(self, obligation_id: str) -> dict[str, Any]:
-        """Execute the obligation operation for the current toolkit workflow."""
+        """Return the obligation derived from `obligation_id` for ProofLedger."""
         with self.store.connect() as connection:
             row = connection.execute("SELECT * FROM governance_proof_obligations WHERE obligation_id=?", (obligation_id,)).fetchone()
             results = connection.execute("SELECT result_id FROM governance_proof_results WHERE obligation_id=? ORDER BY created_at", (obligation_id,)).fetchall() if row else []
@@ -66,7 +66,7 @@ class ProofLedger:
         return result
 
     def result(self, result_id: str) -> dict[str, Any]:
-        """Execute the result operation for the current toolkit workflow."""
+        """Return the result derived from `result_id` for ProofLedger."""
         with self.store.connect() as connection:
             row = connection.execute("SELECT * FROM governance_proof_results WHERE result_id=?", (result_id,)).fetchone()
         if not row:
@@ -76,7 +76,7 @@ class ProofLedger:
         return result
 
     def evaluate(self, obligation_id: str) -> dict[str, Any]:
-        """Execute the evaluate operation for the current toolkit workflow."""
+        """Evaluate proof ledger."""
         obligation = self.obligation(obligation_id)
         statuses = [item["status"] for item in obligation["results"]]
         passed = obligation["required_status"] in statuses
@@ -88,7 +88,7 @@ class ProofBundle:
 
     @staticmethod
     def _zip_info(name: str) -> zipfile.ZipInfo:
-        """Support zip info processing for internal toolkit callers."""
+        """Return the ZIP info derived from `name` for ProofBundle."""
         info = zipfile.ZipInfo(name, date_time=(1980, 1, 1, 0, 0, 0))
         info.compress_type = zipfile.ZIP_DEFLATED
         info.external_attr = (stat.S_IFREG | 0o644) << 16
@@ -96,7 +96,7 @@ class ProofBundle:
 
     @classmethod
     def export(cls, store: GovernanceStore, output: str | Path, *, include_paths: list[str | Path] | None = None, hmac_key: bytes | None = None) -> dict[str, Any]:
-        """Execute the export operation for the current toolkit workflow."""
+        """Export proof bundle."""
         store.initialize()
         output = Path(output).resolve()
         output.parent.mkdir(parents=True, exist_ok=True)
@@ -138,14 +138,14 @@ class ProofBundle:
 
     @staticmethod
     def _validate_member(name: str) -> None:
-        """Support validate member processing for internal toolkit callers."""
+        """Validate member."""
         path = Path(name)
         if path.is_absolute() or ".." in path.parts or "\\" in name or ":" in name:
             raise ContractError(f"unsafe proof bundle member: {name}")
 
     @classmethod
     def verify(cls, path: str | Path, *, hmac_key: bytes | None = None, max_members: int = 10000, max_total_bytes: int = 1024 * 1024 * 1024) -> dict[str, Any]:
-        """Verify verify for the current toolkit workflow."""
+        """Verify proof bundle integrity and contracts."""
         path = Path(path).resolve()
         failures: list[str] = []
         with zipfile.ZipFile(path, "r") as archive:
@@ -191,5 +191,5 @@ class ProofBundle:
 
     @classmethod
     def inspect(cls, path: str | Path) -> dict[str, Any]:
-        """Execute the inspect operation for the current toolkit workflow."""
+        """Inspect proof bundle."""
         return cls.verify(path)

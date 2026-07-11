@@ -4,10 +4,11 @@ from __future__ import annotations
 
 import argparse
 import json
-import sys
+import subprocess
 from pathlib import Path
 from typing import Any
 
+from . import __version__
 from .abi import load_abi_contract, validate_abi
 from .angr_backend import angr_bounded_compare_files, angr_memory_alias_compare_files
 from .analysis_db import AnalysisDatabase
@@ -26,7 +27,7 @@ from .diffing import compare_files
 from .disassembly import cross_check_ghidra_instructions, decode_instructions
 from .dynamic import differential_validate_files
 from .dynamorio import parse_drcov_text, run_drcov_trace
-from .errors import X86DecompError
+from .cli_utils import run_cli
 from .evidence import EvidenceStore
 from .exe_diff import compare_pe_function_to_coff_symbol
 from .ghidra import build_export_command, run_export
@@ -78,23 +79,102 @@ from .workflow import (
 )
 
 
+_COMMAND_HELP: dict[str, str] = {'verify-project': 'verify project structure, contracts, and recorded hashes',
+ 'snapshot-tools': 'record detected external tool versions and paths',
+ 'compile': 'compile one source file under a declared compiler profile',
+ 'compiler-lab': 'run a compiler experiment matrix from a lab manifest',
+ 'objdiff-run': 'run an objdiff-compatible comparison manifest',
+ 'toolchain-register': 'register a versioned compiler toolchain',
+ 'toolchain-verify': 'verify a registered toolchain and executable hashes',
+ 'diff-bytes': 'compare two files byte-for-byte with bounded mismatch reporting',
+ 'coff-inspect': 'inspect COFF object metadata, symbols, and relocations',
+ 'coff-extract': 'extract one symbol payload from a COFF object',
+ 'coff-synthesize': 'create a synthetic COFF object from code and relocations',
+ 'disassemble': 'decode bounded machine-code instructions',
+ 'crosscheck-ghidra': 'compare toolkit disassembly with a Ghidra export',
+ 'abi-check': 'validate observed behavior against an ABI contract',
+ 'dynamic-validate': 'differentially execute and compare two binaries',
+ 'symbolic-validate': 'symbolically compare bounded binary functions',
+ 'angr-validate': 'compare binary functions with the optional angr backend',
+ 'drcov-parse': 'parse a DynamoRIO drcov coverage log',
+ 'drcov-run': 'run a target under DynamoRIO drcov tracing',
+ 'integration-run': 'execute declared integration scenarios',
+ 'patch-image': 'patch a function body into a PE image',
+ 'relink': 'relink an image from a declared reconstruction manifest',
+ 'workflow-init': 'initialize per-function decompilation workflow state',
+ 'workflow-show': 'show validated per-function workflow state',
+ 'workflow-update': 'update validated per-function workflow state',
+ 'db-ingest': 'ingest an analysis artifact into the project database',
+ 'db-query': 'run a bounded read-only SQL query against the analysis database',
+ 'db-constraint-add': 'add a provenance-bearing analysis constraint',
+ 'db-constraint-conflicts': 'list conflicting constraints for a subject and relation',
+ 'db-constraint-accept': 'accept a selected analysis constraint',
+ 'work-create': 'create a validated work-queue task',
+ 'work-next': 'show the next eligible work-queue task',
+ 'work-claim': 'claim a work-queue task for an assignee',
+ 'work-propose': 'attach a proposal and evidence to a work task',
+ 'work-validate': 'record a validator result for a work task',
+ 'mcp-tools': 'list tools exposed by a configured MCP endpoint',
+ 'mcp-read': 'invoke a read-only MCP tool through the project gateway',
+ 'mcp-propose': 'propose an evidence-linked MCP mutation for approval',
+ 'mcp-commit': 'commit an approved MCP mutation',
+ 'benchmark-run': 'run a declared benchmark corpus and emit measured results',
+ 'evidence-add': 'add a provenance-bearing evidence record to a project',
+ 'claim-create': 'create an evidence-linked project claim',
+ 'claim-attach': 'attach an evidence record to an existing claim',
+ 'claim-verify': 'evaluate whether a claim has sufficient independent evidence',
+ 'claim-contradict': 'attach contradictory evidence to a claim',
+ 'memory-add': 'append an evidence-linked project-memory entry',
+ 'memory-verify': 'verify the integrity of project-memory records',
+ 'memory-render': 'render project memory as Markdown',
+ 'artifact-import': 'import a validated exported function artifact',
+ 'artifact-verify': 'verify an exported function artifact and its hashes',
+ 'decompme-pack': 'create a decomp.me-compatible packet from an artifact',
+ 'ghidra-export': 'run the bundled Ghidra export workflow',
+ 'target-pack-verify': 'verify a target-pack contract and referenced artifacts',
+ 'project-from-target': 'initialize a project from a verified target pack',
+ 'project-migrate': 'migrate project state to the current schema',
+ 'project-backup': 'create a deterministic project-state backup',
+ 'project-restore': 'restore project state from a verified backup',
+ 'project-repair': 'inspect or apply deterministic project-state repairs',
+ 'project-gc': 'inspect or remove unreferenced project content',
+ 'pipeline-create': 'create a default durable analysis pipeline manifest',
+ 'pipeline-run': 'run or resume a durable project pipeline',
+ 'pipeline-status': 'show durable pipeline and stage status',
+ 'pipeline-cancel': 'cancel a pipeline or one pipeline stage',
+ 'pipeline-retry': 'retry a failed pipeline stage',
+ 'worker-capabilities': 'report local worker and tool capabilities',
+ 'compile-worker': 'run a bounded local or containerized compilation worker',
+ 'linker-plan': 'build a grounded linker reconstruction plan',
+ 'cpp-recover': 'recover bounded C++ metadata and class relationships',
+ 'harness-generate': 'generate an execution harness from binary functions',
+ 'convergence-analyze': 'measure image convergence and append history',
+ 'reproduce-create': 'create a reproducibility manifest for declared inputs',
+ 'reproduce-verify': 'verify a reproducibility manifest and all input hashes',
+ 'security-audit': 'audit a source tree for declared security checks',
+ 'sbom-generate': 'generate a software bill of materials',
+ 'release-manifest-verify': 'verify every entry in a release hash manifest',
+ 'content-put': 'store content by cryptographic digest',
+ 'content-verify': 'verify content-addressed storage integrity'}
+
+
 def _print(value: Any) -> None:
-    """Support print processing for internal toolkit callers."""
+    """Print one deterministic JSON result to standard output."""
     print(json.dumps(value, indent=2, sort_keys=True, ensure_ascii=False))
 
 
 def _path(value: str) -> Path:
-    """Support path processing for internal toolkit callers."""
+    """Expand a command-line path without resolving nonexistent inputs."""
     return Path(value).expanduser()
 
 
 def _int(value: str) -> int:
-    """Support int processing for internal toolkit callers."""
+    """Parse a decimal or base-prefixed integer argument."""
     return int(value, 0)
 
 
 def _json_object(value: str) -> dict[str, Any]:
-    """Support json object processing for internal toolkit callers."""
+    """Parse a command-line value as a JSON object."""
     parsed = json.loads(value)
     if not isinstance(parsed, dict):
         raise argparse.ArgumentTypeError("value must be a JSON object")
@@ -102,8 +182,9 @@ def _json_object(value: str) -> dict[str, Any]:
 
 
 def _build_parser() -> argparse.ArgumentParser:
-    """Support build parser processing for internal toolkit callers."""
+    """Build parser."""
     parser = argparse.ArgumentParser(prog="x86decomp", description="Evidence-governed x86/x86-64 decompilation toolkit")
+    parser.add_argument("--version", action="version", version=f"%(prog)s {__version__}")
     sub = parser.add_subparsers(dest="command", required=True)
 
     p = sub.add_parser("init", help="initialize a native PE project")
@@ -111,24 +192,24 @@ def _build_parser() -> argparse.ArgumentParser:
     p.add_argument("--reference-binary", action="store_true")
     p = sub.add_parser("inspect-pe", help="parse PE32 or PE32+ metadata"); p.add_argument("binary", type=_path)
     p = sub.add_parser("pdb-inspect", help="inspect an MSF 7.0 PDB and optionally match it to a PE"); p.add_argument("pdb", type=_path); p.add_argument("--pe", type=_path)
-    p = sub.add_parser("verify-project"); p.add_argument("project", type=_path)
-    p = sub.add_parser("snapshot-tools"); p.add_argument("--output", type=_path); p.add_argument("--ghidra-home", type=_path)
+    p = sub.add_parser("verify-project", help=_COMMAND_HELP["verify-project"]); p.add_argument("project", type=_path)
+    p = sub.add_parser("snapshot-tools", help=_COMMAND_HELP["snapshot-tools"]); p.add_argument("--output", type=_path); p.add_argument("--ghidra-home", type=_path)
 
-    p = sub.add_parser("compile"); p.add_argument("profile", type=_path); p.add_argument("source", type=_path); p.add_argument("output", type=_path)
+    p = sub.add_parser("compile", help=_COMMAND_HELP["compile"]); p.add_argument("profile", type=_path); p.add_argument("source", type=_path); p.add_argument("output", type=_path)
     p.add_argument("--report", type=_path); p.add_argument("--extra-arg", action="append", default=[]); p.add_argument("--cache", type=_path)
-    p = sub.add_parser("compiler-lab"); p.add_argument("lab", type=_path); p.add_argument("--report", type=_path)
-    p = sub.add_parser("objdiff-run"); p.add_argument("manifest", type=_path); p.add_argument("--report", type=_path)
-    p = sub.add_parser("toolchain-register"); p.add_argument("registry", type=_path); p.add_argument("toolchain_id"); p.add_argument("family"); p.add_argument("version")
+    p = sub.add_parser("compiler-lab", help=_COMMAND_HELP["compiler-lab"]); p.add_argument("lab", type=_path); p.add_argument("--report", type=_path)
+    p = sub.add_parser("objdiff-run", help=_COMMAND_HELP["objdiff-run"]); p.add_argument("manifest", type=_path); p.add_argument("--report", type=_path)
+    p = sub.add_parser("toolchain-register", help=_COMMAND_HELP["toolchain-register"]); p.add_argument("registry", type=_path); p.add_argument("toolchain_id"); p.add_argument("family"); p.add_argument("version")
     p.add_argument("--executable", action="append", required=True, help="role=path")
-    p = sub.add_parser("toolchain-verify"); p.add_argument("registry", type=_path); p.add_argument("toolchain_id")
+    p = sub.add_parser("toolchain-verify", help=_COMMAND_HELP["toolchain-verify"]); p.add_argument("registry", type=_path); p.add_argument("toolchain_id")
 
-    p = sub.add_parser("diff-bytes"); p.add_argument("target", type=_path); p.add_argument("candidate", type=_path); p.add_argument("--report", type=_path); p.add_argument("--max-mismatches", type=int, default=64)
+    p = sub.add_parser("diff-bytes", help=_COMMAND_HELP["diff-bytes"]); p.add_argument("target", type=_path); p.add_argument("candidate", type=_path); p.add_argument("--report", type=_path); p.add_argument("--max-mismatches", type=int, default=64)
     p = sub.add_parser("diff-function", help="compare a linked PE function to a COFF symbol")
     p.add_argument("pe", type=_path); p.add_argument("rva", type=_int); p.add_argument("size", type=_int); p.add_argument("coff", type=_path); p.add_argument("symbol"); p.add_argument("--report", type=_path)
-    p = sub.add_parser("coff-inspect"); p.add_argument("object", type=_path)
+    p = sub.add_parser("coff-inspect", help=_COMMAND_HELP["coff-inspect"]); p.add_argument("object", type=_path)
     p = sub.add_parser("lib-inspect", help="inspect a COFF archive/static or import library"); p.add_argument("library", type=_path)
-    p = sub.add_parser("coff-extract"); p.add_argument("object", type=_path); p.add_argument("symbol"); p.add_argument("output", type=_path); p.add_argument("--size", type=_int)
-    p = sub.add_parser("coff-synthesize"); p.add_argument("code", type=_path); p.add_argument("symbol"); p.add_argument("output", type=_path); p.add_argument("--architecture", choices=["x86", "x86_64"], default="x86"); p.add_argument("--relocations", type=_path)
+    p = sub.add_parser("coff-extract", help=_COMMAND_HELP["coff-extract"]); p.add_argument("object", type=_path); p.add_argument("symbol"); p.add_argument("output", type=_path); p.add_argument("--size", type=_int)
+    p = sub.add_parser("coff-synthesize", help=_COMMAND_HELP["coff-synthesize"]); p.add_argument("code", type=_path); p.add_argument("symbol"); p.add_argument("output", type=_path); p.add_argument("--architecture", choices=["x86", "x86_64"], default="x86"); p.add_argument("--relocations", type=_path)
     p = sub.add_parser("coff-comdat-resolve", help="resolve COMDAT groups across COFF objects"); p.add_argument("objects", nargs="+", type=_path); p.add_argument("--report", type=_path)
     p = sub.add_parser("map-inspect", help="parse an MSVC-compatible linker map"); p.add_argument("map", type=_path)
     p = sub.add_parser("layout-reconstruct", help="correlate PE sections, linker map contributions, and COFF objects"); p.add_argument("pe", type=_path); p.add_argument("map", type=_path); p.add_argument("objects", nargs="*", type=_path); p.add_argument("--report", type=_path)
@@ -144,39 +225,39 @@ def _build_parser() -> argparse.ArgumentParser:
     p = sub.add_parser("test-bundle-create", help="create a hash-sealed authorized static test bundle"); p.add_argument("output", type=_path); p.add_argument("--artifact", action="append", required=True, help="role=path"); p.add_argument("--authorization", required=True); p.add_argument("--name"); p.add_argument("--description"); p.add_argument("--expected-architecture", choices=["x86", "x86_64"])
     p = sub.add_parser("test-bundle-inspect", help="safely extract, verify, and statically inspect an authorized test bundle"); p.add_argument("bundle", type=_path); p.add_argument("--report", type=_path)
 
-    p = sub.add_parser("disassemble"); p.add_argument("code", type=_path); p.add_argument("--base", type=_int, default=0); p.add_argument("--architecture", choices=["x86", "x86_64"], default="x86"); p.add_argument("--report", type=_path)
-    p = sub.add_parser("crosscheck-ghidra"); p.add_argument("instructions_jsonl", type=_path); p.add_argument("code", type=_path); p.add_argument("--base", type=_int, required=True); p.add_argument("--architecture", choices=["x86", "x86_64"], default="x86"); p.add_argument("--report", type=_path)
-    p = sub.add_parser("abi-check"); p.add_argument("code", type=_path); p.add_argument("contract", type=_path); p.add_argument("--base", type=_int, default=0); p.add_argument("--report", type=_path)
-    p = sub.add_parser("dynamic-validate"); p.add_argument("target", type=_path); p.add_argument("candidate", type=_path); p.add_argument("harness", type=_path); p.add_argument("--target-base", type=_int); p.add_argument("--candidate-base", type=_int); p.add_argument("--report", type=_path)
-    p = sub.add_parser("symbolic-validate"); p.add_argument("target", type=_path); p.add_argument("candidate", type=_path); p.add_argument("--architecture", choices=["x86", "x86_64"], default="x86"); p.add_argument("--input-register", action="append", default=[]); p.add_argument("--stack-argument-words", type=int, default=0); p.add_argument("--output-register", action="append"); p.add_argument("--max-steps", type=int, default=1000); p.add_argument("--max-paths", type=int, default=64); p.add_argument("--report", type=_path)
-    p = sub.add_parser("angr-validate"); p.add_argument("target", type=_path); p.add_argument("candidate", type=_path); p.add_argument("--architecture", choices=["x86", "x86_64"], default="x86"); p.add_argument("--input-register", action="append", default=[]); p.add_argument("--stack-argument-words", type=int, default=0); p.add_argument("--output-register", action="append"); p.add_argument("--max-steps", type=int, default=1000); p.add_argument("--max-paths", type=int, default=64); p.add_argument("--report", type=_path)
+    p = sub.add_parser("disassemble", help=_COMMAND_HELP["disassemble"]); p.add_argument("code", type=_path); p.add_argument("--base", type=_int, default=0); p.add_argument("--architecture", choices=["x86", "x86_64"], default="x86"); p.add_argument("--report", type=_path)
+    p = sub.add_parser("crosscheck-ghidra", help=_COMMAND_HELP["crosscheck-ghidra"]); p.add_argument("instructions_jsonl", type=_path); p.add_argument("code", type=_path); p.add_argument("--base", type=_int, required=True); p.add_argument("--architecture", choices=["x86", "x86_64"], default="x86"); p.add_argument("--report", type=_path)
+    p = sub.add_parser("abi-check", help=_COMMAND_HELP["abi-check"]); p.add_argument("code", type=_path); p.add_argument("contract", type=_path); p.add_argument("--base", type=_int, default=0); p.add_argument("--report", type=_path)
+    p = sub.add_parser("dynamic-validate", help=_COMMAND_HELP["dynamic-validate"]); p.add_argument("target", type=_path); p.add_argument("candidate", type=_path); p.add_argument("harness", type=_path); p.add_argument("--target-base", type=_int); p.add_argument("--candidate-base", type=_int); p.add_argument("--report", type=_path)
+    p = sub.add_parser("symbolic-validate", help=_COMMAND_HELP["symbolic-validate"]); p.add_argument("target", type=_path); p.add_argument("candidate", type=_path); p.add_argument("--architecture", choices=["x86", "x86_64"], default="x86"); p.add_argument("--input-register", action="append", default=[]); p.add_argument("--stack-argument-words", type=int, default=0); p.add_argument("--output-register", action="append"); p.add_argument("--max-steps", type=int, default=1000); p.add_argument("--max-paths", type=int, default=64); p.add_argument("--report", type=_path)
+    p = sub.add_parser("angr-validate", help=_COMMAND_HELP["angr-validate"]); p.add_argument("target", type=_path); p.add_argument("candidate", type=_path); p.add_argument("--architecture", choices=["x86", "x86_64"], default="x86"); p.add_argument("--input-register", action="append", default=[]); p.add_argument("--stack-argument-words", type=int, default=0); p.add_argument("--output-register", action="append"); p.add_argument("--max-steps", type=int, default=1000); p.add_argument("--max-paths", type=int, default=64); p.add_argument("--report", type=_path)
     p = sub.add_parser("symbolic-memory-validate", help="angr comparison with symbolic region bases and alias constraints"); p.add_argument("target", type=_path); p.add_argument("candidate", type=_path); p.add_argument("harness", type=_path); p.add_argument("--report", type=_path)
-    p = sub.add_parser("drcov-parse"); p.add_argument("log", type=_path)
-    p = sub.add_parser("drcov-run"); p.add_argument("executable", type=_path); p.add_argument("output_directory", type=_path); p.add_argument("--drrun", type=_path); p.add_argument("--program-arg", action="append", default=[]); p.add_argument("--timeout", type=int, default=300); p.add_argument("--report", type=_path)
-    p = sub.add_parser("integration-run"); p.add_argument("manifest", type=_path); p.add_argument("--allow-host-execution", action="store_true"); p.add_argument("--report", type=_path)
+    p = sub.add_parser("drcov-parse", help=_COMMAND_HELP["drcov-parse"]); p.add_argument("log", type=_path)
+    p = sub.add_parser("drcov-run", help=_COMMAND_HELP["drcov-run"]); p.add_argument("executable", type=_path); p.add_argument("output_directory", type=_path); p.add_argument("--drrun", type=_path); p.add_argument("--program-arg", action="append", default=[]); p.add_argument("--timeout", type=int, default=300); p.add_argument("--report", type=_path)
+    p = sub.add_parser("integration-run", help=_COMMAND_HELP["integration-run"]); p.add_argument("manifest", type=_path); p.add_argument("--allow-host-execution", action="store_true"); p.add_argument("--report", type=_path)
 
-    p = sub.add_parser("patch-image"); p.add_argument("original", type=_path); p.add_argument("candidate", type=_path); p.add_argument("output", type=_path); p.add_argument("--rva", type=_int, required=True); p.add_argument("--expected-original-sha256"); p.add_argument("--expected-function-sha256"); p.add_argument("--report", type=_path)
-    p = sub.add_parser("relink"); p.add_argument("manifest", type=_path); p.add_argument("--report", type=_path)
+    p = sub.add_parser("patch-image", help=_COMMAND_HELP["patch-image"]); p.add_argument("original", type=_path); p.add_argument("candidate", type=_path); p.add_argument("output", type=_path); p.add_argument("--rva", type=_int, required=True); p.add_argument("--expected-original-sha256"); p.add_argument("--expected-function-sha256"); p.add_argument("--report", type=_path)
+    p = sub.add_parser("relink", help=_COMMAND_HELP["relink"]); p.add_argument("manifest", type=_path); p.add_argument("--report", type=_path)
     p = sub.add_parser("hybrid-generate", help="compatibility alias for: x86decomp hybrid generate"); p.set_defaults(_compatibility_alias="hybrid generate"); p.add_argument("project", type=_path); p.add_argument("output", type=_path); p.add_argument("--architecture", choices=["x86", "x86_64"], default="x86"); p.add_argument("--asm-format", choices=["bytes", "annotated", "mnemonic"], default="bytes"); p.add_argument("--image-base", type=_int, default=0); p.add_argument("--assembler-command-json"); p.add_argument("--symbol-map"); p.add_argument("--overwrite", action="store_true")
 
-    p = sub.add_parser("workflow-init"); p.add_argument("project", type=_path); p.add_argument("function_id"); p.add_argument("--mode", choices=[m.value for m in DecompilationMode], action="append")
-    p = sub.add_parser("workflow-show"); p.add_argument("project", type=_path); p.add_argument("function_id")
-    p = sub.add_parser("workflow-update"); p.add_argument("project", type=_path); p.add_argument("function_id"); p.add_argument("--source-stage", choices=[s.value for s in SourceStage]); p.add_argument("--matching-status", choices=[s.value for s in MatchingStatus]); p.add_argument("--functional-status", choices=[s.value for s in FunctionalStatus]); p.add_argument("--candidate"); p.add_argument("--compiler-profile"); p.add_argument("--report-kind"); p.add_argument("--report-path"); p.add_argument("--blocker"); p.add_argument("--allow-regression", action="store_true")
+    p = sub.add_parser("workflow-init", help=_COMMAND_HELP["workflow-init"]); p.add_argument("project", type=_path); p.add_argument("function_id"); p.add_argument("--mode", choices=[m.value for m in DecompilationMode], action="append")
+    p = sub.add_parser("workflow-show", help=_COMMAND_HELP["workflow-show"]); p.add_argument("project", type=_path); p.add_argument("function_id")
+    p = sub.add_parser("workflow-update", help=_COMMAND_HELP["workflow-update"]); p.add_argument("project", type=_path); p.add_argument("function_id"); p.add_argument("--source-stage", choices=[s.value for s in SourceStage]); p.add_argument("--matching-status", choices=[s.value for s in MatchingStatus]); p.add_argument("--functional-status", choices=[s.value for s in FunctionalStatus]); p.add_argument("--candidate"); p.add_argument("--compiler-profile"); p.add_argument("--report-kind"); p.add_argument("--report-path"); p.add_argument("--blocker"); p.add_argument("--allow-regression", action="store_true")
 
-    p = sub.add_parser("db-ingest"); p.add_argument("database", type=_path); p.add_argument("artifact", type=_path); p.add_argument("--image-base", type=_int, default=0)
-    p = sub.add_parser("db-query"); p.add_argument("database", type=_path); p.add_argument("sql"); p.add_argument("--parameters-json", default="[]")
-    p = sub.add_parser("db-constraint-add"); p.add_argument("database", type=_path); p.add_argument("subject"); p.add_argument("relation"); p.add_argument("object_value"); p.add_argument("provenance"); p.add_argument("--evidence-id"); p.add_argument("--confidence", type=float)
-    p = sub.add_parser("db-constraint-conflicts"); p.add_argument("database", type=_path); p.add_argument("subject"); p.add_argument("relation")
-    p = sub.add_parser("db-constraint-accept"); p.add_argument("database", type=_path); p.add_argument("constraint_id", type=int)
+    p = sub.add_parser("db-ingest", help=_COMMAND_HELP["db-ingest"]); p.add_argument("database", type=_path); p.add_argument("artifact", type=_path); p.add_argument("--image-base", type=_int, default=0)
+    p = sub.add_parser("db-query", help=_COMMAND_HELP["db-query"]); p.add_argument("database", type=_path); p.add_argument("sql"); p.add_argument("--parameters-json", default="[]")
+    p = sub.add_parser("db-constraint-add", help=_COMMAND_HELP["db-constraint-add"]); p.add_argument("database", type=_path); p.add_argument("subject"); p.add_argument("relation"); p.add_argument("object_value"); p.add_argument("provenance"); p.add_argument("--evidence-id"); p.add_argument("--confidence", type=float)
+    p = sub.add_parser("db-constraint-conflicts", help=_COMMAND_HELP["db-constraint-conflicts"]); p.add_argument("database", type=_path); p.add_argument("subject"); p.add_argument("relation")
+    p = sub.add_parser("db-constraint-accept", help=_COMMAND_HELP["db-constraint-accept"]); p.add_argument("database", type=_path); p.add_argument("constraint_id", type=int)
 
-    p = sub.add_parser("work-create"); p.add_argument("database", type=_path); p.add_argument("function_id"); p.add_argument("mode", choices=["matching", "functional"]); p.add_argument("kind"); p.add_argument("instructions"); p.add_argument("--validator", action="append", required=True); p.add_argument("--priority", type=int, default=0)
-    p = sub.add_parser("work-next"); p.add_argument("database", type=_path); p.add_argument("--mode", choices=["matching", "functional"])
-    p = sub.add_parser("work-claim"); p.add_argument("database", type=_path); p.add_argument("task_id"); p.add_argument("assignee")
-    p = sub.add_parser("work-propose"); p.add_argument("database", type=_path); p.add_argument("task_id"); p.add_argument("proposal", type=_path); p.add_argument("--evidence", action="append", required=True)
-    p = sub.add_parser("work-validate"); p.add_argument("database", type=_path); p.add_argument("task_id"); p.add_argument("validator"); p.add_argument("report_path"); p.add_argument("--passed", action="store_true")
+    p = sub.add_parser("work-create", help=_COMMAND_HELP["work-create"]); p.add_argument("database", type=_path); p.add_argument("function_id"); p.add_argument("mode", choices=["matching", "functional"]); p.add_argument("kind"); p.add_argument("instructions"); p.add_argument("--validator", action="append", required=True); p.add_argument("--priority", type=int, default=0)
+    p = sub.add_parser("work-next", help=_COMMAND_HELP["work-next"]); p.add_argument("database", type=_path); p.add_argument("--mode", choices=["matching", "functional"])
+    p = sub.add_parser("work-claim", help=_COMMAND_HELP["work-claim"]); p.add_argument("database", type=_path); p.add_argument("task_id"); p.add_argument("assignee")
+    p = sub.add_parser("work-propose", help=_COMMAND_HELP["work-propose"]); p.add_argument("database", type=_path); p.add_argument("task_id"); p.add_argument("proposal", type=_path); p.add_argument("--evidence", action="append", required=True)
+    p = sub.add_parser("work-validate", help=_COMMAND_HELP["work-validate"]); p.add_argument("database", type=_path); p.add_argument("task_id"); p.add_argument("validator"); p.add_argument("report_path"); p.add_argument("--passed", action="store_true")
 
     for name in ("mcp-tools", "mcp-read", "mcp-propose", "mcp-commit"):
-        p = sub.add_parser(name)
+        p = sub.add_parser(name, help=_COMMAND_HELP[name])
         p.add_argument("--url")
         p.add_argument("--command-json")
         if name != "mcp-tools": p.add_argument("project", type=_path)
@@ -184,68 +265,68 @@ def _build_parser() -> argparse.ArgumentParser:
         if name == "mcp-propose": p.add_argument("--allow-tool", action="append", required=True); p.add_argument("--rationale", required=True); p.add_argument("--evidence", action="append", required=True)
         if name == "mcp-commit": p.add_argument("approval_hash"); p.add_argument("--allow-tool", action="append", required=True)
 
-    p = sub.add_parser("benchmark-run"); p.add_argument("manifest", type=_path); p.add_argument("--report", type=_path)
-    p = sub.add_parser("serve"); p.add_argument("project", type=_path); p.add_argument("--host", default="127.0.0.1"); p.add_argument("--port", type=int, default=8765)
+    p = sub.add_parser("benchmark-run", help=_COMMAND_HELP["benchmark-run"]); p.add_argument("manifest", type=_path); p.add_argument("--report", type=_path)
+    p = sub.add_parser("serve", help="serve the read-only project API on loopback by default"); p.add_argument("project", type=_path); p.add_argument("--host", default="127.0.0.1"); p.add_argument("--port", type=int, default=8765); p.add_argument("--allow-remote", action="store_true", help="explicitly authorize a non-loopback bind")
 
-    p = sub.add_parser("evidence-add"); p.add_argument("project", type=_path); p.add_argument("--kind", choices=[k.value for k in EvidenceKind], required=True); p.add_argument("--source", required=True); p.add_argument("--locator", required=True); p.add_argument("--assertion", required=True); p.add_argument("--independent-group", required=True); p.add_argument("--file", type=_path); p.add_argument("--id")
-    p = sub.add_parser("claim-create"); p.add_argument("project", type=_path); p.add_argument("--subject", required=True); p.add_argument("--predicate", required=True); p.add_argument("--object", dest="object_value", required=True); p.add_argument("--evidence", action="append", default=[]); p.add_argument("--id")
-    p = sub.add_parser("claim-attach"); p.add_argument("project", type=_path); p.add_argument("claim_id"); p.add_argument("evidence_id")
-    p = sub.add_parser("claim-verify"); p.add_argument("project", type=_path); p.add_argument("claim_id")
-    p = sub.add_parser("claim-contradict"); p.add_argument("project", type=_path); p.add_argument("claim_id"); p.add_argument("evidence_id")
-    p = sub.add_parser("memory-add"); p.add_argument("project", type=_path); p.add_argument("--actor", required=True); p.add_argument("--category", required=True); p.add_argument("--summary", required=True); p.add_argument("--details-json", default="{}"); p.add_argument("--evidence", action="append", default=[])
-    p = sub.add_parser("memory-verify"); p.add_argument("project", type=_path)
-    p = sub.add_parser("memory-render"); p.add_argument("project", type=_path)
-    p = sub.add_parser("artifact-import"); p.add_argument("project", type=_path); p.add_argument("exported_dir", type=_path)
-    p = sub.add_parser("artifact-verify"); p.add_argument("artifact_dir", type=_path)
-    p = sub.add_parser("decompme-pack"); p.add_argument("artifact_dir", type=_path); p.add_argument("output_dir", type=_path); p.add_argument("--overwrite", action="store_true")
+    p = sub.add_parser("evidence-add", help=_COMMAND_HELP["evidence-add"]); p.add_argument("project", type=_path); p.add_argument("--kind", choices=[k.value for k in EvidenceKind], required=True); p.add_argument("--source", required=True); p.add_argument("--locator", required=True); p.add_argument("--assertion", required=True); p.add_argument("--independent-group", required=True); p.add_argument("--file", type=_path); p.add_argument("--id")
+    p = sub.add_parser("claim-create", help=_COMMAND_HELP["claim-create"]); p.add_argument("project", type=_path); p.add_argument("--subject", required=True); p.add_argument("--predicate", required=True); p.add_argument("--object", dest="object_value", required=True); p.add_argument("--evidence", action="append", default=[]); p.add_argument("--id")
+    p = sub.add_parser("claim-attach", help=_COMMAND_HELP["claim-attach"]); p.add_argument("project", type=_path); p.add_argument("claim_id"); p.add_argument("evidence_id")
+    p = sub.add_parser("claim-verify", help=_COMMAND_HELP["claim-verify"]); p.add_argument("project", type=_path); p.add_argument("claim_id")
+    p = sub.add_parser("claim-contradict", help=_COMMAND_HELP["claim-contradict"]); p.add_argument("project", type=_path); p.add_argument("claim_id"); p.add_argument("evidence_id")
+    p = sub.add_parser("memory-add", help=_COMMAND_HELP["memory-add"]); p.add_argument("project", type=_path); p.add_argument("--actor", required=True); p.add_argument("--category", required=True); p.add_argument("--summary", required=True); p.add_argument("--details-json", default="{}"); p.add_argument("--evidence", action="append", default=[])
+    p = sub.add_parser("memory-verify", help=_COMMAND_HELP["memory-verify"]); p.add_argument("project", type=_path)
+    p = sub.add_parser("memory-render", help=_COMMAND_HELP["memory-render"]); p.add_argument("project", type=_path)
+    p = sub.add_parser("artifact-import", help=_COMMAND_HELP["artifact-import"]); p.add_argument("project", type=_path); p.add_argument("exported_dir", type=_path)
+    p = sub.add_parser("artifact-verify", help=_COMMAND_HELP["artifact-verify"]); p.add_argument("artifact_dir", type=_path)
+    p = sub.add_parser("decompme-pack", help=_COMMAND_HELP["decompme-pack"]); p.add_argument("artifact_dir", type=_path); p.add_argument("output_dir", type=_path); p.add_argument("--overwrite", action="store_true")
 
-    p = sub.add_parser("ghidra-export"); p.add_argument("binary", type=_path); p.add_argument("ghidra_project_dir", type=_path); p.add_argument("ghidra_project_name"); p.add_argument("output_dir", type=_path); p.add_argument("--scripts-dir", type=_path, default=Path("ghidra_scripts")); p.add_argument("--ghidra-home", type=_path); p.add_argument("--overwrite", action="store_true"); p.add_argument("--selector", default="all"); p.add_argument("--timeout", type=int, default=3600); p.add_argument("--report", type=_path); p.add_argument("--print-command", action="store_true")
+    p = sub.add_parser("ghidra-export", help=_COMMAND_HELP["ghidra-export"]); p.add_argument("binary", type=_path); p.add_argument("ghidra_project_dir", type=_path); p.add_argument("ghidra_project_name"); p.add_argument("output_dir", type=_path); p.add_argument("--scripts-dir", type=_path, default=Path("ghidra_scripts")); p.add_argument("--ghidra-home", type=_path); p.add_argument("--overwrite", action="store_true"); p.add_argument("--selector", default="all"); p.add_argument("--timeout", type=int, default=3600); p.add_argument("--report", type=_path); p.add_argument("--print-command", action="store_true")
 
     p = sub.add_parser("target-pack-infer", help="infer a fact-preserving target pack and template plan")
     p.add_argument("primary_image", type=_path); p.add_argument("output_directory", type=_path); p.add_argument("--name")
     p.add_argument("--pdb", type=_path); p.add_argument("--map", type=_path); p.add_argument("--object", action="append", type=_path, default=[]); p.add_argument("--library", action="append", type=_path, default=[]); p.add_argument("--rebuilt-image", type=_path); p.add_argument("--decisions", type=_path); p.add_argument("--reference-artifacts", action="store_true")
-    p = sub.add_parser("target-pack-verify"); p.add_argument("target_pack", type=_path)
-    p = sub.add_parser("project-from-target"); p.add_argument("target_pack", type=_path); p.add_argument("project", type=_path); p.add_argument("--reference-binary", action="store_true")
+    p = sub.add_parser("target-pack-verify", help=_COMMAND_HELP["target-pack-verify"]); p.add_argument("target_pack", type=_path)
+    p = sub.add_parser("project-from-target", help=_COMMAND_HELP["project-from-target"]); p.add_argument("target_pack", type=_path); p.add_argument("project", type=_path); p.add_argument("--reference-binary", action="store_true")
     p = sub.add_parser("template-derive", help="derive a grounded project-template contract from a target pack"); p.add_argument("target_pack", type=_path)
     p = sub.add_parser("template-materialize", help="materialize the grounded working layout for an existing target project"); p.add_argument("project", type=_path)
 
     p = sub.add_parser("project-check", help="compatibility alias for project state validation"); p.set_defaults(_compatibility_alias="project check"); p.add_argument("project", type=_path)
-    p = sub.add_parser("project-migrate"); p.add_argument("project", type=_path); p.add_argument("--dry-run", action="store_true"); p.add_argument("--backup", type=_path)
-    p = sub.add_parser("project-backup"); p.add_argument("project", type=_path); p.add_argument("output", type=_path)
-    p = sub.add_parser("project-restore"); p.add_argument("archive", type=_path); p.add_argument("destination", type=_path)
-    p = sub.add_parser("project-repair"); p.add_argument("project", type=_path); p.add_argument("--apply", action="store_true")
-    p = sub.add_parser("project-gc"); p.add_argument("project", type=_path); p.add_argument("--apply", action="store_true")
+    p = sub.add_parser("project-migrate", help=_COMMAND_HELP["project-migrate"]); p.add_argument("project", type=_path); p.add_argument("--dry-run", action="store_true"); p.add_argument("--backup", type=_path)
+    p = sub.add_parser("project-backup", help=_COMMAND_HELP["project-backup"]); p.add_argument("project", type=_path); p.add_argument("output", type=_path)
+    p = sub.add_parser("project-restore", help=_COMMAND_HELP["project-restore"]); p.add_argument("archive", type=_path); p.add_argument("destination", type=_path)
+    p = sub.add_parser("project-repair", help=_COMMAND_HELP["project-repair"]); p.add_argument("project", type=_path); p.add_argument("--apply", action="store_true")
+    p = sub.add_parser("project-gc", help=_COMMAND_HELP["project-gc"]); p.add_argument("project", type=_path); p.add_argument("--apply", action="store_true")
 
-    p = sub.add_parser("pipeline-create"); p.add_argument("project", type=_path); p.add_argument("output", type=_path); p.add_argument("--without-ghidra", action="store_true")
-    p = sub.add_parser("pipeline-run"); p.add_argument("project", type=_path); p.add_argument("manifest", type=_path); p.add_argument("--continue-on-failure", action="store_true")
-    p = sub.add_parser("pipeline-status"); p.add_argument("project", type=_path); p.add_argument("pipeline_id")
-    p = sub.add_parser("pipeline-cancel"); p.add_argument("project", type=_path); p.add_argument("pipeline_id"); p.add_argument("--stage-id")
-    p = sub.add_parser("pipeline-retry"); p.add_argument("project", type=_path); p.add_argument("pipeline_id"); p.add_argument("stage_id"); p.add_argument("--cascade", action="store_true")
+    p = sub.add_parser("pipeline-create", help=_COMMAND_HELP["pipeline-create"]); p.add_argument("project", type=_path); p.add_argument("output", type=_path); p.add_argument("--without-ghidra", action="store_true")
+    p = sub.add_parser("pipeline-run", help=_COMMAND_HELP["pipeline-run"]); p.add_argument("project", type=_path); p.add_argument("manifest", type=_path); p.add_argument("--continue-on-failure", action="store_true")
+    p = sub.add_parser("pipeline-status", help=_COMMAND_HELP["pipeline-status"]); p.add_argument("project", type=_path); p.add_argument("pipeline_id")
+    p = sub.add_parser("pipeline-cancel", help=_COMMAND_HELP["pipeline-cancel"]); p.add_argument("project", type=_path); p.add_argument("pipeline_id"); p.add_argument("--stage-id")
+    p = sub.add_parser("pipeline-retry", help=_COMMAND_HELP["pipeline-retry"]); p.add_argument("project", type=_path); p.add_argument("pipeline_id"); p.add_argument("stage_id"); p.add_argument("--cascade", action="store_true")
     p = sub.add_parser("pipeline-recover", help="reset jobs with stale durable runner heartbeats"); p.add_argument("project", type=_path); p.add_argument("--pipeline-id"); p.add_argument("--stale-seconds", type=int, default=600)
 
-    sub.add_parser("worker-capabilities")
-    p = sub.add_parser("compile-worker"); p.add_argument("profile", type=_path); p.add_argument("source", type=_path); p.add_argument("output", type=_path); p.add_argument("--isolation", choices=["local_bounded", "container"], default="local_bounded"); p.add_argument("--container-image"); p.add_argument("--cache", type=_path); p.add_argument("--report", type=_path)
+    sub.add_parser("worker-capabilities", help=_COMMAND_HELP["worker-capabilities"])
+    p = sub.add_parser("compile-worker", help=_COMMAND_HELP["compile-worker"]); p.add_argument("profile", type=_path); p.add_argument("source", type=_path); p.add_argument("output", type=_path); p.add_argument("--isolation", choices=["local_bounded", "container"], default="local_bounded"); p.add_argument("--container-image"); p.add_argument("--cache", type=_path); p.add_argument("--report", type=_path)
 
-    p = sub.add_parser("linker-plan"); p.add_argument("pe", type=_path); p.add_argument("map", type=_path); p.add_argument("objects", nargs="+", type=_path); p.add_argument("--library", action="append", type=_path, default=[]); p.add_argument("--linker", default="lld-link"); p.add_argument("--output-image", default="build/reconstructed.exe"); p.add_argument("--report", type=_path); p.add_argument("--write-relink-manifest", type=_path)
-    p = sub.add_parser("cpp-recover"); p.add_argument("pe", type=_path); p.add_argument("--metadata-report", type=_path); p.add_argument("--object", action="append", type=_path, default=[]); p.add_argument("--map", type=_path); p.add_argument("--report", type=_path)
-    p = sub.add_parser("harness-generate"); p.add_argument("abi_contract", type=_path); p.add_argument("output", type=_path); p.add_argument("--pointer-parameters", type=_path); p.add_argument("--no-observe-pointers", action="store_true"); p.add_argument("--max-instructions", type=int, default=100000); p.add_argument("--timeout-ms", type=int, default=1000)
-    p = sub.add_parser("convergence-analyze"); p.add_argument("reference", type=_path); p.add_argument("candidate", type=_path); p.add_argument("--profile", type=_path); p.add_argument("--previous", type=_path); p.add_argument("--report", type=_path); p.add_argument("--history", type=_path)
+    p = sub.add_parser("linker-plan", help=_COMMAND_HELP["linker-plan"]); p.add_argument("pe", type=_path); p.add_argument("map", type=_path); p.add_argument("objects", nargs="+", type=_path); p.add_argument("--library", action="append", type=_path, default=[]); p.add_argument("--linker", default="lld-link"); p.add_argument("--output-image", default="build/reconstructed.exe"); p.add_argument("--report", type=_path); p.add_argument("--write-relink-manifest", type=_path)
+    p = sub.add_parser("cpp-recover", help=_COMMAND_HELP["cpp-recover"]); p.add_argument("pe", type=_path); p.add_argument("--metadata-report", type=_path); p.add_argument("--object", action="append", type=_path, default=[]); p.add_argument("--map", type=_path); p.add_argument("--report", type=_path)
+    p = sub.add_parser("harness-generate", help=_COMMAND_HELP["harness-generate"]); p.add_argument("abi_contract", type=_path); p.add_argument("output", type=_path); p.add_argument("--pointer-parameters", type=_path); p.add_argument("--no-observe-pointers", action="store_true"); p.add_argument("--max-instructions", type=int, default=100000); p.add_argument("--timeout-ms", type=int, default=1000)
+    p = sub.add_parser("convergence-analyze", help=_COMMAND_HELP["convergence-analyze"]); p.add_argument("reference", type=_path); p.add_argument("candidate", type=_path); p.add_argument("--profile", type=_path); p.add_argument("--previous", type=_path); p.add_argument("--report", type=_path); p.add_argument("--history", type=_path)
 
-    p = sub.add_parser("reproduce-create"); p.add_argument("project", type=_path); p.add_argument("output", type=_path); p.add_argument("--required-tool", action="append")
-    p = sub.add_parser("reproduce-verify"); p.add_argument("project", type=_path); p.add_argument("manifest", type=_path)
+    p = sub.add_parser("reproduce-create", help=_COMMAND_HELP["reproduce-create"]); p.add_argument("project", type=_path); p.add_argument("output", type=_path); p.add_argument("--required-tool", action="append")
+    p = sub.add_parser("reproduce-verify", help=_COMMAND_HELP["reproduce-verify"]); p.add_argument("project", type=_path); p.add_argument("manifest", type=_path)
     p = sub.add_parser("release-gate", help="evaluate explicit target release acceptance contracts"); p.add_argument("project", type=_path); p.add_argument("--reproduction-manifest", type=_path); p.add_argument("--security-report", type=_path); p.add_argument("--convergence-report", type=_path); p.add_argument("--require-workflows", action="store_true"); p.add_argument("--require-verified-claims", action="store_true"); p.add_argument("--require-succeeded-pipelines", action="store_true"); p.add_argument("--report", type=_path)
-    p = sub.add_parser("security-audit"); p.add_argument("root", type=_path); p.add_argument("--report", type=_path)
+    p = sub.add_parser("security-audit", help=_COMMAND_HELP["security-audit"]); p.add_argument("root", type=_path); p.add_argument("--report", type=_path)
     p = sub.add_parser("dependency-audit", help="run an installed pip-audit adapter and preserve exact findings"); p.add_argument("--executable", default="pip-audit"); p.add_argument("--timeout", type=int, default=300); p.add_argument("--report", type=_path)
-    p = sub.add_parser("sbom-generate"); p.add_argument("output", type=_path)
-    p = sub.add_parser("release-manifest-verify"); p.add_argument("root", type=_path); p.add_argument("--manifest", type=_path)
-    p = sub.add_parser("content-put"); p.add_argument("store", type=_path); p.add_argument("file", type=_path); p.add_argument("--media-type", default="application/octet-stream"); p.add_argument("--reference"); p.add_argument("--kind", default="artifact"); p.add_argument("--owner", default="user")
-    p = sub.add_parser("content-verify"); p.add_argument("store", type=_path)
+    p = sub.add_parser("sbom-generate", help=_COMMAND_HELP["sbom-generate"]); p.add_argument("output", type=_path)
+    p = sub.add_parser("release-manifest-verify", help=_COMMAND_HELP["release-manifest-verify"]); p.add_argument("root", type=_path); p.add_argument("--manifest", type=_path)
+    p = sub.add_parser("content-put", help=_COMMAND_HELP["content-put"]); p.add_argument("store", type=_path); p.add_argument("file", type=_path); p.add_argument("--media-type", default="application/octet-stream"); p.add_argument("--reference"); p.add_argument("--kind", default="artifact"); p.add_argument("--owner", default="user")
+    p = sub.add_parser("content-verify", help=_COMMAND_HELP["content-verify"]); p.add_argument("store", type=_path)
     register_canonical_commands(sub)
     return parser
 
 
 def _mcp_client(args: argparse.Namespace) -> Any:
-    """Support mcp client processing for internal toolkit callers."""
+    """Create the MCP client configured by the parsed command-line arguments."""
     if bool(args.url) == bool(args.command_json):
         raise ValueError("exactly one of --url or --command-json is required")
     if args.url:
@@ -257,7 +338,7 @@ def _mcp_client(args: argparse.Namespace) -> Any:
 
 
 def _run(args: argparse.Namespace) -> Any:
-    """Support run processing for internal toolkit callers."""
+    """Dispatch a parsed command and return its structured result."""
     if getattr(args, "_canonical_catalog", False) or getattr(args, "_canonical_owner", None):
         return dispatch_canonical(args)
     c = args.command
@@ -367,11 +448,11 @@ def _run(args: argparse.Namespace) -> Any:
             if c == "mcp-commit": return gateway.commit_mutation(args.approval_hash)
         finally: client.close()
     if c == "benchmark-run": return run_benchmark_corpus(args.manifest, report_path=args.report)
-    if c == "serve": run_service(args.project, host=args.host, port=args.port); return {"stopped": True}
+    if c == "serve": run_service(args.project, host=args.host, port=args.port, allow_remote=args.allow_remote); return {"stopped": True}
     if c == "evidence-add": return EvidenceStore(args.project).add_evidence(kind=EvidenceKind(args.kind), source=args.source, locator=args.locator, assertion=args.assertion, independent_group=args.independent_group, file_path=args.file, evidence_id=args.id).to_dict()
     if c == "claim-create": return EvidenceStore(args.project).create_claim(subject=args.subject, predicate=args.predicate, object_value=args.object_value, evidence_ids=args.evidence, claim_id=args.id).to_dict()
     if c == "claim-attach": return EvidenceStore(args.project).attach_evidence(args.claim_id, args.evidence_id).to_dict()
-    if c == "claim-verify": return EvidenceStore(args.project).verify_claim(args.claim_id).to_dict()
+    if c == "claim-verify": return EvidenceStore(args.project).verify_claim(args.claim_id)
     if c == "claim-contradict": return EvidenceStore(args.project).add_contradiction(args.claim_id, args.evidence_id).to_dict()
     if c == "memory-add": return ProjectMemory(args.project).append(actor=args.actor, category=args.category, summary=args.summary, details=json.loads(args.details_json), evidence_ids=args.evidence)
     if c == "memory-verify": return ProjectMemory(args.project).verify()
@@ -433,17 +514,14 @@ def _run(args: argparse.Namespace) -> Any:
 
 
 def main(argv: list[str] | None = None) -> int:
-    """Run the command-line entry point and return its process status."""
-    effective_argv = list(sys.argv[1:] if argv is None else argv)
-    try:
-        parser = _build_parser()
-        args = parser.parse_args(effective_argv)
-        result = _run(args)
-        _print(result)
-        return 0
-    except (X86DecompError, ValueError, KeyError, TypeError, json.JSONDecodeError) as exc:
-        print(f"error: {exc}", file=sys.stderr)
-        return 2
+    """Run the unified CLI with deterministic JSON success and error output."""
+    return run_cli(
+        _build_parser,
+        _run,
+        argv,
+        emit=_print,
+        extra_exceptions=(subprocess.SubprocessError,),
+    )
 
 
 if __name__ == "__main__":

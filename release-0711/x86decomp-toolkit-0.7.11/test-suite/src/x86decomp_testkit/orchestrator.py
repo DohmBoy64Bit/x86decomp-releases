@@ -1,4 +1,4 @@
-"""Provide the installed test-suite implementation for the `x86decomp_testkit.orchestrator` module."""
+"""Provide orchestrator support for the standalone verification harness."""
 from __future__ import annotations
 
 import json
@@ -24,24 +24,24 @@ from .timeutil import utc_now
 
 
 def package_root() -> Path:
-    """Execute the package root operation for the current toolkit workflow."""
+    """Return the resolved package root used by the verification harness."""
     return Path(__file__).resolve().parent
 
 
 def suite_root() -> Path:
     # Source checkout: <root>/src/x86decomp_testkit. Installed wheel: package dir.
-    """Execute the suite root operation for the current toolkit workflow."""
+    """Return the resolved suite root used by the verification harness."""
     candidate = package_root().parents[1]
     return candidate if (candidate / "pyproject.toml").is_file() else package_root()
 
 
 def feature_catalog_path() -> Path:
-    """Execute the feature catalog path operation for the current toolkit workflow."""
+    """Return the resolved feature catalog path used by the verification harness."""
     return package_root() / "data" / "feature_catalog.json"
 
 
 def run_all(config: TestConfig, *, config_path: Path | None = None, verbose: bool = False) -> RunSummary:
-    """Run all for the current toolkit workflow."""
+    """Run all."""
     if not config.toolkit_root.is_dir():
         raise FileNotFoundError(f"toolkit root does not exist: {config.toolkit_root}")
     if not (config.toolkit_root / "pyproject.toml").is_file():

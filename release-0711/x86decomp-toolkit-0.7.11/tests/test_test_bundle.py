@@ -14,7 +14,7 @@ from x86decomp.util import sha256_file
 
 
 def _bundle(tmp_path: Path, *, corrupt_hash: bool = False) -> Path:
-    """Support bundle processing for internal toolkit callers."""
+    """Build a test bundle fixture with an optional intentionally corrupt digest."""
     target = build_minimal_pe32(tmp_path / "target.exe")
     manifest = {
         "schema_version": 1,

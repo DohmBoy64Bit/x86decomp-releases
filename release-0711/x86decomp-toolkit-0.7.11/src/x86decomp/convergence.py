@@ -18,7 +18,7 @@ from .util import load_json, sha256_file, utc_now, write_json
 
 
 def _section_kind(name: str, characteristics: int) -> str:
-    """Support section kind processing for internal toolkit callers."""
+    """Classify a PE or COFF section from its name and characteristics."""
     lower = name.lower()
     if characteristics & 0x20000000:
         return "executable"
@@ -41,7 +41,7 @@ def analyze_image_convergence(
     previous_report: Path | None = None,
     report_path: Path | None = None,
 ) -> dict[str, Any]:
-    """Execute the analyze image convergence operation for the current toolkit workflow."""
+    """Analyze image convergence."""
     base = compare_whole_images(reference, candidate, profile_path=profile_path)
     ref_image = parse_pe(reference)
     section_by_name = {section.name: section for section in ref_image.sections}
@@ -165,7 +165,7 @@ def analyze_image_convergence(
 
 
 def append_convergence_history(history_path: Path, report: dict[str, Any]) -> dict[str, Any]:
-    """Append convergence history for the current toolkit workflow."""
+    """Append convergence history."""
     if report.get("kind") != "image_convergence_report":
         raise ContractError("only image_convergence_report values may be appended")
     history_path.parent.mkdir(parents=True, exist_ok=True)

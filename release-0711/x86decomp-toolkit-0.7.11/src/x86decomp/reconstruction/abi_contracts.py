@@ -1,4 +1,4 @@
-"""Provide the current runtime implementation for the `x86decomp.reconstruction.abi_contracts` module."""
+"""Recover and verify ABI contracts for reconstructed functions."""
 from __future__ import annotations
 
 import json
@@ -9,12 +9,12 @@ from x86decomp.contracts import ContractError, canonical_json, ensure_relative_p
 from .store import ReconstructionStore
 
 class ABIContracts:
-    """Coordinate a b i contracts behavior for the current toolkit workflow."""
+    """Recover, store, verify, and generate shims for function ABI contracts."""
     def __init__(self,store:ReconstructionStore):
-        """Initialize the instance with validated constructor state."""
+        """Initialize ABIContracts with `store`."""
         self.store=store; store.initialize()
     def recover(self,subject_kind:str,subject_id:str,architecture:str,contract:dict[str,Any],*,evidence:list[dict[str,Any]],actor:str='analyst')->dict[str,Any]:
-        """Execute the recover operation for the current toolkit workflow."""
+        """Recover abicontracts."""
         if subject_kind not in {'function','module','library','executable','interface'}: raise ContractError('invalid ABI subject kind')
         if architecture not in {'x86','x86_64'}: raise ContractError('unsupported ABI architecture')
         required={'calling_convention','parameters','return_type'} if subject_kind=='function' else set()
@@ -30,26 +30,26 @@ class ABIContracts:
             self.store.audit(actor,'reconstruction.abi.recover',cid,{'subject_kind':subject_kind,'subject_id':subject_id,'architecture':architecture},connection=c)
         return self.get(cid)
     def get(self,contract_id:str)->dict[str,Any]:
-        """Execute the get operation for the current toolkit workflow."""
+        """Return data from abicontracts."""
         with self.store.connect() as c: row=c.execute('SELECT * FROM reconstruction_abi_contracts WHERE contract_id=?',(contract_id,)).fetchone()
         if not row: raise KeyError(contract_id)
         return self.store.decode(row,'contract_json','evidence_json')
     def verify(self,contract_id:str)->dict[str,Any]:
-        """Verify verify for the current toolkit workflow."""
+        """Verify abicontracts integrity and contracts."""
         item=self.get(contract_id); contract=item['contract']; checks={'evidence_present':bool(item['evidence']),'contract_nonempty':bool(contract),'architecture_supported':item['architecture'] in {'x86','x86_64'}}
         if item['subject_kind']=='function': checks.update({'calling_convention_present':bool(contract.get('calling_convention')),'parameters_list':isinstance(contract.get('parameters'),list),'return_type_present':bool(contract.get('return_type'))})
         passed=all(checks.values())
         with self.store.transaction() as c: c.execute('UPDATE reconstruction_abi_contracts SET status=?,updated_at=? WHERE contract_id=?',('verified' if passed else 'rejected',utc_now(),contract_id))
         return {'contract_id':contract_id,'checks':checks,'passed':passed}
     def compare(self,left_id:str,right_id:str)->dict[str,Any]:
-        """Compare compare for the current toolkit workflow."""
+        """Compare abicontracts data."""
         left,right=self.get(left_id),self.get(right_id); keys=sorted(set(left['contract'])|set(right['contract'])); differences={k:{'left':left['contract'].get(k),'right':right['contract'].get(k)} for k in keys if left['contract'].get(k)!=right['contract'].get(k)}
         return {'left':left_id,'right':right_id,'compatible':not differences,'differences':differences,'architecture_match':left['architecture']==right['architecture']}
     def export(self,contract_id:str,path:str|Path)->dict[str,Any]:
-        """Execute the export operation for the current toolkit workflow."""
+        """Export abicontracts."""
         out=Path(path); out.parent.mkdir(parents=True,exist_ok=True); payload={'schema':'x86decomp.abi-contract.v1',**self.get(contract_id)}; out.write_text(json.dumps(payload,indent=2,sort_keys=True)+'\n',encoding='utf-8'); return {'path':str(out.resolve()),'contract_id':contract_id}
     def shim(self,contract_id:str,source_path:str,*,shim_kind:str='wrapped',actor:str='analyst')->dict[str,Any]:
-        """Execute the shim operation for the current toolkit workflow."""
+        """Generate a source shim that adapts a reconstructed function to a stored ABI contract."""
         if shim_kind not in {'reimplemented','wrapped','translated','assumption-dependent','externally-supplied'}: raise ContractError('invalid shim kind')
         contract=self.get(contract_id); source_path=ensure_relative_path(source_path).as_posix(); sid=random_id('shim')
         with self.store.transaction() as c:

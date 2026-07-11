@@ -1,4 +1,4 @@
-"""Provide the current runtime implementation for the `x86decomp.reconstruction.capsules` module."""
+"""Create reproducible reconstruction capsules."""
 from __future__ import annotations
 
 import json
@@ -10,12 +10,12 @@ from x86decomp.contracts import ContractError, canonical_json, ensure_relative_p
 from .store import ReconstructionStore
 
 class Capsules:
-    """Coordinate capsules behavior for the current toolkit workflow."""
+    """Create, inspect, verify, and reproduce immutable reconstruction capsules."""
     def __init__(self,store:ReconstructionStore):
-        """Initialize the instance with validated constructor state."""
+        """Initialize Capsules with `store`."""
         self.store=store; store.initialize()
     def create(self,name:str,output:str|Path,*,include:list[str],external_requirements:list[dict[str,Any]]|None=None,actor:str='analyst')->dict[str,Any]:
-        """Create create for the current toolkit workflow."""
+        """Create a record in capsules."""
         output=Path(output); output.parent.mkdir(parents=True,exist_ok=True)
         members=[]
         for raw in include:
@@ -32,12 +32,12 @@ class Capsules:
             c.execute('INSERT INTO reconstruction_capsules VALUES(?,?,?,?,?,?,?)',(cid,name,canonical_json(manifest),str(output.resolve()),digest,'created',utc_now())); self.store.audit(actor,'reconstruction.capsule.create',cid,{'name':name,'archive_sha256':digest,'members':len(members)},connection=c)
         return {'capsule_id':cid,'name':name,'archive_path':str(output.resolve()),'archive_sha256':digest,'manifest':manifest}
     def inspect(self,path:str|Path)->dict[str,Any]:
-        """Execute the inspect operation for the current toolkit workflow."""
+        """Inspect capsules."""
         with zipfile.ZipFile(path) as z:
             manifest=json.loads(z.read('capsule-manifest.json')); names=sorted(z.namelist())
         return {'path':str(Path(path).resolve()),'manifest':manifest,'members':names,'archive_sha256':sha256_file(path)}
     def verify(self,path:str|Path)->dict[str,Any]:
-        """Verify verify for the current toolkit workflow."""
+        """Verify capsules integrity and contracts."""
         failures=[]
         try:
             with zipfile.ZipFile(path) as z:
@@ -52,7 +52,7 @@ class Capsules:
         except (OSError,zipfile.BadZipFile,KeyError,json.JSONDecodeError) as exc: failures.append({'error':type(exc).__name__,'message':str(exc)})
         return {'path':str(Path(path).resolve()),'valid':not failures,'failures':failures}
     def reproduce(self,path:str|Path,destination:str|Path)->dict[str,Any]:
-        """Execute the reproduce operation for the current toolkit workflow."""
+        """Verify a capsule and extract its reproducible contents into a clean destination."""
         verification=self.verify(path)
         if not verification['valid']: raise ContractError('capsule verification failed')
         destination=Path(destination); destination.mkdir(parents=True,exist_ok=True)

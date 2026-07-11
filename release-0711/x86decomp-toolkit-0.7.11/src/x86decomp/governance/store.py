@@ -1,4 +1,4 @@
-"""Provide the current runtime implementation for the `x86decomp.governance.store` module."""
+"""Persist governance records in the project database."""
 from __future__ import annotations
 
 import contextlib
@@ -295,12 +295,12 @@ class GovernanceStore:
     """
 
     def __init__(self, project_root: str | Path, *, database_path: str | Path | None = None):
-        """Initialize the instance with validated constructor state."""
+        """Initialize GovernanceStore with `project_root`, `database_path`."""
         self.project_root = Path(project_root).resolve()
         self.database_path = Path(database_path).resolve() if database_path else self.project_root / "state" / "project-state.sqlite3"
 
     def initialize(self) -> None:
-        """Initialize initialize for the current toolkit workflow."""
+        """Initialize governance store storage."""
         self.database_path.parent.mkdir(parents=True, exist_ok=True)
         self.project_root.mkdir(parents=True, exist_ok=True)
         with self.transaction() as connection:
@@ -319,7 +319,7 @@ class GovernanceStore:
             )
 
     def connect(self) -> sqlite3.Connection:
-        """Execute the connect operation for the current toolkit workflow."""
+        """Return the connect for this GovernanceStore."""
         connection = sqlite3.connect(self.database_path, timeout=30.0)
         connection.row_factory = sqlite3.Row
         connection.execute("PRAGMA foreign_keys=ON")
@@ -330,7 +330,7 @@ class GovernanceStore:
 
     @contextlib.contextmanager
     def transaction(self, *, immediate: bool = True) -> Iterator[sqlite3.Connection]:
-        """Execute the transaction operation for the current toolkit workflow."""
+        """Return the transaction for this GovernanceStore."""
         connection = self.connect()
         try:
             connection.execute("BEGIN IMMEDIATE" if immediate else "BEGIN")
@@ -343,7 +343,7 @@ class GovernanceStore:
             connection.close()
 
     def audit(self, actor: str, category: str, subject_id: str | None, payload: dict[str, Any], *, connection: sqlite3.Connection | None = None) -> str:
-        """Audit audit for the current toolkit workflow."""
+        """Audit governance store state."""
         owns_connection = connection is None
         if owns_connection:
             connection = self.connect()
@@ -379,7 +379,7 @@ class GovernanceStore:
                 connection.close()
 
     def verify_audit_chain(self) -> dict[str, Any]:
-        """Verify audit chain for the current toolkit workflow."""
+        """Verify audit chain."""
         with self.connect() as connection:
             rows = connection.execute("SELECT * FROM governance_audit_events ORDER BY sequence").fetchall()
         previous_hash: str | None = None
@@ -400,7 +400,7 @@ class GovernanceStore:
         return {"valid": not failures, "events": len(rows), "tip_hash": previous_hash, "failures": failures}
 
     def check(self) -> dict[str, Any]:
-        """Check check for the current toolkit workflow."""
+        """Check governance store state."""
         self.initialize()
         with self.connect() as connection:
             integrity = connection.execute("PRAGMA integrity_check").fetchall()

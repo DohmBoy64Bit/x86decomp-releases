@@ -28,7 +28,7 @@ from x86decomp.msvc_metadata import analyze_msvc_metadata, scan_coff_tls, scan_s
 
 
 def _minimal_bigobj() -> bytes:
-    """Support minimal bigobj processing for internal toolkit callers."""
+    """Construct a minimal valid BIGOBJ fixture for linker metadata tests."""
     header_size = 56
     section_size = 40
     code = b"\xc3"

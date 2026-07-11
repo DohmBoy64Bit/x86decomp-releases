@@ -10,7 +10,7 @@ from x86decomp.compiler import run_compiler_profile
 
 
 class CompilerTests(unittest.TestCase):
-    """Coordinate compiler tests behavior for the current toolkit workflow."""
+    """Group regression tests covering Compiler behavior."""
     @unittest.skipUnless(shutil.which("gcc"), "gcc is unavailable")
     def test_compile_i386_object(self) -> None:
         """Verify compile i386 object behavior."""

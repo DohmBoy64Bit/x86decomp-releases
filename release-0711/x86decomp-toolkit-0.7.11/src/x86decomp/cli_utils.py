@@ -11,14 +11,14 @@ import json
 import sys
 from typing import Any, Callable
 
-from x86decomp.contracts import ContractError
+from x86decomp.errors import ContractError, X86DecompError
 
 #: Exception types every JSON-emitting CLI treats as an expected, user-facing
 #: error. Catching this uniform set (rather than per-module subsets) guarantees
 #: that all sibling commands report failures with the same structured payload
 #: and process exit code instead of leaking an interpreter traceback.
 CLI_ERROR_TYPES: tuple[type[BaseException], ...] = (
-    ContractError,
+    X86DecompError,
     KeyError,
     OSError,
     TypeError,

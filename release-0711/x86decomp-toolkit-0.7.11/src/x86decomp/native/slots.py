@@ -1,4 +1,4 @@
-"""Provide the current runtime implementation for the `x86decomp.native.slots` module."""
+"""Inventory bounded function slots in native images."""
 from __future__ import annotations
 
 import json
@@ -11,7 +11,7 @@ from .store import NativeStore
 
 
 def _int(value: Any, name: str) -> int:
-    """Support int processing for internal toolkit callers."""
+    """Parse a required integer field and report its manifest name on failure."""
     if isinstance(value, str):
         try:
             return int(value, 0)
@@ -23,7 +23,7 @@ def _int(value: Any, name: str) -> int:
 
 
 def inventory_from_project(project_root: Path) -> list[dict[str, Any]]:
-    """Execute the inventory from project operation for the current toolkit workflow."""
+    """Build function-slot records from the project manifest and PE evidence."""
     result: list[dict[str, Any]] = []
     root = project_root.resolve() / "functions"
     if not root.is_dir():
@@ -47,9 +47,9 @@ def inventory_from_project(project_root: Path) -> list[dict[str, Any]]:
 
 
 class FunctionSlots:
-    """Coordinate function slots behavior for the current toolkit workflow."""
+    """Audit, persist, and list bounded native function replacement slots."""
     def __init__(self, store: NativeStore):
-        """Initialize the instance with validated constructor state."""
+        """Initialize FunctionSlots with `store`."""
         self.store = store
         store.initialize()
 
@@ -60,7 +60,7 @@ class FunctionSlots:
         text_end_rva: int | None = None,
         actor: str = "analyst",
     ) -> dict[str, Any]:
-        """Audit audit for the current toolkit workflow."""
+        """Audit function slots state."""
         normalized: list[dict[str, Any]] = []
         ids: set[str] = set()
         rvas: set[int] = set()
@@ -127,7 +127,7 @@ class FunctionSlots:
         return {"function_count": len(records), "counts": counts, "slots": records}
 
     def audit_project(self, project_root: Path, binary: Path, *, actor: str = "analyst") -> dict[str, Any]:
-        """Audit project for the current toolkit workflow."""
+        """Audit project."""
         image = parse_pe(binary)
         text = next((section for section in image.sections if section.name == ".text"), None)
         if text is None:
@@ -139,7 +139,7 @@ class FunctionSlots:
         )
 
     def list(self, *, classification: str | None = None) -> list[dict[str, Any]]:
-        """Execute the list operation for the current toolkit workflow."""
+        """List records in function slots."""
         query = "SELECT * FROM native_function_slots"
         params: tuple[Any, ...] = ()
         if classification:
@@ -149,7 +149,7 @@ class FunctionSlots:
             return [self.store.decode(row, "evidence_json") for row in connection.execute(query, params)]
 
     def show(self, function_id: str) -> dict[str, Any]:
-        """Execute the show operation for the current toolkit workflow."""
+        """Show function slots."""
         with self.store.connect() as connection:
             row = connection.execute("SELECT * FROM native_function_slots WHERE function_id=?", (function_id,)).fetchone()
             if row is None: raise KeyError(function_id)
@@ -160,7 +160,7 @@ class FunctionSlots:
             return result
 
     def export_fixes(self, output: Path) -> dict[str, Any]:
-        """Execute the export fixes operation for the current toolkit workflow."""
+        """Export fixes."""
         fixes = []
         for slot in self.list():
             if slot["classification"] == "overlap":

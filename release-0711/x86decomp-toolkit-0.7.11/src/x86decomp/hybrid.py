@@ -12,7 +12,7 @@ from .workflow import DecompilationMode, initialize_function_workflow
 
 
 def _assembly_bytes(symbol: str, code: bytes, architecture: str) -> str:
-    """Support assembly bytes processing for internal toolkit callers."""
+    """Assemble one symbol and return its emitted machine-code bytes."""
     directives = [".text", ".code32" if architecture == "x86" else ".code64", f".globl {symbol}", f"{symbol}:"]
     for offset in range(0, len(code), 16):
         chunk = code[offset : offset + 16]

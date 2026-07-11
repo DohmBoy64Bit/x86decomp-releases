@@ -12,7 +12,7 @@ from .util import load_json, sha256_file, utc_now, write_json
 
 
 def _copy_required(source: Path, destination: Path, name: str) -> dict[str, Any]:
-    """Support copy required processing for internal toolkit callers."""
+    """Copy required."""
     path = source / name
     if not path.is_file():
         raise ContractError(f"function artifact is missing {name}: {path}")

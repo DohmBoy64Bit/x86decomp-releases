@@ -20,19 +20,19 @@ VERSION = "0.7.11"
 
 
 def write(path: Path, value: Any) -> None:
-    """Write write for the current toolkit workflow."""
+    """Write the requested operation."""
     path.write_text(json.dumps(value, indent=2, sort_keys=True) + "\n", encoding="utf-8", newline="\n")
 
 
 def root_commands() -> list[str]:
-    """Execute the root commands operation for the current toolkit workflow."""
+    """Return the sorted root command names registered by the live CLI parser."""
     parser = _build_parser()
     action = next(action for action in parser._actions if getattr(action, "choices", None))
     return sorted(action.choices)
 
 
 def module_area(name: str) -> str:
-    """Execute the module area operation for the current toolkit workflow."""
+    """Map a Python module name to its documented toolkit subsystem."""
     if name.startswith("x86decomp.assembly"):
         return "assembly"
     if name.startswith("x86decomp.governance"):

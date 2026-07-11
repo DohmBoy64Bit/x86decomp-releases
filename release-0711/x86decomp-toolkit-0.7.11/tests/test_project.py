@@ -10,7 +10,7 @@ from x86decomp.project import initialize_project, verify_project
 
 
 class ProjectTests(unittest.TestCase):
-    """Coordinate project tests behavior for the current toolkit workflow."""
+    """Group regression tests covering Project behavior."""
     def test_initialize_and_verify(self) -> None:
         """Verify initialize and verify behavior."""
         with tempfile.TemporaryDirectory() as temp:

@@ -124,7 +124,7 @@ class LinkerMap:
 
 
 def parse_msvc_map_text(text: str, *, path: Path | None = None) -> LinkerMap:
-    """Parse msvc map text for the current toolkit workflow."""
+    """Parse MSVC map text."""
     module_name: str | None = None
     timestamp: str | None = None
     preferred: int | None = None
@@ -222,7 +222,7 @@ def parse_msvc_map_text(text: str, *, path: Path | None = None) -> LinkerMap:
 
 
 def parse_msvc_map(path: Path) -> LinkerMap:
-    """Parse msvc map for the current toolkit workflow."""
+    """Parse MSVC map."""
     resolved = path.resolve()
     if not resolved.is_file():
         raise ContractError(f"linker map does not exist: {resolved}")
@@ -230,7 +230,7 @@ def parse_msvc_map(path: Path) -> LinkerMap:
 
 
 def _normalize_object_key(value: str) -> str:
-    """Support normalize object key processing for internal toolkit callers."""
+    """Normalize object key from `value`."""
     value = value.replace("\\", "/")
     if "(" in value and value.endswith(")"):
         value = value[value.rfind("(") + 1 : -1]
@@ -244,7 +244,7 @@ def reconstruct_linker_layout(
     object_paths: Iterable[Path] = (),
     report_path: Path | None = None,
 ) -> dict[str, Any]:
-    """Reconstruct linker layout for the current toolkit workflow."""
+    """Reconstruct section contributions, symbol placement, and linker-order evidence."""
     image = parse_pe(pe_path)
     linker_map = parse_msvc_map(map_path)
     objects = [parse_coff(path) for path in object_paths]

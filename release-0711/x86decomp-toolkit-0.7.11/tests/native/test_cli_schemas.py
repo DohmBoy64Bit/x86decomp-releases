@@ -12,10 +12,10 @@ ROOT=Path(__file__).resolve().parents[2]
 
 
 def _leaf_commands(parser):
-    """Support leaf commands processing for internal toolkit callers."""
+    """Collect leaf command paths from an argparse parser tree."""
     output=[]
     def walk(current,prefix=()):
-        """Execute the walk operation for the current toolkit workflow."""
+        """Return the walk derived from `current`, `prefix`."""
         children=[]
         for action in current._actions:
             if action.__class__.__name__=='_SubParsersAction': children.extend(action.choices.items())

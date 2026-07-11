@@ -12,7 +12,7 @@ from .util import sha256_bytes, utc_now, write_json
 
 
 def _capstone() -> Any:
-    """Support capstone processing for internal toolkit callers."""
+    """Load Capstone and its x86 constants, or raise a dependency error."""
     try:
         import capstone  # type: ignore
         from capstone import x86_const  # type: ignore
@@ -53,7 +53,7 @@ class InstructionRecord:
 
 
 def _is_known_address(value: int, ranges: Iterable[tuple[int, int]]) -> bool:
-    """Support is known address processing for internal toolkit callers."""
+    """Check whether an address falls inside any declared known-address range."""
     return any(start <= value < end for start, end in ranges)
 
 
@@ -64,7 +64,7 @@ def decode_instructions(
     architecture: str = "x86",
     known_address_ranges: Iterable[tuple[int, int]] = (),
 ) -> list[InstructionRecord]:
-    """Decode instructions for the current toolkit workflow."""
+    """Decode instructions."""
     if architecture not in ("x86", "x86_64"):
         raise ContractError("architecture must be x86 or x86_64")
     capstone, x86_const = _capstone()
@@ -147,7 +147,7 @@ def decode_instructions(
 
 
 def control_flow_edges(records: list[InstructionRecord], *, base_address: int, code_size: int) -> list[tuple[int, int, str]]:
-    """Execute the control flow edges operation for the current toolkit workflow."""
+    """Derive normalized branch, call, and fallthrough edges from decoded instructions."""
     code_end = base_address + code_size
     edges: set[tuple[int, int, str]] = set()
     for record in records:
@@ -170,7 +170,7 @@ def compare_instruction_streams(
     target_known_ranges: Iterable[tuple[int, int]] = (),
     candidate_known_ranges: Iterable[tuple[int, int]] = (),
 ) -> dict[str, Any]:
-    """Compare instruction streams for the current toolkit workflow."""
+    """Compare instruction streams."""
     from difflib import SequenceMatcher
 
     target_records = decode_instructions(
@@ -231,7 +231,7 @@ def cross_check_ghidra_instructions(
     architecture: str = "x86",
     report_path: Path | None = None,
 ) -> dict[str, Any]:
-    """Execute the cross check ghidra instructions operation for the current toolkit workflow."""
+    """Compare Capstone decoding against a Ghidra JSONL instruction export."""
     records = decode_instructions(code, base_address=base_address, architecture=architecture)
     ghidra: list[dict[str, Any]] = []
     with ghidra_jsonl.open("r", encoding="utf-8") as handle:

@@ -1,4 +1,4 @@
-"""Provide the installed test-suite implementation for the `x86decomp_testkit.coverage_audit` module."""
+"""Provide coverage audit support for the standalone verification harness."""
 from __future__ import annotations
 
 import json

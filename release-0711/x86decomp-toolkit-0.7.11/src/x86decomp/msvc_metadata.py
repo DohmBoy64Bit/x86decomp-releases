@@ -15,6 +15,7 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Iterable
 
+from .binary_reader import BinaryReader
 from .coff import CoffObject, parse_coff
 from .errors import FormatError
 from .linker_layout import LinkerMap, parse_msvc_map
@@ -229,6 +230,7 @@ class PEView:
         """
         self.path = path.resolve()
         self.data = self.path.read_bytes()
+        self.reader = BinaryReader(self.data)
         self.image = parse_pe(self.path)
         self.architecture = self.image.to_dict()["architecture"]
         self.pointer_size = 4 if self.architecture == "x86" else 8
@@ -277,8 +279,7 @@ class PEView:
             FormatError: If ``size`` is negative or the range extends past the image.
         """
         offset = self.rva_to_offset(rva)
-        if size < 0 or offset + size > len(self.data):
-            raise FormatError(f"read outside PE image at RVA 0x{rva:x}")
+        self.reader.require(offset, size, f"PE read at RVA 0x{rva:x}")
         return self.data[offset : offset + size]
 
     def u16(self, rva: int) -> int:
@@ -290,7 +291,7 @@ class PEView:
         Returns:
             The decoded 16-bit value.
         """
-        return struct.unpack("<H", self.read(rva, 2))[0]
+        return self.reader.u16(self.rva_to_offset(rva), f"PE u16 at RVA 0x{rva:x}")
 
     def u32(self, rva: int) -> int:
         """Read a little-endian unsigned 32-bit integer at ``rva``.
@@ -301,7 +302,7 @@ class PEView:
         Returns:
             The decoded 32-bit value.
         """
-        return struct.unpack("<I", self.read(rva, 4))[0]
+        return self.reader.u32(self.rva_to_offset(rva), f"PE u32 at RVA 0x{rva:x}")
 
     def i32(self, rva: int) -> int:
         """Read a little-endian signed 32-bit integer at ``rva``.
@@ -323,7 +324,7 @@ class PEView:
         Returns:
             The decoded 64-bit value.
         """
-        return struct.unpack("<Q", self.read(rva, 8))[0]
+        return self.reader.u64(self.rva_to_offset(rva), f"PE u64 at RVA 0x{rva:x}")
 
     def pointer(self, rva: int) -> int:
         """Read a pointer-sized value at ``rva`` per the image architecture.
@@ -792,12 +793,13 @@ def parse_x64_unwind(view: PEView) -> tuple[UnwindInfoRecord, ...]:
         elif flags & 0x3:
             if view.valid_rva(tail_rva, 4):
                 handler_rva = view.u32(tail_rva)
-                language_data_rva = tail_rva + 4
-                if view.valid_rva(language_data_rva, 64):
-                    raw_language = view.read(language_data_rva, 64).hex()
+                language_rva = tail_rva + 4
+                language_data_rva = language_rva
+                if view.valid_rva(language_rva, 64):
+                    raw_language = view.read(language_rva, 64).hex()
                 else:
-                    available = max(0, len(view.data) - view.rva_to_offset(language_data_rva))
-                    raw_language = view.read(language_data_rva, min(available, 64)).hex() if available else ""
+                    available = max(0, len(view.data) - view.rva_to_offset(language_rva))
+                    raw_language = view.read(language_rva, min(available, 64)).hex() if available else ""
         records.append(
             UnwindInfoRecord(
                 function_begin_rva=function.begin_rva,

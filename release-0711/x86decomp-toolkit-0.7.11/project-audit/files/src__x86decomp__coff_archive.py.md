@@ -12,7 +12,7 @@
 ## C. Correctness (Verified)
 - Member loop: cursor advances by end+(end&1) where end>=cursor+60 → strictly monotonic, no infinite loop even at declared_size=0; _MAX_MEMBERS guard is redundant safety. Final `cursor != len(data)` alignment check.
 - Linker symbol counts validated against buffer length before struct.unpack_from(f'>{count}I') — prevents oversized allocations (count>_MAX_SYMBOLS or 4+count*4>len rejected). Correct.
-- BSD #1/N name length checked against payload size. Long-name '/N' offset via _long_name (bounds-checked, assumed — verify _long_name; grep shows it exists). 
+- BSD #1/N name length checked against payload size. Long-name '/N' offset via _long_name (bounds-checked, assumed — verify _long_name; grep shows it exists).
 - Robust across BSD/GNU/MS variants incl. reversed linker-member order (falls back to the other parser).
 
 ## H. Security

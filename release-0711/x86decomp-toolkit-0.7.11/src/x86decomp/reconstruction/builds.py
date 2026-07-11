@@ -11,7 +11,7 @@ from .store import ReconstructionStore
 class BuildManager:
     """Manage reconstruction build systems, targets, variants, and validations."""
     def __init__(self,store:ReconstructionStore):
-        """Initialize the instance with validated constructor state."""
+        """Initialize BuildManager with `store`."""
         self.store=store; store.initialize()
     def create(self,name:str,*,mode:str,generator:str='cmake',output_root:str='build',metadata:dict[str,Any]|None=None,actor:str='analyst')->dict[str,Any]:
         """Create a build system record and audit its creation.

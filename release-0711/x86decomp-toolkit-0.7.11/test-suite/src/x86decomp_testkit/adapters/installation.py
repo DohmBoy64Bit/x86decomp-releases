@@ -1,4 +1,4 @@
-"""Provide the installed test-suite implementation for the `x86decomp_testkit.adapters.installation` module."""
+"""Provide installation support for the standalone verification harness."""
 from __future__ import annotations
 
 import os

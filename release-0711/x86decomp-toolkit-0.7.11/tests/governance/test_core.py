@@ -18,7 +18,7 @@ from x86decomp.governance.store import GovernanceStore
 
 
 def store(tmp_path: Path) -> GovernanceStore:
-    """Execute the store operation for the current toolkit workflow."""
+    """Store the requested operation."""
     return GovernanceStore(tmp_path / "project")
 
 

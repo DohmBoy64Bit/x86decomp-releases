@@ -22,6 +22,6 @@ A release is complete only when the exact packaged source passes the same curren
 Unavailable external integrations are listed explicitly as BLOCKED. They are never converted into passing or skipped results.
 
 
-## 0.7.11 adapter-capability note
+## Adapter verification
 
-The test harness now records protocol capabilities separately from product adapter identities. `lm-studio-http` can satisfy OpenAI-compatible local-LLM coverage through a loopback `/v1/models` probe without marking `ollama`, `llama-server`, `localai`, or `vllm` as installed.
+Verification distinguishes a successful protocol probe from proof that a named adapter is installed. The release test oracle is documented in `docs/adapter-capabilities.md`.

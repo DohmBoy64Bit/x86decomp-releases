@@ -1,0 +1,23 @@
+{
+  "index": 13,
+  "partition": "tests/governance/test_governance_cli_schemas.py",
+  "targets": [
+    "tests/governance/test_governance_cli_schemas.py"
+  ],
+  "command": [
+    "/opt/pyvenv/bin/python3",
+    "-m",
+    "pytest",
+    "-q",
+    "tests/governance/test_governance_cli_schemas.py",
+    "-p",
+    "no:cacheprovider",
+    "--junitxml=/mnt/data/x86decomp-audit-external/partition-replay/013.xml"
+  ],
+  "returncode": 0,
+  "tests": 5,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "output_tail": ".....                                                                    [100%]\n5 passed in 1.33s\n"
+}

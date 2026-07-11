@@ -80,18 +80,22 @@ x86decomp asm --project ./work materialize --help
 
 ## Verification
 
-From an extracted source tree, verify the pinned source hashes and run the complete current contract:
+From an extracted source tree, verify the pinned source hashes and run the complete current contract. All verification targets are read-only:
 
 ```bash
 make verify
 ```
 
-Regenerate the deterministic source manifests only after an intentional reviewed source change:
+Regenerate deterministic reports and manifests only after an intentional reviewed source change:
 
 ```bash
+make docstrings-update
+make command-reference-update
 make hashes
 make verify-hashes
 ```
+
+Query the installed command version with `x86decomp --version`. The generated command reference documents all 405 parser nodes, including arguments, errors, safety notes, and concrete `--help` examples.
 
 Run the comprehensive adapter-aware harness:
 
@@ -118,6 +122,6 @@ The run command creates the configured output directory and a unique run subdire
 See `docs/architecture.md`, `docs/supported-scope.md`, `docs/build-and-verification.md`, and `SECURITY.md` for the current operating contract.
 
 
-## 0.7.11 adapter-capability note
+## Adapter capability model
 
-The test harness now records protocol capabilities separately from product adapter identities. `lm-studio-http` can satisfy OpenAI-compatible local-LLM coverage through a loopback `/v1/models` probe without marking `ollama`, `llama-server`, `localai`, or `vllm` as installed.
+Protocol probes and installed adapter identities are tracked separately. See [`docs/adapter-capabilities.md`](docs/adapter-capabilities.md) for the authoritative 0.7.11 rules and acceptance boundaries.

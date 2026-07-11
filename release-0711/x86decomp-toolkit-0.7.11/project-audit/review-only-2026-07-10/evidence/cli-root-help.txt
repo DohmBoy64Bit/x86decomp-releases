@@ -1,0 +1,212 @@
+usage: x86decomp [-h]
+                 {init,inspect-pe,pdb-inspect,verify-project,snapshot-tools,compile,compiler-lab,objdiff-run,toolchain-register,toolchain-verify,diff-bytes,diff-function,coff-inspect,lib-inspect,coff-extract,coff-synthesize,coff-comdat-resolve,map-inspect,layout-reconstruct,image-profile,image-match,metadata-scan,corpus-create-manifest,corpus-build,corpus-verify,corpus-compare,corpus-generate,corpus-generated-verify,test-bundle-create,test-bundle-inspect,disassemble,crosscheck-ghidra,abi-check,dynamic-validate,symbolic-validate,angr-validate,symbolic-memory-validate,drcov-parse,drcov-run,integration-run,patch-image,relink,hybrid-generate,workflow-init,workflow-show,workflow-update,db-ingest,db-query,db-constraint-add,db-constraint-conflicts,db-constraint-accept,work-create,work-next,work-claim,work-propose,work-validate,mcp-tools,mcp-read,mcp-propose,mcp-commit,benchmark-run,serve,evidence-add,claim-create,claim-attach,claim-verify,claim-contradict,memory-add,memory-verify,memory-render,artifact-import,artifact-verify,decompme-pack,ghidra-export,target-pack-infer,target-pack-verify,project-from-target,template-derive,template-materialize,project-check,project-migrate,project-backup,project-restore,project-repair,project-gc,pipeline-create,pipeline-run,pipeline-status,pipeline-cancel,pipeline-retry,pipeline-recover,worker-capabilities,compile-worker,linker-plan,cpp-recover,harness-generate,convergence-analyze,reproduce-create,reproduce-verify,release-gate,security-audit,dependency-audit,sbom-generate,release-manifest-verify,content-put,content-verify,commands,abi,asm,asset,boundary,build,campaign,candidate,capsule,changeset,class,compiler-rules,consensus,counterexample,decompiler,diff,family,function,game-pattern,ghidra-mcp,graph,headers,hybrid,hypothesis,image-text,library,llm,loop,match,mod,module,pattern,pe,playability,plugin,progress,project,proof,provenance,regression,release-policy,reloc,review,runtime,runtime-analysis,script-port,security,source,source-map,source-stage,staging,subsystem,tests,text-swap,toolchain,triage,type,vtable,windows,worker} ...
+
+Evidence-governed x86/x86-64 decompilation toolkit
+
+positional arguments:
+  {init,inspect-pe,pdb-inspect,verify-project,snapshot-tools,compile,compiler-lab,objdiff-run,toolchain-register,toolchain-verify,diff-bytes,diff-function,coff-inspect,lib-inspect,coff-extract,coff-synthesize,coff-comdat-resolve,map-inspect,layout-reconstruct,image-profile,image-match,metadata-scan,corpus-create-manifest,corpus-build,corpus-verify,corpus-compare,corpus-generate,corpus-generated-verify,test-bundle-create,test-bundle-inspect,disassemble,crosscheck-ghidra,abi-check,dynamic-validate,symbolic-validate,angr-validate,symbolic-memory-validate,drcov-parse,drcov-run,integration-run,patch-image,relink,hybrid-generate,workflow-init,workflow-show,workflow-update,db-ingest,db-query,db-constraint-add,db-constraint-conflicts,db-constraint-accept,work-create,work-next,work-claim,work-propose,work-validate,mcp-tools,mcp-read,mcp-propose,mcp-commit,benchmark-run,serve,evidence-add,claim-create,claim-attach,claim-verify,claim-contradict,memory-add,memory-verify,memory-render,artifact-import,artifact-verify,decompme-pack,ghidra-export,target-pack-infer,target-pack-verify,project-from-target,template-derive,template-materialize,project-check,project-migrate,project-backup,project-restore,project-repair,project-gc,pipeline-create,pipeline-run,pipeline-status,pipeline-cancel,pipeline-retry,pipeline-recover,worker-capabilities,compile-worker,linker-plan,cpp-recover,harness-generate,convergence-analyze,reproduce-create,reproduce-verify,release-gate,security-audit,dependency-audit,sbom-generate,release-manifest-verify,content-put,content-verify,commands,abi,asm,asset,boundary,build,campaign,candidate,capsule,changeset,class,compiler-rules,consensus,counterexample,decompiler,diff,family,function,game-pattern,ghidra-mcp,graph,headers,hybrid,hypothesis,image-text,library,llm,loop,match,mod,module,pattern,pe,playability,plugin,progress,project,proof,provenance,regression,release-policy,reloc,review,runtime,runtime-analysis,script-port,security,source,source-map,source-stage,staging,subsystem,tests,text-swap,toolchain,triage,type,vtable,windows,worker}
+    init                initialize a native PE project
+    inspect-pe          parse PE32 or PE32+ metadata
+    pdb-inspect         inspect an MSF 7.0 PDB and optionally match it to a PE
+    verify-project      verify project structure, contracts, and recorded
+                        hashes
+    snapshot-tools      record detected external tool versions and paths
+    compile             compile one source file under a declared compiler
+                        profile
+    compiler-lab        run a compiler experiment matrix from a lab manifest
+    objdiff-run         run an objdiff-compatible comparison manifest
+    toolchain-register  register a versioned compiler toolchain
+    toolchain-verify    verify a registered toolchain and executable hashes
+    diff-bytes          compare two files byte-for-byte with bounded mismatch
+                        reporting
+    diff-function       compare a linked PE function to a COFF symbol
+    coff-inspect        inspect COFF object metadata, symbols, and relocations
+    lib-inspect         inspect a COFF archive/static or import library
+    coff-extract        extract one symbol payload from a COFF object
+    coff-synthesize     create a synthetic COFF object from code and
+                        relocations
+    coff-comdat-resolve
+                        resolve COMDAT groups across COFF objects
+    map-inspect         parse an MSVC-compatible linker map
+    layout-reconstruct  correlate PE sections, linker map contributions, and
+                        COFF objects
+    image-profile       derive a target-specific whole-image profile
+    image-match         compare complete PE images under an explicit layout
+                        profile
+    metadata-scan       recover bounded MSVC RTTI, vtables, unwind, TLS, and
+                        initializer metadata
+    corpus-create-manifest
+                        create the bundled compiler ground-truth manifest
+    corpus-build        build a reproducible compiler/version ground-truth
+                        corpus
+    corpus-verify       verify source and output hashes in a ground-truth
+                        corpus
+    corpus-compare      compare compiler/version ground-truth corpus reports
+    corpus-generate     generate a deterministic parameterized C/C++ source
+                        corpus
+    corpus-generated-verify
+                        verify generated corpus source identities
+    test-bundle-create  create a hash-sealed authorized static test bundle
+    test-bundle-inspect
+                        safely extract, verify, and statically inspect an
+                        authorized test bundle
+    disassemble         decode bounded machine-code instructions
+    crosscheck-ghidra   compare toolkit disassembly with a Ghidra export
+    abi-check           validate observed behavior against an ABI contract
+    dynamic-validate    differentially execute and compare two binaries
+    symbolic-validate   symbolically compare bounded binary functions
+    angr-validate       compare binary functions with the optional angr
+                        backend
+    symbolic-memory-validate
+                        angr comparison with symbolic region bases and alias
+                        constraints
+    drcov-parse         parse a DynamoRIO drcov coverage log
+    drcov-run           run a target under DynamoRIO drcov tracing
+    integration-run     execute declared integration scenarios
+    patch-image         patch a function body into a PE image
+    relink              relink an image from a declared reconstruction
+                        manifest
+    hybrid-generate     compatibility alias for: x86decomp hybrid generate
+    workflow-init       initialize per-function decompilation workflow state
+    workflow-show       show validated per-function workflow state
+    workflow-update     update validated per-function workflow state
+    db-ingest           ingest an analysis artifact into the project database
+    db-query            run a bounded read-only SQL query against the analysis
+                        database
+    db-constraint-add   add a provenance-bearing analysis constraint
+    db-constraint-conflicts
+                        list conflicting constraints for a subject and
+                        relation
+    db-constraint-accept
+                        accept a selected analysis constraint
+    work-create         create a validated work-queue task
+    work-next           show the next eligible work-queue task
+    work-claim          claim a work-queue task for an assignee
+    work-propose        attach a proposal and evidence to a work task
+    work-validate       record a validator result for a work task
+    mcp-tools           list tools exposed by a configured MCP endpoint
+    mcp-read            invoke a read-only MCP tool through the project
+                        gateway
+    mcp-propose         propose an evidence-linked MCP mutation for approval
+    mcp-commit          commit an approved MCP mutation
+    benchmark-run       run a declared benchmark corpus and emit measured
+                        results
+    serve               serve the read-only project API on loopback by default
+    evidence-add        add a provenance-bearing evidence record to a project
+    claim-create        create an evidence-linked project claim
+    claim-attach        attach an evidence record to an existing claim
+    claim-verify        evaluate whether a claim has sufficient independent
+                        evidence
+    claim-contradict    attach contradictory evidence to a claim
+    memory-add          append an evidence-linked project-memory entry
+    memory-verify       verify the integrity of project-memory records
+    memory-render       render project memory as Markdown
+    artifact-import     import a validated exported function artifact
+    artifact-verify     verify an exported function artifact and its hashes
+    decompme-pack       create a decomp.me-compatible packet from an artifact
+    ghidra-export       run the bundled Ghidra export workflow
+    target-pack-infer   infer a fact-preserving target pack and template plan
+    target-pack-verify  verify a target-pack contract and referenced artifacts
+    project-from-target
+                        initialize a project from a verified target pack
+    template-derive     derive a grounded project-template contract from a
+                        target pack
+    template-materialize
+                        materialize the grounded working layout for an
+                        existing target project
+    project-check       compatibility alias for project state validation
+    project-migrate     migrate project state to the current schema
+    project-backup      create a deterministic project-state backup
+    project-restore     restore project state from a verified backup
+    project-repair      inspect or apply deterministic project-state repairs
+    project-gc          inspect or remove unreferenced project content
+    pipeline-create     create a default durable analysis pipeline manifest
+    pipeline-run        run or resume a durable project pipeline
+    pipeline-status     show durable pipeline and stage status
+    pipeline-cancel     cancel a pipeline or one pipeline stage
+    pipeline-retry      retry a failed pipeline stage
+    pipeline-recover    reset jobs with stale durable runner heartbeats
+    worker-capabilities
+                        report local worker and tool capabilities
+    compile-worker      run a bounded local or containerized compilation
+                        worker
+    linker-plan         build a grounded linker reconstruction plan
+    cpp-recover         recover bounded C++ metadata and class relationships
+    harness-generate    generate an execution harness from binary functions
+    convergence-analyze
+                        measure image convergence and append history
+    reproduce-create    create a reproducibility manifest for declared inputs
+    reproduce-verify    verify a reproducibility manifest and all input hashes
+    release-gate        evaluate explicit target release acceptance contracts
+    security-audit      audit a source tree for declared security checks
+    dependency-audit    run an installed pip-audit adapter and preserve exact
+                        findings
+    sbom-generate       generate a software bill of materials
+    release-manifest-verify
+                        verify every entry in a release hash manifest
+    content-put         store content by cryptographic digest
+    content-verify      verify content-addressed storage integrity
+    commands            list canonical capability routes and implementation
+                        owners
+    abi                 canonical abi capability commands
+    asm                 canonical asm capability commands
+    asset               canonical asset capability commands
+    boundary            canonical boundary capability commands
+    build               canonical build capability commands
+    campaign            canonical campaign capability commands
+    candidate           canonical candidate capability commands
+    capsule             canonical capsule capability commands
+    changeset           canonical changeset capability commands
+    class               canonical class capability commands
+    compiler-rules      canonical compiler-rules capability commands
+    consensus           canonical consensus capability commands
+    counterexample      canonical counterexample capability commands
+    decompiler          canonical decompiler capability commands
+    diff                canonical diff capability commands
+    family              canonical family capability commands
+    function            canonical function capability commands
+    game-pattern        canonical game-pattern capability commands
+    ghidra-mcp          canonical ghidra-mcp capability commands
+    graph               canonical graph capability commands
+    headers             canonical headers capability commands
+    hybrid              canonical hybrid capability commands
+    hypothesis          canonical hypothesis capability commands
+    image-text          canonical image-text capability commands
+    library             canonical library capability commands
+    llm                 canonical llm capability commands
+    loop                canonical loop capability commands
+    match               canonical match capability commands
+    mod                 canonical mod capability commands
+    module              canonical module capability commands
+    pattern             canonical pattern capability commands
+    pe                  canonical pe capability commands
+    playability         canonical playability capability commands
+    plugin              canonical plugin capability commands
+    progress            canonical progress capability commands
+    project             canonical project capability commands
+    proof               canonical proof capability commands
+    provenance          canonical provenance capability commands
+    regression          canonical regression capability commands
+    release-policy      canonical release-policy capability commands
+    reloc               canonical reloc capability commands
+    review              canonical review capability commands
+    runtime             canonical runtime capability commands
+    runtime-analysis    canonical runtime-analysis capability commands
+    script-port         canonical script-port capability commands
+    security            canonical security capability commands
+    source              canonical source capability commands
+    source-map          canonical source-map capability commands
+    source-stage        canonical source-stage capability commands
+    staging             canonical staging capability commands
+    subsystem           canonical subsystem capability commands
+    tests               canonical tests capability commands
+    text-swap           canonical text-swap capability commands
+    toolchain           canonical toolchain capability commands
+    triage              canonical triage capability commands
+    type                canonical type capability commands
+    vtable              canonical vtable capability commands
+    windows             canonical windows capability commands
+    worker              canonical worker capability commands
+
+options:
+  -h, --help            show this help message and exit

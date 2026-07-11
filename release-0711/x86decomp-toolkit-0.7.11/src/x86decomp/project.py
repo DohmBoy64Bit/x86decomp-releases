@@ -59,7 +59,7 @@ PROJECT_DIRS = (
 
 
 def initialize_project(binary: Path, project_root: Path, *, copy_binary: bool = True) -> dict[str, Any]:
-    """Initialize project for the current toolkit workflow."""
+    """Initialize project."""
     source = binary.resolve()
     root = project_root.resolve()
     if root.exists() and any(root.iterdir()):
@@ -150,7 +150,7 @@ def initialize_project(binary: Path, project_root: Path, *, copy_binary: bool = 
 
 
 def _resolve_binary_path(root: Path, project: dict[str, Any]) -> Path:
-    """Support resolve binary path processing for internal toolkit callers."""
+    """Resolve binary path."""
     binary = project.get("binary")
     if not isinstance(binary, dict):
         raise ContractError("project.binary must be an object")
@@ -164,7 +164,7 @@ def _resolve_binary_path(root: Path, project: dict[str, Any]) -> Path:
 
 
 def verify_project(project_root: Path) -> dict[str, Any]:
-    """Verify project for the current toolkit workflow."""
+    """Verify project."""
     root = project_root.resolve()
     project_path = root / "project.json"
     if not project_path.is_file():
@@ -224,7 +224,7 @@ def verify_project(project_root: Path) -> dict[str, Any]:
 
 
 def require_valid_project(project_root: Path) -> dict[str, Any]:
-    """Execute the require valid project operation for the current toolkit workflow."""
+    """Load a project only after its structure and metadata validate."""
     result = verify_project(project_root)
     if not result["valid"]:
         raise VerificationError("project verification failed: " + "; ".join(result["failures"]))

@@ -1,4 +1,4 @@
-"""Provide the current runtime implementation for the `x86decomp.assembly.cli` module."""
+"""Register and dispatch assembly-reconstruction CLI commands."""
 from __future__ import annotations
 
 import argparse
@@ -27,7 +27,7 @@ def _json_file(path: str | Path) -> Any:
 
 
 def _json_array(raw: str | None) -> list[str] | None:
-    """Support json array processing for internal toolkit callers."""
+    """Parse a command-line value as a JSON array."""
     if raw is None:
         return None
     try:
@@ -40,12 +40,12 @@ def _json_array(raw: str | None) -> list[str] | None:
 
 
 def _int(value: str) -> int:
-    """Support int processing for internal toolkit callers."""
+    """Parse a command-line integer using Python base prefixes."""
     return int(value, 0)
 
 
 def _emit(value: Any) -> None:
-    """Support emit processing for internal toolkit callers."""
+    """Emit the requested operation."""
     if isinstance(value, dict) and "resolved_bytes" in value:
         value = {key: item for key, item in value.items() if key != "resolved_bytes"}
     print(json.dumps(value, indent=2, sort_keys=True, default=str))

@@ -1,4 +1,4 @@
-"""Provide the installed test-suite implementation for the `x86decomp_testkit.live_adapters` module."""
+"""Provide live adapters support for the standalone verification harness."""
 from __future__ import annotations
 
 import importlib
@@ -19,7 +19,7 @@ from .timeutil import utc_now
 
 
 def _path_for(result: ProbeResult, spec: AdapterSpec) -> Path | None:
-    """Support path for processing for internal toolkit callers."""
+    """Resolve the executable or installation path associated with an adapter result."""
     if not result.path:
         return None
     path = Path(result.path)
@@ -47,7 +47,7 @@ def _path_for(result: ProbeResult, spec: AdapterSpec) -> Path | None:
 
 
 def _python_adapter_test(spec: AdapterSpec, result: ProbeResult) -> TestResult:
-    """Support python adapter test processing for internal toolkit callers."""
+    """Return the python adapter test derived from `spec`, `result`."""
     started = utc_now()
     details: dict[str, Any] = {}
     try:
@@ -80,7 +80,7 @@ def _generic_executable_test(
     output_directory: Path,
     event_logger: JsonlEventLogger,
 ) -> TestResult:
-    """Support generic executable test processing for internal toolkit callers."""
+    """Return the generic executable test derived from `spec`, `result`, `config`, and additional options."""
     executable = _path_for(result, spec)
     if executable is None:
         return blocked_result(f"adapter:{spec.adapter_id}:version", "adapters", [spec.adapter_id], "detected adapter has no executable probe target")
@@ -105,7 +105,7 @@ def _compiler_test(
     output_directory: Path,
     event_logger: JsonlEventLogger,
 ) -> TestResult:
-    """Support compiler test processing for internal toolkit callers."""
+    """Return the compiler test derived from `spec`, `result`, `config`, and additional options."""
     executable = _path_for(result, spec)
     if executable is None:
         return blocked_result(f"adapter:{spec.adapter_id}:compile", "adapters", [spec.adapter_id])
@@ -140,7 +140,7 @@ def _lld_link_test(
     adapter_results: dict[str, ProbeResult],
     catalog: dict[str, AdapterSpec],
 ) -> TestResult:
-    """Support lld link test processing for internal toolkit callers."""
+    """Return the lld link test derived from `spec`, `result`, `config`, and additional options."""
     clang_result = adapter_results.get("clang")
     if not clang_result or not clang_result.installed:
         return blocked_result("adapter:lld-link:link", "adapters", ["clang", "lld-link"])
@@ -176,7 +176,7 @@ def _ghidra_test(
     output_directory: Path,
     event_logger: JsonlEventLogger,
 ) -> TestResult:
-    """Support ghidra test processing for internal toolkit callers."""
+    """Return the Ghidra test derived from `spec`, `result`, `config`, and additional options."""
     analyze = _path_for(result, spec)
     if analyze is None:
         return blocked_result("adapter:ghidra:headless-export", "adapters", ["ghidra"])
@@ -211,7 +211,7 @@ def _dynamorio_test(
     output_directory: Path,
     event_logger: JsonlEventLogger,
 ) -> TestResult:
-    """Support dynamorio test processing for internal toolkit callers."""
+    """Return the dynamorio test derived from `spec`, `result`, `config`, and additional options."""
     drrun = _path_for(result, spec)
     if drrun is None:
         return blocked_result("adapter:dynamorio:drcov", "adapters", ["dynamorio"])
@@ -240,7 +240,7 @@ def _objdiff_test(
     output_directory: Path,
     event_logger: JsonlEventLogger,
 ) -> TestResult:
-    """Support objdiff test processing for internal toolkit callers."""
+    """Return the objdiff test derived from `spec`, `result`, `config`, and additional options."""
     executable = _path_for(result, spec)
     if executable is None:
         return blocked_result("adapter:objdiff:help", "adapters", ["objdiff"])
@@ -295,7 +295,7 @@ def run_live_adapter_tests(
     output_directory: Path,
     event_logger: JsonlEventLogger,
 ) -> list[TestResult]:
-    """Run live adapter tests for the current toolkit workflow."""
+    """Run live adapter tests."""
     results_by_id = {item.adapter_id: item for item in probe_results}
     tests: list[TestResult] = []
     for adapter_id in sorted(catalog):

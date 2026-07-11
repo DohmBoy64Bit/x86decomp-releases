@@ -1,4 +1,4 @@
-"""Provide the current runtime implementation for the `x86decomp.native.hybrid_composer` module."""
+"""Compose verified function candidates into hybrid PE images."""
 from __future__ import annotations
 
 from pathlib import Path
@@ -12,13 +12,13 @@ from .store import NativeStore
 
 
 class HybridComposer:
-    """Coordinate hybrid composer behavior for the current toolkit workflow."""
+    """Compose verified replacement functions into a bounded hybrid PE image."""
     def __init__(self, store: NativeStore):
-        """Initialize the instance with validated constructor state."""
+        """Initialize HybridComposer with `store`."""
         self.store=store; store.initialize()
 
     def compose(self, run_id:str, output_path:Path, *, actor:str='analyst')->dict[str,Any]:
-        """Execute the compose operation for the current toolkit workflow."""
+        """Create a hybrid PE by applying only verified, slot-bounded replacement functions."""
         report=FunctionMatching(self.store).report(run_id)
         original_path=Path(report['original_path'])
         if sha256_file(original_path) != report['original_sha256']:
@@ -57,7 +57,7 @@ class HybridComposer:
         return summary
 
     def verify(self, composition_id:str)->dict[str,Any]:
-        """Verify verify for the current toolkit workflow."""
+        """Verify hybrid composer integrity and contracts."""
         with self.store.connect() as c:
             row=c.execute('SELECT * FROM native_hybrid_compositions WHERE composition_id=?',(composition_id,)).fetchone()
             if row is None: raise KeyError(composition_id)

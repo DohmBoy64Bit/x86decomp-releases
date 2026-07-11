@@ -1,0 +1,23 @@
+{
+  "index": 12,
+  "partition": "tests/governance/test_core.py",
+  "targets": [
+    "tests/governance/test_core.py"
+  ],
+  "command": [
+    "/opt/pyvenv/bin/python3",
+    "-m",
+    "pytest",
+    "-q",
+    "tests/governance/test_core.py",
+    "-p",
+    "no:cacheprovider",
+    "--junitxml=/mnt/data/x86decomp-audit-external/partition-replay/012.xml"
+  ],
+  "returncode": 0,
+  "tests": 17,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "output_tail": ".................                                                        [100%]\n17 passed in 0.67s\n"
+}

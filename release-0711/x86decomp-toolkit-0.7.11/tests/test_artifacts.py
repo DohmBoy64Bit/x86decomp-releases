@@ -10,9 +10,9 @@ from x86decomp.artifacts import import_function_artifact, verify_function_artifa
 
 
 class ArtifactTests(unittest.TestCase):
-    """Coordinate artifact tests behavior for the current toolkit workflow."""
+    """Group regression tests covering Artifact behavior."""
     def _export(self, root: Path) -> Path:
-        """Support export processing for internal toolkit callers."""
+        """Export artifact tests."""
         exported = root / "exported"
         (exported / "ranges").mkdir(parents=True)
         (exported / "ranges" / "00.bin").write_bytes(b"\x90\xc3")

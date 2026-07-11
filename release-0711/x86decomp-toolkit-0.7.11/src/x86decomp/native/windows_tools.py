@@ -1,4 +1,4 @@
-"""Provide the current runtime implementation for the `x86decomp.native.windows_tools` module."""
+"""Discover and invoke Windows-native reconstruction tools."""
 from __future__ import annotations
 
 import os
@@ -12,7 +12,7 @@ from .store import NativeStore
 
 
 def discover_ghidra_launcher(ghidra_home:Path|None=None, *, platform_name:str|None=None)->Path|None:
-    """Discover ghidra launcher for the current toolkit workflow."""
+    """Discover Ghidra launcher."""
     platform_name=(platform_name or os.name).lower(); homes=[]
     if ghidra_home is not None: homes.append(ghidra_home)
     if os.environ.get('GHIDRA_HOME'): homes.append(Path(os.environ['GHIDRA_HOME']))
@@ -28,10 +28,10 @@ def discover_ghidra_launcher(ghidra_home:Path|None=None, *, platform_name:str|No
 
 
 def write_response_file(path:Path,arguments:list[str])->dict[str,Any]:
-    """Write response file for the current toolkit workflow."""
+    """Write response file."""
     path=path.resolve(); path.parent.mkdir(parents=True,exist_ok=True)
     def quote(value:str)->str:
-        """Execute the quote operation for the current toolkit workflow."""
+        """Quote one Windows command-line argument using CreateProcess-compatible rules."""
         if not value or any(ch.isspace() or ch=='"' for ch in value): return '"'+value.replace('\\','\\\\').replace('"','\\"')+'"'
         return value
     path.write_text('\n'.join(quote(item) for item in arguments)+'\n',encoding='utf-8')
@@ -39,13 +39,13 @@ def write_response_file(path:Path,arguments:list[str])->dict[str,Any]:
 
 
 class WindowsTools:
-    """Coordinate windows tools behavior for the current toolkit workflow."""
+    """Discover configured Windows-native tools and report their availability."""
     def __init__(self,store:NativeStore):
-        """Initialize the instance with validated constructor state."""
+        """Initialize WindowsTools with `store`."""
         self.store=store; store.initialize()
 
     def doctor(self, *, ghidra_home:Path|None=None, actor:str='analyst')->dict[str,Any]:
-        """Execute the doctor operation for the current toolkit workflow."""
+        """Inspect configured Windows tool paths and return availability diagnostics."""
         candidates={
             'ghidra': discover_ghidra_launcher(ghidra_home),
             'gcc': Path(found).resolve() if (found:=shutil.which('gcc')) else None,

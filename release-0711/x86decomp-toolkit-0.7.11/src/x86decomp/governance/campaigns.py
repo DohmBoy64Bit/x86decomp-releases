@@ -15,7 +15,7 @@ class CampaignEngine:
     """Persistent, deterministic campaign control and next-action planning."""
 
     def __init__(self, store: GovernanceStore):
-        """Initialize the instance with validated constructor state."""
+        """Initialize CampaignEngine with `store`."""
         self.store = store
         self.store.initialize()
 

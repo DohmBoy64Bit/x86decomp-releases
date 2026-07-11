@@ -33,9 +33,9 @@ CREATE INDEX IF NOT EXISTS idx_tasks_status_priority ON tasks(status, priority D
 
 
 class WorkQueue:
-    """Coordinate work queue behavior for the current toolkit workflow."""
+    """Manage work queue state and operations."""
     def __init__(self, path: Path):
-        """Initialize the instance with validated constructor state."""
+        """Initialize WorkQueue with `path`."""
         self.path = path.resolve()
         self.path.parent.mkdir(parents=True, exist_ok=True)
         self.db = sqlite3.connect(self.path)
@@ -43,7 +43,7 @@ class WorkQueue:
         self.db.executescript(_SCHEMA)
 
     def close(self) -> None:
-        """Execute the close operation for the current toolkit workflow."""
+        """Close work queue."""
         self.db.close()
 
     def create(
@@ -56,7 +56,7 @@ class WorkQueue:
         required_validators: list[str],
         priority: int = 0,
     ) -> dict[str, Any]:
-        """Create create for the current toolkit workflow."""
+        """Create a record in work queue."""
         if mode not in ("matching", "functional"):
             raise ContractError("task mode must be matching or functional")
         if not instructions.strip() or not required_validators:
@@ -71,7 +71,7 @@ class WorkQueue:
         return self.get(task_id)
 
     def get(self, task_id: str) -> dict[str, Any]:
-        """Execute the get operation for the current toolkit workflow."""
+        """Return data from work queue."""
         row = self.db.execute("SELECT * FROM tasks WHERE id=?", (task_id,)).fetchone()
         if row is None:
             raise ContractError(f"work task does not exist: {task_id}")
@@ -82,7 +82,7 @@ class WorkQueue:
         return result
 
     def claim(self, task_id: str, assignee: str) -> dict[str, Any]:
-        """Execute the claim operation for the current toolkit workflow."""
+        """Claim work queue."""
         if not assignee.strip():
             raise ContractError("assignee is required")
         cursor = self.db.execute("UPDATE tasks SET status='claimed',assignee=?,updated_at=? WHERE id=? AND status='queued'", (assignee, utc_now(), task_id))
@@ -92,7 +92,7 @@ class WorkQueue:
         return self.get(task_id)
 
     def propose(self, task_id: str, proposal: dict[str, Any], evidence_ids: list[str]) -> dict[str, Any]:
-        """Execute the propose operation for the current toolkit workflow."""
+        """Propose work queue."""
         if not evidence_ids:
             raise ContractError("proposal requires evidence_ids; AI output alone is not evidence")
         cursor = self.db.execute(
@@ -105,7 +105,7 @@ class WorkQueue:
         return self.get(task_id)
 
     def record_validator(self, task_id: str, validator: str, report_path: str, passed: bool) -> dict[str, Any]:
-        """Record validator for the current toolkit workflow."""
+        """Record validator."""
         task = self.get(task_id)
         if task["status"] not in ("proposed", "validating"):
             raise ContractError("task must have a proposal before validation")
@@ -120,7 +120,7 @@ class WorkQueue:
         return self.get(task_id)
 
     def next(self, *, mode: str | None = None) -> dict[str, Any] | None:
-        """Execute the next operation for the current toolkit workflow."""
+        """Return the highest-priority queued task, optionally restricted by work mode."""
         if mode is not None and mode not in ("matching", "functional"):
             raise ContractError("mode must be matching or functional")
         if mode is None:

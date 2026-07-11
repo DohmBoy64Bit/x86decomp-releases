@@ -14,14 +14,14 @@ _FUNCTION_ID = re.compile(r"^pe-rva:[0-9a-fA-F]{8}$")
 
 
 def function_id_from_rva(rva: int) -> str:
-    """Execute the function id from rva operation for the current toolkit workflow."""
+    """Build a stable function identifier from a relative virtual address."""
     if not 0 <= rva <= 0xFFFFFFFF:
         raise ContractError("RVA must fit in 32 bits")
     return f"pe-rva:{rva:08x}"
 
 
 def validate_function_manifest(value: Any) -> dict[str, Any]:
-    """Validate function manifest for the current toolkit workflow."""
+    """Validate function manifest."""
     if not isinstance(value, dict):
         raise ContractError("function manifest must be an object")
     function_id = value.get("id")
@@ -45,7 +45,7 @@ def validate_function_manifest(value: Any) -> dict[str, Any]:
 
 
 def import_function_artifact(project_root: Path, exported_dir: Path) -> Path:
-    """Execute the import function artifact operation for the current toolkit workflow."""
+    """Import function artifact."""
     exported_dir = exported_dir.resolve()
     for path in exported_dir.rglob("*"):
         if path.is_symlink():
@@ -76,7 +76,7 @@ def import_function_artifact(project_root: Path, exported_dir: Path) -> Path:
 
 
 def verify_function_artifact(artifact_dir: Path) -> dict[str, Any]:
-    """Verify function artifact for the current toolkit workflow."""
+    """Verify function artifact."""
     integrity_path = artifact_dir / "integrity.json"
     if not integrity_path.is_file():
         raise ContractError("function artifact has no integrity.json")

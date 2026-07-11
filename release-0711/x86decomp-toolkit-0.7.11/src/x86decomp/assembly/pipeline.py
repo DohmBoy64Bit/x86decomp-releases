@@ -1,4 +1,4 @@
-"""Provide the current runtime implementation for the `x86decomp.assembly.pipeline` module."""
+"""Coordinate assembly reconstruction, verification, and reporting."""
 from __future__ import annotations
 
 import json
@@ -24,7 +24,7 @@ ASM_FORMATS = ("bytes", "annotated", "mnemonic")
 
 
 def _load_json(path: Path) -> Any:
-    """Support load json processing for internal toolkit callers."""
+    """Load JSON."""
     try:
         return json.loads(path.read_text(encoding="utf-8"))
     except (OSError, json.JSONDecodeError) as exc:
@@ -32,13 +32,13 @@ def _load_json(path: Path) -> Any:
 
 
 def _resolve_path(base: Path, raw: str | Path) -> Path:
-    """Support resolve path processing for internal toolkit callers."""
+    """Resolve path."""
     path = Path(raw)
     return path.resolve() if path.is_absolute() else (base / path).resolve()
 
 
 def _function_bytes(item: Mapping[str, Any], *, base: Path) -> bytes:
-    """Support function bytes processing for internal toolkit callers."""
+    """Read the original bytes associated with one project function record."""
     if item.get("code_hex") is not None:
         try:
             return bytes.fromhex(str(item["code_hex"]))
@@ -61,7 +61,7 @@ def _symbol_map(
     functions: list[Mapping[str, Any]],
     supplemental: Mapping[str, Any] | list[Mapping[str, Any]] | None = None,
 ) -> dict[str, dict[str, Any]]:
-    """Support symbol map processing for internal toolkit callers."""
+    """Build the project symbol map consumed by assembly materialization."""
     result: dict[str, dict[str, Any]] = {}
     if supplemental is not None:
         for name, entry in normalize_symbol_map(supplemental).items():
@@ -82,9 +82,9 @@ def _symbol_map(
 
 
 class AssemblyPipeline:
-    """Coordinate assembly pipeline behavior for the current toolkit workflow."""
+    """Coordinate assembly materialization, verification, persistence, and run reporting."""
     def __init__(self, store: AssemblyStore):
-        """Initialize the instance with validated constructor state."""
+        """Initialize AssemblyPipeline with `store`."""
         self.store = store
         store.initialize()
 
@@ -98,7 +98,7 @@ class AssemblyPipeline:
         image_base: int | None = None,
         actor: str = "analyst",
     ) -> dict[str, Any]:
-        """Execute the batch operation for the current toolkit workflow."""
+        """Materialize and verify a batch of assembly functions for the project."""
         if asm_format not in ASM_FORMATS:
             raise ContractError(f"asm format must be one of {ASM_FORMATS}")
         manifest_path = manifest_path.resolve()
@@ -317,7 +317,7 @@ class AssemblyPipeline:
             raise
 
     def report(self, run_id: str) -> dict[str, Any]:
-        """Execute the report operation for the current toolkit workflow."""
+        """Return the persisted assembly-pipeline results for a run."""
         with self.store.connect() as connection:
             run = connection.execute(
                 "SELECT * FROM assembly_asm_runs WHERE run_id=?", (run_id,)
@@ -334,7 +334,7 @@ class AssemblyPipeline:
             return result
 
     def list_runs(self) -> list[dict[str, Any]]:
-        """Execute the list runs operation for the current toolkit workflow."""
+        """List runs."""
         with self.store.connect() as connection:
             return [
                 self.store.decode(row, "summary_json")

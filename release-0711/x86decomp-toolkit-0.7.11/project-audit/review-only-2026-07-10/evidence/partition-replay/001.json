@@ -1,0 +1,23 @@
+{
+  "index": 1,
+  "partition": "test-suite/src/x86decomp_testkit/toolkit_tests/test_public_api_contract.py",
+  "targets": [
+    "test-suite/src/x86decomp_testkit/toolkit_tests/test_public_api_contract.py"
+  ],
+  "command": [
+    "/opt/pyvenv/bin/python3",
+    "-m",
+    "pytest",
+    "-q",
+    "test-suite/src/x86decomp_testkit/toolkit_tests/test_public_api_contract.py",
+    "-p",
+    "no:cacheprovider",
+    "--junitxml=/mnt/data/x86decomp-audit-external/partition-replay/001.xml"
+  ],
+  "returncode": 0,
+  "tests": 22,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "output_tail": "......................                                                   [100%]\n22 passed in 3.85s\n"
+}

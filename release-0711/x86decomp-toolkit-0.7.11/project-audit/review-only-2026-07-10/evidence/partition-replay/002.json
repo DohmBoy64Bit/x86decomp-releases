@@ -1,0 +1,23 @@
+{
+  "index": 2,
+  "partition": "test-suite/tests/test_adapter_capabilities.py",
+  "targets": [
+    "test-suite/tests/test_adapter_capabilities.py"
+  ],
+  "command": [
+    "/opt/pyvenv/bin/python3",
+    "-m",
+    "pytest",
+    "-q",
+    "test-suite/tests/test_adapter_capabilities.py",
+    "-p",
+    "no:cacheprovider",
+    "--junitxml=/mnt/data/x86decomp-audit-external/partition-replay/002.xml"
+  ],
+  "returncode": 0,
+  "tests": 3,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "output_tail": "...                                                                      [100%]\n3 passed in 0.05s\n"
+}

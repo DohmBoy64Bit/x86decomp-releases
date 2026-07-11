@@ -230,7 +230,7 @@ class PipelineManifest:
 class Orchestrator:
     """Durable SQLite-backed executor for registering and running pipelines."""
     def __init__(self, project_root: Path):
-        """Initialize the instance with validated constructor state."""
+        """Initialize Orchestrator with `project_root`."""
         self.project_root = project_root.resolve()
         self.path = self.project_root / "orchestration" / "orchestrator.sqlite3"
         self.path.parent.mkdir(parents=True, exist_ok=True)

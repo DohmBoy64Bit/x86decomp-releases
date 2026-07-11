@@ -1,4 +1,4 @@
-"""Provide the current runtime implementation for the `x86decomp.governance.cli` module."""
+"""Register and dispatch evidence-governance CLI commands."""
 from __future__ import annotations
 
 import argparse

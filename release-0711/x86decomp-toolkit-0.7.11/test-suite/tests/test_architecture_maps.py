@@ -17,7 +17,7 @@ REQUIRED_MAPS = (
 
 def _repository_root() -> Path:
     """Implement repository root.
-    
+
     Parameters and return values follow the signature and runtime validation in the body.
     """
     return Path(__file__).resolve().parents[2]
@@ -25,7 +25,7 @@ def _repository_root() -> Path:
 
 def _normalized(text: str) -> str:
     """Implement normalized.
-    
+
     Parameters and return values follow the signature and runtime validation in the body.
     """
     return " ".join(text.lower().replace("-", " ").split())
@@ -33,7 +33,7 @@ def _normalized(text: str) -> str:
 
 def test_all_architecture_map_artifacts_exist_and_are_versioned() -> None:
     """Verify all architecture map artifacts exist and are versioned.
-    
+
     Parameters and return values follow the signature and runtime validation in the body.
     """
     root = _repository_root()
@@ -46,7 +46,7 @@ def test_all_architecture_map_artifacts_exist_and_are_versioned() -> None:
 
 def test_toolkit_mermaid_and_ascii_maps_cover_same_major_planes_and_states() -> None:
     """Verify toolkit mermaid and ascii maps cover same major planes and states.
-    
+
     Parameters and return values follow the signature and runtime validation in the body.
     """
     root = _repository_root()
@@ -76,7 +76,7 @@ def test_toolkit_mermaid_and_ascii_maps_cover_same_major_planes_and_states() -> 
 
 def test_test_suite_mermaid_and_ascii_maps_cover_same_resolution_and_gate_contract() -> None:
     """Verify test suite mermaid and ascii maps cover same resolution and gate contract.
-    
+
     Parameters and return values follow the signature and runtime validation in the body.
     """
     root = _repository_root()
@@ -105,7 +105,7 @@ def test_test_suite_mermaid_and_ascii_maps_cover_same_resolution_and_gate_contra
 
 def test_architecture_map_cross_links_and_ascii_format_contract() -> None:
     """Verify architecture map cross links and ascii format contract.
-    
+
     Parameters and return values follow the signature and runtime validation in the body.
     """
     root = _repository_root()

@@ -29,7 +29,7 @@ _FUNCTIONAL_ORDER = (
 
 
 def _workflow_gate(root: Path, acceptance: dict[str, Any]) -> dict[str, Any]:
-    """Support workflow gate processing for internal toolkit callers."""
+    """Evaluate workflow acceptance evidence required by the release gate."""
     matching_minimum = acceptance.get("matching", {}).get("minimum_state", "byte_matched")
     functional_minimum = acceptance.get("functional", {}).get("minimum_state", "differentially_validated")
     matching_index = _MATCHING_ORDER.index(matching_minimum)
@@ -63,7 +63,7 @@ def _workflow_gate(root: Path, acceptance: dict[str, Any]) -> dict[str, Any]:
 
 
 def _claim_gate(root: Path) -> dict[str, Any]:
-    """Support claim gate processing for internal toolkit callers."""
+    """Claim gate."""
     store = EvidenceStore(root)
     results: list[dict[str, Any]] = []
     failures: list[str] = []
@@ -77,7 +77,7 @@ def _claim_gate(root: Path) -> dict[str, Any]:
 
 
 def _pipeline_gate(root: Path) -> dict[str, Any]:
-    """Support pipeline gate processing for internal toolkit callers."""
+    """Evaluate persisted reconstruction-pipeline evidence required for release."""
     database = root / "orchestration" / "orchestrator.sqlite3"
     if not database.is_file():
         return {"pipeline_count": 0, "pipelines": [], "failures": [], "passed": True}
@@ -102,7 +102,7 @@ def evaluate_release_gate(
     require_succeeded_pipelines: bool = False,
     report_path: Path | None = None,
 ) -> dict[str, Any]:
-    """Execute the evaluate release gate operation for the current toolkit workflow."""
+    """Evaluate release gate."""
     root = project_root.resolve()
     checks: dict[str, Any] = {}
     failures: list[str] = []

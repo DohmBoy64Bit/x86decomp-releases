@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import json
 import sqlite3
+import time
 from pathlib import Path
 from typing import Any, Iterable
 
@@ -68,9 +69,9 @@ CREATE INDEX IF NOT EXISTS idx_constraints_subject ON type_constraints(subject_e
 
 
 class AnalysisDatabase:
-    """Coordinate analysis database behavior for the current toolkit workflow."""
+    """Manage analysis database state and operations."""
     def __init__(self, path: Path):
-        """Initialize the instance with validated constructor state."""
+        """Initialize AnalysisDatabase with `path`."""
         self.path = path.resolve()
         self.path.parent.mkdir(parents=True, exist_ok=True)
         self.connection = sqlite3.connect(self.path)
@@ -78,7 +79,7 @@ class AnalysisDatabase:
         self.connection.executescript(_SCHEMA)
 
     def close(self) -> None:
-        """Execute the close operation for the current toolkit workflow."""
+        """Close analysis database."""
         self.connection.close()
 
     def __enter__(self) -> "AnalysisDatabase":
@@ -105,7 +106,7 @@ class AnalysisDatabase:
         accepted: bool = False,
         metadata: dict[str, Any] | None = None,
     ) -> None:
-        """Execute the upsert entity operation for the current toolkit workflow."""
+        """Insert or update entity."""
         if kind not in {"function", "symbol", "global", "type", "field", "vtable", "string"}:
             raise ContractError(f"unsupported entity kind: {kind}")
         if confidence is not None and not 0 <= confidence <= 1:
@@ -134,7 +135,7 @@ class AnalysisDatabase:
         provenance: str,
         metadata: dict[str, Any] | None = None,
     ) -> None:
-        """Execute the add reference operation for the current toolkit workflow."""
+        """Add reference."""
         self.connection.execute(
             """INSERT OR IGNORE INTO references_graph
             (source_entity,target_entity,source_rva,target_rva,kind,provenance,metadata_json)
@@ -153,7 +154,7 @@ class AnalysisDatabase:
         confidence: float | None = None,
         status: str = "proposed",
     ) -> int:
-        """Execute the add type constraint operation for the current toolkit workflow."""
+        """Add type constraint."""
         if status not in {"proposed", "consistent", "conflicting", "accepted", "rejected"}:
             raise ContractError("invalid type constraint status")
         cursor = self.connection.execute(
@@ -165,7 +166,7 @@ class AnalysisDatabase:
         return int(cursor.lastrowid or 0)
 
     def detect_constraint_conflicts(self, subject_entity: str, relation: str) -> list[dict[str, Any]]:
-        """Execute the detect constraint conflicts operation for the current toolkit workflow."""
+        """Detect constraint conflicts."""
         rows = self.connection.execute(
             """SELECT object_value, COUNT(*) AS count, GROUP_CONCAT(provenance) AS provenances
                FROM type_constraints WHERE subject_entity=? AND relation=? AND status NOT IN ('rejected')
@@ -181,7 +182,7 @@ class AnalysisDatabase:
         return values
 
     def accept_constraint(self, constraint_id: int) -> None:
-        """Execute the accept constraint operation for the current toolkit workflow."""
+        """Accept constraint."""
         row = self.connection.execute("SELECT * FROM type_constraints WHERE id=?", (constraint_id,)).fetchone()
         if row is None:
             raise ContractError(f"type constraint does not exist: {constraint_id}")
@@ -194,7 +195,7 @@ class AnalysisDatabase:
         self.connection.execute("UPDATE type_constraints SET status='accepted' WHERE id=?", (constraint_id,))
 
     def ingest_function_artifact(self, artifact_dir: Path, *, image_base: int = 0) -> dict[str, int]:
-        """Execute the ingest function artifact operation for the current toolkit workflow."""
+        """Ingest function artifact."""
         manifest_path = artifact_dir / "function.json"
         if not manifest_path.is_file():
             raise ContractError(f"missing function.json: {manifest_path}")
@@ -249,9 +250,38 @@ class AnalysisDatabase:
         self.connection.commit()
         return {"functions": 1, "references": reference_count}
 
-    def query(self, sql: str, parameters: Iterable[Any] = ()) -> list[dict[str, Any]]:
-        """Execute the query operation for the current toolkit workflow."""
+    def query(
+        self,
+        sql: str,
+        parameters: Iterable[Any] = (),
+        *,
+        max_rows: int = 10_000,
+        timeout_seconds: float = 2.0,
+    ) -> list[dict[str, Any]]:
+        """Execute one bounded SELECT through a dedicated read-only connection.
+
+        The query is interrupted when the wall-clock budget expires and results
+        are capped to prevent an accidental or hostile statement from exhausting
+        process memory.
+        """
         normalized = sql.lstrip().lower()
         if not normalized.startswith("select"):
             raise ContractError("analysis database query permits SELECT statements only")
-        return [dict(row) for row in self.connection.execute(sql, tuple(parameters)).fetchall()]
+        if max_rows <= 0 or timeout_seconds <= 0:
+            raise ContractError("query bounds must be positive")
+        connection = sqlite3.connect(f"{self.path.as_uri()}?mode=ro", uri=True)
+        connection.row_factory = sqlite3.Row
+        deadline = time.monotonic() + timeout_seconds
+        connection.set_progress_handler(lambda: int(time.monotonic() >= deadline), 1_000)
+        try:
+            cursor = connection.execute(sql, tuple(parameters))
+            rows = cursor.fetchmany(max_rows + 1)
+        except sqlite3.OperationalError as exc:
+            if "interrupted" in str(exc).lower():
+                raise ContractError(f"analysis database query exceeded {timeout_seconds:g} seconds") from exc
+            raise
+        finally:
+            connection.close()
+        if len(rows) > max_rows:
+            raise ContractError(f"analysis database query exceeded the {max_rows} row limit")
+        return [dict(row) for row in rows]

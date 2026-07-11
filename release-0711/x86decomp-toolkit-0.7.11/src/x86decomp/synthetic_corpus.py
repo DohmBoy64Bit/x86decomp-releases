@@ -23,7 +23,7 @@ _IDENTIFIER = re.compile(r"^[A-Za-z_][A-Za-z0-9_]*$")
 
 
 def _symbol(case_id: str) -> str:
-    """Support symbol processing for internal toolkit callers."""
+    """Create the deterministic symbol name for a synthetic corpus case."""
     value = re.sub(r"[^A-Za-z0-9_]", "_", case_id)
     if not value or value[0].isdigit():
         value = "case_" + value
@@ -33,7 +33,7 @@ def _symbol(case_id: str) -> str:
 
 
 def _c_arithmetic(case_id: str, rng: random.Random) -> str:
-    """Support c arithmetic processing for internal toolkit callers."""
+    """Generate a deterministic C arithmetic corpus case."""
     fn = _symbol(case_id)
     a, b, c = (rng.randrange(3, 251) | 1 for _ in range(3))
     shift = rng.randrange(1, 16)
@@ -47,7 +47,7 @@ unsigned {fn}(unsigned x, unsigned y) {{
 
 
 def _c_branches(case_id: str, rng: random.Random) -> str:
-    """Support c branches processing for internal toolkit callers."""
+    """Generate a deterministic C conditional-branch corpus case."""
     fn = _symbol(case_id)
     thresholds = sorted(rng.sample(range(-500, 501), 5))
     values = [rng.randrange(-2000, 2001) for _ in range(6)]
@@ -64,7 +64,7 @@ int {fn}(int x) {{
 
 
 def _c_loop(case_id: str, rng: random.Random) -> str:
-    """Support c loop processing for internal toolkit callers."""
+    """Generate a deterministic C loop corpus case."""
     fn = _symbol(case_id)
     multiplier = rng.randrange(3, 97)
     bias = rng.randrange(1, 101)
@@ -82,7 +82,7 @@ unsigned {fn}(const unsigned *values, unsigned count) {{
 
 
 def _c_switch(case_id: str, rng: random.Random) -> str:
-    """Support c switch processing for internal toolkit callers."""
+    """Generate a deterministic C switch corpus case."""
     fn = _symbol(case_id)
     labels = sorted(rng.sample(range(0, 64), 10))
     returns = [rng.randrange(-500, 501) for _ in labels]
@@ -98,7 +98,7 @@ int {fn}(unsigned selector) {{
 
 
 def _c_struct_alias(case_id: str, rng: random.Random) -> str:
-    """Support c struct alias processing for internal toolkit callers."""
+    """Generate a deterministic C structure-aliasing corpus case."""
     fn = _symbol(case_id)
     k1, k2 = rng.randrange(1, 100), rng.randrange(1, 100)
     return f"""/* generated deterministic structure/alias case */
@@ -122,7 +122,7 @@ int {fn}({fn}_record *restrict out, const {fn}_record *restrict in) {{
 
 
 def _c_bitfield(case_id: str, rng: random.Random) -> str:
-    """Support c bitfield processing for internal toolkit callers."""
+    """Generate a deterministic C bit-field corpus case."""
     fn = _symbol(case_id)
     xor_value = rng.randrange(1, 31)
     return f"""/* generated deterministic bit-field case */
@@ -142,7 +142,7 @@ unsigned {fn}({fn}_bits *value, unsigned input) {{
 
 
 def _c_float(case_id: str, rng: random.Random) -> str:
-    """Support c float processing for internal toolkit callers."""
+    """Generate a deterministic C floating-point corpus case."""
     fn = _symbol(case_id)
     a = rng.randrange(1, 20) / 3.0
     b = rng.randrange(1, 20) / 7.0
@@ -156,7 +156,7 @@ double {fn}(double x, double y) {{
 
 
 def _c_indirect(case_id: str, rng: random.Random) -> str:
-    """Support c indirect processing for internal toolkit callers."""
+    """Generate a deterministic C indirect-call corpus case."""
     fn = _symbol(case_id)
     bias = rng.randrange(1, 100)
     return f"""/* generated deterministic indirect-call case */
@@ -168,7 +168,7 @@ int {fn}({fn}_callback callback, int x, int y) {{
 
 
 def _cpp_virtual(case_id: str, rng: random.Random) -> str:
-    """Support cpp virtual processing for internal toolkit callers."""
+    """Generate a deterministic C++ virtual-dispatch corpus case."""
     fn = _symbol(case_id)
     bias = rng.randrange(1, 100)
     return f"""// generated deterministic virtual-dispatch case
@@ -192,7 +192,7 @@ extern "C" int {fn}(int value) {{
 
 
 def _cpp_multiple_inheritance(case_id: str, rng: random.Random) -> str:
-    """Support cpp multiple inheritance processing for internal toolkit callers."""
+    """Generate a deterministic C++ multiple-inheritance corpus case."""
     fn = _symbol(case_id)
     x, y = rng.randrange(1, 50), rng.randrange(1, 50)
     return f"""// generated deterministic multiple-inheritance case
@@ -209,7 +209,7 @@ extern "C" int {fn}(int value) {{
 
 
 def _cpp_exception(case_id: str, rng: random.Random) -> str:
-    """Support cpp exception processing for internal toolkit callers."""
+    """Generate a deterministic C++ exception-handling corpus case."""
     fn = _symbol(case_id)
     marker = rng.randrange(2, 29)
     return f"""// generated deterministic exception case
@@ -226,7 +226,7 @@ extern "C" int {fn}(int value) {{
 
 
 def _cpp_template(case_id: str, rng: random.Random) -> str:
-    """Support cpp template processing for internal toolkit callers."""
+    """Generate a deterministic C++ template corpus case."""
     fn = _symbol(case_id)
     value = rng.randrange(2, 64)
     return f"""// generated deterministic template-instantiation case
@@ -342,7 +342,7 @@ def generate_synthetic_corpus(
 
 
 def verify_synthetic_corpus(report_path: Path) -> dict[str, Any]:
-    """Verify synthetic corpus for the current toolkit workflow."""
+    """Verify synthetic corpus."""
     report_file = report_path.resolve()
     report = __import__("json").loads(report_file.read_text(encoding="utf-8"))
     if report.get("schema_version") != GENERATOR_SCHEMA_VERSION or report.get("kind") != "synthetic_source_corpus":
