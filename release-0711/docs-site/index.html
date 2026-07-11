@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>x86decomp 0.7.11 Documentation</title>
+<meta name="description" content="x86decomp Toolkit v0.7.11 — Static recompilation toolkit for x86/x86-64 Windows binaries.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><text y='14' font-size='14' fill='%2322C55E'>&#x2261;</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="app">
+  <div id="sidebar-overlay"></div>
+
+  <nav id="sidebar" role="navigation" aria-label="Documentation navigation">
+    <div id="sidebar-header">x86decomp 0.7.11</div>
+    <div id="sidebar-nav"></div>
+  </nav>
+
+  <div id="main">
+    <header id="topbar" role="banner">
+      <button id="sidebar-toggle" aria-label="Toggle navigation" title="Toggle sidebar">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3 5h14v1.5H3V5zm0 4.25h14v1.5H3v-1.5zM3 13.5h14V15H3v-1.5z" clip-rule="evenodd"/></svg>
+      </button>
+      <div id="search-wrap" role="search">
+        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M12.9 14.32a8 8 0 111.41-1.41l4.1 4.08-1.42 1.42-4.09-4.09zM8 14A6 6 0 108 2a6 6 0 000 12z" clip-rule="evenodd"/></svg>
+        <input type="search" id="search" placeholder="Search commands, modules, functions... (Ctrl+K)" autocomplete="off" aria-label="Search documentation">
+        <div id="search-results" role="listbox" aria-label="Search results"></div>
+      </div>
+    </header>
+
+    <main id="content" role="main" aria-label="Documentation content">
+      <div class="content-section" style="display:flex;align-items:center;justify-content:center;height:100%;color:var(--fg-dim);">
+        <p>Loading documentation data...</p>
+      </div>
+    </main>
+  </div>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/examples.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
