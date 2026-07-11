@@ -1,1 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="1" time="1.208" timestamp="2026-07-10T18:52:24.025259+00:00" hostname="0c658486d65f"><testcase classname="tests.test_production" name="test_reproduction_and_security_reports" time="0.984" /></testsuite></testsuites>

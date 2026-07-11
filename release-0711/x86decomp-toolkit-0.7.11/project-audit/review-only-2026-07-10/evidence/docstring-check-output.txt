@@ -1,1 +1,0 @@
-{"audited_file_count": 212, "missing_docstrings": 0, "passed": true, "repeated_leading_verb_occurrences": 0, "template_phrase_occurrences": 0}

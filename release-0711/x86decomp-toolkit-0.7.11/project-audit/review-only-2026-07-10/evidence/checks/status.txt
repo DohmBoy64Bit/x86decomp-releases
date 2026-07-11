@@ -1,9 +1,0 @@
-pyflakes=1
-contracts=1
-corpus-sync=0
-docs=1
-docstrings-redirect=0
-hashes=0
-bash-verify=0
-bash-ghidra=0
-whitespace=1

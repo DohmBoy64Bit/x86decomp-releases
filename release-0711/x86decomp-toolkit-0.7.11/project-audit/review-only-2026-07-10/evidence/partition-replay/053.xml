@@ -1,1 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="1" time="1.429" timestamp="2026-07-10T18:48:58.152456+00:00" hostname="0c658486d65f"><testcase classname="tests.test_mcp" name="test_stdio_mcp_and_mutation_journal" time="1.359" /></testsuite></testsuites>
