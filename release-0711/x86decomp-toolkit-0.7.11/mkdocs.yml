@@ -1,28 +1,215 @@
-site_name: x86decomp toolkit 0.7.11
+site_name: x86decomp
 site_description: Evidence-governed x86 and x86-64 decompilation toolkit
+site_url: ""
 strict: true
+repo_name: x86decomp-toolkit
+repo_url: ""
+edit_uri: ""
+
 theme:
   name: material
+  custom_dir: docs/overrides
+  palette:
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: green
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: green
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+  font:
+    text: Fira Sans
+    code: Fira Code
+  features:
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.path
+    - navigation.indexes
+    - navigation.top
+    - navigation.footer
+    - toc.follow
+    - toc.integrate
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.code.annotate
+    - content.tooltips
+
 nav:
   - Home: index.md
-  - Supported scope: supported-scope.md
-  - Architecture: architecture.md
-  - Architecture map: ARCHITECTURE_MAP.md
-  - Contracts: contracts.md
-  - Evidence and claims: evidence-and-claims.md
-  - Adapter capabilities: adapter-capabilities.md
-  - Commands: COMMAND_REFERENCE_0.7.11.md
-  - Ghidra integration: ghidra-integration.md
-  - Local LLM: local-llm.md
-  - Target packs and templates: target-packs-and-templates.md
-  - Test bundles: test-bundle.md
-  - Operations and recovery: operations-and-recovery.md
-  - Guardrails: guardrails.md
-  - Build and verification: build-and-verification.md
-  - Project memory: project-memory.md
-  - Source basis: source-basis.md
-  - Roadmap: roadmap.md
+  - Getting Started:
+      - Installation: getting-started/installation.md
+      - First Project: getting-started/first-project.md
+      - Verification: getting-started/verification.md
+  - Concepts:
+      - Overview: concepts/overview.md
+      - Decompilation Modes: concepts/decompilation-modes.md
+      - Evidence and Claims: concepts/evidence-and-claims.md
+      - Matching vs Functional: concepts/matching-vs-functional.md
+      - Reproducibility: concepts/reproducibility.md
+      - Compiler Laboratory: concepts/compiler-laboratory.md
+      - Linker Reconstruction: concepts/linker-reconstruction.md
+      - ABI and Types: concepts/abi-and-types.md
+      - Static Analysis: concepts/static-analysis.md
+      - Local LLM: concepts/local-llm.md
+      - Ghidra Integration: concepts/ghidra-integration.md
+  - Command Reference:
+      - Index: commands/index.md
+      - Project:
+          - init / verify-project: commands/project/init-verify.md
+          - Target Pack: commands/project/target-pack.md
+          - Operations and Recovery: commands/project/operations.md
+      - Binary Analysis:
+          - inspect-pe / pdb-inspect: commands/analysis/pe-pdb.md
+          - disassemble / crosscheck-ghidra: commands/analysis/disassembly.md
+          - COFF Commands: commands/analysis/coff.md
+          - metadata-scan: commands/analysis/metadata.md
+      - Compilation:
+          - compile / compile-worker: commands/compilation/compile.md
+          - compiler-lab: commands/compilation/compiler-lab.md
+          - Toolchains: commands/compilation/toolchains.md
+      - Validation:
+          - diff-bytes: commands/validation/diff-bytes.md
+          - diff-function: commands/validation/diff-function.md
+          - dynamic-validate: commands/validation/dynamic.md
+          - symbolic-validate / angr-validate: commands/validation/symbolic.md
+          - abi-check: commands/validation/abi.md
+          - objdiff-run: commands/validation/objdiff.md
+      - Reconstruction:
+          - Linker Analysis: commands/reconstruction/linker.md
+          - image-match / image-profile: commands/reconstruction/image-match.md
+          - relink / hybrid-generate: commands/reconstruction/relink.md
+          - patch-image: commands/reconstruction/patch.md
+          - harness-generate: commands/reconstruction/harness.md
+          - cpp-recover: commands/reconstruction/cpp-recover.md
+      - Ghidra and MCP:
+          - ghidra-export: commands/ghidra/export.md
+          - MCP Commands: commands/ghidra/mcp.md
+      - Local LLM: commands/local-llm.md
+      - Workflow and Evidence:
+          - Workflow Commands: commands/workflow/workflow.md
+          - Evidence and Claims: commands/workflow/evidence-claims.md
+          - Work Queue: commands/workflow/work-queue.md
+          - Analysis Database: commands/workflow/analysis-db.md
+          - Project Memory: commands/workflow/memory.md
+      - Pipeline and Workers:
+          - Pipeline Commands: commands/pipeline/pipeline.md
+          - Worker Commands: commands/pipeline/worker.md
+      - Ground Truth and Benchmarks:
+          - Corpus Commands: commands/ground-truth/corpus.md
+          - benchmark-run: commands/ground-truth/benchmarks.md
+      - Integration and Service:
+          - integration-run: commands/integration/integration-run.md
+          - drcov Commands: commands/integration/drcov.md
+          - serve: commands/integration/serve.md
+      - Security and Release:
+          - security-audit / dependency-audit: commands/security/audit.md
+          - sbom-generate / release-manifest-verify: commands/security/release.md
+      - Artifacts and Bundles:
+          - Artifact Commands: commands/artifacts/artifact.md
+          - decompme-pack: commands/artifacts/decompme.md
+          - Test Bundles: commands/artifacts/test-bundle.md
+      - Convergence and Reproducibility:
+          - convergence-analyze: commands/convergence/convergence.md
+          - Reproducibility: commands/convergence/reproduce.md
+          - release-gate: commands/convergence/release-gate.md
+      - Content Store: commands/content-store.md
+      - Canonical Commands: commands/canonical.md
+  - Configuration Reference:
+      - Project Schema: config/project.md
+      - Compiler Profile: config/compiler-profile.md
+      - Compiler Lab: config/compiler-lab.md
+      - Pipeline: config/pipeline.md
+      - Relink Manifest: config/relink-manifest.md
+      - Linker Reconstruction Plan: config/linker-plan.md
+      - Target Pack: config/target-pack.md
+      - Test Bundle: config/test-bundle.md
+      - Evidence and Claim: config/evidence-claim.md
+      - Work Task: config/work-task.md
+      - Benchmark Corpus: config/benchmark-corpus.md
+      - LLM Profile: config/llm-profile.md
+  - File and Directory Reference:
+      - Project Layout: files/project-layout.md
+      - Schema Files: files/schemas.md
+      - Generated Outputs: files/outputs.md
+  - Workflows:
+      - Index: workflows/index.md
+      - ABI and Type Recovery: workflows/abi-type-recovery.md
+      - Benchmark Validation Corpus: workflows/benchmark-validation-corpus.md
+      - Compiler Laboratory: workflows/compiler-laboratory.md
+      - Full Relink Convergence: workflows/full-relink-convergence.md
+      - Functional Decompilation: workflows/functional-decompilation.md
+      - Hybrid Project: workflows/hybrid-project.md
+      - Matching Decompilation: workflows/matching-decompilation.md
+      - Patch-Image Integration: workflows/patch-image-integration.md
+      - Project Operations and Recovery: workflows/project-operations-recovery.md
+      - Static-Analysis Evidence: workflows/static-analysis-evidence.md
+      - Target-Release Reproducibility: workflows/target-release-reproducibility.md
+      - Text Swap: workflows/text-swap.md
+      - Validation Corpus Benchmarks: workflows/validation-corpus-benchmarks.md
+      - Local LLM Exact Match: workflows/local-llm-exact-match.md
+  - Troubleshooting: troubleshooting/index.md
+  - Reference:
+      - Architecture: reference/architecture.md
+      - Contracts: reference/contracts.md
+      - Guardrails: reference/guardrails.md
+      - Supported Scope: reference/supported-scope.md
+      - Adapter Capabilities: reference/adapter-capabilities.md
+      - Ghidra Scripts: reference/ghidra-scripts.md
+      - Project Memory: reference/project-memory.md
+      - Source Basis: reference/source-basis.md
+      - Build and Verification: reference/build-and-verification.md
+
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/extra.js
+
 markdown_extensions:
   - admonition
   - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+      permalink_title: Anchor link to this section
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.keys
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.tasklist:
+      custom_checkbox: true
   - tables
+
+plugins:
+  - search:
+      separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|[;!?]+'
+      lang:
+        - en

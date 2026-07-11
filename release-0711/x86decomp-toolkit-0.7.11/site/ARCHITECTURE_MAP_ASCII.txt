@@ -1,0 +1,109 @@
+TOOLKIT ARCHITECTURE MAP — 0.7.11
+
+┌─────────────────────┐
+│ Immutable ingestion │
+└──────────┬──────────┘
+           │
+┌──────────▼──────────┐
+│ Static-analysis     │
+│ plane + pyflakes    │
+└──────┬───────┬──────┘
+       │       │
+       │       └──────────────────────────────┐
+       │                                      │
+┌──────▼──────────────┐             ┌─────────▼──────────────┐
+│ Project control     │◄ Governance │ Local LLM proposal     │
+│ plane               │             │ plane                  │
+└──────┬──────────────┘             │ - LM Studio            │
+       │                            │ - Ollama               │
+       ├───────────────────────────►│ - llama.cpp server     │
+       │                            │ - vLLM                 │
+       │                            │ - LocalAI              │
+       │                            │ - OpenAI-compatible    │
+       │                            └─────────┬──────────────┘
+       │                                      │ untrusted JSON/C
+┌──────▼──────────────────────────────────────▼──────┐
+│ Candidate-generation plane ◄──── Reconstruction   │
+└────────────────────────────┬───────────────────────┘
+                             │
+┌────────────────────────────▼───────────────────────┐
+│ Compiler and linker plane ◄──── Assembly           │
+└────────────────────────────┬───────────────────────┘
+                             │
+┌────────────────────────────▼───────────────────────┐
+│ Shared bounded PE/COFF reader + relocation evidence│
+└───────────────┬───────────────────────┬────────────┘
+                │                       │
+┌───────────────▼──────────────┐  ┌─────▼──────────────────────────┐
+│ Matching-decompilation lane  │  │ Functional-decompilation lane │
+│ raw resolved byte identity   │  │ bounded behavioral validators │
+└───────────────┬──────────────┘  └─────┬──────────────────────────┘
+                │                       │
+                └───────────┬───────────┘
+┌───────────────────────────▼──────────────┐
+│ Acceptance, evidence, and feedback       │
+│ - exact hashes and reports               │
+│ - bounded compiler/byte feedback to LLM  │
+│ - no model self-verification             │
+└──────────────────────────────────────────┘
+
+LOCAL MODEL TRUST BOUNDARY
+┌────────────────────────────────────────────────────┐
+│ Loopback-only bounded HTTP by default              │
+│ Same-origin redirects                              │
+│ Environment-variable secrets                       │
+│ Structured JSON response contract                  │
+│ Exactly one C function definition                  │
+│ No inline assembly, byte emitters, or placeholders │
+└────────────────────────────────────────────────────┘
+
+UNIFIED COMMAND PLANE
+┌───────────────┐
+│ x86decomp CLI │
+└───────┬───────┘
+        ├── core commands
+        └── 59 groups / 239 routes
+             ├── Governance
+             ├── Reconstruction
+             │    └── llm: 8 canonical routes
+             ├── Native PE
+             └── Assembly
+
+MATCHING STATES
+not_started -> instruction_similar -> full_relink_validated
+
+FUNCTIONAL STATES
+not_started -> differentially_validated -> symbolically_bounded -> integration_validated
+
+MAJOR PLANES
+Immutable ingestion
+Static-analysis plane
+Project control plane
+Candidate-generation plane
+Compiler and linker plane
+Shared bounded binary reader for PE/COFF parsers
+Matching-decompilation lane
+Functional-decompilation lane
+Acceptance, evidence, and feedback
+
+v0.7.11 acceleration overlay
+---------------------------
+Function packets / byte ranges
+        |
+        v
+llm job-create / llm job-from-range
+        |
+        v
+llm batch-create / llm batch-match
+        |
+        v
+Compiler + relocation + byte validators
+        |
+        v
+candidate promote -> source-map annotate / verify -> human-readable source tree
+        |
+        v
+mod branch / regression compare
+
+
+v0.7.11 universal acceleration overlay: profile-driven function discovery, pattern recipes, text-swap workflow, source-stage/project-health accounting, GhidraMCP operations, runtime/subsystem hints, toolchain/path hygiene, and moddable-source release policy.
